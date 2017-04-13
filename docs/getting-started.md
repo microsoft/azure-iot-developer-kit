@@ -23,13 +23,11 @@ Use USB stick come with the kit to quickly set up the development environment in
 
 Connect USB stick to your PC. In the File Explorer, select the USB drive, then find `azure-install.cmd` and right click on it and select **"Run as administrator"** to start.
 
-**[TODO: Screenshot]**
+![][getting-started-install]
 
 ### B. Install tools and packages
 
-It will start installation of all needed tools and packages for you.
-
-![][getting-started-install]
+The script is in charge of installation for all needed tools and packages for you.
 
 VS Code for Arduino Extension relies on Arduino IDE to work. During Arduino IDE installation, you will be prompted to install relevant drivers:
 
@@ -50,9 +48,11 @@ It normally takes a couple of minutes to finish all the installation depending o
 
 ### C. Provision Azure services
 
+**[TODO: Moved to Quick Start]**
+
 ## Step 3. Prepare your hardware
 
-With development environment 
+Hook up your hardware to your desktop or laptop computer.
 
 ### A. Make sure you have everything you need
 
