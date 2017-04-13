@@ -42,13 +42,9 @@ VS Code for Arduino Extension relies on Arduino IDE to work. During Arduino IDE 
 
 ![][getting-started-driver]
 
-It normally takes a couple of minutes to finish all the installation depending on your Internet speed. Once installation finishes, you will see Visual Studio Code and Arduino shortcuts on your desktop.
+It normally takes a couple of minutes to finish all installations depending on your Internet speed. Once installation finishes, you should see Visual Studio Code and Arduino shortcuts on your desktop.
 
 ![][getting-started-icons]
-
-### C. Provision Azure services
-
-**[TODO: Moved to Quick Start]**
 
 ## Step 3. Prepare your hardware
 
@@ -56,7 +52,7 @@ Hook up your hardware to your desktop or laptop computer.
 
 ### A. Make sure you have everything you need
 
-All you need is a DevKit board and Micro USB cable:
+All you need is a DevKit board and a Micro USB cable:
 
 ![][getting-started-hardware]
 
@@ -72,7 +68,7 @@ This is the primary editor for developing on the DevKit.
 2. Connect Micro USB to the DevKit's USB Port
 3. The green LED next to power confirms connection
 
-Visual Studio Code will detect DevKit and open Welcome page with example panes automatically:
+Visual Studio Code will detect DevKit and open Welcome page with examples and mini solutions next to it automatically:
 
 ![][getting-started-vscode]
 
