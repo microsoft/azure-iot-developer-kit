@@ -6,13 +6,13 @@ For the first time user of Microsoft Azure IoT Developer Kit, follow these quick
 
 ### Required Hardware & Software
 
-* Microsoft Azure IoT Developer Kit. [Get it now]  (http://microsoft.github.io/azure-iot-developer-kit)
+* Microsoft Azure IoT Developer Kit. [Get it now](http://microsoft.github.io/azure-iot-developer-kit)
 * A desktop or laptop computer running Windows 10 or macOS 10.10+ (coming soon)
 
 ### Get an Azure account
 
 * Activate your Azure account and bring your Microsoft account credentials. Don't have a Microsoft account? [Sign up now]()
-* Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html) which gives you 200USD of credit to get started.
+* Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html) which gives you 200USD of credit to get started
 * If you subscribe to MSDN, activate your free [Azure MSDN subscriber benefits](https://azure.microsoft.com/en-us/pricing/member-offers/visual-studio-subscriptions/)
 
 ## Step 2. Set up the development environment
@@ -29,14 +29,6 @@ Connect USB stick to your PC. In the File Explorer, select the USB drive, then f
 
 The script is in charge of installation for all needed tools and packages for you.
 
-VS Code for Arduino Extension relies on Arduino IDE to work. During Arduino IDE installation, you will be prompted to install relevant drivers:
-
-![][getting-started-driver]
-
-It normally takes a couple of minutes to finish all the installation depending on your Internet speed. Once installation finishes, you will see Visual Studio Code and Arduino shortcuts on your desktop.
-
-![][getting-started-icons]
-
 > Here is the list of tools and packages will be installed:
 > * Node.js - Runtime for the setup script and automated tasks
 > * Python and pip - For running Azure CLI 2.0
@@ -45,6 +37,14 @@ It normally takes a couple of minutes to finish all the installation depending o
 > * [VS Code Arduino Extension](https://marketplace.visualstudio.com/VSCode) - Make VS Code perfect for Arduino development
 > * DevKit Board Package - Toolchains, libraries and min solutions for the DevKit
 > * ST-Link Utility - Essential utility and drivers
+
+VS Code for Arduino Extension relies on Arduino IDE to work. During Arduino IDE installation, you will be prompted to install relevant drivers:
+
+![][getting-started-driver]
+
+It normally takes a couple of minutes to finish all the installation depending on your Internet speed. Once installation finishes, you will see Visual Studio Code and Arduino shortcuts on your desktop.
+
+![][getting-started-icons]
 
 ### C. Provision Azure services
 
@@ -72,13 +72,17 @@ This is the primary editor for developing on the DevKit.
 2. Connect Micro USB to the DevKit's USB Port
 3. The green LED next to power confirms connection
 
-Visual Studio Code will detect DevKit and open Quick Start page with example panes automatically. Follow the Quick Start instructions on the welcome page as shown below:
+Visual Studio Code will detect DevKit and open Welcome page with example panes automatically:
 
 ![][getting-started-vscode]
 
+### D. Update firmware for your DevKit
+
+**[TODO]**
+
 # Next
 
-You are all set now. It's time to build your first IoT application from mini solution catalog. You can access the catalog from the Quick Start page or directly from [here](http://microsoft.github.io/azure-iot-developer-kit)
+You are all set now. It's time to build your first IoT application by following instructions in [Mini Solution Catalog](http://microsoft.github.io/azure-iot-developer-kit).
 
 # FAQ
 
