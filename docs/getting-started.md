@@ -11,7 +11,7 @@ For the first time user of Microsoft Azure IoT Developer Kit, follow these quick
 
 ### Get an Azure account
 
-* Activate your Azure account and bring your Microsoft account credentials. Don't have a Microsoft account? [Sign up now]()
+* Activate your Azure account and bring your Microsoft account credentials. Don't have a Microsoft account? [Sign up now](https://signup.live.com/newuser.aspx)
 * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html) which gives you 200USD of credit to get started
 * If you subscribe to MSDN, activate your free [Azure MSDN subscriber benefits](https://azure.microsoft.com/en-us/pricing/member-offers/visual-studio-subscriptions/)
 
@@ -78,7 +78,7 @@ Visual Studio Code will detect DevKit and open Welcome page with examples and mi
 
 # Next
 
-You are all set now. It's time to build your first IoT application by following instructions in [Mini Solution Catalog](http://microsoft.github.io/azure-iot-developer-kit).
+You are all set now. It's time to build your first IoT application by following instructions in [Mini Solution Catalog](http://microsoft.github.io/azure-iot-developer-kit/mini-solutions.html).
 
 # FAQ
 
