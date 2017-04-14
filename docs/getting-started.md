@@ -36,8 +36,8 @@ The script is in charge of installation for all needed tools and packages for yo
 > Here is the list of tools and packages will be installed:
 > * Node.js - Runtime for the setup script and automated tasks
 > * Python and pip - For running Azure CLI 2.0
-> * [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/overview) - Cross platform new command-line experience for managing Azure resources
-> * [Visual Studio Code](https://code.visualstudio.com/) - Code editor you will used to developer for the DevKit
+> * [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/overview){:target="_blank"} - Cross platform new command-line experience for managing Azure resources
+> * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"} - Code editor you will used to developer for the DevKit
 > * [VS Code Arduino Extension](https://marketplace.visualstudio.com/VSCode) - Make VS Code perfect for Arduino development
 > * DevKit Board Package - Toolchains, libraries and min solutions for the DevKit
 > * ST-Link Utility - Essential utility and drivers
