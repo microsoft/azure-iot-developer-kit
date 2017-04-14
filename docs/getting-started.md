@@ -19,13 +19,17 @@ For the first time user of Microsoft Azure IoT Developer Kit, follow these quick
 
 Use USB stick come with the kit to quickly set up the development environment including installation of tools and packages, as well as provisioning of the Azure services required for building your IoT app.
 
-### A. Launch setup script
+### A. Copy all files to local drive
 
-Connect USB stick to your PC. In the File Explorer, select the USB drive, then find `azure-install.cmd` and right click on it and select **"Run as administrator"** to start.
+It is recommended to copy all files from USB stick to your local drive to speed up the installation.
+
+### B. Launch setup script
+
+In the File Explorer, locate the local folder you just copied files, find `azure-install.cmd` and right click on it and select **"Run as administrator"** to start.
 
 ![][getting-started-install]
 
-### B. Install tools and packages
+### C. Install tools and packages
 
 The script is in charge of installation for all needed tools and packages for you.
 
@@ -52,13 +56,13 @@ Hook up your hardware to your desktop or laptop computer.
 
 ### A. Make sure you have everything you need
 
-All you need is a DevKit board and a Micro USB cable:
+All you need are a DevKit board and a Micro USB cable:
 
 ![][getting-started-hardware]
 
 ### B. Launch Visual Studio Code
 
-This is the primary editor for developing on the DevKit. Make sure you open VS Code before connecting to the DevKit board for it to identify the board successfully.
+This will be the primary editor for developing on DevKit. Make sure you open VS Code before connecting to the DevKit board so that it can identify the board successfully.
 
 ### C. Connect your DevKit board to PC via USB
 
@@ -68,13 +72,31 @@ This is the primary editor for developing on the DevKit. Make sure you open VS C
 2. Connect Micro USB to the DevKit's USB Port
 3. The green LED next to power confirms connection
 
-Visual Studio Code will detect DevKit and open Welcome page with examples and mini solutions next to it automatically:
+VS Code will detect DevKit and open Welcome page with examples and mini solutions next to it automatically:
 
 ![][getting-started-vscode]
 
 ### D. Update firmware for your DevKit
 
 **[TODO]**
+
+## Step.4 Configure WiFi
+
+In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Task** and run **configure_wifi** command:
+
+**[TODO: Screenshot]**
+
+In terminal window opened, you will be asked to put your DevKit into Factory Mode. To do so, hold Button A and Reset Button on the same time:
+
+**[TODO: Screenshot]**
+
+Then you will be prompted to enter SSID and password for the WiFi you want DevKit to connect to:
+
+**[TODO: Screenshot]**
+
+The DevKit will reboot and get WiFi connected, to verify the connection, you can see the WiFi LED light up:
+
+**[TODO: Screenshot]**
 
 # Next
 
