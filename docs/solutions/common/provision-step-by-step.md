@@ -14,13 +14,13 @@ Copy the code in terminal window into browser to log in to Azure:
 
 **[TODO: Screenshot]**
 
-## C. Select or create a new [Azure IoT Hub](https://azure.microsoft.com/en-us/services/iot-hub/)
+## C. Select or create a new Azure IoT Hub
 
-Azure IoT Hub is the service that enables reliable and secure bidirectional communications between the DevKit and the solution back end.
+[Azure IoT Hub](https://azure.microsoft.com/en-us/services/iot-hub/){:target="_blank"} is the service that enables reliable and secure bidirectional communications between the DevKit and the solution back end.
 
 **[TODO: Screenshot]**
 
-You will also need to have [Azure Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#resource-groups) with it:
+You will also need to have [Azure Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#resource-groups){:target="_blank"} with it:
 
 **[TODO: Screenshot]**
 

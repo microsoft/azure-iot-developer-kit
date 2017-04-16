@@ -27,7 +27,7 @@ In terminal window, an interactive command line will guide you provision all Azu
 
 You can also check [step by step tutorial for provision](/azure-iot-developer-kit/solutions/common/provision-step-by-step.html) to see more details.
 
-## Step.3 Modify the code to retrieve `#hashtag` tweet
+## Step.3 Modify the code to retrieve tweet with #hashtag
 
 Open `AzureIotHubExample.ino` and look for the line of code:
 
@@ -39,7 +39,7 @@ Replace `#iot` with your preferred hashtag want to retrieve a tweet from. How ab
 
 ## Step.4 Build and deploy your solution
 
-Build and deploy Arduino code as well as [Azure Function](https://azure.microsoft.com/en-us/services/functions/) to wire all things up together.
+Build and deploy Arduino code as well as [Azure Function](https://azure.microsoft.com/en-us/services/functions/){:target="_blank"} to wire all things up together.
 
 Invoke command palette, Type **Task** and run **deploy** command:
 

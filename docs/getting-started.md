@@ -6,14 +6,14 @@ For the first time user of Microsoft Azure IoT Developer Kit, follow these quick
 
 ### Required Hardware & Software
 
-* Microsoft Azure IoT Developer Kit. [Get it now](http://microsoft.github.io/azure-iot-developer-kit)
+* Microsoft Azure IoT Developer Kit. [Get it now](http://microsoft.github.io/azure-iot-developer-kit){:target="_blank"}
 * A desktop or laptop computer running Windows 10 or macOS 10.10+ (coming soon)
 
 ### Get an Azure account
 
-* Activate your Azure account and bring your Microsoft account credentials. Don't have a Microsoft account? [Sign up now](https://signup.live.com/newuser.aspx)
-* Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html) which gives you 200USD of credit to get started
-* If you subscribe to MSDN, activate your free [Azure MSDN subscriber benefits](https://azure.microsoft.com/en-us/pricing/member-offers/visual-studio-subscriptions/)
+* Activate your Azure account and bring your Microsoft account credentials. Don't have a Microsoft account? [Sign up now](https://signup.live.com/newuser.aspx){:target="_blank"}
+* Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"} which gives you 200USD of credit to get started
+* If you subscribe to MSDN, activate your free [Azure MSDN subscriber benefits](https://azure.microsoft.com/en-us/pricing/member-offers/visual-studio-subscriptions/){:target="_blank"}
 
 ## Step 2. Set up the development environment
 
@@ -38,7 +38,7 @@ The script is in charge of installation for all needed tools and packages for yo
 > * Python and pip - For running Azure CLI 2.0
 > * [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/overview){:target="_blank"} - Cross platform new command-line experience for managing Azure resources
 > * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"} - Code editor you will used to developer for the DevKit
-> * [VS Code Arduino Extension](https://marketplace.visualstudio.com/VSCode) - Make VS Code perfect for Arduino development
+> * [VS Code Arduino Extension](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino){:target="_blank"} - Make VS Code perfect for Arduino development
 > * DevKit Board Package - Toolchains, libraries and min solutions for the DevKit
 > * ST-Link Utility - Essential utility and drivers
 
