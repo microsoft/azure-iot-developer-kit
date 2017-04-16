@@ -1,5 +1,7 @@
 # Shake, shake, what’s up for #Build2017
 
+In this mini solution, you will learn how to use accelerometer & gyroscope sensor to tigger an event using Azure Function: retrieve a random tweet with #hashtag you have designated. The tweet will then display on DevKit's screen. Every time you shake your DevKit board, you will get a new tweet.
+
 ## Requirements
 
 * Finish the [Getting Started Guide](/azure-iot-developer-kit/getting-started.html) to prepare your development environment and hardware.
@@ -35,7 +37,7 @@ Open `AzureIotHubExample.ino` and look for the line of code:
 sprintf(msgText, "{\"topic\":\"%s\"}", "#iot");
 ```
 
-Replace `#iot` with your preferred hashtag want to retrieve a tweet from. How about `#build2017` :smile:?
+Replace `#iot` with your preferred hashtag want to retrieve a tweet from. How about `#build2017`:) ?
 
 ## Step.4 Build and deploy your solution
 

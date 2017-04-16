@@ -2,9 +2,9 @@
 
 ### [Shake, shake, what's up for #Build2017?](/azure-iot-developer-kit/solutions/shake-a-tweet.html)
 
-This is the first out-of-box demo that amateur IoT developer will do. It uses 3-axis sensor to trigger the event to retrieve a random tweet with specific hashtag and display on the OLED screen.
+Shake the DevKit and get a random tweet. This mini solution uses accelerometer & gyroscope sensor to detect the shaking and a simple Azure Function app for getting a tweet.
 
-### [Post a tweet by voice](/azure-iot-developer-kit/solutions/voice-to-tweet.html)
+### [Send a tweet by voice](/azure-iot-developer-kit/solutions/voice-to-tweet.html)
 
-This is a more sophisticated demo hopping to leverage the mic-phone and use Cognitive Service (Bing Speech Service) to translate voice into text and send a tweet post.
+Send a tweet by speaking to the microphone. This mini solution integrates Microsoft Cognitive Service to translate a voice clip into text message and uses Azure Logic App to post the tweet.
 
