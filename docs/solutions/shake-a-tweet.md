@@ -13,7 +13,7 @@ In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** th
 
 ![][mini-solution-arduino-examples]
 
-Click to open **Mini Solutions** node and you will find **Shake for a tweet**, click again to open the solution in a new VS Code window:
+Find 'Examples for MXChip AZ3166 > AzureIoTHub > AzureIoTHubExample', click to open the solution in a new VS Code window:
 
 **[TODO: Screenshot]**
 
