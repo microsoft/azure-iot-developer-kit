@@ -37,11 +37,7 @@ To post a tweet, you need to authrorize your Twitter account.
 
 Build and deploy Arduino code as well as [Azure Function](https://azure.microsoft.com/en-us/services/functions/){:target="_blank"} to wire all things up together.
 
-Use **Quick Open** (`Ctrl+P`) to run 'task deploy':
-
-**[TODO: Screenshot]**
-
-It will start deploying Azure Function code:
+Use **Quick Open** (`Ctrl+P`) to run 'task deploy'. It will start deploying Azure Function code:
 
 **[TODO: Screenshot]**
 

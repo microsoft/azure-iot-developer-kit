@@ -96,7 +96,7 @@ This will flash the latest firmware to your DevKit.
 
 ## Step.4 Configure WiFi
 
-*This method is subject to be changed soon*
+*This section is subject to be changed soon*
 
 In the solution window, run your task through **Quick Open** (`Ctrl+P`) by typing 'task', `Space` and command name. In this case, 'task config_wifi':
 

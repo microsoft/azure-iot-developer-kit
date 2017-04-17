@@ -11,7 +11,7 @@ In this mini solution, you will learn how to use accelerometer & gyroscope senso
 
 In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane:
 
-**[TODO: Screenshot]**
+![][mini-solution-arduino-examples]
 
 Click to open **Mini Solutions** node and you will find **Shake for a tweet**, click again to open the solution in a new VS Code window:
 
@@ -21,11 +21,11 @@ Click to open **Mini Solutions** node and you will find **Shake for a tweet**, c
 
 In the solution window, run your task through **Quick Open** (`Ctrl+P`) by typing 'task', `Space` and command name. In this case, 'task provision':
 
-**[TODO: Screenshot]**
+![][mini-solution-task-provision]
 
 In terminal window, an interactive command line will guide you provision all Azure services that are required for this mini solution:
 
-**[TODO: Screenshot]**
+![][mini-solution-provision-sub]
 
 You can also check [step by step tutorial for provision](/azure-iot-developer-kit/solutions/common/provision-step-by-step.html) to see more details.
 
@@ -34,7 +34,7 @@ You can also check [step by step tutorial for provision](/azure-iot-developer-ki
 Open `AzureIotHubExample.ino` and look for the line of code:
 
 ```cpp
-sprintf(msgText, "{\"topic\":\"%s\"}", "#iot");
+sprintf(msgText, "{\"topic\":\"%s\", \"DeviceID\":\"%s\"}", "iot", "myDevice1");
 ```
 
 Replace `#iot` with your preferred hashtag want to retrieve a tweet from. How about `#build2017`:) ?
@@ -43,19 +43,15 @@ Replace `#iot` with your preferred hashtag want to retrieve a tweet from. How ab
 
 Build and deploy Arduino code as well as [Azure Function](https://azure.microsoft.com/en-us/services/functions/){:target="_blank"} to wire all things up together.
 
-Use **Quick Open** (`Ctrl+P`) to run 'task deploy':
+Use **Quick Open** (`Ctrl+P`) to run 'task deploy'. It will start deploying Azure Function code:
 
-**[TODO: Screenshot]**
-
-It will start deploying Azure Function code:
-
-**[TODO: Screenshot]**
+![][mini-solution-deploy]
 
 Use again **Quick Open** (`Ctrl+P`) to run 'task build':
 
 It will build Arduino code and deploy to the device. DevKit will reboot and start running the solution immediately after that:
 
-**[TODO: Screenshot]**
+![][mini-solution-build]
 
 ## Test the solution
 
@@ -64,3 +60,17 @@ Mildly shake the board to retrieve a random tweet with hash tag 'build2017' and 
 **[TODO: Screenshot]**
 
 ## How it works
+
+![][mini-solution-voice-to-tweet-diagram]
+
+[mini-solution-arduino-examples]: ../images/mini-solution-arduino-examples.png "Arduino Examples"
+
+[mini-solution-task-provision]: ../images/mini-solution-task-provision.png "Task Provision"
+
+[mini-solution-provision-sub]: ../images/mini-solution-provision-sub.png "Provision Azure Subscription"
+
+[mini-solution-deploy]: ../images/mini-solution-deploy.png "Task Deploy"
+
+[mini-solution-build]: ../images/mini-solution-build.png "Task Build"
+
+[mini-solution-voice-to-tweet-diagram]: ../images/mini-solution-voice-to-tweet-diagram.png "Architecture"
