@@ -15,7 +15,7 @@ In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** th
 
 Find 'Examples for MXChip AZ3166 > AzureIoTHub > AzureIoTHubExample', click to open the solution in a new VS Code window:
 
-**[TODO: Screenshot]**
+![][mini-solution-solution-catalog]
 
 ## Step.2 Provision Azure services
 
@@ -57,13 +57,17 @@ It will build Arduino code and deploy to the device. DevKit will reboot and star
 
 Mildly shake the board to retrieve a random tweet with hash tag 'build2017' and display it on the OLED screen:
 
-**[TODO: Screenshot]**
+![][mini-solution-shake-a-tweet]
 
 ## How it works
 
 ![][mini-solution-voice-to-tweet-diagram]
 
+**[TODO]**
+
 [mini-solution-arduino-examples]: ../images/mini-solution-arduino-examples.png "Arduino Examples"
+
+[mini-solution-solution-catalog]: ../images/mini-solution-solution-catalog.png "Mini Solution Catalog"
 
 [mini-solution-task-provision]: ../images/mini-solution-task-provision.png "Task Provision"
 
@@ -74,3 +78,5 @@ Mildly shake the board to retrieve a random tweet with hash tag 'build2017' and 
 [mini-solution-build]: ../images/mini-solution-build.png "Task Build"
 
 [mini-solution-voice-to-tweet-diagram]: ../images/mini-solution-voice-to-tweet-diagram.png "Architecture"
+
+[mini-solution-shake-a-tweet]: ../images/mini-solution-shake-a-tweet.jpg "Shake a tweet"

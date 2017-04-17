@@ -99,20 +99,16 @@ This will flash the latest firmware to your DevKit.
 *This section is subject to be changed soon*
 
 1. In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane. Find 'Examples for MXChip AZ3166 > AzureIoTHub > AzureIoTHubExample'
+ ![][mini-solution-solution-catalog]
 
-**[TODO: Screenshot]**
+2. In terminal window opened, you will be asked to put your DevKit into Factory Mode. To do so, hold Button A and Reset Button on the same time, them release Reset button before Button A:
+ ![][getting-started-configure-wifi]
 
-In terminal window opened, you will be asked to put your DevKit into Factory Mode. To do so, hold Button A and Reset Button on the same time, them release Reset button before Button A:
+3. Then you will be prompted to enter SSID and password for the WiFi you want DevKit to connect to:
+ ![][getting-started-configure-wifi-ssid]
 
-**[TODO: Screenshot]**
-
-Then you will be prompted to enter SSID and password for the WiFi you want DevKit to connect to:
-
-**[TODO: Screenshot]**
-
-Click Reset button on the board again. The DevKit will reboot and get WiFi connected, to verify the connection, you can see the WiFi LED light up with IP address:
-
-**[TODO: Screenshot]**
+4. Click Reset button on the board again. The DevKit will reboot and get WiFi connected, to verify the connection, you can see the WiFi LED light up with IP address:
+ ![][getting-started-wifi-ip]
 
 # Next
 
@@ -144,3 +140,11 @@ You are all set now. It's time to build your first IoT application by following 
 [getting-started-blink]: ./images/getting-started-blink.jpg "Blink Example"
 
 [getting-started-upload]: ./images/getting-started-upload.jpg "Arduino Upload"
+
+[mini-solution-solution-catalog]: ./images/mini-solution-solution-catalog.png "Mini Solution Catalog"
+
+[getting-started-configure-wifi]: ./images/getting-started-configure-wifi.png "Configure WiFi"
+
+[getting-started-configure-wifi-ssid]: ./images/getting-started-configure-wifi-ssid.png "Configure WiFi Credentials"
+
+[getting-started-wifi-ip]: ./images/getting-started-wifi-ip.jpg "View WiFi IP"
