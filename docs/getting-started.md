@@ -27,11 +27,13 @@ It is recommended to copy all files from USB stick to your local drive to speed 
 
 In the File Explorer, locate the local folder you just copied files, find `azure-install.cmd` and right click on it and select **"Run as administrator"** to start.
 
-![][getting-started-install]
+![][getting-started-run-admin]
 
 ### C. Install tools and packages
 
 The script is in charge of installation for all needed tools and packages for you.
+
+![][getting-started-install]
 
 > Here is the list of tools and packages will be installed:
 > * Node.js - Runtime for the setup script and automated tasks
@@ -76,13 +78,27 @@ VS Code will detect DevKit and open Welcome page with examples and mini solution
 
 ![][getting-started-vscode]
 
-### D. Update firmware for your DevKit
+### D. (Optional) Update firmware for your DevKit
 
-**[TODO]**
+1. In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then filter out **Arduino: Boards Manager** to open the pane:
+ ![][getting-started-board-manager]
+
+2. In the search box, type 'az' to find package for DevKit, click **Update** button to update the board package to latest version:
+ ![][getting-started-board-manager-az]
+
+3. Invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane, find `Built-in Examples > 01.Basics > Blink` to open a simple Arduino example app:
+ ![][getting-started-blink]
+
+4. Invoke command again and type **Arduino**, this time select **Arduino: Upload**:
+ ![][getting-started-upload]
+
+This will flash the latest firmware to your DevKit.
 
 ## Step.4 Configure WiFi
 
-In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Task** and run **configure_wifi** command:
+*This method is subject to be changed soon*
+
+In the solution window, run your task through **Quick Open** (`Ctrl+P`) by typing 'task', `Space` and command name. In this case, 'task config_wifi':
 
 **[TODO: Screenshot]**
 
@@ -107,7 +123,7 @@ You are all set now. It's time to build your first IoT application by following 
 **[TODO]**
 
 
-
+[getting-started-run-admin]: ./images/getting-started-run-admin.jpg "Run as Administrator"
 
 [getting-started-install]: ./images/getting-started-install.png "Install"
 
@@ -120,3 +136,11 @@ You are all set now. It's time to build your first IoT application by following 
 [getting-started-connect]: ./images/getting-started-connect.jpg "Connect"
 
 [getting-started-vscode]: ./images/getting-started-vscode.png "VS Code"
+
+[getting-started-board-manager]: ./images/getting-started-board-manager.jpg "Board Manager"
+
+[getting-started-board-manager-az]: ./images/getting-started-board-manager-az.jpg "Board Manager DevKit"
+
+[getting-started-blink]: ./images/getting-started-blink.jpg "Blink Example"
+
+[getting-started-upload]: ./images/getting-started-upload.jpg "Arduino Upload"

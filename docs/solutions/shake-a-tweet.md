@@ -9,7 +9,7 @@ In this mini solution, you will learn how to use accelerometer & gyroscope senso
 
 ## Step.1 Open mini solution folder
 
-In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino Extension** to open example pane:
+In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane:
 
 **[TODO: Screenshot]**
 
@@ -19,7 +19,7 @@ Click to open **Mini Solutions** node and you will find **Shake for a tweet**, c
 
 ## Step.2 Provision Azure services
 
-In the solution window, invoke command palette again. Type **Task** and run **provision** command:
+In the solution window, run your task through **Quick Open** (`Ctrl+P`) by typing 'task', `Space` and command name. In this case, 'task provision':
 
 **[TODO: Screenshot]**
 
@@ -43,7 +43,7 @@ Replace `#iot` with your preferred hashtag want to retrieve a tweet from. How ab
 
 Build and deploy Arduino code as well as [Azure Function](https://azure.microsoft.com/en-us/services/functions/){:target="_blank"} to wire all things up together.
 
-Invoke command palette, Type **Task** and run **deploy** command:
+Use **Quick Open** (`Ctrl+P`) to run 'task deploy':
 
 **[TODO: Screenshot]**
 
@@ -51,7 +51,7 @@ It will start deploying Azure Function code:
 
 **[TODO: Screenshot]**
 
-Run again **Task** command and run **build** command:
+Use again **Quick Open** (`Ctrl+P`) to run 'task build':
 
 It will build Arduino code and deploy to the device. DevKit will reboot and start running the solution immediately after that:
 
