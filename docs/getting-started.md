@@ -98,12 +98,11 @@ This will flash the latest firmware to your DevKit.
 
 *This section is subject to be changed soon*
 
-1. In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane. Find 'Examples for MXChip AZ3166 > AzureIoTHub > AzureIoTHubExample'
+1. In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane. Find `Examples for MXChip AZ3166 > AzureIoTHub > AzureIoTHubExample`
  ![][mini-solution-solution-catalog]
 
 2. Use **Quick Open** (`Ctrl+P`) to run 'task config_wifi'. It will open terminal and prompt you instructions on connecting to WiFi:
-
-**[TODO: Screenshot]**
+ **[TODO: Screenshot]**
 
 3. In terminal window opened, you will be asked to put your DevKit into Factory Mode. To do so, click Button A and hold it, click Reset Button, then release Reset button before Button A:
  ![][getting-started-configure-wifi]
@@ -120,7 +119,15 @@ You are all set now. It's time to build your first IoT application by following 
 
 # FAQ
 
-**[TODO]**
+### During installation, the command window seems stuck and there is no progress updated for a while
+
+This could probably due to you put the Windows command window into "Selection" mode. To verify it, check the command window title:
+
+![][getting-started-faq-select]
+
+If you see **select** on the title, this means you are in Selection mode. It will prevent the refresh of the output. And that is why you cannot see the latest progress.
+
+To solve it. Press any key within the command window area and you will see the **select** disappear on the title.
 
 
 [getting-started-run-admin]: ./images/getting-started-run-admin.jpg "Run as Administrator"
@@ -152,3 +159,7 @@ You are all set now. It's time to build your first IoT application by following 
 [getting-started-configure-wifi-ssid]: ./images/getting-started-configure-wifi-ssid.png "Configure WiFi Credentials"
 
 [getting-started-wifi-ip]: ./images/getting-started-wifi-ip.jpg "View WiFi IP"
+
+[getting-started-wifi-ip]: ./images/getting-started-wifi-ip.jpg "View WiFi IP"
+
+[getting-started-faq-select]: ./images/getting-started-faq-select.png "Window selected"

@@ -13,7 +13,7 @@ In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** th
 
 ![][mini-solution-arduino-examples]
 
-Find 'Examples for MXChip AZ3166 > AzureIoTHub > AzureIoTHubExample', click to open the solution in a new VS Code window:
+Find `Examples for MXChip AZ3166 > AzureIoTHub > AzureIoTHubExample`, click to open the solution in a new VS Code window:
 
 ![][mini-solution-solution-catalog]
 
