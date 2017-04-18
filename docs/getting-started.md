@@ -101,13 +101,17 @@ This will flash the latest firmware to your DevKit.
 1. In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane. Find 'Examples for MXChip AZ3166 > AzureIoTHub > AzureIoTHubExample'
  ![][mini-solution-solution-catalog]
 
-2. In terminal window opened, you will be asked to put your DevKit into Factory Mode. To do so, hold Button A and Reset Button on the same time, them release Reset button before Button A:
+2. Use **Quick Open** (`Ctrl+P`) to run 'task config_wifi'. It will open terminal and prompt you instructions on connecting to WiFi:
+
+**[TODO: Screenshot]**
+
+3. In terminal window opened, you will be asked to put your DevKit into Factory Mode. To do so, click Button A and hold it, click Reset Button, then release Reset button before Button A:
  ![][getting-started-configure-wifi]
 
-3. Then you will be prompted to enter SSID and password for the WiFi you want DevKit to connect to:
+4. Then you will be prompted to enter SSID and password for the WiFi you want DevKit to connect to:
  ![][getting-started-configure-wifi-ssid]
 
-4. Click Reset button on the board again. The DevKit will reboot and get WiFi connected, to verify the connection, you can see the WiFi LED light up with IP address:
+4. Click **Enter** when succeeds. The DevKit will reboot and get WiFi connected, to verify the connection, you can see the WiFi LED light up with IP address:
  ![][getting-started-wifi-ip]
 
 # Next
