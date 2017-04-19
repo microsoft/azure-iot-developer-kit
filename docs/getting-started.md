@@ -129,6 +129,14 @@ If you see **select** on the title, this means you are in Selection mode. It wil
 
 To solve it. Press any key within the command window area and you will see the **select** disappear on the title.
 
+### During provision step, it fails when creating new Azure IoT Hub
+
+You may encounter the error message as the screen below:
+
+![][getting-started-faq-iothub]
+
+This is due to IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal){:target="_blank"}. In this case, you may select the existing IoT Hub instead of trying to create a new one.
+
 
 [getting-started-run-admin]: ./images/getting-started-run-admin.jpg "Run as Administrator"
 
@@ -163,3 +171,5 @@ To solve it. Press any key within the command window area and you will see the *
 [getting-started-wifi-ip]: ./images/getting-started-wifi-ip.jpg "View WiFi IP"
 
 [getting-started-faq-select]: ./images/getting-started-faq-select.png "Window selected"
+
+[getting-started-faq-iothub]: ./images/getting-started-faq-iothub.png "Only one IoT Hub allowed"
