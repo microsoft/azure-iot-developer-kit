@@ -102,7 +102,7 @@ This will flash the latest firmware to your DevKit.
  ![][mini-solution-solution-catalog]
 
 2. Use **Quick Open** (`Ctrl+P`) to run 'task config_wifi'. It will open terminal and prompt you instructions on connecting to WiFi:
- **[TODO: Screenshot]**
+ ![][mini-solution-wifi]
 
 3. In terminal window opened, you will be asked to put your DevKit into Factory Mode. To do so, click Button A and hold it, click Reset Button, then release Reset button before Button A:
  ![][getting-started-configure-wifi]
@@ -127,7 +127,7 @@ This could probably due to you put the Windows command window into "Selection" m
 
 If you see **select** on the title, this means you are in Selection mode. It will prevent the refresh of the output. And that is why you cannot see the latest progress.
 
-To solve it. Press any key within the command window area and you will see the **select** disappear on the title.
+To solve it, press any key within the command window area and you will see the **select** disappear on the title.
 
 ### During provision step, it fails when creating new Azure IoT Hub
 
@@ -136,6 +136,12 @@ You may encounter the error message as the screen below:
 ![][getting-started-faq-iothub]
 
 This is due to IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal){:target="_blank"}. In this case, you may select the existing IoT Hub instead of trying to create a new one.
+
+### I get errors when connecting to WiFi
+
+This is probably due to you are connecting to a WiFi that needs extra certification other than WPA/WPA2 or open WiFi with captive portal for log in such as in Starbucks.
+
+To solve it, try use a WiFi hotspot with normal WPA/WPA2 encryption methods.
 
 
 [getting-started-run-admin]: ./images/getting-started-run-admin.jpg "Run as Administrator"
@@ -161,6 +167,8 @@ This is due to IoT Hub only allows [one free hub per Azure subscription](https:/
 [getting-started-upload]: ./images/getting-started-upload.jpg "Arduino Upload"
 
 [mini-solution-solution-catalog]: ./images/mini-solution-solution-catalog.png "Mini Solution Catalog"
+
+[mini-solution-wifi]: ./images/mini-solution-wifi.png "Task Configure WiFi"
 
 [getting-started-configure-wifi]: ./images/getting-started-configure-wifi.png "Configure WiFi"
 
