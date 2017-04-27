@@ -12,7 +12,7 @@ Copy the code in terminal window into browser to log in to Azure:
 
 ## B. Select or create a new Azure subscription
 
-**[TODO: Screenshot]**
+![][mini-solution-provision-sub]
 
 ## C. Select or create a new Azure IoT Hub
 
@@ -27,3 +27,6 @@ You will also need to have [Azure Resource Group](https://docs.microsoft.com/en-
 ## D. Select or create Azure Storage account
 
 **[TODO: Screenshot]**
+
+[mini-solution-provision-sub]: ../../images/mini-solution-provision-sub.png "Provision Sub"
+
