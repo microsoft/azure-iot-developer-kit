@@ -1,0 +1,58 @@
+# example navigation
+foo:
+  - title: "Parent Link 1"
+    url: /parent-1-page-url/
+    children:
+      - title: "Child Link 1"
+        url: /child-1-page-url/
+      - title: "Child Link 2"
+        url: /child-2-page-url/
+  - title: "Parent Link 2"
+    url: /parent-2-page-url/
+    children:
+      - title: "Child Link 1"
+        url: /child-1-page-url/
+      - title: "Child Link 2"
+        url: /child-2-page-url/
+      - title: "Child Link 3"
+        url: /child-3-page-url/
+
+
+# main links
+main:
+  - title: "Docs"
+    url: /docs/getting-started/
+  - title: "About"
+    url: /about/
+  - title: "Blog"
+    url: https://blogs.msdn.microsoft.com/iotdev/
+  - title: "Sample Collections"
+    url: /collection-archive/
+  - title: "Terms &amp; Privacy Policy"
+    url: /terms/
+
+
+# documentation links
+docs:
+  - title: Quick Start
+    children:
+      - title: "Getting Started"
+        url: /docs/getting-started/
+      - title: "Installation"
+        url: /docs/installation/
+      - title: "Upgrading"
+        url: /docs/upgrading/
+      - title: "FAQ"
+        url: /docs/faq/
+  - title: Mini Solution
+    children:
+      - title: "Test sensors"
+        url: /docs/solutions/test-sensors/      
+      - title: "Shake shake for a Tweet"
+        url: /docs/solutions/shake-shake/
+      - title: "Voice to Facebook Timeline"
+        url: /docs/solutions/voice-to-timeline/
+  - title: API Reference
+    children:
+      - title: "WiFiClient"
+        url: /docs/api-wifi-client/

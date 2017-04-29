@@ -1,0 +1,578 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.4.1 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Getting Started Guide - Microsoft Azure IoT Developer Kit</title>
+
+
+
+
+<meta name="description" content="How to quickly install and setup Minimal Mistakes for use with GitHub Pages.">
+
+
+
+
+<meta name="author" content="Microsoft Azure IoT Developer Kit">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Microsoft Azure IoT Developer Kit">
+<meta property="og:title" content="Getting Started Guide">
+
+
+  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/">
+  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/">
+
+
+
+  <meta property="og:description" content="How to quickly install and setup Minimal Mistakes for use with GitHub Pages.">
+
+
+
+  <meta name="twitter:site" content="@mmistakes">
+  <meta name="twitter:title" content="Getting Started Guide">
+  <meta name="twitter:description" content="How to quickly install and setup Minimal Mistakes for use with GitHub Pages.">
+  <meta name="twitter:url" content="http://localhost:4000/docs/getting-started/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@Microsoft Azure IoT Developer Kit">
+  
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2017-04-29T07:34:16-07:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000/azure-iot-developer-kit",
+      "logo": "http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Microsoft Azure IoT Developer Kit",
+      "url" : "http://localhost:4000/azure-iot-developer-kit",
+      "sameAs" : ["https://twitter.com/mmistakes","https://facebook.com/michaelrose"]
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" />
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/azure-iot-developer-kit/feed.xml" type="application/atom+xml" rel="alternate" title="Microsoft Azure IoT Developer Kit Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/azure-iot-developer-kit/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://localhost:4000/azure-iot-developer-kit/">Microsoft Azure IoT Developer Kit</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/">Docs</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://blogs.msdn.microsoft.com/iotdev/">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/collection-archive/">Sample Collections</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/terms/">Terms &amp; Privacy Policy</a></li>
+          
+        </ul>
+        <button><div class="navicon"></div></button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Quick Start</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/" class="active">Getting Started</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/installation/" class="">Installation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/upgrading/" class="">Upgrading</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/faq/" class="">FAQ</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Mini Solution</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/solutions/test-sensors/" class="">Test sensors</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/solutions/shake-shake/" class="">Shake shake for a Tweet</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/solutions/voice-to-timeline/" class="">Voice to Facebook Timeline</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">API Reference</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/api-wifi-client/" class="">WiFiClient</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Getting Started Guide">
+    <meta itemprop="description" content="How to quickly install and setup Minimal Mistakes for use with GitHub Pages.">
+    <meta itemprop="datePublished" content="April 29, 2017">
+    <meta itemprop="dateModified" content="November 03, 2016">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Getting Started Guide
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-columns"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#step-1-before-starting" id="markdown-toc-step-1-before-starting">Step 1. Before starting</a>    <ul>
+      <li><a href="#required-hardware--software" id="markdown-toc-required-hardware--software">Required Hardware &amp; Software</a></li>
+      <li><a href="#get-an-azure-account" id="markdown-toc-get-an-azure-account">Get an Azure account</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-2-set-up-the-development-environment" id="markdown-toc-step-2-set-up-the-development-environment">Step 2. Set up the development environment</a>    <ul>
+      <li><a href="#a-copy-all-files-to-local-drive" id="markdown-toc-a-copy-all-files-to-local-drive">A. Copy all files to local drive</a></li>
+      <li><a href="#b-launch-setup-script" id="markdown-toc-b-launch-setup-script">B. Launch setup script</a></li>
+      <li><a href="#c-install-tools-and-packages" id="markdown-toc-c-install-tools-and-packages">C. Install tools and packages</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-3-prepare-your-hardware" id="markdown-toc-step-3-prepare-your-hardware">Step 3. Prepare your hardware</a>    <ul>
+      <li><a href="#a-make-sure-you-have-everything-you-need" id="markdown-toc-a-make-sure-you-have-everything-you-need">A. Make sure you have everything you need</a></li>
+      <li><a href="#b-launch-visual-studio-code" id="markdown-toc-b-launch-visual-studio-code">B. Launch Visual Studio Code</a></li>
+      <li><a href="#c-connect-your-devkit-board-to-pc-via-usb" id="markdown-toc-c-connect-your-devkit-board-to-pc-via-usb">C. Connect your DevKit board to PC via USB</a></li>
+    </ul>
+  </li>
+  <li><a href="#step4-configure-wifi" id="markdown-toc-step4-configure-wifi">Step.4 Configure WiFi</a></li>
+  <li><a href="#next" id="markdown-toc-next">Next</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>For the first time user of Microsoft Azure IoT Developer Kit, follow these quick steps to prepare your development environment and hookup the device to begin building IoT applications.</p>
+
+<h2 id="step-1-before-starting">Step 1. Before starting</h2>
+
+<h3 id="required-hardware--software">Required Hardware &amp; Software</h3>
+
+<ul>
+  <li>Microsoft Azure IoT Developer Kit. <a href="http://microsoft.github.io/azure-iot-developer-kit" target="_blank">Get it now</a></li>
+  <li>A desktop or laptop computer running Windows 10 or macOS 10.10+ (coming soon)</li>
+</ul>
+
+<h3 id="get-an-azure-account">Get an Azure account</h3>
+
+<ul>
+  <li>Activate your Azure account and bring your Microsoft account credentials. Don’t have a Microsoft account? <a href="https://signup.live.com/newuser.aspx" target="_blank">Sign up now</a></li>
+  <li>Activate a <a href="https://azureinfo.microsoft.com/us-freetrial.html" target="_blank">free 30-day trial Microsoft Azure account</a> which gives you 200USD of credit to get started</li>
+  <li>If you subscribe to MSDN, activate your free <a href="https://azure.microsoft.com/en-us/pricing/member-offers/visual-studio-subscriptions/" target="_blank">Azure MSDN subscriber benefits</a></li>
+</ul>
+
+<h2 id="step-2-set-up-the-development-environment">Step 2. Set up the development environment</h2>
+
+<p>Use USB stick come with the kit to quickly set up the development environment including installation of tools and packages, as well as provisioning of the Azure services required for building your IoT app.</p>
+
+<h3 id="a-copy-all-files-to-local-drive">A. Copy all files to local drive</h3>
+
+<p>It is recommended to copy all files from USB stick to your local drive to speed up the installation.</p>
+
+<h3 id="b-launch-setup-script">B. Launch setup script</h3>
+
+<p>In the File Explorer, locate the local folder you just copied files, find <code class="highlighter-rouge">azure-install.cmd</code> and right click on it and select <strong>“Run as administrator”</strong> to start.</p>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-run-admin.jpg" alt="getting-started-run-admin" /></p>
+
+<h3 id="c-install-tools-and-packages">C. Install tools and packages</h3>
+
+<p>The script is in charge of installation for all needed tools and packages for you.</p>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-install.png" alt="getting-started-install" /></p>
+
+<blockquote>
+  <p>Here is the list of tools and packages will be installed:</p>
+  <ul>
+    <li>Node.js - Runtime for the setup script and automated tasks</li>
+    <li>Python and pip - For running Azure CLI 2.0</li>
+    <li><a href="https://docs.microsoft.com/en-us/cli/azure/overview" target="_blank">Azure CLI 2.0</a> - Cross platform new command-line experience for managing Azure resources</li>
+    <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> - Code editor you will used to developer for the DevKit</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino" target="_blank">VS Code Arduino Extension</a> - Make VS Code perfect for Arduino development</li>
+    <li>DevKit Board Package - Toolchains, libraries and min solutions for the DevKit</li>
+    <li>ST-Link Utility - Essential utility and drivers</li>
+  </ul>
+</blockquote>
+
+<p>VS Code for Arduino Extension relies on Arduino IDE to work. During Arduino IDE installation, you will be prompted to install relevant drivers:</p>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-driver.png" alt="getting-started-driver" /></p>
+
+<p>It normally takes a couple of minutes to finish all installations depending on your Internet speed. Once installation finishes, you should see Visual Studio Code and Arduino shortcuts on your desktop.</p>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-icons.png" alt="getting-started-icons" /></p>
+
+<h2 id="step-3-prepare-your-hardware">Step 3. Prepare your hardware</h2>
+
+<p>Hook up your hardware to your desktop or laptop computer.</p>
+
+<h3 id="a-make-sure-you-have-everything-you-need">A. Make sure you have everything you need</h3>
+
+<p>All you need are a DevKit board and a Micro USB cable:</p>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-hardware.jpg" alt="getting-started-hardware" /></p>
+
+<h3 id="b-launch-visual-studio-code">B. Launch Visual Studio Code</h3>
+
+<p>This will be the primary editor for developing on DevKit. Make sure you open VS Code before connecting to the DevKit board so that it can identify the board successfully.</p>
+
+<h3 id="c-connect-your-devkit-board-to-pc-via-usb">C. Connect your DevKit board to PC via USB</h3>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-connect.jpg" alt="getting-started-connect" /></p>
+
+<ol>
+  <li>Connect USB end to your PC</li>
+  <li>Connect Micro USB to the DevKit’s USB Port</li>
+  <li>The green LED next to power confirms connection</li>
+</ol>
+
+<p>VS Code will detect DevKit and open Welcome page with examples and mini solutions next to it automatically:</p>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-vscode.png" alt="getting-started-vscode" /></p>
+
+<h2 id="step4-configure-wifi">Step.4 Configure WiFi</h2>
+
+<p><em>This section is subject to be changed soon</em></p>
+
+<ol>
+  <li>
+    <p>In VS Code, use <code class="highlighter-rouge">Ctrl+Shift+P</code> to invoke command palette and type <strong>Arduino</strong> then find and select <strong>Arduino: Examples</strong> to open example pane. Find <code class="highlighter-rouge">Examples for MXChip AZ3166 &gt; AzureIoTHub &gt; AzureIoTHubExample</code>
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-solution-catalog.png" alt="mini-solution-solution-catalog" /></p>
+  </li>
+  <li>
+    <p>Use <strong>Quick Open</strong> (<code class="highlighter-rouge">Ctrl+P</code>) to run ‘task config_wifi’. It will open terminal and prompt you instructions on connecting to WiFi:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-wifi.png" alt="mini-solution-wifi" /></p>
+  </li>
+  <li>
+    <p>In terminal window opened, you will be asked to put your DevKit into Factory Mode. To do so, click Button A and hold it, click Reset Button, then release Reset button before Button A:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-configure-wifi.png" alt="getting-started-configure-wifi" /></p>
+  </li>
+  <li>
+    <p>Then you will be prompted to enter SSID and password for the WiFi you want DevKit to connect to:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-configure-wifi-ssid.png" alt="getting-started-configure-wifi-ssid" /></p>
+  </li>
+  <li>
+    <p>Click <strong>Enter</strong> when succeeds. The DevKit will reboot and get WiFi connected, to verify the connection, you can see the WiFi LED light up with IP address:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-wifi-ip.jpg" alt="getting-started-wifi-ip" /></p>
+  </li>
+</ol>
+
+<h1 id="next">Next</h1>
+
+<p>You are all set now. It’s time to build your first IoT application by following instructions in <a href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/">Mini Solution Catalog</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-11-03">November 03, 2016</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/installation/" class="pagination--pager" title="Installation
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <div align="center" style="margin: 1em 0;">
+    <ins class="adsbygoogle"
+         style="display:block; border-bottom: initial;"
+         data-ad-client="ca-pub-7328585512091257"
+         data-ad-slot="3049671934"
+         data-ad-format="auto"></ins>
+    </div>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/mmistakes"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+      <li><a href="https://facebook.com/michaelrose"><i class="fa fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+    
+    
+      <li><a href="http://github.com/mmistakes"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/azure-iot-developer-kit/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2017 Microsoft Azure IoT Developer Kit. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/azure-iot-developer-kit/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2011187-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+  </body>
+</html>

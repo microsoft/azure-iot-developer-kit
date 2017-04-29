@@ -1,0 +1,41 @@
+$segoe-font-path:     "../fonts" !default;
+$segoe-version:          "1.2.0" !default;
+
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('#{$segoe-font-path}/SegoeUI.eot?v=#{$segoe-version}');
+  src: url('#{$segoe-font-path}/SegoeUI.eot?#iefix&v=#{$segoe-version}') format('embedded-opentype'),
+    url('#{$segoe-font-path}/SegoeUI.woff2?v=#{$segoe-version}') format('woff2'),
+    url('#{$segoe-font-path}/SegoeUI.woff?v=#{$segoe-version}') format('woff'),
+    url('#{$segoe-font-path}/SegoeUI.ttf?v=#{$segoe-version}') format('truetype'),
+    url('#{$segoe-font-path}/SegoeUI.svg?v=#{$segoe-version}#SegoeUI') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('#{$segoe-font-path}/SegoeUI-Light.eot?v=#{$segoe-version}');
+  src: url('#{$segoe-font-path}/SegoeUI-Light.eot?#iefix&v=#{$segoe-version}') format('embedded-opentype'),
+    url('#{$segoe-font-path}/SegoeUI-Light.woff2?v=#{$segoe-version}') format('woff2'),
+    url('#{$segoe-font-path}/SegoeUI-Light.woff?v=#{$segoe-version}') format('woff'),
+    url('#{$segoe-font-path}/SegoeUI-Light.ttf?v=#{$segoe-version}') format('truetype'),
+    url('#{$segoe-font-path}/SegoeUI-Light.svg?v=#{$segoe-version}#SegoeUILight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('#{$segoe-font-path}/SegoeUI-Semibold.eot?v=#{$segoe-version}');
+  src: url('#{$segoe-font-path}/SegoeUI-Semibold.eot?#iefix&v=#{$segoe-version}') format('embedded-opentype'),
+    url('#{$segoe-font-path}/SegoeUI-Semibold.woff2?v=#{$segoe-version}') format('woff2'),
+    url('#{$segoe-font-path}/SegoeUI-Semibold.woff?v=#{$segoe-version}') format('woff'),
+    url('#{$segoe-font-path}/SegoeUI-Semibold.ttf?v=#{$segoe-version}') format('truetype'),
+    url('#{$segoe-font-path}/SegoeUI-Semibold.svg?v=#{$segoe-version}#SegoeUISemibold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
