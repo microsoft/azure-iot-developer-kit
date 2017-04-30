@@ -14,7 +14,7 @@ docs:
     children:
       - title: "Getting Started"
         url: /docs/getting-started/
-      - title: "Installation"
+      - title: "Manual Installation"
         url: /docs/installation/
       - title: "Upgrading"
         url: /docs/upgrading/
@@ -24,5 +24,5 @@ docs:
     url: /docs/mini-solutions/
   - title: API Reference
     children:
-      - title: "WiFiClient"
-        url: /docs/api-wifi-client/
+      - title: "WiFi"
+        url: /docs/apis/wifi/

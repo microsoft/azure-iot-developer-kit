@@ -1,7 +1,7 @@
 ---
-title: "Installation"
+title: "Manual Installation"
 permalink: /docs/installation/
-excerpt: "Instructions and suggestions for upgrading the theme."
-last_modified_at: 2016-11-03T10:16:34-04:00
+excerpt: "Instructions for manually install tools and packages."
+last_modified_at: 2017-04-30T10:16:34-04:00
 ---
 

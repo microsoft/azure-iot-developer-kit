@@ -1,6 +1,6 @@
 ---
 title: "Your Solution Ideas?"
-excerpt: "You are the one how have the best ideas for what other mini solutions can be built around the DevKit."
+excerpt: "You are the one have the best ideas about what other mini solutions can be built around the DevKit."
 header:
   image: /assets/images/foo-bar-identity.jpg
   teaser: /assets/images/foo-bar-identity-th.jpg

@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/getting-started/</loc>
-<lastmod>2016-11-03T07:01:43-07:00</lastmod>
+<lastmod>2016-04-30T07:01:43-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/installation/</loc>
-<lastmod>2016-11-03T07:16:34-07:00</lastmod>
+<lastmod>2017-04-30T07:16:34-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/faq/</loc>
@@ -18,7 +18,11 @@
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/</loc>
-<lastmod>2017-04-29T23:33:47-07:00</lastmod>
+<lastmod>2017-04-30T06:57:47-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi/</loc>
+<lastmod>2016-11-03T07:16:34-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/layout/uncategorized/layout-header-video/</loc>
@@ -30,7 +34,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/shake-shake/</loc>
-<lastmod>2016-11-03T07:16:34-07:00</lastmod>
+<lastmod>2017-04-30T07:16:34-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/voice-to-timeline/</loc>
@@ -38,11 +42,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/solutions/04-your-ideas/</loc>
-<lastmod>2017-04-29T23:33:47-07:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/azure-iot-developer-kit/about/</loc>
-<lastmod>2017-02-14T11:28:13-08:00</lastmod>
+<lastmod>2017-04-30T06:57:47-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/archive-layout-with-content/</loc>
