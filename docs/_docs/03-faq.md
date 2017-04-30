@@ -5,6 +5,8 @@ excerpt: "Instructions and suggestions for upgrading the theme."
 last_modified_at: 2016-11-03T10:16:34-04:00
 ---
 
+{% include toc icon="columns" %}
+
 ## During installation, the command window seems stuck and there is no progress updated for a while
 
 This could probably due to you put the Windows command window into "Selection" mode. To verify it, check the command window title:

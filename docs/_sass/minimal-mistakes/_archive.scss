@@ -28,12 +28,12 @@
   border-bottom: 1px solid $border-color;
 
   + .list__item .archive__item-title {
-    margin-top: 0.5em;
+    margin-top: 1em;
   }
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
   font-family: $sans-serif-narrow;
 
   a + a {
@@ -115,7 +115,7 @@
 
   .archive__item-title {
     margin-top: 0.5em;
-    font-size: $type-size-5;
+    font-size: $type-size-4;
   }
 
   .archive__item-excerpt {
@@ -132,15 +132,15 @@
   @include breakpoint($medium) {
     margin-left: 0; /* reset before mixin does its thing*/
     margin-right: 0; /* reset before mixin does its thing*/
-    @include gallery(2.5 of 10);
+    @include gallery(3.333 of 10);
 
     .archive__item-teaser {
-      max-height: 120px;
+      max-height: 164px;
     }
 
     .archive__item-excerpt {
       display: block;
-      font-size: $type-size-6;
+      font-size: $type-size-5;
     }
   }
 }
