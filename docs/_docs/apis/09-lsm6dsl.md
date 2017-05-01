@@ -92,7 +92,7 @@ LSM6DSLSensor.h
 
 > Provides functions for multi-register I2C communication.
 > 
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/ST_INTERFACES/DevI2C.h>
+> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/ST_INTERFACES/DevI2C.h>
 
 
 ### PinName
@@ -105,13 +105,13 @@ LSM6DSLSensor.h
 
 > LSM6DSL interrupt pin type
 >
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/LSM6DSLSensor.h>
+> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/LSM6DSLSensor.h>
 
 ### LSM6DSL_Event_Status_t
 
 > LSM6DSL event status type
 >
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/LSM6DSLSensor.h>
+> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/LSM6DSLSensor.h>
 
 ## Constructors
 
@@ -1245,4 +1245,4 @@ int write_reg(uint8_t reg, uint8_t data)
 
 ## Source code
 
-<https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/LSM6DSLSensor.h>
+<https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/LSM6DSLSensor.h>

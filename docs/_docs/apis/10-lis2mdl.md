@@ -37,13 +37,13 @@ lis2mdl_class.h
 
 > Provides functions for multi-register I2C communication.
 > 
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/ST_INTERFACES/DevI2C.h>
+> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/ST_INTERFACES/DevI2C.h>
 
 ### MAGNETO_StatusTypeDef
 
 > MAGNETO status enumerator definition
 >
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/utility/lis2mdl.h>
+> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/utility/lis2mdl.h>
 
 ## Constructors
 
@@ -141,4 +141,4 @@ int get_m_axes(int32_t *pData)
 
 ## Source code
 
-<https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/lis2mdl_class.h>
+<https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/lis2mdl_class.h>
