@@ -92,7 +92,7 @@ LSM6DSLSensor.h
 
 > Provides functions for multi-register I2C communication.
 > 
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/ST_INTERFACES/DevI2C.h>
+> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/ST_INTERFACES/DevI2C.h>
 
 
 ### PinName
