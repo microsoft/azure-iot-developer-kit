@@ -9,7 +9,7 @@ header:
 last_modified_at: 2016-11-03T10:16:34-04:00
 ---
 
-In this mini solution, you will make the DevKit able to send a tweet by voice. By using Microsoft Cognitive Service, when you speak to the DevKit via its microphone, it will translate the voice into a text message and use your authroized Twitter account to send a tweet for you.
+In this mini solution, you will make the DevKit able to send a tweet by voice. By using Microsoft Cognitive Service, when you speak to the DevKit via its microphone, it will translate the voice into text.
 
 ## Requirements
 

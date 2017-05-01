@@ -18,7 +18,7 @@ intro:
     title: "Build cloud powered IoT app in minutes"
     excerpt: 'Microsoft Azure IoT Developer Kit (a.k.a DevKit) is used to develop and prototype Internet of Things (IoT) solutions leveraging on Microsoft Azure services. It includes an Arduino compatible board with rich peripherals and sensors, an open-source board package and a fast growing mini solution catalog.'
     url: "/docs/mini-solutions"
-    btn_label: "Mini Solutions"
+    btn_label: "View Mini Solutions"
     btn_class: "btn--inverse"
 feature_row:
   - title: "Seamless Development Experience"

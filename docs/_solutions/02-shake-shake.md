@@ -78,10 +78,11 @@ After initialization of the app, click `Button A` and mildly shake the board to 
 
 {% include gallery id="layouts_gallery" caption="Shake, shake for a random tweet with `#hashtag` you set in the code." %}
 
-You can press `Button A` again to shake for a new tweet. Cross the finger to get some inspirations from randoms!
+- Press `Button A` again to shake for a new tweet.
+- Press `Button B` will scroll the screen to show you rest of the content for a tweet.
 
 ## How it works
 
-![mini-solution-voice-to-tweet-diagram]({{"/assets/images/mini-solution-voice-to-tweet-diagram.png" | absolute_url }})
+![mini-solution-voice-to-tweet-diagram]({{"/assets/images/mini-solution-diagram-shake-shake.png" | absolute_url }})
 
-**[TODO]**
+This application sends an event to Azure IoT Hub and it triggers calling of Azure Function. The Azure Function contains logic to ask for and retrieve tweet. It wraps the tweet text into a C2D (Cloud-to-device) message and send back to device.
