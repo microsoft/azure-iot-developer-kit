@@ -19,12 +19,12 @@
 
 
 
-<title>Mini Solutions Catalog - Microsoft Azure IoT Developer Kit</title>
+<title>RGB LED - Microsoft Azure IoT Developer Kit</title>
 
 
 
 
-<meta name="description" content="                                                      Simple weather station                  The basic one. Get temperature and humidity data from sensor and display them on the screen.                                                        Shake, shake, what’s up for #hashtag                  Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.                                                        Post to my timeline by voice                  Post to my Facebook timeline by speaking to the microphone. It integrates Microsoft Cognitive Service to translate a voice clip into text message and Azure L...                                                        Your Solution Ideas?                  You are the one have the best ideas about what other mini solutions can be built around the DevKit.    ">
+<meta name="description" content="Library for RGB LED on AZ3166">
 
 
 
@@ -33,22 +33,22 @@
 
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Microsoft Azure IoT Developer Kit">
-<meta property="og:title" content="Mini Solutions Catalog">
+<meta property="og:title" content="RGB LED">
 
 
-  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/">
-  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/">
+  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/apis/led/">
+  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/apis/led/">
 
 
 
-  <meta property="og:description" content="                                                      Simple weather station                  The basic one. Get temperature and humidity data from sensor and display them on the screen.                                                        Shake, shake, what’s up for #hashtag                  Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.                                                        Post to my timeline by voice                  Post to my Facebook timeline by speaking to the microphone. It integrates Microsoft Cognitive Service to translate a voice clip into text message and Azure L...                                                        Your Solution Ideas?                  You are the one have the best ideas about what other mini solutions can be built around the DevKit.    ">
+  <meta property="og:description" content="Library for RGB LED on AZ3166">
 
 
 
   <meta name="twitter:site" content="@likidu">
-  <meta name="twitter:title" content="Mini Solutions Catalog">
-  <meta name="twitter:description" content="                                                      Simple weather station                  The basic one. Get temperature and humidity data from sensor and display them on the screen.                                                        Shake, shake, what’s up for #hashtag                  Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.                                                        Post to my timeline by voice                  Post to my Facebook timeline by speaking to the microphone. It integrates Microsoft Cognitive Service to translate a voice clip into text message and Azure L...                                                        Your Solution Ideas?                  You are the one have the best ideas about what other mini solutions can be built around the DevKit.    ">
-  <meta name="twitter:url" content="http://localhost:4000/docs/mini-solutions/">
+  <meta name="twitter:title" content="RGB LED">
+  <meta name="twitter:description" content="Library for RGB LED on AZ3166">
+  <meta name="twitter:url" content="http://localhost:4000/docs/apis/led/">
 
   
     <meta name="twitter:card" content="summary">
@@ -147,7 +147,7 @@
 <!-- end custom head snippets -->
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -308,7 +308,7 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/led/" class="">LED</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/led/" class="active">LED</a></li>
           
             
             
@@ -361,107 +361,224 @@
   </div>
 
 
-  <div class="archive">
-    
-      <h1 class="page__title">Mini Solutions Catalog</h1>
-    
-    <div class="grid__wrapper">
-  
-    
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="RGB LED">
+    <meta itemprop="description" content="Library for RGB LED on AZ3166">
+    <meta itemprop="datePublished" content="April 30, 2017">
+    <meta itemprop="dateModified" content="April 30, 2017">
 
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/foo-bar-identity-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/test-sensors/" rel="permalink">Simple weather station
-</a>
+        <header>
+          <h1 class="page__title" itemprop="headline">RGB LED
+</h1>
+          
+        </header>
       
-    </h2>
+
+      <section class="page__content" itemprop="text">
+        <p>The <code class="highlighter-rouge">RGB_LED</code> class provides methods to set LED color and turn off LED.</p>
+
+<h2 id="assembly">Assembly</h2>
+
+<p>RGB_LED.h</p>
+
+<h2 id="summary">Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Types</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#pinname">PinName</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Constructors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#rgb_led">RGB_LED</a> - <code class="highlighter-rouge">RGB_LED(PinName red, PinName green, PinName blue)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Methods</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#setcolor">setColor</a> - <code class="highlighter-rouge">void setColor(uint8_t red, uint8_t green, uint8_t blue)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#turnoff">turnOff</a> - <code class="highlighter-rouge">void turnOff()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="types">Types</h2>
+
+<h3 id="pinname">PinName</h3>
+
+<blockquote>
+  <p>Provides the mapping of mbed DIP and LPC Pin Names.</p>
+
+  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/system/targets/TARGET_MXCHIP/TARGET_AZ3166/PinNames.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/system/targets/TARGET_MXCHIP/TARGET_AZ3166/PinNames.h</a></p>
+</blockquote>
+
+<h2 id="constructors">Constructors</h2>
+
+<h3 id="rgb_led">RGB_LED</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">RGB_LED</span><span class="p">(</span><span class="n">PinName</span> <span class="n">red</span><span class="p">,</span> <span class="n">PinName</span> <span class="n">green</span><span class="p">,</span> <span class="n">PinName</span> <span class="n">blue</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <h4 id="parameters">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">PinName</td>
+        <td style="text-align: left">red</td>
+        <td style="text-align: left">Red LED pin name.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">PinName</td>
+        <td style="text-align: left">green</td>
+        <td style="text-align: left">Green LED pin name.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">PinName</td>
+        <td style="text-align: left">blue</td>
+        <td style="text-align: left">Blue LED pin name.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="setcolor">setColor</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="n">setColor</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">red</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">green</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">blue</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set LED color with an RGB color value, each parameter is an integer between 0 and 255.</p>
+
+  <h4 id="parameters-1">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">red</td>
+        <td style="text-align: left">Defines red color intensity, the value is an integer between 0 and 255.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">green</td>
+        <td style="text-align: left">Defines green color intensity, the value is an integer between 0 and 255.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">blue</td>
+        <td style="text-align: left">Defines blue color intensity, the value is an integer between 0 and 255.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value">Return value</h4>
+
+  <p><code class="highlighter-rouge">void</code></p>
+</blockquote>
+
+<h3 id="turnoff">turnOff</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="n">turnOff</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Turn off LED. Set red, green and blue intensity to 0.</p>
+
+  <h4 id="parameters-2">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-1">Return value</h4>
+
+  <p><code class="highlighter-rouge">void</code></p>
+</blockquote>
+
+<h2 id="source-code">Source code</h2>
+
+<p><a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/RGB_LED.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/RGB_LED.h</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-30">April 30, 2017</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
     
-    <p class="archive__item-excerpt" itemprop="description">The basic one. Get temperature and humidity data from sensor and display them on the screen.
-</p>
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/audio/" class="pagination--pager" title="Audio
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/hts221/" class="pagination--pager" title="HTS221 Sensor
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
   </article>
-</div>
+
   
-    
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/foo-bar-identity-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/shake-shake/" rel="permalink">Shake, shake, what’s up for #hashtag
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.
-</p>
-  </article>
-</div>
-  
-    
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/foo-bar-identity-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/voice-to-timeline/" rel="permalink">Post to my timeline by voice
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Post to my Facebook timeline by speaking to the microphone. It integrates Microsoft Cognitive Service to translate a voice clip into text message and Azure L...</p>
-  </article>
-</div>
-  
-    
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/foo-bar-identity-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/azure-iot-developer-kit/solutions/04-your-ideas/" rel="permalink">Your Solution Ideas?
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">You are the one have the best ideas about what other mini solutions can be built around the DevKit.
-</p>
-  </article>
-</div>
   
 </div>
 
-  </div>
-</div>
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <div align="center" style="margin: 1em 0;">

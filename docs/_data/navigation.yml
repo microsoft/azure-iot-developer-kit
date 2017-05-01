@@ -26,3 +26,23 @@ docs:
     children:
       - title: "WiFi"
         url: /docs/apis/wifi/
+      - title: "WiFiClient"
+        url: /docs/apis/wifi-client/
+      - title: "WiFiServer"
+        url: /docs/apis/wifi-server/
+      - title: "WiFiUDP"
+        url: /docs/apis/wifi-udp/
+      - title: "Display"
+        url: /docs/apis/display/
+      - title: "LED"
+        url: /docs/apis/led/
+      - title: "Audio"
+        url: /docs/apis/audio/
+      - title: "HTS221"
+        url: /docs/apis/hts221/
+      - title: "LSM6DSL"
+        url: /docs/apis/lsm6dsl/
+      - title: "LIS2MDL"
+        url: /docs/apis/lis2mdl/
+      - title: "LPS25H"
+        url: /docs/apis/lps25h/

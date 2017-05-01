@@ -19,12 +19,12 @@
 
 
 
-<title>Manual Installation - Microsoft Azure IoT Developer Kit</title>
+<title>LIS2MDL Sensor - Microsoft Azure IoT Developer Kit</title>
 
 
 
 
-<meta name="description" content="Instructions for manually install tools and packages.">
+<meta name="description" content="Library for LIS2MDL, magnetometer sensor on AZ3166">
 
 
 
@@ -33,22 +33,22 @@
 
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Microsoft Azure IoT Developer Kit">
-<meta property="og:title" content="Manual Installation">
+<meta property="og:title" content="LIS2MDL Sensor">
 
 
-  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/installation/">
-  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/installation/">
+  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lis2mdl/">
+  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/apis/lis2mdl/">
 
 
 
-  <meta property="og:description" content="Instructions for manually install tools and packages.">
+  <meta property="og:description" content="Library for LIS2MDL, magnetometer sensor on AZ3166">
 
 
 
   <meta name="twitter:site" content="@likidu">
-  <meta name="twitter:title" content="Manual Installation">
-  <meta name="twitter:description" content="Instructions for manually install tools and packages.">
-  <meta name="twitter:url" content="http://localhost:4000/docs/installation/">
+  <meta name="twitter:title" content="LIS2MDL Sensor">
+  <meta name="twitter:description" content="Library for LIS2MDL, magnetometer sensor on AZ3166">
+  <meta name="twitter:url" content="http://localhost:4000/docs/apis/lis2mdl/">
 
   
     <meta name="twitter:card" content="summary">
@@ -221,7 +221,7 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/installation/" class="active">Manual Installation</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/installation/" class="">Manual Installation</a></li>
           
             
             
@@ -340,7 +340,7 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lis2mdl/" class="">LIS2MDL</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lis2mdl/" class="active">LIS2MDL</a></li>
           
             
             
@@ -362,22 +362,303 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Manual Installation">
-    <meta itemprop="description" content="Instructions for manually install tools and packages.">
+    <meta itemprop="headline" content="LIS2MDL Sensor">
+    <meta itemprop="description" content="Library for LIS2MDL, magnetometer sensor on AZ3166">
     <meta itemprop="datePublished" content="April 30, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Manual Installation
+          <h1 class="page__title" itemprop="headline">LIS2MDL Sensor
 </h1>
           
         </header>
       
 
       <section class="page__content" itemprop="text">
-        
+        <p>The ST LIS2MDL is a sensor for magnetometer.</p>
+
+<p>Implementation file for the LIS2MDL driver class.</p>
+
+<h2 id="assembly">Assembly</h2>
+
+<p>lis2mdl_class.h</p>
+
+<h2 id="summary">Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Types</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#devi2c">DevI2C</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#magneto_statustypedef">MAGNETO_StatusTypeDef</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Constructors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#lis2mdl">LIS2MDL</a> - <code class="highlighter-rouge">LIS2MDL(DevI2C &amp;i2c)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Methods</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#init">init</a> - <code class="highlighter-rouge">int init()</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#read_id">read_id</a> - <code class="highlighter-rouge">int read_id(uint8_t *m_id)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_m_axes_raw">get_m_axes_raw</a> - <code class="highlighter-rouge">int get_m_axes_raw(int16_t *pData)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_m_axes">get_m_axes</a> - <code class="highlighter-rouge">int get_m_axes(int32_t *pData)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="types">Types</h2>
+
+<h3 id="devi2c">DevI2C</h3>
+
+<blockquote>
+  <p>Provides functions for multi-register I2C communication.</p>
+
+  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/ST_INTERFACES/DevI2C.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/ST_INTERFACES/DevI2C.h</a></p>
+</blockquote>
+
+<h3 id="magneto_statustypedef">MAGNETO_StatusTypeDef</h3>
+
+<blockquote>
+  <p>MAGNETO status enumerator definition</p>
+
+  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/utility/lis2mdl.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/utility/lis2mdl.h</a></p>
+</blockquote>
+
+<h2 id="constructors">Constructors</h2>
+
+<h3 id="lis2mdl">LIS2MDL</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">LIS2MDL</span><span class="p">(</span><span class="n">DevI2C</span> <span class="o">&amp;</span><span class="n">i2c</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <h4 id="parameters">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">DevI2C &amp;</td>
+        <td style="text-align: left">i2c</td>
+        <td style="text-align: left">The object of an helper class which handles the I2C peripheral.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="init">init</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">init</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set LIS2MDL Initialization.</p>
+
+  <h4 id="parameters-1">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 (<code class="highlighter-rouge">MAGNETO_OK</code>) in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="read_id">read_id</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_id</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">m_id</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read ID of LIS2MDL Magnetic sensor.</p>
+
+  <h4 id="parameters-2">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">m_id</td>
+        <td style="text-align: left">The pointer where the ID of the device is stored.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-1">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 (<code class="highlighter-rouge">MAGNETO_OK</code>) in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_m_axes_raw">get_m_axes_raw</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_m_axes_raw</span><span class="p">(</span><span class="kt">int16_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read raw data from LIS2MDL Magnetic sensor output register.</p>
+
+  <h4 id="parameters-3">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int16_t *</td>
+        <td style="text-align: left">pData</td>
+        <td style="text-align: left">The pointer where the magnetometer raw data are stored.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-2">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 (<code class="highlighter-rouge">MAGNETO_OK</code>) in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_m_axes">get_m_axes</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_m_axes</span><span class="p">(</span><span class="kt">int32_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read data from LIS2MDL Magnetic sensor and calculate Magnetic in mgauss.</p>
+
+  <h4 id="parameters-4">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int32_t *</td>
+        <td style="text-align: left">pData</td>
+        <td style="text-align: left">The pointer where the magnetometer data are stored.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-3">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 (<code class="highlighter-rouge">MAGNETO_OK</code>) in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="source-code">Source code</h2>
+
+<p><a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/lis2mdl_class.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/lis2mdl_class.h</a></p>
 
         
       </section>
@@ -397,11 +678,11 @@
       
   <nav class="pagination">
     
-      <a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/" class="pagination--pager" title="Getting Started Guide
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lsm6dsl/" class="pagination--pager" title="LSM6DSL Sensor
 ">Previous</a>
     
     
-      <a href="http://localhost:4000/azure-iot-developer-kit/docs/faq/" class="pagination--pager" title="Frequently Asked Questions
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps25h/" class="pagination--pager" title="LPS25H Sensor
 ">Next</a>
     
   </nav>

@@ -19,12 +19,12 @@
 
 
 
-<title>Mini Solutions Catalog - Microsoft Azure IoT Developer Kit</title>
+<title>OLED Display - Microsoft Azure IoT Developer Kit</title>
 
 
 
 
-<meta name="description" content="                                                      Simple weather station                  The basic one. Get temperature and humidity data from sensor and display them on the screen.                                                        Shake, shake, what’s up for #hashtag                  Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.                                                        Post to my timeline by voice                  Post to my Facebook timeline by speaking to the microphone. It integrates Microsoft Cognitive Service to translate a voice clip into text message and Azure L...                                                        Your Solution Ideas?                  You are the one have the best ideas about what other mini solutions can be built around the DevKit.    ">
+<meta name="description" content="Library for OLED display on AZ3166">
 
 
 
@@ -33,22 +33,22 @@
 
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Microsoft Azure IoT Developer Kit">
-<meta property="og:title" content="Mini Solutions Catalog">
+<meta property="og:title" content="OLED Display">
 
 
-  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/">
-  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/">
+  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/apis/display/">
+  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/apis/display/">
 
 
 
-  <meta property="og:description" content="                                                      Simple weather station                  The basic one. Get temperature and humidity data from sensor and display them on the screen.                                                        Shake, shake, what’s up for #hashtag                  Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.                                                        Post to my timeline by voice                  Post to my Facebook timeline by speaking to the microphone. It integrates Microsoft Cognitive Service to translate a voice clip into text message and Azure L...                                                        Your Solution Ideas?                  You are the one have the best ideas about what other mini solutions can be built around the DevKit.    ">
+  <meta property="og:description" content="Library for OLED display on AZ3166">
 
 
 
   <meta name="twitter:site" content="@likidu">
-  <meta name="twitter:title" content="Mini Solutions Catalog">
-  <meta name="twitter:description" content="                                                      Simple weather station                  The basic one. Get temperature and humidity data from sensor and display them on the screen.                                                        Shake, shake, what’s up for #hashtag                  Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.                                                        Post to my timeline by voice                  Post to my Facebook timeline by speaking to the microphone. It integrates Microsoft Cognitive Service to translate a voice clip into text message and Azure L...                                                        Your Solution Ideas?                  You are the one have the best ideas about what other mini solutions can be built around the DevKit.    ">
-  <meta name="twitter:url" content="http://localhost:4000/docs/mini-solutions/">
+  <meta name="twitter:title" content="OLED Display">
+  <meta name="twitter:description" content="Library for OLED display on AZ3166">
+  <meta name="twitter:url" content="http://localhost:4000/docs/apis/display/">
 
   
     <meta name="twitter:card" content="summary">
@@ -147,7 +147,7 @@
 <!-- end custom head snippets -->
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -300,7 +300,7 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/display/" class="">Display</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/display/" class="active">Display</a></li>
           
             
             
@@ -361,107 +361,264 @@
   </div>
 
 
-  <div class="archive">
-    
-      <h1 class="page__title">Mini Solutions Catalog</h1>
-    
-    <div class="grid__wrapper">
-  
-    
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="OLED Display">
+    <meta itemprop="description" content="Library for OLED display on AZ3166">
+    <meta itemprop="datePublished" content="April 30, 2017">
+    <meta itemprop="dateModified" content="April 30, 2017">
 
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/foo-bar-identity-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/test-sensors/" rel="permalink">Simple weather station
-</a>
+        <header>
+          <h1 class="page__title" itemprop="headline">OLED Display
+</h1>
+          
+        </header>
       
-    </h2>
+
+      <section class="page__content" itemprop="text">
+        <p>Library for OLED display.</p>
+
+<h2 id="assembly">Assembly</h2>
+
+<p>OledDisplay.h</p>
+
+<h2 id="summary">Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Constructors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#oleddisplay">OLEDDisplay</a> - <code class="highlighter-rouge">OLEDDisplay()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Methods</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#init">init</a> - <code class="highlighter-rouge">void init()</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#clean">clean</a> - <code class="highlighter-rouge">void clean()</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#print">print</a> - <code class="highlighter-rouge">uint8_t print(const char *s, bool wrap)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#print-1">print</a> - <code class="highlighter-rouge">uint8_t print(uint8_t line, const char *s, bool wrap)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="constructors">Constructors</h2>
+
+<h3 id="oleddisplay">OLEDDisplay</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">OLEDDisplay</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <h4 id="parameters">Parameters</h4>
+
+  <p>None.</p>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="init">init</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="n">init</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set OLED display Initialization.</p>
+
+  <h4 id="parameters-1">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value">Return value</h4>
+
+  <p><code class="highlighter-rouge">void</code></p>
+</blockquote>
+
+<h3 id="clean">clean</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="n">clean</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Clean OLED display.</p>
+
+  <h4 id="parameters-2">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-1">Return value</h4>
+
+  <p><code class="highlighter-rouge">void</code></p>
+</blockquote>
+
+<h3 id="print">print</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="n">print</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">wrap</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Print text in the first line on OLED display.</p>
+
+  <h4 id="parameters-3">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">const char *</td>
+        <td style="text-align: left">s</td>
+        <td style="text-align: left">Text to display.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">bool</td>
+        <td style="text-align: left">wrap</td>
+        <td style="text-align: left">Line wrap.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-2">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">End of text line number, start from 0.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="print-1">print</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="n">print</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">line</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">wrap</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Print text in the specific line on OLED display.</p>
+
+  <h4 id="parameters-4">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">line</td>
+        <td style="text-align: left">Specific line number.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">const char *</td>
+        <td style="text-align: left">s</td>
+        <td style="text-align: left">Text to display.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">bool</td>
+        <td style="text-align: left">wrap</td>
+        <td style="text-align: left">Line wrap.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-3">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">End of text line number, start from 0.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="source-code">Source code</h2>
+
+<p><a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/OledDisplay.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/OledDisplay.h</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-30">April 30, 2017</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
     
-    <p class="archive__item-excerpt" itemprop="description">The basic one. Get temperature and humidity data from sensor and display them on the screen.
-</p>
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-udp/" class="pagination--pager" title="AZ3166 WiFi UDP
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/audio/" class="pagination--pager" title="Audio
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
   </article>
-</div>
+
   
-    
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/foo-bar-identity-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/shake-shake/" rel="permalink">Shake, shake, what’s up for #hashtag
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.
-</p>
-  </article>
-</div>
-  
-    
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/foo-bar-identity-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/voice-to-timeline/" rel="permalink">Post to my timeline by voice
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Post to my Facebook timeline by speaking to the microphone. It integrates Microsoft Cognitive Service to translate a voice clip into text message and Azure L...</p>
-  </article>
-</div>
-  
-    
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/foo-bar-identity-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/azure-iot-developer-kit/solutions/04-your-ideas/" rel="permalink">Your Solution Ideas?
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">You are the one have the best ideas about what other mini solutions can be built around the DevKit.
-</p>
-  </article>
-</div>
   
 </div>
 
-  </div>
-</div>
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <div align="center" style="margin: 1em 0;">
