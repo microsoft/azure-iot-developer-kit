@@ -1,11 +1,11 @@
-# Microsoft Azure IoT Develoer Kit
+# Microsoft Azure IoT Developer Kit
 
-Visit product home page to get started: [https://microsoft.github.io/azure-iot-developer-kit/](https://microsoft.github.io/azure-iot-developer-kit/)
+Visit the project overview page to get started: [https://microsoft.github.io/azure-iot-developer-kit/](https://microsoft.github.io/azure-iot-developer-kit/)
 
 ## Repository Structure
 
-* [/solutions](https://github.com/Microsoft/azure-iot-developer-kit/tree/master/solutions) - Mini solution source codes and tutorials
-* [/docs](https://github.com/Microsoft/azure-iot-developer-kit/tree/master/docs) - Produce home page with all other documents
+* [/solutions](https://github.com/Microsoft/azure-iot-developer-kit/tree/master/solutions) - Mini solution source code and tutorials
+* [/docs](https://github.com/Microsoft/azure-iot-developer-kit/tree/master/docs) - Project home page with all other documents
 
 ## Contributing
 
