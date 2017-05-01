@@ -90,4 +90,4 @@ void turnOff()
 
 ## Source code
 
-<https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/RGB_LED.h>
+<https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/RGB_LED.h>
