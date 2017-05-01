@@ -1,0 +1,48 @@
+# main links
+main:
+  - title: "Docs"
+    url: /docs/getting-started/
+  - title: "Versions"
+    url: /versions/
+  - title: "Blog"
+    url: https://blogs.msdn.microsoft.com/iotdev/
+
+
+# documentation links
+docs:
+  - title: Quick Start
+    children:
+      - title: "Getting Started"
+        url: /docs/getting-started/
+      - title: "Manual Installation"
+        url: /docs/installation/
+      - title: "Upgrading"
+        url: /docs/upgrading/
+      - title: "FAQ"
+        url: /docs/faq/
+  - title: Mini Solutions
+    url: /docs/mini-solutions/
+  - title: API Reference
+    children:
+      - title: "WiFi"
+        url: /docs/apis/wifi/
+      - title: "WiFiClient"
+        url: /docs/apis/wifi-client/
+      - title: "WiFiServer"
+        url: /docs/apis/wifi-server/
+      - title: "WiFiUDP"
+        url: /docs/apis/wifi-udp/
+      - title: "Display"
+        url: /docs/apis/display/
+      - title: "LED"
+        url: /docs/apis/led/
+      - title: "Audio"
+        url: /docs/apis/audio/
+      - title: "HTS221"
+        url: /docs/apis/hts221/
+      - title: "LSM6DSL"
+        url: /docs/apis/lsm6dsl/
+      - title: "LIS2MDL"
+        url: /docs/apis/lis2mdl/
+      - title: "LPS25H"
+        url: /docs/apis/lps25h/

@@ -1,0 +1,807 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.4.1 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>AZ3166 WiFi Server - Microsoft Azure IoT Developer Kit</title>
+
+
+
+
+<meta name="description" content="The WiFi server for AZ3166">
+
+
+
+
+<meta name="author" content="Microsoft Azure IoT Developer Kit">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Microsoft Azure IoT Developer Kit">
+<meta property="og:title" content="AZ3166 WiFi Server">
+
+
+  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-server/">
+  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-server/">
+
+
+
+  <meta property="og:description" content="The WiFi server for AZ3166">
+
+
+
+  <meta name="twitter:site" content="@likidu">
+  <meta name="twitter:title" content="AZ3166 WiFi Server">
+  <meta name="twitter:description" content="The WiFi server for AZ3166">
+  <meta name="twitter:url" content="http://localhost:4000/docs/apis/wifi-server/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@Microsoft Azure IoT Developer Kit">
+  
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2017-04-30T20:57:10-07:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000/azure-iot-developer-kit",
+      "logo": "http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Microsoft Azure IoT Developer Kit",
+      "url" : "http://localhost:4000/azure-iot-developer-kit",
+      "sameAs" : ["https://twitter.com/likidu","https://facebook.com/likidu"]
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/azure-iot-developer-kit/feed.xml" type="application/atom+xml" rel="alternate" title="Microsoft Azure IoT Developer Kit Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/azure-iot-developer-kit/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://localhost:4000/azure-iot-developer-kit/">Microsoft Azure IoT Developer Kit</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/">Docs</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/versions/">Versions</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://blogs.msdn.microsoft.com/iotdev/">Blog</a></li>
+          
+        </ul>
+        <button><div class="navicon"></div></button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Quick Start</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/" class="">Getting Started</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/installation/" class="">Manual Installation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/upgrading/" class="">Upgrading</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/faq/" class="">FAQ</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/"><span class="nav__sub-title">Mini Solutions</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">API Reference</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi/" class="">WiFi</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-client/" class="">WiFiClient</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-server/" class="active">WiFiServer</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-udp/" class="">WiFiUDP</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/display/" class="">Display</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/led/" class="">LED</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/audio/" class="">Audio</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/hts221/" class="">HTS221</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lsm6dsl/" class="">LSM6DSL</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lis2mdl/" class="">LIS2MDL</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps25h/" class="">LPS25H</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="AZ3166 WiFi Server">
+    <meta itemprop="description" content="The WiFi server for AZ3166">
+    <meta itemprop="datePublished" content="April 30, 2017">
+    <meta itemprop="dateModified" content="April 30, 2017">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">AZ3166 WiFi Server
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>The <code class="highlighter-rouge">WiFiServer</code> class is for Arduino Wifi shield.</p>
+
+<h2 id="assembly">Assembly</h2>
+
+<p>AZ3166WiFiServer.h</p>
+
+<h2 id="summary">Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Types</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#wificlient">WiFiClient</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Constructors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#wifiserver">WiFiServer</a> - <code class="highlighter-rouge">WiFiServer(uint16_t port)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Methods</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#begin">begin</a> - void begin()</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#available">available</a> - WiFiClient available(byte *status)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#accept">accept</a> - int accept(WiFiClient *client)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#write">write</a> - size_t write(uint8_t b)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#write-1">write</a> - size_t write(const uint8_t *buffer, size_t size)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#close">close</a> - void close()</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="types">Types</h2>
+
+<h3 id="wificlient">WiFiClient</h3>
+
+<blockquote>
+  <p>Arduino Wifi client class.</p>
+
+  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFiClient.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFiClient.h</a></p>
+</blockquote>
+
+<h2 id="constructors">Constructors</h2>
+
+<h3 id="wifiserver">WiFiServer</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">WiFiServer</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">port</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <h4 id="parameters">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint16_t</td>
+        <td style="text-align: left">port</td>
+        <td style="text-align: left">The port to listen on.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="begin">begin</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="n">begin</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Start the server.</p>
+
+  <h4 id="parameters-1">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value">Return value</h4>
+
+  <p><code class="highlighter-rouge">void</code></p>
+</blockquote>
+
+<h3 id="available">available</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">WiFiClient</span> <span class="n">available</span><span class="p">(</span><span class="n">byte</span> <span class="o">*</span><span class="n">status</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Gets a client that is connected to the server and has data available for reading.</p>
+
+  <h4 id="parameters-2">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">byte *</td>
+        <td style="text-align: left">status</td>
+        <td style="text-align: left">Not used.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-1">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">WiFiClient</td>
+        <td style="text-align: left">A Client object or -1 if no clients available.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="accept">accept</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">accept</span><span class="p">(</span><span class="n">WiFiClient</span> <span class="o">*</span><span class="n">client</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Gets a client that is connected to the server and has data available for reading.</p>
+
+  <h4 id="parameters-3">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">WiFiClient *</td>
+        <td style="text-align: left">client</td>
+        <td style="text-align: left">Pointer to the connected client.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-2">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">Result code, 0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="write">write</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">size_t</span> <span class="n">write</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">b</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Write 1 byte data to all the clients connected to a server.</p>
+
+  <h4 id="parameters-4">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">b</td>
+        <td style="text-align: left">Data to write.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-3">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">size_t</td>
+        <td style="text-align: left">Size of data written.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="write-1">write</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">size_t</span> <span class="n">write</span><span class="p">(</span><span class="k">const</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Write size bytes of data to all the clients connected to a server.</p>
+
+  <h4 id="parameters-5">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">const uint8_t *</td>
+        <td style="text-align: left">buffer</td>
+        <td style="text-align: left">Data to write.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">size_t</td>
+        <td style="text-align: left">size</td>
+        <td style="text-align: left">Size of data to write.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-4">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">size_t</td>
+        <td style="text-align: left">Size of data written.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="close">close</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="n">close</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Close the server.</p>
+
+  <h4 id="parameters-6">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-5">Return value</h4>
+
+  <p><code class="highlighter-rouge">void</code></p>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-30">April 30, 2017</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-client/" class="pagination--pager" title="AZ3166 WiFi Client
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-udp/" class="pagination--pager" title="AZ3166 WiFi UDP
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <div align="center" style="margin: 1em 0;">
+    <ins class="adsbygoogle"
+         style="display:block; border-bottom: initial;"
+         data-ad-client="ca-pub-7328585512091257"
+         data-ad-slot="3049671934"
+         data-ad-format="auto"></ins>
+    </div>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/likidu"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+      <li><a href="https://facebook.com/likidu"><i class="fa fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+    
+    
+      <li><a href="http://github.com/Microsoft/azure-iot-developer-kit"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/azure-iot-developer-kit/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2017 Microsoft Azure IoT Developer Kit. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/azure-iot-developer-kit/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98097460-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+  </body>
+</html>

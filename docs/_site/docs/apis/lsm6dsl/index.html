@@ -1,0 +1,3216 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.4.1 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>LSM6DSL Sensor - Microsoft Azure IoT Developer Kit</title>
+
+
+
+
+<meta name="description" content="Library for LSM6DSL, 3D digital accelerometer and gyroscope sensor on AZ3166">
+
+
+
+
+<meta name="author" content="Microsoft Azure IoT Developer Kit">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Microsoft Azure IoT Developer Kit">
+<meta property="og:title" content="LSM6DSL Sensor">
+
+
+  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lsm6dsl/">
+  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/apis/lsm6dsl/">
+
+
+
+  <meta property="og:description" content="Library for LSM6DSL, 3D digital accelerometer and gyroscope sensor on AZ3166">
+
+
+
+  <meta name="twitter:site" content="@likidu">
+  <meta name="twitter:title" content="LSM6DSL Sensor">
+  <meta name="twitter:description" content="Library for LSM6DSL, 3D digital accelerometer and gyroscope sensor on AZ3166">
+  <meta name="twitter:url" content="http://localhost:4000/docs/apis/lsm6dsl/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@Microsoft Azure IoT Developer Kit">
+  
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2017-04-30T20:57:10-07:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000/azure-iot-developer-kit",
+      "logo": "http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Microsoft Azure IoT Developer Kit",
+      "url" : "http://localhost:4000/azure-iot-developer-kit",
+      "sameAs" : ["https://twitter.com/likidu","https://facebook.com/likidu"]
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/azure-iot-developer-kit/feed.xml" type="application/atom+xml" rel="alternate" title="Microsoft Azure IoT Developer Kit Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/azure-iot-developer-kit/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://localhost:4000/azure-iot-developer-kit/">Microsoft Azure IoT Developer Kit</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/">Docs</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/versions/">Versions</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://blogs.msdn.microsoft.com/iotdev/">Blog</a></li>
+          
+        </ul>
+        <button><div class="navicon"></div></button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Quick Start</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/" class="">Getting Started</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/installation/" class="">Manual Installation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/upgrading/" class="">Upgrading</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/faq/" class="">FAQ</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/"><span class="nav__sub-title">Mini Solutions</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">API Reference</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi/" class="">WiFi</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-client/" class="">WiFiClient</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-server/" class="">WiFiServer</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi-udp/" class="">WiFiUDP</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/display/" class="">Display</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/led/" class="">LED</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/audio/" class="">Audio</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/hts221/" class="">HTS221</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lsm6dsl/" class="active">LSM6DSL</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lis2mdl/" class="">LIS2MDL</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps25h/" class="">LPS25H</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="LSM6DSL Sensor">
+    <meta itemprop="description" content="Library for LSM6DSL, 3D digital accelerometer and gyroscope sensor on AZ3166">
+    <meta itemprop="datePublished" content="April 30, 2017">
+    <meta itemprop="dateModified" content="April 30, 2017">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">LSM6DSL Sensor
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>The <a href="http://www.st.com/en/mems-and-sensors/lsm6dsl.html" target="_blank">ST LSM6DSL</a> is a 3D digital accelerometer and gyroscope enabling always-on low-power features for an optimal motion experience.</p>
+
+<p>Abstract Class of an LSM6DSL Inertial Measurement Unit (IMU) 6 axes sensor.</p>
+
+<h2 id="assembly">Assembly</h2>
+
+<p>LSM6DSLSensor.h</p>
+
+<h2 id="summary">Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Types</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#devi2c">DevI2C</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#pinname">PinName</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#lsm6dsl_interrupt_pin_t">LSM6DSL_Interrupt_Pin_t</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#lsm6dsl_event_status_t">LSM6DSL_Event_Status_t</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Constructors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#lsm6dslsensor">LSM6DSLSensor</a> - <code class="highlighter-rouge">LSM6DSLSensor(DevI2C &amp;i2c, PinName int1_pin, PinName int2_pin)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#lsm6dslsensor-1">LSM6DSLSensor</a> - <code class="highlighter-rouge">LSM6DSLSensor(DevI2C &amp;i2c, PinName int1_pin, PinName int2_pin, uint8_t address)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Methods</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#init">init</a> - <code class="highlighter-rouge">int init(void *init)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#enable_x">enable_x</a> - <code class="highlighter-rouge">int enable_x(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#enable_g">enable_g</a> - <code class="highlighter-rouge">int enable_g(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#disable_x">disable_x</a> - <code class="highlighter-rouge">int disable_x(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#disable_g">disable_g</a> - <code class="highlighter-rouge">int disable_g(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#read_id">read_id</a> - <code class="highlighter-rouge">int read_id(uint8_t *id)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_x_axes">get_x_axes</a> - <code class="highlighter-rouge">int get_x_axes(int32_t *pData)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_g_axes">get_g_axes</a> - <code class="highlighter-rouge">int get_g_axes(int32_t *pData)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_x_sensitivity">get_x_sensitivity</a> - <code class="highlighter-rouge">int get_x_sensitivity(float *pfData)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_g_sensitivity">get_g_sensitivity</a> - <code class="highlighter-rouge">int get_g_sensitivity(float *pfData)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_x_axes_raw">get_x_axes_raw</a> - <code class="highlighter-rouge">int get_x_axes_raw(int16_t *pData)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_g_axes_raw">get_g_axes_raw</a> - <code class="highlighter-rouge">int get_g_axes_raw(int16_t *pData)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_x_odr">get_x_odr</a> - <code class="highlighter-rouge">int get_x_odr(float* odr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_g_odr">get_g_odr</a> - <code class="highlighter-rouge">int get_g_odr(float* odr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_x_odr">set_x_odr</a> - <code class="highlighter-rouge">int set_x_odr(float odr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_x_odr_when_enabled">set_x_odr_when_enabled</a> - <code class="highlighter-rouge">int set_x_odr_when_enabled(float odr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_x_odr_when_disabled">set_x_odr_when_disabled</a> - <code class="highlighter-rouge">int set_x_odr_when_disabled(float odr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_g_odr">set_g_odr</a> - <code class="highlighter-rouge">int set_g_odr(float odr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_g_odr_when_enabled">set_g_odr_when_enabled</a> - <code class="highlighter-rouge">int set_g_odr_when_enabled(float odr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_g_odr_when_disabled">set_g_odr_when_disabled</a> - <code class="highlighter-rouge">int set_g_odr_when_disabled(float odr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_x_fs">get_x_fs</a> - <code class="highlighter-rouge">int get_x_fs(float* fullScale)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_g_fs">get_g_fs</a> - <code class="highlighter-rouge">int get_g_fs(float* fullScale)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_x_fs">set_x_fs</a> - <code class="highlighter-rouge">int set_x_fs(float fullScale)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_g_fs">set_g_fs</a> - <code class="highlighter-rouge">int set_g_fs(float fullScale)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#enable_free_fall_detection">enable_free_fall_detection</a> - <code class="highlighter-rouge">int enable_free_fall_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#disable_free_fall_detection">disable_free_fall_detection</a> - <code class="highlighter-rouge">int disable_free_fall_detection(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_free_fall_threshold">set_free_fall_threshold</a> - <code class="highlighter-rouge">int set_free_fall_threshold(uint8_t thr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#enable_pedometer">enable_pedometer</a> - <code class="highlighter-rouge">int enable_pedometer(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#disable_pedometer">disable_pedometer</a> - <code class="highlighter-rouge">int disable_pedometer(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_step_counter">get_step_counter</a> - <code class="highlighter-rouge">int get_step_counter(uint16_t *step_count)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#reset_step_counter">reset_step_counter</a> - <code class="highlighter-rouge">int reset_step_counter(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_pedometer_threshold">set_pedometer_threshold</a> - <code class="highlighter-rouge">int set_pedometer_threshold(uint8_t thr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#enable_tilt_detection">enable_tilt_detection</a> - <code class="highlighter-rouge">int enable_tilt_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#disable_tilt_detection">disable_tilt_detection</a> - <code class="highlighter-rouge">int disable_tilt_detection(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#enable_wake_up_detection">enable_wake_up_detection</a> - <code class="highlighter-rouge">int enable_wake_up_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#disable_wake_up_detection">disable_wake_up_detection</a> - <code class="highlighter-rouge">int disable_wake_up_detection(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_wake_up_threshold">set_wake_up_threshold</a> - <code class="highlighter-rouge">int set_wake_up_threshold(uint8_t thr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#enable_single_tap_detection">enable_single_tap_detection</a> - <code class="highlighter-rouge">int enable_single_tap_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#disable_single_tap_detection">disable_single_tap_detection</a> - <code class="highlighter-rouge">int disable_single_tap_detection(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#enable_double_tap_detection">enable_double_tap_detection</a> - <code class="highlighter-rouge">int enable_double_tap_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#disable_double_tap_detection">disable_double_tap_detection</a> - <code class="highlighter-rouge">int disable_double_tap_detection(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_tap_threshold">set_tap_threshold</a> - <code class="highlighter-rouge">int set_tap_threshold(uint8_t thr)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_tap_shock_time">set_tap_shock_time</a> - <code class="highlighter-rouge">int set_tap_shock_time(uint8_t time)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_tap_quiet_time">set_tap_quiet_time</a> - <code class="highlighter-rouge">int set_tap_quiet_time(uint8_t time)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#set_tap_duration_time">set_tap_duration_time</a> - <code class="highlighter-rouge">int set_tap_duration_time(uint8_t time)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#enable_6d_orientation">enable_6d_orientation</a> - <code class="highlighter-rouge">int enable_6d_orientation(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#disable_6d_orientation">disable_6d_orientation</a> - <code class="highlighter-rouge">int disable_6d_orientation(void)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_6d_orientation_xl">get_6d_orientation_xl</a> - <code class="highlighter-rouge">int get_6d_orientation_xl(uint8_t *xl)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_6d_orientation_xh">get_6d_orientation_xh</a> - <code class="highlighter-rouge">int get_6d_orientation_xh(uint8_t *xh)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_6d_orientation_yl">get_6d_orientation_yl</a> - <code class="highlighter-rouge">int get_6d_orientation_yl(uint8_t *yl)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_6d_orientation_yh">get_6d_orientation_yh</a> - <code class="highlighter-rouge">int get_6d_orientation_yh(uint8_t *yh)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_6d_orientation_zl">get_6d_orientation_zl</a> - <code class="highlighter-rouge">int get_6d_orientation_zl(uint8_t *zl)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_6d_orientation_zh">get_6d_orientation_zh</a> - <code class="highlighter-rouge">int get_6d_orientation_zh(uint8_t *zh)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#get_event_status">get_event_status</a> - <code class="highlighter-rouge">int get_event_status(LSM6DSL_Event_Status_t *status)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#read_reg">read_reg</a> - <code class="highlighter-rouge">int read_reg(uint8_t reg, uint8_t *data)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#write_reg">write_reg</a> - <code class="highlighter-rouge">int write_reg(uint8_t reg, uint8_t data)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="types">Types</h2>
+
+<h3 id="devi2c">DevI2C</h3>
+
+<blockquote>
+  <p>Provides functions for multi-register I2C communication.</p>
+
+  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/ST_INTERFACES/DevI2C.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/ST_INTERFACES/DevI2C.h</a></p>
+</blockquote>
+
+<h3 id="pinname">PinName</h3>
+
+<blockquote>
+  <p>Provides the mapping of mbed DIP and LPC Pin Names.</p>
+
+  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/system/targets/TARGET_MXCHIP/TARGET_AZ3166/PinNames.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/system/targets/TARGET_MXCHIP/TARGET_AZ3166/PinNames.h</a></p>
+</blockquote>
+
+<h3 id="lsm6dsl_interrupt_pin_t">LSM6DSL_Interrupt_Pin_t</h3>
+
+<blockquote>
+  <p>LSM6DSL interrupt pin type</p>
+
+  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/LSM6DSLSensor.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/LSM6DSLSensor.h</a></p>
+</blockquote>
+
+<h3 id="lsm6dsl_event_status_t">LSM6DSL_Event_Status_t</h3>
+
+<blockquote>
+  <p>LSM6DSL event status type</p>
+
+  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/LSM6DSLSensor.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/LSM6DSLSensor.h</a></p>
+</blockquote>
+
+<h2 id="constructors">Constructors</h2>
+
+<h3 id="lsm6dslsensor">LSM6DSLSensor</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">LSM6DSLSensor</span><span class="p">(</span><span class="n">DevI2C</span> <span class="o">&amp;</span><span class="n">i2c</span><span class="p">,</span> <span class="n">PinName</span> <span class="n">int1_pin</span><span class="p">,</span> <span class="n">PinName</span> <span class="n">int2_pin</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <h4 id="parameters">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">DevI2C &amp;</td>
+        <td style="text-align: left">i2c</td>
+        <td style="text-align: left">The object of an helper class which handles the I2C peripheral.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">PinName</td>
+        <td style="text-align: left">int1_pin</td>
+        <td style="text-align: left">LSM6DSL interrupt pin name.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">PinName</td>
+        <td style="text-align: left">int2_pin</td>
+        <td style="text-align: left">LSM6DSL interrupt pin name.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="lsm6dslsensor-1">LSM6DSLSensor</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">LSM6DSLSensor</span><span class="p">(</span><span class="n">DevI2C</span> <span class="o">&amp;</span><span class="n">i2c</span><span class="p">,</span> <span class="n">PinName</span> <span class="n">int1_pin</span><span class="p">,</span> <span class="n">PinName</span> <span class="n">int2_pin</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">address</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <h4 id="parameters-1">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">DevI2C &amp;</td>
+        <td style="text-align: left">i2c</td>
+        <td style="text-align: left">The object of an helper class which handles the I2C peripheral.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">PinName</td>
+        <td style="text-align: left">int1_pin</td>
+        <td style="text-align: left">LSM6DSL interrupt pin name.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">PinName</td>
+        <td style="text-align: left">int2_pin</td>
+        <td style="text-align: left">LSM6DSL interrupt pin name.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">address</td>
+        <td style="text-align: left">The address of the component’s instance.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="init">init</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">init</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">init</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Initializing the component.</p>
+
+  <h4 id="parameters-2">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">void *</td>
+        <td style="text-align: left">init</td>
+        <td style="text-align: left">Pointer to device specific initalization structure.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="enable_x">enable_x</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_x</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Enable LSM6DSL Accelerator.</p>
+
+  <h4 id="parameters-3">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-1">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="enable_g">enable_g</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_g</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Enable LSM6DSL Gyroscope.</p>
+
+  <h4 id="parameters-4">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-2">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="disable_x">disable_x</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_x</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Disable LSM6DSL Accelerator.</p>
+
+  <h4 id="parameters-5">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-3">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="disable_g">disable_g</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_g</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Disable LSM6DSL Gyroscope.</p>
+
+  <h4 id="parameters-6">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-4">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="read_id">read_id</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_id</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">id</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read ID of LSM6DSL Accelerometer and Gyroscope.</p>
+
+  <h4 id="parameters-7">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">id</td>
+        <td style="text-align: left">The pointer where the ID of the device is stored.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-5">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_x_axes">get_x_axes</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_axes</span><span class="p">(</span><span class="kt">int32_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read data from LSM6DSL Accelerometer.</p>
+
+  <h4 id="parameters-8">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int32_t *</td>
+        <td style="text-align: left">pData</td>
+        <td style="text-align: left">The pointer where the accelerometer data are stored.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-6">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_g_axes">get_g_axes</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_axes</span><span class="p">(</span><span class="kt">int32_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read data from LSM6DSL Gyroscope.</p>
+
+  <h4 id="parameters-9">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int32_t *</td>
+        <td style="text-align: left">pData</td>
+        <td style="text-align: left">The pointer where the gyroscope data are stored</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-7">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_x_sensitivity">get_x_sensitivity</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_sensitivity</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">pfData</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read Accelerometer Sensitivity.</p>
+
+  <h4 id="parameters-10">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float *</td>
+        <td style="text-align: left">pfData</td>
+        <td style="text-align: left">The pointer where the accelerometer sensitivity is stored</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-8">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_g_sensitivity">get_g_sensitivity</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_sensitivity</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">pfData</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read Gyroscope Sensitivity.</p>
+
+  <h4 id="parameters-11">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float *</td>
+        <td style="text-align: left">pfData</td>
+        <td style="text-align: left">The pointer where the gyroscope sensitivity is stored.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-9">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_x_axes_raw">get_x_axes_raw</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_axes_raw</span><span class="p">(</span><span class="kt">int16_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read raw data from LSM6DSL Accelerometer.</p>
+
+  <h4 id="parameters-12">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int16_t *</td>
+        <td style="text-align: left">pData</td>
+        <td style="text-align: left">The pointer where the accelerometer raw data are stored</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-10">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_g_axes_raw">get_g_axes_raw</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_axes_raw</span><span class="p">(</span><span class="kt">int16_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read raw data from LSM6DSL Gyroscope.</p>
+
+  <h4 id="parameters-13">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int16_t *</td>
+        <td style="text-align: left">pData</td>
+        <td style="text-align: left">The pointer where the gyroscope raw data are stored.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-11">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_x_odr">get_x_odr</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_odr</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">odr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read LSM6DSL Accelerometer output data rate.</p>
+
+  <h4 id="parameters-14">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float *</td>
+        <td style="text-align: left">odr</td>
+        <td style="text-align: left">The pointer to the output data rate.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-12">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_g_odr">get_g_odr</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_odr</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">odr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read LSM6DSL Gyroscope output data rate.</p>
+
+  <h4 id="parameters-15">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float *</td>
+        <td style="text-align: left">odr</td>
+        <td style="text-align: left">The pointer to the output data rate.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-13">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_x_odr">set_x_odr</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_x_odr</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set LSM6DSL Accelerometer output data rate.</p>
+
+  <h4 id="parameters-16">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float</td>
+        <td style="text-align: left">odr</td>
+        <td style="text-align: left">The output data rate to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-14">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_x_odr_when_enabled">set_x_odr_when_enabled</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_x_odr_when_enabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set LSM6DSL Accelerometer output data rate when enabled.</p>
+
+  <h4 id="parameters-17">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float</td>
+        <td style="text-align: left">odr</td>
+        <td style="text-align: left">The output data rate to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-15">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_x_odr_when_disabled">set_x_odr_when_disabled</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_x_odr_when_disabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set LSM6DSL Accelerometer output data rate when disabled.</p>
+
+  <h4 id="parameters-18">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float</td>
+        <td style="text-align: left">odr</td>
+        <td style="text-align: left">The output data rate to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-16">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_g_odr">set_g_odr</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_g_odr</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set LSM6DSL Gyroscope output data rate.</p>
+
+  <h4 id="parameters-19">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float</td>
+        <td style="text-align: left">odr</td>
+        <td style="text-align: left">The output data rate to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-17">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_g_odr_when_enabled">set_g_odr_when_enabled</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_g_odr_when_enabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set LSM6DSL Gyroscope output data rate when enabled.</p>
+
+  <h4 id="parameters-20">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float</td>
+        <td style="text-align: left">odr</td>
+        <td style="text-align: left">The output data rate to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-18">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_g_odr_when_disabled">set_g_odr_when_disabled</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_g_odr_when_disabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set LSM6DSL Gyroscope output data rate when disabled.</p>
+
+  <h4 id="parameters-21">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float</td>
+        <td style="text-align: left">odr</td>
+        <td style="text-align: left">The output data rate to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-19">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_x_fs">get_x_fs</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_fs</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">fullScale</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read LSM6DSL Accelerometer full scale.</p>
+
+  <h4 id="parameters-22">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float *</td>
+        <td style="text-align: left">fullScale</td>
+        <td style="text-align: left">The pointer to the full scale.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-20">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_g_fs">get_g_fs</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_fs</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">fullScale</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Read LSM6DSL Gyroscope full scale.</p>
+
+  <h4 id="parameters-23">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float *</td>
+        <td style="text-align: left">fullScale</td>
+        <td style="text-align: left">The pointer to the full scale.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-21">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_x_fs">set_x_fs</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_x_fs</span><span class="p">(</span><span class="kt">float</span> <span class="n">fullScale</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set LSM6DSL Accelerometer full scale</p>
+
+  <h4 id="parameters-24">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float</td>
+        <td style="text-align: left">fullScale</td>
+        <td style="text-align: left">The full scale to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-22">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_g_fs">set_g_fs</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_g_fs</span><span class="p">(</span><span class="kt">float</span> <span class="n">fullScale</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set LSM6DSL Gyroscope full scale.</p>
+
+  <h4 id="parameters-25">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">float</td>
+        <td style="text-align: left">fullScale</td>
+        <td style="text-align: left">The full scale to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-23">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="enable_free_fall_detection">enable_free_fall_detection</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_free_fall_detection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Enable free fall detection. This function sets the LSM6DSL accelerometer ODR to 416Hz and the LSM6DSL accelerometer full scale to 2g.</p>
+
+  <h4 id="parameters-26">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">LSM6DSL_Interrupt_Pin_t</td>
+        <td style="text-align: left">pin</td>
+        <td style="text-align: left">The interrupt pin to be used.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-24">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="disable_free_fall_detection">disable_free_fall_detection</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_free_fall_detection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Disable free fall detection.</p>
+
+  <h4 id="parameters-27">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-25">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_free_fall_threshold">set_free_fall_threshold</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_free_fall_threshold</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">thr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set the free fall detection threshold for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-28">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">thr</td>
+        <td style="text-align: left">The threshold to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-26">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="enable_pedometer">enable_pedometer</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_pedometer</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Enable the pedometer feature for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 26Hz and the LSM6DSL accelerometer full scale to 2g.</p>
+
+  <h4 id="parameters-29">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-27">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="disable_pedometer">disable_pedometer</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_pedometer</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Disable the pedometer feature for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-30">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-28">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_step_counter">get_step_counter</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_step_counter</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span><span class="n">step_count</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Get the step counter for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-31">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint16_t *</td>
+        <td style="text-align: left">step_count</td>
+        <td style="text-align: left">The pointer to the step counter.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-29">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="reset_step_counter">reset_step_counter</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">reset_step_counter</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Reset of the step counter for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-32">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-30">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_pedometer_threshold">set_pedometer_threshold</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_pedometer_threshold</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">thr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set the pedometer threshold for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-33">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">thr</td>
+        <td style="text-align: left">The threshold to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-31">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="enable_tilt_detection">enable_tilt_detection</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_tilt_detection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Enable the tilt detection for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 26Hz and the LSM6DSL accelerometer full scale to 2g.</p>
+
+  <h4 id="parameters-34">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">LSM6DSL_Interrupt_Pin_t</td>
+        <td style="text-align: left">pin</td>
+        <td style="text-align: left">The interrupt pin to be used.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-32">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="disable_tilt_detection">disable_tilt_detection</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_tilt_detection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Disable the tilt detection for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-35">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-33">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="enable_wake_up_detection">enable_wake_up_detection</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_wake_up_detection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Enable the wake up detection for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 416Hz and the LSM6DSL accelerometer full scale to 2g.</p>
+
+  <h4 id="parameters-36">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">LSM6DSL_Interrupt_Pin_t</td>
+        <td style="text-align: left">pin</td>
+        <td style="text-align: left">The interrupt pin to be used.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-34">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="disable_wake_up_detection">disable_wake_up_detection</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_wake_up_detection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Disable the wake up detection for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-37">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-35">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_wake_up_threshold">set_wake_up_threshold</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_wake_up_threshold</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">thr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set the wake up threshold for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-38">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">thr</td>
+        <td style="text-align: left">The threshold to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-36">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="enable_single_tap_detection">enable_single_tap_detection</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_single_tap_detection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Enable the single tap detection for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 416Hz and the LSM6DSL accelerometer full scale to 2g.</p>
+
+  <h4 id="parameters-39">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">LSM6DSL_Interrupt_Pin_t</td>
+        <td style="text-align: left">pin</td>
+        <td style="text-align: left">The interrupt pin to be used.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-37">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="disable_single_tap_detection">disable_single_tap_detection</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_single_tap_detection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Disable the single tap detection for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-40">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-38">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="enable_double_tap_detection">enable_double_tap_detection</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_double_tap_detection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Enable the double tap detection for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 416Hz and the LSM6DSL accelerometer full scale to 2g.</p>
+
+  <h4 id="parameters-41">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">LSM6DSL_Interrupt_Pin_t</td>
+        <td style="text-align: left">pin</td>
+        <td style="text-align: left">The interrupt pin to be used.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-39">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="disable_double_tap_detection">disable_double_tap_detection</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_double_tap_detection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Disable the double tap detection for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-42">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-40">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_tap_threshold">set_tap_threshold</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_tap_threshold</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">thr</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set the tap threshold for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-43">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">thr</td>
+        <td style="text-align: left">The threshold to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-41">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_tap_shock_time">set_tap_shock_time</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_tap_shock_time</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">time</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set the tap shock time window for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-44">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">time</td>
+        <td style="text-align: left">The shock time window to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-42">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_tap_quiet_time">set_tap_quiet_time</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_tap_quiet_time</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">time</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set the tap quiet time window for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-45">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">time</td>
+        <td style="text-align: left">The quiet time window to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-43">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="set_tap_duration_time">set_tap_duration_time</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_tap_duration_time</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">time</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Set the tap duration of the time window for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-46">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">time</td>
+        <td style="text-align: left">The duration of the time window to be set.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-44">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="enable_6d_orientation">enable_6d_orientation</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_6d_orientation</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Enable the 6D orientation detection for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 416Hz and the LSM6DSL accelerometer full scale to 2g.</p>
+
+  <h4 id="parameters-47">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">LSM6DSL_Interrupt_Pin_t</td>
+        <td style="text-align: left">pin</td>
+        <td style="text-align: left">The interrupt pin to be used.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-45">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="disable_6d_orientation">disable_6d_orientation</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_6d_orientation</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Disable the 6D orientation detection for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-48">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value-46">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_6d_orientation_xl">get_6d_orientation_xl</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_xl</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">xl</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Get the 6D orientation XL axis for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-49">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">xl</td>
+        <td style="text-align: left">The pointer to the 6D orientation XL axis.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-47">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_6d_orientation_xh">get_6d_orientation_xh</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_xh</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">xh</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Get the 6D orientation XH axis for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-50">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">xh</td>
+        <td style="text-align: left">The pointer to the 6D orientation XH axis.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-48">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_6d_orientation_yl">get_6d_orientation_yl</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_yl</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">yl</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Get the 6D orientation YL axis for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-51">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">yl</td>
+        <td style="text-align: left">The pointer to the 6D orientation YL axis</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-49">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_6d_orientation_yh">get_6d_orientation_yh</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_yh</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">yh</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Get the 6D orientation YH axis for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-52">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">yh</td>
+        <td style="text-align: left">The pointer to the 6D orientation YH axis.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-50">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_6d_orientation_zl">get_6d_orientation_zl</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_zl</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">zl</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Get the 6D orientation ZL axis for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-53">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">zl</td>
+        <td style="text-align: left">The pointer to the 6D orientation ZL axis.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-51">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_6d_orientation_zh">get_6d_orientation_zh</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_zh</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">zh</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Get the 6D orientation ZH axis for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-54">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">zh</td>
+        <td style="text-align: left">The pointer to the 6D orientation ZH axis.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-52">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="get_event_status">get_event_status</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_event_status</span><span class="p">(</span><span class="n">LSM6DSL_Event_Status_t</span> <span class="o">*</span><span class="n">status</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Get the status of all hardware events for LSM6DSL accelerometer sensor.</p>
+
+  <h4 id="parameters-55">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">LSM6DSL_Event_Status_t *</td>
+        <td style="text-align: left">status</td>
+        <td style="text-align: left">The pointer to the status of all hardware events.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-53">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="read_reg">read_reg</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_reg</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+
+  <h4 id="parameters-56">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">reg</td>
+        <td style="text-align: left">Register address.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">data</td>
+        <td style="text-align: left">Register data.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-54">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="write_reg">write_reg</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">write_reg</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">data</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Write the data to register.</p>
+
+  <h4 id="parameters-57">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">reg</td>
+        <td style="text-align: left">Register address.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">data</td>
+        <td style="text-align: left">Register data.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-55">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="source-code">Source code</h2>
+
+<p><a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/LSM6DSLSensor.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/Sensors/src/LSM6DSLSensor.h</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-30">April 30, 2017</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/hts221/" class="pagination--pager" title="HTS221 Sensor
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lis2mdl/" class="pagination--pager" title="LIS2MDL Sensor
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <div align="center" style="margin: 1em 0;">
+    <ins class="adsbygoogle"
+         style="display:block; border-bottom: initial;"
+         data-ad-client="ca-pub-7328585512091257"
+         data-ad-slot="3049671934"
+         data-ad-format="auto"></ins>
+    </div>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/likidu"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+      <li><a href="https://facebook.com/likidu"><i class="fa fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+    
+    
+      <li><a href="http://github.com/Microsoft/azure-iot-developer-kit"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/azure-iot-developer-kit/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2017 Microsoft Azure IoT Developer Kit. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/azure-iot-developer-kit/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98097460-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+  </body>
+</html>
