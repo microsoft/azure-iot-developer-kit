@@ -277,7 +277,7 @@ IPAddress gatewayIP()
 ### SSID
 
 ```cpp
-uint8_t *SSID()
+const char*SSID()
 ```
 
 > Get current network SSID.
@@ -290,7 +290,7 @@ uint8_t *SSID()
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t * | Pointer to current connected WiFi SSID. |
+> | const char * | Pointer to current network SSID. |
 
 ### SSID
 
@@ -302,25 +302,29 @@ const char *SSID(uint8_t networkItem)
 >
 > #### Parameters
 >
-> None.
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | uint8_t | networkItem | Specific network index in the AP list. |
 >
 > #### Return value
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t * | Pointer to current network SSID. |
+> | const char * | Pointer to current network SSID. |
 
 ### BSSID
 
 ```cpp
-uint8_t *BSSID(uint8_t* bssid)
+uint8_t *BSSID(uint8_t *bssid)
 ```
 
 > Get current connected WiFi BSSID.
 >
 > #### Parameters
 >
-> None.
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | uint8_t * | bssid | Pointer to current network BSSID. |
 >
 > #### Return value
 >
