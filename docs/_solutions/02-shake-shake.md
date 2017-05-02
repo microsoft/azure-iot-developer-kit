@@ -53,7 +53,7 @@ You can also check [step by step tutorial for provision](/azure-iot-developer-ki
 Open `AzureIotHubExample.ino` and look for the line of code:
 
 ```cpp
-iothub_client_sample_send_event((const unsigned char *)"{\"topic\":\"build2017\", \"DeviceID\":\"myDevice1\"}");
+static const char* iot_event = "{\"topic\":\"iot\"}";
 ```
 
 Replace `#iot` with your preferred hashtag want to retrieve a tweet from. How about `#build2017`:smile:?
