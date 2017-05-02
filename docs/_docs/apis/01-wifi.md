@@ -444,6 +444,6 @@ uint8_t status()
 > | :--- | :---------- |
 > | uint8_t | Current network status. |
 
-### Source code
+## Source code
 
 <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFi.h>
