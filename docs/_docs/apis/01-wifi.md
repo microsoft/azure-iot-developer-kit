@@ -277,7 +277,7 @@ IPAddress gatewayIP()
 ### SSID
 
 ```cpp
-const char*SSID()
+const char* SSID()
 ```
 
 > Get current network SSID.
