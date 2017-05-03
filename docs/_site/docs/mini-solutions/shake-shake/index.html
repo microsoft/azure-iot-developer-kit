@@ -58,7 +58,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-05-01T19:58:52-07:00">
+  <meta property="article:published_time" content="2017-05-02T23:25:08-07:00">
 
 
 
@@ -184,7 +184,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Shake, shake, what’s up for #hashtag">
     <meta itemprop="description" content="Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.">
-    <meta itemprop="datePublished" content="May 01, 2017">
+    <meta itemprop="datePublished" content="May 02, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
 
     <div class="page__inner-wrap">
@@ -233,7 +233,7 @@
 <p>Open <code class="highlighter-rouge">AzureIotHubExample.ino</code> and look for the line of code:</p>
 
 <div class="language-cpp highlighter-rouge">
-<pre class="highlight"><code><span class="n">iothub_client_sample_send_event</span><span class="p">((</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="s">"{</span><span class="se">\"</span><span class="s">topic</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">build2017</span><span class="se">\"</span><span class="s">, </span><span class="se">\"</span><span class="s">DeviceID</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">myDevice1</span><span class="se">\"</span><span class="s">}"</span><span class="p">);</span>
+<pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">iot_event</span> <span class="o">=</span> <span class="s">"{</span><span class="se">\"</span><span class="s">topic</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">iot</span><span class="se">\"</span><span class="s">}"</span><span class="p">;</span>
 </code></pre>
 </div>
 

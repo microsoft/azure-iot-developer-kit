@@ -26,7 +26,10 @@ For the first time user of Microsoft Azure IoT Developer Kit, follow these quick
 
 The `.zip` file you need to download contains all necessary tools and packages required for developing on DevKit.
 
-[<i class='fa fa-download'></i> Download the Package](http://10.172.15.140:8080/job/AzureIoTDeveloperKit/){: .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download the Package](https://azureboard.blob.core.windows.net/installpackage/usb_install_148.zip){: .btn .btn--success .btn--large}
+
+**For internal users only:** If you are using the old version of the preview hardware of DevKit. Please  download the latest stable [build#130](http://10.172.15.140:8080/job/AzureIoTDeveloperKit/130/artifact/usb_install_130.zip). Above download link only works for the new version.
+{: .notice--warning}
 
 > Here is the list of tools and packages in the `.zip` file, see [Manual Installation]({{"/docs/installation" | absolute_url }}) guide for more details:
 > * Node.js - Runtime for the setup script and automated tasks
