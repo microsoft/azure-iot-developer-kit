@@ -51,7 +51,7 @@ Replace `#iot` with your preferred hashtag want to retrieve a tweet from. How ab
 
 Build and deploy Arduino code as well as [Azure Function](https://azure.microsoft.com/en-us/services/functions/){:target="_blank"} to wire all things up together.
 
-Use **Quick Open** (`Ctrl+P`) to run 'task deploy'. It will start deploying Azure Function code. Normally it takes 2 to 5 minutes to finish the deployment:
+Use **Quick Open** (`Ctrl+P`) to run 'task deploy'. It will start deploying Azure Functions code. Normally it takes 2 to 5 minutes to finish the deployment:
 
 ![][mini-solution-deploy]
 

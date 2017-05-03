@@ -1,6 +1,7 @@
 ---
-title: "Your Solution Ideas?"
-excerpt: "You are the one have the best ideas about what other mini solutions can be built around the DevKit."
+title: "Your Ideas?"
+permalink: /docs/mini-solutions/#
+excerpt: "We really want to hear about the cool and innovative ways you are using the DevKit. Please share your ideas with us to [iot-devkit@microsoft.com](mailto:iot-devkit@microsoft.com)."
 header:
   image: /assets/images/foo-bar-identity.jpg
   teaser: /assets/images/foo-bar-identity-th.jpg

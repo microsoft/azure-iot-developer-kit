@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.4.1 by Michael Rose
-  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
---><html lang="en" class="no-js">
+<!doctype html>
+
+<html lang="en" class="no-js">
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin SEO -->
@@ -19,12 +14,12 @@
 
 
 
-<title>Shake, shake, what’s up for #hashtag - Microsoft Azure IoT Developer Kit</title>
+<title>Shake, Shake - Microsoft Azure IoT Developer Kit</title>
 
 
 
 
-<meta name="description" content="Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.">
+<meta name="description" content="Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag.">
 
 
 
@@ -33,7 +28,7 @@
 
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Microsoft Azure IoT Developer Kit">
-<meta property="og:title" content="Shake, shake, what’s up for #hashtag">
+<meta property="og:title" content="Shake, Shake">
 
 
   <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/shake-shake/">
@@ -41,7 +36,7 @@
 
 
 
-  <meta property="og:description" content="Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.">
+  <meta property="og:description" content="Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag.">
 
 
 
@@ -58,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-05-02T23:25:08-07:00">
+  <meta property="article:published_time" content="2017-05-03T06:59:39-07:00">
 
 
 
@@ -167,9 +162,11 @@
 
 
 
-<div class="page__hero" style="  ">
+<div class="page__hero"
+  style="  "
+>
   
-    <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/foo-bar-identity.jpg" alt="Shake, shake, what’s up for #hashtag" class="page__hero-image">
+    <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/foo-bar-identity.jpg" alt="Shake, Shake" class="page__hero-image">
   
   
 </div>
@@ -182,117 +179,100 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Shake, shake, what’s up for #hashtag">
-    <meta itemprop="description" content="Use accelerometer &amp; gyroscope sensor to detect the shaking and a simple Azure Function app for getting a random tweet with #hashtag.">
-    <meta itemprop="datePublished" content="May 02, 2017">
+    <meta itemprop="headline" content="Shake, Shake">
+    <meta itemprop="description" content="Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag.">
+    <meta itemprop="datePublished" content="May 03, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Shake, shake, what’s up for #hashtag
+          <h1 class="page__title" itemprop="headline">Shake, Shake
 </h1>
           
         </header>
       
 
       <section class="page__content" itemprop="text">
-        <p>In this mini solution, you will learn how to use accelerometer and gyroscope sensor to tigger an event using Azure Function: retrieving a random tweet with <code class="highlighter-rouge">#hashtag</code> you have customized in your Arduino code. The tweet will display on DevKit screen. Every time you shake your DevKit board, you will get a new tweet.</p>
+        <p>In this project, you will learn how to use the motion sensor to trigger an event using Azure Functions. The app will retrieve a random tweet with a #hashtag you have configured in your Arduino sketch. The tweet will display on the DevKit screen, and every time you shake the DevKit board, you will get a new tweet.</p>
 
-<h2 id="requirements">Requirements</h2>
+<h2 id="what-you-need">What you need</h2>
 
 <ul>
-  <li>Finish the <a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/">Getting Started Guide</a> to prepare your development environment and hardware.</li>
-  <li>An active Azure account.</li>
+  <li>Finish the <a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/">Getting Started Guide</a></li>
 </ul>
 
-<h2 id="step1-open-mini-solution-folder">Step.1 Open mini solution folder</h2>
+<h2 id="step-1-open-arduino-examples-folder">Step 1. Open Arduino Examples folder</h2>
 
-<p>In VS Code, use <code class="highlighter-rouge">Ctrl+Shift+P</code> to invoke command palette and type <strong>Arduino</strong> then find and select <strong>Arduino: Examples</strong> to open example pane:</p>
+<p>In VS Code, use <code class="highlighter-rouge">Ctrl+Shift+P</code> to invoke command palette and type <strong>Arduino</strong> then find and select <strong>Arduino: Examples</strong> to open example pane. Navigate to <code class="highlighter-rouge">Examples for MXChip AZ3166 &gt; AzureIoTHub</code> and click on <code class="highlighter-rouge">AzureIoTHubExample</code>.</p>
 
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-arduino-examples.png" alt="mini-solution-arduino-examples"></p>
+<h2 id="step-2-provision-azure-services">Step 2. Provision Azure services</h2>
 
-<p>Find <code class="highlighter-rouge">Examples for MXChip AZ3166 &gt; AzureIoTHub &gt; AzureIoTHubExample</code>, click to open the solution in a new VS Code window:</p>
+<p>In the solution window, run your task through <strong>Quick Open</strong> (<code class="highlighter-rouge">Ctrl+P</code>) by typing ‘task provision’:</p>
 
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-catalog.png" alt="mini-solution-solution-catalog"></p>
+<p>In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services:</p>
 
-<h2 id="step2-provision-azure-services">Step.2 Provision Azure services</h2>
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-provision-sub.png" alt="mini-solution-provision-sub" /></p>
 
-<p>In the solution window, run your task through <strong>Quick Open</strong> (<code class="highlighter-rouge">Ctrl+P</code>) by typing ‘task’, <code class="highlighter-rouge">Space</code> and command name. In this case, ‘task provision’:</p>
-
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-task-provision.png" alt="mini-solution-task-provision"></p>
-
-<p>In terminal window, an interactive command line will guide you provision all Azure services that are required for this mini solution:</p>
-
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-provision-sub.png" alt="mini-solution-provision-sub"></p>
-
-<p>You can also check <a href="/azure-iot-developer-kit/solutions/common/provision-step-by-step.html">step by step tutorial for provision</a> to see more details.</p>
-
-<h2 id="step3-modify-the-code-to-retrieve-tweet-with-hashtag">Step.3 Modify the code to retrieve tweet with #hashtag</h2>
+<h2 id="step-3-modify-the-hashtag">Step 3. Modify the #hashtag</h2>
 
 <p>Open <code class="highlighter-rouge">AzureIotHubExample.ino</code> and look for the line of code:</p>
 
-<div class="language-cpp highlighter-rouge">
-<pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">iot_event</span> <span class="o">=</span> <span class="s">"{</span><span class="se">\"</span><span class="s">topic</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">iot</span><span class="se">\"</span><span class="s">}"</span><span class="p">;</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">iot_event</span> <span class="o">=</span> <span class="s">"{</span><span class="se">\"</span><span class="s">topic</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">iot</span><span class="se">\"</span><span class="s">}"</span><span class="p">;</span>
 </code></pre>
 </div>
 
-<p>Replace <code class="highlighter-rouge">#iot</code> with your preferred hashtag want to retrieve a tweet from. How about <code class="highlighter-rouge">#build2017</code><img class="emoji" title=":smile:" alt=":smile:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle">?</p>
+<p>Replace the string <code class="highlighter-rouge">iot</code> in the curly brace with your preferred hashtag.</p>
 
-<h2 id="step4-build-and-deploy-your-solution">Step.4 Build and deploy your solution</h2>
+<h2 id="step-4-deploy-your-solution">Step 4. Deploy your solution</h2>
 
-<p>Build and deploy Arduino code as well as <a href="https://azure.microsoft.com/en-us/services/functions/" target="_blank">Azure Function</a> to wire all things up together.</p>
+<p>Build and deploy Arduino code as well as an Azure Functions app.</p>
 
-<p>Use <strong>Quick Open</strong> (<code class="highlighter-rouge">Ctrl+P</code>) to run ‘task deploy’. It will start deploying Azure Function code. Normally it takes 2 to 5 minutes to finish the deployment:</p>
+<ol>
+  <li>Use <strong>Quick Open</strong> (<code class="highlighter-rouge">Ctrl+P</code>) to run ‘task deploy’. It will start deploying the Azure Functions code. Normally it takes 2 to 5 minutes to finish.</li>
+  <li>Use <strong>Quick Open</strong> (<code class="highlighter-rouge">Ctrl+P</code>) to run ‘task build’. The terminal will prompt you to enter configuration mode again. This is to set the connection string. It will build the Arduino code and upload it to the device. The DevKit will reboot and start running the code:</li>
+</ol>
 
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-deploy.png" alt="mini-solution-deploy"></p>
+<h2 id="step-5-test-the-solution">Step 5. Test the solution</h2>
 
-<p>Use again <strong>Quick Open</strong> (<code class="highlighter-rouge">Ctrl+P</code>) to run ‘task build’:</p>
-
-<p>It will build Arduino code and deploy to the device. DevKit will reboot and start running the solution immediately after that:</p>
-
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-build.png" alt="mini-solution-build"></p>
-
-<h2 id="test-the-solution">Test the solution</h2>
-
-<p>After initialization of the app, click <code class="highlighter-rouge">Button A</code> and mildly shake the board to retrieve a random tweet with hashtag <code class="highlighter-rouge">build2017</code>. In a few seconds, it will display on screen:</p>
+<p>After app initialization, click button A and mildly shake the board to retrieve a random tweet with your hashtag (e.g. #build2017). A tweet will display on your screen in a few seconds:</p>
 
 <figure class="third ">
   
     
       <a href="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-shake-shake-1.jpg">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-shake-shake-1.jpg" alt="Arduino application initializing">
+        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-shake-shake-1.jpg" alt="Arduino application initializing" />
       </a>
     
   
     
       <a href="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-shake-shake-2.jpg">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-shake-shake-2.jpg" alt="Ready to shake">
+        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-shake-shake-2.jpg" alt="Ready to shake" />
       </a>
     
   
     
       <a href="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-shake-shake-3.jpg">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-shake-shake-3.jpg" alt="Display a random tweet">
+        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-shake-shake-3.jpg" alt="Display a random tweet" />
       </a>
     
   
   
-    <figcaption>Shake, shake for a random tweet with <code class="highlighter-rouge">#hashtag</code> you set in the code.
+    <figcaption>Shake, shake for a random tweet with #hashtag you set in the code.
 </figcaption>
   
 </figure>
 
 <ul>
-  <li>Press <code class="highlighter-rouge">Button A</code> again to shake for a new tweet.</li>
-  <li>Press <code class="highlighter-rouge">Button B</code> will scroll the screen to show you rest of the content for a tweet.</li>
+  <li>Press button A again, then shake for a new tweet.</li>
+  <li>Press button B to scroll through the rest of the tweet.</li>
 </ul>
 
 <h2 id="how-it-works">How it works</h2>
 
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-diagram-shake-shake.png" alt="mini-solution-voice-to-tweet-diagram"></p>
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-diagram-shake-shake.png" alt="mini-solution-voice-to-tweet-diagram" /></p>
 
-<p>This application sends an event to Azure IoT Hub and it triggers calling of Azure Function. The Azure Function contains logic to ask for and retrieve tweet. It wraps the tweet text into a C2D (Cloud-to-device) message and send back to device.</p>
+<p>The Arduino sketch sends an event to Azure IoT Hub which triggers the Azure Functions app. Azure Functions contains the logic to connect to Twitter’s API and retrieve a tweet. It wraps the tweet text into a C2D (Cloud-to-device) message and sends it back to the device.</p>
 
         
       </section>
@@ -312,11 +292,11 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Shake,%20shake,%20what%E2%80%99s%20up%20for%20#hashtag%20http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/shake-shake/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Shake, Shake http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/shake-shake/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/shake-shake/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/shake-shake/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/shake-shake/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
@@ -326,7 +306,7 @@
       <a href="#" class="pagination--pager disabled">Previous</a>
     
     
-      <a href="http://localhost:4000/azure-iot-developer-kit/solutions/04-your-ideas/" class="pagination--pager" title="Your Solution Ideas?
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/mini-solutions/" class="pagination--pager" title="Your Ideas?
 ">Next</a>
     
   </nav>
@@ -346,7 +326,7 @@
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+          <div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -361,7 +341,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">© 2017 Microsoft Azure IoT Developer Kit. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>.</div>
+<div class="page__footer-copyright">Copyright &copy; 2017 Microsoft Corp.</div>
       </footer>
     </div>
 

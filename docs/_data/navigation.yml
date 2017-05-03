@@ -20,7 +20,7 @@ docs:
         url: /docs/upgrading/
       - title: "FAQ"
         url: /docs/faq/
-  - title: Mini Solutions
+  - title: Projects Catalog
     url: /docs/mini-solutions/
   - title: API Reference
     children:

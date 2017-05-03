@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Mini Solutions Catalog"
+title: "Projects Catalog"
 permalink: /docs/mini-solutions/
 author_profile: false
 ---
