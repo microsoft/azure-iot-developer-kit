@@ -22,7 +22,7 @@ The `.zip` file you download contains all necessary tools and packages required 
 
 [<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/usb_install_latest.zip){: .btn .btn--success .btn--large}
 
-**Note:** If you are using the old version of the DevKit, download [build#132](https://azureboard.blob.core.windows.net/installpackage/usb_install_legacy.zip).
+**Note:** If you are using the old version of the DevKit, download [legacy build](https://azureboard.blob.core.windows.net/installpackage/usb_install_legacy.zip).
 {: .notice--warning}
 
 > The `.zip` file contains the following tools and packageas. If you already have some components installed, the script will detect and skip them.
