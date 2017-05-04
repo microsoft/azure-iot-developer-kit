@@ -1,6 +1,6 @@
 ---
 title: "Your Ideas?"
-permalink: /docs/mini-solutions/#
+permalink: /docs/projects/#
 excerpt: "We really want to hear about the cool and innovative ways you are using the DevKit. Please share your ideas with us to [iot-devkit@microsoft.com](mailto:iot-devkit@microsoft.com)."
 header:
   image: /assets/images/foo-bar-identity.jpg

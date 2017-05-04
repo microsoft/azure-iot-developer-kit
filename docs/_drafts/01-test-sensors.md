@@ -1,6 +1,6 @@
 ---
 title: "Simple weather station"
-permalink: /docs/mini-solutions/test-sensors/
+permalink: /docs/projects/test-sensors/
 excerpt: "The basic one. Get temperature and humidity data from sensor and display them on the screen."
 header:
   image: /assets/images/foo-bar-identity.jpg

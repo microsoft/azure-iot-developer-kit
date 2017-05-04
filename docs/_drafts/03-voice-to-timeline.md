@@ -1,6 +1,6 @@
 ---
 title: "Post to my timeline by voice"
-permalink: /docs/mini-solutions/voice-to-timeline/
+permalink: /docs/projects/voice-to-timeline/
 excerpt: "Post to my Facebook timeline by speaking to the microphone. It integrates Microsoft Cognitive Service to translate a voice clip into text message and Azure Logic App to do the post.
 "
 header:

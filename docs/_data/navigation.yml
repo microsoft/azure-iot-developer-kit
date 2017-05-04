@@ -21,7 +21,7 @@ docs:
       - title: "FAQ"
         url: /docs/faq/
   - title: Projects Catalog
-    url: /docs/mini-solutions/
+    url: /docs/projects/
   - title: API Reference
     children:
       - title: "WiFi"

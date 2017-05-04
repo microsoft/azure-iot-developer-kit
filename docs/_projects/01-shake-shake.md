@@ -1,6 +1,6 @@
 ---
 title: "Shake, Shake"
-permalink: /docs/mini-solutions/shake-shake/
+permalink: /docs/projects/shake-shake/
 excerpt: "Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag.
 "
 header:

@@ -23,7 +23,7 @@ intro:
 feature_row:
   - title: "Seamless Development Experience"
     excerpt: "Use [Visual Studio Code](https://code.visualstudio.com/) with [Arduino Extension](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino) to quickly build a full-fledged IoT application that integrates multiple services like Azure IoT Hub, Logic App and Cognitive Services. Our projects catalog has innovative samples to help you get started and build your own project."
-    url: "/docs/mini-solutions"
+    url: "/docs/projects"
     btn_label: "View Projects"
     btn_class: "btn--inverse"
   - title: "Powerful ARM Cortex-M Board with Rich Peripherals"
