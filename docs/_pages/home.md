@@ -1,6 +1,8 @@
 ---
 layout: splash
 permalink: /
+title: "MXChip IoT Developer Kit"
+title_sup: "Preview"
 header:
   overlay_color: "#0c3f76"
   overlay_gradient: "120deg, #0c3f76, #159957"
@@ -8,7 +10,7 @@ header:
     - label: "Get Started"
       url: "/docs/getting-started/"
     - label: "Get a Kit"
-      url: "#get-a-kit"
+      url: "https://blogs.msdn.microsoft.com/iotdev/devkit-contact/"
   align: center
 excerpt: 'Rapidly develop an IoT app using Microsoft Azure'
 intro:
@@ -16,7 +18,7 @@ intro:
     image_width: 50%
     alt: "DevKit Board"
     title: "Build a Cloud Powered IoT App in Minutes"
-    excerpt: 'The MXChip Developer Kit (a.k.a DevKit) can be used to develop and prototype Internet of Things (IoT) solutions leveraging Microsoft Azure services. It includes an Arduino compatible board with rich peripherals and sensors, an open-source board package and a growing projects catalog.'
+    excerpt: 'The MXChip IoT Developer Kit (a.k.a DevKit) can be used to develop and prototype Internet of Things (IoT) solutions leveraging Microsoft Azure services. It includes an Arduino compatible board with rich peripherals and sensors, an open-source board package and a growing projects catalog.'
     url: "/docs/getting-started"
     btn_label: "Get Started"
     btn_class: "btn--inverse"

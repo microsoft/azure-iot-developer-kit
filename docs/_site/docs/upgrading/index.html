@@ -14,20 +14,20 @@
 
 
 
-<title>Upgrade firmware for your DevKit - Microsoft Azure IoT Developer Kit</title>
+<title>Upgrade firmware for your DevKit - IoT Developer Kits</title>
 
 
 
 
-<meta name="description" content="Instructions and suggestions for upgrading the theme.">
+<meta name="description" content="Instructions for upgrading the firmware.">
 
 
 
 
-<meta name="author" content="Microsoft Azure IoT Developer Kit">
+<meta name="author" content="MXChip IoT Developer Kit">
 
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Microsoft Azure IoT Developer Kit">
+<meta property="og:site_name" content="IoT Developer Kits">
 <meta property="og:title" content="Upgrade firmware for your DevKit">
 
 
@@ -36,7 +36,7 @@
 
 
 
-  <meta property="og:description" content="Instructions and suggestions for upgrading the theme.">
+  <meta property="og:description" content="Instructions for upgrading the firmware.">
 
 
 
@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-05-04T19:18:09-07:00">
+  <meta property="article:published_time" content="2017-05-05T08:16:00-07:00">
 
 
 
@@ -75,7 +75,7 @@
     {
       "@context" : "http://schema.org",
       "@type" : "Person",
-      "name" : "Microsoft Azure IoT Developer Kit",
+      "name" : "MXChip IoT Developer Kit",
       "url" : "http://localhost:4000/azure-iot-developer-kit",
       "sameAs" : null
     }
@@ -89,7 +89,7 @@
 <!-- end SEO -->
 
 
-<link href="http://localhost:4000/azure-iot-developer-kit/feed.xml" type="application/atom+xml" rel="alternate" title="Microsoft Azure IoT Developer Kit Feed">
+<link href="http://localhost:4000/azure-iot-developer-kit/feed.xml" type="application/atom+xml" rel="alternate" title="IoT Developer Kits Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -135,7 +135,7 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="http://localhost:4000/azure-iot-developer-kit/">Microsoft Azure IoT Developer Kit</a>
+        <a class="site-title" href="http://localhost:4000/azure-iot-developer-kit/">IoT Developer Kits</a>
         <ul class="visible-links">
           
             
@@ -342,8 +342,8 @@
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Upgrade firmware for your DevKit">
-    <meta itemprop="description" content="Instructions and suggestions for upgrading the theme.">
-    <meta itemprop="datePublished" content="May 04, 2017">
+    <meta itemprop="description" content="Instructions for upgrading the firmware.">
+    <meta itemprop="datePublished" content="May 05, 2017">
     <meta itemprop="dateModified" content="November 03, 2016">
 
     <div class="page__inner-wrap">
@@ -356,28 +356,24 @@
       
 
       <section class="page__content" itemprop="text">
-        <h2 id="write-app">Write app</h2>
+        <h2 id="step-1-connect-devkit-to-your-computer-via-usb">Step 1. Connect DevKit to your computer via USB</h2>
+
+<p>Once the DevKit is connected, you will see a new USB mass storage device in your File Explorer called <code class="highlighter-rouge">AZ3166</code>.</p>
+
+<h2 id="step-2-upgrade-firmware">Step 2. Upgrade firmware</h2>
 
 <ol>
   <li>
-    <p>In VS Code, use <code class="highlighter-rouge">Ctrl+Shift+P</code> to invoke command palette and type <strong>Arduino</strong> then filter out <strong>Arduino: Boards Manager</strong> to open the pane:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-board-manager.jpg" alt="getting-started-board-manager" /></p>
+    <p>Download the latest firmware: 
+ <a href="https://azureboard.blob.core.windows.net/firmware/iot-devkit-0505.bin">iot-devkit-0505.bin</a></p>
   </li>
   <li>
-    <p>In the search box, type ‘az’ to find package for DevKit, click <strong>Update</strong> button to update the board package to latest version:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-board-manager-az.jpg" alt="getting-started-board-manager-az" /></p>
+    <p>Drag &amp; drop the <code class="highlighter-rouge">.bin</code> file you downloaded to <code class="highlighter-rouge">AZ3166</code> device.</p>
   </li>
   <li>
-    <p>Invoke command palette and type <strong>Arduino</strong> then find and select <strong>Arduino: Examples</strong> to open example pane, find <code class="highlighter-rouge">Built-in Examples &gt; 01.Basics &gt; Blink</code> to open a simple Arduino example app:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-blink.jpg" alt="getting-started-blink" /></p>
-  </li>
-  <li>
-    <p>Invoke command again and type <strong>Arduino</strong>, this time select <strong>Arduino: Upload</strong>:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-upload.jpg" alt="getting-started-upload" /></p>
+    <p>Wait until file copied, the DevKit will reboot to the latest firmware.</p>
   </li>
 </ol>
-
-<p>This will flash the latest firmware to your DevKit.</p>
 
         
       </section>

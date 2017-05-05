@@ -161,6 +161,12 @@
     .page__title {
       font-size: $type-size-2;
 
+      sup {
+        color: rgba(255, 255, 255, 0.45);
+        top: -0.7em;
+        font-size: 50%;
+      }
+
       @include breakpoint($small) {
         font-size: $type-size-1;
       }

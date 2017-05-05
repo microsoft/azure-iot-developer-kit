@@ -5,13 +5,13 @@ excerpt: "How to quickly install and setup development environment for use with 
 last_modified_at: 2016-04-30T10:01:43-04:00
 ---
 
-For a first-time user of the MXChip Developer Kit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications.
+For a first-time user of the MXChip IoT Developer Kit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications.
 
 ## Step 1. Before starting
 
 ### What you need
 
-* MXChip Developer Kit. [Get it now](http://microsoft.github.io/azure-iot-developer-kit){:target="_blank"}
+* MXChip IoT Developer Kit. [Get it now](http://microsoft.github.io/azure-iot-developer-kit){:target="_blank"}
 * A computer running Windows 10 (64-bits) or macOS 10.10+ (coming soon)
 * An active Azure subscription
   * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
@@ -41,7 +41,7 @@ Run the script to automatically install tools and packages.
 
 ### A. Run installation script
 
-In the Windows Explorer, locate the `.zip` and extract it, find `azure-install.cmd`, right-click and select **"Run as administrator"** to start.
+In the File Explorer, locate the `.zip` and extract it, find `azure-install.cmd`, right-click and select **"Run as administrator"** to start.
 
 ![getting-started-run-admin]({{"/assets/images/getting-started-run-admin.png" | absolute_url }})
 
