@@ -105,4 +105,4 @@ In order to run the WiFi configuration task for the DevKit, you must have the pr
 
 ## Next Steps
 
-You are all set! It's time to build your first IoT application by following instructions in [Projects Catalog]({{"/docs/mini-solutions/" | absolute_url }}).
+You are all set! It's time to build your first IoT application by following instructions in [Projects Catalog]({{"/docs/projects/" | absolute_url }}).
