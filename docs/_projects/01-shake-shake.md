@@ -63,6 +63,9 @@ After app initialization, click button A and mildly shake the board to retrieve 
 - Press button A again, then shake for a new tweet.
 - Press button B to scroll through the rest of the tweet.
 
+**Note:** Sometimes you will see 'On processing...' status on screen without getting the results. You can try to click `Reset` button to restart the app.
+{: .notice--info}
+
 ## How it works
 
 ![mini-solution-voice-to-tweet-diagram]({{"/assets/images/mini-solution-diagram-shake-shake.png" | absolute_url }})

@@ -35,6 +35,9 @@ The `.zip` file you download contains all necessary tools and packages required 
 > * DevKit Board Package: Toolchains, libraries and projects for the DevKit
 > * ST-Link Utility: Essential utility and drivers
 
+**VS Code Arduino Extension**: The DevKit currently is using a special version of Arduino extension for VS Code. If you have notification for update the extension, please just ignore it. If you accidentally updated it, follow these [manual steps]({{"docs/faq/#after-updateing-arduino-extension-in-vs-code-it-breaks-everything" | absolute_url}}) to bring it back to work.
+{: .notice--warning}
+
 ## Step 2. Set up the development environment
 
 Run the script to automatically install tools and packages.

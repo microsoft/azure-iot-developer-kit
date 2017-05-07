@@ -5,8 +5,6 @@ excerpt: "Frequently Asked Questions"
 last_modified_at: 2016-11-03T10:16:34-04:00
 ---
 
-{% include toc icon="columns" %}
-
 ## Installation
 
 ### Command window seems stuck and there is no progress updated for a while
@@ -41,6 +39,12 @@ Currently DevKit only can connect to 2.4GHz WiFi, 5GHz is not supported due to h
 
 ## Cloud Provision
 
+### Cannot log in Azure as access token expired
+
+When you previous have log in Azure, the access token may expired. Normally it will be handled by provision task.
+
+To solve it, delete the web browser history that includes the login data and run provision task again.
+
 ### Creating new Azure IoT Hub fails
 
 You may encounter the error message as the screen below:
@@ -48,5 +52,15 @@ You may encounter the error message as the screen below:
 ![getting-started-faq-iothub]({{"/assets/images/getting-started-faq-iothub.png" | absolute_url }})
 
 This is due to IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal){:target="_blank"}. In this case, you may select the existing IoT Hub instead of trying to create a new one.
+
+## Development
+
+### After updateing Arduino extension in VS Code, it breaks everything
+
+The DevKit currently is using a special version of Arduino extension for VS Code. If you accidentally updated it, follow these steps to bring it back to work:
+
+1. Uninstall Arduino extension in VS Code
+2. Close VS Code
+3. Re-install the tools and packages
 
 
