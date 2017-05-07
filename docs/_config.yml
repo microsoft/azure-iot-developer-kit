@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "IoT Developer Kits"
 title_separator          : "-"
 name                     : &name "MXChip IoT Developer Kit" # &name is a YAML anchor which can be *referenced later
-description              : &description "Fast develop IoT app using Microsoft Azure"
+description              : &description "Rapidly develop an IoT app using Microsoft Azure and Visual Studio Code"
 url                      : https://microsoft.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/azure-iot-developer-kit" # the subpath of your site, e.g. "/blog"
 repository               : "Microsoft/azure-iot-developer-kit"

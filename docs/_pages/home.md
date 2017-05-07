@@ -12,7 +12,7 @@ header:
     - label: "Get a Kit"
       url: "https://blogs.msdn.microsoft.com/iotdev/devkit-contact/"
   align: center
-excerpt: 'Rapidly develop an IoT app using Microsoft Azure'
+excerpt: 'Rapidly develop an IoT app using Microsoft Azure and Visual Studio Code'
 intro:
   - image_path: /assets/images/devkit-board-vector@2x.png
     image_width: 50%
