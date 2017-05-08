@@ -24,3 +24,8 @@ In order to run the WiFi configuration task for the DevKit, you must have the pr
 4. The DevKit will reboot and connect to WiFi. To verify, you can see the WiFi LED light up with IP address on the screen:
  ![getting-started-wifi-ip]({{"/assets/images/getting-started-wifi-ip.jpg" | absolute_url }})
 
+
+### B. Launch VS Code
+
+This will be the primary editor for DevKit development. Be sure to open VS Code before connecting to the DevKit so that it can automatically detect the board.
+
