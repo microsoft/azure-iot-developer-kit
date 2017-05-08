@@ -35,7 +35,7 @@ Hook up your hardware to your computer.
 
 ![getting-started-hardware]({{"/assets/images/getting-started-hardware.jpg" | absolute_url }})
 
-### B. Connect DevKit to your computer via USB
+### B. Connect DevKit to your computer
 
 1. Connect USB end to your PC
 2. Connect Micro USB end to the DevKit
@@ -50,7 +50,7 @@ Now you have connected your DevKit to computer. Follow the instructions on the s
 - Press button A to test WiFi connection
 - Press button B to test sensors, press again to switch a sensor
 
-[**TODO: Screen**]
+![getting-started-sensors]({{"/assets/images/getting-started-sensors.png" | absolute_url }})
 
 ## Step 3. Configure WiFi
 
@@ -64,9 +64,7 @@ Hold down button B, click Reset button, then release button B. The screen will d
 
 ### B. Connect to DevKit AP
 
-Use your computer or mobile phone to connect to DevKit AP, leave the password as empty:
-
-[**TODO: Screen**]
+Use your computer or mobile phone to connect to DevKit AP, leave the password as empty.
 
 ### C. Configure WiFi for DevKit
 
