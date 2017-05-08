@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-05-06T23:24:36-07:00">
+  <meta property="article:published_time" content="2017-05-08T15:11:42-07:00">
 
 
 
@@ -343,8 +343,8 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Getting Started Guide">
     <meta itemprop="description" content="How to quickly install and setup development environment for use with DevKit.">
-    <meta itemprop="datePublished" content="May 06, 2017">
-    <meta itemprop="dateModified" content="April 30, 2016">
+    <meta itemprop="datePublished" content="May 08, 2017">
+    <meta itemprop="dateModified" content="May 05, 2017">
 
     <div class="page__inner-wrap">
       
@@ -358,12 +358,45 @@
       <section class="page__content" itemprop="text">
         <p>For a first-time user of the MXChip IoT Developer Kit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications.</p>
 
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-columns"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#step-1-before-starting" id="markdown-toc-step-1-before-starting">Step 1. Before starting</a>    <ul>
+      <li><a href="#a-what-you-need" id="markdown-toc-a-what-you-need">A. What you need</a></li>
+      <li><a href="#b-upgrade-to-latest-firmware" id="markdown-toc-b-upgrade-to-latest-firmware">B. Upgrade to latest firmware</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-2-prepare-your-hardware" id="markdown-toc-step-2-prepare-your-hardware">Step 2. Prepare your hardware</a>    <ul>
+      <li><a href="#a-what-you-need-1" id="markdown-toc-a-what-you-need-1">A. What you need</a></li>
+      <li><a href="#b-connect-devkit-to-your-computer-via-usb" id="markdown-toc-b-connect-devkit-to-your-computer-via-usb">B. Connect DevKit to your computer via USB</a></li>
+      <li><a href="#c-test-sensors-and-wifi-on-devkit" id="markdown-toc-c-test-sensors-and-wifi-on-devkit">C. Test sensors and WiFi on DevKit</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-3-configure-wifi" id="markdown-toc-step-3-configure-wifi">Step 3. Configure WiFi</a>    <ul>
+      <li><a href="#a-enter-ap-mode" id="markdown-toc-a-enter-ap-mode">A. Enter AP Mode</a></li>
+      <li><a href="#b-connect-to-devkit-ap" id="markdown-toc-b-connect-to-devkit-ap">B. Connect to DevKit AP</a></li>
+      <li><a href="#c-configure-wifi-for-devkit" id="markdown-toc-c-configure-wifi-for-devkit">C. Configure WiFi for DevKit</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-4-prepare-development-environment" id="markdown-toc-step-4-prepare-development-environment">Step 4. Prepare development environment</a>    <ul>
+      <li><a href="#a-download-latest-package" id="markdown-toc-a-download-latest-package">A. Download latest package</a></li>
+      <li><a href="#b-run-installation-script" id="markdown-toc-b-run-installation-script">B. Run installation script</a></li>
+      <li><a href="#c-confirm-to-install-drivers" id="markdown-toc-c-confirm-to-install-drivers">C. Confirm to install drivers</a></li>
+    </ul>
+  </li>
+  <li><a href="#next-steps" id="markdown-toc-next-steps">Next Steps</a></li>
+</ul>
+
+  </nav>
+</aside>
+
 <h2 id="step-1-before-starting">Step 1. Before starting</h2>
 
-<h3 id="what-you-need">What you need</h3>
+<h3 id="a-what-you-need">A. What you need</h3>
 
 <ul>
-  <li>MXChip IoT Developer Kit. <a href="http://microsoft.github.io/azure-iot-developer-kit" target="_blank">Get it now</a></li>
+  <li>MXChip IoT Developer Kit. <a href="https://blogs.msdn.microsoft.com/iotdev/devkit-contact/" target="_blank">Get it now</a></li>
   <li>A computer running Windows 10 (64-bits) or macOS 10.10+ (coming soon)</li>
   <li>An active Azure subscription
     <ul>
@@ -372,7 +405,79 @@
   </li>
 </ul>
 
-<h3 id="download-the-latest-package">Download the latest package</h3>
+<h3 id="b-upgrade-to-latest-firmware">B. Upgrade to latest firmware</h3>
+
+<p>To have everything work properly, follow <a href="http://localhost:4000/azure-iot-developer-kit/docs/upgrading/">Upgrading</a> guide to upgrade the DevKit firmware to latest version.</p>
+
+<p>This is an one-time effort, once you started developing on the DevKit and uploading your app, you will have the latest firmware with it.</p>
+
+<h2 id="step-2-prepare-your-hardware">Step 2. Prepare your hardware</h2>
+
+<p>Hook up your hardware to your computer.</p>
+
+<h3 id="a-what-you-need-1">A. What you need</h3>
+
+<ul>
+  <li>DevKit board</li>
+  <li>Micro USB cable</li>
+</ul>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-hardware.jpg" alt="getting-started-hardware" /></p>
+
+<h3 id="b-connect-devkit-to-your-computer-via-usb">B. Connect DevKit to your computer via USB</h3>
+
+<ol>
+  <li>Connect USB end to your PC</li>
+  <li>Connect Micro USB end to the DevKit</li>
+  <li>The green LED next to power confirms connection</li>
+</ol>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-connect.jpg" alt="getting-started-connect" /></p>
+
+<h3 id="c-test-sensors-and-wifi-on-devkit">C. Test sensors and WiFi on DevKit</h3>
+
+<p>Now you have connected your DevKit to computer. Follow the instructions on the screen to test sensors and WiFi:</p>
+
+<ul>
+  <li>Press button A to test WiFi connection</li>
+  <li>Press button B to test sensors, press again to switch a sensor</li>
+</ul>
+
+<p>[<strong>TODO: Screen</strong>]</p>
+
+<h2 id="step-3-configure-wifi">Step 3. Configure WiFi</h2>
+
+<p>Most IoT projects are relying on Internet connectivity. Use AP (Access Point) Mode on DevKit to configure WiFi.</p>
+
+<h3 id="a-enter-ap-mode">A. Enter AP Mode</h3>
+
+<p>Hold down button B, click Reset button, then release button B. The screen will display SSID of the DevKit as well as the configuration portal IP address:</p>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-wifi-ap.jpg" alt="getting-started-wifi-ap" /></p>
+
+<h3 id="b-connect-to-devkit-ap">B. Connect to DevKit AP</h3>
+
+<p>Use your computer or mobile phone to connect to DevKit AP, leave the password as empty:</p>
+
+<p>[<strong>TODO: Screen</strong>]</p>
+
+<h3 id="c-configure-wifi-for-devkit">C. Configure WiFi for DevKit</h3>
+
+<p>Open IP address on the screen in browser, select WiFi you want your DevKit connect to, then type the password. Click <strong>‘Connect’</strong> to configure and connect to WiFi.</p>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-wifi-portal.png" alt="getting-started-wifi-portal" /></p>
+
+<p>Once the connection is succeeded, the DevKit will reboot in a few seconds. After reboot, you can test the connection by clicking button A. The WiFi SSID and IP address will display on the screen.</p>
+
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-wifi-ip.jpg" alt="getting-started-wifi-ip" /></p>
+
+<p class="notice--info"><strong>Note:</strong> The IP address displays on the web page might not be identical to the actual IP address assigned and displayed on screen. This is normal as the WiFi is using DHCP to dynamically IP assignment.</p>
+
+<h2 id="step-4-prepare-development-environment">Step 4. Prepare development environment</h2>
+
+<p>Now it is time to set up the developerment environment: tools and packages for you to build stunning IoT applications.</p>
+
+<h3 id="a-download-latest-package">A. Download latest package</h3>
 
 <p>The <code class="highlighter-rouge">.zip</code> file you download contains all necessary tools and packages required for DevKit development.</p>
 
@@ -396,11 +501,7 @@
 
 <p class="notice--warning"><strong>VS Code Arduino Extension</strong>: The DevKit currently is using a special version of Arduino extension for VS Code. If you have notification for update the extension, please just ignore it. If you accidentally updated it, follow these <a href="http://localhost:4000/azure-iot-developer-kit/docs/faq/#after-updateing-arduino-extension-in-vs-code-it-breaks-everything">manual steps</a> to bring it back to work.</p>
 
-<h2 id="step-2-set-up-the-development-environment">Step 2. Set up the development environment</h2>
-
-<p>Run the script to automatically install tools and packages.</p>
-
-<h3 id="a-run-installation-script">A. Run installation script</h3>
+<h3 id="b-run-installation-script">B. Run installation script</h3>
 
 <p>In the File Explorer, locate the <code class="highlighter-rouge">.zip</code> and extract it, find <code class="highlighter-rouge">azure-install.cmd</code>, right-click and select <strong>“Run as administrator”</strong> to start.</p>
 
@@ -410,71 +511,13 @@
 
 <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-install.png" alt="getting-started-install" /></p>
 
-<h3 id="b-confirm-to-install-drivers">B. Confirm to install drivers</h3>
+<h3 id="c-confirm-to-install-drivers">C. Confirm to install drivers</h3>
 
 <p>The VS Code for Arduino extension relies on the Arduino IDE to work. If this is the first time you are installing Arduino IDE, you will be prompted to install relevant drivers:</p>
 
 <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-driver.png" alt="getting-started-driver" /></p>
 
-<p>It should take 10 minutes to finish all installations depending on your Internet speed. Once installation is complete, you should see Visual Studio Code and Arduino IDE shortcuts on your desktop.</p>
-
-<h2 id="step-3-prepare-your-hardware">Step 3. Prepare your hardware</h2>
-
-<p>Hook up your hardware to your computer.</p>
-
-<h3 id="a-what-you-need">A. What you need</h3>
-
-<ul>
-  <li>DevKit board</li>
-  <li>Micro USB cable</li>
-</ul>
-
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-hardware.jpg" alt="getting-started-hardware" /></p>
-
-<h3 id="b-launch-vs-code">B. Launch VS Code</h3>
-
-<p>This will be the primary editor for DevKit development. Be sure to open VS Code before connecting to the DevKit so that it can automatically detect the board.</p>
-
-<h3 id="c-connect-devkit-to-your-computer-via-usb">C. Connect DevKit to your computer via USB</h3>
-
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-connect.jpg" alt="getting-started-connect" /></p>
-
-<ol>
-  <li>Connect USB end to your PC</li>
-  <li>Connect Micro USB end to the DevKit</li>
-  <li>The green LED next to power confirms connection</li>
-</ol>
-
-<p>VS Code will detect DevKit and automatically display an introduction page with examples next to it:</p>
-
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-vscode.png" alt="getting-started-vscode" /></p>
-
-<h2 id="step-4-configure-wifi">Step 4. Configure WiFi</h2>
-
-<p>In order to run the WiFi configuration task for the DevKit, you must have the project folder open in VS Code.</p>
-
-<ol>
-  <li>
-    <p>If you closed the <strong>Arduino Examples</strong> pane, to reload it, use <code class="highlighter-rouge">Ctrl+Shift+P</code> to invoke command palette and type <strong>Arduino</strong> then find and select <strong>Arduino: Examples</strong>. Navigate to <code class="highlighter-rouge">Examples for MXChip AZ3166 &gt; AzureIoTHub</code> and click on <code class="highlighter-rouge">AzureIoTHubExample</code>.
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-catalog.png" alt="mini-solution-solution-catalog" /></p>
-  </li>
-  <li>
-    <p>Use <strong>Quick Open</strong> (<code class="highlighter-rouge">Ctrl+P</code>) to run ‘task config_wifi’. It will open the terminal in VS Code and prompt you to connect to WiFi.</p>
-  </li>
-  <li>
-    <p>In the terminal window, you will be asked to enter configuration mode. Hold down button A, click the Reset button on the board, then release button A.</p>
-  </li>
-  <li>
-    <p>Then you will be prompted to enter SSID and password.</p>
-  </li>
-</ol>
-
-<p class="notice--info"><strong>Tip:</strong> If your SSID has no password, enter <code class="highlighter-rouge">""</code> as password.</p>
-
-<ol>
-  <li>The DevKit will reboot and connect to WiFi. To verify, you can see the WiFi LED light up with IP address on the screen:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/getting-started-wifi-ip.jpg" alt="getting-started-wifi-ip" /></li>
-</ol>
+<p>It should take around 10 minutes to finish all installations depending on your Internet speed. Once installation is complete, you should see Visual Studio Code and Arduino IDE shortcuts on your desktop.</p>
 
 <h2 id="next-steps">Next Steps</h2>
 
@@ -489,7 +532,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-04-30">April 30, 2016</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-05-05">May 05, 2017</time></p>
         
       </footer>
 

@@ -2,7 +2,7 @@
 title: "Frequently Asked Questions"
 permalink: /docs/faq/
 excerpt: "Frequently Asked Questions"
-last_modified_at: 2016-11-03T10:16:34-04:00
+last_modified_at: 2017-05-05T10:16:34-04:00
 ---
 
 ## Installation

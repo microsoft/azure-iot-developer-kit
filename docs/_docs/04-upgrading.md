@@ -2,7 +2,7 @@
 title: "Upgrade firmware for your DevKit"
 permalink: /docs/upgrading/
 excerpt: "Instructions for upgrading the firmware."
-last_modified_at: 2016-11-03T10:16:34-04:00
+last_modified_at: 2017-05-05T10:16:34-04:00
 ---
 
 ## Step 1. Connect DevKit to your computer via USB
