@@ -60,7 +60,7 @@ Most IoT projects are relying on Internet connectivity. Use AP (Access Point) Mo
 
 Hold down button B, click Reset button, then release button B. The screen will display SSID of the DevKit as well as the configuration portal IP address:
 
-[**TODO: Screen**]
+![getting-started-wifi-ap]({{"/assets/images/getting-started-wifi-ap.jpg" | absolute_url }})
 
 ### B. Connect to DevKit AP
 
@@ -72,12 +72,14 @@ Use your computer or mobile phone to connect to DevKit AP, leave the password as
 
 Open IP address on the screen in browser, select WiFi you want your DevKit connect to, then type the password. Click **'Connect'** to configure and connect to WiFi.
 
-[**TODO: Screen**]
+![getting-started-wifi-portal]({{"/assets/images/getting-started-wifi-portal.png" | absolute_url }})
 
 Once the connection is succeeded, the DevKit will reboot in a few seconds. After reboot, you can test the connection by clicking button A. The WiFi SSID and IP address will display on the screen.
 
-[**TODO: Screen**]
+![getting-started-wifi-ip]({{"/assets/images/getting-started-wifi-ip.jpg" | absolute_url }})
 
+**Note:** The IP address displays on the web page might not be identical to the actual IP address assigned and displayed on screen. This is normal as the WiFi is using DHCP to dynamically IP assignment.
+{: .notice--info}
 
 
 ## Step 4. Prepare development environment

@@ -16,22 +16,34 @@ layouts_gallery:
   - url: /assets/images/mini-solution-shake-shake-3.jpg
     image_path: /assets/images/mini-solution-shake-shake-3.jpg
     alt: "Display a random tweet"
-last_modified_at: 2017-04-30T10:16:34-04:00
+last_modified_at: 2017-05-05T10:16:34-04:00
 ---
 
-In this project, you will learn how to use the motion sensor to trigger an event using Azure Functions. The app will retrieve a random tweet with a #hashtag you have configured in your Arduino sketch. The tweet will display on the DevKit screen, and every time you shake the DevKit board, you will get a new tweet.
+In this project, you will learn how to use the motion sensor to trigger an event using Azure Functions. The app will retrieve a random tweet with a #hashtag you have configured in your Arduino sketch. The tweet will display on the DevKit screen.
 
 ## What you need
 
 * Finish the [Getting Started Guide]({{"/docs/getting-started/" | absolute_url }})
 
-## Step 1. Open Arduino Examples folder
+## Step 1. Open project folder
 
-In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane. Navigate to `Examples for MXChip AZ3166 > AzureIoTHub` and click on `AzureIoTHubExample`.
+### A. Launch VS Code
+
+Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
+
+![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
+
+### B. Open Arduino Examples folder
+
+Switch to **'Arduino Examples'** tab, navigate to `Examples for MXChip AZ3166 > AzureIoTHub` and click on `ShakeShake`.
+
+![mini-solution-catalog]({{"/assets/images/mini-solution-catalog.png" | absolute_url }})
+
+If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
 
 ## Step 2. Provision Azure services
 
-In the solution window, run your task through **Quick Open** (`Ctrl+P`) by typing 'task provision':
+In the solution window, run your task through **Quick Open** (`Ctrl+P`) by typing 'task cloud-provision':
 
 In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services:
 
@@ -39,7 +51,7 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ## Step 3. Modify the #hashtag
 
-Open `AzureIotHubExample.ino` and look for the line of code:
+Open `ShakeShake.ino` and look for the line of code:
 
 ```cpp
 static const char* iot_event = "{\"topic\":\"iot\"}";
@@ -47,14 +59,23 @@ static const char* iot_event = "{\"topic\":\"iot\"}";
 
 Replace the string `iot` in the curly brace with your preferred hashtag.
 
-## Step 4. Deploy your solution
+## Step 4. Deploy Azure Functions
 
-Build and deploy Arduino code as well as an Azure Functions app.
+Use **Quick Open** (`Ctrl+P`) to run 'task cloud-deploy'. It will start deploying the Azure Functions code. Normally it takes 2 to 5 minutes to finish:
 
-1. Use **Quick Open** (`Ctrl+P`) to run 'task deploy'. It will start deploying the Azure Functions code. Normally it takes 2 to 5 minutes to finish.
-2. Use **Quick Open** (`Ctrl+P`) to run 'task build'. The terminal will prompt you to enter configuration mode again. This is to set the connection string. It will build the Arduino code and upload it to the device. The DevKit will reboot and start running the code:
+![mini-solution-deploy]({{"/assets/images/mini-solution-deploy.png" | absolute_url }})
 
-## Step 5. Test the solution
+## Step 5. Build and upload Arduino sketch
+
+Use **Quick Open** (`Ctrl+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode again. This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then it will start verifying and uploading the Arduino sketch:
+
+![mini-solution-build]({{"/assets/images/mini-solution-build.png" | absolute_url }})
+
+The DevKit will reboot and start running the code.
+
+## Test the project
 
 After app initialization, click button A and mildly shake the board to retrieve a random tweet with your hashtag (e.g. #build2017). A tweet will display on your screen in a few seconds:
 
