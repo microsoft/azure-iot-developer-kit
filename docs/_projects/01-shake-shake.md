@@ -4,8 +4,8 @@ permalink: /docs/projects/shake-shake/
 excerpt: "Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag.
 "
 header:
-  image: /assets/images/foo-bar-identity.jpg
-  teaser: /assets/images/foo-bar-identity-th.jpg
+  image: /assets/images/projects-shake-shake.jpg
+  teaser: /assets/images/projects-shake-shake-th.jpg
 layouts_gallery:
   - url: /assets/images/mini-solution-shake-shake-1.jpg
     image_path: /assets/images/mini-solution-shake-shake-1.jpg

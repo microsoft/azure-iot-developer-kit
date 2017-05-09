@@ -14,7 +14,7 @@ For a first-time user of the MXChip IoT Developer Kit (a.k.a DevKit), follow the
 ### A. What you need
 
 * MXChip IoT Developer Kit. [Get it now](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/){:target="_blank"}
-* A computer running Windows 10 (64-bits) or macOS 10.10+ (coming soon)
+* A computer running Windows 10 or macOS 10.10+ (coming soon)
 * An active Azure subscription
   * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
 
@@ -102,9 +102,6 @@ The `.zip` file you download contains all necessary tools and packages required 
 > * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: VS Code Arduino Extension relies on this tool
 > * DevKit Board Package: Toolchains, libraries and projects for the DevKit
 > * ST-Link Utility: Essential utility and drivers
-
-**VS Code Arduino Extension**: The DevKit currently is using a special version of Arduino extension for VS Code. If you have notification for update the extension, please just ignore it. If you accidentally updated it, follow these [manual steps]({{"docs/faq/#after-updateing-arduino-extension-in-vs-code-it-breaks-everything" | absolute_url}}) to bring it back to work.
-{: .notice--warning}
 
 ### B. Run installation script
 
