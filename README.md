@@ -4,7 +4,6 @@ Visit the project overview page to get started: [https://microsoft.github.io/azu
 
 ## Repository Structure
 
-* [/solutions](https://github.com/Microsoft/azure-iot-developer-kit/tree/master/solutions) - Mini solution source code and tutorials
 * [/docs](https://github.com/Microsoft/azure-iot-developer-kit/tree/master/docs) - Project home page with all other documents
 
 ## Contributing
