@@ -113,6 +113,29 @@ uint8_t print(uint8_t line, const char *s, bool wrap)
 > | :--- | :---------- |
 > | uint8_t | End of text line number, start from 0. |
 
-## Source code
+## Sample code
 
-<https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/OledDisplay.h>
+```cpp
+#include <OledDisplay.h>
+void setup(){
+    Screen.init();
+}
+void loop(){
+    // print a string to the screen with wrapped = false
+    Screen.print("This is OLEDDisplay Testing", false);
+    delay(1000);
+    // print a string to the screen with wrapped = true
+    Screen.print("long string; \nlong string;\nlong string;\nlong string;", true);
+    delay(1000);
+    for(int i =0; i<=3; i++)
+    {
+        char buf[100];
+        sprintf(buf, "This is row %d", i);
+        Screen.print(i, buf);
+    }
+    delay(1000);
+    // Clean up the screen
+    Screen.clean();
+    delay(1000);
+}
+```

@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-05-09T21:33:08-07:00">
+  <meta property="article:published_time" content="2017-05-09T22:11:37-07:00">
 
 
 
@@ -424,8 +424,6 @@
 
 <blockquote>
   <p>Arduino Wifi client class.</p>
-
-  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFiClient.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFiClient.h</a></p>
 </blockquote>
 
 <h2 id="constructors">Constructors</h2>
@@ -684,9 +682,99 @@
   <p><code class="highlighter-rouge">void</code></p>
 </blockquote>
 
-<h2 id="source-code">Source code</h2>
+<h2 id="sample-code">Sample code</h2>
 
-<p><a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFiServer.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFiServer.h</a></p>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="cp">#include &lt;AZ3166WiFi.h&gt;
+</span><span class="kt">char</span> <span class="n">ssid</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"{SSID of your access point}"</span><span class="p">;</span>    <span class="c1">// your network SSID (name)
+</span><span class="kt">char</span> <span class="n">password</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"{password}"</span><span class="p">;</span>                 <span class="c1">// your network password
+</span><span class="kt">int</span> <span class="n">keyIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                               <span class="c1">// your network key Index number (needed only for WEP)
+</span><span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">WL_IDLE_STATUS</span><span class="p">;</span>
+<span class="n">WiFiServer</span> <span class="n">server</span><span class="p">(</span><span class="mi">80</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//Initialize serial and wait for port to open:
+</span>    <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+    <span class="c1">// check for the presence of the shield:
+</span>    <span class="k">if</span> <span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span> <span class="o">==</span> <span class="n">WL_NO_SHIELD</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"WiFi shield not present"</span><span class="p">);</span>
+        <span class="c1">// don't continue:
+</span>        <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">fv</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">firmwareVersion</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Wi-Fi firmware: %s</span><span class="se">\r\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fv</span><span class="p">);</span>
+    <span class="c1">// attempt to connect to Wifi network:
+</span>    <span class="k">while</span> <span class="p">(</span><span class="n">status</span> <span class="o">!=</span> <span class="n">WL_CONNECTED</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Attempting to connect to SSID: "</span><span class="p">);</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ssid</span><span class="p">);</span>
+        <span class="c1">// Connect to WPA/WPA2 network. Change this line if using open or WEP network:
+</span>        <span class="n">status</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+        <span class="c1">// wait 10 seconds for connection:
+</span>        <span class="n">delay</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">server</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+    <span class="c1">// you're connected now, so print out the status:
+</span>    <span class="n">printWifiStatus</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"list for incoming clients"</span><span class="p">);</span>
+    <span class="c1">// listen for incoming clients
+</span>    <span class="n">WiFiClient</span> <span class="n">client</span> <span class="o">=</span> <span class="n">server</span><span class="p">.</span><span class="n">available</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"availabled"</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">client</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"new client"</span><span class="p">);</span>
+        <span class="c1">// an http request ends with a blank line
+</span>        <span class="n">boolean</span> <span class="n">currentLineIsBlank</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">connected</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">available</span><span class="p">())</span>
+            <span class="p">{</span>
+                <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
+                <span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+                <span class="c1">// if you've gotten to the end of the line (received a newline
+</span>                <span class="c1">// character) and the line is blank, the http request has ended,
+</span>                <span class="c1">// so you can send a reply
+</span>                <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'\n'</span> <span class="o">&amp;&amp;</span> <span class="n">currentLineIsBlank</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"HTTP/1.1 200 OK"</span><span class="p">);</span>
+                    <span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"nontent-Type: text/html"</span><span class="p">);</span>
+                    <span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Connection: close"</span><span class="p">);</span>
+                    <span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Refresh: 5"</span><span class="p">);</span>
+                    <span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+                    <span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"&lt;!DOCTYPE HTML&gt;"</span><span class="p">);</span>
+                    <span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"&lt;html&gt;Hello&lt;/html&gt;"</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'\n'</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">// you're starting a new line
+</span>                    <span class="n">currentLineIsBlank</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+                    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">!=</span> <span class="sc">'\r'</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">// you've gotten a character on the current line
+</span>                    <span class="n">currentLineIsBlank</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="c1">// give the web browser time to receive the data
+</span>        <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="c1">// close the connection:
+</span>        <span class="n">client</span><span class="p">.</span><span class="n">stop</span><span class="p">();</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"client disonnected"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">printWifiStatus</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// print the SSID of the network you're attached to:
+</span>    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"SSID: "</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">SSID</span><span class="p">());</span>
+    <span class="c1">// print your WiFi shield's IP address:
+</span>    <span class="n">IPAddress</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">localIP</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"IP Address: "</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ip</span><span class="p">);</span>
+    <span class="c1">// print the received signal strength:
+</span>    <span class="kt">long</span> <span class="n">rssi</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">RSSI</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"signal strength (RSSI):"</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">rssi</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" dBm"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
         
       </section>

@@ -49,8 +49,6 @@ AZ3166WiFi.h
 ### IPAddress
 
 > Base class that provides IPAddress
->
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/IPAddress.h>
 
 ## Constructors
 
@@ -444,6 +442,93 @@ uint8_t status()
 > | :--- | :---------- |
 > | uint8_t | Current network status. |
 
-## Source code
+## Sample code
 
-<https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFi.h>
+```cpp
+#include <AZ3166WiFi.h>
+
+char ssid[] = "{SSID of your access point}";    // your network SSID (name)
+char password[] = "{password}";                 // your network password
+int status = WL_IDLE_STATUS;    // the Wifi radio's status
+
+void setup() {
+    // Initialize serial and wait for port to open
+    Serial.begin(115200);
+    
+    // Check for the presence of the shield:
+    if (WiFi.status() == WL_NO_SHIELD) {
+        Serial.println("WiFi shield not present");
+        // Don't continue:
+        while (true);
+    }
+    
+    const char* fv = WiFi.firmwareVersion();
+    Serial.printf("Wi-Fi firmware: %s\r\n", fv);
+    
+    // attempt to connect to Wifi network:
+    while (status != WL_CONNECTED) {
+        Serial.print("Attempting to connect to WPA SSID: ");
+        Serial.println(ssid);
+        // Connect to WPA/WPA2 network:
+        status = WiFi.begin(ssid, password);
+        // Wait 10 seconds for connection:
+        delay(10000);
+    }
+    
+    Serial.print("You're connected to the network");
+    printCurrentNet();
+    printWifiData();
+}
+
+void loop() {
+    // check the network connection once every 10 seconds:
+    delay(10000);
+    printCurrentNet();
+}
+
+void printWifiData() {
+    // print your WiFi shield's IP address:
+    IPAddress ip = WiFi.localIP();
+    Serial.print("IP Address: ");
+    Serial.println(ip);
+    Serial.println(ip);
+    
+    // print your MAC address:
+    byte mac[6];
+    WiFi.macAddress(mac);
+    Serial.printf("MAC address: %02x:%02x:%02x:%02x:%02x:%02x\r\n", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+}
+
+void printCurrentNet() {
+    // print the SSID of the network you're attached to:
+    Serial.print("SSID: ");
+    Serial.println(WiFi.SSID());
+    
+    // print the MAC address of the router you're attached to:
+    byte bssid[6];
+    WiFi.BSSID(bssid);
+    Serial.print("BSSID: ");
+    Serial.print(bssid[5], HEX);
+    Serial.print(":");
+    Serial.print(bssid[4], HEX);
+    Serial.print(":");
+    Serial.print(bssid[3], HEX);
+    Serial.print(":");
+    Serial.print(bssid[2], HEX);
+    Serial.print(":");
+    Serial.print(bssid[1], HEX);
+    Serial.print(":");
+    Serial.println(bssid[0], HEX);
+    
+    // print the received signal strength:
+    long rssi = WiFi.RSSI();
+    Serial.print("signal strength (RSSI):");
+    Serial.println(rssi);
+    
+    // print the encryption type:
+    byte encryption = WiFi.encryptionType();
+    Serial.print("Encryption Type:");
+    Serial.println(encryption, HEX);
+    Serial.println();
+}
+```

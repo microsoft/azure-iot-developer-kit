@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-05-09T21:33:08-07:00">
+  <meta property="article:published_time" content="2017-05-09T22:11:37-07:00">
 
 
 
@@ -423,16 +423,12 @@
 
 <blockquote>
   <p>Provides functions for multi-register I2C communication.</p>
-
-  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/ST_INTERFACES/DevI2C.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/ST_INTERFACES/DevI2C.h</a></p>
 </blockquote>
 
 <h3 id="magneto_statustypedef">MAGNETO_StatusTypeDef</h3>
 
 <blockquote>
   <p>MAGNETO status enumerator definition</p>
-
-  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/utility/lis2mdl.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/utility/lis2mdl.h</a></p>
 </blockquote>
 
 <h2 id="constructors">Constructors</h2>
@@ -635,9 +631,34 @@
   </table>
 </blockquote>
 
-<h2 id="source-code">Source code</h2>
+<h2 id="sample-code">Sample code</h2>
 
-<p><a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/lis2mdl_class.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/lis2mdl_class.h</a></p>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="cp">#include "lis2mdl_class.h"
+</span><span class="n">DevI2C</span> <span class="o">*</span><span class="n">i2c</span><span class="p">;</span>
+<span class="n">LIS2MDL</span> <span class="o">*</span><span class="n">lis2mdl</span><span class="p">;</span>
+<span class="kt">int32_t</span> <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="kt">int16_t</span> <span class="n">raw</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="kt">uint8_t</span> <span class="n">id</span><span class="p">;</span>
+<span class="kt">void</span> <span class="n">setup</span><span class="p">(){</span>
+    <span class="n">i2c</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DevI2C</span><span class="p">(</span><span class="n">D14</span><span class="p">,</span> <span class="n">D15</span><span class="p">);</span>
+    <span class="n">lis2mdl</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LIS2MDL</span><span class="p">(</span><span class="o">*</span><span class="n">i2c</span><span class="p">);</span>
+    <span class="c1">// init
+</span>    <span class="n">lis2mdl</span><span class="o">-&gt;</span><span class="n">init</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">loop</span><span class="p">(){</span>
+    <span class="c1">// read id
+</span>    <span class="n">lis2mdl</span><span class="o">-&gt;</span><span class="n">readId</span><span class="p">(</span><span class="o">&amp;</span><span class="n">id</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Id: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
+    <span class="c1">// get_m_axes
+</span>    <span class="n">lis2mdl</span><span class="o">-&gt;</span><span class="n">get_m_axes</span><span class="p">(</span><span class="n">axes</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Axes: x - %d, y - %d, z - %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="c1">// get_m_axes_raw
+</span>    <span class="n">lis2mdl</span><span class="o">-&gt;</span><span class="n">get_m_axes_raw</span><span class="p">(</span><span class="n">raw</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Raw: x - %d, y - %d, z - %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">raw</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">raw</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">raw</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
         
       </section>

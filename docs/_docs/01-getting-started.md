@@ -18,12 +18,6 @@ For a first-time user of the MXChip IoT Developer Kit (a.k.a DevKit), follow the
 * An active Azure subscription
   * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
 
-### B. Upgrade to latest firmware
-
-To have everything work properly, follow [Upgrading]({{"/docs/upgrading/" | absolute_url}}) guide to upgrade the DevKit firmware to latest version.
-
-This is an one-time effort, once you started developing on the DevKit and uploading your app, you will have the latest firmware with it.
-
 ## Step 2. Prepare your hardware
 
 Hook up your hardware to your computer.
@@ -43,7 +37,13 @@ Hook up your hardware to your computer.
 
 ![getting-started-connect]({{"/assets/images/getting-started-connect.jpg" | absolute_url }})
 
-### C. Test sensors and WiFi on DevKit
+### C. (Optional) Upgrade to latest firmware
+
+To have everything work properly, follow [Upgrading]({{"/docs/upgrading/" | absolute_url}}) guide to upgrade the DevKit firmware to latest version.
+
+This is an one-time effort, once you started developing on the DevKit and uploading your app, you will have the latest firmware with it.
+
+### D. Test sensors and WiFi on DevKit
 
 Now you have connected your DevKit to computer. Follow the instructions on the screen to test sensors and WiFi:
 
