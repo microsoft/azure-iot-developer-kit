@@ -64,7 +64,7 @@ Hold down button B, click Reset button, then release button B. The screen will d
 
 ### B. Connect to DevKit AP
 
-Use your computer or mobile phone to connect to DevKit AP, leave the password as empty.
+Use your computer or mobile phone to connect to DevKit AP (highlighted in the screenshot above), leave the password as empty.
 
 ### C. Configure WiFi for DevKit
 
