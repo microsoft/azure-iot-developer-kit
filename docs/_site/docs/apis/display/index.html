@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-05-09T21:27:46-07:00">
+  <meta property="article:published_time" content="2017-05-09T22:01:13-07:00">
 
 
 
@@ -558,9 +558,32 @@
   </table>
 </blockquote>
 
-<h2 id="source-code">Source code</h2>
+<h2 id="sample-code">Sample code</h2>
 
-<p><a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/OledDisplay.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/OledDisplay.h</a></p>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="cp">#include &lt;OledDisplay.h&gt;
+</span><span class="kt">void</span> <span class="n">setup</span><span class="p">(){</span>
+    <span class="n">Screen</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">loop</span><span class="p">(){</span>
+    <span class="c1">// print a string to the screen with wrapped = false
+</span>    <span class="n">Screen</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"This is OLEDDisplay Testing"</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+    <span class="c1">// print a string to the screen with wrapped = true
+</span>    <span class="n">Screen</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"long string; </span><span class="se">\n</span><span class="s">long string;</span><span class="se">\n</span><span class="s">long string;</span><span class="se">\n</span><span class="s">long string;"</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="s">"This is row %d"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+        <span class="n">Screen</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+    <span class="c1">// Clean up the screen
+</span>    <span class="n">Screen</span><span class="p">.</span><span class="n">clean</span><span class="p">();</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
         
       </section>

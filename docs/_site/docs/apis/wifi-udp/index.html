@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-05-09T21:27:46-07:00">
+  <meta property="article:published_time" content="2017-05-09T22:01:13-07:00">
 
 
 
@@ -451,8 +451,6 @@
 
 <blockquote>
   <p>Base class that provides IPAddress</p>
-
-  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/IPAddress.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/IPAddress.h</a></p>
 </blockquote>
 
 <h2 id="constructors">Constructors</h2>
@@ -1020,9 +1018,137 @@
   </table>
 </blockquote>
 
-<h2 id="source-code">Source code</h2>
+<h2 id="sample-code">Sample code</h2>
 
-<p><a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFiUdp.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFiUdp.h</a></p>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code>
+<span class="cp">#include &lt;AZ3166WiFi.h&gt;
+#include &lt;AZ3166WiFiUdp.h&gt;
+</span><span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">WL_IDLE_STATUS</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">ssid</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"{SSID of your access point}"</span><span class="p">;</span>    <span class="c1">// your network SSID (name)
+</span><span class="kt">char</span> <span class="n">password</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"{password}"</span><span class="p">;</span>                 <span class="c1">// your network password
+</span><span class="kt">int</span> <span class="n">keyIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                               <span class="c1">// your network key Index number (needed only for WEP)
+</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">localPort</span> <span class="o">=</span> <span class="mi">2390</span><span class="p">;</span>                  <span class="c1">// local port to listen for UDP packets
+</span><span class="kt">char</span><span class="o">*</span> <span class="n">timeServer</span> <span class="o">=</span> <span class="s">"0.pool.ntp.org"</span><span class="p">;</span>            <span class="c1">// 0.pool.ntp.org NTP server
+</span><span class="k">const</span> <span class="kt">int</span> <span class="n">NTP_PACKET_SIZE</span> <span class="o">=</span> <span class="mi">48</span><span class="p">;</span>                 <span class="c1">// NTP time stamp is in the first 48 bytes of the message
+</span><span class="n">byte</span> <span class="n">packetBuffer</span><span class="p">[</span> <span class="n">NTP_PACKET_SIZE</span><span class="p">];</span>            <span class="c1">//buffer to hold incoming and outgoing packets
+// A UDP instance to let us send and receive packets over UDP
+</span><span class="n">WiFiUDP</span> <span class="n">Udp</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Open serial communications and wait for port to open:
+</span>    <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+    <span class="c1">// check for the presence of the shield:
+</span>    <span class="k">if</span> <span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span> <span class="o">==</span> <span class="n">WL_NO_SHIELD</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"WiFi shield not present"</span><span class="p">);</span>
+        <span class="c1">// don't continue:
+</span>        <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">fv</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">firmwareVersion</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Wi-Fi firmware: %s</span><span class="se">\r\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fv</span><span class="p">);</span>
+    <span class="c1">// attempt to connect to Wifi network:
+</span>    <span class="k">while</span> <span class="p">(</span><span class="n">status</span> <span class="o">!=</span> <span class="n">WL_CONNECTED</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Attempting to connect to SSID: "</span><span class="p">);</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ssid</span><span class="p">);</span>
+        <span class="c1">// Connect to WPA/WPA2 network. Change this line if using open or WEP network:
+</span>        <span class="n">status</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+        <span class="c1">// wait 10 seconds for connection:
+</span>        <span class="n">delay</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Connected to wifi"</span><span class="p">);</span>
+    <span class="n">printWifiStatus</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Starting connection to server..."</span><span class="p">);</span>
+    <span class="n">Udp</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">localPort</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">sendNTPpacket</span><span class="p">(</span><span class="n">timeServer</span><span class="p">);</span> <span class="c1">// send an NTP packet to a time server
+</span>    <span class="c1">// wait to see if a reply is available
+</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">Udp</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">packetBuffer</span><span class="p">,</span> <span class="n">NTP_PACKET_SIZE</span><span class="p">)</span><span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">// read the packet into the buffer
+</span>    <span class="p">{</span>
+        <span class="c1">// We've received a packet, read the data from it
+</span>        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"packet received"</span><span class="p">);</span>
+        <span class="c1">//the timestamp starts at byte 40 of the received packet and is four bytes,
+</span>        <span class="c1">// or two words, long. First, esxtract the two words:
+</span>        <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">highWord</span> <span class="o">=</span> <span class="n">word</span><span class="p">(</span><span class="n">packetBuffer</span><span class="p">[</span><span class="mi">40</span><span class="p">],</span> <span class="n">packetBuffer</span><span class="p">[</span><span class="mi">41</span><span class="p">]);</span>
+        <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">lowWord</span> <span class="o">=</span> <span class="n">word</span><span class="p">(</span><span class="n">packetBuffer</span><span class="p">[</span><span class="mi">42</span><span class="p">],</span> <span class="n">packetBuffer</span><span class="p">[</span><span class="mi">43</span><span class="p">]);</span>
+        <span class="c1">// combine the four bytes (two words) into a long integer
+</span>        <span class="c1">// this is NTP time (seconds since Jan 1 1900):
+</span>        <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">secsSince1900</span> <span class="o">=</span> <span class="n">highWord</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">lowWord</span><span class="p">;</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Seconds since Jan 1 1900 = "</span><span class="p">);</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">secsSince1900</span><span class="p">);</span>
+        <span class="c1">// now convert NTP time into everyday time:
+</span>        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Unix time = "</span><span class="p">);</span>
+        <span class="c1">// Unix time starts on Jan 1 1970. In seconds, that's 2208988800:
+</span>        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">seventyYears</span> <span class="o">=</span> <span class="mi">2208988800UL</span><span class="p">;</span>
+        <span class="c1">// subtract seventy years:
+</span>        <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">epoch</span> <span class="o">=</span> <span class="n">secsSince1900</span> <span class="o">-</span> <span class="n">seventyYears</span><span class="p">;</span>
+        <span class="c1">// print Unix time:
+</span>        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">epoch</span><span class="p">);</span>
+        <span class="c1">// print the hour, minute and second:
+</span>        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"The UTC time is "</span><span class="p">);</span>       <span class="c1">// UTC is the time at Greenwich Meridian (GMT)
+</span>        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">((</span><span class="n">epoch</span>  <span class="o">%</span> <span class="mi">86400L</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">);</span> <span class="c1">// print the hour (86400 equals secs per day)
+</span>        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="sc">':'</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(((</span><span class="n">epoch</span> <span class="o">%</span> <span class="mi">3600</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// In the first 10 minutes of each hour, we'll want a leading '0'
+</span>            <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="sc">'0'</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">((</span><span class="n">epoch</span>  <span class="o">%</span> <span class="mi">3600</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span><span class="p">);</span> <span class="c1">// print the minute (3600 equals secs per minute)
+</span>        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="sc">':'</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">((</span><span class="n">epoch</span> <span class="o">%</span> <span class="mi">60</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// In the first 10 seconds of each minute, we'll want a leading '0'
+</span>            <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="sc">'0'</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">epoch</span> <span class="o">%</span> <span class="mi">60</span><span class="p">);</span> <span class="c1">// print the second
+</span>    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Unable to receive package, retry later."</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// wait ten seconds before asking for the time again
+</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// send an NTP request to the time server at the given address
+</span><span class="kt">unsigned</span> <span class="kt">long</span> <span class="nf">sendNTPpacket</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">address</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Serial.println("1");
+</span>    <span class="c1">// set all bytes in the buffer to 0
+</span>    <span class="n">memset</span><span class="p">(</span><span class="n">packetBuffer</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">NTP_PACKET_SIZE</span><span class="p">);</span>
+    <span class="c1">// Initialize values needed to form NTP request
+</span>    <span class="c1">// (see URL above for details on the packets)
+</span>    <span class="c1">//Serial.println("2");
+</span>    <span class="n">packetBuffer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b11100011</span><span class="p">;</span>   <span class="c1">// LI, Version, Mode
+</span>    <span class="n">packetBuffer</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>     <span class="c1">// Stratum, or type of clock
+</span>    <span class="n">packetBuffer</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>     <span class="c1">// Polling Interval
+</span>    <span class="n">packetBuffer</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0xEC</span><span class="p">;</span>  <span class="c1">// Peer Clock Precision
+</span>    <span class="c1">// 8 bytes of zero for Root Delay &amp; Root Dispersion
+</span>    <span class="n">packetBuffer</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">49</span><span class="p">;</span>
+    <span class="n">packetBuffer</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span>  <span class="o">=</span> <span class="mh">0x4E</span><span class="p">;</span>
+    <span class="n">packetBuffer</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">49</span><span class="p">;</span>
+    <span class="n">packetBuffer</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">52</span><span class="p">;</span>
+    <span class="c1">//Serial.println("3");
+</span>    <span class="c1">// all NTP fields have been given values, now
+</span>    <span class="c1">// you can send a packet requesting a timestamp:
+</span>    <span class="n">Udp</span><span class="p">.</span><span class="n">beginPacket</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">123</span><span class="p">);</span> <span class="c1">//NTP requests are to port 123
+</span>    <span class="c1">//Serial.println("4");
+</span>    <span class="n">Udp</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">packetBuffer</span><span class="p">,</span> <span class="n">NTP_PACKET_SIZE</span><span class="p">);</span>
+    <span class="c1">//Serial.println("5");
+</span>    <span class="n">Udp</span><span class="p">.</span><span class="n">endPacket</span><span class="p">();</span>
+    <span class="c1">//Serial.println("6");
+</span><span class="p">}</span>
+<span class="kt">void</span> <span class="nf">printWifiStatus</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// print the SSID of the network you're attached to:
+</span>    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"SSID: "</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">SSID</span><span class="p">());</span>
+    <span class="c1">// print your WiFi shield's IP address:
+</span>    <span class="n">IPAddress</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">localIP</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"IP Address: "</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ip</span><span class="p">);</span>
+    <span class="c1">// print the received signal strength:
+</span>    <span class="kt">long</span> <span class="n">rssi</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">RSSI</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"signal strength (RSSI):"</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">rssi</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" dBm"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
         
       </section>

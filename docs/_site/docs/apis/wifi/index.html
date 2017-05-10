@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-05-09T21:27:46-07:00">
+  <meta property="article:published_time" content="2017-05-09T22:01:13-07:00">
 
 
 
@@ -466,8 +466,6 @@
 
 <blockquote>
   <p>Base class that provides IPAddress</p>
-
-  <p>Source code: <a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/IPAddress.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/IPAddress.h</a></p>
 </blockquote>
 
 <h2 id="constructors">Constructors</h2>
@@ -1236,9 +1234,96 @@
   </table>
 </blockquote>
 
-<h2 id="source-code">Source code</h2>
+<h2 id="sample-code">Sample code</h2>
 
-<p><a href="https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFi.h">https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/libraries/WiFi/src/AZ3166WiFi.h</a></p>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="cp">#include &lt;AZ3166WiFi.h&gt;
+</span>
+<span class="kt">char</span> <span class="n">ssid</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"{SSID of your access point}"</span><span class="p">;</span>    <span class="c1">// your network SSID (name)
+</span><span class="kt">char</span> <span class="n">password</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"{password}"</span><span class="p">;</span>                 <span class="c1">// your network password
+</span><span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">WL_IDLE_STATUS</span><span class="p">;</span>    <span class="c1">// the Wifi radio's status
+</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Initialize serial and wait for port to open
+</span>    <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+    
+    <span class="c1">// Check for the presence of the shield:
+</span>    <span class="k">if</span> <span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span> <span class="o">==</span> <span class="n">WL_NO_SHIELD</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"WiFi shield not present"</span><span class="p">);</span>
+        <span class="c1">// Don't continue:
+</span>        <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">fv</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">firmwareVersion</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Wi-Fi firmware: %s</span><span class="se">\r\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fv</span><span class="p">);</span>
+    
+    <span class="c1">// attempt to connect to Wifi network:
+</span>    <span class="k">while</span> <span class="p">(</span><span class="n">status</span> <span class="o">!=</span> <span class="n">WL_CONNECTED</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Attempting to connect to WPA SSID: "</span><span class="p">);</span>
+        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ssid</span><span class="p">);</span>
+        <span class="c1">// Connect to WPA/WPA2 network:
+</span>        <span class="n">status</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+        <span class="c1">// Wait 10 seconds for connection:
+</span>        <span class="n">delay</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"You're connected to the network"</span><span class="p">);</span>
+    <span class="n">printCurrentNet</span><span class="p">();</span>
+    <span class="n">printWifiData</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// check the network connection once every 10 seconds:
+</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+    <span class="n">printCurrentNet</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">printWifiData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// print your WiFi shield's IP address:
+</span>    <span class="n">IPAddress</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">localIP</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"IP Address: "</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ip</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ip</span><span class="p">);</span>
+    
+    <span class="c1">// print your MAC address:
+</span>    <span class="n">byte</span> <span class="n">mac</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+    <span class="n">WiFi</span><span class="p">.</span><span class="n">macAddress</span><span class="p">(</span><span class="n">mac</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"MAC address: %02x:%02x:%02x:%02x:%02x:%02x</span><span class="se">\r\n</span><span class="s">"</span><span class="p">,</span> <span class="n">mac</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mac</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">mac</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">mac</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">mac</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">mac</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">printCurrentNet</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// print the SSID of the network you're attached to:
+</span>    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"SSID: "</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">SSID</span><span class="p">());</span>
+    
+    <span class="c1">// print the MAC address of the router you're attached to:
+</span>    <span class="n">byte</span> <span class="n">bssid</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+    <span class="n">WiFi</span><span class="p">.</span><span class="n">BSSID</span><span class="p">(</span><span class="n">bssid</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"BSSID: "</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">bssid</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">HEX</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">":"</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">bssid</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">HEX</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">":"</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">bssid</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">HEX</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">":"</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">bssid</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">HEX</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">":"</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">bssid</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">HEX</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">":"</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">bssid</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">HEX</span><span class="p">);</span>
+    
+    <span class="c1">// print the received signal strength:
+</span>    <span class="kt">long</span> <span class="n">rssi</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">RSSI</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"signal strength (RSSI):"</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">rssi</span><span class="p">);</span>
+    
+    <span class="c1">// print the encryption type:
+</span>    <span class="n">byte</span> <span class="n">encryption</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">encryptionType</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Encryption Type:"</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">encryption</span><span class="p">,</span> <span class="n">HEX</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
         
       </section>

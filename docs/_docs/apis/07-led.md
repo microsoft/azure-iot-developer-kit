@@ -91,7 +91,8 @@ void turnOff()
 ```cpp
 #include "RGB_LED.h"
 RGB_LED rgbLed;
-uint8_t color[][3] = {{255, 0, 0},  // red
+uint8_t color[][3] = {
+        {255, 0, 0},                // red
         {0, 255, 0},                // green
         {0, 0, 255},                // blue
         {0, 0, 0},
