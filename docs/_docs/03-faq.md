@@ -55,6 +55,20 @@ This is due to IoT Hub only allows [one free hub per Azure subscription](https:/
 
 ## Development
 
+### Terminal text misaligned in VS Code
+
+This is a known bug for latest version VS Code ([#19665](https://github.com/Microsoft/vscode/issues/19665){:target="_blank"}) if you are using Powershell or CMD in terminal.
+
+To solve it, there is a [workaround](https://github.com/Microsoft/vscode/issues/19665#issuecomment-294536524){:target="_blank"}. Add this snippet into VS Code settings file:
+
+```json
+"terminal.integrated.shellArgs.windows": [
+  "-NoExit",
+  "/c",
+  "chcp.com 65001"
+]
+```
+
 ### After updateing Arduino extension in VS Code, it breaks everything
 
 The DevKit currently is using a special version of Arduino extension for VS Code. If you accidentally updated it, follow these steps to bring it back to work:
