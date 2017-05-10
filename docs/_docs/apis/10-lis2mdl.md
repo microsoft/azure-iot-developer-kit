@@ -36,14 +36,10 @@ lis2mdl_class.h
 ### DevI2C
 
 > Provides functions for multi-register I2C communication.
-> 
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/ST_INTERFACES/DevI2C.h>
 
 ### MAGNETO_StatusTypeDef
 
 > MAGNETO status enumerator definition
->
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/utility/lis2mdl.h>
 
 ## Constructors
 
@@ -139,6 +135,31 @@ int get_m_axes(int32_t *pData)
 > | :--- | :---------- |
 > | int | 0 (`MAGNETO_OK`) in case of success, an error code otherwise. |
 
-## Source code
+## Sample code
 
-<https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/lis2mdl_class.h>
+```cpp
+#include "lis2mdl_class.h"
+DevI2C *i2c;
+LIS2MDL *lis2mdl;
+int32_t axes[3];
+int16_t raw[3];
+uint8_t id;
+void setup(){
+    i2c = new DevI2C(D14, D15);
+    lis2mdl = new LIS2MDL(*i2c);
+    // init
+    lis2mdl->init(NULL);
+}
+void loop(){
+    // read id
+    lis2mdl->readId(&id);
+    Serial.printf("Id: %d\n", id);
+    // get_m_axes
+    lis2mdl->get_m_axes(axes);
+    Serial.printf("Axes: x - %d, y - %d, z - %d\n", axes[0], axes[1], axes[2]);
+    // get_m_axes_raw
+    lis2mdl->get_m_axes_raw(raw);
+    Serial.printf("Raw: x - %d, y - %d, z - %d\n", raw[0], raw[1], raw[2]);
+    delay(1000);
+}
+```

@@ -91,27 +91,18 @@ LSM6DSLSensor.h
 ### DevI2C
 
 > Provides functions for multi-register I2C communication.
-> 
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/ST_INTERFACES/DevI2C.h>
-
 
 ### PinName
 
 > Provides the mapping of mbed DIP and LPC Pin Names.
-> 
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/system/targets/TARGET_MXCHIP/TARGET_AZ3166/PinNames.h>
 
 ### LSM6DSL_Interrupt_Pin_t
 
 > LSM6DSL interrupt pin type
->
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/LSM6DSLSensor.h>
 
 ### LSM6DSL_Event_Status_t
 
 > LSM6DSL event status type
->
-> Source code: <https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/LSM6DSLSensor.h>
 
 ## Constructors
 
@@ -1243,6 +1234,56 @@ int write_reg(uint8_t reg, uint8_t data)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-## Source code
+## Sample code
 
-<https://github.com/Microsoft/AzureIoTDeveloperKit/blob/master/AZ3166/AZ3166-1.0.0/cores/arduino/drivers/Sensors/LSM6DSLSensor.h>
+```cpp
+#include "LSM6DSLSensor.h"
+DevI2C *i2c;
+LSM6DSLSensor *sensor;
+int32_t axes[3];
+int16_t raws[3];
+float data;
+void setup(){
+    i2c = new DevI2C(D14, D15);
+    sensor = new LSM6DSLSensor(*i2c, D4, D5);
+    // init
+    sensor->init(NULL);
+}
+void loop(){
+    // Accelerometer test
+    accelerometer_test();
+    // Gyroscope test
+    gyroscope_test();
+    delay(1000);
+}
+void accelerometer_test(){
+    Serial.println("***Accelerator***");
+    // enable_x
+    sensor->enable_x();
+    // get_x_axes
+    sensor->get_x_axes(axes);
+    Serial.printf("Axes: x: %d, y: %d, z: %d\n", axes[0], axes[1], axes[2]);
+    // get_x_sensitivity
+    sensor->get_x_sensitivity(&data);
+    Serial.print("Sensitivity: ");
+    Serial.println(data);
+    // get_x_axes_raw
+    sensor->get_x_axes_raw(raws);
+    Serial.printf("Raw: x: %d, y: %d, z: %d\n", raws[0], raws[1], raws[2]);
+}
+void gyroscope_test(){
+    Serial.println("***Gyroscope***");
+    // enable_g
+    sensor->enable_g();
+    // get_g_axes
+    sensor->get_g_axes(axes);
+    Serial.printf("Axes: x: %d, y: %d, z: %d\n", axes[0], axes[1], axes[2]);
+    // get_g_sensitivity
+    sensor->get_g_sensitivity(&data);
+    Serial.print("Sensitivity: ");
+    Serial.println(data);
+    // get_g_axes_raw
+    sensor->get_g_axes_raw(raws);
+    Serial.printf("Raw: x: %d, y: %d, z: %d\n", raws[0], raws[1], raws[2]);
+}
+```
