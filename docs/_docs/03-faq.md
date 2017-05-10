@@ -69,7 +69,7 @@ To solve it, there is a [workaround](https://github.com/Microsoft/vscode/issues/
 ]
 ```
 
-### After updateing Arduino extension in VS Code, it breaks everything
+### After updateing Arduino extension in VS Code, tasks fail to run
 
 The DevKit currently is using a special version of Arduino extension for VS Code. If you accidentally updated it, follow these steps to bring it back to work:
 
