@@ -210,8 +210,9 @@
    ========================================================================== */
 
 .page__share {
-  margin-top: 2em;
-  padding-top: 1em;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 40px;
   border-top: 1px solid $border-color;
 
   @include breakpoint(max-width $small) {
@@ -228,10 +229,38 @@
   }
 }
 
+.page__share a,.page__share p {
+    margin: 0 5px;
+    display: inline-block;
+}
+
 .page__share-title {
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
+}
+
+.page__share__inline {
+  text-align: center;
+  padding-bottom: 40px;
+
+  @include breakpoint(max-width $small) {
+    .btn span {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}
+
+.page__share__inline a,.page__share__inline p {
+    margin: 0 5px;
+    display: inline-block;
 }
 
 
