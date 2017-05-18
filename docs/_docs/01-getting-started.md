@@ -50,7 +50,7 @@ Now you have connected your DevKit to computer. Follow the instructions on the s
 - Press button A to test WiFi connection
 - Press button B to test sensors, press again to switch a sensor
 
-![getting-started-sensors]({{"/assets/images/getting-started-sensors.png" | absolute_url }})
+![getting-started-sensors]({{"/assets/images/getting-started-sensors.jpg" | absolute_url }})
 
 ## Step 3. Configure WiFi
 
@@ -82,7 +82,7 @@ Once the connection is succeeded, the DevKit will reboot in a few seconds. After
 
 ## Step 4. Prepare development environment
 
-Now it is time to set up the developerment environment: tools and packages for you to build stunning IoT applications.
+Now it is time to set up the development environment: tools and packages for you to build stunning IoT applications.
 
 ### A. Download latest package
 
@@ -93,8 +93,7 @@ The `.zip` file you download contains all necessary tools and packages required 
 **MD5:** 01061ea0f8270db07fd808d35ad25759
 {: .notice--info}
 
-**Note:** If you are using the old version of the DevKit, download [legacy build](https://azureboard.blob.core.windows.net/installpackage/usb_install_legacy.zip).
-{: .notice--warning}
+For **macOS** users, you may follow [manual installation]({{"/docs/installation/" | absolute_url}}) instructions to install the tools and packages.
 
 > The `.zip` file contains the following tools and packageas. If you already have some components installed, the script will detect and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks
