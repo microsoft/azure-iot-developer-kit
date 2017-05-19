@@ -9,27 +9,27 @@ For a first-time user of the MXChip IoT Developer Kit (a.k.a DevKit), follow the
 
 {% include toc icon="columns" %}
 
-## Step 1. Before starting
+### Step 1. Before starting
 
-### A. What you need
+#### A. What you need
 
 * MXChip IoT Developer Kit. [Get it now](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/){:target="_blank"}
-* A computer running Windows 10 or macOS 10.10+ (coming soon)
+* A computer running Windows 10 or macOS 10.10+
 * An active Azure subscription
   * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
 
-## Step 2. Prepare your hardware
+### Step 2. Prepare your hardware
 
 Hook up your hardware to your computer.
 
-### A. What you need
+#### A. Hardwares you need
 
 * DevKit board
 * Micro USB cable
 
 ![getting-started-hardware]({{"/assets/images/getting-started-hardware.jpg" | absolute_url }})
 
-### B. Connect DevKit to your computer
+#### B. Connect DevKit to your computer
 
 1. Connect USB end to your PC
 2. Connect Micro USB end to the DevKit
@@ -37,13 +37,13 @@ Hook up your hardware to your computer.
 
 ![getting-started-connect]({{"/assets/images/getting-started-connect.jpg" | absolute_url }})
 
-### C. (Optional) Upgrade to latest firmware
+#### C. (Optional) Upgrade to latest firmware
 
 To have everything work properly, follow [Upgrading]({{"/docs/upgrading/" | absolute_url}}) guide to upgrade the DevKit firmware to latest version.
 
 This is an one-time effort, once you started developing on the DevKit and uploading your app, you will have the latest firmware with it.
 
-### D. Test sensors and WiFi on DevKit
+#### D. Test sensors and WiFi on DevKit
 
 Now you have connected your DevKit to computer. Follow the instructions on the screen to test sensors and WiFi:
 
@@ -52,21 +52,21 @@ Now you have connected your DevKit to computer. Follow the instructions on the s
 
 ![getting-started-sensors]({{"/assets/images/getting-started-sensors.jpg" | absolute_url }})
 
-## Step 3. Configure WiFi
+### Step 3. Configure WiFi
 
 Most IoT projects are relying on Internet connectivity. Use AP (Access Point) Mode on DevKit to configure WiFi.
 
-### A. Enter AP Mode
+#### A. Enter AP Mode
 
 Hold down button B, click Reset button, then release button B. The screen will display SSID of the DevKit as well as the configuration portal IP address:
 
 ![getting-started-wifi-ap]({{"/assets/images/getting-started-wifi-ap.jpg" | absolute_url }})
 
-### B. Connect to DevKit AP
+#### B. Connect to DevKit AP
 
 Use your computer or mobile phone to connect to DevKit AP (highlighted in the screenshot above), leave the password as empty.
 
-### C. Configure WiFi for DevKit
+#### C. Configure WiFi for DevKit
 
 Open IP address on the screen in browser, select WiFi you want your DevKit connect to, then type the password. Click **'Connect'** to configure and connect to WiFi.
 
@@ -80,11 +80,11 @@ Once the connection is succeeded, the DevKit will reboot in a few seconds. After
 {: .notice--info}
 
 
-## Step 4. Prepare development environment
+### Step 4. Prepare development environment
 
 Now it is time to set up the development environment: tools and packages for you to build stunning IoT applications.
 
-### A. Download latest package
+#### A. Download latest package
 
 The `.zip` file you download contains all necessary tools and packages required for DevKit development.
 
@@ -105,7 +105,7 @@ For **macOS** users, you may follow [manual installation]({{"/docs/installation/
 > * DevKit Board Package: Toolchains, libraries and projects for the DevKit
 > * ST-Link Utility: Essential utility and drivers
 
-### B. Run installation script
+#### B. Run installation script
 
 In the File Explorer, locate the `.zip` and extract it, find `azure-install.cmd`, right-click and select **"Run as administrator"** to start.
 
@@ -115,7 +115,7 @@ During installation, you will see the progress of each tool or package.
 
 ![getting-started-install]({{"/assets/images/getting-started-install.png" | absolute_url }})
 
-### C. Confirm to install drivers
+#### C. Confirm to install drivers
 
 The VS Code for Arduino extension relies on the Arduino IDE to work. If this is the first time you are installing Arduino IDE, you will be prompted to install relevant drivers:
 

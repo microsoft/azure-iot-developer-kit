@@ -5,9 +5,29 @@ excerpt: "Frequently Asked Questions"
 last_modified_at: 2017-05-05T10:16:34-04:00
 ---
 
+## General
+
+### Is DevKit a Microsoft hardware?
+
+No. We partnership with [MXChip](http://www.mxchip.com){:target="_blank"}, an established player for IoT hardware, and rapidly iterated on the design and engineering of an Arduino compatible board with rich preinstalled sensors. Our goal is boosting productivity for developers creating and prototype their IoT applications with awesome Visual Studio Code tooling.
+
+### Why Arduino compatible?
+
+From industry data and customer research, we believe Arduino has a powerful and active community among pro makers. We want to be part of this strong community instead of building it from scratch.
+
+### Are you going to open-source the product?
+
+Yes, we will open source the firmware, toolchains and all samples of it. And the board itself will also go as [open-source hardware](https://www.arduino.cc/en/Main/FAQ#toc3){:target="_blank"}. That means we will release all of the original design files for the hardware.
+
+We plan to do that as soon as we come to a stage that our entire framework is stable and polished enough, which we expect will be quick.
+
+### Are you going to sell it?
+
+Now we really want to get our developers' feedback and their good stories on building IoT application using DevKit. With this in mind, we are going to disperse limited number of preview DevKits for free. You can [register here](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/) with a few simple questions we want to collect from you.
+
 ## Installation
 
-### Command window seems stuck and there is no progress updated for a while
+### Command window seems stuck and there is no progress updated for a while.
 
 This could probably due to you put the Windows command window into "Selection" mode. To verify it, check the command window title:
 
@@ -17,7 +37,7 @@ If you see **select** on the title, this means you are in Selection mode. It wil
 
 To solve it, press any key within the command window area and you will see the **select** disappear on the title.
 
-### Windows Defender SmartScreen prevented an unrecognized app error
+### Windows Defender SmartScreen prevented an unrecognized app error.
 
 ![getting-started-faq-select]({{"/assets/images/getting-started-faq-smartscreen.png" | absolute_url }})
 
@@ -27,19 +47,19 @@ To solve it, click on the **'More info'** link and then click the **'Run anywa
 
 ## WiFi Configuration
 
-### Cannot connect to some WiFi hotspot
+### Cannot connect to some WiFi hotspot.
 
 This is probably due to you are connecting to a WiFi that needs extra certification other than WPA/WPA2 or open WiFi requires captive portal for logging in such as WiFi in Starbucks.
 
 To solve it, try use WiFi with normal WPA/WPA2 authentication.
 
-### Cannot connect to 5GHz WiFi
+### Cannot connect to 5GHz WiFi.
 
 Currently DevKit only can connect to 2.4GHz WiFi, 5GHz is not supported due to hardware restrictions.
 
 ## Cloud Provision
 
-### Cannot log in Azure as access token expired
+### Cannot log in Azure as access token expired.
 
 When you previous have log in Azure, the access token may expired. Normally it will be handled by provision task.
 
@@ -55,7 +75,7 @@ This is due to IoT Hub only allows [one free hub per Azure subscription](https:/
 
 ## Development
 
-### Terminal text misaligned in VS Code
+### Terminal text misaligned in VS Code.
 
 This is a known bug for latest version VS Code ([#19665](https://github.com/Microsoft/vscode/issues/19665){:target="_blank"}) if you are using Powershell or CMD in terminal.
 
