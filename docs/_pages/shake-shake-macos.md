@@ -3,6 +3,9 @@ title: "Shake, shake"
 permalink: /docs/projects/shake-shake-macos/
 ---
 
+**Note:** This manual steps for running **'Shake, shake'** project on macOS is subject to be changed.
+{: .notice--warning}
+
 ### Step 1. Create Azure IoT Hub
 
 1. Sign in to [Azure portal](https://portal.azure.com/).
@@ -81,7 +84,7 @@ permalink: /docs/projects/shake-shake-macos/
 
 ### Step 4. Deploy Azure Functions
 
-1. adfadf
+*TBD*
 
 ### Step 5. Build and upload Arduino sketch
 
@@ -94,3 +97,7 @@ Launch VS Code first and connect the DevKit to your computer. VS Code will autom
 #### B. Compile and upload the Arduino sketch
 
 Use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Upload**. Then it will start compiling and uploading the Arduino sketch. After it is done, the DevKit will reboot and start running the code.
+
+## Test the project
+
+Check how to [test the result]({{"/docs/projects/shake-shake/#test-the-project" | absolute_url }}).
