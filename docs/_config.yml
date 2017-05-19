@@ -11,7 +11,7 @@ title                    : "IoT Developer Kits"
 title_separator          : "-"
 name                     : &name "MXChip IoT Developer Kit" # &name is a YAML anchor which can be *referenced later
 description              : &description "Rapidly develop an IoT app using Microsoft Azure and Visual Studio Code"
-url                      : https://microsoft.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://vschina.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/azure-iot-developer-kit" # the subpath of your site, e.g. "/blog"
 repository               : "Microsoft/azure-iot-developer-kit"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -183,6 +183,7 @@ defaults:
       type: pages
     values:
       layout: single
+      share: true
       author_profile: false
   # _docs
   - scope:
@@ -271,3 +272,5 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+theme: jekyll-theme-cayman
