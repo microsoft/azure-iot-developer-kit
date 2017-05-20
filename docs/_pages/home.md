@@ -35,7 +35,7 @@ feature_row:
     btn_class: "btn--inverse"
   - title: "Fully Compatible Arduino Board"
     excerpt: "All the cool things you can do with an Arduino can be done with the DevKit. It is targeted for developers to create and prototype IoT projects, using a low-power device, quickly and easily. There are 25 external GPIO pins on the edge connector of the board, allowing you to connect to external sensors and actuators."
-    url: "#"
+    url: "https://1drv.ms/x/s!AjIzeUaRJJnPh94rOF3IXHNdY3HZ_A"
     btn_label: "Pin Breakouts"
     btn_class: "btn--inverse"
 ---
