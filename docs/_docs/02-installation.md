@@ -5,7 +5,7 @@ excerpt: "Instructions for manually install tools and packages."
 last_modified_at: 2017-05-12T10:16:34-04:00
 ---
 
-Follow these simple steps to manually install tools and packages for DevKit development. If you are on Windows, it is suggested to use [our package](http://localhost:4000/azure-iot-developer-kit/docs/getting-started/#a-download-latest-package) to install everything you need.
+Follow these simple steps to manually install tools and packages for DevKit development. If you are on Windows, it is suggested to use [our package]({{"/docs/getting-started/#a-download-latest-package" | absolute_url}}) to install everything you need.
 
 ## macOS
 
