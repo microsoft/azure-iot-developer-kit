@@ -70,7 +70,7 @@ permalink: /docs/projects/shake-shake-macos/
  ```
 
 4. Get into configuration mode:
- Hold down button A, click Reset button, then release button A.
+ Hold down button A, then push and release the reset button.
 
 5. In the prompt of the serial port with `#`, configure your connection string you get from previous step:
  ```bash
@@ -96,7 +96,7 @@ Launch VS Code first and connect the DevKit to your computer. VS Code will autom
 
 #### B. Compile and upload the Arduino sketch
 
-Use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Upload**. Then it will start compiling and uploading the Arduino sketch. After it is done, the DevKit will reboot and start running the code.
+Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Upload**. Then it will start compiling and uploading the Arduino sketch. After it is done, the DevKit will reboot and start running the code.
 
 ## Test the project
 

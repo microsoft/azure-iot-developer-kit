@@ -71,7 +71,7 @@ Use **Quick Open** (`Ctrl+P`) to run 'task cloud-deploy'. It will start deployin
 
 ### Step 5. Build and upload Arduino sketch
 
-Use **Quick Open** (`Ctrl+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, click Reset button, then release button A. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+Use **Quick Open** (`Ctrl+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
 
 Then it will start verifying and uploading the Arduino sketch:
 

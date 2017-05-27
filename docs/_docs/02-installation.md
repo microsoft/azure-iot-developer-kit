@@ -48,7 +48,7 @@ As you may familiar with adding a new Arduino board, you need to add DevKit boar
 2. Click **'Additional URLs'** right down the bottom.
  ![installation-additional-urls]({{"/assets/images/installation-additional-urls.png" | absolute_url}})
 
-3. In the `settings.json` file opened, add a line to the bottom.
+3. In the `settings.json` file opened, add a line to the bottom of 'USER SETTINGS' pane.
  ```json
  "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
  ```
