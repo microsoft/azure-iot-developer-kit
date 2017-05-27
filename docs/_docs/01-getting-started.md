@@ -58,7 +58,7 @@ Most IoT projects are relying on Internet connectivity. Use AP (Access Point) Mo
 
 #### A. Enter AP Mode
 
-Hold down button B, click Reset button, then release button B. The screen will display SSID of the DevKit as well as the configuration portal IP address:
+Hold down button B, then push and release the reset button. The screen will display SSID of the DevKit as well as the configuration portal IP address:
 
 ![getting-started-wifi-ap]({{"/assets/images/getting-started-wifi-ap.jpg" | absolute_url }})
 
