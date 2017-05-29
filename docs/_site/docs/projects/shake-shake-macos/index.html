@@ -175,6 +175,21 @@
       <section class="page__content" itemprop="text">
         <p class="notice--warning"><strong>Note:</strong> This manual steps for running <strong>‘Shake, shake’</strong> project on macOS is subject to be changed.</p>
 
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-columns"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#step-1-create-azure-iot-hub" id="markdown-toc-step-1-create-azure-iot-hub">Step 1. Create Azure IoT Hub</a></li>
+  <li><a href="#step-2-register-a-device-in-the-iot-hub-for-the-your-device" id="markdown-toc-step-2-register-a-device-in-the-iot-hub-for-the-your-device">Step 2. Register a device in the IoT hub for the your device</a></li>
+  <li><a href="#step-3-configure-device-connection-string-to-devkit" id="markdown-toc-step-3-configure-device-connection-string-to-devkit">Step 3. Configure device connection string to DevKit</a></li>
+  <li><a href="#step-4-deploy-azure-functions" id="markdown-toc-step-4-deploy-azure-functions">Step 4. Deploy Azure Functions</a></li>
+  <li><a href="#step-5-build-and-upload-arduino-sketch" id="markdown-toc-step-5-build-and-upload-arduino-sketch">Step 5. Build and upload Arduino sketch</a></li>
+  <li><a href="#test-the-project" id="markdown-toc-test-the-project">Test the project</a></li>
+</ul>
+
+  </nav>
+</aside>
+
 <h3 id="step-1-create-azure-iot-hub">Step 1. Create Azure IoT Hub</h3>
 
 <ol>
@@ -328,16 +343,23 @@
     <p>Click <strong>[my function name] &gt; View Files &gt; Upload</strong>:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-upload.png" alt="shake-shake-mac-function-upload" /></p>
   </li>
-  <li>
-    <p>Go to <code class="highlighter-rouge">~/Library/Arduino15/...</code> and upload <code class="highlighter-rouge">index.js</code> and <code class="highlighter-rouge">packages.json</code>
- [<strong>TODO:</strong> Screenshot]</p>
-  </li>
-  <li>Modify <code class="highlighter-rouge">index.js</code> to use your own Twitter bearer token:
-    <div class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="nx">Code</span> <span class="nx">here</span>
+  <li>Go to path below and upload <code class="highlighter-rouge">index.js</code> and <code class="highlighter-rouge">packages.json</code>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>~/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/libraries/AzureIotHub/examples/ShakeShake/azureFunction
 </code></pre>
     </div>
   </li>
-  <li>Save and click <strong>Run</strong>.</li>
+  <li>
+    <p>Click <strong>[function name] &gt; Platform features &gt; Application settings</strong>:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-app-settings.png" alt="shake-shake-mac-app-settings" /></p>
+  </li>
+  <li>Add <code class="highlighter-rouge">twitterAPI</code> and <code class="highlighter-rouge">twitterBearerKey</code> in <strong>App settings</strong> section and click <strong>Save</strong>:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-twitter-vars.png" alt="shake-shake-mac-twitter-vars" />
+    <ul>
+      <li><code class="highlighter-rouge">twitterAPI</code>: <code class="highlighter-rouge">https://api.twitter.com/1.1/search/tweets.json</code></li>
+      <li><code class="highlighter-rouge">twitterBearerKey</code>: You need to <a href="http://docs.inboundnow.com/guide/create-twitter-application/" target="_blank">create a Twitter application</a> and use <a href="https://github.com/wellsjo/get-twitter-bearer-token" target="_blank">some utility</a> to generate bearer token.</li>
+    </ul>
+  </li>
+  <li>Go to the function and click <strong>Run</strong>.</li>
 </ol>
 
 <h3 id="step-5-build-and-upload-arduino-sketch">Step 5. Build and upload Arduino sketch</h3>

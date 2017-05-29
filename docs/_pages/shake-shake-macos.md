@@ -6,6 +6,8 @@ permalink: /docs/projects/shake-shake-macos/
 **Note:** This manual steps for running **'Shake, shake'** project on macOS is subject to be changed.
 {: .notice--warning}
 
+{% include toc icon="columns" %}
+
 ### Step 1. Create Azure IoT Hub
 
 1. Sign in to [Azure portal](https://portal.azure.com/).
@@ -118,15 +120,20 @@ permalink: /docs/projects/shake-shake-macos/
 1. Click **[my function name] > View Files > Upload**:
  ![shake-shake-mac-function-upload]({{"/assets/images/shake-shake-mac-function-upload.png" | absolute_url }})
 
-2. Go to `~/Library/Arduino15/...` and upload `index.js` and `packages.json`
- [**TODO:** Screenshot]
+2. Go to path below and upload `index.js` and `packages.json`
+```bash
+~/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/libraries/AzureIotHub/examples/ShakeShake/azureFunction
+```
 
-3. Modify `index.js` to use your own Twitter bearer token:
- ```javascript
- Code here
- ```
+3. Click **[function name] > Platform features > Application settings**:
+ ![shake-shake-mac-app-settings]({{"/assets/images/shake-shake-mac-app-settings.png" | absolute_url }})
 
-4. Save and click **Run**.
+4. Add `twitterAPI` and `twitterBearerKey` in **App settings** section and click **Save**:
+ ![shake-shake-mac-twitter-vars]({{"/assets/images/shake-shake-mac-twitter-vars.png" | absolute_url }})
+ - `twitterAPI`: `https://api.twitter.com/1.1/search/tweets.json`
+ - `twitterBearerKey`: You need to [create a Twitter application](http://docs.inboundnow.com/guide/create-twitter-application/){:target="_blank"} and use [some utility](https://github.com/wellsjo/get-twitter-bearer-token){:target="_blank"} to generate bearer token.
+
+5. Go to the function and click **Run**.
 
 ### Step 5. Build and upload Arduino sketch
 
