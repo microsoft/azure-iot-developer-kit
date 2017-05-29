@@ -278,7 +278,67 @@
 
 <h3 id="step-4-deploy-azure-functions">Step 4. Deploy Azure Functions</h3>
 
-<p><em>TBD</em></p>
+<h4 id="a-get-iot-hub-name-and-connection-string">A. Get IoT Hub name and connection string</h4>
+
+<ol>
+  <li>
+    <p>Click **Resource Group &gt; [your created resource group] &gt; Overview &gt; [your created IoT Hub]
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-resource-group.png" alt="shake-shake-mac-resource-group" /></p>
+  </li>
+  <li>
+    <p>In IoT Hub, click <strong>Endpoints &gt; Events</strong> and note ‘Event Hub name’ and ‘Event Hub endpoint’
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-iothub-name.png" alt="shake-shake-mac-iothub-name" /></p>
+  </li>
+</ol>
+
+<p>You will need these information when creating Azure Functions.</p>
+
+<h4 id="b-create-azure-functions">B. Create Azure Functions</h4>
+
+<ol>
+  <li>
+    <p>Click <strong>New &gt; Everything</strong> and search for <strong>Function App</strong>:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-create-function-app.png" alt="shake-shake-mac-create-function-app" /></p>
+  </li>
+  <li>
+    <p>Specify the Name and Resource Group of the function:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-app-name.png" alt="shake-shake-mac-function-app-name" /></p>
+  </li>
+  <li>
+    <p>Go to the Function App you just created and create a new custom function:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-custom-function.png" alt="shake-shake-mac-custom-function" /></p>
+  </li>
+  <li>
+    <p>Choose <strong>EventHubTrigger-Javascript</strong> from the template list and create a new ‘Event Hub connection’:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-eventhub-trigger.png" alt="shake-shake-mac-eventhub-trigger" /></p>
+  </li>
+  <li>
+    <p>Name the connection <strong>eventHubConnectionString</strong> and paste ‘Event Hub endpoint’ value into ‘Connection string’:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-connection-string.png" alt="shake-shake-mac-function-connection-string" /></p>
+  </li>
+  <li>
+    <p>Paste previous noted ‘Event Hub name’ value into ‘Event Hub name’ and click <strong>Create</strong>.</p>
+  </li>
+</ol>
+
+<h4 id="c-upload-and-run-azure-functions-code">C. Upload and run Azure Functions code</h4>
+
+<ol>
+  <li>
+    <p>Click <strong>[my function name] &gt; View Files &gt; Upload</strong>:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-upload.png" alt="shake-shake-mac-function-upload" /></p>
+  </li>
+  <li>
+    <p>Go to <code class="highlighter-rouge">~/Library/Arduino15/...</code> and upload <code class="highlighter-rouge">index.js</code> and <code class="highlighter-rouge">packages.json</code>
+ [<strong>TODO:</strong> Screenshot]</p>
+  </li>
+  <li>Modify <code class="highlighter-rouge">index.js</code> to use your own Twitter bearer token:
+    <div class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="nx">Code</span> <span class="nx">here</span>
+</code></pre>
+    </div>
+  </li>
+  <li>Save and click <strong>Run</strong>.</li>
+</ol>
 
 <h3 id="step-5-build-and-upload-arduino-sketch">Step 5. Build and upload Arduino sketch</h3>
 
