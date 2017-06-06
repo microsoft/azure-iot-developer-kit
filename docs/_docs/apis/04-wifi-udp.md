@@ -23,21 +23,21 @@ AZ3166WiFiUdp.h
 
 | Methods |
 | :------ |
-| [begin](#begin) - `uint8_t begin(uint16_t port)` |
+| [begin](#begin) - `int begin(unsigned short port)` |
 | [available](#available) - `int available()` |
 | [stop](#stop) - `void stop()` |
-| [beginPacket](#beginpacket) - `int beginPacket(const char *host, uint16_t port)` |
-| [beginPacket](#beginpacket-1) - `int beginPacket(IPAddress ip, uint16_t port)` |
+| [beginPacket](#beginpacket) - `int beginPacket(const char *host, unsigned short port)` |
+| [beginPacket](#beginpacket-1) - `int beginPacket(IPAddress ip, unsigned short port)` |
 | [endPacket](#endpacket) - `int endPacket()` |
-| [write](#write) - `size_t write(uint8_t byte)` |
-| [write](#write-1) - `size_t write(const uint8_t *buffer, size_t size)` |
+| [write](#write) - `size_t write(unsigned char byte)` |
+| [write](#write-1) - `size_t write(const unsigned char *buffer, size_t size)` |
 | [parsePacket](#parsepacket) - `int parsePacket()` |
 | [read](#read) - `int read()` |
 | [read](#read-1) - `int read(unsigned char* buffer, size_t len)` |
 | [peek](#peek) - `int peek()` |
 | [flush](#flush) - `void flush()` |
 | [remoteIP](#remoteip) - `IPAddress remoteIP()` |
-| [remotePort](#remoteport) - `uint16_t  remotePort()` |
+| [remotePort](#remoteport) - `unsigned char  remotePort()` |
 
 ## Types
 
@@ -62,7 +62,7 @@ WiFiUDP()
 ### begin
 
 ```cpp
-uint8_t begin(uint16_t port)
+int begin(uint16_t port)
 ```
 
 > Start WiFi UDP socket with specific port.
@@ -71,13 +71,13 @@ uint8_t begin(uint16_t port)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint16_t | port | The port to listen on. |
+> | unsigned short | port | The port to listen on. |
 >
 > #### Return value
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t | 1 for success, 0 for fail. |
+> | int | 1 for success, 0 for fail. |
 
 ### available
 
@@ -116,7 +116,7 @@ void stop()
 ### beginPacket
 
 ```cpp
-int beginPacket(const char *host, uint16_t port)
+int beginPacket(const char *host, unsigned short port)
 ```
 
 > Starts a connection to write UDP data to the remote connection.
@@ -126,7 +126,7 @@ int beginPacket(const char *host, uint16_t port)
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
 > | const char * | host | The host name of the remote host. |
-> | uint16_t | port | The port of the remote connection. |
+> | unsigned short | port | The port of the remote connection. |
 >
 > #### Return value
 >
@@ -137,7 +137,7 @@ int beginPacket(const char *host, uint16_t port)
 ### beginPacket
 
 ```cpp
-int beginPacket(IPAddress ip, uint16_t port)
+int beginPacket(IPAddress ip, unsigned short port)
 ```
 
 > Starts a connection to write UDP data to the remote connection.
@@ -147,7 +147,7 @@ int beginPacket(IPAddress ip, uint16_t port)
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
 > | IPAddress | host | The IP of the remote host. |
-> | uint16_t | port | The port of the remote connection. |
+> | unsigned short | port | The port of the remote connection. |
 >
 > #### Return value
 >
@@ -176,7 +176,7 @@ int endPacket()
 ### write
 
 ```cpp
-size_t write(uint8_t byte)
+size_t write(unsigned char byte)
 ```
 
 > Writes UDP 1 byte data to the remote connection.
@@ -185,7 +185,7 @@ size_t write(uint8_t byte)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | byte | Byte to write. |
+> | unsigned char | byte | Byte to write. |
 >
 > #### Return value
 >
@@ -196,7 +196,7 @@ size_t write(uint8_t byte)
 ### write
 
 ```cpp
-size_t write(const uint8_t *buffer, size_t size)
+size_t write(const unsigned char *buffer, size_t size)
 ```
 
 > Writes UDP size bytes of data to the remote connection.
@@ -326,7 +326,7 @@ IPAddress remoteIP()
 ### remotePort
 
 ```cpp
-uint16_t remotePort()
+unsigned short remotePort()
 ```
 
 > Gets the port of the remote connection.
@@ -339,7 +339,7 @@ uint16_t remotePort()
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint16_t | The port of the remote connection. |
+> | unsigned short | The port of the remote connection. |
 
 ## Sample code
 

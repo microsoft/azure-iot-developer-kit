@@ -34,9 +34,9 @@ LSM6DSLSensor.h
 | [enable_g](#enable_g) - `int enable_g(void)` |
 | [disable_x](#disable_x) - `int disable_x(void)` |
 | [disable_g](#disable_g) - `int disable_g(void)` |
-| [read_id](#read_id) - `int read_id(uint8_t *id)` |
-| [get_x_axes](#get_x_axes) - `int get_x_axes(int32_t *pData)` |
-| [get_g_axes](#get_g_axes) - `int get_g_axes(int32_t *pData)` |
+| [read_id](#read_id) - `int read_id(unsigned char *id)` |
+| [get_x_axes](#get_x_axes) - `int get_x_axes(int *pData)` |
+| [get_g_axes](#get_g_axes) - `int get_g_axes(int *pData)` |
 | [get_x_sensitivity](#get_x_sensitivity) - `int get_x_sensitivity(float *pfData)` |
 | [get_g_sensitivity](#get_g_sensitivity) - `int get_g_sensitivity(float *pfData)` |
 | [get_x_axes_raw](#get_x_axes_raw) - `int get_x_axes_raw(int16_t *pData)` |
@@ -58,19 +58,19 @@ LSM6DSLSensor.h
 | [set_free_fall_threshold](#set_free_fall_threshold) - `int set_free_fall_threshold(uint8_t thr)` |
 | [enable_pedometer](#enable_pedometer) - `int enable_pedometer(void)` |
 | [disable_pedometer](#disable_pedometer) - `int disable_pedometer(void)` |
-| [get_step_counter](#get_step_counter) - `int get_step_counter(uint16_t *step_count)` |
+| [get_step_counter](#get_step_counter) - `int get_step_counter(int *step_count)` |
 | [reset_step_counter](#reset_step_counter) - `int reset_step_counter(void)` |
-| [set_pedometer_threshold](#set_pedometer_threshold) - `int set_pedometer_threshold(uint8_t thr)` |
+| [set_pedometer_threshold](#set_pedometer_threshold) - `int set_pedometer_threshold(unsigned char thr)` |
 | [enable_tilt_detection](#enable_tilt_detection) - `int enable_tilt_detection(LSM6DSL_Interrupt_Pin_t pin)` |
 | [disable_tilt_detection](#disable_tilt_detection) - `int disable_tilt_detection(void)` |
 | [enable_wake_up_detection](#enable_wake_up_detection) - `int enable_wake_up_detection(LSM6DSL_Interrupt_Pin_t pin)` |
 | [disable_wake_up_detection](#disable_wake_up_detection) - `int disable_wake_up_detection(void)` |
-| [set_wake_up_threshold](#set_wake_up_threshold) - `int set_wake_up_threshold(uint8_t thr)` |
+| [set_wake_up_threshold](#set_wake_up_threshold) - `int set_wake_up_threshold(unsigned char thr)` |
 | [enable_single_tap_detection](#enable_single_tap_detection) - `int enable_single_tap_detection(LSM6DSL_Interrupt_Pin_t pin)` |
 | [disable_single_tap_detection](#disable_single_tap_detection) - `int disable_single_tap_detection(void)` |
 | [enable_double_tap_detection](#enable_double_tap_detection) - `int enable_double_tap_detection(LSM6DSL_Interrupt_Pin_t pin)` |
 | [disable_double_tap_detection](#disable_double_tap_detection) - `int disable_double_tap_detection(void)` |
-| [set_tap_threshold](#set_tap_threshold) - `int set_tap_threshold(uint8_t thr)` |
+| [set_tap_threshold](#set_tap_threshold) - `int set_tap_threshold(unsigned char thr)` |
 | [set_tap_shock_time](#set_tap_shock_time) - `int set_tap_shock_time(uint8_t time)` |
 | [set_tap_quiet_time](#set_tap_quiet_time) - `int set_tap_quiet_time(uint8_t time)` |
 | [set_tap_duration_time](#set_tap_duration_time) - `int set_tap_duration_time(uint8_t time)` |
@@ -232,7 +232,7 @@ int disable_g(void)
 ### read_id
 
 ```cpp
-int read_id(uint8_t *id)
+int read_id(unsigned char *id)
 ```
 
 > Read ID of LSM6DSL Accelerometer and Gyroscope.
@@ -241,7 +241,7 @@ int read_id(uint8_t *id)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t * | id | The pointer where the ID of the device is stored. |
+> | unsigned char * | id | The pointer where the ID of the device is stored. |
 > 
 > #### Return value
 > 
@@ -252,7 +252,7 @@ int read_id(uint8_t *id)
 ### get_x_axes
 
 ```cpp
-int get_x_axes(int32_t *pData)
+int get_x_axes(int *pData)
 ```
 
 > Read data from LSM6DSL Accelerometer.
@@ -272,7 +272,7 @@ int get_x_axes(int32_t *pData)
 ### get_g_axes
 
 ```cpp
-int get_g_axes(int32_t *pData)
+int get_g_axes(int *pData)
 ```
 
 > Read data from LSM6DSL Gyroscope.
@@ -281,7 +281,7 @@ int get_g_axes(int32_t *pData)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | int32_t * | pData | The pointer where the gyroscope data are stored |
+> | int * | pData | The pointer where the gyroscope data are stored |
 > 
 > #### Return value
 > 
@@ -341,7 +341,7 @@ int get_x_axes_raw(int16_t *pData)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | int16_t * | pData | The pointer where the accelerometer raw data are stored |
+> | int * | pData | The pointer where the accelerometer raw data are stored |
 > 
 > #### Return value
 > 
@@ -650,7 +650,7 @@ int disable_free_fall_detection(void)
 ### set_free_fall_threshold
 
 ```cpp
-int set_free_fall_threshold(uint8_t thr)
+int set_free_fall_threshold(int thr)
 ```
 
 > Set the free fall detection threshold for LSM6DSL accelerometer sensor.
@@ -659,7 +659,7 @@ int set_free_fall_threshold(uint8_t thr)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | thr | The threshold to be set. |
+> | int | thr | The threshold to be set. |
 > 
 > #### Return value
 > 
@@ -706,7 +706,7 @@ int disable_pedometer(void)
 ### get_step_counter
 
 ```cpp
-int get_step_counter(uint16_t *step_count)
+int get_step_counter(int *step_count)
 ```
 
 > Get the step counter for LSM6DSL accelerometer sensor.
@@ -715,7 +715,7 @@ int get_step_counter(uint16_t *step_count)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint16_t * | step_count | The pointer to the step counter. |
+> | int * | step_count | The pointer to the step counter. |
 > 
 > #### Return value
 > 
@@ -744,7 +744,7 @@ int reset_step_counter(void)
 ### set_pedometer_threshold
 
 ```cpp
-int set_pedometer_threshold(uint8_t thr)
+int set_pedometer_threshold(unsigned char thr)
 ```
 
 > Set the pedometer threshold for LSM6DSL accelerometer sensor.
@@ -753,7 +753,7 @@ int set_pedometer_threshold(uint8_t thr)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | thr | The threshold to be set. |
+> | unsigned char | thr | The threshold to be set. |
 > 
 > #### Return value
 > 
@@ -841,7 +841,7 @@ int disable_wake_up_detection(void)
 ### set_wake_up_threshold
 
 ```cpp
-int set_wake_up_threshold(uint8_t thr)
+int set_wake_up_threshold(unsigned char thr)
 ```
 
 > Set the wake up threshold for LSM6DSL accelerometer sensor.
@@ -850,7 +850,7 @@ int set_wake_up_threshold(uint8_t thr)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | thr | The threshold to be set. |
+> | unsigned char | thr | The threshold to be set. |
 > 
 > #### Return value
 > 
@@ -937,7 +937,7 @@ int disable_double_tap_detection(void)
 ### set_tap_threshold
 
 ```cpp
-int set_tap_threshold(uint8_t thr)
+int set_tap_threshold(unsigned char thr)
 ```
 
 > Set the tap threshold for LSM6DSL accelerometer sensor.
@@ -946,7 +946,7 @@ int set_tap_threshold(uint8_t thr)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | thr | The threshold to be set. |
+> | unsigned char | thr | The threshold to be set. |
 > 
 > #### Return value
 > 

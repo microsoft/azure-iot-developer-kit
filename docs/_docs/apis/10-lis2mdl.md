@@ -27,9 +27,9 @@ lis2mdl_class.h
 | Methods |
 | :------ |
 | [init](#init) - `int init()` |
-| [read_id](#read_id) - `int read_id(uint8_t *m_id)` |
+| [read_id](#read_id) - `int read_id(unsigned char *m_id)` |
 | [get_m_axes_raw](#get_m_axes_raw) - `int get_m_axes_raw(int16_t *pData)` |
-| [get_m_axes](#get_m_axes) - `int get_m_axes(int32_t *pData)` |
+| [get_m_axes](#get_m_axes) - `int get_m_axes(int *pData)` |
 
 ## Types
 
@@ -78,7 +78,7 @@ int init()
 ### read_id
 
 ```cpp
-int read_id(uint8_t *m_id)
+int read_id(unsigned char *m_id)
 ```
 
 > Read ID of LIS2MDL Magnetic sensor.
@@ -87,7 +87,7 @@ int read_id(uint8_t *m_id)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t * | m_id | The pointer where the ID of the device is stored. |
+> | unsigned char * | m_id | The pointer where the ID of the device is stored. |
 >
 > #### Return value
 >
@@ -118,7 +118,7 @@ int get_m_axes_raw(int16_t *pData)
 ### get_m_axes
 
 ```cpp
-int get_m_axes(int32_t *pData)
+int get_m_axes(int *pData)
 ```
 
 > Read data from LIS2MDL Magnetic sensor and calculate Magnetic in mgauss.
@@ -127,7 +127,7 @@ int get_m_axes(int32_t *pData)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | int32_t * | pData | The pointer where the magnetometer data are stored. |
+> | int * | pData | The pointer where the magnetometer data are stored. |
 >
 > #### Return value
 >

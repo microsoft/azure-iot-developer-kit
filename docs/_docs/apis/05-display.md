@@ -21,8 +21,8 @@ OledDisplay.h
 | :------ |
 | [init](#init) - `void init()` |
 | [clean](#clean) - `void clean()` |
-| [print](#print) - `uint8_t print(const char *s, bool wrap)` |
-| [print](#print-1) - `uint8_t print(uint8_t line, const char *s, bool wrap)` |
+| [print](#print) - `int print(const char *s, bool wrap)` |
+| [print](#print-1) - `int print(unsigned int line, const char *s, bool wrap)` |
 
 ## Constructors
 
@@ -73,7 +73,7 @@ void clean()
 ### print
 
 ```cpp
-uint8_t print(const char *s, bool wrap)
+int print(const char *s, bool wrap)
 ```
 
 > Print text in the first line on OLED display.
@@ -89,12 +89,12 @@ uint8_t print(const char *s, bool wrap)
 > 
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t | End of text line number, start from 0. |
+> | int | End of text line number, start from 0. |
 
 ### print
 
 ```cpp
-uint8_t print(uint8_t line, const char *s, bool wrap)
+int print(unsigned int line, const char *s, bool wrap)
 ```
 
 > Print text in the specific line on OLED display.
@@ -103,7 +103,7 @@ uint8_t print(uint8_t line, const char *s, bool wrap)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | line | Specific line number. |
+> | unsigned int | line | Specific line number. |
 > | const char * | s | Text to display. |
 > | bool | wrap | Line wrap. |
 > 
@@ -111,7 +111,7 @@ uint8_t print(uint8_t line, const char *s, bool wrap)
 > 
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t | End of text line number, start from 0. |
+> | int | End of text line number, start from 0. |
 
 ## Sample code
 
