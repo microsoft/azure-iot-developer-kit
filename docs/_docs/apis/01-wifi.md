@@ -39,8 +39,8 @@ AZ3166WiFi.h
 | [BSSID](#bssid) - `unsigned char *BSSID(unsigned char *bssid)` |
 | [RSSI](#rssi) - `int RSSI()` |
 | [RSSI](#rssi-1) - `int RSSI(unsigned char networkItem)` |
-| [encryptionType](#encryptiontype) - `unsigned char encryptionType()` |
-| [encryptionType](#encryptiontype-1) - `unsigned char encryptionType(unsigned char networkItem)` |
+| [encryptionType](#encryptiontype) - `int encryptionType()` |
+| [encryptionType](#encryptiontype-1) - `int encryptionType(unsigned char networkItem)` |
 | [scanNetworks](#scannetworks) - `int scanNetworks()` |
 | [status](#status) - `unsigned char status()` |
 
@@ -371,7 +371,7 @@ int RSSI(unsigned char networkItem)
 ### encryptionType
 
 ```cpp
-unsigned char encryptionType()
+int encryptionType()
 ```
 
 > Get the encryption type of the current network.
@@ -384,12 +384,12 @@ unsigned char encryptionType()
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | unsigned char | Always 4 (`ENC_TYPE_CCMP`). |
+> | int | Always 4 (`ENC_TYPE_CCMP`). |
 
 ### encryptionType
 
 ```cpp
-unsigned char encryptionType(unsigned char networkItem)
+int encryptionType(unsigned char networkItem)
 ```
 
 > Get the encryption type of the specific network.
@@ -398,7 +398,7 @@ unsigned char encryptionType(unsigned char networkItem)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | unsigned char | networkItem | Specific network index in the AP list. |
+> | int | networkItem | Specific network index in the AP list. |
 >
 > #### Return value
 >
