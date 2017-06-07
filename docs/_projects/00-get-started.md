@@ -88,20 +88,20 @@ Use the Micro USB to Type A USB cable to connect MXChip IoT Developer Kit to you
 
 In this section, you deploy and run a sample application on MXChip IoT Developer Kit. The sample application blinks the LED on MXChip IoT Developer Kit, and sends the temperature and humidity data collected from the sensor to your IoT hub.
 
-### Get the sample application 
-
-1. In the Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open command palette, type `Arduino: Examples`.
-1. In `Arduino Examples` tab, navigate to `Examples for MXChip AZ3166` > `AzureIoTHub` and click on `GetStarted`.
-
 ### Install the package for MXChip IoT Developer Kit in the Visual Studio Code:
 
 1. In the Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open command palette, type `Arduino: Boards Manager`.
 1. In `Arduino Boards Manager`, search for `AZ3166`, then click `Install`.
-1. In Status Bar at the bottom, click `<Select Borad Type>`, then select `MXCHIP AZ3166`.
+
+### Get the sample application
+
+1. In the Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open command palette, type `Arduino: Examples`.
+1. In `Arduino Examples` tab, navigate to `Examples for MXChip AZ3166` > `AzureIoTHub` and click on `GetStarted`. The `GetStarted` application will be opened in a new Visual Studio Code instance.
+1. In Status Bar at the bottom of the new Visual Studio Code instance of `GetStarted` application, click `<Select Borad Type>`, then select `MXCHIP AZ3166`.
 
 ### Install necessary libraries
 
-1. In the Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open command palette, type `Arduino: Libraries Manager`.
+1. In the new Visual Studio Code instance of `GetStarted` application, press `F1` or `Ctrl + Shift + P` to open command palette, type `Arduino: Libraries Manager`.
 1. Search for the following library names one by one. For each of library that you find, click **Install**.
    * `ArduinoJson`
 
