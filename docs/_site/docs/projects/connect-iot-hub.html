@@ -1,0 +1,532 @@
+<!doctype html>
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Connect to Azure IoT Hub - IoT Developer Kits</title>
+
+
+
+
+<meta name="description" content="Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub.">
+
+
+
+
+<meta name="author" content="MXChip IoT Developer Kit">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="IoT Developer Kits">
+<meta property="og:title" content="Connect to Azure IoT Hub">
+
+
+  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/projects/connect-iot-hub">
+  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/projects/connect-iot-hub">
+
+
+
+  <meta property="og:description" content="Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub.">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://localhost:4000/azure-iot-developer-kit/assets/images/projects-your-ideas.jpg">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2017-06-09T22:55:54-07:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000/azure-iot-developer-kit",
+      "logo": "http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "MXChip IoT Developer Kit",
+      "url" : "http://localhost:4000/azure-iot-developer-kit",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/azure-iot-developer-kit/feed.xml" type="application/atom+xml" rel="alternate" title="IoT Developer Kits Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/azure-iot-developer-kit/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://localhost:4000/azure-iot-developer-kit/">IoT Developer Kits</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/">Docs</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/versions/">Versions</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://blogs.msdn.microsoft.com/iotdev/">Blog</a></li>
+          
+        </ul>
+        <button><div class="navicon"></div></button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+  
+
+
+
+
+
+<div class="page__hero"
+  style="  "
+>
+  
+    <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/projects-your-ideas.jpg" alt="Connect to Azure IoT Hub" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "http://placehold.it/350x250"
+        
+        alt="logo">
+      
+      <h3>You are</h3>
+      <p>IoT Maker, Tinker, Developer</p>
+
+    
+      
+      <h3>Responsibilities</h3>
+      <p>Your coolest ideas that can make the DevKit rock ‘n roll.</p>
+
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Connect to Azure IoT Hub">
+    <meta itemprop="description" content="Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub.">
+    <meta itemprop="datePublished" content="June 09, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Connect to Azure IoT Hub
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <h2 id="what-you-do">What you do</h2>
+
+<p>Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub.</p>
+
+<h2 id="what-you-learn">What you learn</h2>
+
+<ul>
+  <li>How to create an IoT hub and register a device for MXChip IoT Developer Kit</li>
+  <li>How to collect sensor data by running a sample application on MXChip IoT Developer Kit</li>
+  <li>How to send the sensor data to your IoT hub</li>
+</ul>
+
+<h2 id="what-you-need">What you need</h2>
+
+<p>To complete this operation, you need the following parts from your MXChip IoT Developer Kit Starter Kit:</p>
+
+<ul>
+  <li>The MXChip IoT Developer Kit board (firmware version 0.8.2+)</li>
+  <li>A Micro USB to Type A USB cable</li>
+</ul>
+
+<p>You also need the following things for your development environment:</p>
+
+<ul>
+  <li>Mac or PC that is running Windows or Ubuntu.</li>
+  <li>Wireless network for MXChip IoT Developer Kit to connect to.</li>
+  <li>Internet connection to download the configuration tool.</li>
+  <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+  <li><a href="https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino">Arduino Extension</a></li>
+</ul>
+
+<h2 id="create-an-iot-hub-and-register-a-device-for-mxchip-iot-developer-kit">Create an IoT hub and register a device for MXChip IoT Developer Kit</h2>
+
+<h3 id="create-an-iot-hub">Create an IoT hub</h3>
+
+<ol>
+  <li>
+    <p>In the <a href="https://portal.azure.com/">Azure portal</a>, click <strong>New</strong> &gt; <strong>Internet of Things</strong> &gt; <strong>IoT Hub</strong>.
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/happy-path-create-azure-iot-hub-portal.png" alt="happy-path-create-azure-iot-hub-portal" /></p>
+  </li>
+  <li>
+    <p>In the <strong>IoT hub</strong> pane, enter the following information for your IoT hub:</p>
+
+    <p><strong>Name</strong>: It is the name for your IoT hub. If the name you enter is valid, a green check mark appears.</p>
+
+    <p><strong>Pricing and scale tier</strong>: Select the free F1 tier. This option is sufficient for this demo. See <a href="https://azure.microsoft.com/pricing/details/iot-hub/">pricing and scale tier</a>.</p>
+
+    <p><strong>Resource group</strong>: Create a resource group to host the IoT hub or use an existing one. See <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-portal.md">Using resource groups to manage your Azure resources</a>.</p>
+
+    <p><strong>Location</strong>: Select the closest location to you where the IoT hub is created.</p>
+
+    <p><strong>Pin the dashboard</strong>: Check this option for easy access to your IoT hub from the dashboard.</p>
+
+    <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/happy-path-fill-in-fields-for-azure-iot-hub-portal.png" alt="happy-path-fill-in-fields-for-azure-iot-hub-portal" /></p>
+  </li>
+  <li>
+    <p>Click <strong>Create</strong>. It could take a few minutes for your IoT hub to be created. You can see progress in the <strong>Notifications</strong> pane.</p>
+
+    <p><img src="../assets/images/happy-path-notification-azure-iot-hub-creation-progress-portal.png" alt="See notifications of your IoT hub creation progress" /></p>
+  </li>
+  <li>
+    <p>Once your IoT hub is created, click it from the dashboard. Make a note of the <strong>Hostname</strong>, and then click <strong>Shared access policies</strong>.</p>
+
+    <p><img src="../assets/images/happy-path-get-azure-iot-hub-hostname-portal.png" alt="Get the hostname of your IoT hub" /></p>
+  </li>
+  <li>
+    <p>In the <strong>Shared access policies</strong> pane, click the <strong>iothubowner</strong> policy, and then copy and make a note of the <strong>Connection string</strong> of your IoT hub. For more information, see <a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security.md">Control access to IoT Hub</a>.</p>
+
+    <p><img src="../assets/images/happy-path-get-azure-iot-hub-connection-string-portal.png" alt="Get your IoT hub connection string" /></p>
+  </li>
+</ol>
+
+<h3 id="register-a-device-in-the-iot-hub-for-the-your-device">Register a device in the IoT hub for the your device</h3>
+
+<ol>
+  <li>In the <a href="https://portal.azure.com/">Azure portal</a>, open your IoT hub.</li>
+  <li>Click <strong>Device Explorer</strong>.</li>
+  <li>
+    <p>In the Device Explorer pane, click <strong>Add</strong> to add a device to your IoT hub.</p>
+
+    <p><strong>Device ID</strong>: The ID of the new device.</p>
+
+    <p><strong>Authentication Type</strong>: Select <strong>Symmetric Key</strong>.</p>
+
+    <p><strong>Auto Generate Keys</strong>: Check this field.</p>
+
+    <p><strong>Connect device to IoT Hub</strong>: Click <strong>Enable</strong>.</p>
+
+    <p><img src="../assets/images/happy-path-add-device-in-azure-iot-hub-device-explorer-portal.png" alt="Add a device in the device explorer of your IoT hub" /></p>
+  </li>
+  <li>Click <strong>Save</strong>.</li>
+  <li>After the device is created, open the device in the <strong>Device Explorer</strong> pane.</li>
+  <li>
+    <p>Make a note of the primary key of the connection string.</p>
+
+    <p><img src="../assets/images/happy-path-get-device-connection-string-in-device-explorer-portal.png" alt="Get the device connection string" /></p>
+  </li>
+</ol>
+
+<h2 id="connect-mxchip-iot-developer-kit-with-your-computer">Connect MXChip IoT Developer Kit with your computer</h2>
+
+<p>Use the Micro USB to Type A USB cable to connect MXChip IoT Developer Kit to your computer.</p>
+
+<h2 id="collect-sensor-data-and-send-it-to-your-iot-hub">Collect sensor data and send it to your IoT hub</h2>
+
+<p>In this section, you deploy and run a sample application on MXChip IoT Developer Kit. The sample application blinks the LED on MXChip IoT Developer Kit, and sends the temperature and humidity data collected from the sensor to your IoT hub.</p>
+
+<h3 id="get-the-sample-application">Get the sample application</h3>
+
+<ol>
+  <li>In the Visual Studio Code, press <code class="highlighter-rouge">F1</code> or <code class="highlighter-rouge">Ctrl + Shift + P</code> to open command palette, type <code class="highlighter-rouge">Arduino: Examples</code>.</li>
+  <li>In <code class="highlighter-rouge">Arduino Examples</code> tab, navigate to <code class="highlighter-rouge">Examples for MXChip AZ3166</code> &gt; <code class="highlighter-rouge">AzureIoTHub</code> and click on <code class="highlighter-rouge">GetStarted</code>.</li>
+</ol>
+
+<h3 id="install-the-package-for-mxchip-iot-developer-kit-in-the-visual-studio-code">Install the package for MXChip IoT Developer Kit in the Visual Studio Code:</h3>
+
+<ol>
+  <li>In the Visual Studio Code, press <code class="highlighter-rouge">F1</code> or <code class="highlighter-rouge">Ctrl + Shift + P</code> to open command palette, type <code class="highlighter-rouge">Arduino: Boards Manager</code>.</li>
+  <li>In <code class="highlighter-rouge">Arduino Boards Manager</code>, search for <code class="highlighter-rouge">AZ3166</code>, then click <code class="highlighter-rouge">Install</code>.</li>
+  <li>In Status Bar at the bottom, click <code class="highlighter-rouge">&lt;Select Borad Type&gt;</code>, then select <code class="highlighter-rouge">MXCHIP AZ3166</code>.</li>
+</ol>
+
+<h3 id="install-necessary-libraries">Install necessary libraries</h3>
+
+<ol>
+  <li>In the Visual Studio Code, press <code class="highlighter-rouge">F1</code> or <code class="highlighter-rouge">Ctrl + Shift + P</code> to open command palette, type <code class="highlighter-rouge">Arduino: Libraries Manager</code>.</li>
+  <li>Search for the following library names one by one. For each of library that you find, click <strong>Install</strong>.
+    <ul>
+      <li><code class="highlighter-rouge">ArduinoJson</code></li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="config-wifi">Config Wifi</h3>
+
+<p>Most IoT projects are relying on Internet connectivity. Use AP (Access Point) Mode on DevKit to configure WiFi.</p>
+
+<h4 id="a-enter-ap-mode">A. Enter AP Mode</h4>
+
+<p>Hold down button B, click Reset button, then release button B. The screen will display SSID of the DevKit as well as the configuration portal IP address:</p>
+
+<p><img src="../assets/images/happy-path-wifi-ap.jpg" alt="getting-started-wifi-ap" /></p>
+
+<h4 id="b-connect-to-devkit-ap">B. Connect to DevKit AP</h4>
+
+<p>Use your computer or mobile phone to connect to DevKit AP (highlighted in the screenshot above), leave the password as empty.</p>
+
+<h4 id="c-configure-wifi-for-devkit">C. Configure WiFi for DevKit</h4>
+
+<p>Open IP address on the screen in browser, select WiFi you want your DevKit connect to, then type the password. Click <strong>‘Connect’</strong> to configure and connect to WiFi.</p>
+
+<p><img src="../assets/images/happy-path-wifi-portal.png" alt="getting-started-wifi-portal" /></p>
+
+<p>Once the connection is succeeded, the DevKit will reboot in a few seconds. After reboot, you can test the connection by clicking button A. The WiFi SSID and IP address will display on the screen.</p>
+
+<p><img src="../assets/images/happy-path-wifi-ip.jpg" alt="getting-started-wifi-ip" /></p>
+
+<p><strong>Note:</strong> The IP address displays on the web page might not be identical to the actual IP address assigned and displayed on screen. This is normal as the WiFi is using DHCP to dynamically IP assignment.</p>
+
+<h3 id="configure-device-connection-string-to-devkit-windows">Configure device connection string to DevKit (Windows)</h3>
+
+<ol>
+  <li>
+    <p>Download <a href="http://www.putty.org/">Putty</a></p>
+  </li>
+  <li>
+    <p>Open Putty, in <code class="highlighter-rouge">Connection type</code>, select <code class="highlighter-rouge">Serial</code>, in <code class="highlighter-rouge">Serial line</code>, enter your Serial Port name, in <code class="highlighter-rouge">Speed</code>, enter <code class="highlighter-rouge">115200</code>, then click <code class="highlighter-rouge">Open</code> button</p>
+
+    <p><img src="../assets/images/happy-path-putty-config.png" alt="putty-config" /></p>
+  </li>
+  <li>
+    <p>Get into configuration mode: Hold down button A, then push and release the reset button.</p>
+  </li>
+  <li>
+    <p>In the prompt of the serial port with <code class="highlighter-rouge">#</code>, configure your connection string you get from previous step:</p>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>  set_az_iothub <span class="o">[</span>your connection string]
+</code></pre>
+    </div>
+    <p>You will see the information once configuration is successful:</p>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>  INFO: Set Azure Iot hub connection string successfully.
+</code></pre>
+    </div>
+    <p>Now close the Putty.</p>
+  </li>
+</ol>
+
+<h3 id="deploy-the-sample-application-to-mxchip-iot-developer-kit">Deploy the sample application to MXChip IoT Developer Kit</h3>
+
+<ol>
+  <li>In the Visual Studio Code, in Status Bar at the bottom, click <code class="highlighter-rouge">&lt;Select Serial Port&gt;</code>, and then click the serial port <code class="highlighter-rouge">STMicroelectronics</code> for MXChip IoT Developer Kit.</li>
+  <li>Press <code class="highlighter-rouge">F1</code> or <code class="highlighter-rouge">Ctrl + Shift + P</code> to open command palette, type <code class="highlighter-rouge">Arduino: Upload</code> to build and deploy the sample application to MXChip IoT Developer Kit.</li>
+</ol>
+
+<h3 id="verify-the-sample-application-is-running-successfully">Verify the sample application is running successfully</h3>
+
+<p>If you see the following output from the serial monitor window and the blinking LED on MXChip IoT Developer Kit, the sample application is running successfully.</p>
+
+<p><img src="../assets/images/happy-path-vscode-final-output.png" alt="Final output in VS Code" /></p>
+
+<h2 id="next-steps">Next steps</h2>
+
+<p>You have successfully connected a MXChip IoT Developer Kit to your IoT hub, and sent the captured sensor data to your IoT hub.</p>
+
+<p>To continue getting started with IoT Hub and to explore other IoT scenarios, see:</p>
+
+<ul>
+  <li><a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-explorer-cloud-device-messaging">Manage cloud device messaging with iothub-explorer</a></li>
+  <li><a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-store-data-in-azure-table-storage">Save IoT Hub messages to Azure data storage</a></li>
+  <li><a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi">Use Power BI to visualize real-time sensor data from Azure IoT Hub</a>.</li>
+  <li><a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps">Use Azure Web Apps to visualize real-time sensor data from Azure IoT Hub</a>.</li>
+  <li><a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-weather-forecast-machine-learning">Weather forecast using the sensor data from your IoT hub in Azure Machine Learning</a></li>
+  <li><a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-iothub-explorer">Device management with iothub-explorer</a></li>
+  <li><a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-monitoring-notifications-with-azure-logic-apps">Remote monitoring and notifications with ​​Logic ​​Apps</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-09T22:55:54-07:00">June 09, 2017</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+    <p>Reach us at</p>
+  <a href="http://gitter.im/Microsoft/azure-iot-developer-kit">
+    <img src="https://badges.gitter.im/iot-devkit.svg" alt="Join Gitter chat" style="height:25px">
+  </a>
+
+  <p>or share on</p>
+  
+  <a href="https://twitter.com/intent/tweet?text=Connect to Azure IoT Hub http://localhost:4000/azure-iot-developer-kit/docs/projects/connect-iot-hub" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/azure-iot-developer-kit/docs/projects/connect-iot-hub" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/azure-iot-developer-kit/docs/projects/connect-iot-hub" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/projects/shake-shake/" class="pagination--pager" title="Shake, Shake
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+          <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/Microsoft/azure-iot-developer-kit"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/azure-iot-developer-kit/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">Copyright &copy; 2017 Microsoft Corp.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/azure-iot-developer-kit/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98097460-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+  </body>
+</html>

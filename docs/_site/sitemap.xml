@@ -18,7 +18,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/projects/</loc>
-<lastmod>2017-05-29T05:19:56-07:00</lastmod>
+<lastmod>2017-06-09T22:55:54-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi/</loc>
@@ -69,12 +69,16 @@
 <lastmod>2017-01-23T00:00:00-08:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/azure-iot-developer-kit/docs/projects/connect-iot-hub</loc>
+<lastmod>2017-06-09T22:55:54-07:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/projects/shake-shake/</loc>
 <lastmod>2017-05-05T07:16:34-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/projects/</loc>
-<lastmod>2017-05-29T05:19:56-07:00</lastmod>
+<lastmod>2017-06-09T22:55:54-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/archive-layout-with-content/</loc>

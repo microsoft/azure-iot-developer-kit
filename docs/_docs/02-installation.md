@@ -59,5 +59,6 @@ As you may familiar with adding a new Arduino board, you need to add DevKit boar
 
 You should now have all necessary tools and packages installed.
 
+## Next Steps
 
-
+You are all set! It's time to build your first IoT application by following instructions in [Projects Catalog]({{"/docs/projects/" | absolute_url }}).
