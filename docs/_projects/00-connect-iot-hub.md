@@ -5,14 +5,9 @@ excerpt: "Connect DevKit to an Azure IoT hub that you create, collect the temper
 header:
   image: /assets/images/projects-your-ideas.jpg
   teaser: /assets/images/projects-your-ideas-th.jpg
-sidebar:
-  - title: "You are"
-    image: http://placehold.it/350x250
-    image_alt: "logo"
-    text: "IoT Maker, Tinker, Developer"
-  - title: "Responsibilities"
-    text: "Your coolest ideas that can make the DevKit rock 'n roll."
 ---
+
+{% include toc icon="columns" %}
 
 ## What you do
 
@@ -20,63 +15,54 @@ Connect DevKit to an Azure IoT hub that you create, collect the temperature and 
 
 ## What you learn
 
-* How to create an IoT hub and register a device for MXChip IoT Developer Kit
-* How to collect sensor data by running a sample application on MXChip IoT Developer Kit
-* How to send the sensor data to your IoT hub
+* How to create an IoT hub and register a device for MXChip IoT Developer Kit.
+* How to collect sensor data by running a sample application on MXChip IoT Developer Kit.
+* How to send the sensor data to your IoT hub.
 
 ## What you need
 
-To complete this operation, you need the following parts from your MXChip IoT Developer Kit Starter Kit:
-
-* The MXChip IoT Developer Kit board (firmware version 0.8.2+)
-* A Micro USB to Type A USB cable
-
-You also need the following things for your development environment:
-
-* Mac or PC that is running Windows or Ubuntu.
-* Wireless network for MXChip IoT Developer Kit to connect to.
-* Internet connection to download the configuration tool.
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Arduino Extension](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino)
+* Finish the [Getting Started Guide]({{"/docs/getting-started/" | absolute_url }})
 
 ## Create an IoT hub and register a device for MXChip IoT Developer Kit
 
 ### Create an IoT hub
 
-1. In the [Azure portal](https://portal.azure.com/), click **New** > **Internet of Things** > **IoT Hub**.
- ![happy-path-create-azure-iot-hub-portal]({{"/assets/images/happy-path-create-azure-iot-hub-portal.png" | absolute_url }})
+1. In the [Azure portal](https://portal.azure.com/){:target="_blank"}, click **New** > **Internet of Things** > **IoT Hub**.
 
-1. In the **IoT hub** pane, enter the following information for your IoT hub:
+   ![Create an iot hub in the Azure portal]({{"/assets/images/happy-path-create-azure-iot-hub-portal.png" | absolute_url }})
+2. In the **IoT hub** pane, enter the following information for your IoT hub:
 
    **Name**: It is the name for your IoT hub. If the name you enter is valid, a green check mark appears.
 
-   **Pricing and scale tier**: Select the free F1 tier. This option is sufficient for this demo. See [pricing and scale tier](https://azure.microsoft.com/pricing/details/iot-hub/).
+   **Pricing and scale tier**: Select the free F1 tier. This option is sufficient for this demo. See [pricing and scale tier](https://azure.microsoft.com/pricing/details/iot-hub/){:target="_blank"}.
 
-   **Resource group**: Create a resource group to host the IoT hub or use an existing one. See [Using resource groups to manage your Azure resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-portal.md).
+   **Resource group**: Create a resource group to host the IoT hub or use an existing one. See [Using resource groups to manage your Azure resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-portal){:target="_blank"}.
 
    **Location**: Select the closest location to you where the IoT hub is created.
 
    **Pin the dashboard**: Check this option for easy access to your IoT hub from the dashboard.
 
-   ![happy-path-fill-in-fields-for-azure-iot-hub-portal]({{"/assets/images/happy-path-fill-in-fields-for-azure-iot-hub-portal.png" | absolute_url }})
+   ![Fill in the fields for creating your Azure IoT hub]({{"/assets/images/happy-path-fill-in-fields-for-azure-iot-hub-portal.png" | absolute_url }})
 
-1. Click **Create**. It could take a few minutes for your IoT hub to be created. You can see progress in the **Notifications** pane.
+3. Click **Create**. It could take a few minutes for your IoT hub to be created. You can see the progress in the **Notifications** pane.
 
-   ![See notifications of your IoT hub creation progress](../assets/images/happy-path-notification-azure-iot-hub-creation-progress-portal.png)
+   ![See notifications of your IoT hub creation progress]({{"/assets/images/happy-path-notification-azure-iot-hub-creation-progress-portal.png" | absolute_url }})
 
-1. Once your IoT hub is created, click it from the dashboard. Make a note of the **Hostname**, and then click **Shared access policies**.
+4. Once your IoT hub is created, click it from the dashboard. Make a note of the **Hostname**, and then click **Shared access policies**.
 
-   ![Get the hostname of your IoT hub](../assets/images/happy-path-get-azure-iot-hub-hostname-portal.png)
+   ![Get the hostname of your IoT hub]({{"/assets/images/happy-path-get-azure-iot-hub-hostname-portal.png" | absolute_url }})
 
-1. In the **Shared access policies** pane, click the **iothubowner** policy, and then copy and make a note of the **Connection string** of your IoT hub. For more information, see [Control access to IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security.md).
+5. In the **Shared access policies** pane, click the **iothubowner** policy, and then make a note of the **Connection string** of your IoT hub. For more information, see [Control access to IoT Hub](iot-hub-devguide-security.md).
 
-   ![Get your IoT hub connection string](../assets/images/happy-path-get-azure-iot-hub-connection-string-portal.png)
+   ![Get your IoT hub connection string]({{"/assets/images/happy-path-get-azure-iot-hub-connection-string-portal.png" | absolute_url }})
 
 ### Register a device in the IoT hub for the your device
 
-1. In the [Azure portal](https://portal.azure.com/), open your IoT hub.
-1. Click **Device Explorer**.
-1. In the Device Explorer pane, click **Add** to add a device to your IoT hub.
+1. In the [Azure portal](https://portal.azure.com/){:target="_blank"}, open your IoT hub.
+
+2. Click **Device Explorer**.
+
+3. In the Device Explorer pane, click **Add**, and then enter the following information to create a device in your IoT hub:
 
    **Device ID**: The ID of the new device.
 
@@ -86,13 +72,15 @@ You also need the following things for your development environment:
 
    **Connect device to IoT Hub**: Click **Enable**.
 
-   ![Add a device in the device explorer of your IoT hub](../assets/images/happy-path-add-device-in-azure-iot-hub-device-explorer-portal.png)
+   ![Add a device in the device explorer of your IoT hub]({{"/assets/images/happy-path-add-device-in-azure-iot-hub-device-explorer-portal.png" | absolute_url }})
 
-1. Click **Save**.
-1. After the device is created, open the device in the **Device Explorer** pane.
-1. Make a note of the primary key of the connection string.
+4. Click **Save**.
 
-   ![Get the device connection string](../assets/images/happy-path-get-device-connection-string-in-device-explorer-portal.png)
+5. After the device is created, open the device in the **Device Explorer** pane.
+
+6. Make a note of the primary key of the device connection string.
+
+   ![Get the device connection string]({{"/assets/images/happy-path-get-device-connection-string-in-device-explorer-portal.png" | absolute_url }})
 
 ## Connect MXChip IoT Developer Kit with your computer
 
@@ -102,80 +90,56 @@ Use the Micro USB to Type A USB cable to connect MXChip IoT Developer Kit to you
 
 In this section, you deploy and run a sample application on MXChip IoT Developer Kit. The sample application blinks the LED on MXChip IoT Developer Kit, and sends the temperature and humidity data collected from the sensor to your IoT hub.
 
-### Install the package for MXChip IoT Developer Kit in the Visual Studio Code:
-
-1. In the Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open command palette, type `Arduino: Boards Manager`.
-1. In `Arduino Boards Manager`, search for `AZ3166`, then click `Install`.
-
 ### Get the sample application
 
-1. In the Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open command palette, type `Arduino: Examples`.
-1. In `Arduino Examples` tab, navigate to `Examples for MXChip AZ3166` > `AzureIoTHub` and click on `GetStarted`. The `GetStarted` application will be opened in a new Visual Studio Code instance.
-1. In Status Bar at the bottom of the new Visual Studio Code instance of `GetStarted` application, click `<Select Borad Type>`, then select `MXCHIP AZ3166`.
+1. In Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open the command palette, and then type `Arduino: Examples`.
 
-### Install necessary libraries
-
-1. In the new Visual Studio Code instance of `GetStarted` application, press `F1` or `Ctrl + Shift + P` to open command palette, type `Arduino: Libraries Manager`.
-1. Search for the following library names one by one. For each of library that you find, click **Install**.
-   * `ArduinoJson`
-
-### Config Wifi
-
-Most IoT projects are relying on Internet connectivity. Use AP (Access Point) Mode on DevKit to configure WiFi.
-
-#### A. Enter AP Mode
-
-Hold down button B, click Reset button, then release button B. The screen will display SSID of the DevKit as well as the configuration portal IP address:
-
-![getting-started-wifi-ap](../assets/images/happy-path-wifi-ap.jpg)
-
-#### B. Connect to DevKit AP
-
-Use your computer or mobile phone to connect to DevKit AP (highlighted in the screenshot above), leave the password as empty.
-
-#### C. Configure WiFi for DevKit
-
-Open IP address on the screen in browser, select WiFi you want your DevKit connect to, then type the password. Click **'Connect'** to configure and connect to WiFi.
-
-![getting-started-wifi-portal](../assets/images/happy-path-wifi-portal.png)
-
-Once the connection is succeeded, the DevKit will reboot in a few seconds. After reboot, you can test the connection by clicking button A. The WiFi SSID and IP address will display on the screen.
-
-![getting-started-wifi-ip](../assets/images/happy-path-wifi-ip.jpg)
-
-**Note:** The IP address displays on the web page might not be identical to the actual IP address assigned and displayed on screen. This is normal as the WiFi is using DHCP to dynamically IP assignment.
+2. In the `Arduino Examples` tab, expand `Examples for MXChip AZ3166` > `AzureIoTHub`, and then click `GetStarted`.
 
 ### Configure device connection string to DevKit (Windows)
 
-1. Download [Putty](http://www.putty.org/)
+1. Download and install [PuTTY](http://www.putty.org/){:target="_blank"}.
 
-1. Open Putty, in `Connection type`, select `Serial`, in `Serial line`, enter your Serial Port name, in `Speed`, enter `115200`, then click `Open` button
+2. Configure PuTTY with the following settings in the sequence they are listed:
+   * **Connection type**: select **Serial**.
+   * **Serial line**: Enter the port that MXChip IoT Developer Kit uses to connect to your computer. For example, you enter `COM5`. You can find the port on the status bar of Visual Studio Code.
+   * **Speed**: Enter `115200`.
 
-   ![putty-config](../assets/images/happy-path-putty-config.png)
+3. Click **Open** to open a PuTTY command-line window.
 
-1. Get into configuration mode: Hold down button A, then push and release the reset button.
+   ![putty-config]({{"/assets/images/happy-path-putty-config.png" | absolute_url }})
 
-1. In the prompt of the serial port with `#`, configure your connection string you get from previous step:
-  ```bash
-  set_az_iothub [your connection string]
-  ```
-  You will see the information once configuration is successful:
-  ```bash
-  INFO: Set Azure Iot hub connection string successfully.
-  ```
-  Now close the Putty.
+4. On MXChip IoT Developer Kit, press and hold button A, press the Reset button, and then release button A.
+   This makes the PuTTY command-line to start with a `#` prompt.
 
+5. Configure the device connection string for MXChip IoT Developer Kit by running the following command in the PuTTY command-line window:
+   ```bash
+   set_az_iothub [device connection string]
+   ```
+
+   If the configuration is successful, the following information is displayed:
+   ```bash
+   INFO: Set Azure Iot hub connection string successfully.
+   ```
+
+6. Close the PuTTY command-line window.
 
 ### Deploy the sample application to MXChip IoT Developer Kit
 
-1. In the Visual Studio Code, in Status Bar at the bottom, click `<Select Serial Port>`, and then click the serial port `STMicroelectronics` for MXChip IoT Developer Kit.
-1. Press `F1` or `Ctrl + Shift + P` to open command palette, type `Arduino: Upload` to build and deploy the sample application to MXChip IoT Developer Kit.
+1. In Visual Studio Code, click `COM<Port>` on the status bar, and then click `COM<Port> STMicroelectronics` in the command palette.
+
+2. Press `F1` or `Ctrl + Shift + P`, type `arduino:upload`, and then click `Arduino: Upload` to build and deploy the sample application to MXChip IoT Developer Kit.
 
 ### Verify the sample application is running successfully
 
-If you see the following output from the serial monitor window and the blinking LED on MXChip IoT Developer Kit, the sample application is running successfully.
+In Visual Studio Code, click the power plug icon in the status bar to open the Serial Monitor.
 
-![Final output in VS Code](../assets/images/happy-path-vscode-final-output.png)
+The sample application is running successfully when you see the following results:
+
+* The Serial Monitor dispalys the same information as the content in the screenshot below.
+* The LED on MXChip IoT Developer Kit is blinking.
+
+![Final output in VS Code]({{"/assets/images/happy-path-vscode-final-output.png" | absolute_url }})
 
 ## Next steps
 
@@ -183,10 +147,10 @@ You have successfully connected a MXChip IoT Developer Kit to your IoT hub, and 
 
 To continue getting started with IoT Hub and to explore other IoT scenarios, see:
 
-- [Manage cloud device messaging with iothub-explorer](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-explorer-cloud-device-messaging)
-- [Save IoT Hub messages to Azure data storage](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-store-data-in-azure-table-storage)
-- [Use Power BI to visualize real-time sensor data from Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi).
-- [Use Azure Web Apps to visualize real-time sensor data from Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps).
-- [Weather forecast using the sensor data from your IoT hub in Azure Machine Learning](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-weather-forecast-machine-learning)
-- [Device management with iothub-explorer](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-iothub-explorer)
-- [Remote monitoring and notifications with ​​Logic ​​Apps](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-monitoring-notifications-with-azure-logic-apps)
+- [Manage cloud device messaging with iothub-explorer](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-explorer-cloud-device-messaging){:target="_blank"}
+- [Save IoT Hub messages to Azure data storage](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-store-data-in-azure-table-storage){:target="_blank"}
+- [Use Power BI to visualize real-time sensor data from Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi){:target="_blank"}
+- [Use Azure Web Apps to visualize real-time sensor data from Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps){:target="_blank"}
+- [Weather forecast using the sensor data from your IoT hub in Azure Machine Learning](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-weather-forecast-machine-learning){:target="_blank"}
+- [Device management with iothub-explorer](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-iothub-explorer){:target="_blank"}
+- [Remote monitoring and notifications with ​​Logic ​​Apps](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-monitoring-notifications-with-azure-logic-apps){:target="_blank"}

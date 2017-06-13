@@ -107,7 +107,7 @@ For **macOS** users, you may follow [manual installation]({{"/docs/installation/
 
 #### B. Run installation script
 
-In the File Explorer, locate the `.zip` and extract it, find `azure-install.cmd`, right-click and select **"Run as administrator"** to start.
+In the File Explorer, locate the `.zip` and extract it, find `install.cmd`, right-click and select **"Run as administrator"** to start.
 
 ![getting-started-run-admin]({{"/assets/images/getting-started-run-admin.png" | absolute_url }})
 
