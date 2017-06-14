@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-13T07:50:47-07:00">
+  <meta property="article:published_time" content="2017-06-14T01:12:31-07:00">
 
 
 
@@ -343,7 +343,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="HTS221 Sensor">
     <meta itemprop="description" content="Library for HTS221 humidity and temperature sensor on AZ3166">
-    <meta itemprop="datePublished" content="June 13, 2017">
+    <meta itemprop="datePublished" content="June 14, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
 
     <div class="page__inner-wrap">
@@ -393,7 +393,7 @@
       <td style="text-align: left"><a href="#hts221sensor">HTS221Sensor</a> - <code class="highlighter-rouge">HTS221Sensor(DevI2C &amp;i2c)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#hts221sensor-1">HTS221Sensor</a> - <code class="highlighter-rouge">HTS221Sensor(DevI2C &amp;i2c, uint8_t address)</code></td>
+      <td style="text-align: left"><a href="#hts221sensor-1">HTS221Sensor</a> - <code class="highlighter-rouge">HTS221Sensor(DevI2C &amp;i2c, unsigned char address)</code></td>
     </tr>
   </tbody>
 </table>
@@ -415,7 +415,7 @@
       <td style="text-align: left"><a href="#disable">disable</a> - <code class="highlighter-rouge">int disable(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#read_id">read_id</a> - <code class="highlighter-rouge">int read_id(uint8_t *id)</code></td>
+      <td style="text-align: left"><a href="#read_id">read_id</a> - <code class="highlighter-rouge">int read_id(unsigned char *id)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#reset">reset</a> - <code class="highlighter-rouge">int reset(void)</code></td>
@@ -433,16 +433,16 @@
       <td style="text-align: left"><a href="#set_odr">set_odr</a> - <code class="highlighter-rouge">int set_odr(float odr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#read_reg">read_reg</a> - <code class="highlighter-rouge">int read_reg(uint8_t reg, uint8_t *data)</code></td>
+      <td style="text-align: left"><a href="#read_reg">read_reg</a> - <code class="highlighter-rouge">int read_reg(unsigned char reg, unsigned char *data)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#write_reg">write_reg</a> - <code class="highlighter-rouge">int write_reg(uint8_t reg, uint8_t data)</code></td>
+      <td style="text-align: left"><a href="#write_reg">write_reg</a> - <code class="highlighter-rouge">int write_reg(unsigned char reg, unsigned char data)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#hts221_io_write">HTS221_io_write</a> - <code class="highlighter-rouge">uint8_t HTS221_io_write(void *handle, uint8_t WriteAddr, uint8_t *pBuffer, uint16_t nBytesToWrite)</code></td>
+      <td style="text-align: left"><a href="#hts221_io_write">HTS221_io_write</a> - <code class="highlighter-rouge">unsigned char HTS221_io_write(void *handle, unsigned char WriteAddr, unsigned char *pBuffer, int nBytesToWrite)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#hts221_io_read">HTS221_io_read</a> - <code class="highlighter-rouge">uint8_t HTS221_io_read(void *handle, uint8_t ReadAddr, uint8_t *pBuffer, uint16_t nBytesToRead)</code></td>
+      <td style="text-align: left"><a href="#hts221_io_read">HTS221_io_read</a> - <code class="highlighter-rouge">unsigned char HTS221_io_read(void *handle, unsigned char ReadAddr, unsigned char *pBuffer, int nBytesToRead)</code></td>
     </tr>
   </tbody>
 </table>
@@ -492,7 +492,7 @@
 
 <h3 id="hts221sensor-1">HTS221Sensor</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">HTS221Sensor</span><span class="p">(</span><span class="n">DevI2C</span> <span class="o">&amp;</span><span class="n">i2c</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">address</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">HTS221Sensor</span><span class="p">(</span><span class="n">DevI2C</span> <span class="o">&amp;</span><span class="n">i2c</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">address</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -514,7 +514,7 @@
         <td style="text-align: left">The object of an helper class which handles the I2C peripheral.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">address</td>
         <td style="text-align: left">The address of the component’s instance.</td>
       </tr>
@@ -634,7 +634,7 @@
 
 <h3 id="read_id">read_id</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_id</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">id</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_id</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">id</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -653,7 +653,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">id</td>
         <td style="text-align: left">The pointer where the ID of the device is stored.</td>
       </tr>
@@ -895,7 +895,7 @@
 
 <h3 id="read_reg">read_reg</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_reg</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_reg</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -914,12 +914,12 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">reg</td>
         <td style="text-align: left">The register address.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">data</td>
         <td style="text-align: left">The register data.</td>
       </tr>
@@ -946,7 +946,7 @@
 
 <h3 id="write_reg">write_reg</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">write_reg</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">data</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">write_reg</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">data</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -965,12 +965,12 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">reg</td>
         <td style="text-align: left">The register address.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">data</td>
         <td style="text-align: left">The register data.</td>
       </tr>
@@ -997,7 +997,7 @@
 
 <h3 id="hts221_io_write">HTS221_io_write</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="n">HTS221_io_write</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">handle</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">pBuffer</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">nBytesToWrite</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">HTS221_io_write</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">handle</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pBuffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nBytesToWrite</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1021,17 +1021,17 @@
         <td style="text-align: left">The HTS221Sensor handler.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">WriteAddr</td>
         <td style="text-align: left">The specifies internal address register to write to.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">pBuffer</td>
         <td style="text-align: left">The pointer to the byte-array data to send.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint16_t</td>
+        <td style="text-align: left">int</td>
         <td style="text-align: left">nBytesToWrite</td>
         <td style="text-align: left">The number of bytes to write.</td>
       </tr>
@@ -1049,7 +1049,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">Result code, 0 in case of success, an error code otherwise.</td>
       </tr>
     </tbody>
@@ -1058,7 +1058,7 @@
 
 <h3 id="hts221_io_read">HTS221_io_read</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="n">HTS221_io_read</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">handle</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">ReadAddr</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">pBuffer</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">nBytesToRead</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">HTS221_io_read</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">handle</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">ReadAddr</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pBuffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nBytesToRead</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1082,17 +1082,17 @@
         <td style="text-align: left">The HTS221Sensor handler.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">ReadAddr</td>
         <td style="text-align: left">The specifies internal address register to read from.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">pBuffer</td>
         <td style="text-align: left">The pointer to the byte-array data to send.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint16_t</td>
+        <td style="text-align: left">int</td>
         <td style="text-align: left">nBytesToRead</td>
         <td style="text-align: left">The number of bytes to be read.</td>
       </tr>
@@ -1110,7 +1110,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">Result code, 0 in case of success, -1 if an I2C error has occured.</td>
       </tr>
     </tbody>
@@ -1124,7 +1124,7 @@
 <span class="n">HTS221Sensor</span> <span class="o">*</span><span class="n">sensor</span><span class="p">;</span>
 <span class="kt">float</span> <span class="n">humidity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">float</span> <span class="n">temperature</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">uint8_t</span> <span class="n">id</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">id</span><span class="p">;</span>
 <span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">i2c</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DevI2C</span><span class="p">(</span><span class="n">D14</span><span class="p">,</span> <span class="n">D15</span><span class="p">);</span>
     <span class="n">sensor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HTS221Sensor</span><span class="p">(</span><span class="o">*</span><span class="n">i2c</span><span class="p">);</span>

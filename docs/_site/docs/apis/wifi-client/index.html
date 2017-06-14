@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-13T07:50:47-07:00">
+  <meta property="article:published_time" content="2017-06-14T01:12:31-07:00">
 
 
 
@@ -343,7 +343,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="AZ3166 WiFi Client">
     <meta itemprop="description" content="The WiFi client for AZ3166">
-    <meta itemprop="datePublished" content="June 13, 2017">
+    <meta itemprop="datePublished" content="June 14, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
 
     <div class="page__inner-wrap">
@@ -401,25 +401,25 @@
       <td style="text-align: left"><a href="#peek">peek</a> - <code class="highlighter-rouge">int peek()</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#connect">connect</a> - <code class="highlighter-rouge">int connect(const char *host, uint16_t port)</code></td>
+      <td style="text-align: left"><a href="#connect">connect</a> - <code class="highlighter-rouge">int connect(const char *host, unsigned short port)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#connect-1">connect</a> - <code class="highlighter-rouge">int connect(IPAddress ip, uint16_t port)</code></td>
+      <td style="text-align: left"><a href="#connect-1">connect</a> - <code class="highlighter-rouge">int connect(IPAddress ip, unsigned short port)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#available">available</a> - <code class="highlighter-rouge">int available()</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#write">write</a> - <code class="highlighter-rouge">size_t write(uint8_t b)</code></td>
+      <td style="text-align: left"><a href="#write">write</a> - <code class="highlighter-rouge">unsigned int write(unsigned char b)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#write-1">write</a> - <code class="highlighter-rouge">size_t write(const uint8_t *buf, size_t size)</code></td>
+      <td style="text-align: left"><a href="#write-1">write</a> - <code class="highlighter-rouge">unsigned int write(const unsigned char *buf, unsigned int size)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#read">read</a> - <code class="highlighter-rouge">int read()</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#read-1">read</a> - <code class="highlighter-rouge">int read(uint8_t *buf, size_t size)</code></td>
+      <td style="text-align: left"><a href="#read-1">read</a> - <code class="highlighter-rouge">int read(unsigned char *buf, unsigned int size)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#flush">flush</a> - <code class="highlighter-rouge">void flush()</code></td>
@@ -428,7 +428,7 @@
       <td style="text-align: left"><a href="#stop">stop</a> - <code class="highlighter-rouge">void stop()</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#connected">connected</a> - <code class="highlighter-rouge">uint8_t connected()</code></td>
+      <td style="text-align: left"><a href="#connected">connected</a> - <code class="highlighter-rouge">int connected()</code></td>
     </tr>
   </tbody>
 </table>
@@ -490,7 +490,7 @@
 
 <h3 id="connect">connect</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">connect</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">host</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">port</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">connect</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">host</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">port</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -514,7 +514,7 @@
         <td style="text-align: left">The host name of the server.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint16_t</td>
+        <td style="text-align: left">unsigned short</td>
         <td style="text-align: left">port</td>
         <td style="text-align: left">The port that the client will connect to.</td>
       </tr>
@@ -541,7 +541,7 @@
 
 <h3 id="connect-1">connect</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">connect</span><span class="p">(</span><span class="n">IPAddress</span> <span class="n">ip</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">port</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">connect</span><span class="p">(</span><span class="n">IPAddress</span> <span class="n">ip</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">port</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -565,7 +565,7 @@
         <td style="text-align: left">The IP of the server.</td>
       </tr>
       <tr>
-        <td style="text-align: left">uint16_t</td>
+        <td style="text-align: left">unsigned short</td>
         <td style="text-align: left">port</td>
         <td style="text-align: left">The port that the client will connect to.</td>
       </tr>
@@ -623,7 +623,7 @@
 
 <h3 id="write">write</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">size_t</span> <span class="n">write</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">b</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">size_t</span> <span class="n">write</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">b</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -642,7 +642,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">b</td>
         <td style="text-align: left">Data to write.</td>
       </tr>
@@ -669,7 +669,7 @@
 
 <h3 id="write-1">write</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">size_t</span> <span class="n">write</span><span class="p">(</span><span class="k">const</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">size_t</span> <span class="n">write</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -688,12 +688,12 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">const uint8_t *</td>
+        <td style="text-align: left">const unsigned char *</td>
         <td style="text-align: left">buf</td>
         <td style="text-align: left">Pointer to data to write.</td>
       </tr>
       <tr>
-        <td style="text-align: left">size_t</td>
+        <td style="text-align: left">unsigned int</td>
         <td style="text-align: left">size</td>
         <td style="text-align: left">Size of data to write.</td>
       </tr>
@@ -751,7 +751,7 @@
 
 <h3 id="read-1">read</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -770,12 +770,12 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">buf</td>
         <td style="text-align: left">Pointer to the received data.</td>
       </tr>
       <tr>
-        <td style="text-align: left">size_t</td>
+        <td style="text-align: left">unsigned int</td>
         <td style="text-align: left">size</td>
         <td style="text-align: left">Size of data received to read.</td>
       </tr>
@@ -838,7 +838,7 @@
 
 <h3 id="connected">connected</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="n">connected</span><span class="p">()</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">connected</span><span class="p">()</span>
 </code></pre>
 </div>
 
@@ -860,7 +860,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">int</td>
         <td style="text-align: left">0 for not connected, 1 for connected.</td>
       </tr>
     </tbody>

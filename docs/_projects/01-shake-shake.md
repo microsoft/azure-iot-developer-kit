@@ -62,13 +62,26 @@ static const char* iot_event = "{\"topic\":\"iot\"}";
 
 Replace the string `iot` in the curly brace with your preferred hashtag.
 
-### Step 4. Deploy Azure Functions
+### Step 4. Configure Twitter bearer token
+
+You will need a bearer token with your Twitter account and configure it in Azure Function in order to retrieve the tweet.
+
+1. Follow this guide to [create a Twitter application](http://docs.inboundnow.com/guide/create-twitter-application/){:target="_blank"}
+
+2. Make a note of the `Consumer key` and `Consumer secret`
+
+3. Use [some utility](https://github.com/wellsjo/get-twitter-bearer-token){:target="_blank"} to generate the application bearer token 
+
+4. In VS Code, open **azureFunction > index.js**, find and replace the `{twitter bearer token}`with your own and save the file
+
+### Step 5. Deploy Azure Functions
 
 Use **Quick Open** (`Ctrl+P`) to run 'task cloud-deploy'. It will start deploying the Azure Functions code. Normally it takes 2 to 5 minutes to finish:
 
 ![mini-solution-deploy]({{"/assets/images/mini-solution-deploy.png" | absolute_url }})
 
-### Step 5. Build and upload Arduino sketch
+
+### Step 6. Build and upload Arduino sketch
 
 Use **Quick Open** (`Ctrl+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
 

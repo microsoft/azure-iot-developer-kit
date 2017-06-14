@@ -86,14 +86,12 @@ Now it is time to set up the development environment: tools and packages for you
 
 #### A. Download latest package
 
-The `.zip` file you download contains all necessary tools and packages required for DevKit development.
+For **Windows** users, download the `.zip` file that contains all necessary tools and packages required for DevKit development.
 
 [<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/usb_install_latest.zip){: .btn .btn--success .btn--large}
 
 **MD5:** 01061ea0f8270db07fd808d35ad25759
 {: .notice--info}
-
-For **macOS** users, you may follow [manual installation]({{"/docs/installation/" | absolute_url}}) instructions to install the tools and packages.
 
 > The `.zip` file contains the following tools and packageas. If you already have some components installed, the script will detect and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks
@@ -104,6 +102,8 @@ For **macOS** users, you may follow [manual installation]({{"/docs/installation/
 > * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: VS Code Arduino Extension relies on this tool
 > * DevKit Board Package: Toolchains, libraries and projects for the DevKit
 > * ST-Link Utility: Essential utility and drivers
+
+For **macOS** users, you may follow [manual installation]({{"/docs/installation/" | absolute_url}}) instructions to install the tools and packages.
 
 #### B. Run installation script
 

@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-13T07:50:47-07:00">
+  <meta property="article:published_time" content="2017-06-14T01:12:31-07:00">
 
 
 
@@ -343,7 +343,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="LSM6DSL Sensor">
     <meta itemprop="description" content="Library for LSM6DSL, 3D digital accelerometer and gyroscope sensor on AZ3166">
-    <meta itemprop="datePublished" content="June 13, 2017">
+    <meta itemprop="datePublished" content="June 14, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
 
     <div class="page__inner-wrap">
@@ -427,13 +427,13 @@
       <td style="text-align: left"><a href="#disable_g">disable_g</a> - <code class="highlighter-rouge">int disable_g(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#read_id">read_id</a> - <code class="highlighter-rouge">int read_id(uint8_t *id)</code></td>
+      <td style="text-align: left"><a href="#read_id">read_id</a> - <code class="highlighter-rouge">int read_id(unsigned char *id)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_x_axes">get_x_axes</a> - <code class="highlighter-rouge">int get_x_axes(int32_t *pData)</code></td>
+      <td style="text-align: left"><a href="#get_x_axes">get_x_axes</a> - <code class="highlighter-rouge">int get_x_axes(int *pData)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_g_axes">get_g_axes</a> - <code class="highlighter-rouge">int get_g_axes(int32_t *pData)</code></td>
+      <td style="text-align: left"><a href="#get_g_axes">get_g_axes</a> - <code class="highlighter-rouge">int get_g_axes(int *pData)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#get_x_sensitivity">get_x_sensitivity</a> - <code class="highlighter-rouge">int get_x_sensitivity(float *pfData)</code></td>
@@ -499,13 +499,13 @@
       <td style="text-align: left"><a href="#disable_pedometer">disable_pedometer</a> - <code class="highlighter-rouge">int disable_pedometer(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_step_counter">get_step_counter</a> - <code class="highlighter-rouge">int get_step_counter(uint16_t *step_count)</code></td>
+      <td style="text-align: left"><a href="#get_step_counter">get_step_counter</a> - <code class="highlighter-rouge">int get_step_counter(int *step_count)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#reset_step_counter">reset_step_counter</a> - <code class="highlighter-rouge">int reset_step_counter(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_pedometer_threshold">set_pedometer_threshold</a> - <code class="highlighter-rouge">int set_pedometer_threshold(uint8_t thr)</code></td>
+      <td style="text-align: left"><a href="#set_pedometer_threshold">set_pedometer_threshold</a> - <code class="highlighter-rouge">int set_pedometer_threshold(unsigned char thr)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#enable_tilt_detection">enable_tilt_detection</a> - <code class="highlighter-rouge">int enable_tilt_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
@@ -520,7 +520,7 @@
       <td style="text-align: left"><a href="#disable_wake_up_detection">disable_wake_up_detection</a> - <code class="highlighter-rouge">int disable_wake_up_detection(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_wake_up_threshold">set_wake_up_threshold</a> - <code class="highlighter-rouge">int set_wake_up_threshold(uint8_t thr)</code></td>
+      <td style="text-align: left"><a href="#set_wake_up_threshold">set_wake_up_threshold</a> - <code class="highlighter-rouge">int set_wake_up_threshold(unsigned char thr)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#enable_single_tap_detection">enable_single_tap_detection</a> - <code class="highlighter-rouge">int enable_single_tap_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
@@ -535,7 +535,7 @@
       <td style="text-align: left"><a href="#disable_double_tap_detection">disable_double_tap_detection</a> - <code class="highlighter-rouge">int disable_double_tap_detection(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_tap_threshold">set_tap_threshold</a> - <code class="highlighter-rouge">int set_tap_threshold(uint8_t thr)</code></td>
+      <td style="text-align: left"><a href="#set_tap_threshold">set_tap_threshold</a> - <code class="highlighter-rouge">int set_tap_threshold(unsigned char thr)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#set_tap_shock_time">set_tap_shock_time</a> - <code class="highlighter-rouge">int set_tap_shock_time(uint8_t time)</code></td>
@@ -863,7 +863,7 @@
 
 <h3 id="read_id">read_id</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_id</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">id</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_id</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">id</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -882,7 +882,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">id</td>
         <td style="text-align: left">The pointer where the ID of the device is stored.</td>
       </tr>
@@ -909,7 +909,7 @@
 
 <h3 id="get_x_axes">get_x_axes</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_axes</span><span class="p">(</span><span class="kt">int32_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_axes</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -955,7 +955,7 @@
 
 <h3 id="get_g_axes">get_g_axes</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_axes</span><span class="p">(</span><span class="kt">int32_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_axes</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -974,7 +974,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">int32_t *</td>
+        <td style="text-align: left">int *</td>
         <td style="text-align: left">pData</td>
         <td style="text-align: left">The pointer where the gyroscope data are stored</td>
       </tr>
@@ -1112,7 +1112,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">int16_t *</td>
+        <td style="text-align: left">int *</td>
         <td style="text-align: left">pData</td>
         <td style="text-align: left">The pointer where the accelerometer raw data are stored</td>
       </tr>
@@ -1814,7 +1814,7 @@
 
 <h3 id="set_free_fall_threshold">set_free_fall_threshold</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_free_fall_threshold</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">thr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_free_fall_threshold</span><span class="p">(</span><span class="kt">int</span> <span class="n">thr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1833,7 +1833,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">int</td>
         <td style="text-align: left">thr</td>
         <td style="text-align: left">The threshold to be set.</td>
       </tr>
@@ -1922,7 +1922,7 @@
 
 <h3 id="get_step_counter">get_step_counter</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_step_counter</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span><span class="n">step_count</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_step_counter</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">step_count</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1941,7 +1941,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint16_t *</td>
+        <td style="text-align: left">int *</td>
         <td style="text-align: left">step_count</td>
         <td style="text-align: left">The pointer to the step counter.</td>
       </tr>
@@ -1999,7 +1999,7 @@
 
 <h3 id="set_pedometer_threshold">set_pedometer_threshold</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_pedometer_threshold</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">thr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_pedometer_threshold</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">thr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2018,7 +2018,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">thr</td>
         <td style="text-align: left">The threshold to be set.</td>
       </tr>
@@ -2199,7 +2199,7 @@
 
 <h3 id="set_wake_up_threshold">set_wake_up_threshold</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_wake_up_threshold</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">thr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_wake_up_threshold</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">thr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2218,7 +2218,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">thr</td>
         <td style="text-align: left">The threshold to be set.</td>
       </tr>
@@ -2399,7 +2399,7 @@
 
 <h3 id="set_tap_threshold">set_tap_threshold</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_tap_threshold</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">thr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_tap_threshold</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">thr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2418,7 +2418,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">thr</td>
         <td style="text-align: left">The threshold to be set.</td>
       </tr>
