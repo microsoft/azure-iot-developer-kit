@@ -88,13 +88,9 @@ permalink: /docs/projects/shake-shake-macos/
 
 #### A. Get IoT Hub name and connection string
 
-1. Click **Resource Group > [your created resource group] > Overview > [your created IoT Hub]
- ![shake-shake-mac-resource-group]({{"/assets/images/shake-shake-mac-resource-group.png" | absolute_url }})
+Click **Resource Group > [your created resource group] > Overview** and find IoT Hub you just created. Note the name of the IoT Hub, you will need it creating Azure Functions.
 
-2. In IoT Hub, click **Endpoints > Events** and note 'Event Hub name' and 'Event Hub endpoint'
- ![shake-shake-mac-iothub-name]({{"/assets/images/shake-shake-mac-iothub-name.png" | absolute_url }})
-
- You will need these information when creating Azure Functions.
+![shake-shake-mac-resource-group]({{"/assets/images/shake-shake-mac-iothub-name.png" | absolute_url }})
 
 #### B. Create Azure Functions
 
@@ -107,23 +103,31 @@ permalink: /docs/projects/shake-shake-macos/
 3. Go to the Function App you just created and create a new custom function:
  ![shake-shake-mac-custom-function]({{"/assets/images/shake-shake-mac-custom-function.png" | absolute_url }})
 
-4. Choose **EventHubTrigger-Javascript** from the template list and create a new 'Event Hub connection':
+4. Choose **EventHubTrigger-Javascript** from the template list and type the IoT Hub name you noted in **Event Hub name** field:
  ![shake-shake-mac-eventhub-trigger]({{"/assets/images/shake-shake-mac-eventhub-trigger.png" | absolute_url }})
 
-5. Name the connection **eventHubConnectionString** and paste 'Event Hub endpoint' value into 'Connection string':
+5. Click **New** to create Event Hub connection:
+ ![shake-shake-mac-new-eventhub-connection]({{"/assets/images/shake-shake-mac-new-eventhub-connection.png" | absolute_url }})
+
+6. Select **IoT Hub** tab, confirm it selects the right IoT Hub and click **Select**:
  ![shake-shake-mac-function-connection-string]({{"/assets/images/shake-shake-mac-function-connection-string.png" | absolute_url }})
 
-6. Paste previous noted 'Event Hub name' value into 'Event Hub name' and click **Create**.
+7. Click **Create** to finish creating a new function.
+
+#### C. Install Azure Function dependencies
 
 #### C. Upload and run Azure Functions code
 
 1. Click **[my function name] > View Files > Upload**:
  ![shake-shake-mac-function-upload]({{"/assets/images/shake-shake-mac-function-upload.png" | absolute_url }})
 
-2. Go to path below and upload `index.js` and `packages.json`
+2. Go to path below and upload `index.js` and `packages.json`:
 ```bash
 ~/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/libraries/AzureIotHub/examples/ShakeShake/azureFunction
 ```
+
+3. Click `index.js` again to refresh the code:
+
 
 3. Click **[function name] > Platform features > Application settings**:
  ![shake-shake-mac-app-settings]({{"/assets/images/shake-shake-mac-app-settings.png" | absolute_url }})

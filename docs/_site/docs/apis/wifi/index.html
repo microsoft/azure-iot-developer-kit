@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-13T07:50:47-07:00">
+  <meta property="article:published_time" content="2017-06-14T05:16:16-07:00">
 
 
 
@@ -343,7 +343,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="AZ3166 WiFi">
     <meta itemprop="description" content="The WiFi class for AZ3166">
-    <meta itemprop="datePublished" content="June 13, 2017">
+    <meta itemprop="datePublished" content="June 14, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
 
     <div class="page__inner-wrap">
@@ -419,7 +419,7 @@
       <td style="text-align: left"><a href="#disconnectap">disconnectAP</a> - <code class="highlighter-rouge">int disconnectAP()</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#macaddress">macAddress</a> - <code class="highlighter-rouge">uint8_t *macAddress(uint8_t *mac)</code></td>
+      <td style="text-align: left"><a href="#macaddress">macAddress</a> - <code class="highlighter-rouge">unsigned char *macAddress(unsigned char *mac)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#localip">localIP</a> - <code class="highlighter-rouge">IPAddress localIP()</code></td>
@@ -434,28 +434,28 @@
       <td style="text-align: left"><a href="#ssid">SSID</a> - <code class="highlighter-rouge">const char *SSID()</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#ssid-1">SSID</a> - <code class="highlighter-rouge">const char *SSID(uint8_t networkItem)</code></td>
+      <td style="text-align: left"><a href="#ssid-1">SSID</a> - <code class="highlighter-rouge">const char *SSID(unsigned char networkItem)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#bssid">BSSID</a> - <code class="highlighter-rouge">uint8_t *BSSID(uint8_t *bssid)</code></td>
+      <td style="text-align: left"><a href="#bssid">BSSID</a> - <code class="highlighter-rouge">unsigned char *BSSID(unsigned char *bssid)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#rssi">RSSI</a> - <code class="highlighter-rouge">int32_t RSSI()</code></td>
+      <td style="text-align: left"><a href="#rssi">RSSI</a> - <code class="highlighter-rouge">int RSSI()</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#rssi-1">RSSI</a> - <code class="highlighter-rouge">int32_t RSSI(uint8_t networkItem)</code></td>
+      <td style="text-align: left"><a href="#rssi-1">RSSI</a> - <code class="highlighter-rouge">int RSSI(unsigned char networkItem)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#encryptiontype">encryptionType</a> - <code class="highlighter-rouge">uint8_t encryptionType()</code></td>
+      <td style="text-align: left"><a href="#encryptiontype">encryptionType</a> - <code class="highlighter-rouge">int encryptionType()</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#encryptiontype-1">encryptionType</a> - <code class="highlighter-rouge">uint8_t encryptionType(uint8_t networkItem)</code></td>
+      <td style="text-align: left"><a href="#encryptiontype-1">encryptionType</a> - <code class="highlighter-rouge">int encryptionType(unsigned char networkItem)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#scannetworks">scanNetworks</a> - <code class="highlighter-rouge">int8_t scanNetworks()</code></td>
+      <td style="text-align: left"><a href="#scannetworks">scanNetworks</a> - <code class="highlighter-rouge">int scanNetworks()</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#status">status</a> - <code class="highlighter-rouge">uint8_t status()</code></td>
+      <td style="text-align: left"><a href="#status">status</a> - <code class="highlighter-rouge">unsigned char status()</code></td>
     </tr>
   </tbody>
 </table>
@@ -758,7 +758,7 @@
 
 <h3 id="macaddress">macAddress</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">macAddress</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">mac</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">macAddress</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">mac</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -777,7 +777,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">mac</td>
         <td style="text-align: left">The pointer to WiFi MAC address.</td>
       </tr>
@@ -795,7 +795,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">The pointer to WiFi MAC address.</td>
       </tr>
     </tbody>
@@ -928,7 +928,7 @@
 
 <h3 id="ssid-1">SSID</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">SSID</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">networkItem</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">SSID</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">networkItem</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -947,7 +947,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">networkItem</td>
         <td style="text-align: left">Specific network index in the AP list.</td>
       </tr>
@@ -974,7 +974,7 @@
 
 <h3 id="bssid">BSSID</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">BSSID</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">bssid</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">BSSID</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">bssid</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -993,7 +993,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">bssid</td>
         <td style="text-align: left">Pointer to current network BSSID.</td>
       </tr>
@@ -1011,7 +1011,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">Pointer to current network BSSID.</td>
       </tr>
     </tbody>
@@ -1020,7 +1020,7 @@
 
 <h3 id="rssi">RSSI</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int32_t</span> <span class="n">RSSI</span><span class="p">()</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">RSSI</span><span class="p">()</span>
 </code></pre>
 </div>
 
@@ -1042,7 +1042,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">int32_t</td>
+        <td style="text-align: left">int</td>
         <td style="text-align: left">Current connected WiFi RSSI.</td>
       </tr>
     </tbody>
@@ -1051,7 +1051,7 @@
 
 <h3 id="rssi-1">RSSI</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int32_t</span> <span class="n">RSSI</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">networkItem</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">RSSI</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">networkItem</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1070,7 +1070,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">networkItem</td>
         <td style="text-align: left">Specific network index in the AP list.</td>
       </tr>
@@ -1088,7 +1088,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">int32_t</td>
+        <td style="text-align: left">int</td>
         <td style="text-align: left">Current connected WiFi RSSI.</td>
       </tr>
     </tbody>
@@ -1097,7 +1097,7 @@
 
 <h3 id="encryptiontype">encryptionType</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="n">encryptionType</span><span class="p">()</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">encryptionType</span><span class="p">()</span>
 </code></pre>
 </div>
 
@@ -1119,7 +1119,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">int</td>
         <td style="text-align: left">Always 4 (<code class="highlighter-rouge">ENC_TYPE_CCMP</code>).</td>
       </tr>
     </tbody>
@@ -1128,7 +1128,7 @@
 
 <h3 id="encryptiontype-1">encryptionType</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="n">encryptionType</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">networkItem</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">encryptionType</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">networkItem</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1147,7 +1147,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">int</td>
         <td style="text-align: left">networkItem</td>
         <td style="text-align: left">Specific network index in the AP list.</td>
       </tr>
@@ -1165,7 +1165,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">Specific network encryption type. Possible values: 5 (<code class="highlighter-rouge">ENC_TYPE_WEP</code>), 2 (<code class="highlighter-rouge">ENC_TYPE_TKIP</code>), 4 (<code class="highlighter-rouge">ENC_TYPE_CCMP</code>), 8 (<code class="highlighter-rouge">ENC_TYPE_AUTO</code>) and 7 (<code class="highlighter-rouge">ENC_TYPE_NONE</code>).</td>
       </tr>
     </tbody>
@@ -1174,7 +1174,7 @@
 
 <h3 id="scannetworks">scanNetworks</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int8_t</span> <span class="n">scanNetworks</span><span class="p">()</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">scanNetworks</span><span class="p">()</span>
 </code></pre>
 </div>
 
@@ -1196,7 +1196,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">int</td>
         <td style="text-align: left">Total number of found networks.</td>
       </tr>
     </tbody>
@@ -1205,7 +1205,7 @@
 
 <h3 id="status">status</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">uint8_t</span> <span class="n">status</span><span class="p">()</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">status</span><span class="p">()</span>
 </code></pre>
 </div>
 
@@ -1227,7 +1227,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">Current network status.</td>
       </tr>
     </tbody>

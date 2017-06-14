@@ -295,18 +295,9 @@
 
 <h4 id="a-get-iot-hub-name-and-connection-string">A. Get IoT Hub name and connection string</h4>
 
-<ol>
-  <li>
-    <p>Click **Resource Group &gt; [your created resource group] &gt; Overview &gt; [your created IoT Hub]
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-resource-group.png" alt="shake-shake-mac-resource-group" /></p>
-  </li>
-  <li>
-    <p>In IoT Hub, click <strong>Endpoints &gt; Events</strong> and note ‘Event Hub name’ and ‘Event Hub endpoint’
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-iothub-name.png" alt="shake-shake-mac-iothub-name" /></p>
-  </li>
-</ol>
+<p>Click <strong>Resource Group &gt; [your created resource group] &gt; Overview</strong> and find IoT Hub you just created. Note the name of the IoT Hub, you will need it creating Azure Functions.</p>
 
-<p>You will need these information when creating Azure Functions.</p>
+<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-iothub-name.png" alt="shake-shake-mac-resource-group" /></p>
 
 <h4 id="b-create-azure-functions">B. Create Azure Functions</h4>
 
@@ -324,17 +315,23 @@
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-custom-function.png" alt="shake-shake-mac-custom-function" /></p>
   </li>
   <li>
-    <p>Choose <strong>EventHubTrigger-Javascript</strong> from the template list and create a new ‘Event Hub connection’:
+    <p>Choose <strong>EventHubTrigger-Javascript</strong> from the template list and type the IoT Hub name you noted in <strong>Event Hub name</strong> field:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-eventhub-trigger.png" alt="shake-shake-mac-eventhub-trigger" /></p>
   </li>
   <li>
-    <p>Name the connection <strong>eventHubConnectionString</strong> and paste ‘Event Hub endpoint’ value into ‘Connection string’:
+    <p>Click <strong>New</strong> to create Event Hub connection:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-new-eventhub-connection.png" alt="shake-shake-mac-new-eventhub-connection" /></p>
+  </li>
+  <li>
+    <p>Select <strong>IoT Hub</strong> tab, confirm it selects the right IoT Hub and click <strong>Select</strong>:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-connection-string.png" alt="shake-shake-mac-function-connection-string" /></p>
   </li>
   <li>
-    <p>Paste previous noted ‘Event Hub name’ value into ‘Event Hub name’ and click <strong>Create</strong>.</p>
+    <p>Click <strong>Create</strong> to finish creating a new function.</p>
   </li>
 </ol>
+
+<h4 id="c-install-azure-function-dependencies">C. Install Azure Function dependencies</h4>
 
 <h4 id="c-upload-and-run-azure-functions-code">C. Upload and run Azure Functions code</h4>
 
@@ -343,10 +340,13 @@
     <p>Click <strong>[my function name] &gt; View Files &gt; Upload</strong>:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-upload.png" alt="shake-shake-mac-function-upload" /></p>
   </li>
-  <li>Go to path below and upload <code class="highlighter-rouge">index.js</code> and <code class="highlighter-rouge">packages.json</code>
+  <li>Go to path below and upload <code class="highlighter-rouge">index.js</code> and <code class="highlighter-rouge">packages.json</code>:
     <div class="language-bash highlighter-rouge"><pre class="highlight"><code>~/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/libraries/AzureIotHub/examples/ShakeShake/azureFunction
 </code></pre>
     </div>
+  </li>
+  <li>
+    <p>Click <code class="highlighter-rouge">index.js</code> again to refresh the code:</p>
   </li>
   <li>
     <p>Click <strong>[function name] &gt; Platform features &gt; Application settings</strong>:

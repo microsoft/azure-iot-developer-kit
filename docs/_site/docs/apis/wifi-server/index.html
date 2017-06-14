@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-13T07:50:47-07:00">
+  <meta property="article:published_time" content="2017-06-14T05:16:16-07:00">
 
 
 
@@ -343,7 +343,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="AZ3166 WiFi Server">
     <meta itemprop="description" content="The WiFi server for AZ3166">
-    <meta itemprop="datePublished" content="June 13, 2017">
+    <meta itemprop="datePublished" content="June 14, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
 
     <div class="page__inner-wrap">
@@ -385,7 +385,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><a href="#wifiserver">WiFiServer</a> - <code class="highlighter-rouge">WiFiServer(uint16_t port)</code></td>
+      <td style="text-align: left"><a href="#wifiserver">WiFiServer</a> - <code class="highlighter-rouge">WiFiServer(unsigned short port)</code></td>
     </tr>
   </tbody>
 </table>
@@ -407,10 +407,10 @@
       <td style="text-align: left"><a href="#accept">accept</a> - int accept(WiFiClient *client)</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#write">write</a> - size_t write(uint8_t b)</td>
+      <td style="text-align: left"><a href="#write">write</a> - size_t write(unsigned char b)</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#write-1">write</a> - size_t write(const uint8_t *buffer, size_t size)</td>
+      <td style="text-align: left"><a href="#write-1">write</a> - size_t write(const unsigned char *buffer, size_t size)</td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#close">close</a> - void close()</td>
@@ -569,7 +569,7 @@
 
 <h3 id="write">write</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">size_t</span> <span class="n">write</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">b</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">size_t</span> <span class="n">write</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">b</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -588,7 +588,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t</td>
+        <td style="text-align: left">unsigned char</td>
         <td style="text-align: left">b</td>
         <td style="text-align: left">Data to write.</td>
       </tr>
@@ -615,7 +615,7 @@
 
 <h3 id="write-1">write</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">size_t</span> <span class="n">write</span><span class="p">(</span><span class="k">const</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">size_t</span> <span class="n">write</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -634,7 +634,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">const uint8_t *</td>
+        <td style="text-align: left">const unsigned char *</td>
         <td style="text-align: left">buffer</td>
         <td style="text-align: left">Data to write.</td>
       </tr>
