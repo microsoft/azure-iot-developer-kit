@@ -37,9 +37,9 @@ Hook up your hardware to your computer.
 
 ![getting-started-connect]({{"/assets/images/getting-started-connect.jpg" | absolute_url }})
 
-#### C. (Optional) Upgrade to latest firmware
+#### C. Upgrade to latest firmware
 
-To have everything work properly, follow [Upgrading]({{"/docs/upgrading/" | absolute_url}}) guide to upgrade the DevKit firmware to latest version.
+If this is the first time you start developing on DevKit, follow [Upgrading]({{"/docs/upgrading/" | absolute_url}}) guide to upgrade the DevKit firmware to latest version.
 
 This is an one-time effort, once you started developing on the DevKit and uploading your app, you will have the latest firmware with it.
 
@@ -79,21 +79,22 @@ Once the connection is succeeded, the DevKit will reboot in a few seconds. After
 **Note:** The IP address displays on the web page might not be identical to the actual IP address assigned and displayed on screen. This is normal as the WiFi is using DHCP to dynamically IP assignment.
 {: .notice--info}
 
-
 ### Step 4. Prepare development environment
 
 Now it is time to set up the development environment: tools and packages for you to build stunning IoT applications.
 
+For **macOS** users, you may follow [manual installation]({{"/docs/installation/" | absolute_url}}) instructions to install the tools and packages.
+
+For **Windows** users, follow the steps below:
+
 #### A. Download latest package
 
-The `.zip` file you download contains all necessary tools and packages required for DevKit development.
+For **Windows** users, download the `.zip` file that contains all necessary tools and packages required for DevKit development.
 
 [<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/usb_install_latest.zip){: .btn .btn--success .btn--large}
 
 **MD5:** 01061ea0f8270db07fd808d35ad25759
 {: .notice--info}
-
-For **macOS** users, you may follow [manual installation]({{"/docs/installation/" | absolute_url}}) instructions to install the tools and packages.
 
 > The `.zip` file contains the following tools and packageas. If you already have some components installed, the script will detect and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks

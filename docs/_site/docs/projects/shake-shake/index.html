@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-13T07:50:47-07:00">
+  <meta property="article:published_time" content="2017-06-14T02:56:30-07:00">
 
 
 
@@ -181,7 +181,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Shake, Shake">
     <meta itemprop="description" content="Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag.">
-    <meta itemprop="datePublished" content="June 13, 2017">
+    <meta itemprop="datePublished" content="June 14, 2017">
     <meta itemprop="dateModified" content="May 05, 2017">
 
     <div class="page__inner-wrap">
@@ -205,8 +205,9 @@
       <li><a href="#step-1-open-project-folder" id="markdown-toc-step-1-open-project-folder">Step 1. Open project folder</a></li>
       <li><a href="#step-2-provision-azure-services" id="markdown-toc-step-2-provision-azure-services">Step 2. Provision Azure services</a></li>
       <li><a href="#step-3-modify-the-hashtag" id="markdown-toc-step-3-modify-the-hashtag">Step 3. Modify the #hashtag</a></li>
-      <li><a href="#step-4-deploy-azure-functions" id="markdown-toc-step-4-deploy-azure-functions">Step 4. Deploy Azure Functions</a></li>
-      <li><a href="#step-5-build-and-upload-arduino-sketch" id="markdown-toc-step-5-build-and-upload-arduino-sketch">Step 5. Build and upload Arduino sketch</a></li>
+      <li><a href="#step-4-configure-twitter-bearer-token" id="markdown-toc-step-4-configure-twitter-bearer-token">Step 4. Configure Twitter bearer token</a></li>
+      <li><a href="#step-5-deploy-azure-functions" id="markdown-toc-step-5-deploy-azure-functions">Step 5. Deploy Azure Functions</a></li>
+      <li><a href="#step-6-build-and-upload-arduino-sketch" id="markdown-toc-step-6-build-and-upload-arduino-sketch">Step 6. Build and upload Arduino sketch</a></li>
     </ul>
   </li>
   <li><a href="#macos" id="markdown-toc-macos">macOS</a></li>
@@ -259,13 +260,32 @@
 
 <p>Replace the string <code class="highlighter-rouge">iot</code> in the curly brace with your preferred hashtag.</p>
 
-<h3 id="step-4-deploy-azure-functions">Step 4. Deploy Azure Functions</h3>
+<h3 id="step-4-configure-twitter-bearer-token">Step 4. Configure Twitter bearer token</h3>
+
+<p>You will need a bearer token with your Twitter account and configure it in Azure Function in order to retrieve the tweet.</p>
+
+<ol>
+  <li>
+    <p>Follow this guide to <a href="http://docs.inboundnow.com/guide/create-twitter-application/" target="_blank">create a Twitter application</a></p>
+  </li>
+  <li>
+    <p>Make a note of the <code class="highlighter-rouge">Consumer key</code> and <code class="highlighter-rouge">Consumer secret</code></p>
+  </li>
+  <li>
+    <p>Use <a href="https://github.com/wellsjo/get-twitter-bearer-token" target="_blank">some utility</a> to generate the application bearer token</p>
+  </li>
+  <li>
+    <p>In VS Code, open <strong>azureFunction &gt; index.js</strong>, find and replace the <code class="highlighter-rouge"><span class="p">{</span><span class="err">twitter</span><span class="w"> </span><span class="err">bearer</span><span class="w"> </span><span class="err">token</span><span class="p">}</span></code>with your own and save the file</p>
+  </li>
+</ol>
+
+<h3 id="step-5-deploy-azure-functions">Step 5. Deploy Azure Functions</h3>
 
 <p>Use <strong>Quick Open</strong> (<code class="highlighter-rouge">Ctrl+P</code>) to run ‘task cloud-deploy’. It will start deploying the Azure Functions code. Normally it takes 2 to 5 minutes to finish:</p>
 
 <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-deploy.png" alt="mini-solution-deploy" /></p>
 
-<h3 id="step-5-build-and-upload-arduino-sketch">Step 5. Build and upload Arduino sketch</h3>
+<h3 id="step-6-build-and-upload-arduino-sketch">Step 6. Build and upload Arduino sketch</h3>
 
 <p>Use <strong>Quick Open</strong> (<code class="highlighter-rouge">Ctrl+P</code>) to run ‘task device-upload’. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display ‘Configuration’. This is to set the connection string that retrieves from ‘task cloud-provision’ step.</p>
 
