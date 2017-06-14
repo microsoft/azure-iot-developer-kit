@@ -32,13 +32,13 @@ In this project, you will learn how to use the motion sensor to trigger an event
 
 #### A. Launch VS Code
 
-Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
+Make sure your DevKit is not connected. Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
 #### B. Open Arduino Examples folder
 
-Switch to **'Arduino Examples'** tab, navigate to `Examples for MXChip AZ3166 > AzureIoTHub` and click on `ShakeShake`.
+Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoTHub` and click on `ShakeShake`.
 
 ![mini-solution-catalog]({{"/assets/images/mini-solution-catalog.png" | absolute_url }})
 

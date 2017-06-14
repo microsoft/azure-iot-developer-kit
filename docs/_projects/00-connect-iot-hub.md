@@ -94,7 +94,7 @@ In this section, you deploy and run a sample application on MXChip IoT Developer
 
 1. In Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open the command palette, and then type `Arduino: Examples`.
 
-2. In the `Arduino Examples` tab, expand `Examples for MXChip AZ3166` > `AzureIoTHub`, and then click `GetStarted`.
+2. In the `Arduino Examples` tab, expand `Examples for MXCHIP AZ3166` > `AzureIoTHub`, and then click `GetStarted`.
 
 ### Configure device connection string to DevKit (Windows)
 
