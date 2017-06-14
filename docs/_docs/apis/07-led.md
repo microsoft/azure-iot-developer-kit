@@ -23,7 +23,7 @@ RGB_LED.h
 
 | Methods |
 | :------ |
-| [setColor](#setcolor) - `void setColor(uint8_t red, uint8_t green, uint8_t blue)` |
+| [setColor](#setcolor) - `void setColor(int red, int green, int blue)` |
 | [turnOff](#turnoff) - `void turnOff()` |
 
 ## Types
@@ -53,7 +53,7 @@ RGB_LED(PinName red, PinName green, PinName blue)
 ### setColor
 
 ```cpp
-void setColor(uint8_t red, uint8_t green, uint8_t blue)
+void setColor(int red, int green, int blue)
 ```
 
 > Set LED color with an RGB color value, each parameter is an integer between 0 and 255.
@@ -62,9 +62,9 @@ void setColor(uint8_t red, uint8_t green, uint8_t blue)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | red | Defines red color intensity, the value is an integer between 0 and 255. |
-> | uint8_t | green | Defines green color intensity, the value is an integer between 0 and 255. |
-> | uint8_t | blue | Defines blue color intensity, the value is an integer between 0 and 255. |
+> | int | red | Defines red color intensity, the value is an integer between 0 and 255. |
+> | int | green | Defines green color intensity, the value is an integer between 0 and 255. |
+> | int | blue | Defines blue color intensity, the value is an integer between 0 and 255. |
 > 
 > #### Return value
 > 

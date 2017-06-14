@@ -19,15 +19,15 @@ AZ3166WiFiServer.h
 
 | Constructors |
 | :----------- |
-| [WiFiServer](#wifiserver) - `WiFiServer(uint16_t port)` |
+| [WiFiServer](#wifiserver) - `WiFiServer(unsigned short port)` |
 
 | Methods |
 | :------ |
 | [begin](#begin) - void begin() |
 | [available](#available) - WiFiClient available(byte *status) |
 | [accept](#accept) - int accept(WiFiClient *client) |
-| [write](#write) - size_t write(uint8_t b) |
-| [write](#write-1) - size_t write(const uint8_t *buffer, size_t size) |
+| [write](#write) - size_t write(unsigned char b) |
+| [write](#write-1) - size_t write(const unsigned char *buffer, size_t size) |
 | [close](#close) - void close() |
 
 ## Types
@@ -111,7 +111,7 @@ int accept(WiFiClient *client)
 ### write
 
 ```cpp
-size_t write(uint8_t b)
+size_t write(unsigned char b)
 ```
 
 > Write 1 byte data to all the clients connected to a server.
@@ -120,7 +120,7 @@ size_t write(uint8_t b)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | b | Data to write. |
+> | unsigned char | b | Data to write. |
 >
 > #### Return value
 >
@@ -131,7 +131,7 @@ size_t write(uint8_t b)
 ### write
 
 ```cpp
-size_t write(const uint8_t *buffer, size_t size)
+size_t write(const unsigned char *buffer, size_t size)
 ```
 
 > Write size bytes of data to all the clients connected to a server.
@@ -140,7 +140,7 @@ size_t write(const uint8_t *buffer, size_t size)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | const uint8_t * | buffer | Data to write. |
+> | const unsigned char * | buffer | Data to write. |
 > | size_t | size | Size of data to write. |
 >
 > #### Return value

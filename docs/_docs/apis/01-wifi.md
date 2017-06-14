@@ -30,19 +30,19 @@ AZ3166WiFi.h
 | [disconnect](#disconnect) - `int disconnect()` |
 | [beginAP](#beginap) - `int beginAP(char *ssid, const char *passphrase)` |
 | [disconnectAP](#disconnectap) - `int disconnectAP()` |
-| [macAddress](#macaddress) - `uint8_t *macAddress(uint8_t *mac)` |
+| [macAddress](#macaddress) - `unsigned char *macAddress(unsigned char *mac)` |
 | [localIP](#localip) - `IPAddress localIP()` |
 | [subnetMask](#subnetmask) - `IPAddress subnetMask()` |
 | [gatewayIP](#gatewayip) - `IPAddress gatewayIP()` |
 | [SSID](#ssid) - `const char *SSID()` |
-| [SSID](#ssid-1) - `const char *SSID(uint8_t networkItem)` |
-| [BSSID](#bssid) - `uint8_t *BSSID(uint8_t *bssid)` |
-| [RSSI](#rssi) - `int32_t RSSI()` |
-| [RSSI](#rssi-1) - `int32_t RSSI(uint8_t networkItem)` |
-| [encryptionType](#encryptiontype) - `uint8_t encryptionType()` |
-| [encryptionType](#encryptiontype-1) - `uint8_t encryptionType(uint8_t networkItem)` |
-| [scanNetworks](#scannetworks) - `int8_t scanNetworks()` |
-| [status](#status) - `uint8_t status()` |
+| [SSID](#ssid-1) - `const char *SSID(unsigned char networkItem)` |
+| [BSSID](#bssid) - `unsigned char *BSSID(unsigned char *bssid)` |
+| [RSSI](#rssi) - `int RSSI()` |
+| [RSSI](#rssi-1) - `int RSSI(unsigned char networkItem)` |
+| [encryptionType](#encryptiontype) - `int encryptionType()` |
+| [encryptionType](#encryptiontype-1) - `int encryptionType(unsigned char networkItem)` |
+| [scanNetworks](#scannetworks) - `int scanNetworks()` |
+| [status](#status) - `unsigned char status()` |
 
 ## Types
 
@@ -201,7 +201,7 @@ int disconnectAP()
 ### macAddress
 
 ```cpp
-uint8_t *macAddress(uint8_t *mac)
+unsigned char *macAddress(unsigned char *mac)
 ```
 
 > Get WiFi MAC Address
@@ -210,13 +210,13 @@ uint8_t *macAddress(uint8_t *mac)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t * | mac | The pointer to WiFi MAC address. |
+> | unsigned char * | mac | The pointer to WiFi MAC address. |
 >
 > #### Return value
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t * | The pointer to WiFi MAC address. |
+> | unsigned char * | The pointer to WiFi MAC address. |
 
 ### localIP
 
@@ -293,7 +293,7 @@ const char *SSID()
 ### SSID
 
 ```cpp
-const char *SSID(uint8_t networkItem)
+const char *SSID(unsigned char networkItem)
 ```
 
 > Get specific network SSID.
@@ -302,7 +302,7 @@ const char *SSID(uint8_t networkItem)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | networkItem | Specific network index in the AP list. |
+> | unsigned char | networkItem | Specific network index in the AP list. |
 >
 > #### Return value
 >
@@ -313,7 +313,7 @@ const char *SSID(uint8_t networkItem)
 ### BSSID
 
 ```cpp
-uint8_t *BSSID(uint8_t *bssid)
+unsigned char *BSSID(unsigned char *bssid)
 ```
 
 > Get current connected WiFi BSSID.
@@ -322,18 +322,18 @@ uint8_t *BSSID(uint8_t *bssid)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t * | bssid | Pointer to current network BSSID. |
+> | unsigned char * | bssid | Pointer to current network BSSID. |
 >
 > #### Return value
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t * | Pointer to current network BSSID. |
+> | unsigned char * | Pointer to current network BSSID. |
 
 ### RSSI
 
 ```cpp
-int32_t RSSI()
+int RSSI()
 ```
 
 > Get current connected WiFi RSSI.
@@ -346,12 +346,12 @@ int32_t RSSI()
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | int32_t | Current connected WiFi RSSI. |
+> | int | Current connected WiFi RSSI. |
 
 ### RSSI
 
 ```cpp
-int32_t RSSI(uint8_t networkItem)
+int RSSI(unsigned char networkItem)
 ```
 
 > Get specific network RSSI.
@@ -360,18 +360,18 @@ int32_t RSSI(uint8_t networkItem)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | networkItem | Specific network index in the AP list. |
+> | unsigned char | networkItem | Specific network index in the AP list. |
 >
 > #### Return value
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | int32_t | Current connected WiFi RSSI. |
+> | int | Current connected WiFi RSSI. |
 
 ### encryptionType
 
 ```cpp
-uint8_t encryptionType()
+int encryptionType()
 ```
 
 > Get the encryption type of the current network.
@@ -384,12 +384,12 @@ uint8_t encryptionType()
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t | Always 4 (`ENC_TYPE_CCMP`). |
+> | int | Always 4 (`ENC_TYPE_CCMP`). |
 
 ### encryptionType
 
 ```cpp
-uint8_t encryptionType(uint8_t networkItem)
+int encryptionType(unsigned char networkItem)
 ```
 
 > Get the encryption type of the specific network.
@@ -398,18 +398,18 @@ uint8_t encryptionType(uint8_t networkItem)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | networkItem | Specific network index in the AP list. |
+> | int | networkItem | Specific network index in the AP list. |
 >
 > #### Return value
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t | Specific network encryption type. Possible values: 5 (`ENC_TYPE_WEP`), 2 (`ENC_TYPE_TKIP`), 4 (`ENC_TYPE_CCMP`), 8 (`ENC_TYPE_AUTO`) and 7 (`ENC_TYPE_NONE`). |
+> | unsigned char | Specific network encryption type. Possible values: 5 (`ENC_TYPE_WEP`), 2 (`ENC_TYPE_TKIP`), 4 (`ENC_TYPE_CCMP`), 8 (`ENC_TYPE_AUTO`) and 7 (`ENC_TYPE_NONE`). |
 
 ### scanNetworks
 
 ```cpp
-int8_t scanNetworks()
+int scanNetworks()
 ```
 
 > Scan networks.
@@ -422,12 +422,12 @@ int8_t scanNetworks()
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t | Total number of found networks. |
+> | int | Total number of found networks. |
 
 ### status
 
 ```cpp
-uint8_t status()
+unsigned char status()
 ```
 
 > Get current network status.
@@ -440,7 +440,7 @@ uint8_t status()
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t | Current network status. |
+> | unsigned char | Current network status. |
 
 ## Sample code
 

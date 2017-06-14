@@ -24,16 +24,16 @@ AZ3166WiFiClient.h
 | Methods |
 | :------ |
 | [peek](#peek) - `int peek()` |
-| [connect](#connect) - `int connect(const char *host, uint16_t port)` |
-| [connect](#connect-1) - `int connect(IPAddress ip, uint16_t port)` |
+| [connect](#connect) - `int connect(const char *host, unsigned short port)` |
+| [connect](#connect-1) - `int connect(IPAddress ip, unsigned short port)` |
 | [available](#available) - `int available()` |
-| [write](#write) - `size_t write(uint8_t b)` |
-| [write](#write-1) - `size_t write(const uint8_t *buf, size_t size)` |
+| [write](#write) - `unsigned int write(unsigned char b)` |
+| [write](#write-1) - `unsigned int write(const unsigned char *buf, unsigned int size)` |
 | [read](#read) - `int read()` |
-| [read](#read-1) - `int read(uint8_t *buf, size_t size)` |
+| [read](#read-1) - `int read(unsigned char *buf, unsigned int size)` |
 | [flush](#flush) - `void flush()` |
 | [stop](#stop) - `void stop()` |
-| [connected](#connected) - `uint8_t connected()` |
+| [connected](#connected) - `int connected()` |
 
 ## Types
 
@@ -77,7 +77,7 @@ int peek()
 ### connect
 
 ```cpp
-int connect(const char *host, uint16_t port)
+int connect(const char *host, unsigned short port)
 ```
 
 > Connect to the server with specific host name and port.
@@ -87,7 +87,7 @@ int connect(const char *host, uint16_t port)
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
 > | char * | host | The host name of the server. |
-> | uint16_t | port | The port that the client will connect to. |
+> | unsigned short | port | The port that the client will connect to. |
 >
 > #### Return value
 >
@@ -98,7 +98,7 @@ int connect(const char *host, uint16_t port)
 ### connect
 
 ```cpp
-int connect(IPAddress ip, uint16_t port)
+int connect(IPAddress ip, unsigned short port)
 ```
 
 > Connect to the server with specific IP and port.
@@ -108,7 +108,7 @@ int connect(IPAddress ip, uint16_t port)
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
 > | IPAddress | ip | The IP of the server. |
-> | uint16_t | port | The port that the client will connect to. |
+> | unsigned short | port | The port that the client will connect to. |
 >
 > #### Return value
 >
@@ -137,7 +137,7 @@ int available()
 ### write
 
 ```cpp
-size_t write(uint8_t b)
+size_t write(unsigned char b)
 ```
 
 > Write 1 byte data to the connected server.
@@ -146,7 +146,7 @@ size_t write(uint8_t b)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t | b | Data to write. |
+> | unsigned char | b | Data to write. |
 >
 > #### Return value
 >
@@ -157,7 +157,7 @@ size_t write(uint8_t b)
 ### write
 
 ```cpp
-size_t write(const uint8_t *buf, size_t size)
+size_t write(const unsigned char *buf, unsigned int size)
 ```
 
 > Write size of bytes data to the connected server.
@@ -166,8 +166,8 @@ size_t write(const uint8_t *buf, size_t size)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | const uint8_t * | buf | Pointer to data to write. |
-> | size_t | size | Size of data to write. |
+> | const unsigned char * | buf | Pointer to data to write. |
+> | unsigned int | size | Size of data to write. |
 >
 > #### Return value
 >
@@ -196,7 +196,7 @@ int read()
 ### read
 
 ```cpp
-int read(uint8_t *buf, size_t size)
+int read(unsigned char *buf, unsigned int size)
 ```
 
 > Read the next size of bytes of data from the connected server.
@@ -205,8 +205,8 @@ int read(uint8_t *buf, size_t size)
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | uint8_t * | buf | Pointer to the received data. |
-> | size_t | size | Size of data received to read. |
+> | unsigned char * | buf | Pointer to the received data. |
+> | unsigned int | size | Size of data received to read. |
 >
 > #### Return value
 >
@@ -249,7 +249,7 @@ void stop()
 ### connected
 
 ```cpp
-uint8_t connected()
+int connected()
 ```
 
 > Get current connection state.
@@ -262,7 +262,7 @@ uint8_t connected()
 >
 > | Type | Description |
 > | :--- | :---------- |
-> | uint8_t | 0 for not connected, 1 for connected. |
+> | int | 0 for not connected, 1 for connected. |
 
 ## Sample code
 
