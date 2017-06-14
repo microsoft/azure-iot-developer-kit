@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-13T07:50:47-07:00">
+  <meta property="article:published_time" content="2017-06-14T05:28:37-07:00">
 
 
 
@@ -139,7 +139,7 @@
         <ul class="visible-links">
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/">Docs</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/docs/get-started/">Docs</a></li>
           
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/versions/">Versions</a></li>
@@ -192,7 +192,7 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/getting-started/" class="">Getting Started</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/get-started/" class="">Get Started</a></li>
           
             
             
@@ -343,7 +343,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="LIS2MDL Sensor">
     <meta itemprop="description" content="Library for LIS2MDL, magnetometer sensor on AZ3166">
-    <meta itemprop="datePublished" content="June 13, 2017">
+    <meta itemprop="datePublished" content="June 14, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
 
     <div class="page__inner-wrap">
@@ -406,13 +406,13 @@
       <td style="text-align: left"><a href="#init">init</a> - <code class="highlighter-rouge">int init()</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#read_id">read_id</a> - <code class="highlighter-rouge">int read_id(uint8_t *m_id)</code></td>
+      <td style="text-align: left"><a href="#read_id">read_id</a> - <code class="highlighter-rouge">int read_id(unsigned char *m_id)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#get_m_axes_raw">get_m_axes_raw</a> - <code class="highlighter-rouge">int get_m_axes_raw(int16_t *pData)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_m_axes">get_m_axes</a> - <code class="highlighter-rouge">int get_m_axes(int32_t *pData)</code></td>
+      <td style="text-align: left"><a href="#get_m_axes">get_m_axes</a> - <code class="highlighter-rouge">int get_m_axes(int *pData)</code></td>
     </tr>
   </tbody>
 </table>
@@ -495,7 +495,7 @@
 
 <h3 id="read_id">read_id</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_id</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">m_id</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_id</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">m_id</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -514,7 +514,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">uint8_t *</td>
+        <td style="text-align: left">unsigned char *</td>
         <td style="text-align: left">m_id</td>
         <td style="text-align: left">The pointer where the ID of the device is stored.</td>
       </tr>
@@ -587,7 +587,7 @@
 
 <h3 id="get_m_axes">get_m_axes</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_m_axes</span><span class="p">(</span><span class="kt">int32_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_m_axes</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -606,7 +606,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left">int32_t *</td>
+        <td style="text-align: left">int *</td>
         <td style="text-align: left">pData</td>
         <td style="text-align: left">The pointer where the magnetometer data are stored.</td>
       </tr>

@@ -9,7 +9,7 @@ last_modified_at: 2016-04-30T10:01:43-04:00
 
 In order to run the WiFi configuration task for the DevKit, you must have the project folder open in VS Code.
 
-1. If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples**. Navigate to `Examples for MXChip AZ3166 > AzureIoTHub` and click on `AzureIoTHubExample`.
+1. If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples**. Navigate to `Examples for MXCHIP AZ3166 > AzureIoTHub` and click on `AzureIoTHubExample`.
  ![mini-solution-solution-catalog]({{"/assets/images/mini-solution-catalog.png" | absolute_url }})
 
 2. Use **Quick Open** (`Ctrl+P`) to run 'task config_wifi'. It will open the terminal in VS Code and prompt you to connect to WiFi.
