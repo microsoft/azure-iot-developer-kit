@@ -3,7 +3,7 @@ title: "Shake, shake"
 permalink: /docs/projects/shake-shake-macos/
 ---
 
-**Note:** This manual steps for running **'Shake, shake'** project on macOS is subject to be changed.
+**Note:** This manual steps for running **'Shake, shake'** project on macOS is subject to change.
 {: .notice--warning}
 
 {% include toc icon="columns" %}
