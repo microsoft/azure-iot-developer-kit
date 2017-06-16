@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Docs"
-    url: /docs/getting-started/
+    url: /docs/get-started/
   - title: "Versions"
     url: /versions/
   - title: "Blog"
@@ -12,8 +12,8 @@ main:
 docs:
   - title: Quick Start
     children:
-      - title: "Getting Started"
-        url: /docs/getting-started/
+      - title: "Get Started"
+        url: /docs/get-started/
       - title: "Manual Installation"
         url: /docs/installation/
       - title: "Upgrading"

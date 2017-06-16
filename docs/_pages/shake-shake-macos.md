@@ -3,7 +3,7 @@ title: "Shake, shake"
 permalink: /docs/projects/shake-shake-macos/
 ---
 
-**Note:** This manual steps for running **'Shake, shake'** project on macOS is subject to be changed.
+**Note:** This manual steps for running **'Shake, shake'** project on macOS is subject to change.
 {: .notice--warning}
 
 {% include toc icon="columns" %}
@@ -152,7 +152,7 @@ permalink: /docs/projects/shake-shake-macos/
 
 #### A. Open Arduino Examples folder in VS Code:
 
-Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page. Switch to **'Arduino Examples'** tab, navigate to `Examples for MXChip AZ3166 > AzureIoTHub` and click on `ShakeShake`.
+Make sure your DevKit is not connected. Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page. Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoTHub` and click on `ShakeShake`.
 
 ![shake-shake-example]({{"/assets/images/shake-shake-example.png" | absolute_url }})
 
