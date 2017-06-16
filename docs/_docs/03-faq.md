@@ -5,6 +5,8 @@ excerpt: "Frequently Asked Questions"
 last_modified_at: 2017-05-05T10:16:34-04:00
 ---
 
+{% include toc icon="columns" %}
+
 ## General
 
 ### Is DevKit a Microsoft hardware?
