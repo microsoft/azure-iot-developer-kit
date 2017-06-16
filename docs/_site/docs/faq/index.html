@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-15T23:09:10-07:00">
+  <meta property="article:published_time" content="2017-06-15T23:10:43-07:00">
 
 
 
@@ -356,7 +356,43 @@
       
 
       <section class="page__content" itemprop="text">
-        <h2 id="general">General</h2>
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-columns"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#general" id="markdown-toc-general">General</a>    <ul>
+      <li><a href="#is-devkit-a-microsoft-hardware" id="markdown-toc-is-devkit-a-microsoft-hardware">Is DevKit a Microsoft hardware?</a></li>
+      <li><a href="#why-arduino-compatible" id="markdown-toc-why-arduino-compatible">Why Arduino compatible?</a></li>
+      <li><a href="#are-you-going-to-open-source-the-product" id="markdown-toc-are-you-going-to-open-source-the-product">Are you going to open-source the product?</a></li>
+      <li><a href="#are-you-going-to-sell-it" id="markdown-toc-are-you-going-to-sell-it">Are you going to sell it?</a></li>
+    </ul>
+  </li>
+  <li><a href="#installation" id="markdown-toc-installation">Installation</a>    <ul>
+      <li><a href="#command-window-seems-stuck-and-there-is-no-progress-updated-for-a-while" id="markdown-toc-command-window-seems-stuck-and-there-is-no-progress-updated-for-a-while">Command window seems stuck and there is no progress updated for a while.</a></li>
+      <li><a href="#windows-defender-smartscreen-prevented-an-unrecognized-app-error" id="markdown-toc-windows-defender-smartscreen-prevented-an-unrecognized-app-error">Windows Defender SmartScreen prevented an unrecognized app error.</a></li>
+    </ul>
+  </li>
+  <li><a href="#wifi-configuration" id="markdown-toc-wifi-configuration">WiFi Configuration</a>    <ul>
+      <li><a href="#cannot-connect-to-some-wifi-hotspot" id="markdown-toc-cannot-connect-to-some-wifi-hotspot">Cannot connect to some WiFi hotspot.</a></li>
+      <li><a href="#cannot-connect-to-5ghz-wifi" id="markdown-toc-cannot-connect-to-5ghz-wifi">Cannot connect to 5GHz WiFi.</a></li>
+    </ul>
+  </li>
+  <li><a href="#cloud-provision" id="markdown-toc-cloud-provision">Cloud Provision</a>    <ul>
+      <li><a href="#cannot-log-in-azure-as-access-token-expired" id="markdown-toc-cannot-log-in-azure-as-access-token-expired">Cannot log in Azure as access token expired.</a></li>
+      <li><a href="#creating-new-azure-iot-hub-fails" id="markdown-toc-creating-new-azure-iot-hub-fails">Creating new Azure IoT Hub fails</a></li>
+    </ul>
+  </li>
+  <li><a href="#development" id="markdown-toc-development">Development</a>    <ul>
+      <li><a href="#vs-code-cannot-find-arduino-ide" id="markdown-toc-vs-code-cannot-find-arduino-ide">VS Code cannot find Arduino IDE</a></li>
+      <li><a href="#terminal-text-misaligned-in-vs-code" id="markdown-toc-terminal-text-misaligned-in-vs-code">Terminal text misaligned in VS Code.</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<h2 id="general">General</h2>
 
 <h3 id="is-devkit-a-microsoft-hardware">Is DevKit a Microsoft hardware?</h3>
 
@@ -414,7 +450,7 @@
 
 <p>When you previous have log in Azure, the access token may expired. Normally it will be handled by provision task.</p>
 
-<p>To solve it, delete the web browser history that includes the login data and run provision task again.</p>
+<p>To solve it, delete the web browser history that includes the login data and run provision task again. Or you can try to log in Azure manually by launching a Command Prompt and run <code class="highlighter-rouge">az login</code>.</p>
 
 <h3 id="creating-new-azure-iot-hub-fails">Creating new Azure IoT Hub fails</h3>
 
@@ -425,6 +461,12 @@
 <p>This is due to IoT Hub only allows <a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal" target="_blank">one free hub per Azure subscription</a>. In this case, you may select the existing IoT Hub instead of trying to create a new one.</p>
 
 <h2 id="development">Development</h2>
+
+<h3 id="vs-code-cannot-find-arduino-ide">VS Code cannot find Arduino IDE</h3>
+
+<p>Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package.</p>
+
+<p>To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.</p>
 
 <h3 id="terminal-text-misaligned-in-vs-code">Terminal text misaligned in VS Code.</h3>
 

@@ -5,6 +5,8 @@ excerpt: "Frequently Asked Questions"
 last_modified_at: 2017-05-05T10:16:34-04:00
 ---
 
+{% include toc icon="columns" %}
+
 ## General
 
 ### Is DevKit a Microsoft hardware?
@@ -63,7 +65,7 @@ Currently DevKit only can connect to 2.4GHz WiFi, 5GHz is not supported due to h
 
 When you previous have log in Azure, the access token may expired. Normally it will be handled by provision task.
 
-To solve it, delete the web browser history that includes the login data and run provision task again.
+To solve it, delete the web browser history that includes the login data and run provision task again. Or you can try to log in Azure manually by launching a Command Prompt and run `az login`.
 
 ### Creating new Azure IoT Hub fails
 
@@ -74,6 +76,12 @@ You may encounter the error message as the screen below:
 This is due to IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal){:target="_blank"}. In this case, you may select the existing IoT Hub instead of trying to create a new one.
 
 ## Development
+
+### VS Code cannot find Arduino IDE
+
+Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package.
+
+To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 
 ### Terminal text misaligned in VS Code.
 

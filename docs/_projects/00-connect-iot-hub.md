@@ -141,6 +141,10 @@ The sample application is running successfully when you see the following result
 
 ![Final output in VS Code]({{"/assets/images/happy-path-vscode-final-output.png" | absolute_url }})
 
+## Problems and feedback
+
+You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+
 ## Next steps
 
 You have successfully connected a MXChip IoT Developer Kit to your IoT hub, and sent the captured sensor data to your IoT hub.
