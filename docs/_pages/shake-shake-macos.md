@@ -12,8 +12,8 @@ permalink: /docs/projects/shake-shake-macos/
 
 1. Sign in to [Azure portal](https://portal.azure.com/).
 
-2. Click **New > Internet of Things > IoT Hub**:
- ![shake-shake-mac-iothub]({{"/assets/images/shake-shake-mac-iothub.png" | absolute_url }})
+2. Click **New > Internet of Things > IoT Hub** or search for 'IoT Hub' and click **Create**:
+ ![shake-shake-mac-create-iothub]({{"/assets/images/shake-shake-mac-create-iothub.png" | absolute_url }})
 
 3. In the **IoT hub** pane, enter the following information for your IoT hub:
  ![shake-shake-mac-hub-details]({{"/assets/images/shake-shake-mac-hub-details.png" | absolute_url }})
@@ -38,7 +38,7 @@ permalink: /docs/projects/shake-shake-macos/
 2. Click **Device Explorer**.
 
 3. In the Device Explorer pane, click **Add** to add a device to your IoT hub:
- ![shake-shake-mac-device]({{"/assets/images/shake-shake-mac-device.png" | absolute_url }})
+ ![shake-shake-mac-create-device]({{"/assets/images/shake-shake-mac-create-device.png" | absolute_url }})
  > * **Device ID**: The ID of the new device.
  > * **Authentication type**: Select Symmetric Key.
  > * **Auto generate keys**: Check this field.
@@ -114,9 +114,7 @@ Click **Resource Group > [your created resource group] > Overview** and find IoT
 
 7. Click **Create** to finish creating a new function.
 
-#### C. Install Azure Function dependencies
-
-#### C. Upload and run Azure Functions code
+#### C. Upload Azure Functions code and install dependencies
 
 1. Click **[my function name] > View Files > Upload**:
  ![shake-shake-mac-function-upload]({{"/assets/images/shake-shake-mac-function-upload.png" | absolute_url }})
@@ -127,7 +125,37 @@ Click **Resource Group > [your created resource group] > Overview** and find IoT
 ```
 
 3. Click `index.js` again to refresh the code:
+ ![shake-shake-mac-function-refresh]({{"/assets/images/shake-shake-mac-function-refresh.png" | absolute_url }})
 
+4. Click **Platform features > Console** to launch the console:
+ ![shake-shake-mac-open-console]({{"/assets/images/shake-shake-mac-open-console.png" | absolute_url }})
+
+5. Run command below to install the dependency packages:
+ ```bash
+ cd [function name]
+ npm install
+ ```
+ ![shake-shake-mac-npm-install]({{"/assets/images/shake-shake-mac-npm-install.png" | absolute_url }})
+
+#### D. Configure and run Azure Functions
+
+1. Click **Platform features > Application settings**:
+ ![shake-shake-mac-app-settings]({{"/assets/images/shake-shake-mac-app-settings.png" | absolute_url }})
+
+2. Find the settings name with value starts with **Endpoint=sb://...**, click on the name and copy the value:
+ ![shake-shake-mac-eventhub-connection-string]({{"/assets/images/shake-shake-mac-eventhub-connection-string.png" | absolute_url }})
+
+3. Go to your Azure Function code and find:
+ ```javascript
+ const iotHubConnectionString = process.env['iotHubConnectionString'];
+ ```
+ Replace the `iotHubConnectionString` with the settings name you just copied like:
+ ```javascript
+ const iotHubConnectionString = process.env['devkit-iot-hub_events_IOTHUB'];
+ ```
+ ![shake-shake-mac-function-run]({{"/assets/images/shake-shake-mac-function-run.png" | absolute_url }})
+
+4. 
 
 3. Click **[function name] > Platform features > Application settings**:
  ![shake-shake-mac-app-settings]({{"/assets/images/shake-shake-mac-app-settings.png" | absolute_url }})

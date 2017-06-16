@@ -197,8 +197,8 @@
     <p>Sign in to <a href="https://portal.azure.com/">Azure portal</a>.</p>
   </li>
   <li>
-    <p>Click <strong>New &gt; Internet of Things &gt; IoT Hub</strong>:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-iothub.png" alt="shake-shake-mac-iothub" /></p>
+    <p>Click <strong>New &gt; Internet of Things &gt; IoT Hub</strong> or search for ‘IoT Hub’ and click <strong>Create</strong>:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-create-iothub.png" alt="shake-shake-mac-create-iothub" /></p>
   </li>
   <li>In the <strong>IoT hub</strong> pane, enter the following information for your IoT hub:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-hub-details.png" alt="shake-shake-mac-hub-details" />
@@ -233,7 +233,7 @@
     <p>Click <strong>Device Explorer</strong>.</p>
   </li>
   <li>In the Device Explorer pane, click <strong>Add</strong> to add a device to your IoT hub:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-device.png" alt="shake-shake-mac-device" />
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-create-device.png" alt="shake-shake-mac-create-device" />
     <blockquote>
       <ul>
         <li><strong>Device ID</strong>: The ID of the new device.</li>
@@ -331,9 +331,7 @@
   </li>
 </ol>
 
-<h4 id="c-install-azure-function-dependencies">C. Install Azure Function dependencies</h4>
-
-<h4 id="c-upload-and-run-azure-functions-code">C. Upload and run Azure Functions code</h4>
+<h4 id="c-upload-azure-functions-code-and-install-dependencies">C. Upload Azure Functions code and install dependencies</h4>
 
 <ol>
   <li>
@@ -346,8 +344,44 @@
     </div>
   </li>
   <li>
-    <p>Click <code class="highlighter-rouge">index.js</code> again to refresh the code:</p>
+    <p>Click <code class="highlighter-rouge">index.js</code> again to refresh the code:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-refresh.png" alt="shake-shake-mac-function-refresh" /></p>
   </li>
+  <li>
+    <p>Click <strong>Platform features &gt; Console</strong> to launch the console:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-open-console.png" alt="shake-shake-mac-open-console" /></p>
+  </li>
+  <li>Run command below to install the dependency packages:
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nb">cd</span> <span class="o">[</span><span class="k">function </span>name]
+ npm install
+</code></pre>
+    </div>
+    <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-npm-install.png" alt="shake-shake-mac-npm-install" /></p>
+  </li>
+</ol>
+
+<h4 id="d-configure-and-run-azure-functions">D. Configure and run Azure Functions</h4>
+
+<ol>
+  <li>
+    <p>Click <strong>Platform features &gt; Application settings</strong>:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-app-settings.png" alt="shake-shake-mac-app-settings" /></p>
+  </li>
+  <li>
+    <p>Find the settings name with value starts with <strong>Endpoint=sb://…</strong>, click on the name and copy the value:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-eventhub-connection-string.png" alt="shake-shake-mac-eventhub-connection-string" /></p>
+  </li>
+  <li>Go to your Azure Function code and find:
+    <div class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="kr">const</span> <span class="nx">iotHubConnectionString</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">[</span><span class="s1">'iotHubConnectionString'</span><span class="p">];</span>
+</code></pre>
+    </div>
+    <p>Replace the <code class="highlighter-rouge">iotHubConnectionString</code> with the settings name you just copied like:</p>
+    <div class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="kr">const</span> <span class="nx">iotHubConnectionString</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">[</span><span class="s1">'devkit-iot-hub_events_IOTHUB'</span><span class="p">];</span>
+</code></pre>
+    </div>
+    <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-run.png" alt="shake-shake-mac-function-run" /></p>
+  </li>
+  <li></li>
   <li>
     <p>Click <strong>[function name] &gt; Platform features &gt; Application settings</strong>:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-app-settings.png" alt="shake-shake-mac-app-settings" /></p>
