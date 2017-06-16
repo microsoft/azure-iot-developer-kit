@@ -93,17 +93,17 @@ The `.zip` file you download contains all necessary tools and packages required 
 
 [<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/usb_install_latest.zip){: .btn .btn--success .btn--large}
 
-**MD5:** 01061ea0f8270db07fd808d35ad25759
+**MD5:** bf4b8f38066fa003f555d281d5e556a3
 {: .notice--info}
 
-> The `.zip` file contains the following tools and packageas. If you already have some components installed, the script will detect and skip them.
+> The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks
 > * Python and pip: For running Azure CLI 2.0
 > * [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/overview){:target="_blank"} - Cross-platform  command-line experience for managing Azure resources
 > * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"} (VS Code): Lightweight code editor for DevKit development
 > * [VS Code Arduino Extension](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino){:target="_blank"}: Enables Arduino development in VS Code
 > * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: VS Code Arduino Extension relies on this tool
-> * DevKit Board Package: Toolchains, libraries and projects for the DevKit
+> * DevKit Board Package: Tool chains, libraries and projects for the DevKit
 > * ST-Link Utility: Essential utility and drivers
 
 #### B. Run installation script
