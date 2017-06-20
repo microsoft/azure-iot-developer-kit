@@ -9,35 +9,35 @@ last_modified_at: 2017-05-05T10:16:34-04:00
 
 ## General
 
-### Is DevKit a Microsoft hardware?
+### Is the DevKit Microsoft hardware?
 
-No. We partnership with [MXChip](http://www.mxchip.com){:target="_blank"}, an established player for IoT hardware, and rapidly iterated on the design and engineering of an Arduino compatible board with rich preinstalled sensors. Our goal is boosting productivity for developers creating and prototype their IoT applications with awesome Visual Studio Code tooling.
+No. The hardware manufacturer is [MXChip](http://www.mxchip.com){:target="_blank"}, an established player for IoT hardware. , Through a partnership between MXChip and Microsoft, we rapidly iterated on the design and engineering of an Arduino compatible board with rich preinstalled sensors. Microsoft's goal is to boost productivity for developers creating and prototyping IoT applications with awesome Visual Studio Code tooling that leverages the power of Microsoft Azure.
 
 ### Why Arduino compatible?
 
-From industry data and customer research, we believe Arduino has a powerful and active community among pro makers. We want to be part of this strong community instead of building it from scratch.
+Based on industry data and customer research, we believe Arduino has a powerful and active community among professional makers. We want to be part of this strong community rather than building something from scratch.
 
 ### Are you going to open-source the product?
 
-Yes, we will open source the firmware, toolchains and all samples of it. And the board itself will also go as [open-source hardware](https://www.arduino.cc/en/Main/FAQ#toc3){:target="_blank"}. That means we will release all of the original design files for the hardware.
+Yes, we will open source the firmware, toolchains and all samples. Also, the board itself will be [open-source hardware](https://www.arduino.cc/en/Main/FAQ#toc3){:target="_blank"}. That means we will release all of the original hardware design files.
 
-We plan to do that as soon as we come to a stage that our entire framework is stable and polished enough, which we expect will be quick.
+Our plan is to do that as soon as we reach a stage where the entire framework is stable.
 
 ### Are you going to sell it?
 
-Now we really want to get our developers' feedback and their good stories on building IoT application using DevKit. With this in mind, we are going to disperse limited number of preview DevKits for free. You can [register here](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/) with a few simple questions we want to collect from you.
+Currently, we really want developer feedback and success stories using the DevKit to build IoT applications. With this in mind, we are going to distribute a limited number of DevKits for free. You can [register here](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/), there's only a few simple questions.
 
 ## Installation
 
-### Command window seems stuck and there is no progress updated for a while.
+### Command window seems stuck and there is no progress update for a while.
 
-This could probably due to you put the Windows command window into "Selection" mode. To verify it, check the command window title:
+This could be due to putting the Windows command window in "Selection" mode. To verify, check the command window title:
 
 ![getting-started-faq-select]({{"/assets/images/getting-started-faq-select.png" | absolute_url }})
 
-If you see **select** on the title, this means you are in Selection mode. It will prevent the refresh of the output. And that is why you cannot see the latest progress.
+If you see **select** on the title, this means you are in Selection mode. It prevents refresh of the output, that is why you cannot see any progress.
 
-To solve it, press any key within the command window area and you will see the **select** disappear on the title.
+To resolve, press any key within the command window area and you will see **select** disappear in the title.
 
 ### Windows Defender SmartScreen prevented an unrecognized app error.
 
@@ -45,27 +45,27 @@ To solve it, press any key within the command window area and you will see the *
 
 Sometimes SmartScreen will prevent applications you know are not bad – for example, it’s a CMD or VBS script.
 
-To solve it, click on the **'More info'** link and then click the **'Run anyway'** button. You can check this [knowledge base article](https://www.itsupportguides.com/knowledge-base/windows-10/windows-defender-smartscreen-prevented-an-unrecognized-app-error/){:target="_blank"} for more details.
+To resolve, click on the **'More info'** link and then click the **'Run anyway'** button. You can check this [knowledge base article](https://www.itsupportguides.com/knowledge-base/windows-10/windows-defender-smartscreen-prevented-an-unrecognized-app-error/){:target="_blank"} for more details.
 
 ## WiFi Configuration
 
-### Cannot connect to some WiFi hotspot.
+### Cannot connect to a WiFi hotspot.
 
-This is probably due to you are connecting to a WiFi that needs extra certification other than WPA/WPA2 or open WiFi requires captive portal for logging in such as WiFi in Starbucks.
+This may be because the WiFi network needs extra certification (other than WPA/WPA2) or open WiFi requires a captive portal to login such as Starbucks WiFi.
 
-To solve it, try use WiFi with normal WPA/WPA2 authentication.
+To resolve, try to use WiFi with normal WPA/WPA2 authentication.
 
 ### Cannot connect to 5GHz WiFi.
 
 Currently DevKit only can connect to 2.4GHz WiFi, 5GHz is not supported due to hardware restrictions.
 
-## Cloud Provision
+## Cloud Provisioning
 
 ### Cannot log in Azure as access token expired.
 
-When you previous have log in Azure, the access token may expired. Normally it will be handled by provision task.
+Due to a previous Azure log in, your access token may have expired. 
 
-To solve it, delete the web browser history that includes the login data and run provision task again. Or you can try to log in Azure manually by launching a Command Prompt and run `az login`.
+To fix, delete the web browser history that includes login data and run the provision task again. Alternatively, you can try to log in to Azure manually by launching Command Prompt and running `az login`.
 
 ### Creating new Azure IoT Hub fails
 
@@ -73,21 +73,21 @@ You may encounter the error message as the screen below:
 
 ![getting-started-faq-iothub]({{"/assets/images/getting-started-faq-iothub.png" | absolute_url }})
 
-This is due to IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal){:target="_blank"}. In this case, you may select the existing IoT Hub instead of trying to create a new one.
+This is because Azure IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal){:target="_blank"}. In this case, you may select the existing IoT Hub instead of trying to create a new one.
 
 ## Development
 
-### VS Code cannot find Arduino IDE
+### Visual Studio Code cannot find Arduino IDE
 
-Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package.
+Occasionally, when you launch Visual Studio Code, you will be prompted with an error message that it cannot find the Arduino IDE or related board package.
 
-To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
+To resolve, close Visual Studio Code, then launch the actual Arduino IDE once. Subsequently, when you open Visual Studio Code it should correctly locate the Arduino IDE path.
 
-### Terminal text misaligned in VS Code.
+### Terminal text misaligned in Visual Studio Code.
 
-This is a known bug for latest version VS Code ([#19665](https://github.com/Microsoft/vscode/issues/19665){:target="_blank"}) if you are using Powershell or CMD in terminal.
+This is a known bug for the latest version of Visual Studio Code ([#19665](https://github.com/Microsoft/vscode/issues/19665){:target="_blank"}) if you are using Powershell or CMD in terminal.
 
-To solve it, there is a [workaround](https://github.com/Microsoft/vscode/issues/19665#issuecomment-294536524){:target="_blank"}. Add this snippet into VS Code settings file:
+To resolve, there is a known [workaround](https://github.com/Microsoft/vscode/issues/19665#issuecomment-294536524){:target="_blank"}. Add this snippet into VS Code settings file:
 
 ```json
 "terminal.integrated.shellArgs.windows": [
