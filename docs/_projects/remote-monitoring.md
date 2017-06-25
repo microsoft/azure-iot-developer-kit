@@ -1,77 +1,96 @@
-In this project, you will learn how to send sensor data to Azure IoT Suite.
+In this tutorial, you learn how to run a sample app on DevKit to send sensor data to your Azure IoT Suite.
 
 ## What you need
 
 * Finish the [Getting Started Guide]({{"/docs/getting-started/" | absolute_url }})
+* MSA or Azure subscription.
 
 ## Windows
 
-### Step 1. Create Azure IoT Suite Solution
+### Step 1. Create an Azure IoT Suite
 
-Go to https://www.azureiotsuite.com/, and click create a new solution:
+1. Go to [Azure IoT Suite site](https://www.azureiotsuite.com/) and click **Create a new solution**.
 
 ![remote-monitoring-azure-iot-suite-solution-types]({{"/assets/images/remote-monitoring-azure-iot-suite-solution-types" | absolute_url }})
 
-Select remote monitoring, then type solution name and select subscription and region:
+2. Select **Remote monitoring**.
+
+3. Enter a solution name, select a subscription and a region, and then click **Create solution**. The solution may take a while to be provisioned.
 
 ![remote-monitoring-azure-iot-suite-new-solution]({{"/assets/images/remote-monitoring-azure-iot-suite-new-solution" | absolute_url }})
 
-After a while, your solution will be deploy.
+4. After the provision is complited, click **Launch**. Some simulated devices are created for the solution during the provision process. Click **DEVICES** to check them out.
 
 ![remote-monitoring-azure-iot-suite-new-solution-created]({{"/assets/images/remote-monitoring-azure-iot-suite-new-solution-created" | absolute_url }})
 
-Click launch button to open your solution console. You will see some simulated devices have already been added in the solution.
-
 ![remote-monitoring-azure-iot-suite-console]({{"/assets/images/remote-monitoring-azure-iot-suite-console" | absolute_url }})
 
-Click add a device on bottom left of the page and add a custom device.
+5. Click **ADD A DEVICE**.
+
+6. Click **Add New** for **Custom Device**.
 
 ![remote-monitoring-azure-iot-suite-add-new-device]({{"/assets/images/remote-monitoring-azure-iot-suite-add-new-device" | absolute_url }})
 
-In the custom device configuration page, check let me define my own Device ID, and type AZ3166, then click create button.
+7. Click **Let me define my own Device ID**, enter `AZ3166`, and then click **Create**.
 
 ![remote-monitoring-azure-iot-suite-new-device-configuration]({{"/assets/images/remote-monitoring-azure-iot-suite-new-device-configuration" | absolute_url }})
 
-### Step 2. Open project folder
+8. Make a note of **IoT Hub Hostname**, and click **Done**.
 
-#### A. Launch VS Code
+### Step 2. Open the RemoteMonitoring sample
 
-Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
+1. Disconnect DevKit from your computer if it is connected.
+
+2. Launch VS Code.
+
+3. Connect DevKit to your computer. VS Code automatically detects your DevKit and opens the following pages:
+
+  * Preview README.md: The DevKit introduction page.
+  * Arduino Examples: Hands-on samples to get started with DevKit.
+
+4. On the **Arduino Examples page**, expand `Examples for MXCHIP AZ3166 > SensorStatus`, and then click **RemoteMonitoring**. The RemoteMonitoring sample opens in a new VS Code window.
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
-#### B. Open Arduino Examples folder
+If the **Arduino Examples** page doesn’t show up, open it by the following steps:
 
-Switch to **'Arduino Examples'** tab, navigate to `Examples for MXChip AZ3166 > SensorStatus` and click on `RemoteMonitoring`.
+1. Press `Ctrl+Shift+P` to open the command palette.
+2. In the command palette, type `Arduino`, and then click **Arduino: Examples**.
 
-If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
+### Step 3. Provision required Azure services
 
-### Step 3. Provision Azure services
+1. In the RemoteMonitoring sample window, press `Ctrl+P`, type `task cloud`, and then click **cloud-provision**.
+The cloud-provision task opens an interactive command line that guides you through provisioning the required Azure services.
 
-In the solution window, run your task through **Quick Open** (`Ctrl+P`) by typing 'task cloud-provision':
+2. In the interactive command line, select the IoT hub represented by the IoT Hub Hostname that you noted down.
 
-In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services. Select IoT Hub created in Azure IoT Suite solution. The IoT Hub name should contain the solution name.
+3. Wait for the provision to complete.
 
 ![remote-monitoring-provision]({{"/assets/images/remote-monitoring-provision.png" | absolute_url }})
 
-### Step 4. Build and upload Arduino sketch
+### Step 4. Upload the RemoteMonitoring sample to DevKit
 
-Use **Quick Open** (`Ctrl+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+1. In the RemoteMonitoring sample window, press `Ctrl+P`, type `task device`, and then click **device-upload**. The interactive command line prompts you to set DevKit to configuration mode.
 
-Then it will start verifying and uploading the Arduino sketch:
+2. On DevKit, press and hold button A, press the Reset button, and then release button A.
+The screen should display `Configuration` if DevKit is running in configuration mode.
+
+3. Wait for the upload to complete.
+Once the upload is completed, DevKit restarts and runs the sample.
 
 ![remote-monitoring-build]({{"/assets/images/remote-monitoring-build.png" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+## Verify the result
 
-## Test the project
+When the sample app runs, DevKit sends sensor data over Wi-Fi to your Azure IoT Suite. To see the result, follow these steps:
 
-After app initialization, DevKit will connect to WiFi and send sensor data to Azure IoT Suite automatically:
+1. Go to your Azure IoT Suite, and click **DASHBOARD**.
+
+2. Azure IoT Suite solution console, you will see DevKit sensor status.
+
 
 ![remote-monitoring-connect-wifi]({{"/assets/images/remote-monitoring-connect-wifi.png" | absolute_url }})
 
 ![remote-monitoring-send-data]({{"/assets/images/remote-monitoring-send-data.png" | absolute_url }})
-
-Go to Azure IoT Suite solution console, you will see DevKit sensor status:
 
 ![remote-monitoring-sensor-status]({{"/assets/images/remote-monitoring-sensor-status.png" | absolute_url }})
