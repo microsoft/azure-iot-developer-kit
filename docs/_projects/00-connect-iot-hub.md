@@ -21,7 +21,7 @@ Connect DevKit to an Azure IoT hub that you create, collect the temperature and 
 
 ## What you need
 
-* Finish the [Getting Started Guide]({{"/docs/getting-started/" | absolute_url }})
+* Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
 
 ## Create an IoT hub and register a device for MXChip IoT Developer Kit
 
