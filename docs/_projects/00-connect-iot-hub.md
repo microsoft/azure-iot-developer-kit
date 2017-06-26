@@ -96,6 +96,12 @@ In this section, you deploy and run a sample application on MXChip IoT Developer
 
 2. In the `Arduino Examples` tab, expand `Examples for MXCHIP AZ3166` > `AzureIoTHub`, and then click `GetStarted`.
 
+###  Install required libraries
+
+1. In the Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open command palette, type **Arduino: Libraries Manager**.
+
+2. Search for the `ArduinoJson` library and click **Install**. 
+
 ### Configure device connection string to DevKit (Windows)
 
 1. Download and install [PuTTY](http://www.putty.org/){:target="_blank"}.
