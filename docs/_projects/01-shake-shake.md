@@ -24,7 +24,7 @@ In this project, you will learn how to use the motion sensor to trigger an event
 
 ## What you need
 
-* Finish the [Getting Started Guide]({{"/docs/getting-started/" | absolute_url }})
+* Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
 
 ## Windows
 
