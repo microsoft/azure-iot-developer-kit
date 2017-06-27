@@ -143,6 +143,9 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 ![shake-shake-example]({{"/assets/images/shake-shake-example.png" | absolute_url }})
 
+**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
+{: .notice--warning}
+
 #### B. Compile and upload the Arduino sketch
 
 Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Upload**. Then it will start compiling and uploading the Arduino sketch. After it is done, the DevKit will reboot and start running the code.
