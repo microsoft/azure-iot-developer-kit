@@ -156,6 +156,9 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 ![shake-shake-example]({{"/assets/images/shake-shake-example.png" | absolute_url }})
 
+**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
+{: .notice--warning}
+
 #### B. Modify the #hashtag
 
 Open `ShakeShake.ino` and look for the line of code:
