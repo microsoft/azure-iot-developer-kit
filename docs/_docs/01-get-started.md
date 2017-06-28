@@ -43,6 +43,9 @@ If this is the first time you are developing on the DevKit, follow [Upgrading]({
 
 This is a one-time effort, once you start developing on the DevKit and upload your app, you will have the latest firmware.
 
+**Tip:** You will see the firmware version on the screen of the kit. If there is no version number, it means the DevKit is running on old version and needs to upgrade. [Versions]({{"/versions/" | absolute_url }}) contains latest version number and release notes.
+{: .notice--info}
+
 #### D. Test sensors and WiFi on DevKit
 
 Now you have connected your DevKit to computer. Follow the instructions on the screen to test sensors and WiFi:
@@ -93,9 +96,9 @@ For **Windows** users, follow the steps below:
 
 The `.zip` file you download contains all necessary tools and packages required for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/usb_install_latest.zip){: .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/devkit_install_1.0.0.zip){: .btn .btn--success .btn--large}
 
-**MD5:** bf4b8f38066fa003f555d281d5e556a3
+**MD5:** d80dc1736c5fe33bd66d7e9e6b4865fa
 {: .notice--info}
 
 > The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.

@@ -12,7 +12,7 @@ Once the DevKit is connected, you will see a new USB mass storage device in your
 ## Step 2. Upgrade firmware
 
 1. Download the latest firmware: 
- [iot-devkit-0505.bin](https://azureboard.blob.core.windows.net/firmware/iot-devkit-0505.bin)
+ [devkit-firmware-1.0.0.bin](https://azureboard.blob.core.windows.net/firmware/devkit-firmware-1.0.0.bin)
 
 2. Drag & drop the `.bin` file you downloaded to `AZ3166` device.
 
