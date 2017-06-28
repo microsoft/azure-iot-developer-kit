@@ -14,12 +14,12 @@
 
 
 
-<title>Projects Catalog - IoT Developer Kits</title>
+<title>IrDA Sensor - IoT Developer Kits</title>
 
 
 
 
-<meta name="description" content="                                                      Connect to Azure IoT Hub                  Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub.                                                        Shake, Shake                  Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag.                                                        Your Ideas?                  We really want to hear about the cool and innovative ways you are using the DevKit. Please share your ideas with us to iot-devkit@microsoft.com.    ">
+<meta name="description" content="Library for IrDA, IrDA on AZ3166">
 
 
 
@@ -28,15 +28,15 @@
 
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="IoT Developer Kits">
-<meta property="og:title" content="Projects Catalog">
+<meta property="og:title" content="IrDA Sensor">
 
 
-  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/projects/">
-  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/projects/">
+  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/">
+  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/">
 
 
 
-  <meta property="og:description" content="                                                      Connect to Azure IoT Hub                  Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub.                                                        Shake, Shake                  Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag.                                                        Your Ideas?                  We really want to hear about the cool and innovative ways you are using the DevKit. Please share your ideas with us to iot-devkit@microsoft.com.    ">
+  <meta property="og:description" content="Library for IrDA, IrDA on AZ3166">
 
 
 
@@ -126,7 +126,7 @@
 <!-- end custom head snippets -->
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -335,7 +335,7 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/" class="">IrDA</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/" class="active">IrDA</a></li>
           
         </ul>
         
@@ -348,85 +348,179 @@
   </div>
 
 
-  <div class="archive">
-    
-      <h1 class="page__title">Projects Catalog</h1>
-    
-    <div class="grid__wrapper">
-  
-    
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="IrDA Sensor">
+    <meta itemprop="description" content="Library for IrDA, IrDA on AZ3166">
+    <meta itemprop="datePublished" content="June 28, 2017">
+    <meta itemprop="dateModified" content="June 28, 2017">
 
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/projects-iothub-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="http://localhost:4000/azure-iot-developer-kit/docs/projects/connect-iot-hub" rel="permalink">Connect to Azure IoT Hub
-</a>
+        <header>
+          <h1 class="page__title" itemprop="headline">IrDA Sensor
+</h1>
+          
+        </header>
       
-    </h2>
+
+      <section class="page__content" itemprop="text">
+        <p>Implementation file for the IrDA driver class.</p>
+
+<h2 id="assembly">Assembly</h2>
+
+<p>IrDASensor.h</p>
+
+<h2 id="summary">Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Constructors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#IRDASensor">IRDASensor</a> - <code class="highlighter-rouge">IRDASensor()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Methods</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#init">init</a> - <code class="highlighter-rouge">int init()</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#IRDATransmit">IRDATransmit</a> - <code class="highlighter-rouge">unsigned char IRDATransmit( unsigned char *pData, int size, int timeout)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="constructors">Constructors</h2>
+
+<h3 id="irdasensor">IRDASensor</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">IRDASensor</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <h4 id="parameters">Parameters</h4>
+  <p>None.</p>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="init">init</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">init</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Initializing the component.</p>
+
+  <h4 id="parameters-1">Parameters</h4>
+
+  <p>None.</p>
+
+  <h4 id="return-value">Return value</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="irdatransmit">IRDATransmit</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">IRDATransmit</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pData</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">timeout</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Transmit data with IrDA.</p>
+
+  <h4 id="parameters-2">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">unsigned char *</td>
+        <td style="text-align: left">pData</td>
+        <td style="text-align: left">Pointer of data to send.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">size</td>
+        <td style="text-align: left">Size of data to send.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">timeout</td>
+        <td style="text-align: left">Duration of the timeout.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-28">June 28, 2017</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
     
-    <p class="archive__item-excerpt" itemprop="description">Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub.
-</p>
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps22hb/" class="pagination--pager" title="LPS22HB Sensor
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
   </article>
-</div>
+
   
-    
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/projects-shake-shake-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/azure-iot-developer-kit/docs/projects/shake-shake/" rel="permalink">Shake, Shake
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag.
-</p>
-  </article>
-</div>
-  
-    
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/projects-your-ideas-th.jpg" alt="" />
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/azure-iot-developer-kit/docs/projects/" rel="permalink">Your Ideas?
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">We really want to hear about the cool and innovative ways you are using the DevKit. Please share your ideas with us to iot-devkit@microsoft.com.
-</p>
-  </article>
-</div>
   
 </div>
 
-  </div>
-</div>
 
     <div class="page__footer">
       <footer>

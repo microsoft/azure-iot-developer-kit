@@ -21,7 +21,7 @@ Connect DevKit to an Azure IoT hub that you create, collect the temperature and 
 
 ## What you need
 
-* Finish the [Getting Started Guide]({{"/docs/getting-started/" | absolute_url }})
+* Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
 
 ## Create an IoT hub and register a device for MXChip IoT Developer Kit
 
@@ -95,6 +95,12 @@ In this section, you deploy and run a sample application on MXChip IoT Developer
 1. In Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open the command palette, and then type `Arduino: Examples`.
 
 2. In the `Arduino Examples` tab, expand `Examples for MXCHIP AZ3166` > `AzureIoTHub`, and then click `GetStarted`.
+
+###  Install required libraries
+
+1. In the Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open command palette, type **Arduino: Libraries Manager**.
+
+2. Search for the `ArduinoJson` library and click **Install**. 
 
 ### Configure device connection string to DevKit (Windows)
 
