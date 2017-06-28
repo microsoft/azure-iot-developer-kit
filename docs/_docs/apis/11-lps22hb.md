@@ -22,17 +22,17 @@ LPS22HBSensor.h
 
 | Constructors |
 | :----------- |
-| [LPS22HBSensor](#LPS22HBSensor) - `LPS22HBSensor(DevI2C &i2c)` |
-| [LPS22HBSensor](#LPS22HBSensor-1) - `LPS22HBSensor(DevI2C &i2c)` |
+| [LPS22HBSensor](#lps22hbsensor) - `LPS22HBSensor(DevI2C &i2c)` |
+| [LPS22HBSensor](#lps22hbsensor-1) - `LPS22HBSensor(DevI2C &i2c)` |
 
 | Methods |
 | :------ |
 | [init](#init) - `int init(void *init)` |
-| [deInit](#deInit) - `int deInit()` |
-| [readId](#readId) - `int readId(uint8_t *p_id)` |
+| [deInit](#deinit) - `int deInit()` |
+| [readId](#readid) - `int readId(uint8_t *p_id)` |
 | [reset](#reset) - `int reset(void)` |
-| [getPressure](#getPressure) - `int getPressure(float *pfData)` |
-| [getTemperature](#getTemperature) - `int getTemperature(float *pfData)` |
+| [getPressure](#getpressure) - `int getPressure(float *pfData)` |
+| [getTemperature](#gettemperature) - `int getTemperature(float *pfData)` |
 
 ## Types
 
