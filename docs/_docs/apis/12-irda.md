@@ -15,12 +15,12 @@ IrDASensor.h
 
 | Constructors |
 | :----------- |
-| [IRDASensor](#IRDASensor) - `IRDASensor()` |
+| [IRDASensor](#irdasensor) - `IRDASensor()` |
 
 | Methods |
 | :------ |
 | [init](#init) - `int init()` |
-| [IRDATransmit](#IRDATransmit) - `unsigned char IRDATransmit( unsigned char *pData, int size, int timeout)` |
+| [IRDATransmit](#irdatransmit) - `unsigned char IRDATransmit( unsigned char *pData, int size, int timeout)` |
 
 ## Constructors
 

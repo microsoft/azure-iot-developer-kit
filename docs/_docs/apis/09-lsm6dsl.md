@@ -30,61 +30,61 @@ LSM6DSLSensor.h
 | Methods |
 | :------ |
 | [init](#init) - `int init(void *init)` |
-| [enableAccelerator](#enableAccelerator) - `int enableAccelerator(void)` |
-| [enableGyroscope](#enableGyroscope) - `int enableGyroscope(void)` |
-| [disableAccelerator](#disableAccelerator) - `int disableAccelerator(void)` |
-| [disableGyroscope](#disableGyroscope) - `int disableGyroscope(void)` |
-| [readId](#readId) - `int readId(unsigned char *id)` |
-| [getXAxes](#getXAxes) - `int getXAxes(int *pData)` |
-| [getGAxes](#getGAxes) - `int getGAxes(int *pData)` |
-| [getXSensitivity](#getXSensitivity) - `int getXSensitivity(float *pfData)` |
-| [getGSensitivity](#getGSensitivity) - `int getGSensitivity(float *pfData)` |
-| [getXAxesRaw](#getXAxesRaw) - `int getXAxesRaw(int16_t *pData)` |
-| [getGAxesRaw](#getGAxesRaw) - `int getGAxesRaw(int16_t *pData)` |
-| [getXOdr](#getXOdr) - `int getXOdr(float* odr)` |
-| [getGOdr](#getGOdr) - `int getGOdr(float* odr)` |
-| [set_x_odr](#set_x_odr) - `int set_x_odr(float odr)` |
-| [setXOdrWhenEnabled](#setXOdrWhenEnabled) - `int setXOdrWhenEnabled(float odr)` |
-| [setXOdrWhenDisabled](#setXOdrWhenDisabled) - `int setXOdrWhenDisabled(float odr)` |
-| [set_g_odr](#set_g_odr) - `int set_g_odr(float odr)` |
-| [setGOdrWhenEnabled](#setGOdrWhenEnabled) - `int setGOdrWhenEnabled(float odr)` |
-| [setGOdrWhenDisabled](#setGOdrWhenDisabled) - `int setGOdrWhenDisabled(float odr)` |
-| [getXFullScale](#getXFullScale) - `int getXFullScale(float* fullScale)` |
-| [getGFullScale](#getGFullScale) - `int getGFullScale(float* fullScale)` |
-| [setXFullScale](#setXFullScale) - `int setXFullScale(float fullScale)` |
-| [setGFullScale](#setGFullScale) - `int setGFullScale(float fullScale)` |
-| [enableFreeFallDetection](#enableFreeFallDetection) - `int enableFreeFallDetection(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disableFreeFallDetection](#disableFreeFallDetection) - `int disableFreeFallDetection(void)` |
-| [setFreeFallThreshold](#setFreeFallThreshold) - `int setFreeFallThreshold(uint8_t thr)` |
-| [enablePedometer](#enablePedometer) - `int enablePedometer(void)` |
-| [disablePedometer](#disablePedometer) - `int disablePedometer(void)` |
-| [getStepCounter](#getStepCounter) - `int getStepCounter(int *step_count)` |
-| [resetStepCounter](#resetStepCounter) - `int resetStepCounter(void)` |
-| [setPedometerThreshold](#setPedometerThreshold) - `int setPedometerThreshold(unsigned char thr)` |
-| [enableTiltDetection](#enableTiltDetection) - `int enableTiltDetection(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disableTiltDetection](#disableTiltDetection) - `int disableTiltDetection(void)` |
-| [enableWakeUpDetection](#enableWakeUpDetection) - `int enableWakeUpDetection(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disableWakeUpDetection](#disableWakeUpDetection) - `int disableWakeUpDetection(void)` |
-| [setWakeUpThreshold](#setWakeUpThreshold) - `int setWakeUpThreshold(unsigned char thr)` |
-| [enableSingleTapDetection](#enableSingleTapDetection) - `int enableSingleTapDetection(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disableSingleTapDetection](#disableSingleTapDetection) - `int disableSingleTapDetection(void)` |
-| [enableDoubleTapDetection](#enableDoubleTapDetection) - `int enableDoubleTapDetection(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disableDoubleTapDetection](#disableDoubleTapDetection) - `int disableDoubleTapDetection(void)` |
-| [setTapThreshold](#setTapThreshold) - `int setTapThreshold(unsigned char thr)` |
-| [setTapShockTime](#setTapShockTime) - `int setTapShockTime(uint8_t time)` |
-| [setTapQuietTime](#setTapQuietTime) - `int setTapQuietTime(uint8_t time)` |
-| [setTapDurationTime](#setTapDurationTime) - `int setTapDurationTime(uint8_t time)` |
-| [enable6dOrientation](#enable6dOrientation) - `int enable6dOrientation(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disable6dOrientation](#disable6dOrientation) - `int disable6dOrientation(void)` |
-| [get6dOrientationXL](#get6dOrientationXL) - `int get6dOrientationXL(uint8_t *xl)` |
-| [get6dOrientationXH](#get6dOrientationXH) - `int get6dOrientationXH(uint8_t *xh)` |
-| [get6dOrientationYL](#get6dOrientationYL) - `int get6dOrientationYL(uint8_t *yl)` |
-| [get6dOrientationYH](#get6dOrientationYH) - `int get6dOrientationYH(uint8_t *yh)` |
-| [get6dOrientationZL](#get6dOrientationZL) - `int get6dOrientationZL(uint8_t *zl)` |
-| [get6dOrientationZH](#get6dOrientationZH) - `int get6dOrientationZH(uint8_t *zh)` |
-| [getEventStatus](#getEventStatus) - `int getEventStatus(LSM6DSL_Event_Status_t *status)` |
-| [readReg](#readReg) - `int readReg(uint8_t reg, uint8_t *data)` |
-| [writeReg](#writeReg) - `int writeReg(uint8_t reg, uint8_t data)` |
+| [enableAccelerator](#enableaccelerator) - `int enableAccelerator(void)` |
+| [enableGyroscope](#enablegyroscope) - `int enableGyroscope(void)` |
+| [disableAccelerator](#disableaccelerator) - `int disableAccelerator(void)` |
+| [disableGyroscope](#disablegyroscope) - `int disableGyroscope(void)` |
+| [readId](#readid) - `int readId(unsigned char *id)` |
+| [getXAxes](#getxaxes) - `int getXAxes(int *pData)` |
+| [getGAxes](#getgaxes) - `int getGAxes(int *pData)` |
+| [getXSensitivity](#getxsensitivity) - `int getXSensitivity(float *pfData)` |
+| [getGSensitivity](#getgsensitivity) - `int getGSensitivity(float *pfData)` |
+| [getXAxesRaw](#getxaxesraw) - `int getXAxesRaw(int16_t *pData)` |
+| [getGAxesRaw](#getgaxesraw) - `int getGAxesRaw(int16_t *pData)` |
+| [getXOdr](#getxodr) - `int getXOdr(float* odr)` |
+| [getGOdr](#getgodr) - `int getGOdr(float* odr)` |
+| [setXOdr](#setxodr) - `int setXOdr(float odr)` |
+| [setXOdrWhenEnabled](#setxodrwhenenabled) - `int setXOdrWhenEnabled(float odr)` |
+| [setXOdrWhenDisabled](#setxodrwhendisabled) - `int setXOdrWhenDisabled(float odr)` |
+| [setGOdr](#setgodr) - `int setGOdr(float odr)` |
+| [setGOdrWhenEnabled](#setgodrwhenenabled) - `int setGOdrWhenEnabled(float odr)` |
+| [setGOdrWhenDisabled](#setgodrwhendisabled) - `int setGOdrWhenDisabled(float odr)` |
+| [getXFullScale](#getxfullscale) - `int getXFullScale(float* fullScale)` |
+| [getGFullScale](#getgfullscale) - `int getGFullScale(float* fullScale)` |
+| [setXFullScale](#setxfullscale) - `int setXFullScale(float fullScale)` |
+| [setGFullScale](#setgfullscale) - `int setGFullScale(float fullScale)` |
+| [enableFreeFallDetection](#enablefreefalldetection) - `int enableFreeFallDetection(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disableFreeFallDetection](#disablefreefalldetection) - `int disableFreeFallDetection(void)` |
+| [setFreeFallThreshold](#setfreefallthreshold) - `int setFreeFallThreshold(uint8_t thr)` |
+| [enablePedometer](#enablepedometer) - `int enablePedometer(void)` |
+| [disablePedometer](#disablepedometer) - `int disablePedometer(void)` |
+| [getStepCounter](#getstepcounter) - `int getStepCounter(int *step_count)` |
+| [resetStepCounter](#resetstepcounter) - `int resetStepCounter(void)` |
+| [setPedometerThreshold](#setpedometerthreshold) - `int setPedometerThreshold(unsigned char thr)` |
+| [enableTiltDetection](#enabletiltdetection) - `int enableTiltDetection(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disableTiltDetection](#disabletiltdetection) - `int disableTiltDetection(void)` |
+| [enableWakeUpDetection](#enablewakeupdetection) - `int enableWakeUpDetection(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disableWakeUpDetection](#disablewakeupdetection) - `int disableWakeUpDetection(void)` |
+| [setWakeUpThreshold](#setwakeupthreshold) - `int setWakeUpThreshold(unsigned char thr)` |
+| [enableSingleTapDetection](#enablesingletapdetection) - `int enableSingleTapDetection(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disableSingleTapDetection](#disablesingletapdetection) - `int disableSingleTapDetection(void)` |
+| [enableDoubleTapDetection](#enabledoubletapdetection) - `int enableDoubleTapDetection(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disableDoubleTapDetection](#disabledoubletapdetection) - `int disableDoubleTapDetection(void)` |
+| [setTapThreshold](#settapthreshold) - `int setTapThreshold(unsigned char thr)` |
+| [setTapShockTime](#settapshocktime) - `int setTapShockTime(uint8_t time)` |
+| [setTapQuietTime](#settapquiettime) - `int setTapQuietTime(uint8_t time)` |
+| [setTapDurationTime](#settapdurationtime) - `int setTapDurationTime(uint8_t time)` |
+| [enable6dOrientation](#enable6dorientation) - `int enable6dOrientation(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disable6dOrientation](#disable6dorientation) - `int disable6dOrientation(void)` |
+| [get6dOrientationXL](#get6dorientationxl) - `int get6dOrientationXL(uint8_t *xl)` |
+| [get6dOrientationXH](#get6dorientationxh) - `int get6dOrientationXH(uint8_t *xh)` |
+| [get6dOrientationYL](#get6dorientationyl) - `int get6dOrientationYL(uint8_t *yl)` |
+| [get6dOrientationYH](#get6dorientationyh) - `int get6dOrientationYH(uint8_t *yh)` |
+| [get6dOrientationZL](#get6dorientationzl) - `int get6dOrientationZL(uint8_t *zl)` |
+| [get6dOrientationZH](#get6dorientationzh) - `int get6dOrientationZH(uint8_t *zh)` |
+| [getEventStatus](#geteventstatus) - `int getEventStatus(LSM6DSL_Event_Status_t *status)` |
+| [readReg](#readreg) - `int readReg(uint8_t reg, uint8_t *data)` |
+| [writeReg](#writereg) - `int writeReg(uint8_t reg, uint8_t data)` |
 
 ## Types
 
@@ -409,10 +409,10 @@ int getGOdr(float *odr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_x_odr
+### setXOdr
 
 ```cpp
-int set_x_odr(float odr)
+int setXOdr(float odr)
 ```
 
 > Set LSM6DSL Accelerometer output data rate.
@@ -469,10 +469,10 @@ int setXOdrWhenDisabled(float odr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_g_odr
+### setGOdr
 
 ```cpp
-int set_g_odr(float odr)
+int setGOdr(float odr)
 ```
 
 > Set LSM6DSL Gyroscope output data rate.

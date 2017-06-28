@@ -27,8 +27,8 @@ LIS2MDLSensor.h
 | Methods |
 | :------ |
 | [init](#init) - `int init()` |
-| [readId](#readId) - `int readId(unsigned char *m_id)` |
-| [getMAxes](#getMAxes) - `int getMAxes(int *pData)` |
+| [readId](#readid) - `int readId(unsigned char *m_id)` |
+| [getMAxes](#getmaxes) - `int getMAxes(int *pData)` |
 
 ## Types
 
