@@ -1,3 +1,14 @@
+---
+title: "Remote Monitoring"
+permalink: /docs/projects/remote-monitoring/
+excerpt: "Send status of sensors on DevKit to Azure IoT Suite.
+"
+header:
+  image: /assets/images/projects-remote-monitoring.jpg
+  teaser: /assets/images/projects-remote-monitoring-th.jpg
+last_modified_at: 2017-06-28T06:23:34-04:00
+---
+
 In this tutorial, you learn how to run a sample app on DevKit to send sensor data to your Azure IoT Suite.
 
 ## What you need
