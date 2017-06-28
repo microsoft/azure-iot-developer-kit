@@ -12,8 +12,8 @@ permalink: /docs/projects/shake-shake-macos/
 
 1. Sign in to [Azure portal](https://portal.azure.com/).
 
-2. Click **New > Internet of Things > IoT Hub**:
- ![shake-shake-mac-iothub]({{"/assets/images/shake-shake-mac-iothub.png" | absolute_url }})
+2. Click **New > Internet of Things > IoT Hub** or search for 'IoT Hub' and click **Create**:
+ ![shake-shake-mac-create-iothub]({{"/assets/images/shake-shake-mac-create-iothub.png" | absolute_url }})
 
 3. In the **IoT hub** pane, enter the following information for your IoT hub:
  ![shake-shake-mac-hub-details]({{"/assets/images/shake-shake-mac-hub-details.png" | absolute_url }})
@@ -26,10 +26,11 @@ permalink: /docs/projects/shake-shake-macos/
 4. Click **Create**. It could take a few minutes for your IoT hub to be created. You can see progress in the **Notifications** pane:
  ![shake-shake-mac-notification]({{"/assets/images/shake-shake-mac-notification.png" | absolute_url }})
 
-5. After your IoT hub is created, click it from the dashboard. Make a note of the **Hostname** value that is used later in this article, and then click **Shared access policies**:
- ![shake-shake-mac-policies]({{"/assets/images/shake-shake-mac-policies.png" | absolute_url }})
+5. After your IoT hub is created, click it from the Resource groups. Make a note of the IoT Hub name:
+ ![shake-shake-mac-iothub-name]({{"/assets/images/shake-shake-mac-iothub-name.png" | absolute_url }})
 
-6. In the **Shared access policies** pane, click the **iothubowner** policy, and then copy and save the **Connection string** value for your IoT hub:
+6. Click on the IoT Hub name, in the **Shared access policies** pane, click the **iothubowner** policy, and then make a note of the **Connection string** value for your IoT hub:
+ ![shake-shake-mac-iothub-connection-string]({{"/assets/images/shake-shake-mac-iothub-connection-string.png" | absolute_url }})
 
 ### Step 2. Register a device in the IoT hub for the your device
 
@@ -37,8 +38,8 @@ permalink: /docs/projects/shake-shake-macos/
 
 2. Click **Device Explorer**.
 
-3. In the Device Explorer pane, click **Add** to add a device to your IoT hub:
- ![shake-shake-mac-device]({{"/assets/images/shake-shake-mac-device.png" | absolute_url }})
+3. In the Device Explorer pane, click **Add** to add a device with name "**AZ3166**" to your IoT hub:
+ ![shake-shake-mac-create-device]({{"/assets/images/shake-shake-mac-create-device.png" | absolute_url }})
  > * **Device ID**: The ID of the new device.
  > * **Authentication type**: Select Symmetric Key.
  > * **Auto generate keys**: Check this field.
@@ -86,17 +87,7 @@ permalink: /docs/projects/shake-shake-macos/
 
 ### Step 4. Deploy Azure Functions
 
-#### A. Get IoT Hub name and connection string
-
-1. Click **Resource Group > [your created resource group] > Overview > [your created IoT Hub]
- ![shake-shake-mac-resource-group]({{"/assets/images/shake-shake-mac-resource-group.png" | absolute_url }})
-
-2. In IoT Hub, click **Endpoints > Events** and note 'Event Hub name' and 'Event Hub endpoint'
- ![shake-shake-mac-iothub-name]({{"/assets/images/shake-shake-mac-iothub-name.png" | absolute_url }})
-
- You will need these information when creating Azure Functions.
-
-#### B. Create Azure Functions
+#### A. Create Azure Functions
 
 1. Click **New > Everything** and search for **Function App**:
  ![shake-shake-mac-create-function-app]({{"/assets/images/shake-shake-mac-create-function-app.png" | absolute_url }})
@@ -107,33 +98,55 @@ permalink: /docs/projects/shake-shake-macos/
 3. Go to the Function App you just created and create a new custom function:
  ![shake-shake-mac-custom-function]({{"/assets/images/shake-shake-mac-custom-function.png" | absolute_url }})
 
-4. Choose **EventHubTrigger-Javascript** from the template list and create a new 'Event Hub connection':
+4. Choose **EventHubTrigger-Javascript** from the template list and type the IoT Hub name you noted in **Event Hub name** field:
  ![shake-shake-mac-eventhub-trigger]({{"/assets/images/shake-shake-mac-eventhub-trigger.png" | absolute_url }})
 
-5. Name the connection **eventHubConnectionString** and paste 'Event Hub endpoint' value into 'Connection string':
+5. Click **New** to create Event Hub connection:
+ ![shake-shake-mac-new-eventhub-connection]({{"/assets/images/shake-shake-mac-new-eventhub-connection.png" | absolute_url }})
+
+6. Select **IoT Hub** tab, confirm it selects the right IoT Hub and click **Select**:
  ![shake-shake-mac-function-connection-string]({{"/assets/images/shake-shake-mac-function-connection-string.png" | absolute_url }})
 
-6. Paste previous noted 'Event Hub name' value into 'Event Hub name' and click **Create**.
+7. Click **Create** to finish creating a new function.
 
-#### C. Upload and run Azure Functions code
+#### B. Upload the Azure Functions files of the project
 
 1. Click **[my function name] > View Files > Upload**:
  ![shake-shake-mac-function-upload]({{"/assets/images/shake-shake-mac-function-upload.png" | absolute_url }})
 
-2. Go to path below and upload `index.js` and `packages.json`
-```bash
-~/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/libraries/AzureIotHub/examples/ShakeShake/azureFunction
-```
+2. Press `Cmd+Shift+G`, and then click **Go**.
 
-3. Click **[function name] > Platform features > Application settings**:
+3. Continue to navigate to the following folder:
+ ```bash
+ ~/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/libraries/AzureIotHub/examples/ShakeShake/azureFunction
+ ```
+4. Upload `index.js` and `package.json`.
+
+5. Click `index.js` again to refresh the code:
+ ![shake-shake-mac-function-refresh]({{"/assets/images/shake-shake-mac-function-refresh.png" | absolute_url }})
+
+6. Select **Platform features** and click **Console** to launch the console:
+ ![shake-shake-mac-open-console]({{"/assets/images/shake-shake-mac-open-console.png" | absolute_url }})
+
+7. In the console, run the following commands:
+ ```bash
+ cd [your function name]
+ npm install
+ ```
+ ![shake-shake-mac-npm-install]({{"/assets/images/shake-shake-mac-npm-install.png" | absolute_url }})
+
+#### C. Configure and run Azure Functions
+
+1. Select **Platform features** and click **Application settings**:
  ![shake-shake-mac-app-settings]({{"/assets/images/shake-shake-mac-app-settings.png" | absolute_url }})
 
-4. Add `twitterAPI` and `twitterBearerKey` in **App settings** section and click **Save**:
- ![shake-shake-mac-twitter-vars]({{"/assets/images/shake-shake-mac-twitter-vars.png" | absolute_url }})
- - `twitterAPI`: `https://api.twitter.com/1.1/search/tweets.json`
- - `twitterBearerKey`: You need to [create a Twitter application](http://docs.inboundnow.com/guide/create-twitter-application/){:target="_blank"} and use [some utility](https://github.com/wellsjo/get-twitter-bearer-token){:target="_blank"} to generate bearer token.
+2. Add a new Key / Value pair in **App settings** section and click **Save**:
+ - Key: **iotHubConnectionString**
+ - Value: **[your IoT Hub connection string]**
+ ![shake-shake-mac-eventhub-connection-string]({{"/assets/images/shake-shake-mac-eventhub-connection-string.png" | absolute_url }})
 
-5. Go to the function and click **Run**.
+3. Go to your Azure Function code and click **Run**:
+ ![shake-shake-mac-function-run]({{"/assets/images/shake-shake-mac-function-run.png" | absolute_url }})
 
 ### Step 5. Build and upload Arduino sketch
 
@@ -146,7 +159,17 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 **Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
-#### B. Compile and upload the Arduino sketch
+#### B. Modify the #hashtag
+
+Open `ShakeShake.ino` and look for the line of code:
+
+```cpp
+static const char* iot_event = "{\"topic\":\"iot\"}";
+```
+
+Replace the string `iot` in the curly brace with your preferred hashtag.
+
+#### C. Build and upload Arduino sketch
 
 Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Upload**. Then it will start compiling and uploading the Arduino sketch. After it is done, the DevKit will reboot and start running the code.
 

@@ -53,7 +53,11 @@
 
 
   <meta property="og:type" content="article">
+<<<<<<< HEAD
   <meta property="article:published_time" content="2017-06-27T02:31:01-07:00">
+=======
+  <meta property="article:published_time" content="2017-06-28T02:13:36-07:00">
+>>>>>>> master
 
 
 
@@ -327,7 +331,15 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps25h/" class="">LPS25H</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps22hb/" class="">LPS22HB</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/" class="">IrDA</a></li>
           
         </ul>
         
@@ -343,8 +355,13 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="LSM6DSL Sensor">
     <meta itemprop="description" content="Library for LSM6DSL, 3D digital accelerometer and gyroscope sensor on AZ3166">
+<<<<<<< HEAD
     <meta itemprop="datePublished" content="June 27, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
+=======
+    <meta itemprop="datePublished" content="June 28, 2017">
+    <meta itemprop="dateModified" content="June 28, 2017">
+>>>>>>> master
 
     <div class="page__inner-wrap">
       
@@ -415,169 +432,169 @@
       <td style="text-align: left"><a href="#init">init</a> - <code class="highlighter-rouge">int init(void *init)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#enable_x">enable_x</a> - <code class="highlighter-rouge">int enable_x(void)</code></td>
+      <td style="text-align: left"><a href="#enableAccelerator">enableAccelerator</a> - <code class="highlighter-rouge">int enableAccelerator(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#enable_g">enable_g</a> - <code class="highlighter-rouge">int enable_g(void)</code></td>
+      <td style="text-align: left"><a href="#enableGyroscope">enableGyroscope</a> - <code class="highlighter-rouge">int enableGyroscope(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#disable_x">disable_x</a> - <code class="highlighter-rouge">int disable_x(void)</code></td>
+      <td style="text-align: left"><a href="#disableAccelerator">disableAccelerator</a> - <code class="highlighter-rouge">int disableAccelerator(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#disable_g">disable_g</a> - <code class="highlighter-rouge">int disable_g(void)</code></td>
+      <td style="text-align: left"><a href="#disableGyroscope">disableGyroscope</a> - <code class="highlighter-rouge">int disableGyroscope(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#read_id">read_id</a> - <code class="highlighter-rouge">int read_id(unsigned char *id)</code></td>
+      <td style="text-align: left"><a href="#readId">readId</a> - <code class="highlighter-rouge">int readId(unsigned char *id)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_x_axes">get_x_axes</a> - <code class="highlighter-rouge">int get_x_axes(int *pData)</code></td>
+      <td style="text-align: left"><a href="#getXAxes">getXAxes</a> - <code class="highlighter-rouge">int getXAxes(int *pData)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_g_axes">get_g_axes</a> - <code class="highlighter-rouge">int get_g_axes(int *pData)</code></td>
+      <td style="text-align: left"><a href="#getGAxes">getGAxes</a> - <code class="highlighter-rouge">int getGAxes(int *pData)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_x_sensitivity">get_x_sensitivity</a> - <code class="highlighter-rouge">int get_x_sensitivity(float *pfData)</code></td>
+      <td style="text-align: left"><a href="#getXSensitivity">getXSensitivity</a> - <code class="highlighter-rouge">int getXSensitivity(float *pfData)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_g_sensitivity">get_g_sensitivity</a> - <code class="highlighter-rouge">int get_g_sensitivity(float *pfData)</code></td>
+      <td style="text-align: left"><a href="#getGSensitivity">getGSensitivity</a> - <code class="highlighter-rouge">int getGSensitivity(float *pfData)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_x_axes_raw">get_x_axes_raw</a> - <code class="highlighter-rouge">int get_x_axes_raw(int16_t *pData)</code></td>
+      <td style="text-align: left"><a href="#getXAxesRaw">getXAxesRaw</a> - <code class="highlighter-rouge">int getXAxesRaw(int16_t *pData)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_g_axes_raw">get_g_axes_raw</a> - <code class="highlighter-rouge">int get_g_axes_raw(int16_t *pData)</code></td>
+      <td style="text-align: left"><a href="#getGAxesRaw">getGAxesRaw</a> - <code class="highlighter-rouge">int getGAxesRaw(int16_t *pData)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_x_odr">get_x_odr</a> - <code class="highlighter-rouge">int get_x_odr(float* odr)</code></td>
+      <td style="text-align: left"><a href="#getXOdr">getXOdr</a> - <code class="highlighter-rouge">int getXOdr(float* odr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_g_odr">get_g_odr</a> - <code class="highlighter-rouge">int get_g_odr(float* odr)</code></td>
+      <td style="text-align: left"><a href="#getGOdr">getGOdr</a> - <code class="highlighter-rouge">int getGOdr(float* odr)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#set_x_odr">set_x_odr</a> - <code class="highlighter-rouge">int set_x_odr(float odr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_x_odr_when_enabled">set_x_odr_when_enabled</a> - <code class="highlighter-rouge">int set_x_odr_when_enabled(float odr)</code></td>
+      <td style="text-align: left"><a href="#setXOdrWhenEnabled">setXOdrWhenEnabled</a> - <code class="highlighter-rouge">int setXOdrWhenEnabled(float odr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_x_odr_when_disabled">set_x_odr_when_disabled</a> - <code class="highlighter-rouge">int set_x_odr_when_disabled(float odr)</code></td>
+      <td style="text-align: left"><a href="#setXOdrWhenDisabled">setXOdrWhenDisabled</a> - <code class="highlighter-rouge">int setXOdrWhenDisabled(float odr)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#set_g_odr">set_g_odr</a> - <code class="highlighter-rouge">int set_g_odr(float odr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_g_odr_when_enabled">set_g_odr_when_enabled</a> - <code class="highlighter-rouge">int set_g_odr_when_enabled(float odr)</code></td>
+      <td style="text-align: left"><a href="#setGOdrWhenEnabled">setGOdrWhenEnabled</a> - <code class="highlighter-rouge">int setGOdrWhenEnabled(float odr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_g_odr_when_disabled">set_g_odr_when_disabled</a> - <code class="highlighter-rouge">int set_g_odr_when_disabled(float odr)</code></td>
+      <td style="text-align: left"><a href="#setGOdrWhenDisabled">setGOdrWhenDisabled</a> - <code class="highlighter-rouge">int setGOdrWhenDisabled(float odr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_x_fs">get_x_fs</a> - <code class="highlighter-rouge">int get_x_fs(float* fullScale)</code></td>
+      <td style="text-align: left"><a href="#getXFullScale">getXFullScale</a> - <code class="highlighter-rouge">int getXFullScale(float* fullScale)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_g_fs">get_g_fs</a> - <code class="highlighter-rouge">int get_g_fs(float* fullScale)</code></td>
+      <td style="text-align: left"><a href="#getGFullScale">getGFullScale</a> - <code class="highlighter-rouge">int getGFullScale(float* fullScale)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_x_fs">set_x_fs</a> - <code class="highlighter-rouge">int set_x_fs(float fullScale)</code></td>
+      <td style="text-align: left"><a href="#setXFullScale">setXFullScale</a> - <code class="highlighter-rouge">int setXFullScale(float fullScale)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_g_fs">set_g_fs</a> - <code class="highlighter-rouge">int set_g_fs(float fullScale)</code></td>
+      <td style="text-align: left"><a href="#setGFullScale">setGFullScale</a> - <code class="highlighter-rouge">int setGFullScale(float fullScale)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#enable_free_fall_detection">enable_free_fall_detection</a> - <code class="highlighter-rouge">int enable_free_fall_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+      <td style="text-align: left"><a href="#enableFreeFallDetection">enableFreeFallDetection</a> - <code class="highlighter-rouge">int enableFreeFallDetection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#disable_free_fall_detection">disable_free_fall_detection</a> - <code class="highlighter-rouge">int disable_free_fall_detection(void)</code></td>
+      <td style="text-align: left"><a href="#disableFreeFallDetection">disableFreeFallDetection</a> - <code class="highlighter-rouge">int disableFreeFallDetection(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_free_fall_threshold">set_free_fall_threshold</a> - <code class="highlighter-rouge">int set_free_fall_threshold(uint8_t thr)</code></td>
+      <td style="text-align: left"><a href="#setFreeFallThreshold">setFreeFallThreshold</a> - <code class="highlighter-rouge">int setFreeFallThreshold(uint8_t thr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#enable_pedometer">enable_pedometer</a> - <code class="highlighter-rouge">int enable_pedometer(void)</code></td>
+      <td style="text-align: left"><a href="#enablePedometer">enablePedometer</a> - <code class="highlighter-rouge">int enablePedometer(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#disable_pedometer">disable_pedometer</a> - <code class="highlighter-rouge">int disable_pedometer(void)</code></td>
+      <td style="text-align: left"><a href="#disablePedometer">disablePedometer</a> - <code class="highlighter-rouge">int disablePedometer(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_step_counter">get_step_counter</a> - <code class="highlighter-rouge">int get_step_counter(int *step_count)</code></td>
+      <td style="text-align: left"><a href="#getStepCounter">getStepCounter</a> - <code class="highlighter-rouge">int getStepCounter(int *step_count)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#reset_step_counter">reset_step_counter</a> - <code class="highlighter-rouge">int reset_step_counter(void)</code></td>
+      <td style="text-align: left"><a href="#resetStepCounter">resetStepCounter</a> - <code class="highlighter-rouge">int resetStepCounter(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_pedometer_threshold">set_pedometer_threshold</a> - <code class="highlighter-rouge">int set_pedometer_threshold(unsigned char thr)</code></td>
+      <td style="text-align: left"><a href="#setPedometerThreshold">setPedometerThreshold</a> - <code class="highlighter-rouge">int setPedometerThreshold(unsigned char thr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#enable_tilt_detection">enable_tilt_detection</a> - <code class="highlighter-rouge">int enable_tilt_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+      <td style="text-align: left"><a href="#enableTiltDetection">enableTiltDetection</a> - <code class="highlighter-rouge">int enableTiltDetection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#disable_tilt_detection">disable_tilt_detection</a> - <code class="highlighter-rouge">int disable_tilt_detection(void)</code></td>
+      <td style="text-align: left"><a href="#disableTiltDetection">disableTiltDetection</a> - <code class="highlighter-rouge">int disableTiltDetection(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#enable_wake_up_detection">enable_wake_up_detection</a> - <code class="highlighter-rouge">int enable_wake_up_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+      <td style="text-align: left"><a href="#enableWakeUpDetection">enableWakeUpDetection</a> - <code class="highlighter-rouge">int enableWakeUpDetection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#disable_wake_up_detection">disable_wake_up_detection</a> - <code class="highlighter-rouge">int disable_wake_up_detection(void)</code></td>
+      <td style="text-align: left"><a href="#disableWakeUpDetection">disableWakeUpDetection</a> - <code class="highlighter-rouge">int disableWakeUpDetection(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_wake_up_threshold">set_wake_up_threshold</a> - <code class="highlighter-rouge">int set_wake_up_threshold(unsigned char thr)</code></td>
+      <td style="text-align: left"><a href="#setWakeUpThreshold">setWakeUpThreshold</a> - <code class="highlighter-rouge">int setWakeUpThreshold(unsigned char thr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#enable_single_tap_detection">enable_single_tap_detection</a> - <code class="highlighter-rouge">int enable_single_tap_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+      <td style="text-align: left"><a href="#enableSingleTapDetection">enableSingleTapDetection</a> - <code class="highlighter-rouge">int enableSingleTapDetection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#disable_single_tap_detection">disable_single_tap_detection</a> - <code class="highlighter-rouge">int disable_single_tap_detection(void)</code></td>
+      <td style="text-align: left"><a href="#disableSingleTapDetection">disableSingleTapDetection</a> - <code class="highlighter-rouge">int disableSingleTapDetection(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#enable_double_tap_detection">enable_double_tap_detection</a> - <code class="highlighter-rouge">int enable_double_tap_detection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+      <td style="text-align: left"><a href="#enableDoubleTapDetection">enableDoubleTapDetection</a> - <code class="highlighter-rouge">int enableDoubleTapDetection(LSM6DSL_Interrupt_Pin_t pin)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#disable_double_tap_detection">disable_double_tap_detection</a> - <code class="highlighter-rouge">int disable_double_tap_detection(void)</code></td>
+      <td style="text-align: left"><a href="#disableDoubleTapDetection">disableDoubleTapDetection</a> - <code class="highlighter-rouge">int disableDoubleTapDetection(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_tap_threshold">set_tap_threshold</a> - <code class="highlighter-rouge">int set_tap_threshold(unsigned char thr)</code></td>
+      <td style="text-align: left"><a href="#setTapThreshold">setTapThreshold</a> - <code class="highlighter-rouge">int setTapThreshold(unsigned char thr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_tap_shock_time">set_tap_shock_time</a> - <code class="highlighter-rouge">int set_tap_shock_time(uint8_t time)</code></td>
+      <td style="text-align: left"><a href="#setTapShockTime">setTapShockTime</a> - <code class="highlighter-rouge">int setTapShockTime(uint8_t time)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_tap_quiet_time">set_tap_quiet_time</a> - <code class="highlighter-rouge">int set_tap_quiet_time(uint8_t time)</code></td>
+      <td style="text-align: left"><a href="#setTapQuietTime">setTapQuietTime</a> - <code class="highlighter-rouge">int setTapQuietTime(uint8_t time)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_tap_duration_time">set_tap_duration_time</a> - <code class="highlighter-rouge">int set_tap_duration_time(uint8_t time)</code></td>
+      <td style="text-align: left"><a href="#setTapDurationTime">setTapDurationTime</a> - <code class="highlighter-rouge">int setTapDurationTime(uint8_t time)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#enable_6d_orientation">enable_6d_orientation</a> - <code class="highlighter-rouge">int enable_6d_orientation(LSM6DSL_Interrupt_Pin_t pin)</code></td>
+      <td style="text-align: left"><a href="#enable6dOrientation">enable6dOrientation</a> - <code class="highlighter-rouge">int enable6dOrientation(LSM6DSL_Interrupt_Pin_t pin)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#disable_6d_orientation">disable_6d_orientation</a> - <code class="highlighter-rouge">int disable_6d_orientation(void)</code></td>
+      <td style="text-align: left"><a href="#disable6dOrientation">disable6dOrientation</a> - <code class="highlighter-rouge">int disable6dOrientation(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_6d_orientation_xl">get_6d_orientation_xl</a> - <code class="highlighter-rouge">int get_6d_orientation_xl(uint8_t *xl)</code></td>
+      <td style="text-align: left"><a href="#get6dOrientationXL">get6dOrientationXL</a> - <code class="highlighter-rouge">int get6dOrientationXL(uint8_t *xl)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_6d_orientation_xh">get_6d_orientation_xh</a> - <code class="highlighter-rouge">int get_6d_orientation_xh(uint8_t *xh)</code></td>
+      <td style="text-align: left"><a href="#get6dOrientationXH">get6dOrientationXH</a> - <code class="highlighter-rouge">int get6dOrientationXH(uint8_t *xh)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_6d_orientation_yl">get_6d_orientation_yl</a> - <code class="highlighter-rouge">int get_6d_orientation_yl(uint8_t *yl)</code></td>
+      <td style="text-align: left"><a href="#get6dOrientationYL">get6dOrientationYL</a> - <code class="highlighter-rouge">int get6dOrientationYL(uint8_t *yl)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_6d_orientation_yh">get_6d_orientation_yh</a> - <code class="highlighter-rouge">int get_6d_orientation_yh(uint8_t *yh)</code></td>
+      <td style="text-align: left"><a href="#get6dOrientationYH">get6dOrientationYH</a> - <code class="highlighter-rouge">int get6dOrientationYH(uint8_t *yh)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_6d_orientation_zl">get_6d_orientation_zl</a> - <code class="highlighter-rouge">int get_6d_orientation_zl(uint8_t *zl)</code></td>
+      <td style="text-align: left"><a href="#get6dOrientationZL">get6dOrientationZL</a> - <code class="highlighter-rouge">int get6dOrientationZL(uint8_t *zl)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_6d_orientation_zh">get_6d_orientation_zh</a> - <code class="highlighter-rouge">int get_6d_orientation_zh(uint8_t *zh)</code></td>
+      <td style="text-align: left"><a href="#get6dOrientationZH">get6dOrientationZH</a> - <code class="highlighter-rouge">int get6dOrientationZH(uint8_t *zh)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_event_status">get_event_status</a> - <code class="highlighter-rouge">int get_event_status(LSM6DSL_Event_Status_t *status)</code></td>
+      <td style="text-align: left"><a href="#getEventStatus">getEventStatus</a> - <code class="highlighter-rouge">int getEventStatus(LSM6DSL_Event_Status_t *status)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#read_reg">read_reg</a> - <code class="highlighter-rouge">int read_reg(uint8_t reg, uint8_t *data)</code></td>
+      <td style="text-align: left"><a href="#readReg">readReg</a> - <code class="highlighter-rouge">int readReg(uint8_t reg, uint8_t *data)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#write_reg">write_reg</a> - <code class="highlighter-rouge">int write_reg(uint8_t reg, uint8_t data)</code></td>
+      <td style="text-align: left"><a href="#writeReg">writeReg</a> - <code class="highlighter-rouge">int writeReg(uint8_t reg, uint8_t data)</code></td>
     </tr>
   </tbody>
 </table>
@@ -737,9 +754,9 @@
   </table>
 </blockquote>
 
-<h3 id="enable_x">enable_x</h3>
+<h3 id="enableaccelerator">enableAccelerator</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_x</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enableAccelerator</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -768,9 +785,9 @@
   </table>
 </blockquote>
 
-<h3 id="enable_g">enable_g</h3>
+<h3 id="enablegyroscope">enableGyroscope</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_g</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enableGyroscope</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -799,9 +816,9 @@
   </table>
 </blockquote>
 
-<h3 id="disable_x">disable_x</h3>
+<h3 id="disableaccelerator">disableAccelerator</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_x</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disableAccelerator</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -830,9 +847,9 @@
   </table>
 </blockquote>
 
-<h3 id="disable_g">disable_g</h3>
+<h3 id="disablegyroscope">disableGyroscope</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_g</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disableGyroscope</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -861,9 +878,9 @@
   </table>
 </blockquote>
 
-<h3 id="read_id">read_id</h3>
+<h3 id="readid">readId</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_id</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">id</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">readId</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">id</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -907,9 +924,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_x_axes">get_x_axes</h3>
+<h3 id="getxaxes">getXAxes</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_axes</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getXAxes</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -953,9 +970,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_g_axes">get_g_axes</h3>
+<h3 id="getgaxes">getGAxes</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_axes</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getGAxes</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -999,9 +1016,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_x_sensitivity">get_x_sensitivity</h3>
+<h3 id="getxsensitivity">getXSensitivity</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_sensitivity</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">pfData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getXSensitivity</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">pfData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1045,9 +1062,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_g_sensitivity">get_g_sensitivity</h3>
+<h3 id="getgsensitivity">getGSensitivity</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_sensitivity</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">pfData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getGSensitivity</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">pfData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1091,9 +1108,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_x_axes_raw">get_x_axes_raw</h3>
+<h3 id="getxaxesraw">getXAxesRaw</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_axes_raw</span><span class="p">(</span><span class="kt">int16_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getXAxesRaw</span><span class="p">(</span><span class="kt">int16_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1137,9 +1154,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_g_axes_raw">get_g_axes_raw</h3>
+<h3 id="getgaxesraw">getGAxesRaw</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_axes_raw</span><span class="p">(</span><span class="kt">int16_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getGAxesRaw</span><span class="p">(</span><span class="kt">int16_t</span> <span class="o">*</span><span class="n">pData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1183,9 +1200,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_x_odr">get_x_odr</h3>
+<h3 id="getxodr">getXOdr</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_odr</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">odr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getXOdr</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">odr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1229,9 +1246,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_g_odr">get_g_odr</h3>
+<h3 id="getgodr">getGOdr</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_odr</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">odr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getGOdr</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">odr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1321,9 +1338,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_x_odr_when_enabled">set_x_odr_when_enabled</h3>
+<h3 id="setxodrwhenenabled">setXOdrWhenEnabled</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_x_odr_when_enabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setXOdrWhenEnabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1367,9 +1384,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_x_odr_when_disabled">set_x_odr_when_disabled</h3>
+<h3 id="setxodrwhendisabled">setXOdrWhenDisabled</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_x_odr_when_disabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setXOdrWhenDisabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1459,9 +1476,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_g_odr_when_enabled">set_g_odr_when_enabled</h3>
+<h3 id="setgodrwhenenabled">setGOdrWhenEnabled</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_g_odr_when_enabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setGOdrWhenEnabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1505,9 +1522,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_g_odr_when_disabled">set_g_odr_when_disabled</h3>
+<h3 id="setgodrwhendisabled">setGOdrWhenDisabled</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_g_odr_when_disabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setGOdrWhenDisabled</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1551,9 +1568,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_x_fs">get_x_fs</h3>
+<h3 id="getxfullscale">getXFullScale</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_x_fs</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">fullScale</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getXFullScale</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">fullScale</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1597,9 +1614,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_g_fs">get_g_fs</h3>
+<h3 id="getgfullscale">getGFullScale</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_g_fs</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">fullScale</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getGFullScale</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">fullScale</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1643,9 +1660,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_x_fs">set_x_fs</h3>
+<h3 id="setxfullscale">setXFullScale</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_x_fs</span><span class="p">(</span><span class="kt">float</span> <span class="n">fullScale</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setXFullScale</span><span class="p">(</span><span class="kt">float</span> <span class="n">fullScale</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1689,9 +1706,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_g_fs">set_g_fs</h3>
+<h3 id="setgfullscale">setGFullScale</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_g_fs</span><span class="p">(</span><span class="kt">float</span> <span class="n">fullScale</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setGFullScale</span><span class="p">(</span><span class="kt">float</span> <span class="n">fullScale</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1735,9 +1752,9 @@
   </table>
 </blockquote>
 
-<h3 id="enable_free_fall_detection">enable_free_fall_detection</h3>
+<h3 id="enablefreefalldetection">enableFreeFallDetection</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_free_fall_detection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enableFreeFallDetection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1781,9 +1798,9 @@
   </table>
 </blockquote>
 
-<h3 id="disable_free_fall_detection">disable_free_fall_detection</h3>
+<h3 id="disablefreefalldetection">disableFreeFallDetection</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_free_fall_detection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disableFreeFallDetection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1812,9 +1829,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_free_fall_threshold">set_free_fall_threshold</h3>
+<h3 id="setfreefallthreshold">setFreeFallThreshold</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_free_fall_threshold</span><span class="p">(</span><span class="kt">int</span> <span class="n">thr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setFreeFallThreshold</span><span class="p">(</span><span class="kt">int</span> <span class="n">thr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1858,9 +1875,9 @@
   </table>
 </blockquote>
 
-<h3 id="enable_pedometer">enable_pedometer</h3>
+<h3 id="enablepedometer">enablePedometer</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_pedometer</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enablePedometer</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1889,9 +1906,9 @@
   </table>
 </blockquote>
 
-<h3 id="disable_pedometer">disable_pedometer</h3>
+<h3 id="disablepedometer">disablePedometer</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_pedometer</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disablePedometer</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1920,9 +1937,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_step_counter">get_step_counter</h3>
+<h3 id="getstepcounter">getStepCounter</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_step_counter</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">step_count</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getStepCounter</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">step_count</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1966,9 +1983,9 @@
   </table>
 </blockquote>
 
-<h3 id="reset_step_counter">reset_step_counter</h3>
+<h3 id="resetstepcounter">resetStepCounter</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">reset_step_counter</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">resetStepCounter</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -1997,9 +2014,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_pedometer_threshold">set_pedometer_threshold</h3>
+<h3 id="setpedometerthreshold">setPedometerThreshold</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_pedometer_threshold</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">thr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setPedometerThreshold</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">thr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2043,9 +2060,9 @@
   </table>
 </blockquote>
 
-<h3 id="enable_tilt_detection">enable_tilt_detection</h3>
+<h3 id="enabletiltdetection">enableTiltDetection</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_tilt_detection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enableTiltDetection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2089,9 +2106,9 @@
   </table>
 </blockquote>
 
-<h3 id="disable_tilt_detection">disable_tilt_detection</h3>
+<h3 id="disabletiltdetection">disableTiltDetection</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_tilt_detection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disableTiltDetection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2120,9 +2137,9 @@
   </table>
 </blockquote>
 
-<h3 id="enable_wake_up_detection">enable_wake_up_detection</h3>
+<h3 id="enablewakeupdetection">enableWakeUpDetection</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_wake_up_detection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enableWakeUpDetection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2166,9 +2183,9 @@
   </table>
 </blockquote>
 
-<h3 id="disable_wake_up_detection">disable_wake_up_detection</h3>
+<h3 id="disablewakeupdetection">disableWakeUpDetection</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_wake_up_detection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disableWakeUpDetection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2197,9 +2214,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_wake_up_threshold">set_wake_up_threshold</h3>
+<h3 id="setwakeupthreshold">setWakeUpThreshold</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_wake_up_threshold</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">thr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setWakeUpThreshold</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">thr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2243,9 +2260,9 @@
   </table>
 </blockquote>
 
-<h3 id="enable_single_tap_detection">enable_single_tap_detection</h3>
+<h3 id="enablesingletapdetection">enableSingleTapDetection</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_single_tap_detection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enableSingleTapDetection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2289,9 +2306,9 @@
   </table>
 </blockquote>
 
-<h3 id="disable_single_tap_detection">disable_single_tap_detection</h3>
+<h3 id="disablesingletapdetection">disableSingleTapDetection</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_single_tap_detection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disableSingleTapDetection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2320,9 +2337,9 @@
   </table>
 </blockquote>
 
-<h3 id="enable_double_tap_detection">enable_double_tap_detection</h3>
+<h3 id="enabledoubletapdetection">enableDoubleTapDetection</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_double_tap_detection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enableDoubleTapDetection</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2366,9 +2383,9 @@
   </table>
 </blockquote>
 
-<h3 id="disable_double_tap_detection">disable_double_tap_detection</h3>
+<h3 id="disabledoubletapdetection">disableDoubleTapDetection</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_double_tap_detection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disableDoubleTapDetection</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2397,9 +2414,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_tap_threshold">set_tap_threshold</h3>
+<h3 id="settapthreshold">setTapThreshold</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_tap_threshold</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">thr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setTapThreshold</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">thr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2443,9 +2460,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_tap_shock_time">set_tap_shock_time</h3>
+<h3 id="settapshocktime">setTapShockTime</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_tap_shock_time</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">time</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setTapShockTime</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">time</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2489,9 +2506,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_tap_quiet_time">set_tap_quiet_time</h3>
+<h3 id="settapquiettime">setTapQuietTime</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_tap_quiet_time</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">time</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setTapQuietTime</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">time</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2535,9 +2552,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_tap_duration_time">set_tap_duration_time</h3>
+<h3 id="settapdurationtime">setTapDurationTime</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_tap_duration_time</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">time</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setTapDurationTime</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">time</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2581,9 +2598,9 @@
   </table>
 </blockquote>
 
-<h3 id="enable_6d_orientation">enable_6d_orientation</h3>
+<h3 id="enable6dorientation">enable6dOrientation</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable_6d_orientation</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">enable6dOrientation</span><span class="p">(</span><span class="n">LSM6DSL_Interrupt_Pin_t</span> <span class="n">pin</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2627,9 +2644,9 @@
   </table>
 </blockquote>
 
-<h3 id="disable_6d_orientation">disable_6d_orientation</h3>
+<h3 id="disable6dorientation">disable6dOrientation</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable_6d_orientation</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">disable6dOrientation</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2658,9 +2675,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_6d_orientation_xl">get_6d_orientation_xl</h3>
+<h3 id="get6dorientationxl">get6dOrientationXL</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_xl</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">xl</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get6dOrientationXL</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">xl</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2704,9 +2721,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_6d_orientation_xh">get_6d_orientation_xh</h3>
+<h3 id="get6dorientationxh">get6dOrientationXH</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_xh</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">xh</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get6dOrientationXH</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">xh</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2750,9 +2767,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_6d_orientation_yl">get_6d_orientation_yl</h3>
+<h3 id="get6dorientationyl">get6dOrientationYL</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_yl</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">yl</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get6dOrientationYL</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">yl</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2796,9 +2813,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_6d_orientation_yh">get_6d_orientation_yh</h3>
+<h3 id="get6dorientationyh">get6dOrientationYH</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_yh</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">yh</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get6dOrientationYH</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">yh</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2842,9 +2859,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_6d_orientation_zl">get_6d_orientation_zl</h3>
+<h3 id="get6dorientationzl">get6dOrientationZL</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_zl</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">zl</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get6dOrientationZL</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">zl</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2888,9 +2905,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_6d_orientation_zh">get_6d_orientation_zh</h3>
+<h3 id="get6dorientationzh">get6dOrientationZH</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_6d_orientation_zh</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">zh</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get6dOrientationZH</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">zh</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2934,9 +2951,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_event_status">get_event_status</h3>
+<h3 id="geteventstatus">getEventStatus</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_event_status</span><span class="p">(</span><span class="n">LSM6DSL_Event_Status_t</span> <span class="o">*</span><span class="n">status</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getEventStatus</span><span class="p">(</span><span class="n">LSM6DSL_Event_Status_t</span> <span class="o">*</span><span class="n">status</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -2980,9 +2997,9 @@
   </table>
 </blockquote>
 
-<h3 id="read_reg">read_reg</h3>
+<h3 id="readreg">readReg</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_reg</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">readReg</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -3030,9 +3047,9 @@
   </table>
 </blockquote>
 
-<h3 id="write_reg">write_reg</h3>
+<h3 id="writereg">writeReg</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">write_reg</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">data</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">writeReg</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">data</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -3104,32 +3121,32 @@
 <span class="p">}</span>
 <span class="kt">void</span> <span class="n">accelerometer_test</span><span class="p">(){</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"***Accelerator***"</span><span class="p">);</span>
-    <span class="c1">// enable_x
-</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">enable_x</span><span class="p">();</span>
-    <span class="c1">// get_x_axes
-</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">get_x_axes</span><span class="p">(</span><span class="n">axes</span><span class="p">);</span>
+    <span class="c1">// enableAccelerator
+</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">enableAccelerator</span><span class="p">();</span>
+    <span class="c1">// getXAxes
+</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">getXAxes</span><span class="p">(</span><span class="n">axes</span><span class="p">);</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Axes: x: %d, y: %d, z: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-    <span class="c1">// get_x_sensitivity
-</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">get_x_sensitivity</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">);</span>
+    <span class="c1">// getXSensitivity
+</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">getXSensitivity</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">);</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Sensitivity: "</span><span class="p">);</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-    <span class="c1">// get_x_axes_raw
-</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">get_x_axes_raw</span><span class="p">(</span><span class="n">raws</span><span class="p">);</span>
+    <span class="c1">// getXAxesRaw
+</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">getXAxesRaw</span><span class="p">(</span><span class="n">raws</span><span class="p">);</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Raw: x: %d, y: %d, z: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">raws</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">raws</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">raws</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 <span class="p">}</span>
 <span class="kt">void</span> <span class="n">gyroscope_test</span><span class="p">(){</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"***Gyroscope***"</span><span class="p">);</span>
-    <span class="c1">// enable_g
-</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">enable_g</span><span class="p">();</span>
-    <span class="c1">// get_g_axes
-</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">get_g_axes</span><span class="p">(</span><span class="n">axes</span><span class="p">);</span>
+    <span class="c1">// enableGyroscope
+</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">enableGyroscope</span><span class="p">();</span>
+    <span class="c1">// getGAxes
+</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">getGAxes</span><span class="p">(</span><span class="n">axes</span><span class="p">);</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Axes: x: %d, y: %d, z: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-    <span class="c1">// get_g_sensitivity
-</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">get_g_sensitivity</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">);</span>
+    <span class="c1">// getGSensitivity
+</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">getGSensitivity</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">);</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Sensitivity: "</span><span class="p">);</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-    <span class="c1">// get_g_axes_raw
-</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">get_g_axes_raw</span><span class="p">(</span><span class="n">raws</span><span class="p">);</span>
+    <span class="c1">// getGAxesRaw
+</span>    <span class="n">sensor</span><span class="o">-&gt;</span><span class="n">getGAxesRaw</span><span class="p">(</span><span class="n">raws</span><span class="p">);</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Raw: x: %d, y: %d, z: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">raws</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">raws</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">raws</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 <span class="p">}</span>
 </code></pre>
@@ -3144,7 +3161,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-30">April 30, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-28">June 28, 2017</time></p>
         
       </footer>
 

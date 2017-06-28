@@ -1,17 +1,17 @@
 ---
-title: "LPS25H Sensor"
-permalink: /docs/apis/lps25h/
-excerpt: "Library for LPS25H pressure sensor on AZ3166"
-last_modified_at: 2017-04-30T10:16:34-04:00
+title: "LPS22HB Sensor"
+permalink: /docs/apis/lps22hb/
+excerpt: "Library for LPS22HB pressure sensor on AZ3166"
+last_modified_at: 2017-06-28T00:01:52-04:00
 ---
 
-The [ST LPS25H](http://www.st.com/en/mems-and-sensors/lps25h.html){:target="_blank"} is an ultra compact absolute piezoresistive pressure sensor.
+The [ST LPS22HB](http://www.st.com/en/mems-and-sensors/lps22hb.html){:target="_blank"} is an ultra compact absolute piezoresistive pressure sensor.
 
-Implementation file for the LPS25H driver class.
+Implementation file for the LPS22HB driver class.
 
 ## Assembly
 
-lps25h_class.h
+LPS22HBSensor.h
 
 ## Summary
 
@@ -22,17 +22,17 @@ lps25h_class.h
 
 | Constructors |
 | :----------- |
-| [LPS25H](#lps25h) - `LPS25H(DevI2C &i2c)` |
+| [LPS22HBSensor](#lps22hbsensor) - `LPS22HBSensor(DevI2C &i2c)` |
+| [LPS22HBSensor](#lps22hbsensor-1) - `LPS22HBSensor(DevI2C &i2c)` |
 
 | Methods |
 | :------ |
-| [init](#init) - `int init(void *init_struct)` |
-| [powerOff](#poweroff) - `int powerOff(void)` |
+| [init](#init) - `int init(void *init)` |
+| [deInit](#deinit) - `int deInit()` |
 | [readId](#readid) - `int readId(uint8_t *p_id)` |
 | [reset](#reset) - `int reset(void)` |
-| [getPressure](#get_pressure) - `int getPressure(float *pfData)` |
+| [getPressure](#getpressure) - `int getPressure(float *pfData)` |
 | [getTemperature](#gettemperature) - `int getTemperature(float *pfData)` |
-| [slaveAddrRemap](#slaveaddrremap) - `void slaveAddrRemap(uint8_t SA0_Bit_Status)` |
 
 ## Types
 
@@ -46,10 +46,10 @@ lps25h_class.h
 
 ## Constructors
 
-### LPS25H
+### LPS22HBSensor
 
 ```cpp
-LPS25H(DevI2C &i2c)
+LPS22HBSensor(DevI2C &i2c)
 ```
 
 > #### Parameters
@@ -58,21 +58,34 @@ LPS25H(DevI2C &i2c)
 > | :--- | :--- | :---------- |
 > | DevI2C & | i2c | The object of an helper class which handles the I2C peripheral. |
 
+### LPS22HBSensor
+
+```cpp
+LPS22HBSensor(DevI2C &i2c, unsigned char address)
+```
+
+> #### Parameters
+>
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | DevI2C & | i2c | The object of an helper class which handles the I2C peripheral. |
+> | unsigned char | address | The address of the component's instance. |
+
 ## Methods
 
 ### init
 
 ```cpp
-int init(void *init_struct)
+int init(void *init)
 ```
 
-> Set LPS25H Initialization.
+> Initializing the component.
 >
 > #### Parameters
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | void * | init_struct | The configuration setting for the LPS25H. |
+> | void * | init | The pointer to device specific initalization structure. |
 >
 > #### Return value
 >
@@ -80,13 +93,13 @@ int init(void *init_struct)
 > | :--- | :---------- |
 > | int | 0 (`PRESSURE_OK`) in case of success, an error code otherwise. |
 
-### powerOff
+### deInit
 
 ```cpp
-int powerOff(void)
+int deInit()
 ```
 
-> Enter the shutdown mode for LPS25H.
+> Deinitialize lps22hb sensor device.
 >
 > #### Parameters
 >
@@ -104,7 +117,7 @@ int powerOff(void)
 int readId(uint8_t *p_id)
 ```
 
-> Read ID address of LPS25H.
+> Read ID address of LPS22HB.
 >
 > #### Parameters
 >
@@ -124,7 +137,7 @@ int readId(uint8_t *p_id)
 int reset(void)
 ```
 
-> Reboot memory content of LPS25H.
+> Reboot memory content of LPS22HB.
 >
 > #### Parameters
 >
@@ -142,7 +155,7 @@ int reset(void)
 int getPressure(float *pfData)
 ```
 
-> Read LPS25H output register, and calculate the pressure in mbar.
+> Read LPS22HB output register, and calculate the pressure in mbar.
 >
 > #### Parameters
 >
@@ -162,7 +175,7 @@ int getPressure(float *pfData)
 int getTemperature(float *pfData)
 ```
 
-> Read LPS25H output register, and calculate the temperature.
+> Read LPS22HB output register, and calculate the temperature.
 >
 > #### Parameters
 >
@@ -175,21 +188,3 @@ int getTemperature(float *pfData)
 > | Type | Description |
 > | :--- | :---------- |
 > | int | 0 (`PRESSURE_OK`) in case of success, an error code otherwise. |
-
-### slaveAddrRemap
-
-```cpp
-void slaveAddrRemap(uint8_t SA0_Bit_Status)
-```
-
-> Set the slave address according to SA0 bit.
->
-> #### Parameters
->
-> | Type | Name | Description |
-> | :--- | :--- | :---------- |
-> | uint8_t | SA0_Bit_Status | LPS25H_SA0_LOW or LPS25H_SA0_HIGH. |
->
-> #### Return value
->
-> `void`

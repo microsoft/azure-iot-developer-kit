@@ -197,8 +197,8 @@
     <p>Sign in to <a href="https://portal.azure.com/">Azure portal</a>.</p>
   </li>
   <li>
-    <p>Click <strong>New &gt; Internet of Things &gt; IoT Hub</strong>:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-iothub.png" alt="shake-shake-mac-iothub" /></p>
+    <p>Click <strong>New &gt; Internet of Things &gt; IoT Hub</strong> or search for ‘IoT Hub’ and click <strong>Create</strong>:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-create-iothub.png" alt="shake-shake-mac-create-iothub" /></p>
   </li>
   <li>In the <strong>IoT hub</strong> pane, enter the following information for your IoT hub:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-hub-details.png" alt="shake-shake-mac-hub-details" />
@@ -217,10 +217,11 @@
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-notification.png" alt="shake-shake-mac-notification" /></p>
   </li>
   <li>
-    <p>After your IoT hub is created, click it from the dashboard. Make a note of the <strong>Hostname</strong> value that is used later in this article, and then click <strong>Shared access policies</strong>:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-policies.png" alt="shake-shake-mac-policies" /></p>
+    <p>After your IoT hub is created, click it from the Resource groups. Make a note of the IoT Hub name:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-iothub-name.png" alt="shake-shake-mac-iothub-name" /></p>
   </li>
-  <li>In the <strong>Shared access policies</strong> pane, click the <strong>iothubowner</strong> policy, and then copy and save the <strong>Connection string</strong> value for your IoT hub:</li>
+  <li>Click on the IoT Hub name, in the <strong>Shared access policies</strong> pane, click the <strong>iothubowner</strong> policy, and then make a note of the <strong>Connection string</strong> value for your IoT hub:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-iothub-connection-string.png" alt="shake-shake-mac-iothub-connection-string" /></li>
 </ol>
 
 <h3 id="step-2-register-a-device-in-the-iot-hub-for-the-your-device">Step 2. Register a device in the IoT hub for the your device</h3>
@@ -232,8 +233,8 @@
   <li>
     <p>Click <strong>Device Explorer</strong>.</p>
   </li>
-  <li>In the Device Explorer pane, click <strong>Add</strong> to add a device to your IoT hub:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-device.png" alt="shake-shake-mac-device" />
+  <li>In the Device Explorer pane, click <strong>Add</strong> to add a device with name “<strong>AZ3166</strong>” to your IoT hub:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-create-device.png" alt="shake-shake-mac-create-device" />
     <blockquote>
       <ul>
         <li><strong>Device ID</strong>: The ID of the new device.</li>
@@ -293,22 +294,7 @@
 
 <h3 id="step-4-deploy-azure-functions">Step 4. Deploy Azure Functions</h3>
 
-<h4 id="a-get-iot-hub-name-and-connection-string">A. Get IoT Hub name and connection string</h4>
-
-<ol>
-  <li>
-    <p>Click **Resource Group &gt; [your created resource group] &gt; Overview &gt; [your created IoT Hub]
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-resource-group.png" alt="shake-shake-mac-resource-group" /></p>
-  </li>
-  <li>
-    <p>In IoT Hub, click <strong>Endpoints &gt; Events</strong> and note ‘Event Hub name’ and ‘Event Hub endpoint’
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-iothub-name.png" alt="shake-shake-mac-iothub-name" /></p>
-  </li>
-</ol>
-
-<p>You will need these information when creating Azure Functions.</p>
-
-<h4 id="b-create-azure-functions">B. Create Azure Functions</h4>
+<h4 id="a-create-azure-functions">A. Create Azure Functions</h4>
 
 <ol>
   <li>
@@ -324,42 +310,73 @@
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-custom-function.png" alt="shake-shake-mac-custom-function" /></p>
   </li>
   <li>
-    <p>Choose <strong>EventHubTrigger-Javascript</strong> from the template list and create a new ‘Event Hub connection’:
+    <p>Choose <strong>EventHubTrigger-Javascript</strong> from the template list and type the IoT Hub name you noted in <strong>Event Hub name</strong> field:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-eventhub-trigger.png" alt="shake-shake-mac-eventhub-trigger" /></p>
   </li>
   <li>
-    <p>Name the connection <strong>eventHubConnectionString</strong> and paste ‘Event Hub endpoint’ value into ‘Connection string’:
+    <p>Click <strong>New</strong> to create Event Hub connection:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-new-eventhub-connection.png" alt="shake-shake-mac-new-eventhub-connection" /></p>
+  </li>
+  <li>
+    <p>Select <strong>IoT Hub</strong> tab, confirm it selects the right IoT Hub and click <strong>Select</strong>:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-connection-string.png" alt="shake-shake-mac-function-connection-string" /></p>
   </li>
   <li>
-    <p>Paste previous noted ‘Event Hub name’ value into ‘Event Hub name’ and click <strong>Create</strong>.</p>
+    <p>Click <strong>Create</strong> to finish creating a new function.</p>
   </li>
 </ol>
 
-<h4 id="c-upload-and-run-azure-functions-code">C. Upload and run Azure Functions code</h4>
+<h4 id="b-upload-the-azure-functions-files-of-the-project">B. Upload the Azure Functions files of the project</h4>
 
 <ol>
   <li>
     <p>Click <strong>[my function name] &gt; View Files &gt; Upload</strong>:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-upload.png" alt="shake-shake-mac-function-upload" /></p>
   </li>
-  <li>Go to path below and upload <code class="highlighter-rouge">index.js</code> and <code class="highlighter-rouge">packages.json</code>
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>~/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/libraries/AzureIotHub/examples/ShakeShake/azureFunction
+  <li>
+    <p>Press <code class="highlighter-rouge">Cmd+Shift+G</code>, and then click <strong>Go</strong>.</p>
+  </li>
+  <li>Continue to navigate to the following folder:
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> ~/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/libraries/AzureIotHub/examples/ShakeShake/azureFunction
 </code></pre>
     </div>
   </li>
   <li>
-    <p>Click <strong>[function name] &gt; Platform features &gt; Application settings</strong>:
+    <p>Upload <code class="highlighter-rouge">index.js</code> and <code class="highlighter-rouge">package.json</code>.</p>
+  </li>
+  <li>
+    <p>Click <code class="highlighter-rouge">index.js</code> again to refresh the code:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-refresh.png" alt="shake-shake-mac-function-refresh" /></p>
+  </li>
+  <li>
+    <p>Select <strong>Platform features</strong> and click <strong>Console</strong> to launch the console:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-open-console.png" alt="shake-shake-mac-open-console" /></p>
+  </li>
+  <li>In the console, run the following commands:
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nb">cd</span> <span class="o">[</span>your <span class="k">function </span>name]
+ npm install
+</code></pre>
+    </div>
+    <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-npm-install.png" alt="shake-shake-mac-npm-install" /></p>
+  </li>
+</ol>
+
+<h4 id="c-configure-and-run-azure-functions">C. Configure and run Azure Functions</h4>
+
+<ol>
+  <li>
+    <p>Select <strong>Platform features</strong> and click <strong>Application settings</strong>:
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-app-settings.png" alt="shake-shake-mac-app-settings" /></p>
   </li>
-  <li>Add <code class="highlighter-rouge">twitterAPI</code> and <code class="highlighter-rouge">twitterBearerKey</code> in <strong>App settings</strong> section and click <strong>Save</strong>:
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-twitter-vars.png" alt="shake-shake-mac-twitter-vars" />
+  <li>Add a new Key / Value pair in <strong>App settings</strong> section and click <strong>Save</strong>:
     <ul>
-      <li><code class="highlighter-rouge">twitterAPI</code>: <code class="highlighter-rouge">https://api.twitter.com/1.1/search/tweets.json</code></li>
-      <li><code class="highlighter-rouge">twitterBearerKey</code>: You need to <a href="http://docs.inboundnow.com/guide/create-twitter-application/" target="_blank">create a Twitter application</a> and use <a href="https://github.com/wellsjo/get-twitter-bearer-token" target="_blank">some utility</a> to generate bearer token.</li>
+      <li>Key: <strong>iotHubConnectionString</strong></li>
+      <li>Value: <strong>[your IoT Hub connection string]</strong>
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-eventhub-connection-string.png" alt="shake-shake-mac-eventhub-connection-string" /></li>
     </ul>
   </li>
-  <li>Go to the function and click <strong>Run</strong>.</li>
+  <li>Go to your Azure Function code and click <strong>Run</strong>:
+ <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-mac-function-run.png" alt="shake-shake-mac-function-run" /></li>
 </ol>
 
 <h3 id="step-5-build-and-upload-arduino-sketch">Step 5. Build and upload Arduino sketch</h3>
@@ -370,9 +387,23 @@
 
 <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-example.png" alt="shake-shake-example" /></p>
 
+<<<<<<< HEAD
 <p class="notice--warning"><strong>Notice:</strong> Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.</p>
 
 <h4 id="b-compile-and-upload-the-arduino-sketch">B. Compile and upload the Arduino sketch</h4>
+=======
+<h4 id="b-modify-the-hashtag">B. Modify the #hashtag</h4>
+
+<p>Open <code class="highlighter-rouge">ShakeShake.ino</code> and look for the line of code:</p>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">iot_event</span> <span class="o">=</span> <span class="s">"{</span><span class="se">\"</span><span class="s">topic</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">iot</span><span class="se">\"</span><span class="s">}"</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>Replace the string <code class="highlighter-rouge">iot</code> in the curly brace with your preferred hashtag.</p>
+
+<h4 id="c-build-and-upload-arduino-sketch">C. Build and upload Arduino sketch</h4>
+>>>>>>> master
 
 <p>Use <code class="highlighter-rouge">Cmd+Shift+P</code> to invoke command palette and type <strong>Arduino</strong> then find and select <strong>Arduino: Upload</strong>. Then it will start compiling and uploading the Arduino sketch. After it is done, the DevKit will reboot and start running the code.</p>
 
