@@ -43,7 +43,7 @@ If this is the first time you are developing on the DevKit, follow [Upgrading]({
 
 This is a one-time effort, once you start developing on the DevKit and upload your app, you will have the latest firmware.
 
-**Tip:** You will see the firmware version on the screen of the kit. If there is no version number, it means the DevKit is running on old version and needs to upgrade. [Versions]({{"/versions/" | absolute_url }}) contains latest version number and release notes.
+**Tip:** You will see the firmware version on the screen of the kit. If there is no version number, it means the DevKit is running on old version and needs an upgrade. [Versions]({{"/versions/" | absolute_url }}) contains the latest version number and release notes.
 {: .notice--info}
 
 #### D. Test sensors and WiFi on DevKit

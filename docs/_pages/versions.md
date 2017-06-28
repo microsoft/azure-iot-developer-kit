@@ -7,11 +7,11 @@ last_modified_at: 2017-06-28
 
 ## Version 1.0.0
 
-After a month work to stabilizing the code, fixing bugs and adding more samples, we are happy to release the v1.0.0 for our IoT DevKit. And soon we will open source the stacks including firmware, toolchain and all sample projects code. Please check release summary for details about this update.
+After a month work of stabilizing the code, fixing bugs and adding more samples, we are happy to release the v1.0.0 for our IoT DevKit. And soon we will open source the stacks including firmware, toolchain and all sample projects code. Please check release summary for details about this update.
 
 ### Release Summary
 
-* Updatged underlying mbed OS to 5.4.
+* Updated underlying mbed OS to 5.4.
  
 * Installation Scripts
   * Adapted to the changes for Azure subscription fetching in Azure CLI from Azure team.
