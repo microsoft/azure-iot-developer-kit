@@ -14,12 +14,12 @@
 
 
 
-<title>Manual Installation - IoT Developer Kits</title>
+<title>IrDA Sensor - IoT Developer Kits</title>
 
 
 
 
-<meta name="description" content="Instructions for manually install tools and packages.">
+<meta name="description" content="Library for IrDA, IrDA on AZ3166">
 
 
 
@@ -28,15 +28,15 @@
 
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="IoT Developer Kits">
-<meta property="og:title" content="Manual Installation">
+<meta property="og:title" content="IrDA Sensor">
 
 
-  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/installation/">
-  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/installation/">
+  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/">
+  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/">
 
 
 
-  <meta property="og:description" content="Instructions for manually install tools and packages.">
+  <meta property="og:description" content="Library for IrDA, IrDA on AZ3166">
 
 
 
@@ -200,7 +200,7 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/installation/" class="active">Manual Installation</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/installation/" class="">Manual Installation</a></li>
           
             
             
@@ -335,7 +335,7 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/" class="">IrDA</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/" class="active">IrDA</a></li>
           
         </ul>
         
@@ -349,82 +349,142 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Manual Installation">
-    <meta itemprop="description" content="Instructions for manually install tools and packages.">
+    <meta itemprop="headline" content="IrDA Sensor">
+    <meta itemprop="description" content="Library for IrDA, IrDA on AZ3166">
     <meta itemprop="datePublished" content="June 28, 2017">
-    <meta itemprop="dateModified" content="May 12, 2017">
+    <meta itemprop="dateModified" content="June 28, 2017">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Manual Installation
+          <h1 class="page__title" itemprop="headline">IrDA Sensor
 </h1>
           
         </header>
       
 
       <section class="page__content" itemprop="text">
-        <p>Follow these simple steps to manually install tools and packages for DevKit development. If you are on Windows, it is suggested to use <a href="http://localhost:4000/azure-iot-developer-kit/docs/get-started/#a-download-latest-package">our package</a> to install everything you need.</p>
+        <p>Implementation file for the IrDA driver class.</p>
 
-<h2 id="macos">macOS</h2>
+<h2 id="assembly">Assembly</h2>
 
-<h3 id="step-1-azure-cli-20">Step 1. Azure CLI 2.0</h3>
+<p>IrDASensor.h</p>
 
-<p>Follow the <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli" target="_blank">official guide</a> to install Azure CLI 2.0:</p>
+<h2 id="summary">Summary</h2>
 
-<p>Install Azure CLI 2.0 with one <code class="highlighter-rouge">curl</code> command:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>curl -L https://aka.ms/InstallAzureCli | bash
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Constructors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#IRDASensor">IRDASensor</a> - <code class="highlighter-rouge">IRDASensor()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Methods</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#init">init</a> - <code class="highlighter-rouge">int init()</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#IRDATransmit">IRDATransmit</a> - <code class="highlighter-rouge">unsigned char IRDATransmit( unsigned char *pData, int size, int timeout)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="constructors">Constructors</h2>
+
+<h3 id="irdasensor">IRDASensor</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">IRDASensor</span><span class="p">()</span>
 </code></pre>
 </div>
 
-<p>And restart your command shell for some changes to take effect:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">exec</span> -l <span class="nv">$SHELL</span>
+<blockquote>
+  <h4 id="parameters">Parameters</h4>
+  <p>None.</p>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="init">init</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">init</span><span class="p">()</span>
 </code></pre>
 </div>
 
-<h3 id="step-2-arduino-ide">Step 2. Arduino IDE</h3>
+<blockquote>
+  <p>Initializing the component.</p>
 
-<p>VS Code Arduino extension relies on it. Download <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE for macOS</a> and install it.</p>
+  <h4 id="parameters-1">Parameters</h4>
 
-<h3 id="step-3-visual-studio-code">Step 3. Visual Studio Code</h3>
+  <p>None.</p>
 
-<p>Download <a href="https://code.visualstudio.com/" target="_blank">VS Code for macOS</a> and install it. This will be the primary development tool for building DevKit IoT applications.</p>
+  <h4 id="return-value">Return value</h4>
 
-<h3 id="step-4-arduino-extension">Step 4. Arduino extension</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">0 in case of success, an error code otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
 
-<p>Arduino extension provides good development experience within VS Code. It comes with highlighted features like intellisense, automatic project scaffolding as well as debugging (comming soon).</p>
+<h3 id="irdatransmit">IRDATransmit</h3>
 
-<p>As this extension uses C++ extension for grammar support, you need to install it first. So make sure you install it before Arduino extension:</p>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">IRDATransmit</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pData</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">timeout</span><span class="p">)</span>
+</code></pre>
+</div>
 
-<p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/installation-extensions.png" alt="installation-extensions" /></p>
+<blockquote>
+  <p>Transmit data with IrDA.</p>
 
-<h3 id="step-5-devkit-board-package">Step 5. DevKit board package</h3>
+  <h4 id="parameters-2">Parameters</h4>
 
-<p>As you may familiar with adding a new Arduino board, you need to add DevKit board to the Boards Manager.</p>
-
-<ol>
-  <li>
-    <p>Use <code class="highlighter-rouge">Cmd+Shift+P</code> to invoke command palette and type <strong>Arduino</strong> then find and select <strong>Arduino: Boards Manager</strong>.</p>
-  </li>
-  <li>
-    <p>Click <strong>‘Additional URLs’</strong> right down the bottom.
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/installation-additional-urls.png" alt="installation-additional-urls" /></p>
-  </li>
-  <li>In the <code class="highlighter-rouge">settings.json</code> file opened, add a line to the bottom of ‘USER SETTINGS’ pane.
-    <div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="w"> </span><span class="s2">"arduino.additionalUrls"</span><span class="err">:</span><span class="w"> </span><span class="s2">"https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"</span><span class="w">
-</span></code></pre>
-    </div>
-    <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/installation-settings-json.png" alt="installation-settings-json" /></p>
-  </li>
-  <li>Now search in the boards manager for ‘az3166’ and install the latest version.
- <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/installation-az3166.png" alt="installation-az3166" /></li>
-</ol>
-
-<p>You should now have all necessary tools and packages installed.</p>
-
-<h2 id="next-steps">Next Steps</h2>
-
-<p>You are all set! It’s time to build your first IoT application by following instructions in <a href="http://localhost:4000/azure-iot-developer-kit/docs/projects/">Projects Catalog</a>.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">unsigned char *</td>
+        <td style="text-align: left">pData</td>
+        <td style="text-align: left">Pointer of data to send.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">size</td>
+        <td style="text-align: left">Size of data to send.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">int</td>
+        <td style="text-align: left">timeout</td>
+        <td style="text-align: left">Duration of the timeout.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
 
         
       </section>
@@ -435,7 +495,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-05-12">May 12, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-28">June 28, 2017</time></p>
         
       </footer>
 
@@ -444,12 +504,11 @@
       
   <nav class="pagination">
     
-      <a href="http://localhost:4000/azure-iot-developer-kit/docs/get-started/" class="pagination--pager" title="Get Started
+      <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps22hb/" class="pagination--pager" title="LPS22HB Sensor
 ">Previous</a>
     
     
-      <a href="http://localhost:4000/azure-iot-developer-kit/docs/faq/" class="pagination--pager" title="Frequently Asked Questions
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 

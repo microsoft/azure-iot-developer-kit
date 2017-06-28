@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-26T02:50:23-07:00">
+  <meta property="article:published_time" content="2017-06-28T01:53:31-07:00">
 
 
 
@@ -327,7 +327,15 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps25h/" class="">LPS25H</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps22hb/" class="">LPS22HB</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/" class="">IrDA</a></li>
           
         </ul>
         
@@ -343,8 +351,8 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="HTS221 Sensor">
     <meta itemprop="description" content="Library for HTS221 humidity and temperature sensor on AZ3166">
-    <meta itemprop="datePublished" content="June 26, 2017">
-    <meta itemprop="dateModified" content="April 30, 2017">
+    <meta itemprop="datePublished" content="June 28, 2017">
+    <meta itemprop="dateModified" content="June 28, 2017">
 
     <div class="page__inner-wrap">
       
@@ -415,34 +423,22 @@
       <td style="text-align: left"><a href="#disable">disable</a> - <code class="highlighter-rouge">int disable(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#read_id">read_id</a> - <code class="highlighter-rouge">int read_id(unsigned char *id)</code></td>
+      <td style="text-align: left"><a href="#readId">readId</a> - <code class="highlighter-rouge">int readId(unsigned char *id)</code></td>
     </tr>
     <tr>
       <td style="text-align: left"><a href="#reset">reset</a> - <code class="highlighter-rouge">int reset(void)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_humidity">get_humidity</a> - <code class="highlighter-rouge">int get_humidity(float* pfData)</code></td>
+      <td style="text-align: left"><a href="#getHumidity">getHumidity</a> - <code class="highlighter-rouge">int getHumidity(float* pfData)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_temperature">get_temperature</a> - <code class="highlighter-rouge">int get_temperature(float* pfData)</code></td>
+      <td style="text-align: left"><a href="#getTemperature">getTemperature</a> - <code class="highlighter-rouge">int getTemperature(float* pfData)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#get_odr">get_odr</a> - <code class="highlighter-rouge">int get_odr(float* odr)</code></td>
+      <td style="text-align: left"><a href="#getOdr">getOdr</a> - <code class="highlighter-rouge">int getOdr(float* odr)</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#set_odr">set_odr</a> - <code class="highlighter-rouge">int set_odr(float odr)</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="#read_reg">read_reg</a> - <code class="highlighter-rouge">int read_reg(unsigned char reg, unsigned char *data)</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="#write_reg">write_reg</a> - <code class="highlighter-rouge">int write_reg(unsigned char reg, unsigned char data)</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="#hts221_io_write">HTS221_io_write</a> - <code class="highlighter-rouge">unsigned char HTS221_io_write(void *handle, unsigned char WriteAddr, unsigned char *pBuffer, int nBytesToWrite)</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="#hts221_io_read">HTS221_io_read</a> - <code class="highlighter-rouge">unsigned char HTS221_io_read(void *handle, unsigned char ReadAddr, unsigned char *pBuffer, int nBytesToRead)</code></td>
+      <td style="text-align: left"><a href="#setOdr">setOdr</a> - <code class="highlighter-rouge">int setOdr(float odr)</code></td>
     </tr>
   </tbody>
 </table>
@@ -632,9 +628,9 @@
   </table>
 </blockquote>
 
-<h3 id="read_id">read_id</h3>
+<h3 id="readid">readId</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_id</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">id</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">readId</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">id</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -709,9 +705,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_humidity">get_humidity</h3>
+<h3 id="gethumidity">getHumidity</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_humidity</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">pfData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getHumidity</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">pfData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -755,9 +751,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_temperature">get_temperature</h3>
+<h3 id="gettemperature">getTemperature</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_temperature</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">pfData</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getTemperature</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">pfData</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -801,9 +797,9 @@
   </table>
 </blockquote>
 
-<h3 id="get_odr">get_odr</h3>
+<h3 id="getodr">getOdr</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">get_odr</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">odr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">getOdr</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">odr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -847,9 +843,9 @@
   </table>
 </blockquote>
 
-<h3 id="set_odr">set_odr</h3>
+<h3 id="setodr">setOdr</h3>
 
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">set_odr</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">setOdr</span><span class="p">(</span><span class="kt">float</span> <span class="n">odr</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -888,230 +884,6 @@
       <tr>
         <td style="text-align: left">int</td>
         <td style="text-align: left">Result code, 0 in case of success, an error code otherwise.</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
-
-<h3 id="read_reg">read_reg</h3>
-
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">read_reg</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<blockquote>
-  <p>Read the data from register.</p>
-
-  <h4 id="parameters-11">Parameters</h4>
-
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: left">Type</th>
-        <th style="text-align: left">Name</th>
-        <th style="text-align: left">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: left">unsigned char</td>
-        <td style="text-align: left">reg</td>
-        <td style="text-align: left">The register address.</td>
-      </tr>
-      <tr>
-        <td style="text-align: left">unsigned char *</td>
-        <td style="text-align: left">data</td>
-        <td style="text-align: left">The register data.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h4 id="return-value-9">Return value</h4>
-
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: left">Type</th>
-        <th style="text-align: left">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: left">int</td>
-        <td style="text-align: left">Result code, 0 in case of success, an error code otherwise.</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
-
-<h3 id="write_reg">write_reg</h3>
-
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">write_reg</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">reg</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">data</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<blockquote>
-  <p>Write the data to register.</p>
-
-  <h4 id="parameters-12">Parameters</h4>
-
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: left">Type</th>
-        <th style="text-align: left">Name</th>
-        <th style="text-align: left">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: left">unsigned char</td>
-        <td style="text-align: left">reg</td>
-        <td style="text-align: left">The register address.</td>
-      </tr>
-      <tr>
-        <td style="text-align: left">unsigned char</td>
-        <td style="text-align: left">data</td>
-        <td style="text-align: left">The register data.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h4 id="return-value-10">Return value</h4>
-
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: left">Type</th>
-        <th style="text-align: left">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: left">int</td>
-        <td style="text-align: left">Result code, 0 in case of success, an error code otherwise.</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
-
-<h3 id="hts221_io_write">HTS221_io_write</h3>
-
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">HTS221_io_write</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">handle</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">WriteAddr</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pBuffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nBytesToWrite</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<blockquote>
-  <p>Utility function to write data to HTS221.</p>
-
-  <h4 id="parameters-13">Parameters</h4>
-
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: left">Type</th>
-        <th style="text-align: left">Name</th>
-        <th style="text-align: left">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: left">void *</td>
-        <td style="text-align: left">handle</td>
-        <td style="text-align: left">The HTS221Sensor handler.</td>
-      </tr>
-      <tr>
-        <td style="text-align: left">unsigned char</td>
-        <td style="text-align: left">WriteAddr</td>
-        <td style="text-align: left">The specifies internal address register to write to.</td>
-      </tr>
-      <tr>
-        <td style="text-align: left">unsigned char *</td>
-        <td style="text-align: left">pBuffer</td>
-        <td style="text-align: left">The pointer to the byte-array data to send.</td>
-      </tr>
-      <tr>
-        <td style="text-align: left">int</td>
-        <td style="text-align: left">nBytesToWrite</td>
-        <td style="text-align: left">The number of bytes to write.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h4 id="return-value-11">Return value</h4>
-
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: left">Type</th>
-        <th style="text-align: left">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: left">unsigned char</td>
-        <td style="text-align: left">Result code, 0 in case of success, an error code otherwise.</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
-
-<h3 id="hts221_io_read">HTS221_io_read</h3>
-
-<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">HTS221_io_read</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">handle</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">ReadAddr</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pBuffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nBytesToRead</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<blockquote>
-  <p>Utility function to read data from HTS221.</p>
-
-  <h4 id="parameters-14">Parameters</h4>
-
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: left">Type</th>
-        <th style="text-align: left">Name</th>
-        <th style="text-align: left">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: left">void *</td>
-        <td style="text-align: left">handle</td>
-        <td style="text-align: left">The HTS221Sensor handler.</td>
-      </tr>
-      <tr>
-        <td style="text-align: left">unsigned char</td>
-        <td style="text-align: left">ReadAddr</td>
-        <td style="text-align: left">The specifies internal address register to read from.</td>
-      </tr>
-      <tr>
-        <td style="text-align: left">unsigned char *</td>
-        <td style="text-align: left">pBuffer</td>
-        <td style="text-align: left">The pointer to the byte-array data to send.</td>
-      </tr>
-      <tr>
-        <td style="text-align: left">int</td>
-        <td style="text-align: left">nBytesToRead</td>
-        <td style="text-align: left">The number of bytes to be read.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h4 id="return-value-12">Return value</h4>
-
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: left">Type</th>
-        <th style="text-align: left">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: left">unsigned char</td>
-        <td style="text-align: left">Result code, 0 in case of success, -1 if an I2C error has occured.</td>
       </tr>
     </tbody>
   </table>
@@ -1163,7 +935,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-30">April 30, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-28">June 28, 2017</time></p>
         
       </footer>
 

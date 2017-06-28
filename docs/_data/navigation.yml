@@ -44,5 +44,7 @@ docs:
         url: /docs/apis/lsm6dsl/
       - title: "LIS2MDL"
         url: /docs/apis/lis2mdl/
-      - title: "LPS25H"
-        url: /docs/apis/lps25h/
+      - title: "LPS22HB"
+        url: /docs/apis/lps22hb/
+      - title: "IrDA"
+        url: /docs/apis/irda/
