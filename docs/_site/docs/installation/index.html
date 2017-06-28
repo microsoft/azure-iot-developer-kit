@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-26T02:50:23-07:00">
+  <meta property="article:published_time" content="2017-06-28T02:13:36-07:00">
 
 
 
@@ -327,7 +327,15 @@
             
             
 
-            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps25h/" class="">LPS25H</a></li>
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/lps22hb/" class="">LPS22HB</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/" class="">IrDA</a></li>
           
         </ul>
         
@@ -343,7 +351,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Manual Installation">
     <meta itemprop="description" content="Instructions for manually install tools and packages.">
-    <meta itemprop="datePublished" content="June 26, 2017">
+    <meta itemprop="datePublished" content="June 28, 2017">
     <meta itemprop="dateModified" content="May 12, 2017">
 
     <div class="page__inner-wrap">
@@ -356,7 +364,7 @@
       
 
       <section class="page__content" itemprop="text">
-        <p>Follow these simple steps to manually install tools and packages for DevKit development. If you are on Windows, it is suggested to use <a href="http://localhost:4000/azure-iot-developer-kit/docs/get-started/#a-download-latest-package">our package</a> to install everything you need.</p>
+        <p>Follow these simple steps to manually install tools and packages for DevKit development. If you are on Windows, we suggest you use <a href="http://localhost:4000/azure-iot-developer-kit/docs/get-started/#a-download-latest-package">our package</a> to install everything.</p>
 
 <h2 id="macos">macOS</h2>
 
@@ -369,50 +377,48 @@
 </code></pre>
 </div>
 
-<p>And restart your command shell for some changes to take effect:</p>
+<p>And restart your command shell for changes to take effect:</p>
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">exec</span> -l <span class="nv">$SHELL</span>
 </code></pre>
 </div>
 
 <h3 id="step-2-arduino-ide">Step 2. Arduino IDE</h3>
 
-<p>VS Code Arduino extension relies on it. Download <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE for macOS</a> and install it.</p>
+<p>The Visual Studio Code Arduino extension relies on the Arduino IDE. Download and install the <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE for macOS</a>.</p>
 
 <h3 id="step-3-visual-studio-code">Step 3. Visual Studio Code</h3>
 
-<p>Download <a href="https://code.visualstudio.com/" target="_blank">VS Code for macOS</a> and install it. This will be the primary development tool for building DevKit IoT applications.</p>
+<p>Download and install <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code for macOS</a>. This will be the primary development tool for building DevKit IoT applications.</p>
 
 <h3 id="step-4-arduino-extension">Step 4. Arduino extension</h3>
 
-<p>Arduino extension provides good development experience within VS Code. It comes with highlighted features like intellisense, automatic project scaffolding as well as debugging (comming soon).</p>
-
-<p>As this extension uses C++ extension for grammar support, you need to install it first. So make sure you install it before Arduino extension:</p>
+<p>Visual Studio Code allows you to install Marketplace extensions directly in the tool, simply click the extensions icon in the left menu pane and then search. You will need two extensions: 1) C++ extension for grammar support, it is required by the Arduino extension so you need to install it first; 2) Arduino extension which makes it easy to code, build, deploy and debug your Arduino sketches in Visual Studio Code. It comes with IntelliSense, automatic project scaffolding and debugging.</p>
 
 <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/installation-extensions.png" alt="installation-extensions" /></p>
 
 <h3 id="step-5-devkit-board-package">Step 5. DevKit board package</h3>
 
-<p>As you may familiar with adding a new Arduino board, you need to add DevKit board to the Boards Manager.</p>
+<p>You will need to add the DevKit board using the Boards Manager in Visual Studio Code.</p>
 
 <ol>
   <li>
     <p>Use <code class="highlighter-rouge">Cmd+Shift+P</code> to invoke command palette and type <strong>Arduino</strong> then find and select <strong>Arduino: Boards Manager</strong>.</p>
   </li>
   <li>
-    <p>Click <strong>‘Additional URLs’</strong> right down the bottom.
+    <p>Click <strong>‘Additional URLs’</strong> at the bottom right.
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/installation-additional-urls.png" alt="installation-additional-urls" /></p>
   </li>
-  <li>In the <code class="highlighter-rouge">settings.json</code> file opened, add a line to the bottom of ‘USER SETTINGS’ pane.
+  <li>In the <code class="highlighter-rouge">settings.json</code> file, add a line at the bottom of ‘USER SETTINGS’ pane.
     <div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="w"> </span><span class="s2">"arduino.additionalUrls"</span><span class="err">:</span><span class="w"> </span><span class="s2">"https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"</span><span class="w">
 </span></code></pre>
     </div>
     <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/installation-settings-json.png" alt="installation-settings-json" /></p>
   </li>
-  <li>Now search in the boards manager for ‘az3166’ and install the latest version.
+  <li>Now in the Boards Manager search for ‘az3166’ and install the latest version.
  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/installation-az3166.png" alt="installation-az3166" /></li>
 </ol>
 
-<p>You should now have all necessary tools and packages installed.</p>
+<p>You now have all the necessary tools and packages installed.</p>
 
 <h2 id="next-steps">Next Steps</h2>
 
