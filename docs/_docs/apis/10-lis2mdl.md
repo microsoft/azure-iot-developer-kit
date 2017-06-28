@@ -2,7 +2,7 @@
 title: "LIS2MDL Sensor"
 permalink: /docs/apis/lis2mdl/
 excerpt: "Library for LIS2MDL, magnetometer sensor on AZ3166"
-last_modified_at: 2017-04-30T10:16:34-04:00
+last_modified_at: 2017-06-28T00:01:52-04:00
 ---
 
 The ST LIS2MDL is a sensor for magnetometer.
@@ -11,7 +11,7 @@ Implementation file for the LIS2MDL driver class.
 
 ## Assembly
 
-lis2mdl_class.h
+LIS2MDLSensor.h
 
 ## Summary
 
@@ -27,9 +27,8 @@ lis2mdl_class.h
 | Methods |
 | :------ |
 | [init](#init) - `int init()` |
-| [read_id](#read_id) - `int read_id(unsigned char *m_id)` |
-| [get_m_axes_raw](#get_m_axes_raw) - `int get_m_axes_raw(int16_t *pData)` |
-| [get_m_axes](#get_m_axes) - `int get_m_axes(int *pData)` |
+| [readId](#readId) - `int readId(unsigned char *m_id)` |
+| [getMAxes](#getMAxes) - `int getMAxes(int *pData)` |
 
 ## Types
 
@@ -75,10 +74,10 @@ int init()
 > | :--- | :---------- |
 > | int | 0 (`MAGNETO_OK`) in case of success, an error code otherwise. |
 
-### read_id
+### readId
 
 ```cpp
-int read_id(unsigned char *m_id)
+int readId(unsigned char *m_id)
 ```
 
 > Read ID of LIS2MDL Magnetic sensor.
@@ -95,30 +94,10 @@ int read_id(unsigned char *m_id)
 > | :--- | :---------- |
 > | int | 0 (`MAGNETO_OK`) in case of success, an error code otherwise. |
 
-### get_m_axes_raw
+### getMAxes
 
 ```cpp
-int get_m_axes_raw(int16_t *pData)
-```
-
-> Read raw data from LIS2MDL Magnetic sensor output register.
->
-> #### Parameters
->
-> | Type | Name | Description |
-> | :--- | :--- | :---------- |
-> | int16_t * | pData | The pointer where the magnetometer raw data are stored. |
->
-> #### Return value
->
-> | Type | Description |
-> | :--- | :---------- |
-> | int | 0 (`MAGNETO_OK`) in case of success, an error code otherwise. |
-
-### get_m_axes
-
-```cpp
-int get_m_axes(int *pData)
+int getMAxes(int *pData)
 ```
 
 > Read data from LIS2MDL Magnetic sensor and calculate Magnetic in mgauss.
@@ -154,12 +133,9 @@ void loop(){
     // read id
     lis2mdl->readId(&id);
     Serial.printf("Id: %d\n", id);
-    // get_m_axes
-    lis2mdl->get_m_axes(axes);
+    // getMAxes
+    lis2mdl->getMAxes(axes);
     Serial.printf("Axes: x - %d, y - %d, z - %d\n", axes[0], axes[1], axes[2]);
-    // get_m_axes_raw
-    lis2mdl->get_m_axes_raw(raw);
-    Serial.printf("Raw: x - %d, y - %d, z - %d\n", raw[0], raw[1], raw[2]);
     delay(1000);
 }
 ```

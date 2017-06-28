@@ -2,7 +2,7 @@
 title: "LSM6DSL Sensor"
 permalink: /docs/apis/lsm6dsl/
 excerpt: "Library for LSM6DSL, 3D digital accelerometer and gyroscope sensor on AZ3166"
-last_modified_at: 2017-04-30T10:16:34-04:00
+last_modified_at: 2017-06-28T00:01:52-04:00
 ---
 
 The [ST LSM6DSL](http://www.st.com/en/mems-and-sensors/lsm6dsl.html){:target="_blank"} is a 3D digital accelerometer and gyroscope enabling always-on low-power features for an optimal motion experience.
@@ -30,61 +30,61 @@ LSM6DSLSensor.h
 | Methods |
 | :------ |
 | [init](#init) - `int init(void *init)` |
-| [enable_x](#enable_x) - `int enable_x(void)` |
-| [enable_g](#enable_g) - `int enable_g(void)` |
-| [disable_x](#disable_x) - `int disable_x(void)` |
-| [disable_g](#disable_g) - `int disable_g(void)` |
-| [read_id](#read_id) - `int read_id(unsigned char *id)` |
-| [get_x_axes](#get_x_axes) - `int get_x_axes(int *pData)` |
-| [get_g_axes](#get_g_axes) - `int get_g_axes(int *pData)` |
-| [get_x_sensitivity](#get_x_sensitivity) - `int get_x_sensitivity(float *pfData)` |
-| [get_g_sensitivity](#get_g_sensitivity) - `int get_g_sensitivity(float *pfData)` |
-| [get_x_axes_raw](#get_x_axes_raw) - `int get_x_axes_raw(int16_t *pData)` |
-| [get_g_axes_raw](#get_g_axes_raw) - `int get_g_axes_raw(int16_t *pData)` |
-| [get_x_odr](#get_x_odr) - `int get_x_odr(float* odr)` |
-| [get_g_odr](#get_g_odr) - `int get_g_odr(float* odr)` |
+| [enableAccelerator](#enableAccelerator) - `int enableAccelerator(void)` |
+| [enableGyroscope](#enableGyroscope) - `int enableGyroscope(void)` |
+| [disableAccelerator](#disableAccelerator) - `int disableAccelerator(void)` |
+| [disableGyroscope](#disableGyroscope) - `int disableGyroscope(void)` |
+| [readId](#readId) - `int readId(unsigned char *id)` |
+| [getXAxes](#getXAxes) - `int getXAxes(int *pData)` |
+| [getGAxes](#getGAxes) - `int getGAxes(int *pData)` |
+| [getXSensitivity](#getXSensitivity) - `int getXSensitivity(float *pfData)` |
+| [getGSensitivity](#getGSensitivity) - `int getGSensitivity(float *pfData)` |
+| [getXAxesRaw](#getXAxesRaw) - `int getXAxesRaw(int16_t *pData)` |
+| [getGAxesRaw](#getGAxesRaw) - `int getGAxesRaw(int16_t *pData)` |
+| [getXOdr](#getXOdr) - `int getXOdr(float* odr)` |
+| [getGOdr](#getGOdr) - `int getGOdr(float* odr)` |
 | [set_x_odr](#set_x_odr) - `int set_x_odr(float odr)` |
-| [set_x_odr_when_enabled](#set_x_odr_when_enabled) - `int set_x_odr_when_enabled(float odr)` |
-| [set_x_odr_when_disabled](#set_x_odr_when_disabled) - `int set_x_odr_when_disabled(float odr)` |
+| [setXOdrWhenEnabled](#setXOdrWhenEnabled) - `int setXOdrWhenEnabled(float odr)` |
+| [setXOdrWhenDisabled](#setXOdrWhenDisabled) - `int setXOdrWhenDisabled(float odr)` |
 | [set_g_odr](#set_g_odr) - `int set_g_odr(float odr)` |
-| [set_g_odr_when_enabled](#set_g_odr_when_enabled) - `int set_g_odr_when_enabled(float odr)` |
-| [set_g_odr_when_disabled](#set_g_odr_when_disabled) - `int set_g_odr_when_disabled(float odr)` |
-| [get_x_fs](#get_x_fs) - `int get_x_fs(float* fullScale)` |
-| [get_g_fs](#get_g_fs) - `int get_g_fs(float* fullScale)` |
-| [set_x_fs](#set_x_fs) - `int set_x_fs(float fullScale)` |
-| [set_g_fs](#set_g_fs) - `int set_g_fs(float fullScale)` |
-| [enable_free_fall_detection](#enable_free_fall_detection) - `int enable_free_fall_detection(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disable_free_fall_detection](#disable_free_fall_detection) - `int disable_free_fall_detection(void)` |
-| [set_free_fall_threshold](#set_free_fall_threshold) - `int set_free_fall_threshold(uint8_t thr)` |
-| [enable_pedometer](#enable_pedometer) - `int enable_pedometer(void)` |
-| [disable_pedometer](#disable_pedometer) - `int disable_pedometer(void)` |
-| [get_step_counter](#get_step_counter) - `int get_step_counter(int *step_count)` |
-| [reset_step_counter](#reset_step_counter) - `int reset_step_counter(void)` |
-| [set_pedometer_threshold](#set_pedometer_threshold) - `int set_pedometer_threshold(unsigned char thr)` |
-| [enable_tilt_detection](#enable_tilt_detection) - `int enable_tilt_detection(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disable_tilt_detection](#disable_tilt_detection) - `int disable_tilt_detection(void)` |
-| [enable_wake_up_detection](#enable_wake_up_detection) - `int enable_wake_up_detection(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disable_wake_up_detection](#disable_wake_up_detection) - `int disable_wake_up_detection(void)` |
-| [set_wake_up_threshold](#set_wake_up_threshold) - `int set_wake_up_threshold(unsigned char thr)` |
-| [enable_single_tap_detection](#enable_single_tap_detection) - `int enable_single_tap_detection(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disable_single_tap_detection](#disable_single_tap_detection) - `int disable_single_tap_detection(void)` |
-| [enable_double_tap_detection](#enable_double_tap_detection) - `int enable_double_tap_detection(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disable_double_tap_detection](#disable_double_tap_detection) - `int disable_double_tap_detection(void)` |
-| [set_tap_threshold](#set_tap_threshold) - `int set_tap_threshold(unsigned char thr)` |
-| [set_tap_shock_time](#set_tap_shock_time) - `int set_tap_shock_time(uint8_t time)` |
-| [set_tap_quiet_time](#set_tap_quiet_time) - `int set_tap_quiet_time(uint8_t time)` |
-| [set_tap_duration_time](#set_tap_duration_time) - `int set_tap_duration_time(uint8_t time)` |
-| [enable_6d_orientation](#enable_6d_orientation) - `int enable_6d_orientation(LSM6DSL_Interrupt_Pin_t pin)` |
-| [disable_6d_orientation](#disable_6d_orientation) - `int disable_6d_orientation(void)` |
-| [get_6d_orientation_xl](#get_6d_orientation_xl) - `int get_6d_orientation_xl(uint8_t *xl)` |
-| [get_6d_orientation_xh](#get_6d_orientation_xh) - `int get_6d_orientation_xh(uint8_t *xh)` |
-| [get_6d_orientation_yl](#get_6d_orientation_yl) - `int get_6d_orientation_yl(uint8_t *yl)` |
-| [get_6d_orientation_yh](#get_6d_orientation_yh) - `int get_6d_orientation_yh(uint8_t *yh)` |
-| [get_6d_orientation_zl](#get_6d_orientation_zl) - `int get_6d_orientation_zl(uint8_t *zl)` |
-| [get_6d_orientation_zh](#get_6d_orientation_zh) - `int get_6d_orientation_zh(uint8_t *zh)` |
-| [get_event_status](#get_event_status) - `int get_event_status(LSM6DSL_Event_Status_t *status)` |
-| [read_reg](#read_reg) - `int read_reg(uint8_t reg, uint8_t *data)` |
-| [write_reg](#write_reg) - `int write_reg(uint8_t reg, uint8_t data)` |
+| [setGOdrWhenEnabled](#setGOdrWhenEnabled) - `int setGOdrWhenEnabled(float odr)` |
+| [setGOdrWhenDisabled](#setGOdrWhenDisabled) - `int setGOdrWhenDisabled(float odr)` |
+| [getXFullScale](#getXFullScale) - `int getXFullScale(float* fullScale)` |
+| [getGFullScale](#getGFullScale) - `int getGFullScale(float* fullScale)` |
+| [setXFullScale](#setXFullScale) - `int setXFullScale(float fullScale)` |
+| [setGFullScale](#setGFullScale) - `int setGFullScale(float fullScale)` |
+| [enableFreeFallDetection](#enableFreeFallDetection) - `int enableFreeFallDetection(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disableFreeFallDetection](#disableFreeFallDetection) - `int disableFreeFallDetection(void)` |
+| [setFreeFallThreshold](#setFreeFallThreshold) - `int setFreeFallThreshold(uint8_t thr)` |
+| [enablePedometer](#enablePedometer) - `int enablePedometer(void)` |
+| [disablePedometer](#disablePedometer) - `int disablePedometer(void)` |
+| [getStepCounter](#getStepCounter) - `int getStepCounter(int *step_count)` |
+| [resetStepCounter](#resetStepCounter) - `int resetStepCounter(void)` |
+| [setPedometerThreshold](#setPedometerThreshold) - `int setPedometerThreshold(unsigned char thr)` |
+| [enableTiltDetection](#enableTiltDetection) - `int enableTiltDetection(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disableTiltDetection](#disableTiltDetection) - `int disableTiltDetection(void)` |
+| [enableWakeUpDetection](#enableWakeUpDetection) - `int enableWakeUpDetection(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disableWakeUpDetection](#disableWakeUpDetection) - `int disableWakeUpDetection(void)` |
+| [setWakeUpThreshold](#setWakeUpThreshold) - `int setWakeUpThreshold(unsigned char thr)` |
+| [enableSingleTapDetection](#enableSingleTapDetection) - `int enableSingleTapDetection(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disableSingleTapDetection](#disableSingleTapDetection) - `int disableSingleTapDetection(void)` |
+| [enableDoubleTapDetection](#enableDoubleTapDetection) - `int enableDoubleTapDetection(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disableDoubleTapDetection](#disableDoubleTapDetection) - `int disableDoubleTapDetection(void)` |
+| [setTapThreshold](#setTapThreshold) - `int setTapThreshold(unsigned char thr)` |
+| [setTapShockTime](#setTapShockTime) - `int setTapShockTime(uint8_t time)` |
+| [setTapQuietTime](#setTapQuietTime) - `int setTapQuietTime(uint8_t time)` |
+| [setTapDurationTime](#setTapDurationTime) - `int setTapDurationTime(uint8_t time)` |
+| [enable6dOrientation](#enable6dOrientation) - `int enable6dOrientation(LSM6DSL_Interrupt_Pin_t pin)` |
+| [disable6dOrientation](#disable6dOrientation) - `int disable6dOrientation(void)` |
+| [get6dOrientationXL](#get6dOrientationXL) - `int get6dOrientationXL(uint8_t *xl)` |
+| [get6dOrientationXH](#get6dOrientationXH) - `int get6dOrientationXH(uint8_t *xh)` |
+| [get6dOrientationYL](#get6dOrientationYL) - `int get6dOrientationYL(uint8_t *yl)` |
+| [get6dOrientationYH](#get6dOrientationYH) - `int get6dOrientationYH(uint8_t *yh)` |
+| [get6dOrientationZL](#get6dOrientationZL) - `int get6dOrientationZL(uint8_t *zl)` |
+| [get6dOrientationZH](#get6dOrientationZH) - `int get6dOrientationZH(uint8_t *zh)` |
+| [getEventStatus](#getEventStatus) - `int getEventStatus(LSM6DSL_Event_Status_t *status)` |
+| [readReg](#readReg) - `int readReg(uint8_t reg, uint8_t *data)` |
+| [writeReg](#writeReg) - `int writeReg(uint8_t reg, uint8_t data)` |
 
 ## Types
 
@@ -157,10 +157,10 @@ int init(void *init)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### enable_x
+### enableAccelerator
 
 ```cpp
-int enable_x(void)
+int enableAccelerator(void)
 ```
 
 > Enable LSM6DSL Accelerator.
@@ -175,10 +175,10 @@ int enable_x(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### enable_g
+### enableGyroscope
 
 ```cpp
-int enable_g(void)
+int enableGyroscope(void)
 ```
 
 > Enable LSM6DSL Gyroscope.
@@ -193,10 +193,10 @@ int enable_g(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### disable_x
+### disableAccelerator
 
 ```cpp
-int disable_x(void)
+int disableAccelerator(void)
 ```
 
 > Disable LSM6DSL Accelerator.
@@ -211,10 +211,10 @@ int disable_x(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### disable_g
+### disableGyroscope
 
 ```cpp
-int disable_g(void)
+int disableGyroscope(void)
 ```
 
 > Disable LSM6DSL Gyroscope.
@@ -229,10 +229,10 @@ int disable_g(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### read_id
+### readId
 
 ```cpp
-int read_id(unsigned char *id)
+int readId(unsigned char *id)
 ```
 
 > Read ID of LSM6DSL Accelerometer and Gyroscope.
@@ -249,10 +249,10 @@ int read_id(unsigned char *id)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_x_axes
+### getXAxes
 
 ```cpp
-int get_x_axes(int *pData)
+int getXAxes(int *pData)
 ```
 
 > Read data from LSM6DSL Accelerometer.
@@ -269,10 +269,10 @@ int get_x_axes(int *pData)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_g_axes
+### getGAxes
 
 ```cpp
-int get_g_axes(int *pData)
+int getGAxes(int *pData)
 ```
 
 > Read data from LSM6DSL Gyroscope.
@@ -289,10 +289,10 @@ int get_g_axes(int *pData)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_x_sensitivity
+### getXSensitivity
 
 ```cpp
-int get_x_sensitivity(float *pfData)
+int getXSensitivity(float *pfData)
 ```
 
 > Read Accelerometer Sensitivity.
@@ -309,10 +309,10 @@ int get_x_sensitivity(float *pfData)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_g_sensitivity
+### getGSensitivity
 
 ```cpp
-int get_g_sensitivity(float *pfData)
+int getGSensitivity(float *pfData)
 ```
 
 > Read Gyroscope Sensitivity.
@@ -329,10 +329,10 @@ int get_g_sensitivity(float *pfData)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_x_axes_raw
+### getXAxesRaw
 
 ```cpp
-int get_x_axes_raw(int16_t *pData)
+int getXAxesRaw(int16_t *pData)
 ```
 
 > Read raw data from LSM6DSL Accelerometer.
@@ -349,10 +349,10 @@ int get_x_axes_raw(int16_t *pData)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_g_axes_raw
+### getGAxesRaw
 
 ```cpp
-int get_g_axes_raw(int16_t *pData)
+int getGAxesRaw(int16_t *pData)
 ```
 
 > Read raw data from LSM6DSL Gyroscope.
@@ -369,10 +369,10 @@ int get_g_axes_raw(int16_t *pData)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_x_odr
+### getXOdr
 
 ```cpp
-int get_x_odr(float *odr)
+int getXOdr(float *odr)
 ```
 
 > Read LSM6DSL Accelerometer output data rate.
@@ -389,10 +389,10 @@ int get_x_odr(float *odr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_g_odr
+### getGOdr
 
 ```cpp
-int get_g_odr(float *odr)
+int getGOdr(float *odr)
 ```
 
 > Read LSM6DSL Gyroscope output data rate.
@@ -429,10 +429,10 @@ int set_x_odr(float odr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_x_odr_when_enabled
+### setXOdrWhenEnabled
 
 ```cpp
-int set_x_odr_when_enabled(float odr)
+int setXOdrWhenEnabled(float odr)
 ```
 
 > Set LSM6DSL Accelerometer output data rate when enabled.
@@ -449,10 +449,10 @@ int set_x_odr_when_enabled(float odr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_x_odr_when_disabled
+### setXOdrWhenDisabled
 
 ```cpp
-int set_x_odr_when_disabled(float odr)
+int setXOdrWhenDisabled(float odr)
 ```
 
 > Set LSM6DSL Accelerometer output data rate when disabled.
@@ -489,10 +489,10 @@ int set_g_odr(float odr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_g_odr_when_enabled
+### setGOdrWhenEnabled
 
 ```cpp
-int set_g_odr_when_enabled(float odr)
+int setGOdrWhenEnabled(float odr)
 ```
 
 > Set LSM6DSL Gyroscope output data rate when enabled.
@@ -509,10 +509,10 @@ int set_g_odr_when_enabled(float odr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_g_odr_when_disabled
+### setGOdrWhenDisabled
 
 ```cpp
-int set_g_odr_when_disabled(float odr)
+int setGOdrWhenDisabled(float odr)
 ```
 
 > Set LSM6DSL Gyroscope output data rate when disabled.
@@ -529,10 +529,10 @@ int set_g_odr_when_disabled(float odr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_x_fs
+### getXFullScale
 
 ```cpp
-int get_x_fs(float *fullScale)
+int getXFullScale(float *fullScale)
 ```
 
 > Read LSM6DSL Accelerometer full scale.
@@ -549,10 +549,10 @@ int get_x_fs(float *fullScale)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_g_fs
+### getGFullScale
 
 ```cpp
-int get_g_fs(float *fullScale)
+int getGFullScale(float *fullScale)
 ```
 
 > Read LSM6DSL Gyroscope full scale.
@@ -569,10 +569,10 @@ int get_g_fs(float *fullScale)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_x_fs
+### setXFullScale
 
 ```cpp
-int set_x_fs(float fullScale)
+int setXFullScale(float fullScale)
 ```
 
 > Set LSM6DSL Accelerometer full scale
@@ -589,10 +589,10 @@ int set_x_fs(float fullScale)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_g_fs
+### setGFullScale
 
 ```cpp
-int set_g_fs(float fullScale)
+int setGFullScale(float fullScale)
 ```
 
 > Set LSM6DSL Gyroscope full scale.
@@ -609,10 +609,10 @@ int set_g_fs(float fullScale)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### enable_free_fall_detection
+### enableFreeFallDetection
 
 ```cpp
-int enable_free_fall_detection(LSM6DSL_Interrupt_Pin_t pin)
+int enableFreeFallDetection(LSM6DSL_Interrupt_Pin_t pin)
 ```
 
 > Enable free fall detection. This function sets the LSM6DSL accelerometer ODR to 416Hz and the LSM6DSL accelerometer full scale to 2g.
@@ -629,10 +629,10 @@ int enable_free_fall_detection(LSM6DSL_Interrupt_Pin_t pin)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### disable_free_fall_detection
+### disableFreeFallDetection
 
 ```cpp
-int disable_free_fall_detection(void)
+int disableFreeFallDetection(void)
 ```
 
 > Disable free fall detection.
@@ -647,10 +647,10 @@ int disable_free_fall_detection(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_free_fall_threshold
+### setFreeFallThreshold
 
 ```cpp
-int set_free_fall_threshold(int thr)
+int setFreeFallThreshold(int thr)
 ```
 
 > Set the free fall detection threshold for LSM6DSL accelerometer sensor.
@@ -667,10 +667,10 @@ int set_free_fall_threshold(int thr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### enable_pedometer
+### enablePedometer
 
 ```cpp
-int enable_pedometer(void)
+int enablePedometer(void)
 ```
 
 > Enable the pedometer feature for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 26Hz and the LSM6DSL accelerometer full scale to 2g.
@@ -685,10 +685,10 @@ int enable_pedometer(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### disable_pedometer
+### disablePedometer
 
 ```cpp
-int disable_pedometer(void)
+int disablePedometer(void)
 ```
 
 > Disable the pedometer feature for LSM6DSL accelerometer sensor.
@@ -703,10 +703,10 @@ int disable_pedometer(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_step_counter
+### getStepCounter
 
 ```cpp
-int get_step_counter(int *step_count)
+int getStepCounter(int *step_count)
 ```
 
 > Get the step counter for LSM6DSL accelerometer sensor.
@@ -723,10 +723,10 @@ int get_step_counter(int *step_count)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### reset_step_counter
+### resetStepCounter
 
 ```cpp
-int reset_step_counter(void)
+int resetStepCounter(void)
 ```
 
 > Reset of the step counter for LSM6DSL accelerometer sensor.
@@ -741,10 +741,10 @@ int reset_step_counter(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_pedometer_threshold
+### setPedometerThreshold
 
 ```cpp
-int set_pedometer_threshold(unsigned char thr)
+int setPedometerThreshold(unsigned char thr)
 ```
 
 > Set the pedometer threshold for LSM6DSL accelerometer sensor.
@@ -761,10 +761,10 @@ int set_pedometer_threshold(unsigned char thr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### enable_tilt_detection
+### enableTiltDetection
 
 ```cpp
-int enable_tilt_detection(LSM6DSL_Interrupt_Pin_t pin)
+int enableTiltDetection(LSM6DSL_Interrupt_Pin_t pin)
 ```
 
 > Enable the tilt detection for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 26Hz and the LSM6DSL accelerometer full scale to 2g.
@@ -781,10 +781,10 @@ int enable_tilt_detection(LSM6DSL_Interrupt_Pin_t pin)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### disable_tilt_detection
+### disableTiltDetection
 
 ```cpp
-int disable_tilt_detection(void)
+int disableTiltDetection(void)
 ```
 
 > Disable the tilt detection for LSM6DSL accelerometer sensor.
@@ -799,10 +799,10 @@ int disable_tilt_detection(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### enable_wake_up_detection
+### enableWakeUpDetection
 
 ```cpp
-int enable_wake_up_detection(LSM6DSL_Interrupt_Pin_t pin)
+int enableWakeUpDetection(LSM6DSL_Interrupt_Pin_t pin)
 ```
 
 > Enable the wake up detection for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 416Hz and the LSM6DSL accelerometer full scale to 2g.
@@ -819,10 +819,10 @@ int enable_wake_up_detection(LSM6DSL_Interrupt_Pin_t pin)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### disable_wake_up_detection
+### disableWakeUpDetection
 
 ```cpp
-int disable_wake_up_detection(void)
+int disableWakeUpDetection(void)
 ```
 
 > Disable the wake up detection for LSM6DSL accelerometer sensor.
@@ -838,10 +838,10 @@ int disable_wake_up_detection(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_wake_up_threshold
+### setWakeUpThreshold
 
 ```cpp
-int set_wake_up_threshold(unsigned char thr)
+int setWakeUpThreshold(unsigned char thr)
 ```
 
 > Set the wake up threshold for LSM6DSL accelerometer sensor.
@@ -858,10 +858,10 @@ int set_wake_up_threshold(unsigned char thr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### enable_single_tap_detection
+### enableSingleTapDetection
 
 ```cpp
-int enable_single_tap_detection(LSM6DSL_Interrupt_Pin_t pin)
+int enableSingleTapDetection(LSM6DSL_Interrupt_Pin_t pin)
 ```
 
 > Enable the single tap detection for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 416Hz and the LSM6DSL accelerometer full scale to 2g.
@@ -878,10 +878,10 @@ int enable_single_tap_detection(LSM6DSL_Interrupt_Pin_t pin)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### disable_single_tap_detection
+### disableSingleTapDetection
 
 ```cpp
-int disable_single_tap_detection(void)
+int disableSingleTapDetection(void)
 ```
 
 > Disable the single tap detection for LSM6DSL accelerometer sensor.
@@ -896,10 +896,10 @@ int disable_single_tap_detection(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### enable_double_tap_detection
+### enableDoubleTapDetection
 
 ```cpp
-int enable_double_tap_detection(LSM6DSL_Interrupt_Pin_t pin)
+int enableDoubleTapDetection(LSM6DSL_Interrupt_Pin_t pin)
 ```
 
 > Enable the double tap detection for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 416Hz and the LSM6DSL accelerometer full scale to 2g.
@@ -916,10 +916,10 @@ int enable_double_tap_detection(LSM6DSL_Interrupt_Pin_t pin)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### disable_double_tap_detection
+### disableDoubleTapDetection
 
 ```cpp
-int disable_double_tap_detection(void)
+int disableDoubleTapDetection(void)
 ```
 
 > Disable the double tap detection for LSM6DSL accelerometer sensor.
@@ -934,10 +934,10 @@ int disable_double_tap_detection(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_tap_threshold
+### setTapThreshold
 
 ```cpp
-int set_tap_threshold(unsigned char thr)
+int setTapThreshold(unsigned char thr)
 ```
 
 > Set the tap threshold for LSM6DSL accelerometer sensor.
@@ -954,10 +954,10 @@ int set_tap_threshold(unsigned char thr)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_tap_shock_time
+### setTapShockTime
 
 ```cpp
-int set_tap_shock_time(uint8_t time)
+int setTapShockTime(uint8_t time)
 ```
 
 > Set the tap shock time window for LSM6DSL accelerometer sensor.
@@ -974,10 +974,10 @@ int set_tap_shock_time(uint8_t time)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_tap_quiet_time
+### setTapQuietTime
 
 ```cpp
-int set_tap_quiet_time(uint8_t time)
+int setTapQuietTime(uint8_t time)
 ```
 
 > Set the tap quiet time window for LSM6DSL accelerometer sensor.
@@ -994,10 +994,10 @@ int set_tap_quiet_time(uint8_t time)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### set_tap_duration_time
+### setTapDurationTime
 
 ```cpp
-int set_tap_duration_time(uint8_t time)
+int setTapDurationTime(uint8_t time)
 ```
 
 > Set the tap duration of the time window for LSM6DSL accelerometer sensor.
@@ -1014,10 +1014,10 @@ int set_tap_duration_time(uint8_t time)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### enable_6d_orientation
+### enable6dOrientation
 
 ```cpp
-int enable_6d_orientation(LSM6DSL_Interrupt_Pin_t pin)
+int enable6dOrientation(LSM6DSL_Interrupt_Pin_t pin)
 ```
 
 > Enable the 6D orientation detection for LSM6DSL accelerometer sensor. This function sets the LSM6DSL accelerometer ODR to 416Hz and the LSM6DSL accelerometer full scale to 2g.
@@ -1034,10 +1034,10 @@ int enable_6d_orientation(LSM6DSL_Interrupt_Pin_t pin)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### disable_6d_orientation
+### disable6dOrientation
 
 ```cpp
-int disable_6d_orientation(void)
+int disable6dOrientation(void)
 ```
 
 > Disable the 6D orientation detection for LSM6DSL accelerometer sensor.
@@ -1052,10 +1052,10 @@ int disable_6d_orientation(void)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_6d_orientation_xl
+### get6dOrientationXL
 
 ```cpp
-int get_6d_orientation_xl(uint8_t *xl)
+int get6dOrientationXL(uint8_t *xl)
 ```
 
 > Get the 6D orientation XL axis for LSM6DSL accelerometer sensor.
@@ -1072,10 +1072,10 @@ int get_6d_orientation_xl(uint8_t *xl)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_6d_orientation_xh
+### get6dOrientationXH
 
 ```cpp
-int get_6d_orientation_xh(uint8_t *xh)
+int get6dOrientationXH(uint8_t *xh)
 ```
 
 > Get the 6D orientation XH axis for LSM6DSL accelerometer sensor.
@@ -1092,10 +1092,10 @@ int get_6d_orientation_xh(uint8_t *xh)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_6d_orientation_yl
+### get6dOrientationYL
 
 ```cpp
-int get_6d_orientation_yl(uint8_t *yl)
+int get6dOrientationYL(uint8_t *yl)
 ```
 
 > Get the 6D orientation YL axis for LSM6DSL accelerometer sensor.
@@ -1112,10 +1112,10 @@ int get_6d_orientation_yl(uint8_t *yl)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_6d_orientation_yh
+### get6dOrientationYH
 
 ```cpp
-int get_6d_orientation_yh(uint8_t *yh)
+int get6dOrientationYH(uint8_t *yh)
 ```
 
 > Get the 6D orientation YH axis for LSM6DSL accelerometer sensor.
@@ -1132,10 +1132,10 @@ int get_6d_orientation_yh(uint8_t *yh)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_6d_orientation_zl
+### get6dOrientationZL
 
 ```cpp
-int get_6d_orientation_zl(uint8_t *zl)
+int get6dOrientationZL(uint8_t *zl)
 ```
 
 > Get the 6D orientation ZL axis for LSM6DSL accelerometer sensor.
@@ -1152,10 +1152,10 @@ int get_6d_orientation_zl(uint8_t *zl)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_6d_orientation_zh
+### get6dOrientationZH
 
 ```cpp
-int get_6d_orientation_zh(uint8_t *zh)
+int get6dOrientationZH(uint8_t *zh)
 ```
 
 > Get the 6D orientation ZH axis for LSM6DSL accelerometer sensor.
@@ -1172,10 +1172,10 @@ int get_6d_orientation_zh(uint8_t *zh)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### get_event_status
+### getEventStatus
 
 ```cpp
-int get_event_status(LSM6DSL_Event_Status_t *status)
+int getEventStatus(LSM6DSL_Event_Status_t *status)
 ```
 
 > Get the status of all hardware events for LSM6DSL accelerometer sensor.
@@ -1192,10 +1192,10 @@ int get_event_status(LSM6DSL_Event_Status_t *status)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### read_reg
+### readReg
 
 ```cpp
-int read_reg(uint8_t reg, uint8_t *data)
+int readReg(uint8_t reg, uint8_t *data)
 ```
 
 > 
@@ -1213,10 +1213,10 @@ int read_reg(uint8_t reg, uint8_t *data)
 > | :--- | :---------- |
 > | int | 0 in case of success, an error code otherwise. |
 
-### write_reg
+### writeReg
 
 ```cpp
-int write_reg(uint8_t reg, uint8_t data)
+int writeReg(uint8_t reg, uint8_t data)
 ```
 
 > Write the data to register.
@@ -1258,32 +1258,32 @@ void loop(){
 }
 void accelerometer_test(){
     Serial.println("***Accelerator***");
-    // enable_x
-    sensor->enable_x();
-    // get_x_axes
-    sensor->get_x_axes(axes);
+    // enableAccelerator
+    sensor->enableAccelerator();
+    // getXAxes
+    sensor->getXAxes(axes);
     Serial.printf("Axes: x: %d, y: %d, z: %d\n", axes[0], axes[1], axes[2]);
-    // get_x_sensitivity
-    sensor->get_x_sensitivity(&data);
+    // getXSensitivity
+    sensor->getXSensitivity(&data);
     Serial.print("Sensitivity: ");
     Serial.println(data);
-    // get_x_axes_raw
-    sensor->get_x_axes_raw(raws);
+    // getXAxesRaw
+    sensor->getXAxesRaw(raws);
     Serial.printf("Raw: x: %d, y: %d, z: %d\n", raws[0], raws[1], raws[2]);
 }
 void gyroscope_test(){
     Serial.println("***Gyroscope***");
-    // enable_g
-    sensor->enable_g();
-    // get_g_axes
-    sensor->get_g_axes(axes);
+    // enableGyroscope
+    sensor->enableGyroscope();
+    // getGAxes
+    sensor->getGAxes(axes);
     Serial.printf("Axes: x: %d, y: %d, z: %d\n", axes[0], axes[1], axes[2]);
-    // get_g_sensitivity
-    sensor->get_g_sensitivity(&data);
+    // getGSensitivity
+    sensor->getGSensitivity(&data);
     Serial.print("Sensitivity: ");
     Serial.println(data);
-    // get_g_axes_raw
-    sensor->get_g_axes_raw(raws);
+    // getGAxesRaw
+    sensor->getGAxesRaw(raws);
     Serial.printf("Raw: x: %d, y: %d, z: %d\n", raws[0], raws[1], raws[2]);
 }
 ```
