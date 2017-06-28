@@ -139,6 +139,9 @@
             <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/docs/get-started/">Docs</a></li>
           
             
+            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/docs/projects/">Projects</a></li>
+          
+            
             <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/versions/">Versions</a></li>
           
             
@@ -163,7 +166,7 @@
     <meta itemprop="headline" content="Versions and Release Notes">
     <meta itemprop="description" content="Versions and release notes">
     
-    <meta itemprop="dateModified" content="April 30, 2017">
+    <meta itemprop="dateModified" content="June 28, 2017">
 
     <div class="page__inner-wrap">
       
@@ -175,11 +178,61 @@
       
 
       <section class="page__content" itemprop="text">
-        <h2 id="april-2017">April 2017</h2>
+        <h2 id="version-100">Version 1.0.0</h2>
+
+<p>After a month work of stabilizing the code, fixing bugs and adding more samples, we are happy to release the v1.0.0 for our IoT DevKit. And soon we will open source the stacks including firmware, toolchain and all sample projects code. Please check release summary for details about this update.</p>
+
+<h3 id="release-summary">Release Summary</h3>
+
+<ul>
+  <li>
+    <p>Updated underlying mbed OS to 5.4.</p>
+  </li>
+  <li>Installation Scripts
+    <ul>
+      <li>Adapted to the changes for Azure subscription fetching in Azure CLI from Azure team.</li>
+      <li>Installed pip with <code class="highlighter-rouge">get-pip.py</code> script.</li>
+      <li>Optimized error handling when running commands.</li>
+    </ul>
+  </li>
+  <li>Stabilization
+    <ul>
+      <li>Bug fix: Memory leak on socket layer of Wi-Fi driver.</li>
+      <li>Bug fix: Added retry logic to improve the stability of Azure IoT Device SDK.</li>
+    </ul>
+  </li>
+  <li>Shake-Shake
+    <ul>
+      <li>Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.</li>
+      <li>Added delay and retry logic when not receiving any message due to function delay.</li>
+    </ul>
+  </li>
+  <li>Arduino Library
+    <ul>
+      <li>Refined library APIs to follow Arduino Standard like function naming conventions.</li>
+      <li>Added OLED draw method to control every pixel in display screen.</li>
+      <li>Added support for file system based on mbed file system implementation.</li>
+      <li>Added support for IRDA.</li>
+    </ul>
+  </li>
+  <li>Project Catalog
+    <ul>
+      <li>Added ‘Connect to Azure IoT Hub’ example and documentation that align with other <a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-get-started" target="_blank">Azure IoT Hub get started tutorials</a>.</li>
+      <li>Added ‘Remote Monitoring’ example and documentation that make DevKit connect to <a href="https://www.azureiotsuite.com" target="_blank">Azure IoT Suite</a>.</li>
+      <li>Added ‘MQTT Client’ example and documentation that send MQTT messages to public free MQTT broker.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-081">Version 0.8.1</h2>
+
+<p>Some bug fixes before DevKit debut on <a href="https://build.microsoft.com/" target="_blank">//Build</a> and <a href="http://makerfaire.com/" target="_blank">Maker Faire Bay Area</a>.</p>
+
+<h2 id="version-080">Version 0.8.0</h2>
 
 <p>This is our first public release of the Microsoft Azure IoT Developer Kit.</p>
 
-<h3 id="release-summary">Release Summary</h3>
+<h3 id="release-summary-1">Release Summary</h3>
 
 <p>Everything is brand new!</p>
 
@@ -192,7 +245,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-30">April 30, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-28">June 28, 2017</time></p>
         
       </footer>
 

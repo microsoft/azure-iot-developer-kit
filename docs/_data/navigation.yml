@@ -2,6 +2,8 @@
 main:
   - title: "Docs"
     url: /docs/get-started/
+  - title: "Projects"
+    url: /docs/projects/
   - title: "Versions"
     url: /versions/
   - title: "Blog"

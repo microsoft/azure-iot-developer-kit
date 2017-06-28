@@ -18,11 +18,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/projects/</loc>
-<<<<<<< HEAD
-<lastmod>2017-06-27T02:31:01-07:00</lastmod>
-=======
-<lastmod>2017-06-28T02:13:36-07:00</lastmod>
->>>>>>> master
+<lastmod>2017-06-28T03:30:30-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/apis/wifi/</loc>
@@ -78,11 +74,11 @@
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/projects/connect-iot-hub</loc>
-<<<<<<< HEAD
-<lastmod>2017-06-27T02:31:01-07:00</lastmod>
-=======
-<lastmod>2017-06-28T02:13:36-07:00</lastmod>
->>>>>>> master
+<lastmod>2017-06-28T03:30:30-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/azure-iot-developer-kit/docs/projects/mqtt-helloworld/</loc>
+<lastmod>2017-06-28T03:30:30-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/projects/shake-shake/</loc>
@@ -90,11 +86,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/docs/projects/</loc>
-<<<<<<< HEAD
-<lastmod>2017-06-27T02:31:01-07:00</lastmod>
-=======
-<lastmod>2017-06-28T02:13:36-07:00</lastmod>
->>>>>>> master
+<lastmod>2017-06-28T03:30:30-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/archive-layout-with-content/</loc>
@@ -134,6 +126,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/azure-iot-developer-kit/versions/</loc>
-<lastmod>2017-04-30T00:00:00-07:00</lastmod>
+<lastmod>2017-06-28T00:00:00-07:00</lastmod>
 </url>
 </urlset>

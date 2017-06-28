@@ -25,7 +25,7 @@ The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse
     * Preview ‘README.md: The DevKit introduction page.
     * Arduino Examples: Hands-on samples to get started with DevKit.
 
-    ![mqtt-example-vscode]({{"/assets/images/mqtt-vscode-connect.jpg" | absolute_url}})
+    ![mqtt-vscode-connect]({{"/assets/images/mqtt-vscode-connect.jpg" | absolute_url}})
 
 1. Setup serial monitor of Arduino Extension 
     * In Arduino, you can click the power plug icon in the status bar to open Serial Monitor.
@@ -34,16 +34,16 @@ The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse
 
     ![mqtt-vscode-serial-monitor]({{"/assets/images/mqtt-vscode-serial-monitor.jpg" | absolute_url}})
 
-    ![mqtt-example-vscode]({{"/assets/images/mqtt-serial-set-com-port.jpg" | absolute_url}})
+    ![mqtt-serial-set-com-port]({{"/assets/images/mqtt-serial-set-com-port.jpg" | absolute_url}})
 
-    ![mqtt-example-vscode]({{"/assets/images/mqtt-serial-set-baud-rate.jpg" | absolute_url}})
+    ![mqtt-serial-set-baud-rate]({{"/assets/images/mqtt-serial-set-baud-rate.jpg" | absolute_url}})
 
 ## Step 2. Open the MQTTClient Sample
 
 On the **Arduino Examples** page, expand `Examples for MXCHIP AZ3166 > MQTT` and then click `MQTTClient`.
 The MQTTClient example opens in a new VS Code window.
 
-![mqtt-example-vscode]({{"/assets/images/mqtt-examples-folder.jpg" | absolute_url}})
+![mqtt-examples-folder]({{"/assets/images/mqtt-examples-folder.jpg" | absolute_url}})
 
 If the Arduino Examples page doesn't shows up, open it by the following steps:
 1. Press `Ctrl+Shift+P` to open the command palette.
@@ -59,9 +59,10 @@ If the Arduino Examples page doesn't shows up, open it by the following steps:
 
 ## Step 4. Upload MQTTClient example to DevKit
 
-Press `Ctrl+P`, enter `task device`, and then click device-upload.
-Once the upload is completed, DevKit restarts and runs the sample.
+Use **Quick Open** (`Ctrl+P`) to run 'task device-upload'. Once the upload is completed, DevKit restarts and runs the sample.
+
 **Note**: The upload takes a while to complete for the first time.
+{: .notice--info}
 
 ## Step 5. Verify the result
 
@@ -73,4 +74,4 @@ The Serial Monitor displays all the messages sent from the sample. When the samp
 ## See Also
 
 * [Connect DevKits to Azure IoT Hub ]({{"/docs/getting-started/" | absolute_url }})
-* [Shake Shake to get twitter message] ({{"/docs/projects/shake-shake/" | absolute_url }})
+* [Shake Shake to get twitter message]({{"/docs/projects/shake-shake/" | absolute_url }})
