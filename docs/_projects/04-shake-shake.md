@@ -81,6 +81,9 @@ Then it will start verifying and uploading the Arduino sketch:
 
 The DevKit will reboot and start running the code.
 
+**Notice:** If you are running on a clean machine with everything installed, during the verifying of the code phrase, you might get and error of **Unknown board AZ3166**. To work around this problem, open Arduino IDE and go to **Tool > Board manager**. Arduino will reload all json files for all package definitions. After it is done, you can launch VS Code again and try the build process, the problem should go away.
+{: .notice--warning}
+
 ## macOS
 
 We are currently working on interative command line experience for macOS just same as for Windows. These [manual steps]({{"/docs/projects/shake-shake-macos/" | absolute_url }}) will use portal to provision Azure services.
