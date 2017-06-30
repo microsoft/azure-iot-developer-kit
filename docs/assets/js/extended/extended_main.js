@@ -9,7 +9,7 @@ function sidebarFix(){
         } else {
             $('.sidebar__right_fix').removeAttr("style")
         }
-
+        
         $('.sidebar__right_fix').css('left', articleRight);
         var articleTop = position.top;
         var menuHeight = $('.masthead').height();
@@ -44,7 +44,7 @@ function menuScroll(){
     });
 }
 
-$(document).ready(function(){
+$(window).load(function(){
     menuScroll();
     
     $('.sidebar__right').addClass('sidebar__right_fix');
