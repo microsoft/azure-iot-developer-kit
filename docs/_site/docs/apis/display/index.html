@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-06-29T22:54:39-07:00">
+  <meta property="article:published_time" content="2017-07-02T22:36:27-07:00">
 
 
 
@@ -354,7 +354,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="OLED Display">
     <meta itemprop="description" content="Library for OLED display on AZ3166">
-    <meta itemprop="datePublished" content="June 29, 2017">
+    <meta itemprop="datePublished" content="July 02, 2017">
     <meta itemprop="dateModified" content="April 30, 2017">
 
     <div class="page__inner-wrap">
@@ -406,6 +406,9 @@
     </tr>
     <tr>
       <td style="text-align: left"><a href="#print-1">print</a> - <code class="highlighter-rouge">int print(unsigned int line, const char *s, bool wrap)</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#draw">draw</a> - <code class="highlighter-rouge">void draw(unsigned char x0, unsigned char y0, unsigned char x1, unsigned char y1, unsigned char *BMP)</code></td>
     </tr>
   </tbody>
 </table>
@@ -567,6 +570,59 @@
       </tr>
     </tbody>
   </table>
+</blockquote>
+
+<h3 id="draw">draw</h3>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="n">draw</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">x0</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">y0</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">y1</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">BMP</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Show BMP image in OLED specified place.</p>
+
+  <h4 id="parameters-5">Parameters</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">Type</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">unsigned char</td>
+        <td style="text-align: left">x0</td>
+        <td style="text-align: left">Position the X axis of the top left corner of the area image to display, valid value is [0, 127].</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">unsigned char</td>
+        <td style="text-align: left">y0</td>
+        <td style="text-align: left">Position the Y axis of the top left corner of the area image to display, valid value is [0, 7].</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">unsigned char</td>
+        <td style="text-align: left">x1</td>
+        <td style="text-align: left">Position the X axis of the bottom right corner of the area image to display, valid value is [1, 128].</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">unsigned char</td>
+        <td style="text-align: left">y1</td>
+        <td style="text-align: left">Position the Y axis of the bottom right corner of the area image to display, valid value is [1, 8].</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">unsigned char *</td>
+        <td style="text-align: left">BMP</td>
+        <td style="text-align: left">BMP image pixel byte array. Every array element is an 8-bit binary data that draws 8-connected pixels in the same column.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="return-value-4">Return value</h4>
+
+  <p><code class="highlighter-rouge">void</code></p>
 </blockquote>
 
 <h2 id="sample-code">Sample code</h2>
