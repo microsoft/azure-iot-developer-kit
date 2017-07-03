@@ -44,10 +44,30 @@ function menuScroll(){
     });
 }
 
+function trackDowloadNumber(){
+    var url = $(this).attr('href');
+    var redirect = false;
+    ga('send', 'event', 'Downloads', 'click', url, {
+        'hitCallback': function(){
+            redirect = true;
+            document.location = url;
+        }
+    });
+    setTimeout(function(){
+        if (!redirect){
+            document.location = url;
+        }
+    }, 1500);
+    return false;
+}
+
 $(window).load(function(){
     menuScroll();
     
     $('.sidebar__right').addClass('sidebar__right_fix');
     sidebarFix();
     $(window).resize(sidebarFix);
+
+    //element of download button in get-started
+    $('a[href $= ".zip"][href *= "devkit_install"][class *= "btn"]').click(trackDowloadNumber);
 });
