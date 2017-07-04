@@ -1,0 +1,14 @@
+.sidebar__right_fix {
+
+  @include breakpoint($large) {
+    position: fixed;
+  }
+
+  @include breakpoint($x-large) {
+    width: $right-sidebar-width-narrow;
+  }
+
+  @include breakpoint(1440px) {
+    width: $right-sidebar-width;
+  }
+}
