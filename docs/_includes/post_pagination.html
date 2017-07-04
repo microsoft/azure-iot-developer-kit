@@ -1,4 +1,4 @@
-{% if page.previous or page.next %}
+{% if false and (page.previous or page.next) %}
   <nav class="pagination">
     {% if page.previous %}
       <a href="{{ page.previous.url | absolute_url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
