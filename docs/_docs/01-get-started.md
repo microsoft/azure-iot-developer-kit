@@ -96,7 +96,7 @@ For **Windows** users, follow the steps below:
 
 The `.zip` file you download contains all necessary tools and packages required for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/devkit_install_1.0.0.zip){: .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_install_1.0.0.zip){: .btn .btn--success .btn--large}
 
 **MD5:** 384c72120e57d460ac654bd26f82fe95
 {: .notice--info}
