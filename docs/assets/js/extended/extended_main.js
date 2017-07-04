@@ -69,5 +69,5 @@ $(window).load(function(){
     $(window).resize(sidebarFix);
 
     //element of download button in get-started
-    $('a[href $= ".zip"][href *= "devkit_install"][class *= "btn"]').click(trackDowloadNumber);
+    $('#get-started-devkit-install-download').click(trackDowloadNumber);
 });
