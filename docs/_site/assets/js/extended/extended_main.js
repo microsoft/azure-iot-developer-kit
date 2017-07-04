@@ -3,6 +3,7 @@ function sidebarFix(){
         var position = $('.page__content').position();
         var articleRight = position.left + $('.page__content').width();
         
+        //if the window is not so width, the width of the toc would depend on the width of window
         if (window.innerWidth < 1280){
             var sidebarWid = document.body.clientWidth - articleRight - 30;
             $('.sidebar__right_fix').css('width', sidebarWid);
@@ -10,6 +11,7 @@ function sidebarFix(){
             $('.sidebar__right_fix').removeAttr("style")
         }
         
+        //calculate the left position and the top position for the toc fixed in the window
         $('.sidebar__right_fix').css('left', articleRight);
         var articleTop = position.top;
         var menuHeight = $('.masthead').height();
@@ -18,9 +20,20 @@ function sidebarFix(){
         } else {
             $('.sidebar__right_fix').css('top', articleTop - $(this).scrollTop() + 30);
         }
+
+        //when the toc is used to show, it would use scroll for overflow
+        $('.sidebar__right_fix').css('height', "");
+        var sidebarBottom = $('.sidebar__right_fix').position().top + $('.sidebar__right_fix').height();
+        if (articleTop < $(this).scrollTop() + menuHeight && sidebarBottom > $(window).height() - 30){
+            $('.sidebar__right_fix').css('height', $(window).height() - $('.sidebar__right_fix').position().top - 30);
+            $('.sidebar__right_fix').css('overflow', 'scroll');
+        } else {
+            $('.sidebar__right_fix').css('height', "");
+            $('.sidebar__right_fix').css('overflow', "");
+        }
     }
     else {
-        $('.sidebar__right_fix').removeAttr("style")
+        $('.sidebar__right_fix').removeAttr("style");
     }
 }
 
@@ -44,10 +57,30 @@ function menuScroll(){
     });
 }
 
+function trackDowloadNumber(){
+    var url = $(this).attr('href');
+    var redirect = false;
+    ga('send', 'event', 'Downloads', 'click', url, {
+        'hitCallback': function(){
+            redirect = true;
+            document.location = url;
+        }
+    });
+    setTimeout(function(){
+        if (!redirect){
+            document.location = url;
+        }
+    }, 1500);
+    return false;
+}
+
 $(window).load(function(){
     menuScroll();
     
     $('.sidebar__right').addClass('sidebar__right_fix');
     sidebarFix();
     $(window).resize(sidebarFix);
+
+    //element of download button in get-started
+    $('#get-started-devkit-install-download').click(trackDowloadNumber);
 });

@@ -23,6 +23,7 @@ OledDisplay.h
 | [clean](#clean) - `void clean()` |
 | [print](#print) - `int print(const char *s, bool wrap)` |
 | [print](#print-1) - `int print(unsigned int line, const char *s, bool wrap)` |
+| [draw](#draw) - `void draw(unsigned char x0, unsigned char y0, unsigned char x1, unsigned char y1, unsigned char *BMP)` |
 
 ## Constructors
 
@@ -112,6 +113,28 @@ int print(unsigned int line, const char *s, bool wrap)
 > | Type | Description |
 > | :--- | :---------- |
 > | int | End of text line number, start from 0. |
+
+### draw
+
+```cpp
+void draw(unsigned char x0, unsigned char y0, unsigned char x1, unsigned char y1, unsigned char *BMP)
+```
+
+> Show BMP image in OLED specified place.
+>
+> #### Parameters
+>
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | unsigned char | x0 | Position the X axis of the top left corner of the area image to display, valid value is [0, 127]. |
+> | unsigned char | y0 | Position the Y axis of the top left corner of the area image to display, valid value is [0, 7]. |
+> | unsigned char | x1 | Position the X axis of the bottom right corner of the area image to display, valid value is [1, 128]. |
+> | unsigned char | y1 | Position the Y axis of the bottom right corner of the area image to display, valid value is [1, 8]. |
+> | unsigned char * | BMP | BMP image pixel byte array. Every array element is an 8-bit binary data that draws 8-connected pixels in the same column. |
+>
+> #### Return value
+> 
+> `void`
 
 ## Sample code
 

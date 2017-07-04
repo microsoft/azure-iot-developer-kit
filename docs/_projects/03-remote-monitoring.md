@@ -11,6 +11,8 @@ last_modified_at: 2017-06-28T06:23:34-04:00
 
 In this tutorial, you learn how to run a sample app on DevKit to send sensor data to your Azure IoT Suite.
 
+{% include toc icon="columns" %}
+
 ## What you need
 
 * Finish the [Getting Started Guide]({{"/docs/getting-started/" | absolute_url }})

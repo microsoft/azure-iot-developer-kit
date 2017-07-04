@@ -187,13 +187,16 @@
 
 <ul>
   <li>
-    <p>Updated underlying mbed OS to 5.4.</p>
+    <p>Updated underlying mbed OS to 5.4</p>
+  </li>
+  <li>
+    <p>Show version number for the default app</p>
   </li>
   <li>Installation Scripts
     <ul>
-      <li>Adapted to the changes for Azure subscription fetching in Azure CLI from Azure team.</li>
       <li>Installed pip with <code class="highlighter-rouge">get-pip.py</code> script.</li>
       <li>Optimized error handling when running commands.</li>
+      <li>Adapted to updates of Azure subscription return format using Azure CLI.</li>
     </ul>
   </li>
   <li>Stabilization
@@ -202,18 +205,12 @@
       <li>Bug fix: Added retry logic to improve the stability of Azure IoT Device SDK.</li>
     </ul>
   </li>
-  <li>Shake-Shake
-    <ul>
-      <li>Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.</li>
-      <li>Added delay and retry logic when not receiving any message due to function delay.</li>
-    </ul>
-  </li>
   <li>Arduino Library
     <ul>
       <li>Refined library APIs to follow Arduino Standard like function naming conventions.</li>
-      <li>Added OLED draw method to control every pixel in display screen.</li>
+      <li>Added <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/display/">OLED draw method</a> to control every pixel in display screen.</li>
       <li>Added support for file system based on mbed file system implementation.</li>
-      <li>Added support for IRDA.</li>
+      <li>Added support for <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/">IrDA</a>.</li>
     </ul>
   </li>
   <li>Project Catalog
@@ -221,6 +218,8 @@
       <li>Added ‘Connect to Azure IoT Hub’ example and documentation that align with other <a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-get-started" target="_blank">Azure IoT Hub get started tutorials</a>.</li>
       <li>Added ‘Remote Monitoring’ example and documentation that make DevKit connect to <a href="https://www.azureiotsuite.com" target="_blank">Azure IoT Suite</a>.</li>
       <li>Added ‘MQTT Client’ example and documentation that send MQTT messages to public free MQTT broker.</li>
+      <li>Shake, Shake: Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.</li>
+      <li>Shake, Shake: Added delay and retry logic when not receiving any message due to function delay.</li>
     </ul>
   </li>
 </ul>

@@ -11,31 +11,31 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
 
 ### Release Summary
 
-* Updated underlying mbed OS to 5.4.
+* Updated underlying mbed OS to 5.4
+
+* Show version number for the default app
  
 * Installation Scripts
-  * Adapted to the changes for Azure subscription fetching in Azure CLI from Azure team.
   * Installed pip with `get-pip.py` script.
   * Optimized error handling when running commands.
+  * Adapted to updates of Azure subscription return format using Azure CLI.
  
 * Stabilization
   * Bug fix: Memory leak on socket layer of Wi-Fi driver.
   * Bug fix: Added retry logic to improve the stability of Azure IoT Device SDK.
  
-* Shake-Shake
-  * Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.
-  * Added delay and retry logic when not receiving any message due to function delay.
- 
 * Arduino Library
   * Refined library APIs to follow Arduino Standard like function naming conventions. 
-  * Added OLED draw method to control every pixel in display screen.
+  * Added [OLED draw method]({{"/docs/apis/display/" | absolute_url}}) to control every pixel in display screen.
   * Added support for file system based on mbed file system implementation.
-  * Added support for IRDA.
+  * Added support for [IrDA]({{"/docs/apis/irda/" | absolute_url}}).
  
 * Project Catalog
   * Added 'Connect to Azure IoT Hub' example and documentation that align with other [Azure IoT Hub get started tutorials](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-get-started){:target="_blank"}.
   * Added 'Remote Monitoring' example and documentation that make DevKit connect to [Azure IoT Suite](https://www.azureiotsuite.com){:target="_blank"}.
   * Added 'MQTT Client' example and documentation that send MQTT messages to public free MQTT broker.
+  * Shake, Shake: Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.
+  * Shake, Shake: Added delay and retry logic when not receiving any message due to function delay.
 
 ## Version 0.8.1
 
