@@ -15,6 +15,9 @@ layouts_gallery:
   - url: /assets/images/mini-solution-shake-shake-3.jpg
     image_path: /assets/images/mini-solution-shake-shake-3.jpg
     alt: "Display a random tweet"
+variable:
+  - platform: windows
+  - platform: macos
 last_modified_at: 2017-05-05T10:16:34-04:00
 ---
 
@@ -25,6 +28,8 @@ In this project, you will learn how to use the motion sensor to trigger an event
 ## What you need
 
 * Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
+
+{% include switch.html content = page.variable %}
 
 ## Windows
 

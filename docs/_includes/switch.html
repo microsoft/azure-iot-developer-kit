@@ -1,0 +1,7 @@
+<div class = 'switcher'>
+    <ul>
+        {% for var in include.content %}
+            <li><a id = "{{ var.platform }}_switch" class = "switch" href = "#{{ var.platform }}"> {{ var.name | default: var.platform }} </a></li>
+        {% endfor %}
+    </ul>
+</div>
