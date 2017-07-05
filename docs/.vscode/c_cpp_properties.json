@@ -10,7 +10,8 @@
                 "path": [
                     "/Users/liya/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/cores/arduino"
                 ]
-            }
+            },
+            "intelliSenseMode": "clang-x64"
         }
     ]
 }
