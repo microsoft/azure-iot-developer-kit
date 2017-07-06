@@ -1,0 +1,30 @@
+.switcher{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.switch_tag{
+    list-style-type: none;
+    color: gray;
+    float: left;
+    padding: 10px;
+    display: block;
+}
+
+.switch_li{
+    list-style-type: none;
+    float: left;
+}
+
+.switch{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+a.switch:hover{
+    text-decoration: none;
+    border-bottom: 2px solid blue;
+}
