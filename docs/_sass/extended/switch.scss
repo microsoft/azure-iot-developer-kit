@@ -31,3 +31,7 @@ a.switch:hover{
 .switch_active{
     border-bottom: 2px solid #1e6bb8;
 }
+
+a.switch:focus{
+    outline: none;
+}
