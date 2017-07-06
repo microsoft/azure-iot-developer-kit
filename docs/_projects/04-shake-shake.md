@@ -17,7 +17,9 @@ layouts_gallery:
     alt: "Display a random tweet"
 variable:
   - platform: windows
+    name: Windows
   - platform: macos
+    name: macOS
 last_modified_at: 2017-05-05T10:16:34-04:00
 ---
 
