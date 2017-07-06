@@ -112,10 +112,7 @@ $(window).load(function(){
         var platform = '';
         var curPlatform = false;
         var string = '';
-        $('*').each(function(){
-            if ($(this).parent().attr('class') != 'page__content'){
-                return;
-            }
+        $('.page__content').children().each(function(){
             if (curPlatform){
                 if ($(this).prop('tagName') == 'H2'){
                     $('#' + platform + '_switch_result').html(string);
