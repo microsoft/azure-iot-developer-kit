@@ -87,8 +87,10 @@ function platformSwitcher(){
         var tocElement =  $('#markdown-toc-' + $(this).attr('href').substring(1)).parent();
         if ($(this).attr('href') == url){
             tocElement.css('display', '');
+            $(this).addClass('switch_active');
         } else {
             tocElement.css('display', 'none');
+            $(this).removeClass('switch_active');
         }
     });
     return false;
@@ -130,6 +132,7 @@ $(window).load(function(){
                     if (firstPlatform == ''){
                         firstPlatform = platform;
                         $(this).before('<div id = "' + platform + '_switch_result" class = "switch_result">');
+                        $('#' + platform + '_switch').addClass('switch_active');
                     } else {
                         $(this).before('<div id = "' + platform + '_switch_result" class = "switch_result" style = "display: none">');
                         $('#markdown-toc-' + platform).parent().css('display', 'none');
