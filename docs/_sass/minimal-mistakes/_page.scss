@@ -137,6 +137,7 @@
     }
 
     .wrapper {
+      position: relative;
       padding-left: 2em;
       padding-right: 2em;
 
@@ -169,6 +170,22 @@
 
       @include breakpoint($small) {
         font-size: $type-size-1;
+      }
+    }
+
+    .page__extra-logo {
+      display: inline-block;
+      width: 128px;
+      height: 128px;
+      margin-top: 2rem;
+
+      @include breakpoint($small) {
+        position: absolute;
+        top: 0;
+        right: 2em;
+        width: 96px;
+        height: 96px;
+        margin-top: 0;
       }
     }
   }
