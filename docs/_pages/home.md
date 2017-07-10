@@ -11,6 +11,9 @@ header:
       url: "/docs/get-started/"
     - label: "Get a Kit"
       url: "https://blogs.msdn.microsoft.com/iotdev/devkit-contact/"
+  extra_logo:
+    - image_path: /assets/images/logo-azure-certified.svg
+      url: "https://catalog.azureiotsuite.com/details?title=MXChip-IoT-DevKit&source=home-page"
   align: center
 excerpt: 'Rapidly develop an IoT app using Microsoft Azure and Visual Studio Code'
 intro:

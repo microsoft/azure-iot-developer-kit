@@ -74,6 +74,28 @@ function trackDowloadNumber(){
     return false;
 }
 
+function platformSwitcher(){
+    var url = $(this).attr('href');
+    $('.switch_result').each(function(){
+        if ($(this).attr('id').search(url.substring(1)) != -1){
+            $(this).css('display', '');
+        } else {
+            $(this).css('display', 'none');
+        }
+    });
+    $('.switch').each(function(){
+        var tocElement =  $('#markdown-toc-' + $(this).attr('href').substring(1)).parent();
+        if ($(this).attr('href') == url){
+            tocElement.css('display', '');
+            $(this).addClass('switch_active');
+        } else {
+            tocElement.css('display', 'none');
+            $(this).removeClass('switch_active');
+        }
+    });
+    return false;
+}
+
 $(window).load(function(){
     menuScroll();
     
@@ -83,4 +105,41 @@ $(window).load(function(){
 
     //element of download button in get-started
     $('#get-started-devkit-install-download').click(trackDowloadNumber);
+
+    var firstPlatform = '';
+    $('.switch').each(function(){
+        var id = $(this).attr('id');
+        var platform = '';
+        var curPlatform = false;
+        var string = '';
+        $('.page__content').children().each(function(){
+            if (curPlatform){
+                if ($(this).prop('tagName') == 'H2'){
+                    $('#' + platform + '_switch_result').html(string);
+                    curPlatform = false;
+                } else {
+                    string += $(this).clone().wrap('<p>').parent().html();
+                    $(this).remove();
+                }
+            } else {
+                if ($(this).prop('tagName') == 'H2' && id.search($(this).attr('id')) != -1){
+                    curPlatform = true;
+                    string += $(this).clone().wrap('<p>').parent().html();
+                    platform = $(this).attr('id');
+                    if (firstPlatform == ''){
+                        firstPlatform = platform;
+                        $(this).before('<div id = "' + platform + '_switch_result" class = "switch_result">');
+                        $('#' + platform + '_switch').addClass('switch_active');
+                    } else {
+                        $(this).before('<div id = "' + platform + '_switch_result" class = "switch_result" style = "display: none">');
+                        $('#markdown-toc-' + platform).parent().css('display', 'none');
+                    }
+                    $(this).remove();
+                }
+            }
+        });
+    });
+    $('.switch').each(function(){
+        $(this).click(platformSwitcher);
+    });
 });
