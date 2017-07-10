@@ -1,4 +1,7 @@
 function sidebarFix(){
+    if (!$('.sidebar__right_fix').length){
+        return;
+    }
     if (window.innerWidth >= 1024){
         var position = $('.page__content').position();
         var articleRight = position.left + $('.page__content').width();
@@ -40,6 +43,9 @@ function sidebarFix(){
 function menuScroll(){
     var lastScrollTop = 0
     $(window).bind('scroll', function(){
+        if (!$('.masthead').length){
+            return;
+        }
         var scrollTop = $(this).scrollTop();
         if (scrollTop > 50){
             if (scrollTop > lastScrollTop){
