@@ -113,6 +113,7 @@ $(window).load(function(){
     $('#get-started-devkit-install-download').click(trackDowloadNumber);
 
     var firstPlatform = '';
+    var switchLevel = $('.switcher').next().prop('tagName');
     $('.switch').each(function(){
         var id = $(this).attr('id');
         var platform = '';
@@ -120,7 +121,7 @@ $(window).load(function(){
         var string = '';
         $('.page__content').children().each(function(){
             if (curPlatform){
-                if ($(this).prop('tagName') == 'H2'){
+                if ($(this).prop('tagName') == switchLevel){
                     $('#' + platform + '_switch_result').html(string);
                     curPlatform = false;
                 } else {
@@ -128,7 +129,7 @@ $(window).load(function(){
                     $(this).remove();
                 }
             } else {
-                if ($(this).prop('tagName') == 'H2' && id.search($(this).attr('id')) != -1){
+                if ($(this).prop('tagName') == switchLevel && id.search($(this).attr('id')) != -1){
                     curPlatform = true;
                     string += $(this).clone().wrap('<p>').parent().html();
                     platform = $(this).attr('id');
