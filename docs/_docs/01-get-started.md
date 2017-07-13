@@ -2,6 +2,11 @@
 title: "Get Started"
 permalink: /docs/get-started/
 excerpt: "How to quickly install and setup your development environment to use the DevKit."
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
 last_modified_at: 2017-05-05T10:01:43-04:00
 ---
 
@@ -88,9 +93,19 @@ After WiFi is configured, your credentials will be persisted on the device for t
 
 Now it's time to set up the development environment: tools and packages for you to build stunning IoT applications.
 
+{% include switch.html content = page.variable %}
+
 For **macOS** users, follow [manual installation]({{"/docs/installation/" | absolute_url}}) instructions to install the tools and packages.
 
 For **Windows** users, follow the steps below:
+
+### Windows
+
+This is windows
+
+### macOS
+
+This is macOS
 
 #### A. Download latest package
 

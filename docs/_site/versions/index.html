@@ -167,7 +167,7 @@
     <meta itemprop="headline" content="Versions and Release Notes">
     <meta itemprop="description" content="Versions and release notes">
     
-    <meta itemprop="dateModified" content="June 28, 2017">
+    <meta itemprop="dateModified" content="July 13, 2017">
 
     <div class="page__inner-wrap">
       
@@ -179,11 +179,40 @@
       
 
       <section class="page__content" itemprop="text">
-        <h2 id="version-100">Version 1.0.0</h2>
+        <h2 id="version-101">Version 1.0.1</h2>
+
+<p>The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our “Shake, Shake” sample project on macOS now. To further smooth the development tools and package installation, we are using the official <a href="https://aka.ms/InstallAzureCliWindows" target="_blank">MSI</a> for the Windows Azure CLI 2.0 installation so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.</p>
+
+<h3 id="release-summary">Release Summary</h3>
+
+<ul>
+  <li>Installation Scripts
+    <ul>
+      <li>Removed the dependency of Python installation by using Windows Azure CLI 2.0 MSI (v 2.0.9).</li>
+      <li>Upgraded to the latest version of VS Code (v 1.13.1) and Arduino Extension (v 0.2.4).</li>
+      <li>Switched to Azure CDN to accelerate the package downloading speed.</li>
+    </ul>
+  </li>
+  <li>Firmware
+    <ul>
+      <li>Stabilized Wi-Fi connection and minor optimizations to Azure IoT Device C SDK</li>
+    </ul>
+  </li>
+  <li>Project Catalog
+    <ul>
+      <li>Supported cloud provision, deploy and device upload tasks for “Shake, Shake” mini solution in VS Code on macOS.</li>
+      <li>Switched to <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template" target="_blank">ARM (Azure Resource Manager) template</a> for provisioning Azure services.</li>
+      <li>Put Azure Function creation logic into cloud provision step to further isolate the tasks.</li>
+      <li>Added telemetries to distinguish each mini solution from BI perspective.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-100">Version 1.0.0</h2>
 
 <p>After a month work of stabilizing the code, fixing bugs and adding more samples, we are happy to release the v1.0.0 for our IoT DevKit. And soon we will open source the stacks including firmware, toolchain and all sample projects code. Please check release summary for details about this update.</p>
 
-<h3 id="release-summary">Release Summary</h3>
+<h3 id="release-summary-1">Release Summary</h3>
 
 <ul>
   <li>
@@ -232,7 +261,7 @@
 
 <p>This is our first public release of the Microsoft Azure IoT Developer Kit.</p>
 
-<h3 id="release-summary-1">Release Summary</h3>
+<h3 id="release-summary-2">Release Summary</h3>
 
 <p>Everything is brand new!</p>
 
@@ -245,7 +274,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-28">June 28, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-07-13">July 13, 2017</time></p>
         
       </footer>
 
