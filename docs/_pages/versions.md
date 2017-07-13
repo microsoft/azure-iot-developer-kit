@@ -5,7 +5,7 @@ excerpt: "Versions and release notes"
 last_modified_at: 2017-07-13
 ---
 
-## Version 1.0.1
+## Version 1.0.1 (July 13)
 
 The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our “Shake, Shake” sample project on macOS now. To further smooth the development tools and package installation, we are using the official [MSI](https://aka.ms/InstallAzureCliWindows){:target="_blank"} for the Windows Azure CLI 2.0 installation so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.
  
@@ -26,7 +26,7 @@ The optimization continues. We are now supporting VS Code tasks on macOS as well
   * Added telemetries to distinguish each mini solution from BI perspective.
 
 
-## Version 1.0.0
+## Version 1.0.0 (June 26)
 
 After a month work of stabilizing the code, fixing bugs and adding more samples, we are happy to release the v1.0.0 for our IoT DevKit. And soon we will open source the stacks including firmware, toolchain and all sample projects code. Please check release summary for details about this update.
 
@@ -58,11 +58,11 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
   * Shake, Shake: Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.
   * Shake, Shake: Added delay and retry logic when not receiving any message due to function delay.
 
-## Version 0.8.1
+## Version 0.8.1 (May 21)
 
 Some bug fixes before DevKit debut on [//Build](https://build.microsoft.com/){:target="_blank"} and [Maker Faire Bay Area](http://makerfaire.com/){:target="_blank"}.
 
-## Version 0.8.0
+## Version 0.8.0 (May 5)
 
 This is our first public release of the Microsoft Azure IoT Developer Kit.
 

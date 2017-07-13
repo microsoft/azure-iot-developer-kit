@@ -44,12 +44,14 @@ h3 {
 
 h4 {
   font-size: $type-size-5;
-  font-weight: 300;
-  color: mix($primary-color, $gray, 25%);
+  font-weight: 400;
+  color: mix($primary-color, $gray, 45%);
 }
 
 h5 {
-  font-size: $type-size-6;
+  font-size: $type-size-5;
+  font-weight: 400;
+  color: mix($primary-color, $gray, 45%);
 }
 
 h6 {

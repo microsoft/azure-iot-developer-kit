@@ -70,6 +70,9 @@ The Serial Monitor displays all the messages sent from the sample. When the samp
 
 ![mqtt-serial-output]({{"/assets/images/mqtt-serial-output.jpg" | absolute_url}})
 
+## Problems and feedback
+
+You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
 
 ## See Also
 

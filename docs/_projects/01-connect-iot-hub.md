@@ -78,7 +78,7 @@ Connect DevKit to an Azure IoT hub that you create, collect the temperature and 
 
 5. After the device is created, open the device in the **Device Explorer** pane.
 
-6. Make a note of the primary key of the device connection string.
+6. Make a note of the primary key of the **device connection string**.
 
    ![Get the device connection string]({{"/assets/images/happy-path-get-device-connection-string-in-device-explorer-portal.png" | absolute_url }})
 
