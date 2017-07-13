@@ -93,7 +93,7 @@ Once the upload is completed, DevKit restarts and runs the sample.
 
 ![remote-monitoring-build]({{"/assets/images/remote-monitoring-build.png" | absolute_url }})
 
-## Verify the result
+## Test the project
 
 When the sample app runs, DevKit sends sensor data over Wi-Fi to your Azure IoT Suite. To see the result, follow these steps:
 
@@ -106,3 +106,7 @@ When the sample app runs, DevKit sends sensor data over Wi-Fi to your Azure IoT 
 ![remote-monitoring-send-data]({{"/assets/images/remote-monitoring-send-data.jpg" | absolute_url }})
 
 ![remote-monitoring-sensor-status]({{"/assets/images/remote-monitoring-sensor-status.png" | absolute_url }})
+
+## Problems and feedback
+
+You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.

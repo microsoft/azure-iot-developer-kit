@@ -15,6 +15,11 @@ layouts_gallery:
   - url: /assets/images/mini-solution-shake-shake-3.jpg
     image_path: /assets/images/mini-solution-shake-shake-3.jpg
     alt: "Display a random tweet"
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
 last_modified_at: 2017-05-05T10:16:34-04:00
 ---
 
@@ -25,6 +30,8 @@ In this project, you will learn how to use the motion sensor to trigger an event
 ## What you need
 
 * Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
+
+{% include switch.html content = page.variable %}
 
 ## Windows
 
@@ -41,7 +48,7 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 #### B. Open Arduino Examples folder
 
-Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoTHub` and click on `ShakeShake`.
+Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `ShakeShake`.
 
 ![mini-solution-catalog]({{"/assets/images/mini-solution-catalog.png" | absolute_url }})
 
@@ -106,6 +113,40 @@ After app initialization, click button A and mildly shake the board to retrieve 
 
 The Arduino sketch sends an event to Azure IoT Hub which triggers the Azure Functions app. Azure Functions contains the logic to connect to Twitter's API and retrieve a tweet. It wraps the tweet text into a C2D (Cloud-to-device) message and sends it back to the device.
 
+## Optional: Use your own Twitter bearer token
+
+This sample project uses an pre-configured Twitter bearer token for testing purpose. But there is a [rate limits](https://dev.twitter.com/rest/reference/get/search/tweets){:target="_blank"} for every Twitter account. You might want to consider using your own token. Here is simple instructions to do so:
+
+1. Go to [Twitter Developer portal](https://dev.twitter.com/){:target="_blank"} to register a new Twitter app.
+
+2. [Get Consumer Key and Consumer Secrets](https://support.yapsody.com/hc/en-us/articles/203068116-How-do-I-get-a-Twitter-Consumer-Key-and-Consumer-Secret-key-){:target="_blank"} of your app.
+
+3. Use [some utlity](https://gearside.com/nebula/utilities/twitter-bearer-token-generator/){:target="_blank"} to generate Twitter bearer token from these two keys.
+
+4. In the [Azure portal](https://portal.azure.com/){:target="_blank"}, get into the **Resource Group** and find the Azure Function (Type: App Service) for your "Shake, Shake" project. The name always contains 'shake...' string.
+  ![shake-shake-function]({{"/assets/images/shake-shake-function.png" | absolute_url }})
+
+5. Update the code for `index.js` within **Functions > myFunc** with your own token:
+  ```javascript
+  ...
+  headers: {
+    'Authorization': 'Bearer ' + '[your own token]'
+  }
+  ...
+  ```
+  ![shake-shake-own-twitter-token]({{"/assets/images/shake-shake-own-twitter-token.png" | absolute_url }})
+
+5. Save the file and click **Run**.
+
+
 ## Problems and feedback
 
-You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+### Problems
+
+#### The screen displays 'No Tweets' while every step has run successfully
+
+It normally happens for the first time you deploy and run the sample. This is because that Azure Function will requires a couple of seconds up to one minute to code start the app. Or there are some blips when running the code that will cause restarting of the app. Then the device app can get time out for fetching the tweet. In this case, you may try to click restart button to run the device app again.
+
+### Feedback
+
+You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter other problems or reach out to us from the channels below.

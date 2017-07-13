@@ -2,10 +2,15 @@
 title: "Get Started"
 permalink: /docs/get-started/
 excerpt: "How to quickly install and setup your development environment to use the DevKit."
-last_modified_at: 2017-05-05T10:01:43-04:00
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
+last_modified_at: 2017-06-26
 ---
 
-For first-time users of the MXChip IoT Developer Kit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications.
+For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications.
 
 {% include toc icon="columns" %}
 
@@ -13,7 +18,7 @@ For first-time users of the MXChip IoT Developer Kit (a.k.a DevKit), follow thes
 
 #### A. What you need
 
-* MXChip IoT Developer Kit. [Get it now](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/){:target="_blank"}
+* MXChip IoT DevKit. [Get it now](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/){:target="_blank"}
 * A computer running Windows 10 or macOS 10.10+
 * An active Azure subscription
   * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
@@ -88,17 +93,19 @@ After WiFi is configured, your credentials will be persisted on the device for t
 
 Now it's time to set up the development environment: tools and packages for you to build stunning IoT applications.
 
-For **macOS** users, follow [manual installation]({{"/docs/installation/" | absolute_url}}) instructions to install the tools and packages.
+{% include switch.html content = page.variable %}
 
-For **Windows** users, follow the steps below:
+### Windows
+
+This is windows
 
 #### A. Download latest package
 
 The `.zip` file you download contains all necessary tools and packages required for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/devkit_install_1.0.0.zip){: .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_install_1.0.1.zip){: .btn .btn--success .btn--large}
 
-**MD5:** 384c72120e57d460ac654bd26f82fe95
+**MD5:** 01527cb5c349601452d1f5546149f3be
 {: .notice--info}
 
 > The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
@@ -129,6 +136,78 @@ The VS Code for Arduino extension relies on the Arduino IDE. If this is the firs
 
 It should take around 10 minutes to finish installation depending on your Internet speed. Once installation is complete, you should see Visual Studio Code and Arduino IDE shortcuts on your desktop.
 
-## Next Steps
+### macOS
+
+#### A. Install Azure CLI 2.0
+
+Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli){:target="_blank"} to install Azure CLI 2.0:
+
+Install Azure CLI 2.0 with one `curl` command:
+```bash
+curl -L https://aka.ms/InstallAzureCli | bash
+```
+
+And restart your command shell for changes to take effect:
+```bash
+exec -l $SHELL
+```
+
+#### B. Install Arduino IDE
+
+The Visual Studio Code Arduino extension relies on the Arduino IDE. Download and install the [Arduino IDE for macOS](https://www.arduino.cc/en/Main/Software){:target="_blank"}.
+
+#### C. Install Visual Studio Code
+
+Download and install [Visual Studio Code for macOS](https://code.visualstudio.com/){:target="_blank"}. This will be the primary development tool for building DevKit IoT applications.
+
+#### D. Download latest package
+
+The `.zip` file you download contains necessary scripts required for DevKit development in VS Code.
+
+[<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/devkit_tasks_mac_1.0.1.zip){: .btn .btn--success .btn--large}
+
+**MD5:** 8f3d7667bad9bb2110dd78579e577bd5
+{: .notice--info}
+
+Locate the `.zip` and extract it. Then launch Terminal and run the following commands to configure:
+
+```bash
+mkdir ~/azure-board-cli
+
+cp -R [.zip extracted folder] ~/azure-board-cli/. | cd ~/azure-board-cli
+
+npm install
+```
+
+#### E. Install VS Code extension for Arduino
+
+Visual Studio Code allows you to install Marketplace extensions directly in the tool, simply click the extensions icon in the left menu pane and then search. You will need two extensions:
+
+1. C++ extension for grammar support, it is required by the Arduino extension so you need to install it first.
+2. Arduino extension which makes it easy to code, build, deploy and debug your Arduino sketches in Visual Studio Code. It comes with IntelliSense, automatic project scaffolding and debugging.
+
+![installation-extensions]({{"/assets/images/installation-extensions.png" | absolute_url}})
+
+#### F. Install DevKit board package
+
+You will need to add the DevKit board using the Boards Manager in Visual Studio Code.
+
+1. Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Boards Manager**.
+
+2. Click **'Additional URLs'** at the bottom right.
+ ![installation-additional-urls]({{"/assets/images/installation-additional-urls.png" | absolute_url}})
+
+3. In the `settings.json` file, add a line at the bottom of 'USER SETTINGS' pane.
+ ```json
+ "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+ ```
+ ![installation-settings-json]({{"/assets/images/installation-settings-json.png" | absolute_url}})
+
+4. Now in the Boards Manager search for 'az3166' and install the latest version.
+ ![installation-az3166]({{"/assets/images/installation-az3166.png" | absolute_url}})
+
+You now have all the necessary tools and packages installed.
+
+### Next Steps
 
 You're all set! It's time to build your first IoT application. For samples, start with our [Projects Catalog]({{"/docs/projects/" | absolute_url }}).

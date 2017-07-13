@@ -24,7 +24,7 @@
 
 
 
-<meta name="author" content="MXChip IoT Developer Kit">
+<meta name="author" content="MXChip IoT DevKit">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="IoT Developer Kits">
@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-07-03T01:26:40-07:00">
+  <meta property="article:published_time" content="2017-07-13T07:02:49-07:00">
 
 
 
@@ -75,7 +75,7 @@
     {
       "@context" : "http://schema.org",
       "@type" : "Person",
-      "name" : "MXChip IoT Developer Kit",
+      "name" : "MXChip IoT DevKit",
       "url" : "http://localhost:4000/azure-iot-developer-kit",
       "sameAs" : null
     }
@@ -102,6 +102,7 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="http://localhost:4000/azure-iot-developer-kit/assets/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/azure-iot-developer-kit/assets/css/extended/extended_main.css">
 
 <!--[if lte IE 9]>
   <style>
@@ -184,7 +185,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Shake, Shake">
     <meta itemprop="description" content="Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag.">
-    <meta itemprop="datePublished" content="July 03, 2017">
+    <meta itemprop="datePublished" content="July 13, 2017">
     <meta itemprop="dateModified" content="May 05, 2017">
 
     <div class="page__inner-wrap">
@@ -215,7 +216,12 @@
   <li><a href="#macos" id="markdown-toc-macos">macOS</a></li>
   <li><a href="#test-the-project" id="markdown-toc-test-the-project">Test the project</a></li>
   <li><a href="#how-it-works" id="markdown-toc-how-it-works">How it works</a></li>
-  <li><a href="#problems-and-feedback" id="markdown-toc-problems-and-feedback">Problems and feedback</a></li>
+  <li><a href="#optional-use-your-own-twitter-bearer-token" id="markdown-toc-optional-use-your-own-twitter-bearer-token">Optional: Use your own Twitter bearer token</a></li>
+  <li><a href="#problems-and-feedback" id="markdown-toc-problems-and-feedback">Problems and feedback</a>    <ul>
+      <li><a href="#problems" id="markdown-toc-problems">Problems</a></li>
+      <li><a href="#feedback" id="markdown-toc-feedback">Feedback</a></li>
+    </ul>
+  </li>
 </ul>
 
   </nav>
@@ -226,6 +232,15 @@
 <ul>
   <li>Finish the <a href="http://localhost:4000/azure-iot-developer-kit/docs/get-started/">Getting Started Guide</a></li>
 </ul>
+
+<div class="switcher">
+    <li class="switch_tag"> Platform: </li>
+    
+        <li class="switch_li"><a id="windows_switch" class="switch" href="#windows"> Windows </a></li>
+    
+        <li class="switch_li"><a id="macos_switch" class="switch" href="#macos"> macOS </a></li>
+    
+</div>
 
 <h2 id="windows">Windows</h2>
 
@@ -241,7 +256,7 @@
 
 <h4 id="b-open-arduino-examples-folder">B. Open Arduino Examples folder</h4>
 
-<p>Switch to <strong>‘Arduino Examples’</strong> tab, navigate to <code class="highlighter-rouge">Examples for MXCHIP AZ3166 &gt; AzureIoTHub</code> and click on <code class="highlighter-rouge">ShakeShake</code>.</p>
+<p>Switch to <strong>‘Arduino Examples’</strong> tab, navigate to <code class="highlighter-rouge">Examples for MXCHIP AZ3166 &gt; AzureIoT</code> and click on <code class="highlighter-rouge">ShakeShake</code>.</p>
 
 <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/mini-solution-catalog.png" alt="mini-solution-catalog" /></p>
 
@@ -330,9 +345,48 @@
 
 <p>The Arduino sketch sends an event to Azure IoT Hub which triggers the Azure Functions app. Azure Functions contains the logic to connect to Twitter’s API and retrieve a tweet. It wraps the tweet text into a C2D (Cloud-to-device) message and sends it back to the device.</p>
 
+<h2 id="optional-use-your-own-twitter-bearer-token">Optional: Use your own Twitter bearer token</h2>
+
+<p>This sample project uses an pre-configured Twitter bearer token for testing purpose. But there is a <a href="https://dev.twitter.com/rest/reference/get/search/tweets" target="_blank">rate limits</a> for every Twitter account. You might want to consider using your own token. Here is simple instructions to do so:</p>
+
+<ol>
+  <li>
+    <p>Go to <a href="https://dev.twitter.com/" target="_blank">Twitter Developer portal</a> to register a new Twitter app.</p>
+  </li>
+  <li>
+    <p><a href="https://support.yapsody.com/hc/en-us/articles/203068116-How-do-I-get-a-Twitter-Consumer-Key-and-Consumer-Secret-key-" target="_blank">Get Consumer Key and Consumer Secrets</a> of your app.</p>
+  </li>
+  <li>
+    <p>Use <a href="https://gearside.com/nebula/utilities/twitter-bearer-token-generator/" target="_blank">some utlity</a> to generate Twitter bearer token from these two keys.</p>
+  </li>
+  <li>
+    <p>In the <a href="https://portal.azure.com/" target="_blank">Azure portal</a>, get into the <strong>Resource Group</strong> and find the Azure Function (Type: App Service) for your “Shake, Shake” project. The name always contains ‘shake…’ string.
+  <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-function.png" alt="shake-shake-function" /></p>
+  </li>
+  <li>Update the code for <code class="highlighter-rouge">index.js</code> within <strong>Functions &gt; myFunc</strong> with your own token:
+    <div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="p">...</span>
+  <span class="nl">headers</span><span class="p">:</span> <span class="p">{</span>
+ <span class="s1">'Authorization'</span><span class="err">:</span> <span class="s1">'Bearer '</span> <span class="o">+</span> <span class="s1">'[your own token]'</span>
+  <span class="p">}</span>
+  <span class="p">...</span>
+</code></pre>
+    </div>
+    <p><img src="http://localhost:4000/azure-iot-developer-kit/assets/images/shake-shake-own-twitter-token.png" alt="shake-shake-own-twitter-token" /></p>
+  </li>
+  <li>Save the file and click <strong>Run</strong>.</li>
+</ol>
+
 <h2 id="problems-and-feedback">Problems and feedback</h2>
 
-<p>You can find <a href="http://localhost:4000/azure-iot-developer-kit/docs/faq/">FAQs</a> if you encounter problems or reach out to us from the channels below.</p>
+<h3 id="problems">Problems</h3>
+
+<h4 id="the-screen-displays-no-tweets-while-every-step-has-run-successfully">The screen displays ‘No Tweets’ while every step has run successfully</h4>
+
+<p>It normally happens for the first time you deploy and run the sample. This is because that Azure Function will requires a couple of seconds up to one minute to code start the app. Or there are some blips when running the code that will cause restarting of the app. Then the device app can get time out for fetching the tweet. In this case, you may try to click restart button to run the device app again.</p>
+
+<h3 id="feedback">Feedback</h3>
+
+<p>You can find <a href="http://localhost:4000/azure-iot-developer-kit/docs/faq/">FAQs</a> if you encounter other problems or reach out to us from the channels below.</p>
 
         
       </section>
@@ -364,17 +418,6 @@
 
 
       
-  <nav class="pagination">
-    
-      <a href="http://localhost:4000/azure-iot-developer-kit/docs/projects/remote-monitoring/" class="pagination--pager" title="Remote Monitoring
-">Previous</a>
-    
-    
-      <a href="http://localhost:4000/azure-iot-developer-kit/docs/projects/" class="pagination--pager" title="Your Ideas?
-">Next</a>
-    
-  </nav>
-
     </div>
 
     
@@ -410,6 +453,7 @@
     </div>
 
     <script src="http://localhost:4000/azure-iot-developer-kit/assets/js/main.min.js"></script>
+<script src="http://localhost:4000/azure-iot-developer-kit/assets/js/extended/extended_main.js"></script>
 
 
 

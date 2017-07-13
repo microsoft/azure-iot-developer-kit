@@ -54,6 +54,13 @@
         {% endfor %}
         </div>
       {% endif %}
+      {% if page.header.extra_logo %}
+        {% for extra in page.header.extra_logo %}
+          <a href="{{ extra.url }}" target="_blank">
+            <div class="page__extra-logo" style="background: url({{ extra.image_path | absolute_url }});"></div>
+          </a>
+        {% endfor %}
+      {% endif %}
     </div>
   {% else %}
     <img src="{{ img_path }}" alt="{{ page.title }}" class="page__hero-image">
