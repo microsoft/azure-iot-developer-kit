@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-07-10T01:33:07-07:00">
+  <meta property="article:published_time" content="2017-07-13T07:02:49-07:00">
 
 
 
@@ -355,7 +355,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Upgrade DevKit">
     <meta itemprop="description" content="Instructions for upgrading board package and firmware.">
-    <meta itemprop="datePublished" content="July 10, 2017">
+    <meta itemprop="datePublished" content="July 13, 2017">
     <meta itemprop="dateModified" content="July 05, 2017">
 
     <div class="page__inner-wrap">
@@ -368,7 +368,26 @@
       
 
       <section class="page__content" itemprop="text">
-        <h2 id="upgrade-firmware">Upgrade firmware</h2>
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-columns"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#upgrade-firmware" id="markdown-toc-upgrade-firmware">Upgrade firmware</a>    <ul>
+      <li><a href="#step-1-connect-devkit-to-your-computer-via-usb" id="markdown-toc-step-1-connect-devkit-to-your-computer-via-usb">Step 1. Connect DevKit to your computer via USB</a></li>
+      <li><a href="#step-2-upgrade-firmware" id="markdown-toc-step-2-upgrade-firmware">Step 2. Upgrade firmware</a></li>
+    </ul>
+  </li>
+  <li><a href="#upgrade-board-package" id="markdown-toc-upgrade-board-package">Upgrade board package</a>    <ul>
+      <li><a href="#step-1-update-vs-code-extension-for-arduino" id="markdown-toc-step-1-update-vs-code-extension-for-arduino">Step 1. Update VS Code extension for Arduino</a></li>
+      <li><a href="#step-2-upgrade-board-package" id="markdown-toc-step-2-upgrade-board-package">Step 2. Upgrade board package</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<h2 id="upgrade-firmware">Upgrade firmware</h2>
 
 <p>Follow these steps to upgrade your DevKit firmware to <a href="http://localhost:4000/azure-iot-developer-kit/versions">latest version</a>.</p>
 
@@ -381,7 +400,7 @@
 <ol>
   <li>
     <p>Download the latest firmware: 
- <a href="https://azureboard.azureedge.net/firmware/devkit-firmware-1.0.0.bin">devkit-firmware-1.0.0.bin</a></p>
+ <a href="https://azureboard.azureedge.net/firmware/devkit-firmware-1.0.1.bin">devkit-firmware-1.0.1.bin</a></p>
   </li>
   <li>
     <p>Drag &amp; drop the <code class="highlighter-rouge">.bin</code> file you downloaded to <code class="highlighter-rouge">AZ3166</code> device.</p>
@@ -413,7 +432,10 @@
     <p>Use <code class="highlighter-rouge">Ctrl+Shift+P</code> (macOS: <code class="highlighter-rouge">Cmd+Shift+P</code>) to invoke command palette and type <strong>Arduino</strong> then find and select <strong>Arduino: Boards Manager</strong>.</p>
   </li>
   <li>
-    <p>In the Boards Manager search for ‘az3166’, select the latest version and click <strong>Update</strong>:
+    <p>Click <strong>Refresh Package Indexes</strong> to update board packages information.</p>
+  </li>
+  <li>
+    <p>Search for ‘az3166’, select the latest version and click <strong>Update</strong>:
   <img src="http://localhost:4000/azure-iot-developer-kit/assets/images/upgrading-board-package.png" alt="upgrading-board-package" /></p>
   </li>
 </ol>

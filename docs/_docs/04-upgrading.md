@@ -2,8 +2,10 @@
 title: "Upgrade DevKit"
 permalink: /docs/upgrading/
 excerpt: "Instructions for upgrading board package and firmware."
-last_modified_at: 2017-07-05T10:16:34-04:00
+last_modified_at: 2017-07-05
 ---
+
+{% include toc icon="columns" %}
 
 ## Upgrade firmware
 
@@ -16,7 +18,7 @@ Once the DevKit is connected, in Windows you will see a new USB mass storage dev
 ### Step 2. Upgrade firmware
 
 1. Download the latest firmware: 
- [devkit-firmware-1.0.0.bin](https://azureboard.azureedge.net/firmware/devkit-firmware-1.0.0.bin)
+ [devkit-firmware-1.0.1.bin](https://azureboard.azureedge.net/firmware/devkit-firmware-1.0.1.bin)
 
 2. Drag & drop the `.bin` file you downloaded to `AZ3166` device.
 
@@ -36,5 +38,7 @@ Follow these steps to upgrade DevKit Arduino board package to [latest version]({
 
 1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Boards Manager**.
 
-2. In the Boards Manager search for 'az3166', select the latest version and click **Update**:
+2. Click **Refresh Package Indexes** to update board packages information.
+
+3. Search for 'az3166', select the latest version and click **Update**:
   ![upgrading-board-package]({{"/assets/images/upgrading-board-package.png" | absolute_url}})

@@ -1,4 +1,7 @@
 function sidebarFix(){
+    if (!$('.sidebar__right_fix').length){
+        return;
+    }
     if (window.innerWidth >= 1024){
         var position = $('.page__content').position();
         var articleRight = position.left + $('.page__content').width();
@@ -40,6 +43,9 @@ function sidebarFix(){
 function menuScroll(){
     var lastScrollTop = 0
     $(window).bind('scroll', function(){
+        if (!$('.masthead').length){
+            return;
+        }
         var scrollTop = $(this).scrollTop();
         if (scrollTop > 50){
             if (scrollTop > lastScrollTop){
@@ -107,6 +113,7 @@ $(window).load(function(){
     $('#get-started-devkit-install-download').click(trackDowloadNumber);
 
     var firstPlatform = '';
+    var switchLevel = $('.switcher').next().prop('tagName');
     $('.switch').each(function(){
         var id = $(this).attr('id');
         var platform = '';
@@ -114,7 +121,7 @@ $(window).load(function(){
         var string = '';
         $('.page__content').children().each(function(){
             if (curPlatform){
-                if ($(this).prop('tagName') == 'H2'){
+                if ($(this).prop('tagName') == switchLevel){
                     $('#' + platform + '_switch_result').html(string);
                     curPlatform = false;
                 } else {
@@ -122,7 +129,7 @@ $(window).load(function(){
                     $(this).remove();
                 }
             } else {
-                if ($(this).prop('tagName') == 'H2' && id.search($(this).attr('id')) != -1){
+                if ($(this).prop('tagName') == switchLevel && id.search($(this).attr('id')) != -1){
                     curPlatform = true;
                     string += $(this).clone().wrap('<p>').parent().html();
                     platform = $(this).attr('id');
