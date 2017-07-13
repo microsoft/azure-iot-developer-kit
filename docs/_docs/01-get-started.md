@@ -96,9 +96,9 @@ For **Windows** users, follow the steps below:
 
 The `.zip` file you download contains all necessary tools and packages required for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_install_1.0.0.zip){: .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_install_1.0.1.zip){: .btn .btn--success .btn--large}
 
-**MD5:** 384c72120e57d460ac654bd26f82fe95
+**MD5:** 01527cb5c349601452d1f5546149f3be
 {: .notice--info}
 
 > The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
