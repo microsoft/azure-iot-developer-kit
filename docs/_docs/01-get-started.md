@@ -97,8 +97,6 @@ Now it's time to set up the development environment: tools and packages for you 
 
 ### Windows
 
-This is windows
-
 #### A. Download latest package
 
 The `.zip` file you download contains all necessary tools and packages required for DevKit development.
