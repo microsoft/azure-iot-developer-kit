@@ -34,3 +34,6 @@
 # Debug files
 *.dSYM/
 *.su
+
+# Site
+*/_site/*
