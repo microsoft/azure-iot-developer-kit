@@ -109,9 +109,6 @@ $(window).load(function(){
     sidebarFix();
     $(window).resize(sidebarFix);
 
-    //element of download button in get-started
-    $('#get-started-devkit-install-download').click(trackDowloadNumber);
-
     let firstPlatform = '';
     if ($('.switcher').length > 0){
         let switchLevel = $('.switcher').next().prop('tagName');
@@ -161,4 +158,7 @@ $(window).load(function(){
             });
         }
     }
+
+    // download track
+    $('.click-download-tracker').click(trackDowloadNumber);
 });
