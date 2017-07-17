@@ -80,7 +80,7 @@ Open the IP address shown on the DevKit screen in your PC or mobile phone browse
 
 ![getting-started-wifi-portal]({{"/assets/images/getting-started-wifi-portal.png" | absolute_url }})
 
-Once the connection succeeds, the DevKit will take a few seconds to reboot. Then, you can test the connection by clicking button A. The WiFi SSID and an IP address will display on the screen.
+Once the connection succeeds, the DevKit will take a few seconds to reboot. Then, you can test the connection by clicking button A. The WiFi SSID and an IP address will be displayed on the screen.
 
 ![getting-started-wifi-ip]({{"/assets/images/getting-started-wifi-ip.jpg" | absolute_url }})
 
