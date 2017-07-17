@@ -53,7 +53,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-07-16T22:29:51-07:00">
+  <meta property="article:published_time" content="2017-07-16T23:41:15-07:00">
 
 
 
@@ -347,7 +347,7 @@
 
 <h2 id="optional-use-your-own-twitter-bearer-token">Optional: Use your own Twitter bearer token</h2>
 
-<p>This sample project uses an pre-configured Twitter bearer token for testing purpose. But there is a <a href="https://dev.twitter.com/rest/reference/get/search/tweets" target="_blank">rate limits</a> for every Twitter account. You might want to consider using your own token. Here is simple instructions to do so:</p>
+<p>This sample project uses a pre-configured Twitter bearer token for testing purpose. But there is a <a href="https://dev.twitter.com/rest/reference/get/search/tweets" target="_blank">rate limits</a> for every Twitter account. You might want to consider using your own token. Here are simple instructions to do so:</p>
 
 <ol>
   <li>
@@ -357,7 +357,7 @@
     <p><a href="https://support.yapsody.com/hc/en-us/articles/203068116-How-do-I-get-a-Twitter-Consumer-Key-and-Consumer-Secret-key-" target="_blank">Get Consumer Key and Consumer Secrets</a> of your app.</p>
   </li>
   <li>
-    <p>Use <a href="https://gearside.com/nebula/utilities/twitter-bearer-token-generator/" target="_blank">some utlity</a> to generate Twitter bearer token from these two keys.</p>
+    <p>Use <a href="https://gearside.com/nebula/utilities/twitter-bearer-token-generator/" target="_blank">some utility</a> to generate Twitter bearer token from these two keys.</p>
   </li>
   <li>
     <p>In the <a href="https://portal.azure.com/" target="_blank">Azure portal</a>, get into the <strong>Resource Group</strong> and find the Azure Function (Type: App Service) for your “Shake, Shake” project. The name always contains ‘shake…’ string.
@@ -382,7 +382,7 @@
 
 <h4 id="the-screen-displays-no-tweets-while-every-step-has-run-successfully">The screen displays ‘No Tweets’ while every step has run successfully</h4>
 
-<p>It normally happens for the first time you deploy and run the sample. This is because that Azure Function will requires a couple of seconds up to one minute to code start the app. Or there are some blips when running the code that will cause restarting of the app. Then the device app can get time out for fetching the tweet. In this case, you may try to click restart button to run the device app again.</p>
+<p>It normally happens for the first time you deploy and run the sample. This is because that Azure Function will require a couple of seconds up to one minute to cold start the app. Or there are some blips when running the code that will cause restarting of the app. Then the device app can get time out for fetching the tweet. In this case, you may try to click restart button to run the device app again.</p>
 
 <h3 id="feedback">Feedback</h3>
 
