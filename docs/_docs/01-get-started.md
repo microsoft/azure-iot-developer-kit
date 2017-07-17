@@ -97,13 +97,11 @@ Now it's time to set up the development environment: tools and packages for you 
 
 ### Windows
 
-This is windows
-
 #### A. Download latest package
 
 The `.zip` file you download contains all necessary tools and packages required for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_install_1.0.1.zip){: .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_install_1.0.1.zip){: .click-download-tracker .btn .btn--success .btn--large}
 
 **MD5:** 01527cb5c349601452d1f5546149f3be
 {: .notice--info}
@@ -164,7 +162,7 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
 The `.zip` file you download contains necessary scripts required for DevKit development in VS Code.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/devkit_tasks_mac_1.0.1.zip){: .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/devkit_tasks_mac_1.0.1.zip){: .click-download-tracker .btn .btn--success .btn--large}
 
 **MD5:** 8f3d7667bad9bb2110dd78579e577bd5
 {: .notice--info}
