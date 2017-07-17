@@ -1,3 +1,14 @@
+---
+title: "Shake, Shake"
+permalink: /docs/projects/sensor-status/
+excerpt: "Learn how to get data of DevKit sensors in your code."
+header:
+  image: /assets/images/projects-sensor-status.jpg
+  teaser: /assets/images/projects-sensor-status-th.jpg
+last_modified_at: 2017-07-17T10:16:34-04:00
+---
+
+
 # Sensor Status
 
 Sensor Status application is installed in the board by default, it can run automatically when you plug usb in. You can also install the application by following [this guide](https://microsoft.github.io/azure-iot-developer-kit/docs/upgrading/), or open `Examples for MXCHIP AZ3166 > SensorStatus > SensorStatus` project after you connect the board to your computer, and run `device-upload` task ([how to run the task?](https://microsoft.github.io/azure-iot-developer-kit/docs/projects/shake-shake/)).
