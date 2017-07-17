@@ -24,15 +24,15 @@
 
 
 
-<meta name="author" content="MXChip IoT Developer Kit">
+<meta name="author" content="MXChip IoT DevKit">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="IoT Developer Kits">
 <meta property="og:title" content="Versions and Release Notes">
 
 
-  <link rel="canonical" href="http://localhost:4000/azure-iot-developer-kit/versions/">
-  <meta property="og:url" content="http://localhost:4000/azure-iot-developer-kit/versions/">
+  <link rel="canonical" href="https://microsoft.github.io/azure-iot-developer-kit/versions/">
+  <meta property="og:url" content="https://microsoft.github.io/azure-iot-developer-kit/versions/">
 
 
 
@@ -48,7 +48,7 @@
 
 
 
-  <meta property="og:image" content="http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png">
+  <meta property="og:image" content="https://microsoft.github.io/azure-iot-developer-kit/assets/images/site-logo.png">
 
 
 
@@ -61,8 +61,8 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "url": "http://localhost:4000/azure-iot-developer-kit",
-      "logo": "http://localhost:4000/azure-iot-developer-kit/assets/images/site-logo.png"
+      "url": "https://microsoft.github.io/azure-iot-developer-kit",
+      "logo": "https://microsoft.github.io/azure-iot-developer-kit/assets/images/site-logo.png"
     }
   </script>
 
@@ -72,8 +72,8 @@
     {
       "@context" : "http://schema.org",
       "@type" : "Person",
-      "name" : "MXChip IoT Developer Kit",
-      "url" : "http://localhost:4000/azure-iot-developer-kit",
+      "name" : "MXChip IoT DevKit",
+      "url" : "https://microsoft.github.io/azure-iot-developer-kit",
       "sameAs" : null
     }
   </script>
@@ -86,7 +86,7 @@
 <!-- end SEO -->
 
 
-<link href="http://localhost:4000/azure-iot-developer-kit/feed.xml" type="application/atom+xml" rel="alternate" title="IoT Developer Kits Feed">
+<link href="https://microsoft.github.io/azure-iot-developer-kit/feed.xml" type="application/atom+xml" rel="alternate" title="IoT Developer Kits Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -98,8 +98,8 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/azure-iot-developer-kit/assets/css/main.css">
-<link rel="stylesheet" href="http://localhost:4000/azure-iot-developer-kit/assets/css/extended/extended_main.css">
+<link rel="stylesheet" href="https://microsoft.github.io/azure-iot-developer-kit/assets/css/main.css">
+<link rel="stylesheet" href="https://microsoft.github.io/azure-iot-developer-kit/assets/css/extended/extended_main.css">
 
 <!--[if lte IE 9]>
   <style>
@@ -133,17 +133,17 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="http://localhost:4000/azure-iot-developer-kit/">IoT Developer Kits</a>
+        <a class="site-title" href="https://microsoft.github.io/azure-iot-developer-kit/">IoT Developer Kits</a>
         <ul class="visible-links">
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/docs/get-started/">Docs</a></li>
+            <li class="masthead__menu-item"><a href="https://microsoft.github.io/azure-iot-developer-kit/docs/get-started/">Docs</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/docs/projects/">Projects</a></li>
+            <li class="masthead__menu-item"><a href="https://microsoft.github.io/azure-iot-developer-kit/docs/projects/">Projects</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/azure-iot-developer-kit/versions/">Versions</a></li>
+            <li class="masthead__menu-item"><a href="https://microsoft.github.io/azure-iot-developer-kit/versions/">Versions</a></li>
           
             
             <li class="masthead__menu-item"><a href="https://blogs.msdn.microsoft.com/iotdev/">Blog</a></li>
@@ -167,7 +167,7 @@
     <meta itemprop="headline" content="Versions and Release Notes">
     <meta itemprop="description" content="Versions and release notes">
     
-    <meta itemprop="dateModified" content="June 28, 2017">
+    <meta itemprop="dateModified" content="July 13, 2017">
 
     <div class="page__inner-wrap">
       
@@ -179,11 +179,40 @@
       
 
       <section class="page__content" itemprop="text">
-        <h2 id="version-100">Version 1.0.0</h2>
+        <h2 id="version-101-july-13">Version 1.0.1 (July 13)</h2>
+
+<p>The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our “Shake, Shake” sample project on macOS now. To further smooth the development tools and package installation, we are using the official <a href="https://aka.ms/InstallAzureCliWindows" target="_blank">MSI</a> for the Windows Azure CLI 2.0 installation so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.</p>
+
+<h3 id="release-summary">Release Summary</h3>
+
+<ul>
+  <li>Installation Scripts
+    <ul>
+      <li>Removed the dependency of Python installation by using Windows Azure CLI 2.0 MSI (v 2.0.9).</li>
+      <li>Upgraded to the latest version of VS Code (v 1.13.1) and Arduino Extension (v 0.2.4).</li>
+      <li>Switched to Azure CDN to accelerate the package downloading speed.</li>
+    </ul>
+  </li>
+  <li>Firmware
+    <ul>
+      <li>Stabilized Wi-Fi connection and minor optimizations to Azure IoT Device C SDK</li>
+    </ul>
+  </li>
+  <li>Project Catalog
+    <ul>
+      <li>Supported cloud provision, deploy and device upload tasks for “Shake, Shake” mini solution in VS Code on macOS.</li>
+      <li>Switched to <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template" target="_blank">ARM (Azure Resource Manager) template</a> for provisioning Azure services.</li>
+      <li>Put Azure Function creation logic into cloud provision step to further isolate the tasks.</li>
+      <li>Added telemetries to distinguish each mini solution from BI perspective.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-100-june-26">Version 1.0.0 (June 26)</h2>
 
 <p>After a month work of stabilizing the code, fixing bugs and adding more samples, we are happy to release the v1.0.0 for our IoT DevKit. And soon we will open source the stacks including firmware, toolchain and all sample projects code. Please check release summary for details about this update.</p>
 
-<h3 id="release-summary">Release Summary</h3>
+<h3 id="release-summary-1">Release Summary</h3>
 
 <ul>
   <li>
@@ -208,9 +237,9 @@
   <li>Arduino Library
     <ul>
       <li>Refined library APIs to follow Arduino Standard like function naming conventions.</li>
-      <li>Added <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/display/">OLED draw method</a> to control every pixel in display screen.</li>
+      <li>Added <a href="https://microsoft.github.io/azure-iot-developer-kit/docs/apis/display/">OLED draw method</a> to control every pixel in display screen.</li>
       <li>Added support for file system based on mbed file system implementation.</li>
-      <li>Added support for <a href="http://localhost:4000/azure-iot-developer-kit/docs/apis/irda/">IrDA</a>.</li>
+      <li>Added support for <a href="https://microsoft.github.io/azure-iot-developer-kit/docs/apis/irda/">IrDA</a>.</li>
     </ul>
   </li>
   <li>Project Catalog
@@ -224,15 +253,15 @@
   </li>
 </ul>
 
-<h2 id="version-081">Version 0.8.1</h2>
+<h2 id="version-081-may-21">Version 0.8.1 (May 21)</h2>
 
 <p>Some bug fixes before DevKit debut on <a href="https://build.microsoft.com/" target="_blank">//Build</a> and <a href="http://makerfaire.com/" target="_blank">Maker Faire Bay Area</a>.</p>
 
-<h2 id="version-080">Version 0.8.0</h2>
+<h2 id="version-080-may-5">Version 0.8.0 (May 5)</h2>
 
 <p>This is our first public release of the Microsoft Azure IoT Developer Kit.</p>
 
-<h3 id="release-summary-1">Release Summary</h3>
+<h3 id="release-summary-2">Release Summary</h3>
 
 <p>Everything is brand new!</p>
 
@@ -245,7 +274,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-28">June 28, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-07-13">July 13, 2017</time></p>
         
       </footer>
 
@@ -278,7 +307,7 @@
       <li><a href="http://github.com/Microsoft/azure-iot-developer-kit"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
     
     
-    <li><a href="http://localhost:4000/azure-iot-developer-kit/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    <li><a href="https://microsoft.github.io/azure-iot-developer-kit/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
@@ -286,8 +315,8 @@
       </footer>
     </div>
 
-    <script src="http://localhost:4000/azure-iot-developer-kit/assets/js/main.min.js"></script>
-<script src="http://localhost:4000/azure-iot-developer-kit/assets/js/extended/extended_main.js"></script>
+    <script src="https://microsoft.github.io/azure-iot-developer-kit/assets/js/main.min.js"></script>
+<script src="https://microsoft.github.io/azure-iot-developer-kit/assets/js/extended/extended_main.js"></script>
 
 
 

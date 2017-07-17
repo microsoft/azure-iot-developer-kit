@@ -15,15 +15,15 @@ Connect DevKit to an Azure IoT hub that you create, collect the temperature and 
 
 ## What you learn
 
-* How to create an IoT hub and register a device for MXChip IoT Developer Kit.
-* How to collect sensor data by running a sample application on MXChip IoT Developer Kit.
+* How to create an IoT hub and register a device for MXChip IoT DevKit.
+* How to collect sensor data by running a sample application on MXChip IoT DevKit.
 * How to send the sensor data to your IoT hub.
 
 ## What you need
 
 * Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
 
-## Create an IoT hub and register a device for MXChip IoT Developer Kit
+## Create an IoT hub and register a device for MXChip IoT DevKit
 
 ### Create an IoT hub
 
@@ -78,17 +78,17 @@ Connect DevKit to an Azure IoT hub that you create, collect the temperature and 
 
 5. After the device is created, open the device in the **Device Explorer** pane.
 
-6. Make a note of the primary key of the device connection string.
+6. Make a note of the primary key of the **device connection string**.
 
    ![Get the device connection string]({{"/assets/images/happy-path-get-device-connection-string-in-device-explorer-portal.png" | absolute_url }})
 
-## Connect MXChip IoT Developer Kit with your computer
+## Connect MXChip IoT DevKit with your computer
 
-Use the Micro USB to Type A USB cable to connect MXChip IoT Developer Kit to your computer.
+Use the Micro USB to Type A USB cable to connect MXChip IoT DevKit to your computer.
 
 ## Collect sensor data and send it to your IoT hub
 
-In this section, you deploy and run a sample application on MXChip IoT Developer Kit. The sample application blinks the LED on MXChip IoT Developer Kit, and sends the temperature and humidity data collected from the sensor to your IoT hub.
+In this section, you deploy and run a sample application on MXChip IoT DevKit. The sample application blinks the LED on MXChip IoT DevKit, and sends the temperature and humidity data collected from the sensor to your IoT hub.
 
 ### Get the sample application
 
@@ -108,17 +108,17 @@ In this section, you deploy and run a sample application on MXChip IoT Developer
 
 2. Configure PuTTY with the following settings in the sequence they are listed:
    * **Connection type**: select **Serial**.
-   * **Serial line**: Enter the port that MXChip IoT Developer Kit uses to connect to your computer. For example, you enter `COM5`. You can find the port on the status bar of Visual Studio Code.
+   * **Serial line**: Enter the port that MXChip IoT DevKit uses to connect to your computer. For example, you enter `COM5`. You can find the port on the status bar of Visual Studio Code.
    * **Speed**: Enter `115200`.
 
 3. Click **Open** to open a PuTTY command-line window.
 
    ![putty-config]({{"/assets/images/happy-path-putty-config.png" | absolute_url }})
 
-4. On MXChip IoT Developer Kit, press and hold button A, press the Reset button, and then release button A.
+4. On MXChip IoT DevKit, press and hold button A, press the Reset button, and then release button A.
    This makes the PuTTY command-line to start with a `#` prompt.
 
-5. Configure the device connection string for MXChip IoT Developer Kit by running the following command in the PuTTY command-line window:
+5. Configure the device connection string for MXChip IoT DevKit by running the following command in the PuTTY command-line window:
    ```bash
    set_az_iothub [device connection string]
    ```
@@ -130,11 +130,11 @@ In this section, you deploy and run a sample application on MXChip IoT Developer
 
 6. Close the PuTTY command-line window.
 
-### Deploy the sample application to MXChip IoT Developer Kit
+### Deploy the sample application to MXChip IoT DevKit
 
 1. In Visual Studio Code, click `COM<Port>` on the status bar, and then click `COM<Port> STMicroelectronics` in the command palette.
 
-2. Press `F1` or `Ctrl + Shift + P`, type `arduino:upload`, and then click `Arduino: Upload` to build and deploy the sample application to MXChip IoT Developer Kit.
+2. Press `F1` or `Ctrl + Shift + P`, type `arduino:upload`, and then click `Arduino: Upload` to build and deploy the sample application to MXChip IoT DevKit.
 
 ### Verify the sample application is running successfully
 
@@ -143,7 +143,7 @@ In Visual Studio Code, click the power plug icon in the status bar to open the S
 The sample application is running successfully when you see the following results:
 
 * The Serial Monitor dispalys the same information as the content in the screenshot below.
-* The LED on MXChip IoT Developer Kit is blinking.
+* The LED on MXChip IoT DevKit is blinking.
 
 ![Final output in VS Code]({{"/assets/images/happy-path-vscode-final-output.png" | absolute_url }})
 
@@ -153,7 +153,7 @@ You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems 
 
 ## Next steps
 
-You have successfully connected a MXChip IoT Developer Kit to your IoT hub, and sent the captured sensor data to your IoT hub.
+You have successfully connected a MXChip IoT DevKit to your IoT hub, and sent the captured sensor data to your IoT hub.
 
 To continue getting started with IoT Hub and to explore other IoT scenarios, see:
 
