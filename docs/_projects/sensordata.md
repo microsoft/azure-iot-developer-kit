@@ -1,5 +1,5 @@
 ---
-title: "Shake, Shake"
+title: "Sensor Status"
 permalink: /docs/projects/sensor-status/
 excerpt: "Learn how to get data of DevKit sensors in your code."
 header:
