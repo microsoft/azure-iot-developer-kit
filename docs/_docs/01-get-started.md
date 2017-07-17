@@ -5,7 +5,7 @@ excerpt: "How to quickly install and setup your development environment to use t
 variable:
   - platform: windows
     name: Windows
-  - platform: macos
+  - platform: macos-preview
     name: macOS
 last_modified_at: 2017-06-26
 ---
@@ -80,7 +80,7 @@ Open the IP address shown on the DevKit screen in your PC or mobile phone browse
 
 ![getting-started-wifi-portal]({{"/assets/images/getting-started-wifi-portal.png" | absolute_url }})
 
-Once the connection succeeds, the DevKit will take a few seconds to reboot. Then, you can test the connection by clicking button A. The WiFi SSID you selected and an IP address will display on the screen.
+Once the connection succeeds, the DevKit will take a few seconds to reboot. Then, you can test the connection by clicking button A. The WiFi SSID and an IP address will be displayed on the screen.
 
 ![getting-started-wifi-ip]({{"/assets/images/getting-started-wifi-ip.jpg" | absolute_url }})
 
@@ -108,13 +108,12 @@ The `.zip` file you download contains all necessary tools and packages required 
 
 > The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks
-> * Python and pip: For running Azure CLI 2.0
-> * [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/overview){:target="_blank"} - Cross-platform  command-line experience for managing Azure resources
-> * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"} (VS Code): Lightweight code editor for DevKit development
-> * [VS Code Arduino Extension](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino){:target="_blank"}: Enables Arduino development in VS Code
-> * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: VS Code Arduino Extension relies on this tool
+> * [Azure CLI 2.0 MSI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli#windows){:target="_blank"} - Cross-platform  command-line experience for managing Azure resources, the MSI contains dependent Python and pip.
+> * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"}: Lightweight code editor for DevKit development
+> * [Visual Studio Code extension for Arduino](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino){:target="_blank"}: Enables Arduino development in VS Code
+> * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: The extension for Arduino relies on this tool
 > * DevKit Board Package: Tool chains, libraries and projects for the DevKit
-> * ST-Link Utility: Essential utility and drivers
+> * ST-Link Utility: Essential utilities and drivers
 
 #### B. Run installation script
 
@@ -134,7 +133,7 @@ The VS Code for Arduino extension relies on the Arduino IDE. If this is the firs
 
 It should take around 10 minutes to finish installation depending on your Internet speed. Once installation is complete, you should see Visual Studio Code and Arduino IDE shortcuts on your desktop.
 
-### macOS
+### macOS (Preview)
 
 #### A. Install Azure CLI 2.0
 

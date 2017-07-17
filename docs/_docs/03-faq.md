@@ -11,7 +11,7 @@ last_modified_at: 2017-05-05T10:16:34-04:00
 
 ### Is the DevKit Microsoft hardware?
 
-No. The hardware manufacturer is [MXChip](http://www.mxchip.com){:target="_blank"}, an established player for IoT hardware. , Through a partnership between MXChip and Microsoft, we rapidly iterated on the design and engineering of an Arduino compatible board with rich preinstalled sensors. Microsoft's goal is to boost productivity for developers creating and prototyping IoT applications with awesome Visual Studio Code tooling that leverages the power of Microsoft Azure.
+No. The hardware manufacturer is [MXChip](http://www.mxchip.com){:target="_blank"}, an established player for IoT hardware. Through a partnership between MXChip and Microsoft, we rapidly iterated on the design and engineering of an Arduino compatible board with rich preinstalled sensors. Microsoft's goal is to boost productivity for developers creating and prototyping IoT applications with awesome Visual Studio Code tooling that leverages the power of Microsoft Azure.
 
 ### Why Arduino compatible?
 
@@ -19,7 +19,7 @@ Based on industry data and customer research, we believe Arduino has a powerful 
 
 ### Are you going to open-source the product?
 
-Yes, we will open source the firmware, toolchains and all samples. Also, the board itself will be [open-source hardware](https://www.arduino.cc/en/Main/FAQ#toc3){:target="_blank"}. That means we will release all of the original hardware design files.
+Yes, we will open source the firmware, toolchains and all samples. Also, the board itself will be [open-source hardware](https://www.arduino.cc/en/Main/FAQ#toc3){:target="_blank"}. That means we will release all original hardware design files.
 
 Our plan is to do that as soon as we reach a stage where the entire framework is stable.
 
