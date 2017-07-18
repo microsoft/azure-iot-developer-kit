@@ -203,7 +203,7 @@ You will need to add the DevKit board using the Boards Manager in Visual Studio 
 4. Now in the Boards Manager search for 'az3166' and install the latest version.
  ![installation-az3166]({{"/assets/images/installation-az3166.png" | absolute_url}})
 
-You now have all the necessary tools and packages installed.
+You now have all the necessary tools and packages installed for macOS.
 
 ### Next Steps
 
