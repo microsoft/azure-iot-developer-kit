@@ -159,31 +159,28 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
 #### D. Download latest package
 
-The `.zip` file you download contains necessary scripts required for DevKit development in VS Code.
+1. Install Node.js. You can use popular macOS package manager [Homebrew](https://brew.sh/){:target="_blank"} or [pre-built installer](https://nodejs.org/en/download/){:target="_blank"} to install it.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/devkit_tasks_mac_1.0.1.zip){: .click-download-tracker .btn .btn--success .btn--large}
+2. Download `.zip` file containing task scripts required for DevKit development in VS Code.
 
-**MD5:** 8f3d7667bad9bb2110dd78579e577bd5
-{: .notice--info}
+  [<i class='fa fa-download'></i> Download](https://azureboard.blob.core.windows.net/installpackage/devkit_tasks_1.0.1.zip){: .click-download-tracker .btn .btn--success .btn--large}
 
-Locate the `.zip` and extract it. Then launch Terminal and run the following commands to configure:
+  **MD5:** 8f3d7667bad9bb2110dd78579e577bd5
+  {: .notice--info}
 
-```bash
-mkdir ~/azure-board-cli
+  Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:
 
-cp -R [.zip extracted folder] ~/azure-board-cli/. | cd ~/azure-board-cli
+  ```bash
+  mv [.zip extracted folder]/azure-board-cli ~/. | cd ~/azure-board-cli
 
-npm install
-```
+  npm install
+  ```
 
 #### E. Install VS Code extension for Arduino
 
-Visual Studio Code allows you to install Marketplace extensions directly in the tool, simply click the extensions icon in the left menu pane and then search. You will need two extensions:
+Visual Studio Code allows you to install Marketplace extensions directly in the tool, simply click the extensions icon in the left menu pane and then search `Arduino` to install:
 
-1. C++ extension for grammar support, it is required by the Arduino extension so you need to install it first.
-2. Arduino extension which makes it easy to code, build, deploy and debug your Arduino sketches in Visual Studio Code. It comes with IntelliSense, automatic project scaffolding and debugging.
-
-![installation-extensions]({{"/assets/images/installation-extensions.png" | absolute_url}})
+![installation-extensions]({{"/assets/images/installation-extensions-mac.png" | absolute_url}})
 
 #### F. Install DevKit board package
 
@@ -192,16 +189,16 @@ You will need to add the DevKit board using the Boards Manager in Visual Studio 
 1. Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Boards Manager**.
 
 2. Click **'Additional URLs'** at the bottom right.
- ![installation-additional-urls]({{"/assets/images/installation-additional-urls.png" | absolute_url}})
+ ![installation-additional-urls]({{"/assets/images/installation-additional-urls-mac.png" | absolute_url}})
 
 3. In the `settings.json` file, add a line at the bottom of 'USER SETTINGS' pane.
  ```json
  "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
  ```
- ![installation-settings-json]({{"/assets/images/installation-settings-json.png" | absolute_url}})
+ ![installation-settings-json]({{"/assets/images/installation-settings-json-mac.png" | absolute_url}})
 
 4. Now in the Boards Manager search for 'az3166' and install the latest version.
- ![installation-az3166]({{"/assets/images/installation-az3166.png" | absolute_url}})
+ ![installation-az3166]({{"/assets/images/installation-az3166-mac.png" | absolute_url}})
 
 You now have all the necessary tools and packages installed for macOS.
 
