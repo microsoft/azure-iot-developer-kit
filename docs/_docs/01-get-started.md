@@ -97,6 +97,8 @@ Now it's time to set up the development environment: tools and packages for you 
 
 #### Windows
 
+We encourge you to use our installation package to prepare the development environment. If you encounter any issues, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
+
 ##### A. Download latest package
 
 The `.zip` file you download contains all necessary tools and packages required for DevKit development.
@@ -134,6 +136,8 @@ The VS Code for Arduino extension relies on the Arduino IDE. If this is the firs
 It should take around 10 minutes to finish installation depending on your Internet speed. Once installation is complete, you should see Visual Studio Code and Arduino IDE shortcuts on your desktop.
 
 #### macOS (Preview)
+
+Follow these steps to prepare development environment on macOS.
 
 ##### A. Install Azure CLI 2.0
 
