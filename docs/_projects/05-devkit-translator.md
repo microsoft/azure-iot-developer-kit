@@ -11,18 +11,22 @@ layouts_gallery:
     alt: "Arduino application initializing"
   - url: /assets/images/mini-solution-devkit-translator-2.jpg
     image_path: /assets/images/mini-solution-devkit-translator-2.jpg
-    alt: "Configure speech language"
+    alt: "DevKit Initialized"
   - url: /assets/images/mini-solution-devkit-translator-3.jpg
     image_path: /assets/images/mini-solution-devkit-translator-3.jpg
-    alt: "Ready to talk"
+    alt: "Choose source language-1"
   - url: /assets/images/mini-solution-devkit-translator-4.jpg
     image_path: /assets/images/mini-solution-devkit-translator-4.jpg
-    alt: "Translation"
+    alt: "Choose source language-2"
+  - url: /assets/images/mini-solution-devkit-translator-5.jpg
+    image_path: /assets/images/mini-solution-devkit-translator-5.jpg
+    alt:  "Ready to talk"
+  - url: /assets/images/mini-solution-devkit-translator-6.jpg
+    image_path: /assets/images/mini-solution-devkit-translator-6.jpg
+    alt:  "Translation"
 variable:
   - platform: windows
     name: Windows
-  - platform: macos
-    name: macOS
 last_modified_at: 2017-07-17T20:15:34-04:00
 ---
 
@@ -84,10 +88,6 @@ The DevKit will reboot and start running.
 **Notice:** If you are running on a clean machine with everything installed, during the verifying of the code phrase, you might get an error of **Unknown board AZ3166**.
 To work around, open Arduino IDE, navigate to **Tool > Board manager**. Arduino will reload all json files of all package definitions. After that, launch VS Code and try to build again, everything will be good.
 {: .notice--warning}
-
-## macOS
-
-We are currently working on interative command line experience for macOS just same as for Windows. These [manual steps]({{"/docs/projects/devkit-translator-macos/" | absolute_url }}) will use portal to provision Azure services.
 
 ## Test the project
 
