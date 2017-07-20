@@ -1,6 +1,9 @@
 .DS_Store
 .vscode
 
+# Jekyll
+docs/_site
+
 # Object files
 *.o
 *.ko
