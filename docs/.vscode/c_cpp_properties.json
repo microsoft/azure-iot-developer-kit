@@ -8,10 +8,12 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": false,
                 "path": [
-                    "/Users/liya/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/cores/arduino"
+                    "/Users/liya/Library/Arduino15/packages/AZ3166/hardware/stm32f4/0.8.1/cores/arduino",
+                    "${workspaceRoot}"
                 ]
             },
             "intelliSenseMode": "clang-x64"
         }
-    ]
+    ],
+    "version": 2
 }

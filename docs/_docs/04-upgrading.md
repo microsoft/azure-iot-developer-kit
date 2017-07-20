@@ -28,13 +28,17 @@ Once the DevKit is connected, in Windows you will see a new USB mass storage dev
 
 Follow these steps to upgrade DevKit Arduino board package to [latest version]({{"/versions" | absolute_url }}).
 
-### Step 1. Update VS Code extension for Arduino
+### Step 1. Before starting
+
+Make sure you have went through get started tutorial to [prepare your development environment]({{"/docs/get-started/#step-4-prepare-development-environment" | absolute_url}}).
+
+### Step 2. Update VS Code extension for Arduino
 
 1. Launch VS Code.
 
 2. Make sure you have updated VS Code extension Arduino to latest version.
 
-### Step 2. Upgrade board package
+### Step 3. Upgrade board package
 
 1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Boards Manager**.
 
