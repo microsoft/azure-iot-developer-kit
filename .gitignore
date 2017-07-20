@@ -37,3 +37,6 @@ docs/_site
 # Debug files
 *.dSYM/
 *.su
+
+# Site
+*/_site/*
