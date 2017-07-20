@@ -115,13 +115,13 @@ The Arduino sketch sends an event to Azure IoT Hub which triggers the Azure Func
 
 ## Optional: Use your own Twitter bearer token
 
-This sample project uses an pre-configured Twitter bearer token for testing purpose. But there is a [rate limits](https://dev.twitter.com/rest/reference/get/search/tweets){:target="_blank"} for every Twitter account. You might want to consider using your own token. Here is simple instructions to do so:
+This sample project uses a pre-configured Twitter bearer token for testing purpose. But there is a [rate limits](https://dev.twitter.com/rest/reference/get/search/tweets){:target="_blank"} for every Twitter account. You might want to consider using your own token. Here are simple instructions to do so:
 
 1. Go to [Twitter Developer portal](https://dev.twitter.com/){:target="_blank"} to register a new Twitter app.
 
 2. [Get Consumer Key and Consumer Secrets](https://support.yapsody.com/hc/en-us/articles/203068116-How-do-I-get-a-Twitter-Consumer-Key-and-Consumer-Secret-key-){:target="_blank"} of your app.
 
-3. Use [some utlity](https://gearside.com/nebula/utilities/twitter-bearer-token-generator/){:target="_blank"} to generate Twitter bearer token from these two keys.
+3. Use [some utility](https://gearside.com/nebula/utilities/twitter-bearer-token-generator/){:target="_blank"} to generate Twitter bearer token from these two keys.
 
 4. In the [Azure portal](https://portal.azure.com/){:target="_blank"}, get into the **Resource Group** and find the Azure Function (Type: App Service) for your "Shake, Shake" project. The name always contains 'shake...' string.
   ![shake-shake-function]({{"/assets/images/shake-shake-function.png" | absolute_url }})
@@ -145,7 +145,7 @@ This sample project uses an pre-configured Twitter bearer token for testing purp
 
 #### The screen displays 'No Tweets' while every step has run successfully
 
-It normally happens for the first time you deploy and run the sample. This is because that Azure Function will requires a couple of seconds up to one minute to code start the app. Or there are some blips when running the code that will cause restarting of the app. Then the device app can get time out for fetching the tweet. In this case, you may try to click restart button to run the device app again.
+It normally happens for the first time you deploy and run the sample. This is because that Azure Function will require a couple of seconds up to one minute to cold start the app. Or there are some blips when running the code that will cause restarting of the app. Then the device app can get time out for fetching the tweet. In this case, you may try to click restart button to run the device app again.
 
 ### Feedback
 
