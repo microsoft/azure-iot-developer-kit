@@ -11,7 +11,7 @@ last_modified_at: 2017-05-05T10:16:34-04:00
 
 ### Is the DevKit Microsoft hardware?
 
-No. The hardware manufacturer is [MXChip](http://www.mxchip.com){:target="_blank"}, an established player for IoT hardware. Through a partnership between MXChip and Microsoft, we rapidly iterated on the design and engineering of an Arduino compatible board with rich preinstalled sensors. Microsoft's goal is to boost productivity for developers creating and prototyping IoT applications with awesome Visual Studio Code tooling that leverages the power of Microsoft Azure.
+No. The hardware manufacturer is [MXChip](http://www.mxchip.com){:target="_blank"}, an established player for IoT hardware. Through a partnership between MXChip and Microsoft, we rapidly iterated on the design and engineering of an Arduino compatible board with rich pre-installed sensors. Microsoft's goal is to boost productivity for developers creating and prototyping IoT applications with awesome Visual Studio Code tooling that leverages the power of Microsoft Azure.
 
 ### Why Arduino compatible?
 
@@ -25,7 +25,7 @@ Our plan is to do that as soon as we reach a stage where the entire framework is
 
 ### Are you going to sell it?
 
-Currently, we really want developer feedback and success stories using the DevKit to build IoT applications. With this in mind, we are going to distribute a limited number of DevKits for free. You can [register here](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/), there's only a few simple questions.
+Currently, we really want developer feedback and success stories using the DevKit to build IoT applications. With this in mind, we are going to distribute a limited number of DevKits for free. You can [register here](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/), there are only a few simple questions.
 
 ## Installation
 
@@ -57,7 +57,7 @@ To resolve, try to use WiFi with normal WPA/WPA2 authentication.
 
 ### Cannot connect to 5GHz WiFi.
 
-Currently DevKit only can connect to 2.4GHz WiFi, 5GHz is not supported due to hardware restrictions.
+Currently, DevKit only can connect to 2.4GHz WiFi, 5GHz is not supported due to hardware restrictions.
 
 ## Cloud Provisioning
 
@@ -65,7 +65,7 @@ Currently DevKit only can connect to 2.4GHz WiFi, 5GHz is not supported due to h
 
 Due to a previous Azure log in, your access token may have expired. 
 
-To fix, delete the web browser history that includes login data and run the provision task again. Alternatively, you can try to log in to Azure manually by launching Command Prompt and running `az login`.
+To fix, delete the web browser history that includes login data and run the provisioning task again. Alternatively, you can try to log in to Azure manually by launching Command Prompt and running `az login`.
 
 ### Creating new Azure IoT Hub fails
 
@@ -81,13 +81,13 @@ This is because Azure IoT Hub only allows [one free hub per Azure subscription](
 
 Occasionally, when you launch Visual Studio Code, you will be prompted with an error message that it cannot find the Arduino IDE or related board package.
 
-To resolve, close Visual Studio Code, then launch the actual Arduino IDE once. Subsequently, when you open Visual Studio Code it should correctly locate the Arduino IDE path.
+To resolve, close Visual Studio Code, then launches the actual Arduino IDE once. Subsequently, when you open Visual Studio Code it should correctly locate the Arduino IDE path.
 
 ### Terminal text misaligned in Visual Studio Code.
 
-This is a known bug for the latest version of Visual Studio Code ([#19665](https://github.com/Microsoft/vscode/issues/19665){:target="_blank"}) if you are using Powershell or CMD in terminal.
+This is a known bug for the latest version of Visual Studio Code ([#19665](https://github.com/Microsoft/vscode/issues/19665){:target="_blank"}) if you are using Powershell or CMD in the terminal.
 
-To resolve, there is a known [workaround](https://github.com/Microsoft/vscode/issues/19665#issuecomment-294536524){:target="_blank"}. Add this snippet into VS Code settings file:
+To resolve, there is a known [workaround](https://github.com/Microsoft/vscode/issues/19665#issuecomment-294536524){:target="_blank"}. Add this snippet to VS Code settings file:
 
 ```json
 "terminal.integrated.shellArgs.windows": [
