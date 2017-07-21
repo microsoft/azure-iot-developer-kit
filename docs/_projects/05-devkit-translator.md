@@ -24,10 +24,10 @@ layouts_gallery:
   - url: /assets/images/mini-solution-devkit-translator-6.jpg
     image_path: /assets/images/mini-solution-devkit-translator-6.jpg
     alt:  "Translation"
-last_modified_at: 2017-07-17T20:15:34-04:00
+last_modified_at: 2017-07-17
 ---
 
-In this project, you will learn how to use the the devkit as a translator. The app will record your voice and translate it to English text show in the screen.
+In this project, you will learn how to use DevKit as a translator. The app will record your voice and translate it to English text show on the screen.
 
 {% include toc icon="columns" %}
 
@@ -57,7 +57,7 @@ If you happen to close the **Arduino Examples** pane, to reload it, use `Ctrl+Sh
 
 ## Step 2. Provision Azure services
 
-In the solution window, run your task through **Quick Open** (`Ctrl+P`) by typing 'task cloud-provision':
+In the solution window, run your task through **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
 
 In the VS Code terminal, an interactive command line will guide you through provisioning all required Azure services:
 
@@ -65,13 +65,13 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ## Step 3. Deploy Azure Functions
 
-Use **Quick Open** (`Ctrl+P`) to run 'task cloud-deploy' to deploy the Azure Functions code. It usually take 2 to 5 minutes to complete:
+Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy' to deploy the Azure Functions code. It usually takes 2 to 5 minutes to complete:
 
 ![mini-solution-deploy]({{"/assets/images/mini-solution-deploy-devkit-translator.png" | absolute_url }})
 
 ## Step 4. Build and upload Arduino sketch
 
-Use **Quick Open** (`Ctrl+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode: hold down button A, then push and release the reset button. The screen will display 'Configuration'. This step is to set the connection string which is retrieved from 'task cloud-provision'.
+Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode: hold down button A, then push and release the reset button. The screen will display 'Configuration'. This step is to set the connection string which is retrieved from 'task cloud-provision'.
 
 After that it will start verifying and uploading the Arduino sketch:
 
@@ -85,7 +85,7 @@ To work around, open Arduino IDE, navigate to **Tool > Board manager**. Arduino 
 
 ## Test the project
 
-After app initialization, follow the instructions in the screen to setup. You could just press button B to talk. The default language is Chinese. Or, you may press button A to enter setup mode. Press button B to scroll all supported languages, then press button A to confirm your choice. After source language is set, press button B to talk and release to send the voice. Several seconds later, the translation will be showed in the screen.
+After app initialization, follow the instructions on the screen to setup. You could just press button B to talk. The default language is Chinese. Or, you may press button A to enter setup mode. Press button B to scroll all supported languages, then press button A to confirm your choice. After source language is set, press button B to talk and release to send the voice. Several seconds later, the translation will be shown on the screen.
 
 {% include gallery id="layouts_gallery" caption="Translate as you go" %}
 
@@ -96,7 +96,7 @@ After app initialization, follow the instructions in the screen to setup. You co
 
 ![mini-solution-voice-to-tweet-diagram]({{"/assets/images/mini-solution-diagram-devkit-translator.png" | absolute_url }})
 
-The Arduino sketch records your voice, post a http request to trigger Azure Functions. Azure Functions calls the cognitive service speech translator api to do the translation. After azure function gets the translation text, it sends a C2D message to the device. Then the translation shows in the screen.
+The Arduino sketch records your voice, post a HTTP request to trigger Azure Functions. Azure Functions calls the cognitive service speech translator API to do the translation. After Azure Functions gets the translation text, it sends a C2D message to the device. Then the translation shows on the screen.
 
 ## Problems and feedback
 
