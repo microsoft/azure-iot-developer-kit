@@ -28,7 +28,7 @@ In this tutorial, you learn how to run a sample app on DevKit to send sensor dat
 
 ![remote-monitoring-azure-iot-suite-new-solution]({{"/assets/images/remote-monitoring-azure-iot-suite-new-solution.png" | absolute_url }})
 
-4. After the provision is complited, click **Launch**. Some simulated devices are created for the solution during the provision process. Click **DEVICES** to check them out.
+4. After the provision is completed, click **Launch**. Some simulated devices are created for the solution during the provision process. Click **DEVICES** to check them out.
 
 ![remote-monitoring-azure-iot-suite-new-solution-created]({{"/assets/images/remote-monitoring-azure-iot-suite-new-solution-created.png" | absolute_url }})
 
@@ -81,7 +81,7 @@ The cloud-provision task opens an interactive command line that guides you throu
 
 1. In the RemoteMonitoring sample window, use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`), type `task device`, and then click **device-upload**. The interactive command line prompts you to set DevKit to configuration mode.
 
-2. On DevKit, press and hold button A, press the Reset button, and then release button A.
+2. On DevKit, press and hold button A, press the Reset button and then release button A.
 The screen should display `Configuration` if DevKit is running in configuration mode.
 
 3. Wait for the upload to complete.

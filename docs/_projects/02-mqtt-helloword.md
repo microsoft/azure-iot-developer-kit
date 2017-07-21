@@ -8,8 +8,8 @@ header:
 last_modified_at: 2017-06-28
 ---
 
-In this project, you will learn how to use the MQTT Client library to send message to a MQTT broker.
-The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse.org/paho/) project, which provides APIs for using MQTT over multiple transports.
+In this project, you will learn how to use the MQTT Client library to send messages to an MQTT broker.
+The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse.org/paho/) project, which provides APIs for using MQTT over multiple means of transport.
 
 {% include toc icon="columns" %}
 
@@ -46,7 +46,7 @@ The MQTTClient example opens in a new VS Code window.
 
 ![mqtt-examples-folder]({{"/assets/images/mqtt-examples-folder.jpg" | absolute_url}})
 
-If the Arduino Examples page doesn't shows up, open it by the following steps:
+If the Arduino Examples page does not show up, open it by the following steps:
 1. Press `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette.
 1. In the command palette, type 'Arduino', and then click `Arduino:Examples`.
 

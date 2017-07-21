@@ -53,7 +53,7 @@ This is a one-time effort, once you start developing on the DevKit and upload yo
 
 ### D. Test sensors and WiFi on DevKit
 
-Now you have connected your DevKit to computer. Follow the instructions on the screen to test sensors and WiFi:
+Now you have connected your DevKit to the computer. Follow the instructions on the screen to test sensors and WiFi:
 
 - Press button A to test WiFi connection
 - Press button B to test sensors, continue pressing and releasing the B button to cycle through each sensor
@@ -76,7 +76,7 @@ Use another WiFi enabled device (PC or mobile phone) to connect to the DevKit SS
 
 ### C. Configure WiFi for DevKit
 
-Open the IP address shown on the DevKit screen in your PC or mobile phone browser, select the WiFi network you want the DevKit to connect to, then type the password. Click **'Connect'** to complete.
+Open the IP address shown on the DevKit screen on your PC or mobile phone browser, select the WiFi network you want the DevKit to connect to, then type the password. Click **'Connect'** to complete.
 
 ![getting-started-wifi-portal]({{"/assets/images/getting-started-wifi-portal.png" | absolute_url }})
 
@@ -97,7 +97,7 @@ Now it's time to set up the development environment: tools and packages for you 
 
 ### Windows
 
-We encourge you to use our installation package to prepare the development environment. If you encounter any issues, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
+We encourage you to use our installation package to prepare the development environment. If you encounter any issues, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
 
 #### A. Download latest package
 
@@ -133,7 +133,7 @@ The VS Code for Arduino extension relies on the Arduino IDE. If this is the firs
 
 ![getting-started-driver]({{"/assets/images/getting-started-driver.png" | absolute_url }})
 
-It should take around 10 minutes to finish installation depending on your Internet speed. Once installation is complete, you should see Visual Studio Code and Arduino IDE shortcuts on your desktop.
+It should take around 10 minutes to finish installation depending on your Internet speed. Once the installation is complete, you should see Visual Studio Code and Arduino IDE shortcuts on your desktop.
 
 ### macOS (Preview)
 
