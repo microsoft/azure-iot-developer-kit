@@ -7,34 +7,34 @@ variable:
     name: Windows
   - platform: macos-preview
     name: macOS
-last_modified_at: 2017-06-26
+last_modified_at: 2017-07-17
 ---
 
 For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications.
 
 {% include toc icon="columns" %}
 
-### Step 1. Before starting
+## Step 1. Before starting
 
-#### A. What you need
+### A. What you need
 
 * MXChip IoT DevKit. [Get it now](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/){:target="_blank"}
 * A computer running Windows 10 or macOS 10.10+
 * An active Azure subscription
   * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
 
-### Step 2. Prepare your hardware
+## Step 2. Prepare your hardware
 
 Hook up the hardware to your computer.
 
-#### A. Hardware you need
+### A. Hardware you need
 
 * DevKit board
 * Micro USB cable
 
 ![getting-started-hardware]({{"/assets/images/getting-started-hardware.jpg" | absolute_url }})
 
-#### B. Connect DevKit to your computer
+### B. Connect DevKit to your computer
 
 1. Connect USB end to your PC
 2. Connect Micro USB end to the DevKit
@@ -42,7 +42,7 @@ Hook up the hardware to your computer.
 
 ![getting-started-connect]({{"/assets/images/getting-started-connect.jpg" | absolute_url }})
 
-#### C. Upgrade to the latest firmware
+### C. Upgrade to the latest firmware
 
 If this is the first time you are developing on the DevKit, follow [Upgrading]({{"/docs/upgrading/" | absolute_url}}) guide to upgrade the DevKit firmware to the latest version.
 
@@ -51,7 +51,7 @@ This is a one-time effort, once you start developing on the DevKit and upload yo
 **Tip:** You will see the firmware version on the screen of the kit. If there is no version number, it means the DevKit is running on old version and needs an upgrade. [Versions]({{"/versions/" | absolute_url }}) contains the latest version number and release notes.
 {: .notice--info}
 
-#### D. Test sensors and WiFi on DevKit
+### D. Test sensors and WiFi on DevKit
 
 Now you have connected your DevKit to computer. Follow the instructions on the screen to test sensors and WiFi:
 
@@ -60,21 +60,21 @@ Now you have connected your DevKit to computer. Follow the instructions on the s
 
 ![getting-started-sensors]({{"/assets/images/getting-started-sensors.jpg" | absolute_url }})
 
-### Step 3. Configure WiFi
+## Step 3. Configure WiFi
 
 IoT projects rely on Internet connectivity. Use the following instructions to setup Access Point(AP) Mode on the DevKit to enable WiFi connectivity.
 
-#### A. Enter AP Mode
+### A. Enter AP Mode
 
 Hold down button B, then push and release the reset button, then release button B. The screen will display the Service Set Identifier(SSID) of the DevKit as well as the configuration portal IP address:
 
 ![getting-started-wifi-ap]({{"/assets/images/getting-started-wifi-ap.jpg" | absolute_url }})
 
-#### B. Connect to DevKit AP
+### B. Connect to DevKit AP
 
 Use another WiFi enabled device (PC or mobile phone) to connect to the DevKit SSID (highlighted in the screenshot above), leave the password empty.
 
-#### C. Configure WiFi for DevKit
+### C. Configure WiFi for DevKit
 
 Open the IP address shown on the DevKit screen in your PC or mobile phone browser, select the WiFi network you want the DevKit to connect to, then type the password. Click **'Connect'** to complete.
 
@@ -89,17 +89,17 @@ Once the connection succeeds, the DevKit will take a few seconds to reboot. Then
 
 After WiFi is configured, your credentials will be persisted on the device for that connection, even if unplugged. For example, if you configured the DevKit for WiFi in your home and then took the DevKit to the office, you will need to reconfigure AP mode (starting at step 3A) to connect the DevKit to your office WiFi. 
 
-### Step 4. Prepare development environment
+## Step 4. Prepare development environment
 
 Now it's time to set up the development environment: tools and packages for you to build stunning IoT applications.
 
 {% include switch.html content = page.variable %}
 
-#### Windows
+### Windows
 
 We encourge you to use our installation package to prepare the development environment. If you encounter any issues, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
 
-##### A. Download latest package
+#### A. Download latest package
 
 The `.zip` file you download contains all necessary tools and packages required for DevKit development.
 
@@ -117,7 +117,7 @@ The `.zip` file you download contains all necessary tools and packages required 
 > * DevKit Board Package: Tool chains, libraries and projects for the DevKit
 > * ST-Link Utility: Essential utilities and drivers
 
-##### B. Run installation script
+#### B. Run installation script
 
 In Windows File Explorer, locate the `.zip` and extract it, find `install.cmd`, right-click and select **"Run as administrator"** to start.
 
@@ -127,7 +127,7 @@ During installation, you will see the progress of each tool or package.
 
 ![getting-started-install]({{"/assets/images/getting-started-install.png" | absolute_url }})
 
-##### C. Confirm to install drivers
+#### C. Confirm to install drivers
 
 The VS Code for Arduino extension relies on the Arduino IDE. If this is the first time you are installing the Arduino IDE, you will be prompted to install relevant drivers:
 
@@ -135,11 +135,11 @@ The VS Code for Arduino extension relies on the Arduino IDE. If this is the firs
 
 It should take around 10 minutes to finish installation depending on your Internet speed. Once installation is complete, you should see Visual Studio Code and Arduino IDE shortcuts on your desktop.
 
-#### macOS (Preview)
+### macOS (Preview)
 
 Follow these steps to prepare development environment on macOS.
 
-##### A. Install Azure CLI 2.0
+#### A. Install Azure CLI 2.0
 
 Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli){:target="_blank"} to install Azure CLI 2.0:
 
@@ -153,15 +153,15 @@ And restart your command shell for changes to take effect:
 exec -l $SHELL
 ```
 
-##### B. Install Arduino IDE
+#### B. Install Arduino IDE
 
 The Visual Studio Code Arduino extension relies on the Arduino IDE. Download and install the [Arduino IDE for macOS](https://www.arduino.cc/en/Main/Software){:target="_blank"}.
 
-##### C. Install Visual Studio Code
+#### C. Install Visual Studio Code
 
 Download and install [Visual Studio Code for macOS](https://code.visualstudio.com/){:target="_blank"}. This will be the primary development tool for building DevKit IoT applications.
 
-##### D. Download latest package
+#### D. Download latest package
 
 1. Install Node.js. You can use popular macOS package manager [Homebrew](https://brew.sh/){:target="_blank"} or [pre-built installer](https://nodejs.org/en/download/){:target="_blank"} to install it.
 
@@ -180,13 +180,13 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
   npm install
   ```
 
-##### E. Install VS Code extension for Arduino
+#### E. Install VS Code extension for Arduino
 
 Visual Studio Code allows you to install Marketplace extensions directly in the tool, simply click the extensions icon in the left menu pane and then search `Arduino` to install:
 
 ![installation-extensions]({{"/assets/images/installation-extensions-mac.png" | absolute_url}})
 
-##### F. Install DevKit board package
+#### F. Install DevKit board package
 
 You will need to add the DevKit board using the Boards Manager in Visual Studio Code.
 
@@ -206,6 +206,6 @@ You will need to add the DevKit board using the Boards Manager in Visual Studio 
 
 You now have all the necessary tools and packages installed for macOS.
 
-### Next Steps
+## Next Steps
 
 You're all set! It's time to build your first IoT application. For samples, start with our [Projects Catalog]({{"/docs/projects/" | absolute_url }}).

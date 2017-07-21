@@ -5,6 +5,7 @@ excerpt: "Connect DevKit to an Azure IoT hub that you create, collect the temper
 header:
   image: /assets/images/projects-iothub.jpg
   teaser: /assets/images/projects-iothub-th.jpg
+last_modified_at: 2017-06-28
 ---
 
 {% include toc icon="columns" %}
