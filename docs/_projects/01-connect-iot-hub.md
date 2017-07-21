@@ -137,12 +137,40 @@ In this section, you deploy and run a sample application on MXChip IoT DevKit. T
    ```bash
    INFO: Set Azure Iot hub connection string successfully.
    ```
-
-6. Close the PuTTY command-line window.
+   Now close the PuTTY command-line window.
 
 #### macOS
 
-This is macOS steps.
+1. With your DevKit connected to computer, open the terminal.
+
+2. List relevant serial port:
+ ```bash
+ ls -l /dev/cu.*
+ ```
+ You get following outputs like:
+ ```bash
+ crw-rw-rw-  1 root  wheel   20,   1 May 17 18:36 /dev/cu.Bluetooth-Incoming-Port
+ crw-rw-rw-  1 root  wheel   20,  33 May 18 18:11 /dev/cu.usbmodem1423
+ ```
+ The later one ended with `usbmodem1423` is the actual serial port of the DevKit.
+
+3. Open serial monitor:
+ ```bash
+ screen /dev/cu.usbmodem1423 115200
+ ```
+
+4. Get into configuration mode:
+ Hold down button A, then push and release the reset button.
+
+5. In the prompt of the serial port with `#`, configure your connection string you get from previous step:
+ ```bash
+ set_az_iothub [your connection string]
+ ```
+ You will see the information once configuration is successful:
+ ```bash
+ INFO: Set Azure Iot hub connection string successfully.
+ ```
+ Now exit the serial monitor by first type `Ctrl+A` and then `Ctrl+\` and type 'y'.
 
 ### D. Deploy the sample application to MXChip IoT DevKit
 

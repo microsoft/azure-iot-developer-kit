@@ -34,7 +34,7 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
-**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
+**Notice:** Occasionally, when you launch VS Code, you will be prompted with an error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
 ### B. Open Arduino Examples folder
@@ -43,11 +43,11 @@ Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > 
 
 ![mini-solution-catalog]({{"/assets/images/mini-solution-catalog.png" | absolute_url }})
 
-If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
+If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
 
 ## Step 2. Provision Azure services
 
-In the solution window, run your task through **Quick Open** (`Ctrl+P`) by typing 'task cloud-provision':
+In the solution window, run your task through **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
 
 In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services:
 
@@ -65,13 +65,13 @@ Replace the string `iot` in the curly brace with your preferred hashtag.
 
 ## Step 4. Deploy Azure Functions
 
-Use **Quick Open** (`Ctrl+P`) to run 'task cloud-deploy'. It will start deploying the Azure Functions code. Normally it takes 2 to 5 minutes to finish:
+Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy'. It will start deploying the Azure Functions code. Normally it takes 2 to 5 minutes to finish:
 
 ![mini-solution-deploy]({{"/assets/images/mini-solution-deploy.png" | absolute_url }})
 
 ## Step 5. Build and upload Arduino sketch
 
-Use **Quick Open** (`Ctrl+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
 
 Then it will start verifying and uploading the Arduino sketch:
 
@@ -79,7 +79,7 @@ Then it will start verifying and uploading the Arduino sketch:
 
 The DevKit will reboot and start running the code.
 
-**Notice:** If you are running on a clean machine with everything installed, during the verifying of the code phrase, you might get and error of **Unknown board AZ3166**. To work around this problem, open Arduino IDE and go to **Tool > Board manager**. Arduino will reload all json files for all package definitions. After it is done, you can launch VS Code again and try the build process, the problem should go away.
+**Notice:** If you are running on a clean machine with everything installed, during the verifying of the code phrase, you might get an error of **Unknown board AZ3166**. To work around this problem, open Arduino IDE and go to **Tool > Board manager**. Arduino will reload all JSON files for all package definitions. After it is done, you can launch VS Code again and try the build process, the problem should go away.
 {: .notice--warning}
 
 ## Test the project
@@ -102,7 +102,7 @@ The Arduino sketch sends an event to Azure IoT Hub which triggers the Azure Func
 
 ## Optional: Use your own Twitter bearer token
 
-This sample project uses a pre-configured Twitter bearer token for testing purpose. But there is a [rate limits](https://dev.twitter.com/rest/reference/get/search/tweets){:target="_blank"} for every Twitter account. You might want to consider using your own token. Here are simple instructions to do so:
+This sample project uses a pre-configured Twitter bearer token for testing purpose. But there is a [rate limit](https://dev.twitter.com/rest/reference/get/search/tweets){:target="_blank"} for every Twitter account. You might want to consider using your own token. Here are simple instructions to do so:
 
 1. Go to [Twitter Developer portal](https://dev.twitter.com/){:target="_blank"} to register a new Twitter app.
 
@@ -117,7 +117,7 @@ This sample project uses a pre-configured Twitter bearer token for testing purpo
   ```javascript
   ...
   headers: {
-    'Authorization': 'Bearer ' + '[your own token]'
+      'Authorization': 'Bearer ' + '[your own token]'
   }
   ...
   ```
@@ -132,7 +132,7 @@ This sample project uses a pre-configured Twitter bearer token for testing purpo
 
 #### The screen displays 'No Tweets' while every step has run successfully
 
-It normally happens for the first time you deploy and run the sample. This is because that Azure Function will require a couple of seconds up to one minute to cold start the app. Or there are some blips when running the code that will cause restarting of the app. Then the device app can get time out for fetching the tweet. In this case, you may try to click restart button to run the device app again.
+It normally happens for the first time you deploy and run the sample. This is because that Azure Function will require a couple of seconds up to one minute to cold start the app. Or there are some blips when running the code that will cause restarting of the app. Then the device app can get timeout for fetching the tweet. In this case, you may try to click restart button to run the device app again.
 
 ### Feedback
 

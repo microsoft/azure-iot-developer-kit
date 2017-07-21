@@ -80,7 +80,7 @@ After that it will start verifying and uploading the Arduino sketch:
 The DevKit will reboot and start running.
 
 **Notice:** If you are running on a clean machine with everything installed, during the verifying of the code phrase, you might get an error of **Unknown board AZ3166**.
-To work around, open Arduino IDE, navigate to **Tool > Board manager**. Arduino will reload all json files of all package definitions. After that, launch VS Code and try to build again, everything will be good.
+To work around, open Arduino IDE, navigate to **Tool > Board manager**. Arduino will reload all JSON files of all package definitions. After that, launch VS Code and try to build again, everything will be good.
 {: .notice--warning}
 
 ## Test the project
