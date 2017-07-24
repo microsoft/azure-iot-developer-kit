@@ -1,5 +1,6 @@
 .DS_Store
-.vscode
+.vscode/
+node_modules/
 
 # Jekyll
 docs/_site

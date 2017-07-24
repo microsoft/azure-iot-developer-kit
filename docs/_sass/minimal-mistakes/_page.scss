@@ -119,6 +119,16 @@
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
 
+  .wrapper {
+    position: relative;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+  }
+
   &--overlay {
     position: relative;
     margin-bottom: 2em;
@@ -134,16 +144,6 @@
 
     a {
       color: #fff;
-    }
-
-    .wrapper {
-      position: relative;
-      padding-left: 2em;
-      padding-right: 2em;
-
-      @include breakpoint($x-large) {
-        max-width: $x-large;
-      }
     }
 
     .page__title,
@@ -194,7 +194,13 @@
 .page__hero-image {
   width: 100%;
   height: auto;
-  -ms-interpolation-mode: bicubic;
+
+  img {
+    -webkit-animation: zoom 0.7s both;
+    animation: zoom 0.7s both;
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+  }
 }
 
 .page__hero-caption {
