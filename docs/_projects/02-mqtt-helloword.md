@@ -3,7 +3,8 @@ title: "MQTT HelloWorld"
 permalink: /docs/projects/mqtt-helloworld/
 excerpt: "Connect DevKit to a public free MQTT broker, send messages to the server and print it out if it is successful"
 header:
-  image: /assets/images/projects-mqtt-helloworld.jpg
+  overlay_image: /assets/images/projects-mqtt-helloworld.jpg
+  overlay_full: true
   teaser: /assets/images/projects-mqtt-helloworld-th.jpg
 last_modified_at: 2017-06-28
 ---

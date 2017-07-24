@@ -3,7 +3,8 @@ title: "Remote Monitoring"
 permalink: /docs/projects/remote-monitoring/
 excerpt: "Send status of sensors on DevKit to Azure IoT Suite."
 header:
-  image: /assets/images/projects-remote-monitoring.jpg
+  overlay_image: /assets/images/projects-remote-monitoring.jpg
+  overlay_full: true
   teaser: /assets/images/projects-remote-monitoring-th.jpg
 last_modified_at: 2017-06-28
 ---

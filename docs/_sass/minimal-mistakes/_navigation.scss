@@ -179,18 +179,25 @@
   display: flex;
   -webkit-box-align: center;
         align-items: center;
-  background: $background-color;
+  // background: $background-color;
+
+  &.reverse-color {
+    a {
+      color: #fff;
+
+      &:hover,
+      &:active {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
 
   a {
     display: block;
+    color: $masthead-link-color;
     margin: 0 1rem;
     padding: 0.5rem 0;
-    color: $masthead-link-color;
     text-decoration: none;
-
-    &:hover {
-      color: $masthead-link-color-hover;
-    }
 
     &.site-title {
       margin-left: 0;
