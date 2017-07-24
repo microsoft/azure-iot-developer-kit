@@ -3,7 +3,8 @@ title: "Shake, Shake"
 permalink: /docs/projects/shake-shake/
 excerpt: "Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag."
 header:
-  image: /assets/images/projects-shake-shake.jpg
+  overlay_image: /assets/images/projects-shake-shake.jpg
+  overlay_full: true
   teaser: /assets/images/projects-shake-shake-th.jpg
 layouts_gallery:
   - url: /assets/images/mini-solution-shake-shake-1.jpg

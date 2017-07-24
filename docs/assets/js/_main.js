@@ -37,7 +37,7 @@ $(document).ready(function(){
   $.devKitExtends();
 
   // init backstretch
-  $(".page__hero-image").backstretch();
+  $('.page__hero--overlay-full').backstretch();
 
   // add lightbox class to all image links
   $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
