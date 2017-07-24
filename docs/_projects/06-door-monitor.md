@@ -26,7 +26,9 @@ In this project, you will learn how to use the magnetic sensor to detect magneti
 
 ### A. SendGrid Deployment
 
-Go to [SendGrid Deploy site](https://github.com/VSChina/devkit-door-monitor/tree/master/SendGridDeploy){:target="_blank"} and click **Deploy to Azure**.
+Click **Deploy to Azure** below. 
+
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVSChina%2Fdevkit-door-monitor%2Fmaster%2FSendGridDeploy%2Fazuredeploy.json){:.click-action-tracker .click-tracker-name--DeployToAzure target="_blank"}
 
 Then, you will see the following page (or you should first sign in to the Azure), completing the signup form:
 
@@ -57,7 +59,9 @@ Your API will be displayed only one time. Please store it safely, and it will be
 
 ## Step 2. Deploy IoT Hub in Azure
 
-Go to [IoT Hub Deploy site](https://github.com/VSChina/devkit-door-monitor){:target="_blank"} and click **Deploy to Azure**.
+Click **Deploy to Azure** below. 
+
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVSChina%2Fdevkit-door-monitor%2Fmaster%2Fazuredeploy.json){:.click-action-tracker .click-tracker-name--DeployToAzure target="_blank"}
 
 Then, you will see the following page (or you should first sign in to the Azure), completing the signup form:
 
@@ -88,6 +92,8 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 ### B. Open Arduino Examples folder
 
 Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DoorMonitor`.
+
+![Arduino Examples]({{"/assets/images/door-monitor-arduino-examples.jpg" | absolute_url }})
 
 If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
 
