@@ -123,18 +123,18 @@
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
 
-  .wrapper {
-    position: relative;
-    padding-left: 2em;
-    padding-right: 2em;
-
-    @include breakpoint($x-large) {
-      max-width: $x-large;
-    }
-  }
-
   &--overlay,
   &--overlay-full {
+    .wrapper {
+      position: relative;
+      padding-left: 2em;
+      padding-right: 2em;
+
+      @include breakpoint($x-large) {
+        max-width: $x-large;
+      }
+    }
+
     a {
       color: #fff;
     }
