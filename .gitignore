@@ -1,9 +1,12 @@
 .DS_Store
 .vscode/
-node_modules/
 
 # Jekyll
 docs/_site
+
+# Node.js
+node_modules/
+*.map
 
 # Object files
 *.o
