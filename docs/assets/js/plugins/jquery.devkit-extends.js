@@ -57,8 +57,8 @@
             }
         }
     
-        // download track
-        $('.click-download-tracker').click(trackDowloadNumber);
+        // click track
+        $('.click-action-tracker').click(trackClickNumber);
     };
 
     var adjustResize = function () {
@@ -137,10 +137,17 @@
         });
     };
 
-    var trackDowloadNumber = function () {
+    var trackClickNumber = function () {
         var url = $(this).attr('href');
+        var category = 'Download';
+        this.className.split(' ').forEach(function(className){
+            var nameString = 'click-tracker-name';
+            if (className.indexOf(nameString) == 0){
+                category = className.substring(nameString.length + 2);
+            }
+        });
         var redirect = false;
-        ga('send', 'event', 'Downloads', 'click', url, {
+        ga('send', 'event', category, 'click', url, {
             'hitCallback': function(){
                 redirect = true;
                 document.location = url;
