@@ -16,8 +16,8 @@
   {% capture overlay_filter %}rgba(0, 0, 0, {{ page.header.overlay_filter }}){% endcapture %}
 {% endif %}
 
-<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
-  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if page.header.overlay_gradient %}background-image: linear-gradient({{ page.header.overlay_gradient }});{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}{% if page.header.overlay_full %}-full{% endif %}"
+ style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if page.header.overlay_gradient %}background-image: linear-gradient({{ page.header.overlay_gradient }});{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
 >
   {% comment %} Overlay Image {% endcomment %}
   {% if page.header.overlay_color or page.header.overlay_image %}
@@ -57,33 +57,13 @@
       {% endif %}
       {% if page.header.extra_logo %}
         {% for extra in page.header.extra_logo %}
-          <a href="{{ extra.url }}" target="_blank">
-            <div class="page__extra-logo" style="background: url({{ extra.image_path | absolute_url }});"></div>
-          </a>
+          <a class="page__extra-logo" href="{{ extra.url }}" target="_blank" style="background: url({{ extra.image_path | absolute_url }});"></a>
         {% endfor %}
       {% endif %}
     </div>
   {% comment %} Hero Image {% endcomment %}
   {% else %}
-    <div class="page__hero-image" style="{% if page.header.hero_overlay_color %}background-color: {{ page.header.hero_overlay_color | default: 'transparent' }};{% endif %} background-image: url('{{ img_path }}');">
-      <div class="wrapper" style="{% if page.header.align %}text-align: {{page.header.align}};{% endif %}">
-        <h1 class="page__title" itemprop="headline">
-          {% if paginator and site.paginate_show_page_num %}
-            {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
-          {% else %}
-            {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
-          {% endif %}
-          {% if page.title_sup %}
-            <sup>{{ page.title_sup }}</sup>
-          {% endif %}
-        </h1>
-        {% if page.excerpt %}
-          <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-        {% endif %}
-      </div>
-    </div>
-
-    {% comment %} <img src="{{ img_path }}" alt="{{ page.title }}" class="page__hero-image"> {% endcomment %}
+     <img src="{{ img_path }}" alt="{{ page.title }}" class="page__hero-image"> 
   {% endif %}
   {% if page.header.caption %}
     <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>

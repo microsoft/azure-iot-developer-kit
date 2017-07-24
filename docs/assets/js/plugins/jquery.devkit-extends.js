@@ -1,6 +1,7 @@
 // Extend functions
 ;(function ($, window, undefined) {
     $.devKitExtends = function () {
+        mastheadFix();
         menuScroll();
 
         $('.sidebar__right').addClass('sidebar__right_fix');
@@ -66,7 +67,7 @@
         // Resize page hero image container
         vpw = $(window).width();
         vph = $(window).height();
-        $('.page__hero-image').css({'height': vph + 'px'});
+        $('.page__hero--overlay-full').css({'height': vph + 'px'});
 
         sidebarFix();
     };
@@ -136,6 +137,12 @@
             sidebarFix();
         });
     };
+
+    var mastheadFix = function () {
+        if ($('.masthead').next().attr('id') !== 'main') {
+            $('.masthead .greedy-nav').addClass('reverse-color');
+        }
+    }
 
     var trackClickNumber = function () {
         var url = $(this).attr('href');

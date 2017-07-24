@@ -181,8 +181,20 @@
         align-items: center;
   // background: $background-color;
 
+  &.reverse-color {
+    a {
+      color: #fff;
+
+      &:hover,
+      &:active {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+
   a {
     display: block;
+    color: $masthead-link-color;
     margin: 0 1rem;
     padding: 0.5rem 0;
     text-decoration: none;
