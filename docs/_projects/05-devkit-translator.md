@@ -70,6 +70,10 @@ Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy' to de
 
 ![mini-solution-deploy]({{"/assets/images/mini-solution-deploy-devkit-translator.png" | absolute_url }})
 
+After auzre function deployed successfully, fill in the azure_config.h file with function app name. You could navigate to azure portal to find it:
+
+![mini-solution-function-app]({{"/assets/images/mini-solution-deploy-devkit-translator-azure-function.png" | absolute_url }})
+
 ## Step 4. Build and upload Arduino sketch
 
 Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode: hold down button A, then push and release the reset button. The screen will display 'Configuration'. This step is to set the connection string which is retrieved from 'task cloud-provision'.
@@ -91,7 +95,7 @@ After app initialization, follow the instructions on the screen to setup. You co
 {% include gallery id="layouts_gallery" caption="Translate as you go" %}
 
 - Press button A and B to scroll and select source language
-- Press button B to talk, release to send the void and get the translation text
+- Press button B to talk, release to send the voice and get the translation text
 
 ## How it works
 
