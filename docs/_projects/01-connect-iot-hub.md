@@ -3,7 +3,8 @@ title: "Connect to Azure IoT Hub"
 permalink: /docs/projects/connect-iot-hub
 excerpt: "Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub."
 header:
-  image: /assets/images/projects-iothub.jpg
+  overlay_image: /assets/images/projects-iothub.jpg
+  overlay_full: true
   teaser: /assets/images/projects-iothub-th.jpg
 variable:
   - platform: windows

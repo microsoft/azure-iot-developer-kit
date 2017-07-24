@@ -2,11 +2,14 @@
     background-color: white;
     border-bottom: 1px solid $border-color;
 
-    a {
-        color: $masthead-link-color;
-
-        &:hover {
-            color: $masthead-link-color-hover;
+    .greedy-nav {
+        a {
+            color: $masthead-link-color;
+    
+            &:hover,
+            &:active {
+                color: $masthead-link-color-hover;
+            }
         }
     }
 }

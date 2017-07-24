@@ -116,6 +116,7 @@
 
     var menuScroll = function () {
         var lastScrollTop = 0
+        // var greedyNav = $('.masthead .greedy-nav');
         $(window).bind('scroll', function(){
             if (!$('.masthead').length){
                 return;

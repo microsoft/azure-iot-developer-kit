@@ -3,7 +3,8 @@ title: "Your Ideas?"
 permalink: /docs/projects/#
 excerpt: "We really want to hear about the cool and innovative ways you are using the DevKit. Please share your ideas with us to [iot-devkit@microsoft.com](mailto:iot-devkit@microsoft.com)."
 header:
-  image: /assets/images/projects-your-ideas.jpg
+  overlay_image: /assets/images/projects-your-ideas.jpg
+  overlay_full: true
   teaser: /assets/images/projects-your-ideas-th.jpg
 sidebar:
   - title: "You are"

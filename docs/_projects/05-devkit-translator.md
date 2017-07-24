@@ -3,7 +3,8 @@ title: "DevKit Translator"
 permalink: /docs/projects/devkit-translator/
 excerpt: "Use the devkit and azure services to achieve speech translation."
 header:
-  image: "http://via.placeholder.com/1000x578"
+  overlay_image: "http://via.placeholder.com/1000x578"
+  overlay_full: true
   teaser: "http://via.placeholder.com/600x400"
 layouts_gallery:
   - url: /assets/images/mini-solution-devkit-translator-1.jpg
