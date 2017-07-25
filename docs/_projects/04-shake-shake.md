@@ -62,7 +62,7 @@ Open `ShakeShake.ino` and look for the line of code:
 static const char* iot_event = "{\"topic\":\"iot\"}";
 ```
 
-Replace the string `iot` in the curly brace with your preferred hashtag.
+Replace the string `iot` in the curly brace with your preferred hashtag. And DevKit will later retrieve a random tweet with the hashtag you set here.
 
 ## Step 4. Deploy Azure Functions
 

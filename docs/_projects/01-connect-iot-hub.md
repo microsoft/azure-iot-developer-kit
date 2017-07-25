@@ -59,7 +59,7 @@ Connect DevKit to an Azure IoT hub that you create, collect the temperature and 
 
    ![Get the hostname of your IoT hub]({{"/assets/images/happy-path-get-azure-iot-hub-hostname-portal.png" | absolute_url }})
 
-5. In the **Shared access policies** pane, click the **iothubowner** policy, and then make a note of the **Connection string** of your IoT hub. For more information, see [Control access to IoT Hub](iot-hub-devguide-security.md).
+5. In the **Shared access policies** pane, click the **iothubowner** policy, and then make a note of the **Connection string** of your IoT hub. For more information, see [Control access to IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security){:target="_blank"}.
 
    ![Get your IoT hub connection string]({{"/assets/images/happy-path-get-azure-iot-hub-connection-string-portal.png" | absolute_url }})
 
@@ -101,11 +101,11 @@ In this section, you deploy and run a sample application on MXChip IoT DevKit. T
 
 1. In Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open the command palette, and then type `Arduino: Examples`.
 
-2. In the `Arduino Examples` tab, expand `Examples for MXCHIP AZ3166` > `AzureIoTHub`, and then click `GetStarted`.
+2. In the `Arduino Examples` tab, expand `Examples for MXCHIP AZ3166` > `AzureIoT`, and then click `GetStarted`.
 
 ### B. Install required libraries
 
-1. In the Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open command palette, type **Arduino: Libraries Manager**.
+1. In the Visual Studio Code, press `F1` or `Ctrl+Shift+P` to open command palette, type **Arduino: Library Manager**.
 
 2. Search for the `ArduinoJson` library and click **Install**. 
 
@@ -119,7 +119,7 @@ In this section, you deploy and run a sample application on MXChip IoT DevKit. T
 
 2. Configure PuTTY with the following settings in the sequence they are listed:
    * **Connection type**: select **Serial**.
-   * **Serial line**: Enter the port that MXChip IoT DevKit uses to connect to your computer. For example, you enter `COM5`. You can find the port on the status bar of Visual Studio Code.
+   * **Serial line**: Enter the port that MXChip IoT DevKit uses to connect to your computer. For example, you enter `COM4`. You can find the port on the status bar of Visual Studio Code.
    * **Speed**: Enter `115200`.
 
 3. Click **Open** to open a PuTTY command-line window.
