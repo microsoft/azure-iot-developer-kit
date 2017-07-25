@@ -114,6 +114,7 @@ exclude:
   - assets/js/plugins
   - assets/js/_main.js
   - assets/js/vendor
+  - banner.js
   - Capfile
   - CHANGELOG
   - config
@@ -124,6 +125,7 @@ exclude:
   - log
   - node_modules
   - package.json
+  - package-lock.json
   - Rakefile
   - README
   - tmp
@@ -149,7 +151,7 @@ kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..3
+  toc_levels: 1..2
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
@@ -221,6 +223,7 @@ timezone: US/Pacific # http://en.wikipedia.org/wiki/List_of_tz_database_time_zon
 
 # Plugins
 gems:
+  - jekyll-autoprefixer
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -229,6 +232,7 @@ gems:
 
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-autoprefixer
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist

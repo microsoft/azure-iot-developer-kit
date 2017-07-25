@@ -3,12 +3,14 @@ title: "MQTT HelloWorld"
 permalink: /docs/projects/mqtt-helloworld/
 excerpt: "Connect DevKit to a public free MQTT broker, send messages to the server and print it out if it is successful"
 header:
-  image: /assets/images/projects-mqtt-helloworld.jpg
+  overlay_image: /assets/images/projects-mqtt-helloworld.jpg
+  overlay_full: true
   teaser: /assets/images/projects-mqtt-helloworld-th.jpg
+last_modified_at: 2017-06-28
 ---
 
-In this project, you will learn how to use the MQTT Client library to send message to a MQTT broker.
-The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse.org/paho/) project, which provides APIs for using MQTT over multiple transports.
+In this project, you will learn how to use the MQTT Client library to send messages to an MQTT broker.
+The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse.org/paho/) project, which provides APIs for using MQTT over multiple means of transport.
 
 {% include toc icon="columns" %}
 
@@ -45,8 +47,8 @@ The MQTTClient example opens in a new VS Code window.
 
 ![mqtt-examples-folder]({{"/assets/images/mqtt-examples-folder.jpg" | absolute_url}})
 
-If the Arduino Examples page doesn't shows up, open it by the following steps:
-1. Press `Ctrl+Shift+P` to open the command palette.
+If the Arduino Examples page does not show up, open it by the following steps:
+1. Press `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette.
 1. In the command palette, type 'Arduino', and then click `Arduino:Examples`.
 
 ## Step 3: Configure Wi-Fi settings
@@ -59,12 +61,12 @@ If the Arduino Examples page doesn't shows up, open it by the following steps:
 
 ## Step 4. Upload MQTTClient example to DevKit
 
-Use **Quick Open** (`Ctrl+P`) to run 'task device-upload'. Once the upload is completed, DevKit restarts and runs the sample.
+Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. Once the upload is completed, DevKit restarts and runs the sample.
 
 **Note**: The upload takes a while to complete for the first time.
 {: .notice--info}
 
-## Step 5. Verify the result
+## Test the project
 
 The Serial Monitor displays all the messages sent from the sample. When the sample runs, it connects DevKit to Wi-Fi. When the connection is successful, the sample sends a message to the MQTT broker. After that, the sample repeatedly sends two "iot.eclipse.org" messages using QoS 0 and QoS 1, respectively.
 

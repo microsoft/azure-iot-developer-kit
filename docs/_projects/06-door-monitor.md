@@ -2,6 +2,10 @@
 title: "Door Monitor"
 permalink: /docs/projects/door-monitor
 excerpt: "Use the magnetic sensor to detect the change of magnetic field, and send notification with a simple Azure Function when the change of magnetic field is too large"
+header:
+  overlay_image: /assets/images/projects-door-monitor.jpg
+  overlay_full: true
+  teaser: /assets/images/projects-door-monitor-th.jpg
 layouts_gallery:
   - url: /assets/images/door-monitor-test-door-closed.jpg
     image_path: /assets/images/door-monitor-test-door-closed.jpg
@@ -9,6 +13,7 @@ layouts_gallery:
   - url: /assets/images/door-monitor-test-door-opened.jpg
     image_path: /assets/images/door-monitor-test-door-opened.jpg
     alt: "Door Opened"
+last_modified_at: 2017-07-17
 ---
 
 In this project, you will learn how to use the magnetic sensor to detect magnetic field, triggering the SendGrid service to send notification to your email when the change of magnetic field is too large. A useful situation is that you can attach it to your door with a magnet. Then it could detect the state of your door and notify you when you away.
