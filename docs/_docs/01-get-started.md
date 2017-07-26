@@ -49,7 +49,7 @@ If this is the first time you are developing on the DevKit, follow [Upgrading]({
 This is a one-time effort, once you start developing on the DevKit and upload your app, you will have the latest firmware.
 
 **Tip:** You will see the firmware version on the screen of the kit. If there is no version number, it means the DevKit is running on old version and needs an upgrade. [Versions]({{"/versions/" | absolute_url }}) contains the latest version number and release notes.
-{: .notice--info}
+{: .notice--success}
 
 ### D. Test sensors and WiFi on DevKit
 
@@ -108,7 +108,7 @@ The `.zip` file you download contains all necessary tools and packages required 
 [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_install_1.0.1.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
 **MD5:** 01527cb5c349601452d1f5546149f3be
-{: .notice--info}
+{: .notice}
 
 > The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks
@@ -175,7 +175,7 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
   [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.0.1.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
   **MD5:** 64a305abd4ef7bd8a16a25bda173bd11
-  {: .notice--info}
+  {: .notice}
 
   Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:
 

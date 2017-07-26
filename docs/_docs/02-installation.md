@@ -39,7 +39,7 @@ Download and install [Visual Studio Code for Windows](https://code.visualstudio.
   [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.0.1.zip){: .click-download-tracker .btn .btn--success .btn--large}
 
   **MD5:** 64a305abd4ef7bd8a16a25bda173bd11
-  {: .notice--info}
+  {: .notice}
 
   Locate the `.zip` and extract it to your Windows user folder (`C:\Users\[your name]`). Then launch **Command Prompt** (`cmd`) and run the following commands to configure:
 
@@ -59,7 +59,7 @@ Visual Studio Code allows you to install Marketplace extensions directly in the 
 
 You will need to add the DevKit board using the Boards Manager in Visual Studio Code.
 
-1. Use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
+1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 
 2. Click **'Additional URLs'** at the bottom right.
  ![installation-additional-urls]({{"/assets/images/installation-additional-urls-win.png" | absolute_url}})
@@ -108,7 +108,7 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
   [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.0.1.zip){: .click-download-tracker .btn .btn--success .btn--large}
 
   **MD5:** 64a305abd4ef7bd8a16a25bda173bd11
-  {: .notice--info}
+  {: .notice}
 
   Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:
 

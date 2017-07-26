@@ -58,7 +58,7 @@ If the Arduino Examples page does not show up, open it by the following steps:
 
 Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. Once the upload is completed, DevKit restarts and runs the sample.
 
-**Note**: The upload takes a while to complete for the first time.
+**Note:** The upload takes a while to complete for the first time.
 {: .notice--info}
 
 ## Test the project
