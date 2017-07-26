@@ -3,9 +3,9 @@ title: "DevKit Translator"
 permalink: /docs/projects/devkit-translator/
 excerpt: "Use the devkit and azure services to achieve speech translation."
 header:
-  overlay_image: "http://via.placeholder.com/1000x578"
+  overlay_image: /assets/images/projects-devkit-translator.jpg
   overlay_full: true
-  teaser: "http://via.placeholder.com/600x400"
+  teaser: /assets/images/projects-devkit-translator-th.jpg
 layouts_gallery:
   - url: /assets/images/mini-solution-devkit-translator-1.jpg
     image_path: /assets/images/mini-solution-devkit-translator-1.jpg
@@ -54,7 +54,7 @@ Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > 
 
 ![mini-solution-catalog]({{"/assets/images/mini-solution-catalog-devkit-translator.png" | absolute_url }})
 
-If you happen to close the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** to find and select **Arduino: Examples**.
+If you happen to close the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** to find and select **Arduino: Examples**.
 
 ## Step 2. Provision Azure services
 
