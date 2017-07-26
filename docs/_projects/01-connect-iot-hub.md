@@ -28,7 +28,10 @@ Connect DevKit to an Azure IoT hub that you create, collect the temperature and 
 
 ## What you need
 
-* Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
+Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
+
+* Have your DevKit connected to WiFi
+* Prepare the development environment
 
 ## Step 1. Create an IoT Hub and register a device for MXChip IoT DevKit
 

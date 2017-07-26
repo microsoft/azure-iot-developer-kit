@@ -34,8 +34,10 @@ In this project, you will learn how to use DevKit as a translator. The app will 
 
 ## What you need
 
-* Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
+Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
+* Have your DevKit connected to WiFi
+* Prepare the development environment
 
 ## Step 1. Open project folder
 

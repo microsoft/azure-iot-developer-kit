@@ -16,7 +16,10 @@ The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse
 
 ## What you need
 
-* Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
+Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
+
+* Have your DevKit connected to WiFi
+* Prepare the development environment
 
 ## Step 1. Launch VS Code
 
