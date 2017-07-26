@@ -24,12 +24,16 @@ In this project, you will learn how to use the magnetic sensor to detect magneti
 
 * Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
 
-## Step 1. Deploy SendGrid serveice in Azure
+## Step 1. Deploy SendGrid service in Azure
 
-**Notice:** if you have deployed a SendGrid service, please go to [step 2](#step-2-deploy-iot-hub-in-azure).
-{: .notice}
+[SendGrid](https://sendgrid.com/){:target="_blank"} is a cloud-based email delivery platform. We will use this service to send out email notifications.
+
+**Note:** if you have deployed a SendGrid service, please go to [step 2](#step-2-deploy-iot-hub-in-azure).
+{: .notice--info}
 
 ### A. SendGrid Deployment
+
+To provision the service, we will use the **‘Deploy to Azure’** button to provision Azure services. The button enables quick and easy deployment of your open source projects to Microsoft Azure.
 
 Click **Deploy to Azure** below. 
 
@@ -43,8 +47,8 @@ Then, you will see the following page (or you should first sign in to the Azure)
 
   * **Password**: The service needs password, but it doesn't matter anything.
 
-  It is better to choose **Pin to dashboard**, since this makes you easy to found it at dashboard.
-  {: .notice}
+  **Tip:** It is better to choose **Pin to dashboard**, since this makes you easy to found it at dashboard.
+  {: .notice--success}
 
 ![SendGrid Deploy]({{"/assets/images/door-monitor-sendgrid-deploy.png" | absolute_url }})
 
@@ -64,6 +68,8 @@ Your API will be displayed only one time. Please store it safely, and it will be
 
 ## Step 2. Deploy IoT Hub in Azure
 
+Now we will provision other Azure IoT related services and deploy Azure Functions for this project.
+
 Click **Deploy to Azure** below. 
 
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVSChina%2Fdevkit-door-monitor%2Fmaster%2Fazuredeploy.json){:.click-action-tracker .click-tracker-name--DeployToAzure target="_blank"}
@@ -78,8 +84,8 @@ Then, you will see the following page (or you should first sign in to the Azure)
 
   * **From Email**: This should be the same as you used in the SendGrid service.
 
-  It is better to choose **Pin to dashboard**, since this makes you easy to found it at dashboard.
-  {: .notice}
+  **Tip:** It is better to choose **Pin to dashboard**, since this makes you easy to found it at dashboard.
+  {: .notice--success}
 
 ![IoTHub Deploy]({{"/assets/images/door-monitor-iot-hub-deploy.png" | absolute_url }})
 
@@ -100,19 +106,19 @@ Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > 
 
 ![Arduino Examples]({{"/assets/images/door-monitor-arduino-examples.jpg" | absolute_url }})
 
-If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
+If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
 
-### C. Provision Azure services
+### C. Retrieve device connection string
 
-In the solution window, run your task through **Quick Open** (`Ctrl+P`) by typing 'task cloud-provision':
+In the solution window, run your task through **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
 
-In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services:
+In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services. You need to select all the items from promprted list same as the ones you have previously provisioned in the [Step 2]({{"/docs/projects/door-monitor#step-2-deploy-iot-hub-in-azure" | absolute_url }}).
 
 ![Cloud Prevision]({{"/assets/images/door-monitor-cloud-prevision.jpg" | absolute_url }})
 
 ### D. Build and upload Arduino sketch
 
-Use **Quick Open** (`Ctrl+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
 
 Then it will start verifying and uploading the Arduino sketch:
 
@@ -129,8 +135,8 @@ The program would first initialize with a stable magnetic field. After initializ
 
 {% include gallery id="layouts_gallery" caption="e.g.: use a magnet in the y axis, the magnetic field change and it is recognized as door opened." %}
 
-**Notice:** When receiving with two continuous emails, some of the email client would display wrongly. Please careful select an email client when you use.
-{: .notice}
+**Note:** When receiving with two continuous emails, some of the email client would display wrongly. Please careful select an email client when you use.
+{: .notice--info}
 
 ## Problems and feedback
 

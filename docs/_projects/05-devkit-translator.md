@@ -54,7 +54,7 @@ Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > 
 
 ![mini-solution-catalog]({{"/assets/images/mini-solution-catalog-devkit-translator.png" | absolute_url }})
 
-If you happen to close the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** to find and select **Arduino: Examples**.
+If you happen to close the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** to find and select **Arduino: Examples**.
 
 ## Step 2. Provision Azure services
 
