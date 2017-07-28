@@ -22,6 +22,7 @@ For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick
 * A computer running Windows 10 or macOS 10.10+
 * An active Azure subscription
   * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
+  * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 
 ## Step 2. Prepare your hardware
 
@@ -49,7 +50,7 @@ If this is the first time you are developing on the DevKit, follow [Upgrading]({
 This is a one-time effort, once you start developing on the DevKit and upload your app, you will have the latest firmware.
 
 **Tip:** You will see the firmware version on the screen of the kit. If there is no version number, it means the DevKit is running on old version and needs an upgrade. [Versions]({{"/versions/" | absolute_url }}) contains the latest version number and release notes.
-{: .notice--info}
+{: .notice--success}
 
 ### D. Test sensors and WiFi on DevKit
 
@@ -66,13 +67,15 @@ IoT projects rely on Internet connectivity. Use the following instructions to se
 
 ### A. Enter AP Mode
 
-Hold down button B, then push and release the reset button, then release button B. The screen will display the Service Set Identifier(SSID) of the DevKit as well as the configuration portal IP address:
+Hold down button B, then push and release the reset button, then release button B. Your DevKit will enter AP Mode for configuring WiFi. The screen will display the Service Set Identifier(SSID) of the DevKit as well as the configuration portal IP address:
 
 ![getting-started-wifi-ap]({{"/assets/images/getting-started-wifi-ap.jpg" | absolute_url }})
 
 ### B. Connect to DevKit AP
 
-Use another WiFi enabled device (PC or mobile phone) to connect to the DevKit SSID (highlighted in the screenshot above), leave the password empty.
+Now, use another WiFi enabled device (PC or mobile phone) to connect to the DevKit SSID (highlighted in the screenshot above), leave the password empty.
+
+![getting-started-ssid]({{"/assets/images/getting-started-ssid.png" | absolute_url }})
 
 ### C. Configure WiFi for DevKit
 
@@ -106,7 +109,7 @@ The `.zip` file you download contains all necessary tools and packages required 
 [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_install_1.0.1.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
 **MD5:** 01527cb5c349601452d1f5546149f3be
-{: .notice--info}
+{: .notice}
 
 > The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks
@@ -134,6 +137,9 @@ The VS Code for Arduino extension relies on the Arduino IDE. If this is the firs
 ![getting-started-driver]({{"/assets/images/getting-started-driver.png" | absolute_url }})
 
 It should take around 10 minutes to finish installation depending on your Internet speed. Once the installation is complete, you should see Visual Studio Code and Arduino IDE shortcuts on your desktop.
+
+**Notice:** Occasionally, when you launch VS Code, you will be prompted with an error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
+{: .notice--warning}
 
 ### macOS (Preview)
 
@@ -170,13 +176,17 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
   [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.0.1.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
   **MD5:** 64a305abd4ef7bd8a16a25bda173bd11
-  {: .notice--info}
+  {: .notice}
 
   Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:
 
+  Move extracted folder to your macOS user folder:
   ```bash
-  mv [.zip extracted folder]/azure-board-cli ~/. | cd ~/azure-board-cli
-
+  mv [.zip extracted folder]/azure-board-cli ~/. ; cd ~/azure-board-cli
+  ```
+  
+  Install `npm` packages:
+  ```
   npm install
   ```
 
@@ -190,7 +200,7 @@ Visual Studio Code allows you to install Marketplace extensions directly in the 
 
 You will need to add the DevKit board using the Boards Manager in Visual Studio Code.
 
-1. Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Boards Manager**.
+1. Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 
 2. Click **'Additional URLs'** at the bottom right.
  ![installation-additional-urls]({{"/assets/images/installation-additional-urls-mac.png" | absolute_url}})
@@ -201,10 +211,14 @@ You will need to add the DevKit board using the Boards Manager in Visual Studio 
  ```
  ![installation-settings-json]({{"/assets/images/installation-settings-json-mac.png" | absolute_url}})
 
-4. Now in the Boards Manager search for 'az3166' and install the latest version.
+4. Now in the Board Manager search for 'az3166' and install the latest version.
  ![installation-az3166]({{"/assets/images/installation-az3166-mac.png" | absolute_url}})
 
 You now have all the necessary tools and packages installed for macOS.
+
+## Problems and feedback
+
+You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from our [Gitter channel](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"}.
 
 ## Next Steps
 

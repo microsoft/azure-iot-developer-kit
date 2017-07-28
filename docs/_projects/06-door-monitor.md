@@ -1,7 +1,7 @@
 ---
 title: "Door Monitor"
 permalink: /docs/projects/door-monitor
-excerpt: "Use the magnetic sensor to detect the change of magnetic field, and send notification with a simple Azure Function when the change of magnetic field is too large"
+excerpt: "A door monitor using the magnetic sensor to detect the change of magnetic field, and send notification with a simple Azure Function."
 header:
   overlay_image: /assets/images/projects-door-monitor.jpg
   overlay_full: true
@@ -22,7 +22,10 @@ In this project, you will learn how to use the magnetic sensor to detect magneti
 
 ## What you need
 
-* Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
+Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
+
+* Have your DevKit connected to WiFi
+* Prepare the development environment
 
 ## Step 1. Deploy SendGrid service in Azure
 

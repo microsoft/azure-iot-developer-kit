@@ -25,7 +25,10 @@ In this project, you will learn how to use the motion sensor to trigger an event
 
 ## What you need
 
-* Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }})
+Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
+
+* Have your DevKit connected to WiFi
+* Prepare the development environment
 
 ## Step 1. Open project folder
 
@@ -62,7 +65,7 @@ Open `ShakeShake.ino` and look for the line of code:
 static const char* iot_event = "{\"topic\":\"iot\"}";
 ```
 
-Replace the string `iot` in the curly brace with your preferred hashtag.
+Replace the string `iot` in the curly brace with your preferred hashtag. And DevKit will later retrieve a random tweet with the hashtag you set here.
 
 ## Step 4. Deploy Azure Functions
 

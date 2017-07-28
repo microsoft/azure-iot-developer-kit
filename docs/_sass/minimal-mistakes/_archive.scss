@@ -60,7 +60,7 @@
 }
 
 .archive__item-teaser {
-  border-radius: $border-radius;
+  border-radius: $border-radius $border-radius 0 0;
   overflow: hidden;
   text-align: center;
   img {
@@ -113,9 +113,19 @@
     margin: 0 0 4px;
   }
 
+  .archive__item {
+    background-color: #fff;
+    border-radius: $border-radius;
+    box-shadow: 0 0 3px rgba(#000, 0.15);
+  }
+
+  .archive__item-body {
+    padding: 0 1em;
+  }
+
   .archive__item-title {
     margin-top: 0.5em;
-    font-size: $type-size-4;
+    font-size: $type-size-5;
   }
 
   .archive__item-excerpt {
@@ -134,13 +144,18 @@
     margin-right: 0; /* reset before mixin does its thing*/
     @include gallery(3.333 of 10);
 
+    .archive__item {
+      height: 328px;
+      min-height: 328px;
+    }
+
     .archive__item-teaser {
-      max-height: 164px;
+      max-height: 184px;
     }
 
     .archive__item-excerpt {
       display: block;
-      font-size: $type-size-5;
+      font-size: $type-size-6;
     }
   }
 }

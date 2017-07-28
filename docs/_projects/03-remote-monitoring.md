@@ -1,7 +1,7 @@
 ---
 title: "Remote Monitoring"
 permalink: /docs/projects/remote-monitoring/
-excerpt: "Send status of sensors on DevKit to Azure IoT Suite."
+excerpt: "Send status of sensors on DevKit to Azure IoT Suite: an central portal to use preconfigured solutions, and accelerate the development of your IoT solution."
 header:
   overlay_image: /assets/images/projects-remote-monitoring.jpg
   overlay_full: true
@@ -15,7 +15,10 @@ In this tutorial, you learn how to run a sample app on DevKit to send sensor dat
 
 ## What you need
 
-* Finish the [Getting Started Guide]({{"/docs/getting-started/" | absolute_url }})
+Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
+
+* Have your DevKit connected to WiFi
+* Prepare the development environment
 
 ## Step 1. Create an Azure IoT Suite
 

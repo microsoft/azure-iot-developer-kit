@@ -1,7 +1,7 @@
 ---
 title: "MQTT HelloWorld"
 permalink: /docs/projects/mqtt-helloworld/
-excerpt: "Connect DevKit to a public free MQTT broker, send messages to the server and print it out if it is successful"
+excerpt: "Connect DevKit to a public free MQTT broker, send messages to the server and print it out if it is successful."
 header:
   overlay_image: /assets/images/projects-mqtt-helloworld.jpg
   overlay_full: true
@@ -16,29 +16,31 @@ The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse
 
 ## What you need
 
-* Finish the [Getting Started Guide]({{"/docs/getting-started/" | absolute_url }})
+Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
+
+* Have your DevKit connected to WiFi
+* Prepare the development environment
 
 ## Step 1. Launch VS Code
 
 1. Disconnect DevKit from your computer if it is connected.
-1. Launch VS Code.
-1. Connect DevKit to your computer.
+
+2. Launch VS Code.
+
+3. Connect DevKit to your computer.
     VS Code automatically detects your DevKit and opens the following pages:
     * Preview ‘README.md: The DevKit introduction page.
     * Arduino Examples: Hands-on samples to get started with DevKit.
 
     ![mqtt-vscode-connect]({{"/assets/images/mqtt-vscode-connect.jpg" | absolute_url}})
 
-1. Setup serial monitor of Arduino Extension 
-    * In Arduino, you can click the power plug icon in the status bar to open Serial Monitor.
-    * On the status bar of VS Code, click **COM**, and then click the port that DevKit connects to.
+4. Setup serial monitor of Arduino Extension 
+    * Click the power plug icon on the status bar to open Serial Monitor.
+        ![mqtt-vscode-serial-monitor]({{"/assets/images/mqtt-vscode-serial-monitor.jpg" | absolute_url}})
+    * Click **COM(X)** next to the power plugin, and select the COM port with `STMicroelectronics`.
+        ![mqtt-serial-set-com-port]({{"/assets/images/mqtt-serial-set-com-port.jpg" | absolute_url}})
     * On the status bar, click the number that represents the baud rate, and then click **115200**.
-
-    ![mqtt-vscode-serial-monitor]({{"/assets/images/mqtt-vscode-serial-monitor.jpg" | absolute_url}})
-
-    ![mqtt-serial-set-com-port]({{"/assets/images/mqtt-serial-set-com-port.jpg" | absolute_url}})
-
-    ![mqtt-serial-set-baud-rate]({{"/assets/images/mqtt-serial-set-baud-rate.jpg" | absolute_url}})
+        ![mqtt-serial-set-baud-rate]({{"/assets/images/mqtt-serial-set-baud-rate.jpg" | absolute_url}})
 
 ## Step 2. Open the MQTTClient Sample
 
@@ -48,22 +50,15 @@ The MQTTClient example opens in a new VS Code window.
 ![mqtt-examples-folder]({{"/assets/images/mqtt-examples-folder.jpg" | absolute_url}})
 
 If the Arduino Examples page does not show up, open it by the following steps:
+
 1. Press `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette.
-1. In the command palette, type 'Arduino', and then click `Arduino:Examples`.
+2. In the command palette, type 'Arduino', and then click `Arduino: Examples`.
 
-## Step 3: Configure Wi-Fi settings
-
-1. In the MQTT Client sample window, open the `MQTTClient.ino` file.
-1. Enter the Wi-Fi SSID and password in the code.
-1. Save the changes.
-
-![mqtt-set-wifi]({{"/assets/images/mqtt-set-wifi.jpg" | absolute_url}})
-
-## Step 4. Upload MQTTClient example to DevKit
+## Step 3. Upload MQTTClient example to DevKit
 
 Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. Once the upload is completed, DevKit restarts and runs the sample.
 
-**Note**: The upload takes a while to complete for the first time.
+**Note:** The upload takes a while to complete for the first time.
 {: .notice--info}
 
 ## Test the project
