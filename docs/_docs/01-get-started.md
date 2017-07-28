@@ -45,7 +45,7 @@ Hook up the hardware to your computer.
 
 ### C. Upgrade to the latest firmware
 
-If this is the first time you are developing on the DevKit, follow [Upgrading]({{"/docs/upgrading/" | absolute_url}}) guide to upgrade the DevKit firmware to the latest version.
+If this is the first time you are developing on the DevKit, follow [Upgrade firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) guide to upgrade the DevKit firmware to the latest version.
 
 This is a one-time effort, once you start developing on the DevKit and upload your app, you will have the latest firmware.
 
