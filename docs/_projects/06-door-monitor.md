@@ -1,7 +1,7 @@
 ---
 title: "Door Monitor"
 permalink: /docs/projects/door-monitor
-excerpt: "Use the magnetic sensor to detect the change of magnetic field, and send notification with a simple Azure Function when the change of magnetic field is too large"
+excerpt: "A door monitor using the magnetic sensor to detect the change of magnetic field, and send notification with a simple Azure Function."
 header:
   overlay_image: /assets/images/projects-door-monitor.jpg
   overlay_full: true

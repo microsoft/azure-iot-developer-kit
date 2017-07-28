@@ -1,7 +1,7 @@
 ---
 title: "DevKit Translator"
 permalink: /docs/projects/devkit-translator/
-excerpt: "Use the devkit and azure services to achieve speech translation."
+excerpt: "Turn DevKit as a translator by using and Bing Speech Translator service."
 header:
   overlay_image: /assets/images/projects-devkit-translator.jpg
   overlay_full: true

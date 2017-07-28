@@ -22,6 +22,7 @@ For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick
 * A computer running Windows 10 or macOS 10.10+
 * An active Azure subscription
   * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
+  * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 
 ## Step 2. Prepare your hardware
 
@@ -74,7 +75,7 @@ Hold down button B, then push and release the reset button, then release button 
 
 Now, use another WiFi enabled device (PC or mobile phone) to connect to the DevKit SSID (highlighted in the screenshot above), leave the password empty.
 
-[**TBD**: Screenshot]
+![getting-started-ssid]({{"/assets/images/getting-started-ssid.png" | absolute_url }})
 
 ### C. Configure WiFi for DevKit
 
