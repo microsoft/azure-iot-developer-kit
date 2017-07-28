@@ -21,7 +21,7 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 * Have your DevKit connected to WiFi
 * Prepare the development environment
 
-## Step 1. Launch VS Code
+## Step 1. Open project folder
 
 1. Disconnect DevKit from your computer if it is connected.
 
@@ -32,31 +32,33 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
     * Preview ‘README.md: The DevKit introduction page.
     * Arduino Examples: Hands-on samples to get started with DevKit.
 
-    ![mqtt-vscode-connect]({{"/assets/images/mqtt-vscode-connect.jpg" | absolute_url}})
+    ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
 4. Setup serial monitor of Arduino Extension 
     * Click the power plug icon on the status bar to open Serial Monitor.
-        ![mqtt-vscode-serial-monitor]({{"/assets/images/mqtt-vscode-serial-monitor.jpg" | absolute_url}})
+        ![serial-monitor]({{"/assets/images/mini-solution/mqtt-helloworld/serial-monitor.jpg" | absolute_url}})
     * Click **COM(X)** next to the power plugin, and select the COM port with `STMicroelectronics`.
-        ![mqtt-serial-set-com-port]({{"/assets/images/mqtt-serial-set-com-port.jpg" | absolute_url}})
+        ![set-com-port]({{"/assets/images/mini-solution/mqtt-helloworld/set-com-port.jpg" | absolute_url}})
     * On the status bar, click the number that represents the baud rate, and then click **115200**.
-        ![mqtt-serial-set-baud-rate]({{"/assets/images/mqtt-serial-set-baud-rate.jpg" | absolute_url}})
+        ![set-baud-rate]({{"/assets/images/mini-solution/mqtt-helloworld/set-baud-rate.jpg" | absolute_url}})
 
 ## Step 2. Open the MQTTClient Sample
 
 On the **Arduino Examples** page, expand `Examples for MXCHIP AZ3166 > MQTT` and then click `MQTTClient`.
 The MQTTClient example opens in a new VS Code window.
 
-![mqtt-examples-folder]({{"/assets/images/mqtt-examples-folder.jpg" | absolute_url}})
+![examples-folder]({{"/assets/images/mini-solution/mqtt-helloworld/examples-folder.jpg" | absolute_url}})
 
 If the Arduino Examples page does not show up, open it by the following steps:
 
 1. Press `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette.
 2. In the command palette, type 'Arduino', and then click `Arduino: Examples`.
 
-## Step 3. Upload MQTTClient example to DevKit
+## Step 3. Build and upload Arduino sketch
 
-Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. Once the upload is completed, DevKit restarts and runs the sample.
+Type `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. Once the upload is completed, DevKit restarts and runs the sample.
+
+![device-upload]({{"/assets/images/mini-solution/mqtt-helloworld/device-upload.jpg" | absolute_url}})
 
 **Note:** The upload takes a while to complete for the first time.
 {: .notice--info}
@@ -65,7 +67,7 @@ Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. Onc
 
 The Serial Monitor displays all the messages sent from the sample. When the sample runs, it connects DevKit to Wi-Fi. When the connection is successful, the sample sends a message to the MQTT broker. After that, the sample repeatedly sends two "iot.eclipse.org" messages using QoS 0 and QoS 1, respectively.
 
-![mqtt-serial-output]({{"/assets/images/mqtt-serial-output.jpg" | absolute_url}})
+![serial-output]({{"/assets/images/mini-solution/mqtt-helloworld/serial-output.jpg" | absolute_url}})
 
 ## Problems and feedback
 

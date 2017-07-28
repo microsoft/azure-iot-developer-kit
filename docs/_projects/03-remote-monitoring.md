@@ -72,7 +72,7 @@ If the **Arduino Examples** page doesn’t show up, open it by the following ste
 
 ## Step 3. Provision required Azure services
 
-1. In the RemoteMonitoring sample window, use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`), type `task cloud`, and then click **cloud-provision**.
+1. In the RemoteMonitoring sample window, use `Ctrl+P` (macOS: `Cmd+P`), type `task cloud`, and then click **cloud-provision**.
 The cloud-provision task opens an interactive command line that guides you through provisioning the required Azure services.
 
 2. In the interactive command line, select the IoT hub represented by the IoT Hub Hostname that you noted down.
@@ -83,7 +83,7 @@ The cloud-provision task opens an interactive command line that guides you throu
 
 ## Step 4. Upload the RemoteMonitoring sample to DevKit
 
-1. In the RemoteMonitoring sample window, use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`), type `task device`, and then click **device-upload**. The interactive command line prompts you to set DevKit to configuration mode.
+1. In the RemoteMonitoring sample window, use `Ctrl+P` (macOS: `Cmd+P`), type `task device`, and then click **device-upload**. The interactive command line prompts you to set DevKit to configuration mode.
 
 2. On DevKit, press and hold button A, press the Reset button and then release button A.
 The screen should display `Configuration` if DevKit is running in configuration mode.

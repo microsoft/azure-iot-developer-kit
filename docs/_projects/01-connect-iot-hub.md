@@ -16,9 +16,7 @@ last_modified_at: 2017-06-28
 
 {% include toc icon="columns" %}
 
-## What you do
-
-Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub.
+In this project, you will create an Azure IoT Hub, connect DevKit to it, and collect the temperature and humidity data from sensors and send the data to IoT hub.
 
 ## What you learn
 
@@ -33,165 +31,61 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 * Have your DevKit connected to WiFi
 * Prepare the development environment
 
-## Step 1. Create an IoT Hub and register a device for MXChip IoT DevKit
+## Step 1. Open project folder
 
-### A. Create an IoT Hub
+### A. Launch VS Code
 
-1. In the [Azure portal](https://portal.azure.com/){:target="_blank"}, click **New** > **Internet of Things** > **IoT Hub**.
+Make sure your DevKit is not connected. Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pop up an introduction page:
 
-   ![Create an IoT Hub in the Azure portal]({{"/assets/images/happy-path-create-azure-iot-hub-portal.png" | absolute_url }})
-2. In the **IoT hub** pane, enter the following information for your IoT hub:
+![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
-   **Name**: It is the name for your IoT hub. If the name you enter is valid, a green check mark appears.
+**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once again and VS Code should locate Arduino IDE path correctly.
+{: .notice--warning}
 
-   **Pricing and scale tier**: Select the free F1 tier. This option is sufficient for this demo. See [pricing and scale tier](https://azure.microsoft.com/pricing/details/iot-hub/){:target="_blank"}.
+### B. Open Arduino Examples folder
 
-   **Resource group**: Create a resource group to host the IoT hub or use an existing one. See [Using resource groups to manage your Azure resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-portal){:target="_blank"}.
+Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `GetStarted`.
 
-   **Location**: Select the closest location to you where the IoT hub is created.
+![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
-   **Pin the dashboard**: Check this option for easy access to your IoT hub from the dashboard.
+If you happen to close the pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** to find and select **Arduino: Examples**.
 
-   ![Fill in the fields for creating your Azure IoT hub]({{"/assets/images/happy-path-fill-in-fields-for-azure-iot-hub-portal.png" | absolute_url }})
+## Step 2. Provision Azure services
 
-3. Click **Create**. It could take a few minutes for your IoT hub to be created. You can see the progress in the **Notifications** pane.
+In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
 
-   ![See notifications of your IoT hub creation progress]({{"/assets/images/happy-path-notification-azure-iot-hub-creation-progress-portal.png" | absolute_url }})
+In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services:
 
-4. Once your IoT hub is created, click it from the dashboard. Make a note of the **Hostname**, and then click **Shared access policies**.
+![mini-solution-cloud-provision]({{"/assets/images/mini-solution/connect-iothub/cloud-provision.png" | absolute_url }})
 
-   ![Get the hostname of your IoT hub]({{"/assets/images/happy-path-get-azure-iot-hub-hostname-portal.png" | absolute_url }})
+## Step 3. Build and upload Arduino sketch
 
-5. In the **Shared access policies** pane, click the **iothubowner** policy, and then make a note of the **Connection string** of your IoT hub. For more information, see [Control access to IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security){:target="_blank"}.
+### A. Install required library
 
-   ![Get your IoT hub connection string]({{"/assets/images/happy-path-get-azure-iot-hub-connection-string-portal.png" | absolute_url }})
+1. Press `F1` or `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Library Manager**.
 
-### B. Register a device in the IoT Hub
+2. Search for `ArduinoJson` library and click **Install**
 
-1. In the [Azure portal](https://portal.azure.com/){:target="_blank"}, open your IoT hub.
+### B. Build and upload the device code
 
-2. Click **Device Explorer**.
+Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
 
-3. In the Device Explorer pane, click **Add**, and then enter the following information to create a device in your IoT hub:
+Then it will start verifying and uploading the Arduino sketch:
 
-   **Device ID**: The ID of the new device.
+![mini-solution-device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
 
-   **Authentication Type**: Select **Symmetric Key**.
+The DevKit will reboot and start running the code.
 
-   **Auto Generate Keys**: Check this field.
+## Test the project
 
-   **Connect device to IoT Hub**: Click **Enable**.
-
-   ![Add a device in the device explorer of your IoT hub]({{"/assets/images/happy-path-add-device-in-azure-iot-hub-device-explorer-portal.png" | absolute_url }})
-
-4. Click **Save**.
-
-5. After the device is created, open the device in the **Device Explorer** pane.
-
-6. Make a note of the primary key of the **device connection string**.
-
-   ![Get the device connection string]({{"/assets/images/happy-path-get-device-connection-string-in-device-explorer-portal.png" | absolute_url }})
-
-## Step 2. Connect MXChip IoT DevKit with your computer
-
-Use the Micro USB to Type A USB cable to connect MXChip IoT DevKit to your computer.
-
-## Step 3. Collect sensor data and send it to your IoT hub
-
-In this section, you deploy and run a sample application on MXChip IoT DevKit. The sample application blinks the LED on MXChip IoT DevKit and sends the temperature and humidity data collected from the sensor to your IoT hub.
-
-### A. Get the sample application
-
-1. In Visual Studio Code, press `F1` or `Ctrl + Shift + P` to open the command palette, and then type `Arduino: Examples`.
-
-2. In the `Arduino Examples` tab, expand `Examples for MXCHIP AZ3166` > `AzureIoT`, and then click `GetStarted`.
-
-### B. Install required libraries
-
-1. In the Visual Studio Code, press `F1` or `Ctrl+Shift+P` to open command palette, type **Arduino: Library Manager**.
-
-2. Search for the `ArduinoJson` library and click **Install**. 
-
-### C. Configure device connection string to DevKit (Windows)
-
-{% include switch.html content = page.variable %}
-
-#### Windows
-
-1. Download and install [PuTTY](http://www.putty.org/){:target="_blank"}.
-
-2. Configure PuTTY with the following settings in the sequence they are listed:
-   * **Connection type**: select **Serial**.
-   * **Serial line**: Enter the port that MXChip IoT DevKit uses to connect to your computer. For example, you enter `COM4`. You can find the port on the status bar of Visual Studio Code.
-   * **Speed**: Enter `115200`.
-
-3. Click **Open** to open a PuTTY command-line window.
-
-   ![putty-config]({{"/assets/images/happy-path-putty-config.png" | absolute_url }})
-
-4. On MXChip IoT DevKit, press and hold button A, press the Reset button, and then release button A.
-   This makes the PuTTY command-line to start with a `#` prompt.
-
-5. Configure the device connection string for MXChip IoT DevKit by running the following command in the PuTTY command-line window:
-   ```bash
-   set_az_iothub [device connection string]
-   ```
-
-   If the configuration is successful, the following information is displayed:
-   ```bash
-   INFO: Set Azure Iot hub connection string successfully.
-   ```
-   Now close the PuTTY command-line window.
-
-#### macOS
-
-1. With your DevKit connected to computer, open the terminal.
-
-2. List relevant serial port:
- ```bash
- ls -l /dev/cu.*
- ```
- You get following outputs like:
- ```bash
- crw-rw-rw-  1 root  wheel   20,   1 May 17 18:36 /dev/cu.Bluetooth-Incoming-Port
- crw-rw-rw-  1 root  wheel   20,  33 May 18 18:11 /dev/cu.usbmodem1423
- ```
- The later one ended with `usbmodem1423` is the actual serial port of the DevKit.
-
-3. Open serial monitor:
- ```bash
- screen /dev/cu.usbmodem1423 115200
- ```
-
-4. Get into configuration mode:
- Hold down button A, then push and release the reset button.
-
-5. In the prompt of the serial port with `#`, configure your connection string you get from previous step:
- ```bash
- set_az_iothub [your connection string]
- ```
- You will see the information once configuration is successful:
- ```bash
- INFO: Set Azure Iot hub connection string successfully.
- ```
- Now exit the serial monitor by first type `Ctrl+A` and then `Ctrl+\` and type 'y'.
-
-### D. Deploy the sample application to MXChip IoT DevKit
-
-1. In Visual Studio Code, click `COM<Port>` on the status bar, and then click `COM<Port> STMicroelectronics` in the command palette.
-
-2. Press `F1` or `Ctrl + Shift + P`, type `arduino:upload`, and then click `Arduino: Upload` to build and deploy the sample application to MXChip IoT DevKit.
-
-### E. Verify the sample application is running successfully
-
-In Visual Studio Code, click the power plug icon in the status bar to open the Serial Monitor.
+In VS Code, click the power plug icon on the status bar to open the Serial Monitor.
 
 The sample application is running successfully when you see the following results:
 
 * The Serial Monitor displays the same information as the content in the screenshot below.
 * The LED on MXChip IoT DevKit is blinking.
 
-![Final output in VS Code]({{"/assets/images/happy-path-vscode-final-output.png" | absolute_url }})
+![Final output in VS Code]({{"/assets/images/mini-solution/connect-iothub/result-serial-output.png" | absolute_url }})
 
 ## Problems and feedback
 

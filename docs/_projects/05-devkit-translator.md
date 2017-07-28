@@ -54,13 +54,13 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DevKitTranslator`.
 
-![mini-solution-catalog]({{"/assets/images/mini-solution-catalog-devkit-translator.png" | absolute_url }})
+![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
-If you happen to close the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** to find and select **Arduino: Examples**.
+If you happen to close the pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** to find and select **Arduino: Examples**.
 
 ## Step 2. Provision Azure services
 
-In the solution window, run your task through **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
+In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
 
 In the VS Code terminal, an interactive command line will guide you through provisioning all required Azure services:
 
@@ -68,17 +68,17 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ## Step 3. Deploy Azure Functions
 
-Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy' to deploy the Azure Functions code. It usually takes 2 to 5 minutes to complete:
+Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy' to deploy the Azure Functions code. It usually takes 2 to 5 minutes to complete:
 
 ![mini-solution-deploy]({{"/assets/images/mini-solution-deploy-devkit-translator.png" | absolute_url }})
 
-After auzre function deployed successfully, fill in the azure_config.h file with function app name. You could navigate to azure portal to find it:
+After auzre function deployed successfully, fill in the azure_config.h file with function app name. You could navigate to [Azure portal](https://portal.azure.com/){:target="_blank"} to find it:
 
 ![mini-solution-function-app]({{"/assets/images/mini-solution-deploy-devkit-translator-azure-function.png" | absolute_url }})
 
 ## Step 4. Build and upload Arduino sketch
 
-Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode: hold down button A, then push and release the reset button. The screen will display 'Configuration'. This step is to set the connection string which is retrieved from 'task cloud-provision'.
+Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode: hold down button A, then push and release the reset button. The screen will display 'Configuration'. This step is to set the connection string which is retrieved from 'task cloud-provision'.
 
 After that it will start verifying and uploading the Arduino sketch:
 

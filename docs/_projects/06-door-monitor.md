@@ -107,13 +107,13 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DoorMonitor`.
 
-![Arduino Examples]({{"/assets/images/door-monitor-arduino-examples.jpg" | absolute_url }})
+![mini-solution-examples]({{"/assets/images/mini-solutions-examples.png" | absolute_url }})
 
 If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
 
 ### C. Retrieve device connection string
 
-In the solution window, run your task through **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
+In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
 
 In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services. You need to select all the items from promprted list same as the ones you have previously provisioned in the [Step 2]({{"/docs/projects/door-monitor#step-2-deploy-iot-hub-in-azure" | absolute_url }}).
 
@@ -121,7 +121,7 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ### D. Build and upload Arduino sketch
 
-Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
 
 Then it will start verifying and uploading the Arduino sketch:
 
