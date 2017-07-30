@@ -32,7 +32,7 @@ $(document).ready(function(){
   });
 
   // init smooth scroll
-  $("a[id*=markdown-toc]").smoothScroll({offset: -20});
+  $(".toc__menu a").smoothScroll({offset: -20});
 
   $.devKitExtends();
 
