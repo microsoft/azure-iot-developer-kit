@@ -24,19 +24,25 @@ Once the DevKit is connected, in Windows you will see a new USB mass storage dev
 
 3. Wait until the file is copied, then the DevKit will reboot to the latest firmware.
 
+After done, you will see the firmware version on the screen of the kit.
+
 ## Upgrade board package
 
-Follow these steps to upgrade DevKit Arduino board package to [latest version]({{"/versions" | absolute_url }}).
+Follow these steps to upgrade DevKit Arduino board package to the [latest version]({{"/versions" | absolute_url }}).
 
-### Step 1. Update VS Code extension for Arduino
+### Step 1. Before starting
+
+Make sure you have gone through getting started tutorial to [prepare your development environment]({{"/docs/get-started/#step-4-prepare-development-environment" | absolute_url}}).
+
+### Step 2. Update VS Code extension for Arduino
 
 1. Launch VS Code.
 
-2. Make sure you have updated VS Code extension Arduino to latest version.
+2. Make sure you have updated VS Code extension Arduino to the latest version.
 
-### Step 2. Upgrade board package
+### Step 3. Upgrade board package
 
-1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Boards Manager**.
+1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 
 2. Click **Refresh Package Indexes** to update board packages information.
 

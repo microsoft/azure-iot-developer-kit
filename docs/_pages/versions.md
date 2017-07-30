@@ -7,7 +7,7 @@ last_modified_at: 2017-07-13
 
 ## Version 1.0.1 (July 13)
 
-The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our “Shake, Shake” sample project on macOS now. To further smooth the development tools and package installation, we are using the official [MSI](https://aka.ms/InstallAzureCliWindows){:target="_blank"} for the Windows Azure CLI 2.0 installation so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.
+The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our “Shake, Shake” sample project on macOS now. To further smooth the development tools and package installation, we are using the official [MSI](https://aka.ms/InstallAzureCliWindows){:target="_blank"} for the Windows Azure CLI 2.0 installation, so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.
  
 ### Release Summary
  
@@ -20,7 +20,7 @@ The optimization continues. We are now supporting VS Code tasks on macOS as well
   * Stabilized Wi-Fi connection and minor optimizations to Azure IoT Device C SDK
  
 * Project Catalog 
-  * Supported cloud provision, deploy and device upload tasks for “Shake, Shake” mini solution in VS Code on macOS.
+  * Previewed cloud provision, deploy and device upload tasks for “Shake, Shake” mini solution in VS Code on macOS.
   * Switched to [ARM (Azure Resource Manager) template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template){:target="_blank"} for provisioning Azure services.
   * Put Azure Function creation logic into cloud provision step to further isolate the tasks.
   * Added telemetries to distinguish each mini solution from BI perspective.

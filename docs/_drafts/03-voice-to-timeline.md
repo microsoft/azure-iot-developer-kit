@@ -18,7 +18,7 @@ In this mini solution, you will make the DevKit able to send a tweet by voice. B
 
 ## Step.1 Open mini solution folder
 
-In VS Code, use `Ctrl+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane:
+In VS Code, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane:
 
 **[TODO: Screenshot]**
 
