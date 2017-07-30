@@ -7,23 +7,23 @@ header:
   overlay_full: true
   teaser: /assets/images/projects-devkit-translator-th.jpg
 layouts_gallery:
-  - url: /assets/images/mini-solution-devkit-translator-1.jpg
-    image_path: /assets/images/mini-solution-devkit-translator-1.jpg
+  - url: /assets/images/mini-solution/devkit-translator/result-1.jpg
+    image_path: /assets/images/mini-solution/devkit-translator/result-1.jpg
     alt: "Arduino application initializing"
-  - url: /assets/images/mini-solution-devkit-translator-2.jpg
-    image_path: /assets/images/mini-solution-devkit-translator-2.jpg
+  - url: /assets/images/mini-solution/devkit-translator/result-2.jpg
+    image_path: /assets/images/mini-solution/devkit-translator/result-2.jpg
     alt: "DevKit Initialized"
-  - url: /assets/images/mini-solution-devkit-translator-3.jpg
-    image_path: /assets/images/mini-solution-devkit-translator-3.jpg
+  - url: /assets/images/mini-solution/devkit-translator/result-3.jpg
+    image_path: /assets/images/mini-solution/devkit-translator/result-3.jpg
     alt: "Choose source language-1"
-  - url: /assets/images/mini-solution-devkit-translator-4.jpg
-    image_path: /assets/images/mini-solution-devkit-translator-4.jpg
+  - url: /assets/images/mini-solution/devkit-translator/result-4.jpg
+    image_path: /assets/images/mini-solution/devkit-translator/result-4.jpg
     alt: "Choose source language-2"
-  - url: /assets/images/mini-solution-devkit-translator-5.jpg
-    image_path: /assets/images/mini-solution-devkit-translator-5.jpg
+  - url: /assets/images/mini-solution/devkit-translator/result-5.jpg
+    image_path: /assets/images/mini-solution/devkit-translator/result-5.jpg
     alt:  "Ready to talk"
-  - url: /assets/images/mini-solution-devkit-translator-6.jpg
-    image_path: /assets/images/mini-solution-devkit-translator-6.jpg
+  - url: /assets/images/mini-solution/devkit-translator/result-6.jpg
+    image_path: /assets/images/mini-solution/devkit-translator/result-6.jpg
     alt:  "Translation"
 last_modified_at: 2017-07-17
 ---
@@ -64,17 +64,17 @@ In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typin
 
 In the VS Code terminal, an interactive command line will guide you through provisioning all required Azure services:
 
-![mini-solution-provision-sub]({{"/assets/images/mini-solution-provision-sub-devkit-translator.png" | absolute_url }})
+![mini-solution-provision-sub]({{"/assets/images/mini-solution/devkit-translator/cloud-provision.png" | absolute_url }})
 
 ## Step 3. Deploy Azure Functions
 
 Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy' to deploy the Azure Functions code. It usually takes 2 to 5 minutes to complete:
 
-![mini-solution-deploy]({{"/assets/images/mini-solution-deploy-devkit-translator.png" | absolute_url }})
+![mini-solution-deploy]({{"/assets/images/mini-solution/devkit-translator/cloud-deploy.png" | absolute_url }})
 
 After auzre function deployed successfully, fill in the azure_config.h file with function app name. You could navigate to [Azure portal](https://portal.azure.com/){:target="_blank"} to find it:
 
-![mini-solution-function-app]({{"/assets/images/mini-solution-deploy-devkit-translator-azure-function.png" | absolute_url }})
+![mini-solution-function-app]({{"/assets/images/mini-solution/devkit-translator/azure-function.png" | absolute_url }})
 
 ## Step 4. Build and upload Arduino sketch
 
@@ -82,7 +82,7 @@ Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will pro
 
 After that it will start verifying and uploading the Arduino sketch:
 
-![mini-solution-build]({{"/assets/images/mini-solution-build-devkit-translator.png" | absolute_url }})
+![mini-solution-build]({{"/assets/images/mini-solution/devkit-translator/device-upload.png" | absolute_url }})
 
 The DevKit will reboot and start running.
 
@@ -101,7 +101,7 @@ After app initialization, follow the instructions on the screen to setup. You co
 
 ## How it works
 
-![mini-solution-voice-to-tweet-diagram]({{"/assets/images/mini-solution-diagram-devkit-translator.png" | absolute_url }})
+![mini-solution-voice-to-tweet-diagram]({{"/assets/images/mini-solution/devkit-translator/diagram.png" | absolute_url }})
 
 The Arduino sketch records your voice, post a HTTP request to trigger Azure Functions. Azure Functions calls the cognitive service speech translator API to do the translation. After Azure Functions gets the translation text, it sends a C2D message to the device. Then the translation shows on the screen.
 

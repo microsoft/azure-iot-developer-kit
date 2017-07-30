@@ -6,6 +6,16 @@ header:
   overlay_image: /assets/images/projects-remote-monitoring.jpg
   overlay_full: true
   teaser: /assets/images/projects-remote-monitoring-th.jpg
+layouts_gallery:
+  - url: /assets/images/mini-solution/remote-monitoring/connect-wifi.jpg
+    image_path: /assets/images/mini-solution/remote-monitoring/connect-wifi.jpg
+    alt: "Connect to WiFi"
+  - url: /assets/images/mini-solution/remote-monitoring/send-data.jpg
+    image_path: /assets/images/mini-solution/remote-monitoring/send-data.jpg
+    alt: "Send sensor data"
+  - url: /assets/images/mini-solution/remote-monitoring/sensor-status.png
+    image_path: /assets/images/mini-solution/remote-monitoring/sensor-status.png
+    alt: "View sensor status"
 last_modified_at: 2017-06-28
 ---
 
@@ -24,29 +34,29 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
 1. Go to [Azure IoT Suite site](https://www.azureiotsuite.com/) and click **Create a new solution**.
 
-![remote-monitoring-azure-iot-suite-solution-types]({{"/assets/images/remote-monitoring-azure-iot-suite-solution-types.png" | absolute_url }})
+![remote-monitoring-azure-iot-suite-solution-types]({{"/assets/images/mini-solution/remote-monitoring/azure-iot-suite-solution-types.png" | absolute_url }})
 
 2. Select **Remote monitoring**.
 
 3. Enter a solution name, select a subscription and a region, and then click **Create solution**. The solution may take a while to be provisioned.
 
-![remote-monitoring-azure-iot-suite-new-solution]({{"/assets/images/remote-monitoring-azure-iot-suite-new-solution.png" | absolute_url }})
+![remote-monitoring-azure-iot-suite-new-solution]({{"/assets/images/mini-solution/remote-monitoring/azure-iot-suite-new-solution.png" | absolute_url }})
 
 4. After the provision is completed, click **Launch**. Some simulated devices are created for the solution during the provision process. Click **DEVICES** to check them out.
 
-![remote-monitoring-azure-iot-suite-new-solution-created]({{"/assets/images/remote-monitoring-azure-iot-suite-new-solution-created.png" | absolute_url }})
+![remote-monitoring-azure-iot-suite-new-solution-created]({{"/assets/images/mini-solution/remote-monitoring/azure-iot-suite-new-solution-created.png" | absolute_url }})
 
-![remote-monitoring-azure-iot-suite-console]({{"/assets/images/remote-monitoring-azure-iot-suite-console.png" | absolute_url }})
+![remote-monitoring-azure-iot-suite-console]({{"/assets/images/mini-solution/remote-monitoring/azure-iot-suite-console.png" | absolute_url }})
 
 5. Click **ADD A DEVICE**.
 
 6. Click **Add New** for **Custom Device**.
 
-![remote-monitoring-azure-iot-suite-add-new-device]({{"/assets/images/remote-monitoring-azure-iot-suite-add-new-device.png" | absolute_url }})
+![remote-monitoring-azure-iot-suite-add-new-device]({{"/assets/images/mini-solution/remote-monitoring/azure-iot-suite-add-new-device.png" | absolute_url }})
 
 7. Click **Let me define my own Device ID**, enter `AZ3166`, and then click **Create**.
 
-![remote-monitoring-azure-iot-suite-new-device-configuration]({{"/assets/images/remote-monitoring-azure-iot-suite-new-device-configuration.png" | absolute_url }})
+![remote-monitoring-azure-iot-suite-new-device-configuration]({{"/assets/images/mini-solution/remote-monitoring/azure-iot-suite-new-device-configuration.png" | absolute_url }})
 
 8. Make a note of **IoT Hub Hostname**, and click **Done**.
 
@@ -57,7 +67,6 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 2. Launch VS Code.
 
 3. Connect DevKit to your computer. VS Code automatically detects your DevKit and opens the following pages:
-
   * Preview README.md: The DevKit introduction page.
   * Arduino Examples: Hands-on samples to get started with DevKit.
 
@@ -79,7 +88,7 @@ The cloud-provision task opens an interactive command line that guides you throu
 
 3. Wait for the provision to complete.
 
-![remote-monitoring-provision]({{"/assets/images/remote-monitoring-provision.png" | absolute_url }})
+![remote-monitoring-provision]({{"/assets/images/mini-solution/remote-monitoring/provision.png" | absolute_url }})
 
 ## Step 4. Upload the RemoteMonitoring sample to DevKit
 
@@ -91,7 +100,7 @@ The screen should display `Configuration` if DevKit is running in configuration 
 3. Wait for the upload to complete.
 Once the upload is completed, DevKit restarts and runs the sample.
 
-![remote-monitoring-build]({{"/assets/images/remote-monitoring-build.png" | absolute_url }})
+![remote-monitoring-build]({{"/assets/images/mini-solution/remote-monitoring/build.png" | absolute_url }})
 
 ## Test the project
 
@@ -101,11 +110,7 @@ When the sample app runs, DevKit sends sensor data over Wi-Fi to your Azure IoT 
 
 2. Azure IoT Suite solution console, you will see DevKit sensor status.
 
-![remote-monitoring-connect-wifi]({{"/assets/images/remote-monitoring-connect-wifi.jpg" | absolute_url }})
-
-![remote-monitoring-send-data]({{"/assets/images/remote-monitoring-send-data.jpg" | absolute_url }})
-
-![remote-monitoring-sensor-status]({{"/assets/images/remote-monitoring-sensor-status.png" | absolute_url }})
+{% include gallery id="layouts_gallery" caption="View sensor information within Azure IoT Suite." %}
 
 ## Problems and feedback
 
