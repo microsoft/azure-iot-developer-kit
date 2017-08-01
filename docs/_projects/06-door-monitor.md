@@ -50,6 +50,8 @@ Then, you will see the following page (or you should first sign in to the Azure)
 
   * **Password**: The service needs password, but it doesn't matter anything.
 
+  * **Email**: The SendGrid service will send verification to this email address.
+
   **Tip:** It is better to choose **Pin to dashboard**, since this makes you easy to found it at dashboard.
   {: .notice--success}
 
