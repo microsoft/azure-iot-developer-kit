@@ -9,8 +9,6 @@ header:
   call_to_action:
     - label: "Get Started"
       url: "/docs/get-started/"
-    - label: "Get a Kit"
-      url: "https://blogs.msdn.microsoft.com/iotdev/devkit-contact/"
   extra_logo:
     - image_path: /assets/images/logo-azure-certified.svg
       url: "https://catalog.azureiotsuite.com/details?title=MXChip-IoT-DevKit&source=home-page"
