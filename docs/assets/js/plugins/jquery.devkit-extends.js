@@ -70,7 +70,6 @@
         $('.toc__menu a').each(function() {
             var id = $(this).attr('href');
             var target = $(id).position().top;
-            console.log(id, scrollTop, target);
             if (scrollTop >= target) {
                 $('.toc__menu a').removeClass('toc__menu_active');
                 $(this).addClass('toc__menu_active');
@@ -163,6 +162,7 @@
 
     var trackClickNumber = function () {
         var url = $(this).attr('href');
+        var newWindow = $(this).attr('target');
         var category = 'Download';
         this.className.split(' ').forEach(function(className){
             var nameString = 'click-tracker-name';
@@ -174,14 +174,21 @@
         ga('send', 'event', category, 'click', url, {
             'hitCallback': function(){
                 redirect = true;
-                document.location = url;
+                if (newWindow != '_blank'){
+                    document.location = url;
+                }
             }
         });
         setTimeout(function(){
             if (!redirect){
-                document.location = url;
+                if (newWindow != '_blank'){
+                    document.location = url;
+                }
             }
         }, 1500);
+        if (newWindow == '_blank'){
+            return true;
+        }
         return false;
     };
 
