@@ -7,11 +7,11 @@ header:
   overlay_full: true
   teaser: /assets/images/projects-door-monitor-th.jpg
 layouts_gallery:
-  - url: /assets/images/door-monitor-test-door-closed.jpg
-    image_path: /assets/images/door-monitor-test-door-closed.jpg
+  - url: /assets/images/mini-solution/door-monitor/test-door-closed.jpg
+    image_path: /assets/images/mini-solution/door-monitor/test-door-closed.jpg
     alt: "Door Closed"
-  - url: /assets/images/door-monitor-test-door-opened.jpg
-    image_path: /assets/images/door-monitor-test-door-opened.jpg
+  - url: /assets/images/mini-solution/door-monitor/test-door-opened.jpg
+    image_path: /assets/images/mini-solution/door-monitor/test-door-opened.jpg
     alt: "Door Opened"
 last_modified_at: 2017-07-17
 ---
@@ -55,19 +55,19 @@ Then, you will see the following page (or you should first sign in to the Azure)
   **Tip:** It is better to choose **Pin to dashboard**, since this makes you easy to found it at dashboard.
   {: .notice--success}
 
-![SendGrid Deploy]({{"/assets/images/door-monitor-sendgrid-deploy.png" | absolute_url }})
+![SendGrid Deploy]({{"/assets/images/mini-solution/door-monitor/sendgrid-deploy.png" | absolute_url }})
 
 ### B. SendGrid API Key creation
 
 After the deployments succeed, click it and then click the **Manage** button. You will jump to your sendgrid page, and need to verify your email address.
 
-![SendGrid Manage]({{"/assets/images/door-monitor-sendgrid-manage.png" | absolute_url }})
+![SendGrid Manage]({{"/assets/images/mini-solution/door-monitor/sendgrid-manage.png" | absolute_url }})
 
 In the sendgrid page, click **Settings** > **API Keys** > **Create API Key**. Input the **API Key Name** and click **Create & View**.
 
-![SendGrid Create API First]({{"/assets/images/door-monitor-sendgrid-create-api-first.png" | absolute_url }})
+![SendGrid Create API First]({{"/assets/images/mini-solution/door-monitor/sendgrid-create-api-first.png" | absolute_url }})
 
-![SendGrid Create API Second]({{"/assets/images/door-monitor-sendgrid-create-api-second.png" | absolute_url }})
+![SendGrid Create API Second]({{"/assets/images/mini-solution/door-monitor/sendgrid-create-api-second.png" | absolute_url }})
 
 Your API will be displayed only one time. Please store it safely, and it will be used in the next step.
 
@@ -92,7 +92,7 @@ Then, you will see the following page (or you should first sign in to the Azure)
   **Tip:** It is better to choose **Pin to dashboard**, since this makes you easy to found it at dashboard.
   {: .notice--success}
 
-![IoTHub Deploy]({{"/assets/images/door-monitor-iot-hub-deploy.png" | absolute_url }})
+![IoTHub Deploy]({{"/assets/images/mini-solution/door-monitor/iot-hub-deploy.png" | absolute_url }})
 
 ## Step 3. Build and Upload anduino sketch
 
@@ -100,7 +100,7 @@ Then, you will see the following page (or you should first sign in to the Azure)
 
 Make sure your DevKit is not connected. Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
 
-![VSCode]({{"/assets/images/door-monitor-vscode.png" | absolute_url }})
+![VSCode]({{"/assets/images/mini-solution/door-monitor/vscode.png" | absolute_url }})
 
 **Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
@@ -109,25 +109,25 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DoorMonitor`.
 
-![Arduino Examples]({{"/assets/images/door-monitor-arduino-examples.jpg" | absolute_url }})
+![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
 If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
 
 ### C. Retrieve device connection string
 
-In the solution window, run your task through **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
+In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
 
 In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services. You need to select all the items from promprted list same as the ones you have previously provisioned in the [Step 2]({{"/docs/projects/door-monitor#step-2-deploy-iot-hub-in-azure" | absolute_url }}).
 
-![Cloud Prevision]({{"/assets/images/door-monitor-cloud-prevision.jpg" | absolute_url }})
+![Cloud Provision]({{"/assets/images/mini-solution/door-monitor/cloud-prevision.jpg" | absolute_url }})
 
 ### D. Build and upload Arduino sketch
 
-Use **Quick Open** or `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
 
 Then it will start verifying and uploading the Arduino sketch:
 
-![Device Upload]({{"/assets/images/door-monitor-device-upload.jpg" | absolute_url }})
+![Device Upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
 
 The DevKit will reboot and start running the code.
 
