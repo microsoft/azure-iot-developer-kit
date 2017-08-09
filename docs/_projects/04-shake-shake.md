@@ -136,7 +136,12 @@ This sample project uses a pre-configured Twitter bearer token for testing purpo
 
 #### The screen displays 'No Tweets' while every step has run successfully
 
-It normally happens for the first time you deploy and run the sample. This is because that Azure Function will require a couple of seconds up to one minute to cold start the app. Or there are some blips when running the code that will cause restarting of the app. Then the device app can get timeout for fetching the tweet. In this case, you may try to click restart button to run the device app again.
+It normally happens for the first time you deploy and run the sample. This is because the function app will require a couple of seconds up to one minute to cold start the app. Or there are some blips when running the code that will cause restarting of the app. Then the device app can get timeout for fetching the tweet. In this case, you may try one or both methods to solve this issue:
+
+1. Click reset button on the DevKit to run the device app again.
+
+2. In the [Azure portal](https://portal.azure.com/){:target="_blank"}, find the Azure Functions app you created and restart it:
+  ![azure-function-restart]({{"/assets/images/mini-solution/shake-shake/azure-function-restart.png" | absolute_url }})
 
 ### Feedback
 
