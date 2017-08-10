@@ -33,7 +33,7 @@ Hook up the hardware to your computer.
 * DevKit board
 * Micro USB cable
 
-![getting-started-hardware]({{"/assets/images/getting-started-hardware.jpg" | absolute_url }})
+![getting-started-hardware]({{"/assets/images/getting-started/hardware.jpg" | absolute_url }})
 
 ### B. Connect DevKit to your computer
 
@@ -41,58 +41,59 @@ Hook up the hardware to your computer.
 2. Connect Micro USB end to the DevKit
 3. The green LED next to power confirms connection
 
-![getting-started-connect]({{"/assets/images/getting-started-connect.jpg" | absolute_url }})
-
-### C. Upgrade to the latest firmware
-
-If this is the first time you are developing on the DevKit, follow [Upgrade firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) guide to upgrade the DevKit firmware to the latest version.
-
-This is a one-time effort, once you start developing on the DevKit and upload your app, you will have the latest firmware.
-
-**Tip:** You will see the firmware version on the screen of the kit. If there is no version number, it means the DevKit is running on old version and needs an upgrade. [Versions]({{"/versions/" | absolute_url }}) contains the latest version number and release notes.
-{: .notice--success}
-
-### D. Test sensors and WiFi on DevKit
-
-Now you have connected your DevKit to the computer. Follow the instructions on the screen to test sensors and WiFi:
-
-- Press button A to test WiFi connection
-- Press button B to test sensors, continue pressing and releasing the B button to cycle through each sensor
-
-![getting-started-sensors]({{"/assets/images/getting-started-sensors.jpg" | absolute_url }})
+![getting-started-connect]({{"/assets/images/getting-started/connect.jpg" | absolute_url }})
 
 ## Step 3. Configure WiFi
 
-IoT projects rely on Internet connectivity. Use the following instructions to setup Access Point(AP) Mode on the DevKit to enable WiFi connectivity.
+IoT projects rely on Internet connectivity. Use the following instructions to configure the DevKit to connect to WiFi.
 
 ### A. Enter AP Mode
 
 Hold down button B, then push and release the reset button, then release button B. Your DevKit will enter AP Mode for configuring WiFi. The screen will display the Service Set Identifier(SSID) of the DevKit as well as the configuration portal IP address:
 
-![getting-started-wifi-ap]({{"/assets/images/getting-started-wifi-ap.jpg" | absolute_url }})
+![getting-started-wifi-ap]({{"/assets/images/getting-started/wifi-ap.jpg" | absolute_url }})
 
 ### B. Connect to DevKit AP
 
 Now, use another WiFi enabled device (PC or mobile phone) to connect to the DevKit SSID (highlighted in the screenshot above), leave the password empty.
 
-![getting-started-ssid]({{"/assets/images/getting-started-ssid.png" | absolute_url }})
+![getting-started-ssid]({{"/assets/images/getting-started/connect-ssid.png" | absolute_url }})
 
 ### C. Configure WiFi for DevKit
 
-Open the IP address shown on the DevKit screen on your PC or mobile phone browser, select the WiFi network you want the DevKit to connect to, then type the password. Click **'Connect'** to complete.
+Open the IP address shown on the DevKit screen on your PC or mobile phone browser, select the WiFi network you want the DevKit to connect to, then type the password. Click **Connect** to complete:
 
-![getting-started-wifi-portal]({{"/assets/images/getting-started-wifi-portal.png" | absolute_url }})
+![getting-started-wifi-portal]({{"/assets/images/getting-started/wifi-portal.png" | absolute_url }})
 
-Once the connection succeeds, the DevKit will take a few seconds to reboot. Then, you can test the connection by clicking button A. The WiFi SSID and an IP address will be displayed on the screen.
+Once the connection succeeds, the DevKit will reboot in a few seconds. If succeeded, you will see the WiFi name and IP address on the screen:
 
-![getting-started-wifi-ip]({{"/assets/images/getting-started-wifi-ip.jpg" | absolute_url }})
+![getting-started-wifi-ip]({{"/assets/images/getting-started/wifi-ip.jpg" | absolute_url }})
 
 **Note:** The IP address displayed in the photo may not match the actual IP assigned and displayed on the DevKit screen. This is normal as WiFi uses DHCP to dynamically assign IPs.
 {: .notice--info}
 
 After WiFi is configured, your credentials will be persisted on the device for that connection, even if unplugged. For example, if you configured the DevKit for WiFi in your home and then took the DevKit to the office, you will need to reconfigure AP mode (starting at step 3A) to connect the DevKit to your office WiFi. 
 
-## Step 4. Prepare development environment
+## Step 4. Start using DevKit
+
+The default app running on DevKit will check the latest version of the firmware and display some sensor diagnosis data for you.
+
+### A. Upgrade to the latest firmware
+
+You will be prompted on the screen both the current and latest firmware version if there is an upgrade needed. Follow [Upgrade firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) guide to upgrade it.
+
+![getting-started-firmware]({{"/assets/images/getting-started/firmware.jpg" | absolute_url }})
+
+**Note:** This is a one-time effort, once you start developing on the DevKit and upload your app, you will have the latest firmware come with your app.
+{: .notice--info}
+
+### B. Test various sensors
+
+Press button B to test sensors, continue pressing and releasing the B button to cycle through each sensor.
+
+![getting-started-sensors]({{"/assets/images/getting-started/sensors.jpg" | absolute_url }})
+
+## Step 5. Prepare development environment
 
 Now it's time to set up the development environment: tools and packages for you to build stunning IoT applications.
 
@@ -100,7 +101,7 @@ Now it's time to set up the development environment: tools and packages for you 
 
 ### Windows
 
-We encourage you to use our installation package to prepare the development environment. If you encounter any issues, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
+We encourage you to use the installation package to prepare the development environment. If you encounter any issues, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
 
 #### A. Download latest package
 
@@ -124,17 +125,17 @@ The `.zip` file you download contains all necessary tools and packages required 
 
 In Windows File Explorer, locate the `.zip` and extract it, find `install.cmd`, right-click and select **"Run as administrator"** to start.
 
-![getting-started-run-admin]({{"/assets/images/getting-started-run-admin.png" | absolute_url }})
+![getting-started-run-admin]({{"/assets/images/getting-started/run-admin.png" | absolute_url }})
 
 During installation, you will see the progress of each tool or package.
 
-![getting-started-install]({{"/assets/images/getting-started-install.png" | absolute_url }})
+![getting-started-install]({{"/assets/images/getting-started/install.png" | absolute_url }})
 
 #### C. Confirm to install drivers
 
 The VS Code for Arduino extension relies on the Arduino IDE. If this is the first time you are installing the Arduino IDE, you will be prompted to install relevant drivers:
 
-![getting-started-driver]({{"/assets/images/getting-started-driver.png" | absolute_url }})
+![getting-started-driver]({{"/assets/images/getting-started/driver.png" | absolute_url }})
 
 It should take around 10 minutes to finish installation depending on your Internet speed. Once the installation is complete, you should see Visual Studio Code and Arduino IDE shortcuts on your desktop.
 

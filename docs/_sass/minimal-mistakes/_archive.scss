@@ -124,7 +124,7 @@
   }
 
   .archive__item-title {
-    margin-top: 0.5em;
+    margin-top: 0.85em;
     font-size: $type-size-5;
   }
 
@@ -145,8 +145,8 @@
     @include gallery(3.333 of 10);
 
     .archive__item {
-      height: 328px;
-      min-height: 328px;
+      height: 298px;
+      min-height: 298px;
     }
 
     .archive__item-teaser {

@@ -1,7 +1,7 @@
 ---
 title: "Door Monitor"
 permalink: /docs/projects/door-monitor
-excerpt: "A door monitor using the magnetic sensor to detect the change of magnetic field, and send notification with a simple Azure Function."
+excerpt: "Use magnetic sensor to detect the change of magnetic field, and send notifications."
 header:
   overlay_image: /assets/images/projects-door-monitor.jpg
   overlay_full: true

@@ -1,7 +1,7 @@
 ---
-title: "MQTT HelloWorld"
+title: "MQTT Client"
 permalink: /docs/projects/mqtt-helloworld/
-excerpt: "Connect DevKit to a public free MQTT broker, send messages to the server and print it out if it is successful."
+excerpt: "Use DevKit as a client to send messages to MQTT server."
 header:
   overlay_image: /assets/images/projects-mqtt-helloworld.jpg
   overlay_full: true

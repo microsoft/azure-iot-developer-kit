@@ -10,7 +10,7 @@ variable:
 last_modified_at: 2017-07-19
 ---
 
-Follow these simple steps to manually install tools and packages for DevKit development. If you are on Windows, we suggest you use [our package]({{"/docs/get-started/#a-download-latest-package" | absolute_url}}) to install everything.
+Follow these simple steps to manually install tools and packages for DevKit development. If you are on Windows, we suggest you use the [installation package]({{"/docs/get-started/#a-download-latest-package" | absolute_url}}) to install everything automatically.
 
 {% include switch.html content = page.variable %}
 

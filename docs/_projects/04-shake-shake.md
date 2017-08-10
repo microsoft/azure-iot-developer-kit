@@ -1,7 +1,7 @@
 ---
-title: "Shake, Shake"
+title: "Shake, Shake for a Tweet"
 permalink: /docs/projects/shake-shake/
-excerpt: "Use the motion sensor to detect shaking, and use a simple Azure Functions app to find a random tweet with a #hashtag."
+excerpt: "Use the motion sensor to detect shaking and  find a random tweet with a #hashtag."
 header:
   overlay_image: /assets/images/projects-shake-shake.jpg
   overlay_full: true

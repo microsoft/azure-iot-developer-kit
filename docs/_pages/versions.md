@@ -5,6 +5,12 @@ excerpt: "Versions and release notes"
 last_modified_at: 2017-07-13
 ---
 
+{% include toc icon="columns" %}
+
+## Version 1.0.2 (August 10)
+
+TBD
+
 ## Version 1.0.1 (July 13)
 
 The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our “Shake, Shake” sample project on macOS now. To further smooth the development tools and package installation, we are using the official [MSI](https://aka.ms/InstallAzureCliWindows){:target="_blank"} for the Windows Azure CLI 2.0 installation, so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.
