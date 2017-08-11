@@ -16,6 +16,7 @@ icons:
     title: function
   - url: /assets/images/icon-iot.png
     title: iot
+difficulty: easy
 last_modified_at: 2017-06-28
 ---
 

@@ -1,0 +1,25 @@
+.grid__item p.project-icon-title {
+  display: none;
+  position: absolute;
+  bottom: 0;
+}
+
+img.project-icon {
+
+}
+
+div.project-icon-div {
+  float: left;
+  position: relative;
+}
+
+img.project-icon:hover + p.project-icon-title {
+  display: block;
+}
+
+p.project-difficulty {
+  position: absolute;
+  border-radius: 25px;
+  background: green;
+  margin: 10px;
+}

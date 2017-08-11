@@ -14,6 +14,9 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
+        {% if post.difficulty %}
+          <p class="project-difficulty archive__item-excerpt"> {{ post.difficulty }} </p>
+        {% endif %}
         <img src=
           {% if teaser contains "://" %}
             "{{ teaser }}"
@@ -36,7 +39,7 @@
       {% endif %}
       {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
       {% for icon in post.icons %}
-        <div style="float: left; position: relative">
+        <div class="project-icon-div">
           <img src="{{ icon.url | absolute_url }}" class="project-icon">
           <p class="archive__item-excerpt project-icon-title">{{ icon.title }}</p>
         </div>
