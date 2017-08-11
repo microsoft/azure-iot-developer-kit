@@ -62,6 +62,8 @@
         $('.click-action-tracker').click(trackClickNumber);
 
         $(window).scroll(tocScroll);
+
+        projectCardClick();
     };
 
     var tocScroll = function () {
@@ -213,5 +215,14 @@
         });
         return false;
     };
+
+    var projectCardClick = function() {
+        $('.grid__item').each(function() {
+            $(this).css('cursor', 'pointer');
+            $(this).click(function() {
+                document.location = $(this).find('a').attr('href');
+            })
+        })
+    }
 
 }(jQuery, window));
