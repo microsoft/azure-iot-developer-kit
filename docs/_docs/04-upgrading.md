@@ -18,7 +18,7 @@ Once the DevKit is connected, in Windows you will see a new USB mass storage dev
 ### Step 2. Upgrade firmware
 
 1. Download the latest firmware: 
- [devkit-firmware-1.0.1.bin](https://azureboard.azureedge.net/firmware/devkit-firmware-1.0.1.bin)
+ [devkit-firmware-1.0.2.bin](https://azureboard.azureedge.net/firmware/devkit-firmware-1.0.2.bin)
 
 2. Drag & drop the `.bin` file you downloaded to `AZ3166` device.
 
