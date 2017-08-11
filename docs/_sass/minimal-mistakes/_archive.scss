@@ -60,7 +60,6 @@
 }
 
 .archive__item-teaser {
-  background-color: #000;
   border-radius: $border-radius $border-radius 0 0;
   overflow: hidden;
   text-align: center;
@@ -74,7 +73,7 @@
     // box-shadow: 0 0 10px rgba(#000, 0.25); // Original
 
     img {
-      opacity: 0.75;
+      opacity: 0.85;
     }
   }
 
