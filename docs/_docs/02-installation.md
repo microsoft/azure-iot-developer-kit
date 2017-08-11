@@ -57,7 +57,7 @@ Visual Studio Code allows you to install Marketplace extensions directly in the 
 
 ### Step 6. Install DevKit board package
 
-You will need to add the DevKit board using the Boards Manager in Visual Studio Code.
+You will need to add the DevKit board using the Board Manager in Visual Studio Code.
 
 1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 
@@ -70,7 +70,7 @@ You will need to add the DevKit board using the Boards Manager in Visual Studio 
  ```
  ![installation-settings-json]({{"/assets/images/installation-settings-json-win.png" | absolute_url}})
 
-4. Now in the Boards Manager search for 'az3166' and install the [latest version]({{"/versions" | absolute_url }}).
+4. Now in the Board Manager search for 'az3166' and install the [latest version]({{"/versions" | absolute_url }}).
  ![installation-az3166]({{"/assets/images/installation-az3166-win.png" | absolute_url}})
 
 You now have all the necessary tools and packages installed for Windows.
@@ -126,7 +126,7 @@ Visual Studio Code allows you to install Marketplace extensions directly in the 
 
 ### Step 6. Install DevKit board package
 
-You will need to add the DevKit board using the Boards Manager in Visual Studio Code.
+You will need to add the DevKit board using the Board Manager in Visual Studio Code.
 
 1. Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 
@@ -139,7 +139,7 @@ You will need to add the DevKit board using the Boards Manager in Visual Studio 
  ```
  ![installation-settings-json]({{"/assets/images/installation-settings-json-mac.png" | absolute_url}})
 
-4. Now in the Boards Manager search for 'az3166' and install the [latest version]({{"/versions" | absolute_url }}).
+4. Now in the Board Manager search for 'az3166' and install the [latest version]({{"/versions" | absolute_url }}).
  ![installation-az3166]({{"/assets/images/installation-az3166-mac.png" | absolute_url}})
 
 You now have all the necessary tools and packages installed for macOS.

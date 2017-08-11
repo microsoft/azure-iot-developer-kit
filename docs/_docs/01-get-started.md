@@ -199,7 +199,7 @@ Visual Studio Code allows you to install Marketplace extensions directly in the 
 
 #### F. Install DevKit board package
 
-You will need to add the DevKit board using the Boards Manager in Visual Studio Code.
+You will need to add the DevKit board using the Board Manager in Visual Studio Code.
 
 1. Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 
