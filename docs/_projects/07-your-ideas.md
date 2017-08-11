@@ -1,7 +1,7 @@
 ---
 title: "Your Ideas?"
-permalink: /docs/projects/#
-excerpt: "We really want to hear about the cool and innovative ways you are using the DevKit. Please share your ideas with us to [iot-devkit@microsoft.com](mailto:iot-devkit@microsoft.com)."
+link: "http://gitter.im/Microsoft/azure-iot-developer-kit"
+excerpt: "Join our Gitter channel to share your project ideas with us!"
 header:
   image: /assets/images/projects-your-ideas.jpg
   teaser: /assets/images/projects-your-ideas-th.jpg
