@@ -11,6 +11,11 @@ variable:
     name: Windows
   - platform: macos
     name: macOS
+icons:
+  - url: /assets/images/icon-function.png
+    title: function
+  - url: /assets/images/icon-iot.png
+    title: iot
 last_modified_at: 2017-06-28
 ---
 

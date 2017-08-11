@@ -1,0 +1,13 @@
+.grid__item p.project-icon-title{
+  display: none;
+  position: absolute;
+  bottom: 0;
+}
+
+img.project-icon{
+
+}
+
+img.project-icon:hover + p.project-icon-title{
+  display: block;
+}
