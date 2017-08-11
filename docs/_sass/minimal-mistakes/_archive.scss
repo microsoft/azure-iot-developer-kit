@@ -60,7 +60,7 @@
 }
 
 .archive__item-teaser {
-  border-radius: $border-radius;
+  border-radius: $border-radius $border-radius 0 0;
   overflow: hidden;
   text-align: center;
   img {
@@ -71,6 +71,10 @@
 .archive__item:hover {
   .archive__item-teaser {
     // box-shadow: 0 0 10px rgba(#000, 0.25); // Original
+
+    img {
+      opacity: 0.85;
+    }
   }
 
   .archive__item-title {
@@ -113,9 +117,25 @@
     margin: 0 0 4px;
   }
 
+  .archive__item {
+    position: relative;
+    background-color: #fff;
+    border-radius: $border-radius;
+    box-shadow: 0 0 2px rgba(#000, 0.15);
+  }
+
+  .archive__item-body {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    padding: 2em 1em;
+    background: linear-gradient(180deg, rgba(#000, 0), #000);
+  }
+
   .archive__item-title {
-    margin-top: 0.5em;
-    font-size: $type-size-4;
+    margin-top: 0.85em;
+    font-size: $type-size-5;
   }
 
   .archive__item-excerpt {
@@ -124,6 +144,14 @@
 
   @include breakpoint($small) {
     @include gallery(5 of 10);
+
+    .archive__item-body {
+      position: static;
+      color: inherit;
+      padding: 0 1em;
+      background: none;
+    }
+
     .archive__item-teaser {
       max-height: 200px;
     }
@@ -134,13 +162,17 @@
     margin-right: 0; /* reset before mixin does its thing*/
     @include gallery(3.333 of 10);
 
+    .archive__item {
+      height: 298px;
+    }
+
     .archive__item-teaser {
-      max-height: 164px;
+      max-height: 184px;
     }
 
     .archive__item-excerpt {
       display: block;
-      font-size: $type-size-5;
+      font-size: $type-size-6;
     }
   }
 }

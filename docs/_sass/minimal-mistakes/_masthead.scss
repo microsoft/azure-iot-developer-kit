@@ -3,12 +3,10 @@
    ========================================================================== */
 
 .masthead {
-  position: relative;
-  border-bottom: 1px solid $border-color;
-  -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
-  -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 20;
 
   &__inner-wrap {
@@ -27,10 +25,6 @@
 
     nav {
       z-index: 10;
-    }
-
-    a {
-      text-decoration: none;
     }
   }
 }

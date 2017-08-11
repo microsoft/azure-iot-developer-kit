@@ -9,11 +9,13 @@ header:
   call_to_action:
     - label: "Get Started"
       url: "/docs/get-started/"
+    - label: "Get a Kit"
+      url: "https://aka.ms/iot-devkit-purchase"
   extra_logo:
     - image_path: /assets/images/logo-azure-certified.svg
       url: "https://catalog.azureiotsuite.com/details?title=MXChip-IoT-DevKit&source=home-page"
   align: center
-excerpt: 'Rapidly develop an IoT app using Microsoft Azure and Visual Studio Code'
+excerpt: 'Rapidly develop IoT app using Microsoft Azure and Visual Studio Code'
 intro:
   - image_path: /assets/images/devkit-board-vector@2x.png
     image_width: 50%
