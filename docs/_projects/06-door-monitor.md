@@ -13,6 +13,20 @@ layouts_gallery:
   - url: /assets/images/mini-solution/door-monitor/test-door-opened.jpg
     image_path: /assets/images/mini-solution/door-monitor/test-door-opened.jpg
     alt: "Door Opened"
+icons:
+  - url: /assets/images/icon-iot-hub.png
+    target: https://azure.microsoft.com/en-us/services/iot-hub/
+    title: IoT Hub
+  - url: /assets/images/icon-azure-function.png
+    target: https://azure.microsoft.com/en-us/services/functions/
+    title: Azure Function
+  - url: /assets/images/icon-subscription.png
+    target: https://azure.microsoft.com/en-us/pricing/member-offers/visual-studio-subscriptions/
+    title: Subscription
+  - url: /assets/images/icon-sendgrid.png
+    target: https://sendgrid.com/partners/azure/
+    title: SendGrid
+difficulty: ADVANCED
 last_modified_at: 2017-07-17
 ---
 

@@ -16,6 +16,17 @@ layouts_gallery:
   - url: /assets/images/mini-solution/shake-shake/result-3.jpg
     image_path: /assets/images/mini-solution/shake-shake/result-3.jpg
     alt: "Display a random tweet"
+icons:
+  - url: /assets/images/icon-iot-hub.png
+    target: https://azure.microsoft.com/en-us/services/iot-hub/
+    title: IoT Hub
+  - url: /assets/images/icon-azure-function.png
+    target: https://azure.microsoft.com/en-us/services/functions/
+    title: Azure Function
+  - url: /assets/images/icon-subscription.png
+    target: https://azure.microsoft.com/en-us/pricing/member-offers/visual-studio-subscriptions/
+    title: Subscription
+difficulty: ADVANCED
 last_modified_at: 2017-07-05
 ---
 

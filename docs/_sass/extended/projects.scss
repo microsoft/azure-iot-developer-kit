@@ -1,16 +1,19 @@
 .grid__item p.project-icon-title {
   display: none;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+  width: 200px;
 }
 
 img.project-icon {
-
+  width: 25px;
+  height: 25px;
 }
 
 div.project-icon-div {
   float: left;
   position: relative;
+  margin: 0 5px;
 }
 
 img.project-icon:hover + p.project-icon-title {
@@ -19,7 +22,9 @@ img.project-icon:hover + p.project-icon-title {
 
 p.project-difficulty {
   position: absolute;
-  border-radius: 25px;
-  background: green;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 10px;
   margin: 10px;
 }

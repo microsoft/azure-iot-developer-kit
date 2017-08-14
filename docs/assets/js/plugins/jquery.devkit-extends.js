@@ -64,6 +64,7 @@
         $(window).scroll(tocScroll);
 
         projectCardClick();
+        projectCardDifficultyColor();
     };
 
     var tocScroll = function () {
@@ -219,9 +220,25 @@
     var projectCardClick = function() {
         $('.grid__item').each(function() {
             $(this).css('cursor', 'pointer');
-            $(this).click(function() {
-                document.location = $(this).find('a').attr('href');
+            $(this).click(function (event) {
+                var target = event.target;
+                if (!($(target).prop('className') == 'project-icon')) {
+                    document.location = $(this).find('.archive__item-title a').attr('href');
+                }
             })
+        })
+    }
+
+    var projectCardDifficultyColor = function() {
+        $('p.project-difficulty').each(function() {
+            var difficulty = $(this).html().trim().toLocaleLowerCase();
+            if (difficulty == 'easy') {
+                $(this).css('background', 'green');
+            } else if (difficulty == 'advanced') {
+                $(this).css('background', 'orange');
+            } else if (difficulty == 'hard') {
+                $(this).css('background', 'red');
+            }
         })
     }
 

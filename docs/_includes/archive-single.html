@@ -40,8 +40,14 @@
       {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
       {% for icon in post.icons %}
         <div class="project-icon-div">
-          <img src="{{ icon.url | absolute_url }}" class="project-icon">
-          <p class="archive__item-excerpt project-icon-title">{{ icon.title }}</p>
+          {% if icon.target %}
+            <a href="{{ icon.target }}" target="_blank">
+          {% endif %}
+              <img src="{{ icon.url | absolute_url }}" class="project-icon">
+              <p class="archive__item-excerpt project-icon-title">{{ icon.title }}</p>
+          {% if icon.target %}
+            </a>
+          {% endif %}
         </div>
       {% endfor %}
     </div>

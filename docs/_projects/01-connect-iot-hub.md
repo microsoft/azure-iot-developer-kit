@@ -12,11 +12,10 @@ variable:
   - platform: macos
     name: macOS
 icons:
-  - url: /assets/images/icon-function.png
-    title: function
-  - url: /assets/images/icon-iot.png
-    title: iot
-difficulty: easy
+  - url: /assets/images/icon-iot-hub.png
+    target: https://azure.microsoft.com/en-us/services/iot-hub/
+    title: IoT Hub
+difficulty: EASY
 last_modified_at: 2017-06-28
 ---
 
