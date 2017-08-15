@@ -84,7 +84,7 @@ author:
   bio              : *description
   location         : "Shanghai, China"
   email            :
-  uri              : "https://aka.ms/azure-iot-developer-kit"
+  uri              : "https://aka.ms/iot-devkit"
   facebook         : *facebook
   foursquare       :
   github           : "Microsoft/azure-iot-developer-kit"

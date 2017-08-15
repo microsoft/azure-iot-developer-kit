@@ -1,16 +1,15 @@
 # Authors
 
-Billy Rick:
-  name        : "Billy Rick"
-  uri         : "http://thewhip.com"
-  email       : "billy@rick.com"
-  bio         : "What do you want, jewels? I am a very extravagant man."
-  avatar      : "/assets/images/bio-photo-2.jpg"
-  twitter     : "extravagantman"
-
-Cornelius Fiddlebone:
-  name        : "Cornelius Fiddlebone"
-  email       : "cornelius@thewhip.com"
-  bio         : "I ordered what?"
+Liya Du:
+  name        : "Liya Du"
+  email       : "liydu@microsoft.com"
+  bio         : "Cogito, ergo sum."
   avatar      : "/assets/images/bio-photo.jpg"
-  twitter     : "rhymeswithsackit"
+  twitter     : "likidu"
+
+Arthur Ma:
+  name        : "Arthur Ma"
+  email       : "arthma@microsoft.com"
+  bio         : "Engine behind DevKit"
+  avatar      : "/assets/images/bio-photo2.jpg"
+  twitter     : "arthurma1978"
