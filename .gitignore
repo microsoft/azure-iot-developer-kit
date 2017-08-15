@@ -1,5 +1,5 @@
 .DS_Store
-.vscode/
+.vscode
 
 # Jekyll
 docs/_site
