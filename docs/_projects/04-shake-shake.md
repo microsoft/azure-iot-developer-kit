@@ -23,7 +23,7 @@ icons:
   - url: /assets/images/icon-azure-functions.svg
     target: https://azure.microsoft.com/en-us/services/functions/
     title: Azure Functions
-  - url: /assets/images/icon-subscriptions.png
+  - url: /assets/images/icon-subscriptions.svg
     target: https://azure.microsoft.com/en-us/pricing/member-offers/visual-studio-subscriptions/
     title: Subscriptions
 difficulty: MEDIUM
