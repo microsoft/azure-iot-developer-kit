@@ -17,9 +17,9 @@ layouts_gallery:
     image_path: /assets/images/mini-solution/remote-monitoring/sensor-status.png
     alt: "View sensor status"
 icons:
-  - url: /assets/images/icon-iot-suite.png
+  - url: /assets/images/icon-azure-iot-suite.svg
     target: https://azure.microsoft.com/en-us/suites/iot-suite/
-    title: IoT Suite
+    title: Azure IoT Suite
 difficulty: EASY
 last_modified_at: 2017-06-28
 ---

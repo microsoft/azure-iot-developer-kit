@@ -1,19 +1,36 @@
 .grid__item p.project-icon-title {
   display: none;
   position: absolute;
-  bottom: 10px;
-  width: 200px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #494e56;
+  bottom: 0;
+  margin-bottom: 28px;
+  background: #fff;
+  padding: 0 5px;
+  border: 1px solid #008bf5;
 }
 
 img.project-icon {
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
 }
 
 div.project-icon-div {
+  white-space:nowrap;
   float: left;
   position: relative;
-  margin: 0 5px;
+}
+
+div.project-icons-div {
+  position: absolute;
+  bottom: 16px;
+}
+
+.grid__item .archive__item {
+  position: relative;
 }
 
 img.project-icon:hover + p.project-icon-title {
@@ -24,7 +41,9 @@ p.project-difficulty {
   position: absolute;
   border-radius: 5px;
   color: #fff;
+  font-size: 14px;
+  font-family: 'Segoe UI', sans-serif;
   font-weight: bold;
-  padding: 0 10px;
-  margin: 10px;
+  padding: 0 14px;
+  margin: 12px 14px;
 }

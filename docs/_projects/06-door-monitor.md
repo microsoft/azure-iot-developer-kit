@@ -14,19 +14,19 @@ layouts_gallery:
     image_path: /assets/images/mini-solution/door-monitor/test-door-opened.jpg
     alt: "Door Opened"
 icons:
-  - url: /assets/images/icon-iot-hub.png
+  - url: /assets/images/icon-iot-hub.svg
     target: https://azure.microsoft.com/en-us/services/iot-hub/
     title: IoT Hub
-  - url: /assets/images/icon-azure-function.png
+  - url: /assets/images/icon-azure-functions.svg
     target: https://azure.microsoft.com/en-us/services/functions/
-    title: Azure Function
-  - url: /assets/images/icon-subscription.png
+    title: Azure Functions
+  - url: /assets/images/icon-subscriptions.svg
     target: https://azure.microsoft.com/en-us/pricing/member-offers/visual-studio-subscriptions/
-    title: Subscription
-  - url: /assets/images/icon-sendgrid.png
+    title: Subscriptions
+  - url: /assets/images/icon-sendgrid.svg
     target: https://sendgrid.com/partners/azure/
     title: SendGrid
-difficulty: ADVANCED
+difficulty: MEDIUM
 last_modified_at: 2017-07-17
 ---
 

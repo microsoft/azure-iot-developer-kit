@@ -225,21 +225,21 @@
                 if (!($(target).prop('className') == 'project-icon')) {
                     document.location = $(this).find('.archive__item-title a').attr('href');
                 }
-            })
-        })
+            });
+        });
     }
 
     var projectCardDifficultyColor = function() {
         $('p.project-difficulty').each(function() {
             var difficulty = $(this).html().trim().toLocaleLowerCase();
             if (difficulty == 'easy') {
-                $(this).css('background', 'green');
-            } else if (difficulty == 'advanced') {
-                $(this).css('background', 'orange');
+                $(this).css('background', '#8fc31f');
+            } else if (difficulty == 'medium') {
+                $(this).css('background', '#f98f40');
             } else if (difficulty == 'hard') {
-                $(this).css('background', 'red');
+                $(this).css('background', '#f05a2d');
             }
-        })
+        });
     }
 
 }(jQuery, window));
