@@ -23,9 +23,9 @@ Yes, we will open source the firmware, toolchains and all samples. Also, the boa
 
 Our plan is to do that as soon as we reach a stage where the entire framework is stable.
 
-### Are you going to sell it?
+### Where can I buy it?
 
-Currently, we really want developer feedback and success stories using the DevKit to build IoT applications. With this in mind, we are going to distribute a limited number of DevKits for free. You can [register here](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/), there are only a few simple questions.
+You can purchase the kit from our hardware partner's product page: [https://aka.ms/iot-devkit-purchase](https://aka.ms/iot-devkit-purchase){:target="_blank"}
 
 ## Installation
 
