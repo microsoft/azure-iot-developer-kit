@@ -65,6 +65,7 @@
 
         projectCardClick();
         projectCardDifficultyColor();
+        faqMenu();
     };
 
     var tocScroll = function () {
@@ -240,6 +241,44 @@
                 $(this).css('background', '#f05a2d');
             }
         });
+    }
+
+    var faqMenu = function() {
+        if ($('h1').length && $('h1').html().trim() == 'Frequently Asked Questions') {
+            var pageContent = $('.page__content').children();
+            if (pageContent.length) {
+                var pageFront = pageContent[0];
+                $('.page__content').children('h2, h3').each(function() {
+                    if ($(this).prop('tagName') == 'H2') {
+                        $(pageFront).before($(this).clone().removeAttr('id'));
+                        $(pageFront).prev().addClass('faq-menu-h2');
+                    } else {
+                        $(pageFront).before('<li class="faq-menu-li"><a href="#' + $(this).attr('id') + '" class="faq-menu-a">' + $(this).html());
+                        $(pageFront).prev().find('a').smoothScroll({offset: -20});
+                    }
+                })
+                $(pageFront).before('<hr class="faq-menu-hr">');
+            }
+            $('.faq-back-to-top').css('left', $('.page__content').position().left + $('.page__content').width());
+            BackToTopDisplay();
+            $(window).resize(function() {
+                $('.faq-back-to-top').css('left', $('.page__content').position().left + $('.page__content').width());
+                BackToTopDisplay();
+            });
+            $(window).scroll(BackToTopDisplay);
+            $('.faq-back-to-top').click(function() {
+                $('body').animate({scrollTop: 0}, 500);
+                return false;
+            });
+        }
+    }
+
+    var BackToTopDisplay = function() {
+        if ($(window).scrollTop() > 20 && window.innerWidth >= 1024){
+            $('.faq-back-to-top').css('display', 'block');
+        } else {
+            $('.faq-back-to-top').css('display', 'none');
+        }
     }
 
 }(jQuery, window));

@@ -1,7 +1,6 @@
 .grid__item p.project-icon-title {
   display: none;
   position: absolute;
-  font-family: 'Segoe UI', sans-serif;
   font-size: 12px;
   font-weight: bold;
   color: #494e56;
@@ -31,6 +30,10 @@ div.project-icons-div {
 
 .grid__item .archive__item {
   position: relative;
+
+  @include breakpoint($x-large) {
+    height: 328px;
+  }
 }
 
 img.project-icon:hover + p.project-icon-title {
@@ -42,7 +45,6 @@ p.project-difficulty {
   border-radius: 5px;
   color: #fff;
   font-size: 14px;
-  font-family: 'Segoe UI', sans-serif;
   font-weight: bold;
   padding: 0 14px;
   margin: 12px 14px;

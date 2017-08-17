@@ -97,3 +97,4 @@ To resolve, there is a known [workaround](https://github.com/Microsoft/vscode/is
 ]
 ```
 
+[![Back to Top]({{"/assets/images/faq-back-to-top.png" | absolute_url }})](#){: .faq-back-to-top}
