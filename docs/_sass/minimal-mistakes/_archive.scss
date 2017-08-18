@@ -125,6 +125,7 @@
 
   .archive__item-title {
     margin-top: 0.85em;
+    padding-bottom: 0.85em;
     font-size: $type-size-5;
   }
 
@@ -156,6 +157,10 @@
     .archive__item-excerpt {
       display: block;
       font-size: $type-size-6;
+    }
+
+    .archive__item-title {
+      padding-bottom: 0;
     }
   }
 }

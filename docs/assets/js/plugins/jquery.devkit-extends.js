@@ -66,9 +66,6 @@
         projectCardClick();
         projectCardDifficultyColor();
         faqMenu();
-
-        projectCardSize();
-        $(window).resize(projectCardSize);
     };
 
     var tocScroll = function () {
@@ -244,19 +241,6 @@
                 $(this).css('background', '#f05a2d');
             }
         });
-    }
-
-    var projectCardSize = function() {
-        if (window.innerWidth < 768) {
-            $('.grid__item .archive__item').each(function() {
-                var title = $(this).find('.archive__item-title');
-                var titleBottom = $(title).offset().top + $(title).height();
-                var cardHeight = titleBottom + parseInt($(title).css('margin-top')) - $(this).offset().top;
-                $(this).css('height', cardHeight);
-            });
-        } else {
-            $('.grid__item .archive__item').css('height', '');
-        }
     }
 
     var faqMenu = function() {
