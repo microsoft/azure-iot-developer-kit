@@ -73,6 +73,16 @@ You will need to add the DevKit board using the Board Manager in Visual Studio C
 4. Now in the Board Manager search for 'az3166' and install the [latest version]({{"/versions" | absolute_url }}).
  ![installation-az3166]({{"/assets/images/installation-az3166-win.png" | absolute_url}})
 
+### Step 7. Install ST-Link drivers
+
+[ST-Link/V2](http://www.st.com/en/development-tools/st-link-v2.html){:target="_blank"} driver is required to communicate with the DevKit. 
+
+1. Download the driver from [STMicro](www.st.com/en/embedded-software/stsw-link009.html){:target="_blank"} or [here](https://azureboard.azureedge.net/installpackage/st-link-windows.zip).
+
+2. Extract the `.zip` file and double click `stlink_winusb_install.bat` to install:
+ ![installation-st-link]({{"/assets/images/installation-st-link-win.png" | absolute_url}})
+
+
 You now have all the necessary tools and packages installed for Windows.
 
 ## macOS (Preview)
