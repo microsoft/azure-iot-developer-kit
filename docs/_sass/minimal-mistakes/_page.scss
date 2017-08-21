@@ -215,6 +215,8 @@
         animation: zoom 0.7s both;
         -webkit-animation-delay: 0.25s;
         animation-delay: 0.25s;
+        -webkit-transition: none;
+        transition: none;
       }
     }
   }
