@@ -37,8 +37,8 @@ Hook up the hardware to your computer.
 
 ### B. Connect DevKit to your computer
 
-1. Connect USB end to your PC
-2. Connect Micro USB end to the DevKit
+1. Connect Micro USB end to the DevKit
+2. Connect USB end to your PC
 3. The green LED next to power confirms connection
 
 ![getting-started-connect]({{"/assets/images/getting-started/connect.jpg" | absolute_url }})
