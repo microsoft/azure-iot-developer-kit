@@ -20,9 +20,7 @@ For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick
 
 * MXChip IoT DevKit. [Get it now](https://aka.ms/iot-devkit-purchase){:target="_blank"}
 * A computer running Windows 10 or macOS 10.10+
-* An active Azure subscription
-  * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
-  * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
+* WiFi or hotspot on mobile phone that DevKit can connect to
 
 ## Step 2. Prepare your hardware
 
