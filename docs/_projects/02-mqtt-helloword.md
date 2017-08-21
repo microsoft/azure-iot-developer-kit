@@ -34,14 +34,6 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
     ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
-4. Setup serial monitor of Arduino Extension 
-    * Click the power plug icon on the status bar to open Serial Monitor.
-        ![serial-monitor]({{"/assets/images/mini-solution/mqtt-helloworld/serial-monitor.jpg" | absolute_url}})
-    * Click **COM(X)** next to the power plugin, and select the COM port with `STMicroelectronics`.
-        ![set-com-port]({{"/assets/images/mini-solution/mqtt-helloworld/set-com-port.jpg" | absolute_url}})
-    * On the status bar, click the number that represents the baud rate, and then click **115200**.
-        ![set-baud-rate]({{"/assets/images/mini-solution/mqtt-helloworld/set-baud-rate.jpg" | absolute_url}})
-
 ## Step 2. Open the MQTTClient Sample
 
 On the **Arduino Examples** page, expand `Examples for MXCHIP AZ3166 > MQTT` and then click `MQTTClient`.
@@ -64,6 +56,17 @@ Type `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. Once the upload is c
 {: .notice--info}
 
 ## Test the project
+
+In VS Code, following these steps to open and set up the Serial Monitor:
+
+1. Click the `COM[X]` word on the status bar to set the right COM port with `STMicroelectronics`:
+  ![set-com-port]({{"/assets/images/mini-solution/mqtt-helloworld/set-com-port.jpg" | absolute_url}})
+
+2. Click power plug icon on the status bar to open the Serial Monitor:
+  ![serial-monitor]({{"/assets/images/mini-solution/mqtt-helloworld/serial-monitor.jpg" | absolute_url}})
+  
+3. On the status bar, click the number that represents the Baud Rate and set to `115200`:
+  ![set-baud-rate]({{"/assets/images/mini-solution/mqtt-helloworld/set-baud-rate.jpg" | absolute_url}})
 
 The Serial Monitor displays all the messages sent from the sample. When the sample runs, it connects DevKit to Wi-Fi. When the connection is successful, the sample sends a message to the MQTT broker. After that, the sample repeatedly sends two "iot.eclipse.org" messages using QoS 0 and QoS 1, respectively.
 
