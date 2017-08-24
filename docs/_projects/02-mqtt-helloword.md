@@ -9,7 +9,7 @@ header:
 last_modified_at: 2017-06-28
 ---
 
-In this project, you will learn how to use the MQTT Client library to send messages to an MQTT broker.
+In this project, you learn how to use the MQTT Client library to send messages to an MQTT broker.
 The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse.org/paho/) project, which provides APIs for using MQTT over multiple means of transport.
 
 {% include toc icon="columns" %}

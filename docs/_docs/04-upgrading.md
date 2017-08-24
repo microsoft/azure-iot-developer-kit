@@ -13,7 +13,7 @@ Follow these steps to upgrade your DevKit firmware to [latest version]({{"/versi
 
 ### Step 1. Connect DevKit to your computer via USB
 
-Once the DevKit is connected, in Windows you will see a new USB mass storage device in Windows Explorer called `AZ3166`. 
+Once the DevKit is connected, in Windows you see a new USB mass storage device in Windows Explorer called `AZ3166`. 
 
 ### Step 2. Upgrade firmware
 

@@ -10,7 +10,7 @@ variable:
 last_modified_at: 2017-07-19
 ---
 
-Follow these simple steps to manually install tools and packages for DevKit development. If you are on Windows, we suggest you use the [installation package]({{"/docs/get-started/#a-download-latest-package" | absolute_url}}) to install everything automatically.
+Follow these  steps to manually install tools and packages for DevKit development. If you are on Windows, we suggest you use the [installation package]({{"/docs/get-started/#a-download-latest-package" | absolute_url}}) to install everything automatically.
 
 {% include switch.html content = page.variable %}
 
@@ -20,7 +20,7 @@ Follow these simple steps to manually install tools and packages for DevKit deve
 
 Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli#windows){:target="_blank"} to install Azure CLI 2.0 with MSI:
 
-Download and run MSI for the Windows command-line from: [https://aka.ms/InstallAzureCliWindows](https://aka.ms/InstallAzureCliWindows){:target="_blank"}
+Download and run MSI for the Windows command line from: [https://aka.ms/InstallAzureCliWindows](https://aka.ms/InstallAzureCliWindows){:target="_blank"}
 
 ### Step 2. Install Arduino IDE
 
@@ -28,7 +28,7 @@ The Visual Studio Code Arduino extension relies on the Arduino IDE. Download and
 
 ### Step 3. Install Visual Studio Code
 
-Download and install [Visual Studio Code for Windows](https://code.visualstudio.com/){:target="_blank"}. This will be the primary development tool for building DevKit IoT applications.
+Download and install [Visual Studio Code for Windows](https://code.visualstudio.com/){:target="_blank"}. This is the primary development tool for building DevKit IoT applications.
 
 ### Step 4. Download latest package
 
@@ -57,7 +57,7 @@ Visual Studio Code allows you to install Marketplace extensions directly in the 
 
 ### Step 6. Install DevKit board package
 
-You will need to add the DevKit board using the Board Manager in Visual Studio Code.
+You need to add the DevKit board using the Board Manager in Visual Studio Code.
 
 1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 
@@ -97,7 +97,7 @@ The Visual Studio Code Arduino extension relies on the Arduino IDE. Download and
 
 ### Step 3. Install Visual Studio Code
 
-Download and install [Visual Studio Code for macOS](https://code.visualstudio.com/){:target="_blank"}. This will be the primary development tool for building DevKit IoT applications.
+Download and install [Visual Studio Code for macOS](https://code.visualstudio.com/){:target="_blank"}. This is the primary development tool for building DevKit IoT applications.
 
 ### Step 4. Download latest package
 
@@ -126,7 +126,7 @@ Visual Studio Code allows you to install Marketplace extensions directly in the 
 
 ### Step 6. Install DevKit board package
 
-You will need to add the DevKit board using the Board Manager in Visual Studio Code.
+You need to add the DevKit board using the Board Manager in Visual Studio Code.
 
 1. Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 
