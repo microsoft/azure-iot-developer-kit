@@ -203,6 +203,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-autoprefixer
+  tzinfo-data
 
 BUNDLED WITH
    1.15.1
