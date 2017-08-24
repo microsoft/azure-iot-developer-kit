@@ -83,7 +83,16 @@ The DevKit will reboot and start running the code.
 
 ## Test the project
 
-In VS Code, click the power plug icon on the status bar to open the Serial Monitor.
+In VS Code, following these steps to open and set up the Serial Monitor:
+
+1. Click the `COM[X]` word on the status bar to set the right COM port with `STMicroelectronics`:
+  ![com-port]({{"/assets/images/mini-solution/connect-iothub/com-port.png" | absolute_url }})
+
+2. Click power plug icon on the status bar to open the Serial Monitor:
+  ![serial-monitor]({{"/assets/images/mini-solution/connect-iothub/serial-monitor.png" | absolute_url }})
+
+3. On the status bar, click the number that represents the Baud Rate and set to `115200`:
+  ![baud-rate]({{"/assets/images/mini-solution/connect-iothub/baud-rate.png" | absolute_url }})
 
 The sample application is running successfully when you see the following results:
 
