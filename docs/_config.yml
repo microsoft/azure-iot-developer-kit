@@ -80,16 +80,16 @@ analytics:
 # Site Author
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
-  avatar           : "/assets/images/michael-rose.jpg"
+  avatar           : "/assets/images/liya-du.jpg"
   bio              : *description
   location         : "Shanghai, China"
   email            :
-  uri              : "https://aka.ms/azure-iot-developer-kit"
+  uri              : "https://aka.ms/iot-devkit"
   facebook         : *facebook
   foursquare       :
   github           : "Microsoft/azure-iot-developer-kit"
   keybase          :
-  instagram        : "mmistakes"
+  instagram        : 
   linkedin         :
   pinterest        :
   stackoverflow    : # http://stackoverflow.com/users/123456/username

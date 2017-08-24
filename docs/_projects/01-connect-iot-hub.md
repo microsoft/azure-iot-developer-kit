@@ -6,11 +6,6 @@ header:
   overlay_image: /assets/images/projects-iothub.jpg
   overlay_full: true
   teaser: /assets/images/projects-iothub-th.jpg
-variable:
-  - platform: windows
-    name: Windows
-  - platform: macos
-    name: macOS
 last_modified_at: 2017-06-28
 ---
 
@@ -44,7 +39,7 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
-**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once again and VS Code should locate Arduino IDE path correctly.
+**Notice:** Occasionally, when you launch VS Code, you are prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once again, and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
 ### B. Open Arduino Examples folder
@@ -59,7 +54,7 @@ If you happen to close the pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+S
 
 In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
 
-In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services:
+In the VS Code terminal, an interactive command line guides you through provisioning the required Azure services:
 
 ![mini-solution-cloud-provision]({{"/assets/images/mini-solution/connect-iothub/cloud-provision.png" | absolute_url }})
 
@@ -73,9 +68,9 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ### B. Build and upload the device code
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
 
-Then it will start verifying and uploading the Arduino sketch:
+Then it starts verifying and uploading the Arduino sketch:
 
 ![mini-solution-device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
 

@@ -1,7 +1,7 @@
 ---
 title: "Get Started"
 permalink: /docs/get-started/
-excerpt: "How to quickly install and setup your development environment to use the DevKit."
+excerpt: "How to quickly install and set up your development environment to use the DevKit."
 variable:
   - platform: windows
     name: Windows
@@ -47,13 +47,13 @@ IoT projects rely on Internet connectivity. Use the following instructions to co
 
 ### A. Enter AP Mode
 
-Hold down button B, then push and release the reset button, then release button B. Your DevKit will enter AP Mode for configuring WiFi. The screen will display the Service Set Identifier(SSID) of the DevKit as well as the configuration portal IP address:
+Hold down button B, then push and release the reset button, then release button B. Your DevKit enters AP Mode for configuring WiFi. The screen displays the Service Set Identifier(SSID) of the DevKit as well as the configuration portal IP address:
 
 ![getting-started-wifi-ap]({{"/assets/images/getting-started/wifi-ap.jpg" | absolute_url }})
 
 ### B. Connect to DevKit AP
 
-Now, use another WiFi enabled device (PC or mobile phone) to connect to the DevKit SSID (highlighted in the screenshot above), leave the password empty.
+Now, use another WiFi enabled device (PC or mobile phone) to connect to the DevKit SSID (highlighted in the previous screenshot), leave the password empty.
 
 ![getting-started-ssid]({{"/assets/images/getting-started/connect-ssid.png" | absolute_url }})
 
@@ -63,26 +63,26 @@ Open the IP address shown on the DevKit screen on your PC or mobile phone browse
 
 ![getting-started-wifi-portal]({{"/assets/images/getting-started/wifi-portal.png" | absolute_url }})
 
-Once the connection succeeds, the DevKit will reboot in a few seconds. If succeeded, you will see the WiFi name and IP address on the screen:
+Once the connection succeeds, the DevKit will reboot in a few seconds. If succeeded, you can see the WiFi name and IP address on the screen:
 
 ![getting-started-wifi-ip]({{"/assets/images/getting-started/wifi-ip.jpg" | absolute_url }})
 
-**Note:** The IP address displayed in the photo may not match the actual IP assigned and displayed on the DevKit screen. This is normal as WiFi uses DHCP to dynamically assign IPs.
+**Note:** The IP address displayed in the photo may not match the actual IP assigned and displayed on the DevKit screen. It is normal as WiFi uses DHCP to dynamically assign IPs.
 {: .notice--info}
 
-After WiFi is configured, your credentials will be persisted on the device for that connection, even if unplugged. For example, if you configured the DevKit for WiFi in your home and then took the DevKit to the office, you will need to reconfigure AP mode (starting at step 3A) to connect the DevKit to your office WiFi. 
+After WiFi is configured, your credentials will be persisted on the device for that connection, even if unplugged. For example, if you configured the DevKit for WiFi in your home and then took the DevKit to the office, you need to reconfigure AP mode (starting at step 3A) to connect the DevKit to your office WiFi. 
 
 ## Step 4. Start using DevKit
 
-The default app running on DevKit will check the latest version of the firmware and display some sensor diagnosis data for you.
+The default app running on DevKit checks the latest version of the firmware and display some sensor diagnosis data for you.
 
 ### A. Upgrade to the latest firmware
 
-You will be prompted on the screen both the current and latest firmware version if there is an upgrade needed. Follow [Upgrade firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) guide to upgrade it.
+If there is an upgrade needed, you will be prompted on the screen both the current and latest firmware version . Follow [Upgrade firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) guide to upgrade it.
 
 ![getting-started-firmware]({{"/assets/images/getting-started/firmware.jpg" | absolute_url }})
 
-**Note:** This is a one-time effort, once you start developing on the DevKit and upload your app, you will have the latest firmware come with your app.
+**Note:** This is a one-time effort, once you start developing on the DevKit and upload your app, you have the latest firmware come with your app.
 {: .notice--info}
 
 ### B. Test various sensors
@@ -103,7 +103,7 @@ We encourage you to use the installation package to prepare the development envi
 
 #### A. Download latest package
 
-The `.zip` file you download contains all necessary tools and packages required for DevKit development.
+The downloaded `.zip` file contains all necessary tools and packages required for DevKit development.
 
 [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/prod/installpackage/devkit_install_1.0.2.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
@@ -116,7 +116,7 @@ The `.zip` file you download contains all necessary tools and packages required 
 > * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"}: Lightweight code editor for DevKit development
 > * [Visual Studio Code extension for Arduino](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino){:target="_blank"}: Enables Arduino development in VS Code
 > * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: The extension for Arduino relies on this tool
-> * DevKit Board Package: Tool chains, libraries and projects for the DevKit
+> * DevKit Board Package: Tool chains, libraries, and projects for the DevKit
 > * ST-Link Utility: Essential utilities and drivers
 
 #### B. Run installation script
@@ -125,7 +125,7 @@ In Windows File Explorer, locate the `.zip` and extract it, find `install.cmd`, 
 
 ![getting-started-run-admin]({{"/assets/images/getting-started/run-admin.png" | absolute_url }})
 
-During installation, you will see the progress of each tool or package.
+During installation, you see the progress of each tool or package.
 
 ![getting-started-install]({{"/assets/images/getting-started/install.png" | absolute_url }})
 
