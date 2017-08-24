@@ -6,11 +6,6 @@ header:
   overlay_image: /assets/images/projects-iothub.jpg
   overlay_full: true
   teaser: /assets/images/projects-iothub-th.jpg
-variable:
-  - platform: windows
-    name: Windows
-  - platform: macos
-    name: macOS
 icons:
   - url: /assets/images/icon-iot-hub.svg
     target: https://azure.microsoft.com/en-us/services/iot-hub/
@@ -36,6 +31,11 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 * Have your DevKit connected to WiFi
 * Prepare the development environment
 
+An active Azure subscription. If you do not have one, you can register via one of the methods:
+
+* Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
+* Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
+
 ## Step 1. Open project folder
 
 ### A. Launch VS Code
@@ -44,7 +44,7 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
-**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once again and VS Code should locate Arduino IDE path correctly.
+**Notice:** Occasionally, when you launch VS Code, you are prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once again, and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
 ### B. Open Arduino Examples folder
@@ -59,7 +59,7 @@ If you happen to close the pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+S
 
 In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
 
-In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services:
+In the VS Code terminal, an interactive command line guides you through provisioning the required Azure services:
 
 ![mini-solution-cloud-provision]({{"/assets/images/mini-solution/connect-iothub/cloud-provision.png" | absolute_url }})
 
@@ -73,9 +73,9 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ### B. Build and upload the device code
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
 
-Then it will start verifying and uploading the Arduino sketch:
+Then it starts verifying and uploading the Arduino sketch:
 
 ![mini-solution-device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
 
@@ -83,7 +83,16 @@ The DevKit will reboot and start running the code.
 
 ## Test the project
 
-In VS Code, click the power plug icon on the status bar to open the Serial Monitor.
+In VS Code, following these steps to open and set up the Serial Monitor:
+
+1. Click the `COM[X]` word on the status bar to set the right COM port with `STMicroelectronics`:
+  ![com-port]({{"/assets/images/mini-solution/connect-iothub/com-port.png" | absolute_url }})
+
+2. Click power plug icon on the status bar to open the Serial Monitor:
+  ![serial-monitor]({{"/assets/images/mini-solution/connect-iothub/serial-monitor.png" | absolute_url }})
+
+3. On the status bar, click the number that represents the Baud Rate and set to `115200`:
+  ![baud-rate]({{"/assets/images/mini-solution/connect-iothub/baud-rate.png" | absolute_url }})
 
 The sample application is running successfully when you see the following results:
 

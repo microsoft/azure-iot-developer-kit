@@ -1,7 +1,7 @@
 ---
 title: "Get Started"
 permalink: /docs/get-started/
-excerpt: "How to quickly install and setup your development environment to use the DevKit."
+excerpt: "How to quickly install and set up your development environment to use the DevKit."
 variable:
   - platform: windows
     name: Windows
@@ -18,11 +18,9 @@ For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick
 
 ### A. What you need
 
-* MXChip IoT DevKit. [Get it now](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/){:target="_blank"}
+* MXChip IoT DevKit. [Get it now](https://aka.ms/iot-devkit-purchase){:target="_blank"}
 * A computer running Windows 10 or macOS 10.10+
-* An active Azure subscription
-  * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
-  * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
+* WiFi or hotspot on mobile phone that DevKit can connect to
 
 ## Step 2. Prepare your hardware
 
@@ -37,8 +35,8 @@ Hook up the hardware to your computer.
 
 ### B. Connect DevKit to your computer
 
-1. Connect USB end to your PC
-2. Connect Micro USB end to the DevKit
+1. Connect Micro USB end to the DevKit
+2. Connect USB end to your PC
 3. The green LED next to power confirms connection
 
 ![getting-started-connect]({{"/assets/images/getting-started/connect.jpg" | absolute_url }})
@@ -49,13 +47,13 @@ IoT projects rely on Internet connectivity. Use the following instructions to co
 
 ### A. Enter AP Mode
 
-Hold down button B, then push and release the reset button, then release button B. Your DevKit will enter AP Mode for configuring WiFi. The screen will display the Service Set Identifier(SSID) of the DevKit as well as the configuration portal IP address:
+Hold down button B, then push and release the reset button, then release button B. Your DevKit enters AP Mode for configuring WiFi. The screen displays the Service Set Identifier(SSID) of the DevKit as well as the configuration portal IP address:
 
 ![getting-started-wifi-ap]({{"/assets/images/getting-started/wifi-ap.jpg" | absolute_url }})
 
 ### B. Connect to DevKit AP
 
-Now, use another WiFi enabled device (PC or mobile phone) to connect to the DevKit SSID (highlighted in the screenshot above), leave the password empty.
+Now, use another WiFi enabled device (PC or mobile phone) to connect to the DevKit SSID (highlighted in the previous screenshot), leave the password empty.
 
 ![getting-started-ssid]({{"/assets/images/getting-started/connect-ssid.png" | absolute_url }})
 
@@ -65,26 +63,26 @@ Open the IP address shown on the DevKit screen on your PC or mobile phone browse
 
 ![getting-started-wifi-portal]({{"/assets/images/getting-started/wifi-portal.png" | absolute_url }})
 
-Once the connection succeeds, the DevKit will reboot in a few seconds. If succeeded, you will see the WiFi name and IP address on the screen:
+Once the connection succeeds, the DevKit will reboot in a few seconds. If succeeded, you can see the WiFi name and IP address on the screen:
 
 ![getting-started-wifi-ip]({{"/assets/images/getting-started/wifi-ip.jpg" | absolute_url }})
 
-**Note:** The IP address displayed in the photo may not match the actual IP assigned and displayed on the DevKit screen. This is normal as WiFi uses DHCP to dynamically assign IPs.
+**Note:** The IP address displayed in the photo may not match the actual IP assigned and displayed on the DevKit screen. It is normal as WiFi uses DHCP to dynamically assign IPs.
 {: .notice--info}
 
-After WiFi is configured, your credentials will be persisted on the device for that connection, even if unplugged. For example, if you configured the DevKit for WiFi in your home and then took the DevKit to the office, you will need to reconfigure AP mode (starting at step 3A) to connect the DevKit to your office WiFi. 
+After WiFi is configured, your credentials will be persisted on the device for that connection, even if unplugged. For example, if you configured the DevKit for WiFi in your home and then took the DevKit to the office, you need to reconfigure AP mode (starting at step 3A) to connect the DevKit to your office WiFi. 
 
 ## Step 4. Start using DevKit
 
-The default app running on DevKit will check the latest version of the firmware and display some sensor diagnosis data for you.
+The default app running on DevKit checks the latest version of the firmware and display some sensor diagnosis data for you.
 
 ### A. Upgrade to the latest firmware
 
-You will be prompted on the screen both the current and latest firmware version if there is an upgrade needed. Follow [Upgrade firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) guide to upgrade it.
+If there is an upgrade needed, you will be prompted on the screen both the current and latest firmware version . Follow [Upgrade firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) guide to upgrade it.
 
 ![getting-started-firmware]({{"/assets/images/getting-started/firmware.jpg" | absolute_url }})
 
-**Note:** This is a one-time effort, once you start developing on the DevKit and upload your app, you will have the latest firmware come with your app.
+**Note:** This is a one-time effort, once you start developing on the DevKit and upload your app, you have the latest firmware come with your app.
 {: .notice--info}
 
 ### B. Test various sensors
@@ -105,11 +103,11 @@ We encourage you to use the installation package to prepare the development envi
 
 #### A. Download latest package
 
-The `.zip` file you download contains all necessary tools and packages required for DevKit development.
+The downloaded `.zip` file contains all necessary tools and packages required for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_install_1.0.1.zip){: .click-action-tracker .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/prod/installpackage/devkit_install_1.0.2.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
-**MD5:** 01527cb5c349601452d1f5546149f3be
+**MD5:** 24ab829108ec7397929fe3b9409c617d
 {: .notice}
 
 > The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
@@ -118,7 +116,7 @@ The `.zip` file you download contains all necessary tools and packages required 
 > * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"}: Lightweight code editor for DevKit development
 > * [Visual Studio Code extension for Arduino](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino){:target="_blank"}: Enables Arduino development in VS Code
 > * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: The extension for Arduino relies on this tool
-> * DevKit Board Package: Tool chains, libraries and projects for the DevKit
+> * DevKit Board Package: Tool chains, libraries, and projects for the DevKit
 > * ST-Link Utility: Essential utilities and drivers
 
 #### B. Run installation script
@@ -127,7 +125,7 @@ In Windows File Explorer, locate the `.zip` and extract it, find `install.cmd`, 
 
 ![getting-started-run-admin]({{"/assets/images/getting-started/run-admin.png" | absolute_url }})
 
-During installation, you will see the progress of each tool or package.
+During installation, you see the progress of each tool or package.
 
 ![getting-started-install]({{"/assets/images/getting-started/install.png" | absolute_url }})
 
@@ -174,9 +172,9 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
 2. Download `.zip` file containing task scripts required for DevKit development in VS Code.
 
-  [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.0.1.zip){: .click-action-tracker .btn .btn--success .btn--large}
+  [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.0.2.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
-  **MD5:** 64a305abd4ef7bd8a16a25bda173bd11
+  **MD5:** 62d9f33ce7bf8227c4643c784a6e86da
   {: .notice}
 
   Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:
@@ -199,7 +197,7 @@ Visual Studio Code allows you to install Marketplace extensions directly in the 
 
 #### F. Install DevKit board package
 
-You will need to add the DevKit board using the Boards Manager in Visual Studio Code.
+You will need to add the DevKit board using the Board Manager in Visual Studio Code.
 
 1. Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 

@@ -57,9 +57,6 @@
                 });
             }
         }
-    
-        // click track
-        $('.click-action-tracker').click(trackClickNumber);
 
         $(window).scroll(tocScroll);
 
@@ -164,35 +161,29 @@
         }
     }
 
-    var trackClickNumber = function () {
-        var url = $(this).attr('href');
-        var newWindow = $(this).attr('target');
-        var category = 'Download';
-        this.className.split(' ').forEach(function(className){
-            var nameString = 'click-tracker-name';
-            if (className.indexOf(nameString) == 0){
-                category = className.substring(nameString.length + 2);
-            }
-        });
-        var redirect = false;
-        ga('send', 'event', category, 'click', url, {
-            'hitCallback': function(){
-                redirect = true;
-                if (newWindow != '_blank'){
+    var trackClickNumber = function (element) {
+        var url = $(element).attr('href');
+        var redirect = true;
+        if (dataLayer){
+            dataLayer.push({
+                event: 'gtm.linkClick',
+                eventTimeout: 2000,
+                eventCallback: function() {
+                    redirect = false;
                     document.location = url;
-                }
-            }
-        });
-        setTimeout(function(){
-            if (!redirect){
-                if (newWindow != '_blank'){
-                    document.location = url;
-                }
-            }
-        }, 1500);
-        if (newWindow == '_blank'){
-            return true;
+                },
+                'gtm.element': element,
+                'gtm.elementUrl': url,
+                'gtm.elementClass': $(element).attr('class') ? $(element).attr('class') : '',
+                'gtm.elementId': $(element).attr('id') ? $(element).attr('id') : '',
+                'gtm.elementTarget': $(element).attr('target') ? $(element).attr('target') : ''
+            });
         }
+
+        setTimeout(function() {
+            if (redirect)
+                document.location = url;
+        }, 2000);
         return false;
     };
 
@@ -224,7 +215,10 @@
             $(this).click(function (event) {
                 var target = event.target;
                 if (!($(target).prop('className') == 'project-icon')) {
-                    document.location = $(this).find('.archive__item-title a').attr('href');
+                    var projectTitle = $(this).find('.archive__item-title a');
+                    if (projectTitle.length) {
+                        trackClickNumber(projectTitle[0]);
+                    }
                 }
             });
         });

@@ -35,6 +35,11 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 * Have your DevKit connected to WiFi
 * Prepare the development environment
 
+An active Azure subscription. If you do not have one, you can register via one of the methods:
+
+* Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
+* Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
+
 ## Step 1. Create an Azure IoT Suite
 
 1. Go to [Azure IoT Suite site](https://www.azureiotsuite.com/) and click **Create a new solution**.

@@ -72,24 +72,24 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : "google-tag-manager" # false (default), "google", "google-universal", "google-tag-manager" "custom"
   google:
-    tracking_id          : "UA-98097460-1" # Replace this with your ID, or delete
+    tracking_id          : "GTM-MVB7TDR" # Replace this with your ID, or delete
 
 
 # Site Author
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
-  avatar           : "/assets/images/michael-rose.jpg"
+  avatar           : "/assets/images/liya-du.jpg"
   bio              : *description
   location         : "Shanghai, China"
   email            :
-  uri              : "https://aka.ms/azure-iot-developer-kit"
+  uri              : "https://aka.ms/iot-devkit"
   facebook         : *facebook
   foursquare       :
   github           : "Microsoft/azure-iot-developer-kit"
   keybase          :
-  instagram        : "mmistakes"
+  instagram        : 
   linkedin         :
   pinterest        :
   stackoverflow    : # http://stackoverflow.com/users/123456/username

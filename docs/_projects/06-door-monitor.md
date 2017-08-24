@@ -41,6 +41,11 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 * Have your DevKit connected to WiFi
 * Prepare the development environment
 
+An active Azure subscription. If you do not have one, you can register via one of the methods:
+
+* Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
+* Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
+
 ## Step 1. Deploy SendGrid service in Azure
 
 [SendGrid](https://sendgrid.com/){:target="_blank"} is a cloud-based email delivery platform. We will use this service to send out email notifications.

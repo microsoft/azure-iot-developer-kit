@@ -19,13 +19,13 @@ Based on industry data and customer research, we believe Arduino has a powerful 
 
 ### Are you going to open-source the product?
 
-Yes, we will open source the firmware, toolchains and all samples. Also, the board itself will be [open-source hardware](https://www.arduino.cc/en/Main/FAQ#toc3){:target="_blank"}. That means we will release all original hardware design files.
+Yes, we open source the firmware, toolchains, and all samples. Also, the board itself will be [open-source hardware](https://www.arduino.cc/en/Main/FAQ#toc3){:target="_blank"}. That means we will release all original hardware design files.
 
 Our plan is to do that as soon as we reach a stage where the entire framework is stable.
 
-### Are you going to sell it?
+### Where can I buy it?
 
-Currently, we really want developer feedback and success stories using the DevKit to build IoT applications. With this in mind, we are going to distribute a limited number of DevKits for free. You can [register here](https://blogs.msdn.microsoft.com/iotdev/devkit-contact/), there are only a few simple questions.
+You can purchase the kit from our hardware partner's product page: [https://aka.ms/iot-devkit-purchase](https://aka.ms/iot-devkit-purchase){:target="_blank"}
 
 ## Installation
 
@@ -37,13 +37,13 @@ This could be due to putting the Windows command window in "Selection" mode. To 
 
 If you see **select** on the title, this means you are in Selection mode. It prevents refresh of the output, that is why you cannot see any progress.
 
-To resolve, press any key within the command window area and you will see **select** disappear in the title.
+To resolve, press any key within the command window area and you see **select** disappear in the title.
 
 ### Windows Defender SmartScreen prevented an unrecognized app error.
 
 ![getting-started-faq-select]({{"/assets/images/getting-started-faq-smartscreen.png" | absolute_url }})
 
-Sometimes SmartScreen will prevent applications you know are not bad – for example, it’s a CMD or VBS script.
+Sometimes SmartScreen prevents applications you know are not bad – for example, it’s a CMD or VBS script.
 
 To resolve, click on the **'More info'** link and then click the **'Run anyway'** button. You can check this [knowledge base article](https://www.itsupportguides.com/knowledge-base/windows-10/windows-defender-smartscreen-prevented-an-unrecognized-app-error/){:target="_blank"} for more details.
 
@@ -51,19 +51,19 @@ To resolve, click on the **'More info'** link and then click the **'Run anyway
 
 ### Cannot connect to a WiFi hotspot.
 
-This may be because the WiFi network needs extra certification (other than WPA/WPA2) or open WiFi requires a captive portal to login such as Starbucks WiFi.
+This may be because the WiFi network needs extra certification (other than WPA/WPA2) or open WiFi requires a captive portal to log in such as Starbucks WiFi.
 
 To resolve, try to use WiFi with normal WPA/WPA2 authentication.
 
-### Cannot connect to 5GHz WiFi.
+### Cannot connect to 5 GHz WiFi.
 
-Currently, DevKit only can connect to 2.4GHz WiFi, 5GHz is not supported due to hardware restrictions.
+Currently, DevKit only can connect to 2.4 GHz WiFi, 5 GHz is not supported due to hardware restrictions.
 
 ## Cloud Provisioning
 
 ### Cannot log in Azure as access token expired.
 
-Due to a previous Azure log in, your access token may have expired. 
+Due to a previous Azure login, your access token may have expired. 
 
 To fix, delete the web browser history that includes login data and run the provisioning task again. Alternatively, you can try to log in to Azure manually by launching Command Prompt and running `az login`.
 
@@ -79,7 +79,7 @@ This is because Azure IoT Hub only allows [one free hub per Azure subscription](
 
 ### Visual Studio Code cannot find Arduino IDE
 
-Occasionally, when you launch Visual Studio Code, you will be prompted with an error message that it cannot find the Arduino IDE or related board package.
+Occasionally, when you launch Visual Studio Code, you are prompted with an error message that it cannot find the Arduino IDE or related board package.
 
 To resolve, close Visual Studio Code, then launches the actual Arduino IDE once. Subsequently, when you open Visual Studio Code it should correctly locate the Arduino IDE path.
 

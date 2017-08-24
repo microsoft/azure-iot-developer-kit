@@ -13,12 +13,12 @@ Follow these steps to upgrade your DevKit firmware to [latest version]({{"/versi
 
 ### Step 1. Connect DevKit to your computer via USB
 
-Once the DevKit is connected, in Windows you will see a new USB mass storage device in Windows Explorer called `AZ3166`. 
+Once the DevKit is connected, in Windows you see a new USB mass storage device in Windows Explorer called `AZ3166`. 
 
 ### Step 2. Upgrade firmware
 
 1. Download the latest firmware: 
- [devkit-firmware-1.0.1.bin](https://azureboard.azureedge.net/firmware/devkit-firmware-1.0.1.bin)
+ [devkit-firmware-1.0.2.bin](https://azureboard.azureedge.net/firmware/devkit-firmware-1.0.2.bin)
 
 2. Drag & drop the `.bin` file you downloaded to `AZ3166` device.
 
@@ -45,6 +45,7 @@ Make sure you have gone through getting started tutorial to [prepare your develo
 1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 
 2. Click **Refresh Package Indexes** to update board packages information.
+  ![upgrading-refresh]({{"/assets/images/upgrading-refresh.png" | absolute_url}})
 
 3. Search for 'az3166', select the latest version and click **Update**:
   ![upgrading-board-package]({{"/assets/images/upgrading-board-package.png" | absolute_url}})

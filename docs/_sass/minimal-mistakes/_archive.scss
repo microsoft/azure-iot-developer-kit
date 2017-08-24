@@ -71,6 +71,10 @@
 .archive__item:hover {
   .archive__item-teaser {
     // box-shadow: 0 0 10px rgba(#000, 0.25); // Original
+
+    img {
+      opacity: 0.85;
+    }
   }
 
   .archive__item-title {
@@ -114,13 +118,19 @@
   }
 
   .archive__item {
+    position: relative;
     background-color: #fff;
     border-radius: $border-radius;
-    box-shadow: 0 0 3px rgba(#000, 0.15);
+    box-shadow: 0 0 2px rgba(#000, 0.15);
   }
 
   .archive__item-body {
-    padding: 0 1em;
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    padding: 2em 1em;
+    background: linear-gradient(180deg, rgba(#000, 0), #000);
   }
 
   .archive__item-title {
@@ -135,6 +145,14 @@
 
   @include breakpoint($small) {
     @include gallery(5 of 10);
+
+    .archive__item-body {
+      position: static;
+      color: inherit;
+      padding: 0 1em;
+      background: none;
+    }
+
     .archive__item-teaser {
       max-height: 200px;
     }
@@ -147,7 +165,6 @@
 
     .archive__item {
       height: 348px;
-      min-height: 298px;
     }
 
     .archive__item-teaser {

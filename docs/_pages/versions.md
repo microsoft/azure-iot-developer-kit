@@ -2,14 +2,33 @@
 permalink: /versions/
 title: "Versions and Release Notes"
 excerpt: "Versions and release notes"
-last_modified_at: 2017-07-13
+last_modified_at: 2017-08-10
 ---
 
 {% include toc icon="columns" %}
 
 ## Version 1.0.2 (August 10)
 
-TBD
+Summer does not mean slow down. We further enriched our project catalog and tuned their performances. And from our user feedback, we added the logic to detect the latest firmware so that you will no longer miss our new stuff.
+
+### Release Summary
+
+* Firmware
+  * Enabled detection of latest firmware version and display on the screen.
+
+* Arduino Library
+  * Added support for audio playback API.
+
+* Project Catalog
+  * Added 'DevKit Translator' example for DevKit to understand more languages :robot:.
+  * Added 'Door Monitor' example uses third party email service to send notifications.
+  * Replaced manual steps with VS Code tasks for 'Connect to Azure IoT Hub' example.
+  * Improve Azure Functions stability and performance used by examples.
+  * Improve the telemetry API, and add more telemetry for 'Shake Shake' to track the running status.
+
+* Development Tools
+  * Adapted VS Code task for all sample projects to remove tedious manual steps.
+  * Bug fix: Occasionally installation will fail to set Arduino custom board URL.
 
 ## Version 1.0.1 (July 13)
 
@@ -17,7 +36,7 @@ The optimization continues. We are now supporting VS Code tasks on macOS as well
  
 ### Release Summary
  
-* Installation Scripts 
+* Installation Package 
   * Removed the dependency of Python installation by using Windows Azure CLI 2.0 MSI (v 2.0.9).
   * Upgraded to the latest version of VS Code (v 1.13.1) and Arduino Extension (v 0.2.4).
   * Switched to Azure CDN to accelerate the package downloading speed.
@@ -42,7 +61,7 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
 
 * Show version number for the default app
  
-* Installation Scripts
+* Installation Package
   * Installed pip with `get-pip.py` script.
   * Optimized error handling when running commands.
   * Adapted to updates of Azure subscription return format using Azure CLI.
