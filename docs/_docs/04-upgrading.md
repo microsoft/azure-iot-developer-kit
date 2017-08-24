@@ -45,6 +45,7 @@ Make sure you have gone through getting started tutorial to [prepare your develo
 1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
 
 2. Click **Refresh Package Indexes** to update board packages information.
+  ![upgrading-refresh]({{"/assets/images/upgrading-refresh.png" | absolute_url}})
 
 3. Search for 'az3166', select the latest version and click **Update**:
   ![upgrading-board-package]({{"/assets/images/upgrading-board-package.png" | absolute_url}})
