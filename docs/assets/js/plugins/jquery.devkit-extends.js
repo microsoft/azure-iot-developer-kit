@@ -61,6 +61,8 @@
         $(window).scroll(tocScroll);
 
         projectCardClick();
+        projectCardDifficultyColor();
+        faqMenu();
     };
 
     var tocScroll = function () {
@@ -210,13 +212,67 @@
     var projectCardClick = function() {
         $('.grid__item').each(function() {
             $(this).css('cursor', 'pointer');
-            $(this).click(function() {
-                var projectTitle = $(this).find('.archive__item-title').find('a');
-                if (projectTitle.length) {
-                    trackClickNumber(projectTitle[0]);
+            $(this).click(function (event) {
+                var target = event.target;
+                if (!($(target).prop('className') == 'project-icon')) {
+                    var projectTitle = $(this).find('.archive__item-title a');
+                    if (projectTitle.length) {
+                        trackClickNumber(projectTitle[0]);
+                    }
                 }
-            })
-        })
+            });
+        });
+    }
+
+    var projectCardDifficultyColor = function() {
+        $('p.project-difficulty').each(function() {
+            var difficulty = $(this).html().trim().toLocaleLowerCase();
+            if (difficulty == 'easy') {
+                $(this).css('background', '#8fc31f');
+            } else if (difficulty == 'medium') {
+                $(this).css('background', '#f98f40');
+            } else if (difficulty == 'hard') {
+                $(this).css('background', '#f05a2d');
+            }
+        });
+    }
+
+    var faqMenu = function() {
+        if ($('h1').length && $('h1').html().trim() == 'Frequently Asked Questions') {
+            var pageContent = $('.page__content').children();
+            if (pageContent.length) {
+                var pageFront = pageContent[0];
+                $('.page__content').children('h2, h3').each(function() {
+                    if ($(this).prop('tagName') == 'H2') {
+                        $(pageFront).before($(this).clone().removeAttr('id'));
+                        $(pageFront).prev().addClass('faq-menu-h2');
+                    } else {
+                        $(pageFront).before('<li class="faq-menu-li"><a href="#' + $(this).attr('id') + '" class="faq-menu-a">' + $(this).html());
+                        $(pageFront).prev().find('a').smoothScroll({offset: -20});
+                    }
+                })
+                $(pageFront).before('<hr class="faq-menu-hr">');
+            }
+            $('.faq-back-to-top').css('left', $('.page__content').position().left + $('.page__content').width());
+            BackToTopDisplay();
+            $(window).resize(function() {
+                $('.faq-back-to-top').css('left', $('.page__content').position().left + $('.page__content').width());
+                BackToTopDisplay();
+            });
+            $(window).scroll(BackToTopDisplay);
+            $('.faq-back-to-top').click(function() {
+                $('body').animate({scrollTop: 0}, 500);
+                return false;
+            });
+        }
+    }
+
+    var BackToTopDisplay = function() {
+        if ($(window).scrollTop() > 20 && window.innerWidth >= 1024){
+            $('.faq-back-to-top').css('display', 'block');
+        } else {
+            $('.faq-back-to-top').css('display', 'none');
+        }
     }
 
 }(jQuery, window));

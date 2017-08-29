@@ -16,6 +16,14 @@ layouts_gallery:
   - url: /assets/images/mini-solution/shake-shake/result-3.jpg
     image_path: /assets/images/mini-solution/shake-shake/result-3.jpg
     alt: "Display a random tweet"
+icons:
+  - url: /assets/images/icon-iot-hub.svg
+    target: https://azure.microsoft.com/en-us/services/iot-hub/
+    title: IoT Hub
+  - url: /assets/images/icon-azure-functions.svg
+    target: https://azure.microsoft.com/en-us/services/functions/
+    title: Azure Functions
+difficulty: MEDIUM
 last_modified_at: 2017-07-05
 ---
 

@@ -6,6 +6,11 @@ header:
   overlay_image: /assets/images/projects-iothub.jpg
   overlay_full: true
   teaser: /assets/images/projects-iothub-th.jpg
+icons:
+  - url: /assets/images/icon-iot-hub.svg
+    target: https://azure.microsoft.com/en-us/services/iot-hub/
+    title: IoT Hub
+difficulty: EASY
 last_modified_at: 2017-06-28
 ---
 

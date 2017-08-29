@@ -25,6 +25,17 @@ layouts_gallery:
   - url: /assets/images/mini-solution/devkit-translator/result-6.jpg
     image_path: /assets/images/mini-solution/devkit-translator/result-6.jpg
     alt:  "Translation"
+icons:
+  - url: /assets/images/icon-iot-hub.svg
+    target: https://azure.microsoft.com/en-us/services/iot-hub/
+    title: IoT Hub
+  - url: /assets/images/icon-azure-functions.svg
+    target: https://azure.microsoft.com/en-us/services/functions/
+    title: Azure Functions
+  - url: /assets/images/icon-cognitive-services.svg
+    target: https://azure.microsoft.com/en-us/services/cognitive-services/?v=17.29
+    title: Cognitive Services
+difficulty: MEDIUM
 last_modified_at: 2017-07-17
 ---
 
