@@ -1,0 +1,5 @@
+<div class="feedback-btns">
+  <h3> Was this documentation helpful? </h3>
+  <button class="feedback-btn" onclick="$.feedbackDisappeared();$.feedbackButtonClick('{{ include.tutorial }}-complete');"> Yes </button>
+  <button class="feedback-btn" onclick="$.reportIssue('{{ include.tutorial }}');$.feedbackButtonClick('{{ include.tutorial }}-issureReport');"> No </button>
+</div>

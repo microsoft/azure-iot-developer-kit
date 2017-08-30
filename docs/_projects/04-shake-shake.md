@@ -151,3 +151,5 @@ It normally happens for the first time you deploy and run the sample. This is be
 ### Feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter other problems or reach out to us from the channels below.
+
+{% include feedback.html tutorial="shake-shake" %}

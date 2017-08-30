@@ -63,6 +63,43 @@
         projectCardClick();
     };
 
+    $.reportIssue = function(tutorial) {
+        var step = tutorial;
+        $('body').append('<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="$.closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/N9F3LCY?tutorial='+tutorial+'&step='+step+'"></iframe></div></div></div>');
+    }
+
+    $.closeReportIssue = function() {
+        $('#surveypopup').remove();
+        $.feedbackDisappeared();
+    }
+
+    $.feedbackDisappeared = function() {
+        $('.feedback-btns').animate({opacity: 0}, 400, 'swing', function() {
+            $('.feedback-btns').html('<h3> Thank you! </h3><p> We appreciate your feedback. </p>').animate({opacity: 1});
+        });
+        setTimeout(function() {
+            $('.feedback-btns').fadeOut(500);
+        }, 2000);
+    }
+
+    $.feedbackButtonClick = function(eventName) {
+        try {
+            amplitude.getInstance().logEvent(eventName);
+        } catch(e) {
+            console.log('ampltitude error: '+e);
+        }
+    
+        try {
+            ga('send', 'event', {
+                eventCategory: 'stepFinished',
+                eventAction: 'click',
+                eventLabel: eventName
+                });
+        } catch(e) {
+            console.log('ga error: '+e);
+        }
+    }
+
     var tocScroll = function () {
         $('.toc__menu a').removeClass('toc__menu_active');
         var scrollTop = $(this).scrollTop();
@@ -162,7 +199,7 @@
     var trackClickNumber = function (element) {
         var url = $(element).attr('href');
         var redirect = true;
-        if (dataLayer){
+        try {
             dataLayer.push({
                 event: 'gtm.linkClick',
                 eventTimeout: 2000,
@@ -176,6 +213,8 @@
                 'gtm.elementId': $(element).attr('id') ? $(element).attr('id') : '',
                 'gtm.elementTarget': $(element).attr('target') ? $(element).attr('target') : ''
             });
+        } catch (e) {
+            console.log('gtm error: ' + e);
         }
 
         setTimeout(function() {

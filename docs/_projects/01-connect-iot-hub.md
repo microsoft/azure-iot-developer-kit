@@ -100,6 +100,8 @@ The sample application is running successfully when you see the following result
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
 
+{% include feedback.html tutorial="happy-path" %}
+
 ## Next steps
 
 You have successfully connected an MXChip IoT DevKit to your IoT Hub, and sent the captured sensor data to your IoT hub.
