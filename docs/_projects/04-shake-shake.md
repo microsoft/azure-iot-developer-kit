@@ -16,6 +16,14 @@ layouts_gallery:
   - url: /assets/images/mini-solution/shake-shake/result-3.jpg
     image_path: /assets/images/mini-solution/shake-shake/result-3.jpg
     alt: "Display a random tweet"
+icons:
+  - url: /assets/images/icon-iot-hub.svg
+    target: https://azure.microsoft.com/en-us/services/iot-hub/
+    title: IoT Hub
+  - url: /assets/images/icon-azure-functions.svg
+    target: https://azure.microsoft.com/en-us/services/functions/
+    title: Azure Functions
+difficulty: MEDIUM
 last_modified_at: 2017-07-05
 ---
 
@@ -29,6 +37,11 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
 * Have your DevKit connected to WiFi
 * Prepare the development environment
+
+An active Azure subscription. If you do not have one, you can register via one of the methods:
+
+* Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
+* Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 
 ## Step 1. Open project folder
 

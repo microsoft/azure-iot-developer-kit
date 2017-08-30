@@ -16,6 +16,11 @@ layouts_gallery:
   - url: /assets/images/mini-solution/remote-monitoring/sensor-status.png
     image_path: /assets/images/mini-solution/remote-monitoring/sensor-status.png
     alt: "View sensor status"
+icons:
+  - url: /assets/images/icon-azure-iot-suite.svg
+    target: https://azure.microsoft.com/en-us/suites/iot-suite/
+    title: Azure IoT Suite
+difficulty: EASY
 last_modified_at: 2017-06-28
 ---
 
@@ -29,6 +34,11 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
 * Have your DevKit connected to WiFi
 * Prepare the development environment
+
+An active Azure subscription. If you do not have one, you can register via one of the methods:
+
+* Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
+* Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 
 ## Step 1. Create an Azure IoT Suite
 

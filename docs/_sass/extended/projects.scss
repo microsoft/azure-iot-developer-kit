@@ -1,0 +1,52 @@
+.grid__item p.project-icon-title {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  color: #494e56;
+  bottom: 0;
+  margin-bottom: 28px;
+  background: #fff;
+  padding: 0 5px;
+  border: 1px solid #008bf5;
+}
+
+img.project-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+div.project-icon-div {
+  white-space:nowrap;
+  float: left;
+  position: relative;
+}
+
+div.project-icons-div {
+  position: absolute;
+  bottom: 16px;
+}
+
+.grid__item .archive__item {
+  position: relative;
+
+  @include breakpoint($x-large) {
+    height: 328px;
+  }
+}
+
+img.project-icon:hover + p.project-icon-title {
+  display: block;
+}
+
+p.project-difficulty {
+  position: absolute;
+  border-radius: 2px;
+  color: #f1f1f1;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 1px 14px 2px;
+  margin: 12px 14px;
+  z-index: 2;
+}
