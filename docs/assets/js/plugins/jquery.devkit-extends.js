@@ -63,22 +63,23 @@
         projectCardClick();
     };
 
-    $.reportIssue = function(tutorial) {
-        var step = tutorial;
-        $('body').append('<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="$.closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/N9F3LCY?tutorial='+tutorial+'&step='+step+'"></iframe></div></div></div>');
-    }
-
-    $.closeReportIssue = function() {
-        $('#surveypopup').remove();
-        $.feedbackDisappeared();
+    $.reportIssue = function() {
+        $('.feedback-btns').fadeOut(400, function() {
+            $('.survey-monkey').fadeIn(400);
+        });
+        $('.survey-monkey iframe').each(function() {
+            this.onload = function() {
+                $(this).fadeOut(400, $.feedbackDisappeared);
+            }
+        });
     }
 
     $.feedbackDisappeared = function() {
-        $('.feedback-btns').animate({opacity: 0}, 400, 'swing', function() {
-            $('.feedback-btns').html('<h3> Thank you! </h3><p> We appreciate your feedback. </p>').animate({opacity: 1});
+        $('.feedback-btns').fadeOut(400, function() {
+            $('.feedback-btns').html('<h3> Thank you! </h3><p> We appreciate your feedback. </p>').fadeIn(400);
         });
         setTimeout(function() {
-            $('.feedback-btns').fadeOut(500);
+            $('.feedback-btns').fadeOut(400);
         }, 2000);
     }
 
