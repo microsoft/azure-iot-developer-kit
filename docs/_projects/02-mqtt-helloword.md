@@ -6,6 +6,7 @@ header:
   overlay_image: /assets/images/projects-mqtt-helloworld.jpg
   overlay_full: true
   teaser: /assets/images/projects-mqtt-helloworld-th.jpg
+difficulty: EASY
 last_modified_at: 2017-06-28
 ---
 

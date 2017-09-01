@@ -135,6 +135,7 @@
 
   .archive__item-title {
     margin-top: 0.85em;
+    padding-bottom: 0.85em;
     font-size: $type-size-5;
   }
 
@@ -163,7 +164,7 @@
     @include gallery(3.333 of 10);
 
     .archive__item {
-      height: 298px;
+      height: 328px;
     }
 
     .archive__item-teaser {
@@ -173,6 +174,10 @@
     .archive__item-excerpt {
       display: block;
       font-size: $type-size-6;
+    }
+
+    .archive__item-title {
+      padding-bottom: 0;
     }
   }
 }
