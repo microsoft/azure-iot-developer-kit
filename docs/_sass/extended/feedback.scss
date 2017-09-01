@@ -28,7 +28,8 @@
   display: none;
 
   iframe {
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
     height: 410px;
     overflow: hidden;
     -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.35);
