@@ -131,6 +131,9 @@
 
   @each $socialnetwork, $color in $social {
     &--#{$socialnetwork} {
+      border-radius: 4000px; // Round
+      padding: 0.7em;
+      line-height: initial;
       background-color: $color;
 
       &:hover {
@@ -159,5 +162,5 @@
 }
 
 .btn + .btn {
-  margin-left: 1rem;
+  margin-left: 0.8rem;
 }
