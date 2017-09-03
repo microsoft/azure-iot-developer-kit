@@ -12,9 +12,18 @@ layouts_gallery:
     alt: "Arduino application initializing"
   - url: /assets/images/mini-solution/shake-shake/result-2.jpg
     image_path: /assets/images/mini-solution/shake-shake/result-2.jpg
-    alt: "Ready to shake"
+    alt: "Press A to shake"
   - url: /assets/images/mini-solution/shake-shake/result-3.jpg
     image_path: /assets/images/mini-solution/shake-shake/result-3.jpg
+    alt: "Ready to shake"
+  - url: /assets/images/mini-solution/shake-shake/result-4.jpg
+    image_path: /assets/images/mini-solution/shake-shake/result-4.jpg
+    alt: "Processing..."
+  - url: /assets/images/mini-solution/shake-shake/result-5.jpg
+    image_path: /assets/images/mini-solution/shake-shake/result-5.jpg
+    alt: "Press B to read"
+  - url: /assets/images/mini-solution/shake-shake/result-6.jpg
+    image_path: /assets/images/mini-solution/shake-shake/result-6.jpg
     alt: "Display a random tweet"
 icons:
   - url: /assets/images/icon-iot-hub.svg
