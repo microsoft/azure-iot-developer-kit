@@ -56,7 +56,7 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 ### B. Open Arduino Examples folder
 
-Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `ShakeShake`.
+Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `ShakeShake`. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
@@ -82,7 +82,7 @@ Replace the string `iot` in the curly brace with your preferred hashtag. And Dev
 
 ## Step 4. Deploy Azure Functions
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy'. It will start deploying the Azure Functions code. Normally it takes 2 to 5 minutes to finish:
+Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy'. It will start deploying the Azure Functions code:
 
 ![cloud-deploy]({{"/assets/images/mini-solution/shake-shake/cloud-deploy.png" | absolute_url }})
 
@@ -108,9 +108,6 @@ After app initialization, click button A and mildly shake the board to retrieve 
 - Press button A again, then shake for a new tweet.
 - Press button B to scroll through the rest of the tweet.
 
-**Note:** Sometimes you will see 'On processing...' status on screen without getting the results. You can try to click `Reset` button to restart the app.
-{: .notice--info}
-
 ## How it works
 
 ![diagram]({{"/assets/images/mini-solution/shake-shake/diagram.png" | absolute_url }})
@@ -130,12 +127,10 @@ This sample project uses a pre-configured Twitter bearer token for testing purpo
 4. In the [Azure portal](https://portal.azure.com/){:target="_blank"}, get into the **Resource Group** and find the Azure Function (Type: App Service) for your "Shake, Shake" project. The name always contains 'shake...' string.
   ![azure-function]({{"/assets/images/mini-solution/shake-shake/azure-function.png" | absolute_url }})
 
-5. Update the code for `index.js` within **Functions > myFunc** with your own token:
-  ```javascript
+5. Update the code for `run.csx` within **Functions > shakeshake-cs** with your own token:
+  ```csharp
   ...
-  headers: {
-      'Authorization': 'Bearer ' + '[your own token]'
-  }
+  string authHeader = "Bearer " + "[your own token]";
   ...
   ```
   ![twitter-token]({{"/assets/images/mini-solution/shake-shake/twitter-token.png" | absolute_url }})

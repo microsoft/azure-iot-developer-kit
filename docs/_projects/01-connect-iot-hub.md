@@ -49,7 +49,7 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 ### B. Open Arduino Examples folder
 
-Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `GetStarted`.
+Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `GetStarted`. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
@@ -69,7 +69,8 @@ In the VS Code terminal, an interactive command line guides you through provisio
 
 1. Press `F1` or `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Library Manager**.
 
-2. Search for `ArduinoJson` library and click **Install**
+2. Search for `ArduinoJson` library and click **Install**:
+  ![arduino-json]({{"/assets/images/mini-solution/connect-iothub/arduino-json.png" | absolute_url }})
 
 ### B. Build and upload the device code
 
