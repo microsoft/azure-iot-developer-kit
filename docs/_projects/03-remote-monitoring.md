@@ -80,7 +80,7 @@ An active Azure subscription. If you do not have one, you can register via one o
   * Preview README.md: The DevKit introduction page.
   * Arduino Examples: Hands-on samples to get started with DevKit.
 
-4. On the **Arduino Examples page**, expand `Examples for MXCHIP AZ3166 > AzureIoT`, and then click **RemoteMonitoring**. The RemoteMonitoring sample opens in a new VS Code window.
+4. Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT`, and then click **RemoteMonitoring**. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 

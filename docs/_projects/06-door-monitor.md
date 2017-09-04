@@ -110,20 +110,20 @@ Then, you will see the following page (or you should first sign in to the Azure)
 
 ![IoTHub Deploy]({{"/assets/images/mini-solution/door-monitor/iot-hub-deploy.png" | absolute_url }})
 
-## Step 3. Build and Upload anduino sketch
+## Step 3. Build and Upload Arduino sketch
 
 ### A. Launch VS Code
 
 Make sure your DevKit is not connected. Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
 
-![VSCode]({{"/assets/images/mini-solution/door-monitor/vscode.png" | absolute_url }})
+![VSCode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
 **Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
 ### B. Open Arduino Examples folder
 
-Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DoorMonitor`.
+Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DoorMonitor`.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
