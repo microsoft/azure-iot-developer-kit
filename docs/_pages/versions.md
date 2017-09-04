@@ -7,6 +7,30 @@ last_modified_at: 2017-08-10
 
 {% include toc icon="columns" %}
 
+## Version 1.1 (September 4)
+
+**Notice:** This release involves breaking changes, please [upgrade the DevKit firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
+{: .notice--warning}
+
+DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure-mcus/stsafe-a100.html){:target="_blank"}, the security chip that provides secure authentication and data management for IoT solutions. Since it's enabled on bootloader level, a [firmware upgrade]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) is mandatory to make the DevKit work properly.
+
+### Release Summary
+
+* Firmware
+  * Upgraded the DevKit firmware to enable STSAFE.
+  * Bug fix: Under bad network environment, the Device SDK in mbed OS occasionally crashes.
+  * Added more NTP servers for better globalization support.
+
+* Arduino Library
+  * Tuned OLED library display performance.
+
+* Project Catalog
+  * Massively improved Azure Functions deployment(`task cloud-deploy`) performance.
+  * Improved 'Shake, Shake' example flow further by adding more logging data on the display.
+
+* Development Tools
+  * Visual Studio Code extension for Arduino now used tree view to display Arduino examples.
+
 ## Version 1.0.2 (August 10)
 
 Summer does not mean slow down. We further enriched our project catalog and tuned their performances. And from our user feedback, we added the logic to detect the latest firmware so that you will no longer miss our new stuff.
