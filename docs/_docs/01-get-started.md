@@ -105,9 +105,9 @@ We encourage you to use the installation package to prepare the development envi
 
 The downloaded `.zip` file contains all necessary tools and packages required for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/prod/installpackage/devkit_install_1.0.2.zip){: .click-action-tracker .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/prod/installpackage/devkit_install_1.1.0.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
-**MD5:** 24ab829108ec7397929fe3b9409c617d
+**MD5:** 94cdaf37b3d0f12e3d6523e412a89a71
 {: .notice}
 
 > The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
@@ -172,9 +172,9 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
 2. Download `.zip` file containing task scripts required for DevKit development in VS Code.
 
-  [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.0.2.zip){: .click-action-tracker .btn .btn--success .btn--large}
+  [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.1.0.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
-  **MD5:** 62d9f33ce7bf8227c4643c784a6e86da
+  **MD5:** 215a2e9b26e8d0f8d296986d31597c02
   {: .notice}
 
   Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:
