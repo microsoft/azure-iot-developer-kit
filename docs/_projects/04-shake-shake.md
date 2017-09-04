@@ -110,7 +110,7 @@ The DevKit will reboot and start running the code.
 
 ## Test the project
 
-After app initialization, click button A and mildly shake the board to retrieve a random tweet with your hashtag (e.g. #build2017). A tweet will display on your screen in a few seconds:
+After app initialization, click button A and mildly shake the board to retrieve a random tweet with your hashtag (e.g. #iot). A tweet will display on your screen in a few seconds:
 
 {% include gallery id="layouts_gallery" caption="Shake, shake for a random tweet with #hashtag you set in the code." %}
 
