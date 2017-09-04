@@ -78,6 +78,9 @@ The default app running on DevKit checks the latest version of the firmware and 
 
 ### A. Upgrade to the latest firmware
 
+**Notice:** Since v1.1, DevKit enables ST-SAFE in bootloader. You need to upgrade firmware if you are running under v1.1 in order to make it work probably.
+{: .notice--warning}
+
 If there is an upgrade needed, you will be prompted on the screen both the current and latest firmware version . Follow [Upgrade firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) guide to upgrade it.
 
 ![getting-started-firmware]({{"/assets/images/getting-started/firmware.jpg" | absolute_url }})
