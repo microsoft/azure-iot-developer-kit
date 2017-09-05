@@ -63,7 +63,17 @@
         projectCardClick();
         projectCardDifficultyColor();
         faqMenu();
+
+        feedbackButtonFixed();
     };
+
+    $.closeReportIssue = function() {
+        $('#surveypopup').remove();
+    }
+     
+    $.reportIssuePopup = function(tutorial, step) {
+        $('body').append('<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="$.closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/N9F3LCY?tutorial='+tutorial+'&step='+step+'"></iframe></div></div></div>');    
+    }
 
     $.reportIssue = function() {
         $('.feedback-btns').fadeOut(400, function() {
@@ -101,6 +111,21 @@
         } catch(e) {
             console.log('ga error: '+e);
         }
+    }
+
+    var feedbackButtonFixed = function() {
+        var feedbackButtonFixedCallback = function() {
+            var articleTop = $('.page__content').position().top;
+            if (articleTop > $(window).scrollTop()){
+                $('.feedback-btn-fixed').css('bottom', 26 - (articleTop - $(window).scrollTop()));
+            } else {
+                $('.feedback-btn-fixed').css('bottom', '');
+            }
+        }
+
+        feedbackButtonFixedCallback();
+        $(window).scroll(feedbackButtonFixedCallback);
+        $(window).resize(feedbackButtonFixedCallback);
     }
 
     var tocScroll = function () {

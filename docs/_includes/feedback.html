@@ -6,3 +6,6 @@
 <div class="survey-monkey">
   <iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/N9F3LCY?tutorial={{ include.tutorial }}&step={{ include.step | default: include.tutorial }}"></iframe>
 </div>
+<div class="feedback-btn-fixed" onclick="$.reportIssuePopup('{{ include.tutorial }}', '{{ include.step | default: include.tutorial }}');$.feedbackButtonClick('{{ include.tutorial }}-issureReport');">
+  Report an Issue
+</div>
