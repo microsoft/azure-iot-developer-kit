@@ -11,6 +11,11 @@ icons:
     target: https://azure.microsoft.com/en-us/services/iot-hub/
     title: IoT Hub
 difficulty: EASY
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
 last_modified_at: 2017-06-28
 ---
 
@@ -72,13 +77,34 @@ In the VS Code terminal, an interactive command line guides you through provisio
 2. Search for `ArduinoJson` library and click **Install**:
   ![arduino-json]({{"/assets/images/mini-solution/connect-iothub/arduino-json.png" | absolute_url }})
 
-### B. Build and upload the device code
+### B. Build and upload device code
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+{% include switch.html content = page.variable %}
 
-Then it starts verifying and uploading the Arduino sketch:
+#### Windows
 
-![mini-solution-device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
+1. Use `Ctrl+P` to run 'task device-upload'.
+2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
+
+The DevKit will reboot and start running the code.
+
+#### macOS
+
+1. Put DevKit into configuration mode:
+  Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
+2. Use `Cmd+P` to run 'task device-upload'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
 
 The DevKit will reboot and start running the code.
 

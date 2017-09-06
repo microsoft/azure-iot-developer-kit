@@ -115,9 +115,9 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
 2. Download `.zip` file containing task scripts required for DevKit development in VS Code.
 
-  [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.1.0.zip){: .click-download-tracker .btn .btn--success .btn--large}
+  [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/prod/installpackage/devkit_tasks_mac_1.1.0.zip){: .click-download-tracker .btn .btn--success .btn--large}
 
-  **MD5:** 215a2e9b26e8d0f8d296986d31597c02
+  **MD5:** 5aac488ea530e5bdc9161145bb5d1254
   {: .notice}
 
   Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:

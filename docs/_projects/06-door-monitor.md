@@ -24,6 +24,11 @@ icons:
     target: https://sendgrid.com/partners/azure/
     title: SendGrid
 difficulty: MEDIUM
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
 last_modified_at: 2017-07-17
 ---
 
@@ -110,7 +115,7 @@ Then, you will see the following page (or you should first sign in to the Azure)
 
 ![IoTHub Deploy]({{"/assets/images/mini-solution/door-monitor/iot-hub-deploy.png" | absolute_url }})
 
-## Step 3. Build and Upload Arduino sketch
+## Step 3. Build and upload the code
 
 ### A. Launch VS Code
 
@@ -137,18 +142,36 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ![Cloud Provision]({{"/assets/images/mini-solution/door-monitor/cloud-prevision.jpg" | absolute_url }})
 
-### D. Build and upload Arduino sketch
+### D. Build and upload device code
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+{% include switch.html content = page.variable %}
 
-Then it will start verifying and uploading the Arduino sketch:
+#### Windows
 
-![Device Upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
+1. Use `Ctrl+P` to run 'task device-upload'.
+2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
 
 The DevKit will reboot and start running the code.
 
-**Notice:** If you are running on a clean machine with everything installed, during the verifying of the code phrase, you might get and error of **Unknown board AZ3166**. To work around this problem, open Arduino IDE and go to **Tool > Board manager**. Arduino will reload all json files for all package definitions. After it is done, you can launch VS Code again and try the build process, the problem should go away.
-{: .notice--warning}
+#### macOS
+
+1. Put DevKit into configuration mode:
+  Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
+2. Use `Cmd+P` to run 'task device-upload'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
+
+The DevKit will reboot and start running the code.
 
 ## Test the project
 
