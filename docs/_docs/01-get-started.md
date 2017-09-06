@@ -78,6 +78,9 @@ The default app running on DevKit checks the latest version of the firmware and 
 
 ### A. Upgrade to the latest firmware
 
+**Notice:** Since v1.1, DevKit enables ST-SAFE in bootloader. You need to upgrade firmware if you are running under v1.1 in order to make it work probably.
+{: .notice--warning}
+
 If there is an upgrade needed, you will be prompted on the screen both the current and latest firmware version . Follow [Upgrade firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) guide to upgrade it.
 
 ![getting-started-firmware]({{"/assets/images/getting-started/firmware.jpg" | absolute_url }})
@@ -105,9 +108,9 @@ We encourage you to use the installation package to prepare the development envi
 
 The downloaded `.zip` file contains all necessary tools and packages required for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/prod/installpackage/devkit_install_1.0.2.zip){: .click-action-tracker .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/prod/installpackage/devkit_install_1.1.0.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
-**MD5:** 24ab829108ec7397929fe3b9409c617d
+**MD5:** 94cdaf37b3d0f12e3d6523e412a89a71
 {: .notice}
 
 > The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
@@ -172,9 +175,9 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
 2. Download `.zip` file containing task scripts required for DevKit development in VS Code.
 
-  [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.0.2.zip){: .click-action-tracker .btn .btn--success .btn--large}
+  [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/prod/installpackage/devkit_tasks_mac_1.1.0.zip){: .click-action-tracker .btn .btn--success .btn--large}
 
-  **MD5:** 62d9f33ce7bf8227c4643c784a6e86da
+  **MD5:** 5aac488ea530e5bdc9161145bb5d1254
   {: .notice}
 
   Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:
@@ -218,6 +221,8 @@ You now have all the necessary tools and packages installed for macOS.
 ## Problems and feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from our [Gitter channel](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"}.
+
+{% include feedback.html tutorial="get-started" %}
 
 ## Next Steps
 

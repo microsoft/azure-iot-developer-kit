@@ -24,6 +24,11 @@ icons:
     target: https://sendgrid.com/partners/azure/
     title: SendGrid
 difficulty: MEDIUM
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
 last_modified_at: 2017-07-17
 ---
 
@@ -110,20 +115,20 @@ Then, you will see the following page (or you should first sign in to the Azure)
 
 ![IoTHub Deploy]({{"/assets/images/mini-solution/door-monitor/iot-hub-deploy.png" | absolute_url }})
 
-## Step 3. Build and Upload anduino sketch
+## Step 3. Build and upload the code
 
 ### A. Launch VS Code
 
 Make sure your DevKit is not connected. Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
 
-![VSCode]({{"/assets/images/mini-solution/door-monitor/vscode.png" | absolute_url }})
+![VSCode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
 **Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
 ### B. Open Arduino Examples folder
 
-Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DoorMonitor`.
+Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DoorMonitor`.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
@@ -137,18 +142,36 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ![Cloud Provision]({{"/assets/images/mini-solution/door-monitor/cloud-prevision.jpg" | absolute_url }})
 
-### D. Build and upload Arduino sketch
+### D. Build and upload device code
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+{% include switch.html content = page.variable %}
 
-Then it will start verifying and uploading the Arduino sketch:
+#### Windows
 
-![Device Upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
+1. Use `Ctrl+P` to run 'task device-upload'.
+2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
 
 The DevKit will reboot and start running the code.
 
-**Notice:** If you are running on a clean machine with everything installed, during the verifying of the code phrase, you might get and error of **Unknown board AZ3166**. To work around this problem, open Arduino IDE and go to **Tool > Board manager**. Arduino will reload all json files for all package definitions. After it is done, you can launch VS Code again and try the build process, the problem should go away.
-{: .notice--warning}
+#### macOS
+
+1. Put DevKit into configuration mode:
+  Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
+2. Use `Cmd+P` to run 'task device-upload'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
+
+The DevKit will reboot and start running the code.
 
 ## Test the project
 
@@ -162,3 +185,5 @@ The program would first initialize with a stable magnetic field. After initializ
 ## Problems and feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+
+{% include feedback.html tutorial="door-monitor" %}

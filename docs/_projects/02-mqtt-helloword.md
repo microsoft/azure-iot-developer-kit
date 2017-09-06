@@ -37,10 +37,9 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
 ## Step 2. Open the MQTTClient Sample
 
-On the **Arduino Examples** page, expand `Examples for MXCHIP AZ3166 > MQTT` and then click `MQTTClient`.
-The MQTTClient example opens in a new VS Code window.
+Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > MQTT` and then click `MQTTClient`. This will open a new VS Code window with project folder in it.
 
-![examples-folder]({{"/assets/images/mini-solution/mqtt-helloworld/examples-folder.jpg" | absolute_url}})
+![examples-folder]({{"/assets/images/mini-solution/mqtt-helloworld/examples.png" | absolute_url}})
 
 If the Arduino Examples page does not show up, open it by the following steps:
 
@@ -76,6 +75,8 @@ The Serial Monitor displays all the messages sent from the sample. When the samp
 ## Problems and feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+
+{% include feedback.html tutorial="mqtt-helloworld" %}
 
 ## See Also
 

@@ -1,0 +1,125 @@
+.feedback-btns {
+  display: block;
+  padding: 20px;
+  background: #d6ebff;
+
+  h3 {
+    font-size: 16px;
+    margin: 0 0 20px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 5px 0;
+    margin: 0;
+  }
+
+  .feedback-btn {
+    font-size: 14px;
+    padding: 5px 20px;
+    margin-right: 5px;
+    background: #1e6bb8;
+    border: 1px solid #f1f1f1;
+    color: #f1f1f1;
+  }
+}
+
+.survey-monkey {
+  display: none;
+
+  iframe {
+    width: 100%;
+    max-width: 420px;
+    height: 410px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.35);
+  }
+}
+  
+.feedback-btn-fixed {
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  cursor: pointer;
+
+  position: fixed;
+  right: 10px;
+  bottom: 26px;
+  font-size: 16px;
+  padding: 20px 5px;
+  background: #1e6bb8;
+  border: 1px solid #f1f1f1;
+  color: #f1f1f1;
+
+  display: none;
+
+  @include breakpoint($large) {
+    display: block;
+  }
+}
+
+/* below css only for pop up*/
+#surveypopup.overlay {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  height:100%;
+}
+
+#surveypopup.overlay.visible {
+  visibility: visible !important;
+  opacity: 1;
+  z-index: 2;
+}
+
+#surveytitle {
+  height: 35px; 
+  background-color:#0078d7; 
+  color:#f1f1f1;
+  padding-top: 8px; 
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+#surveytitle a {
+  float: right;
+  padding-right: 20px;
+  font-weight: bold;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+#surveytitle a:hover {
+  text-decoration: none;
+}
+
+#surveydiv {
+  padding: 20px;
+}
+
+#surveydiv iframe {
+  width: 420px;
+  height: 410px;
+  overflow:hidden;
+}
+
+#surveypopup .surveypopup {
+  visibility: visible;
+  width: 460px;
+  background-color: #f1f1f1;
+  margin: 0 auto;
+  position: fixed;
+  top: 15%;
+  left:40%;
+  overflow: hidden;
+  z-index: 3;
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.35);
+  box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.35);
+}

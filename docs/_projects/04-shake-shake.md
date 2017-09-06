@@ -12,9 +12,18 @@ layouts_gallery:
     alt: "Arduino application initializing"
   - url: /assets/images/mini-solution/shake-shake/result-2.jpg
     image_path: /assets/images/mini-solution/shake-shake/result-2.jpg
-    alt: "Ready to shake"
+    alt: "Press A to shake"
   - url: /assets/images/mini-solution/shake-shake/result-3.jpg
     image_path: /assets/images/mini-solution/shake-shake/result-3.jpg
+    alt: "Ready to shake"
+  - url: /assets/images/mini-solution/shake-shake/result-4.jpg
+    image_path: /assets/images/mini-solution/shake-shake/result-4.jpg
+    alt: "Processing..."
+  - url: /assets/images/mini-solution/shake-shake/result-5.jpg
+    image_path: /assets/images/mini-solution/shake-shake/result-5.jpg
+    alt: "Press B to read"
+  - url: /assets/images/mini-solution/shake-shake/result-6.jpg
+    image_path: /assets/images/mini-solution/shake-shake/result-6.jpg
     alt: "Display a random tweet"
 icons:
   - url: /assets/images/icon-iot-hub.svg
@@ -24,6 +33,11 @@ icons:
     target: https://azure.microsoft.com/en-us/services/functions/
     title: Azure Functions
 difficulty: MEDIUM
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
 last_modified_at: 2017-07-05
 ---
 
@@ -56,7 +70,7 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 ### B. Open Arduino Examples folder
 
-Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `ShakeShake`.
+Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `ShakeShake`. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
@@ -82,34 +96,49 @@ Replace the string `iot` in the curly brace with your preferred hashtag. And Dev
 
 ## Step 4. Deploy Azure Functions
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy'. It will start deploying the Azure Functions code. Normally it takes 2 to 5 minutes to finish:
+Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy'. It will start deploying the Azure Functions code:
 
 ![cloud-deploy]({{"/assets/images/mini-solution/shake-shake/cloud-deploy.png" | absolute_url }})
 
-## Step 5. Build and upload Arduino sketch
+## Step 5. Build and upload device code
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen will display 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+{% include switch.html content = page.variable %}
 
-Then it will start verifying and uploading the Arduino sketch:
+### Windows
+
+1. Use `Ctrl+P` to run 'task device-upload'.
+2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
 
 ![device-upload]({{"/assets/images/mini-solution/shake-shake/device-upload.png" | absolute_url }})
 
 The DevKit will reboot and start running the code.
 
-**Notice:** If you are running on a clean machine with everything installed, during the verifying of the code phrase, you might get an error of **Unknown board AZ3166**. To work around this problem, open Arduino IDE and go to **Tool > Board manager**. Arduino will reload all JSON files for all package definitions. After it is done, you can launch VS Code again and try the build process, the problem should go away.
-{: .notice--warning}
+### macOS
+
+1. Put DevKit into configuration mode:
+  Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
+2. Use `Cmd+P` to run 'task device-upload'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/shake-shake/device-upload.png" | absolute_url }})
+
+The DevKit will reboot and start running the code.
 
 ## Test the project
 
-After app initialization, click button A and mildly shake the board to retrieve a random tweet with your hashtag (e.g. #build2017). A tweet will display on your screen in a few seconds:
+After app initialization, click button A and mildly shake the board to retrieve a random tweet with your hashtag (e.g. #iot). A tweet will display on your screen in a few seconds:
 
 {% include gallery id="layouts_gallery" caption="Shake, shake for a random tweet with #hashtag you set in the code." %}
 
 - Press button A again, then shake for a new tweet.
 - Press button B to scroll through the rest of the tweet.
-
-**Note:** Sometimes you will see 'On processing...' status on screen without getting the results. You can try to click `Reset` button to restart the app.
-{: .notice--info}
 
 ## How it works
 
@@ -130,12 +159,10 @@ This sample project uses a pre-configured Twitter bearer token for testing purpo
 4. In the [Azure portal](https://portal.azure.com/){:target="_blank"}, get into the **Resource Group** and find the Azure Function (Type: App Service) for your "Shake, Shake" project. The name always contains 'shake...' string.
   ![azure-function]({{"/assets/images/mini-solution/shake-shake/azure-function.png" | absolute_url }})
 
-5. Update the code for `index.js` within **Functions > myFunc** with your own token:
-  ```javascript
+5. Update the code for `run.csx` within **Functions > shakeshake-cs** with your own token:
+  ```csharp
   ...
-  headers: {
-      'Authorization': 'Bearer ' + '[your own token]'
-  }
+  string authHeader = "Bearer " + "[your own token]";
   ...
   ```
   ![twitter-token]({{"/assets/images/mini-solution/shake-shake/twitter-token.png" | absolute_url }})
@@ -159,3 +186,5 @@ It normally happens for the first time you deploy and run the sample. This is be
 ### Feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter other problems or reach out to us from the channels below.
+
+{% include feedback.html tutorial="shake-shake" %}

@@ -63,7 +63,70 @@
         projectCardClick();
         projectCardDifficultyColor();
         faqMenu();
+
+        feedbackButtonFixed();
     };
+
+    $.closeReportIssue = function() {
+        $('#surveypopup').remove();
+    }
+     
+    $.reportIssuePopup = function(tutorial, step) {
+        $('body').append('<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="$.closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/N9F3LCY?tutorial='+tutorial+'&step='+step+'"></iframe></div></div></div>');    
+    }
+
+    $.reportIssue = function() {
+        $('.feedback-btns').fadeOut(400, function() {
+            $('.survey-monkey').fadeIn(400);
+        });
+        $('.survey-monkey iframe').each(function() {
+            this.onload = function() {
+                $(this).fadeOut(400, $.feedbackDisappeared);
+            }
+        });
+    }
+
+    $.feedbackDisappeared = function() {
+        $('.feedback-btns').fadeOut(400, function() {
+            $('.feedback-btns').html('<h3> Thank you! </h3><p> We appreciate your feedback. </p>').fadeIn(400);
+        });
+        setTimeout(function() {
+            $('.feedback-btns').fadeOut(400);
+        }, 2000);
+    }
+
+    $.feedbackButtonClick = function(eventName) {
+        try {
+            amplitude.getInstance().logEvent(eventName);
+        } catch(e) {
+            console.log('ampltitude error: '+e);
+        }
+    
+        try {
+            ga('send', 'event', {
+                eventCategory: 'stepFinished',
+                eventAction: 'click',
+                eventLabel: eventName
+                });
+        } catch(e) {
+            console.log('ga error: '+e);
+        }
+    }
+
+    var feedbackButtonFixed = function() {
+        var feedbackButtonFixedCallback = function() {
+            var articleTop = $('.page__content').position().top;
+            if (articleTop > $(window).scrollTop()){
+                $('.feedback-btn-fixed').css('bottom', 26 - (articleTop - $(window).scrollTop()));
+            } else {
+                $('.feedback-btn-fixed').css('bottom', '');
+            }
+        }
+
+        feedbackButtonFixedCallback();
+        $(window).scroll(feedbackButtonFixedCallback);
+        $(window).resize(feedbackButtonFixedCallback);
+    }
 
     var tocScroll = function () {
         $('.toc__menu a').removeClass('toc__menu_active');
@@ -164,7 +227,7 @@
     var trackClickNumber = function (element) {
         var url = $(element).attr('href');
         var redirect = true;
-        if (dataLayer){
+        try {
             dataLayer.push({
                 event: 'gtm.linkClick',
                 eventTimeout: 2000,
@@ -178,6 +241,8 @@
                 'gtm.elementId': $(element).attr('id') ? $(element).attr('id') : '',
                 'gtm.elementTarget': $(element).attr('target') ? $(element).attr('target') : ''
             });
+        } catch (e) {
+            console.log('gtm error: ' + e);
         }
 
         setTimeout(function() {

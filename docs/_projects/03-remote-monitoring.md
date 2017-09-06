@@ -21,6 +21,11 @@ icons:
     target: https://azure.microsoft.com/en-us/suites/iot-suite/
     title: Azure IoT Suite
 difficulty: EASY
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
 last_modified_at: 2017-06-28
 ---
 
@@ -80,7 +85,7 @@ An active Azure subscription. If you do not have one, you can register via one o
   * Preview README.md: The DevKit introduction page.
   * Arduino Examples: Hands-on samples to get started with DevKit.
 
-4. On the **Arduino Examples page**, expand `Examples for MXCHIP AZ3166 > AzureIoT`, and then click **RemoteMonitoring**. The RemoteMonitoring sample opens in a new VS Code window.
+4. Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT`, and then click **RemoteMonitoring**. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
@@ -100,17 +105,36 @@ The cloud-provision task opens an interactive command line that guides you throu
 
 ![remote-monitoring-provision]({{"/assets/images/mini-solution/remote-monitoring/provision.png" | absolute_url }})
 
-## Step 4. Upload the RemoteMonitoring sample to DevKit
+## Step 4. Build and upload device code
 
-1. In the RemoteMonitoring sample window, use `Ctrl+P` (macOS: `Cmd+P`), type `task device`, and then click **device-upload**. The interactive command line prompts you to set DevKit to configuration mode.
+{% include switch.html content = page.variable %}
 
-2. On DevKit, press and hold button A, press the Reset button and then release button A.
-The screen should display `Configuration` if DevKit is running in configuration mode.
+### Windows
 
-3. Wait for the upload to complete.
-Once the upload is completed, DevKit restarts and runs the sample.
+1. Use `Ctrl+P` to run 'task device-upload'.
+2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
 
-![remote-monitoring-build]({{"/assets/images/mini-solution/remote-monitoring/build.png" | absolute_url }})
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/remote-monitoring/build.png" | absolute_url }})
+
+The DevKit will reboot and start running the code.
+
+### macOS
+
+1. Put DevKit into configuration mode:
+  Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
+2. Use `Cmd+P` to run 'task device-upload'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then it starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/remote-monitoring/build.png" | absolute_url }})
+
+The DevKit will reboot and start running the code.
 
 ## Test the project
 
@@ -125,3 +149,5 @@ When the sample app runs, DevKit sends sensor data over Wi-Fi to your Azure IoT 
 ## Problems and feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+
+{% include feedback.html tutorial="remote-monitoring" %}

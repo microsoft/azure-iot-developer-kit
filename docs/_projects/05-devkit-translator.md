@@ -36,6 +36,11 @@ icons:
     target: https://azure.microsoft.com/en-us/services/cognitive-services/?v=17.29
     title: Cognitive Services
 difficulty: MEDIUM
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
 last_modified_at: 2017-07-17
 ---
 
@@ -68,7 +73,7 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 ### B. Open Arduino Examples folder
 
-Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DevKitTranslator`.
+Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DevKitTranslator`. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
@@ -92,19 +97,36 @@ After auzre function deployed successfully, fill in the azure_config.h file with
 
 ![mini-solution-function-app]({{"/assets/images/mini-solution/devkit-translator/azure-function.png" | absolute_url }})
 
-## Step 4. Build and upload Arduino sketch
+## Step 4. Build and upload device code
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal will prompt you to enter configuration mode: hold down button A, then push and release the reset button. The screen will display 'Configuration'. This step is to set the connection string which is retrieved from 'task cloud-provision'.
+{% include switch.html content = page.variable %}
 
-After that it will start verifying and uploading the Arduino sketch:
+### Windows
 
-![mini-solution-build]({{"/assets/images/mini-solution/devkit-translator/device-upload.png" | absolute_url }})
+1. Use `Ctrl+P` to run 'task device-upload'.
+2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
 
-The DevKit will reboot and start running.
+This is to set the connection string that retrieves from 'task cloud-provision' step.
 
-**Notice:** If you are running on a clean machine with everything installed, during the verifying of the code phrase, you might get an error of **Unknown board AZ3166**.
-To work around, open Arduino IDE, navigate to **Tool > Board manager**. Arduino will reload all JSON files of all package definitions. After that, launch VS Code and try to build again, everything will be good.
-{: .notice--warning}
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/devkit-translator/device-upload.png" | absolute_url }})
+
+The DevKit will reboot and start running the code.
+
+### macOS
+
+1. Put DevKit into configuration mode:
+  Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
+2. Use `Cmd+P` to run 'task device-upload'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/devkit-translator/device-upload.png" | absolute_url }})
+
+The DevKit will reboot and start running the code.
 
 ## Test the project
 
@@ -124,3 +146,5 @@ The Arduino sketch records your voice, post a HTTP request to trigger Azure Func
 ## Problems and feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter other problems or reach out to us from the channels below.
+
+{% include feedback.html tutorial="devkit-translator" %}

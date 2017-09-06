@@ -11,6 +11,11 @@ icons:
     target: https://azure.microsoft.com/en-us/services/iot-hub/
     title: IoT Hub
 difficulty: EASY
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
 last_modified_at: 2017-06-28
 ---
 
@@ -49,7 +54,7 @@ Make sure your DevKit is not connected. Launch VS Code first and connect the Dev
 
 ### B. Open Arduino Examples folder
 
-Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `GetStarted`.
+Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `GetStarted`. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
@@ -69,15 +74,37 @@ In the VS Code terminal, an interactive command line guides you through provisio
 
 1. Press `F1` or `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Library Manager**.
 
-2. Search for `ArduinoJson` library and click **Install**
+2. Search for `ArduinoJson` library and click **Install**:
+  ![arduino-json]({{"/assets/images/mini-solution/connect-iothub/arduino-json.png" | absolute_url }})
 
-### B. Build and upload the device code
+### B. Build and upload device code
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays 'Configuration'. This is to set the connection string that retrieves from 'task cloud-provision' step.
+{% include switch.html content = page.variable %}
 
-Then it starts verifying and uploading the Arduino sketch:
+#### Windows
 
-![mini-solution-device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
+1. Use `Ctrl+P` to run 'task device-upload'.
+2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
+
+The DevKit will reboot and start running the code.
+
+#### macOS
+
+1. Put DevKit into configuration mode:
+  Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
+2. Use `Cmd+P` to run 'task device-upload'.
+
+This is to set the connection string that retrieves from 'task cloud-provision' step.
+
+Then VS Code starts verifying and uploading the Arduino sketch:
+
+![device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
 
 The DevKit will reboot and start running the code.
 
@@ -104,6 +131,8 @@ The sample application is running successfully when you see the following result
 ## Problems and feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+
+{% include feedback.html tutorial="happy-path" %}
 
 ## Next steps
 
