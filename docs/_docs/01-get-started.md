@@ -222,6 +222,8 @@ You now have all the necessary tools and packages installed for macOS.
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from our [Gitter channel](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"}.
 
+{% include feedback.html tutorial="get-started" %}
+
 ## Next Steps
 
 You're all set! It's time to build your first IoT application. For samples, start with our [Projects Catalog]({{"/docs/projects/" | absolute_url }}).

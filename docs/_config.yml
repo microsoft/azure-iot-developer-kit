@@ -72,7 +72,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-tag-manager" # false (default), "google", "google-universal", "google-tag-manager" "custom"
+  provider               : "custom" # false (default), "google", "google-universal", "google-tag-manager" "custom"
   google:
     tracking_id          : "GTM-MVB7TDR" # Replace this with your ID, or delete
 

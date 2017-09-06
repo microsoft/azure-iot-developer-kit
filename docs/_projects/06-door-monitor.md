@@ -162,3 +162,5 @@ The program would first initialize with a stable magnetic field. After initializ
 ## Problems and feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+
+{% include feedback.html tutorial="door-monitor" %}

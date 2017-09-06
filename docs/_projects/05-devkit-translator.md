@@ -124,3 +124,5 @@ The Arduino sketch records your voice, post a HTTP request to trigger Azure Func
 ## Problems and feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter other problems or reach out to us from the channels below.
+
+{% include feedback.html tutorial="devkit-translator" %}

@@ -125,3 +125,5 @@ When the sample app runs, DevKit sends sensor data over Wi-Fi to your Azure IoT 
 ## Problems and feedback
 
 You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+
+{% include feedback.html tutorial="remote-monitoring" %}
