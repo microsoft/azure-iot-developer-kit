@@ -37,9 +37,9 @@ You'll need [git] to download source code and copy it to the Arduino target fold
 ### Windows
 
 ```
-git clone https://github.com/Microsoft/AzureIoTDeveloperKit
+git clone https://github.com/Microsoft/devkit-sdk
 
-cd AzureIoTDeveloperKit\AZ3166\src
+cd devkit-sdk\AZ3166\src
 
 xcopy /s .\*.* C:\Users\{your name}\AppData\Local\Arduino15\packages\AZ3166\hardware\stm32f4\{version} /I /R /Y
 ```
@@ -47,9 +47,9 @@ xcopy /s .\*.* C:\Users\{your name}\AppData\Local\Arduino15\packages\AZ3166\hard
 ### OS X
 
 ```
-git clone https://github.com/Microsoft/AzureIoTDeveloperKit
+git clone https://github.com/Microsoft/devkit-sdk
 
-cd AzureIoTDeveloperKit/AZ3166
+cd devkit-sdk/AZ3166
 
 cp -R /src/. ~/Library/Arduino15/packages/AZ3166/hardware/stem32f4/{version} 
 ```
