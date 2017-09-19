@@ -132,6 +132,9 @@ During installation, you see the progress of each tool or package.
 
 ![getting-started-install]({{"/assets/images/getting-started/install.png" | absolute_url }})
 
+**Notice:** Depending on your environment, sometimes you will get failure when installing Arduino IDE. In this case, you may try [install Arduino IDE individually]({{"/docs/installation/#windows" | absolute_url}}) and run `install.cmd` again. Otherwise, please follow the [manual steps]({{"/docs/installation/#windows" | absolute_url}}) to install all necessary tools and packages.
+{: .notice--warning}
+
 #### C. Confirm to install drivers
 
 The VS Code for Arduino extension relies on the Arduino IDE. If this is the first time you are installing the Arduino IDE, you will be prompted to install relevant drivers:
