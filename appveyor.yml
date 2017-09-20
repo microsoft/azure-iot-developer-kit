@@ -6,8 +6,6 @@ branches:
   only:
     - pre-release
 
-build: off
-
 install:
   - set PATH=C:\Ruby22\bin;%PATH%
   - cd docs
@@ -16,8 +14,10 @@ install:
   - printf " https://%app%.azurewebsites.net" >> _config.dev.yml
   - cat _config.dev.yml
 
-test_script:
+build_script:
   - bundle exec jekyll build --config _config.yml,_config.dev.yml
+
+on_success:
   - git clone https://%username%:%password%@%app%.scm.azurewebsites.net/%app%.git
   - ls
   - cp -r _site/ %app%
