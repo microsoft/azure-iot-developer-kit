@@ -28,4 +28,4 @@ test_script:
   - git add .
   - git status
   - git commit -m "update website"
-  - git push
+  - if "%APPVEYOR_REPO_BRANCH%"=="pre-release" if not defined APPVEYOR_PULL_REQUEST_NUMBER (git push)
