@@ -1,6 +1,6 @@
 ---
 title: "Door Monitor"
-permalink: /docs/projects/door-monitor
+permalink: /docs/projects/door-monitor/
 excerpt: "Use magnetic sensor to detect the change of magnetic field, and send notifications."
 header:
   overlay_image: /assets/images/projects-door-monitor.jpg
@@ -61,7 +61,7 @@ To provision the service, we will use the **‘Deploy to Azure’** button to pr
 
 Click **Deploy to Azure** below. 
 
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVSChina%2Fdevkit-door-monitor%2Fmaster%2FSendGridDeploy%2Fazuredeploy.json){:.click-action-tracker .click-tracker-name--DeployToAzure target="_blank"}
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVSChina%2Fdevkit-door-monitor%2Fmaster%2FSendGridDeploy%2Fazuredeploy.json){:.click-action-tracker .click-tracker-name--DeployToAzure target="_blank"}
 
 Then, you will see the following page (or you should first sign in to the Azure), completing the signup form:
 
@@ -98,7 +98,7 @@ Now we will provision other Azure IoT related services and deploy Azure Function
 
 Click **Deploy to Azure** below. 
 
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVSChina%2Fdevkit-door-monitor%2Fmaster%2Fazuredeploy.json){:.click-action-tracker .click-tracker-name--DeployToAzure target="_blank"}
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVSChina%2Fdevkit-door-monitor%2Fmaster%2Fazuredeploy.json){:.click-action-tracker .click-tracker-name--DeployToAzure target="_blank"}
 
 Then, you will see the following page (or you should first sign in to the Azure), completing the signup form:
 

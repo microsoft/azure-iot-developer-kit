@@ -1,6 +1,6 @@
 ---
 title: "Connect to Azure IoT Hub"
-permalink: /docs/projects/connect-iot-hub
+permalink: /docs/projects/connect-iot-hub/
 excerpt: "Collect and send temperature and humidity data from DevKit to Azure IoT Hub."
 header:
   overlay_image: /assets/images/projects-iothub.jpg
