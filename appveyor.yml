@@ -18,14 +18,19 @@ build_script:
   - bundle exec jekyll build --config _config.yml,_config.dev.yml
 
 on_success:
-  - git clone https://%username%:%password%@%app%.scm.azurewebsites.net/%app%.git
-  - ls
-  - cp -r _site/ %app%
-  - cd %app%
-  - ls
-  - git config --global user.email "%GIT_USER_EMAIL%"
-  - git config --global user.name "%GIT_USER_NAME%"
-  - git add .
-  - git status
-  - git commit -m "update website"
-  - if "%APPVEYOR_REPO_BRANCH%"=="pre-release" if not defined APPVEYOR_PULL_REQUEST_NUMBER (git push)
+  - ps: |
+      if ($env:APPVEYOR_REPO_BRANCH -eq "pre-release" -and $env:APPVEYOR_PULL_REQUEST_NUMBER -eq $null)
+      {
+        git clone https://%username%:%password%@%app%.scm.azurewebsites.net/%app%.git
+        ls
+        cp -r _site/ %app%
+        cd %app%
+        ls
+        git config --global user.email "%GIT_USER_EMAIL%"
+        git config --global user.name "%GIT_USER_NAME%"
+        git add .
+        git status
+        git commit -m "update website"
+        git push
+      }
+  - echo "Success"
