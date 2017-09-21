@@ -1,0 +1,33 @@
+<script class="remote-markdown">
+  function processMarkdown(text) {
+    var converter = new showdown.Converter();
+    converter.setOption('ghCompatibleHeaderId', true);
+    var html = converter.makeHtml(text);
+    if ($('.sidebar__right').length) {
+      $('.sidebar__right').after(html);
+      $('.sidebar__right > .toc').append('<ul class="toc__menu" id="markdown-toc">');
+      $('.page__content').children('h2').each(function() {
+        $('.toc__menu').append('<li><a href="#' + $(this).attr('id') + '" id="markdown-toc-' + $(this).attr('id') + '">' + $(this).text());
+      });
+    } else {
+      $('.page__content').prepend(html);
+    }
+    $('.page__content').children('h1').remove();
+  }
+
+  function getRemoteMarkdown() {
+    var markdownUrl = '{{ include.target }}';
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+      if (xmlHttp.readyState == 4) {
+        if (xmlHttp.status == 200) {
+          processMarkdown(xmlHttp.responseText);
+        } else {
+          $('.page__content').html('<div>Error in Request <a href="' + markdownUrl + '">Remote Doc');
+        }
+      }
+    }
+    xmlHttp.open("GET", markdownUrl, true);
+    xmlHttp.send(null);
+  }
+</script>

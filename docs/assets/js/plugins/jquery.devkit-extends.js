@@ -1,6 +1,9 @@
 // Extend functions
 ;(function ($, window, undefined) {
     $.devKitExtends = function () {
+        if ($('.remote-markdown').length) {
+            getRemoteMarkdown();
+        }
         mastheadFix();
         menuScroll();
 
@@ -123,9 +126,11 @@
             }
         }
 
-        feedbackButtonFixedCallback();
-        $(window).scroll(feedbackButtonFixedCallback);
-        $(window).resize(feedbackButtonFixedCallback);
+        if ($('.page__content').length) {
+            feedbackButtonFixedCallback();
+            $(window).scroll(feedbackButtonFixedCallback);
+            $(window).resize(feedbackButtonFixedCallback);
+        }
     }
 
     var tocScroll = function () {
