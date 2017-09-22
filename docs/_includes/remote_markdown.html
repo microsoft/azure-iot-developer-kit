@@ -1,8 +1,30 @@
 <script class="remote-markdown">
-  function processMarkdown(text) {
+  function processMarkdown(url, text) {
+    var markdownPath = url.substring(0, url.lastIndexOf("/") + 1);
+    var markdownHostname = $('<a>').attr('href', url).prop('origin');
     var converter = new showdown.Converter();
     converter.setOption('ghCompatibleHeaderId', true);
-    var html = converter.makeHtml(text);
+    var html = $(converter.makeHtml(text));
+    var $html = html.wrapAll('<p>').parent();
+
+    $('[href][href!=""]:not([href*="://"])', $html).each(function() {
+      var originUrl = $(this).attr('href');
+      if (originUrl[0] == '/') {
+        $(this).attr('href', markdownHostname + originUrl);
+      } else {
+        $(this).attr('href', markdownPath + originUrl);
+      }
+    });
+
+    $('[src][src!=""]:not([src*="://"])', $html).each(function() {
+      var originUrl = $(this).attr('src');
+      if (originUrl[0] == '/') {
+        $(this).attr('src', markdownHostname + originUrl);
+      } else {
+        $(this).attr('src', markdownPath + originUrl);
+      }
+    });
+
     if ($('.sidebar__right').length) {
       $('.sidebar__right').after(html);
       $('.sidebar__right > .toc').append('<ul class="toc__menu" id="markdown-toc">');
@@ -21,7 +43,7 @@
     xmlHttp.onreadystatechange = function() { 
       if (xmlHttp.readyState == 4) {
         if (xmlHttp.status == 200) {
-          processMarkdown(xmlHttp.responseText);
+          processMarkdown(markdownUrl, xmlHttp.responseText);
         } else {
           $('.page__content').html('<div>Error in Request <a href="' + markdownUrl + '">Remote Doc');
         }
