@@ -108,7 +108,7 @@ We encourage you to use the installation package to prepare the development envi
 
 The downloaded `.zip` file contains all necessary tools and packages required for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/prod/installpackage/devkit_install_1.1.0.zip){: .click-action-tracker .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/1_1_0){: .click-action-tracker .btn .btn--success .btn--large}
 
 **MD5:** 94cdaf37b3d0f12e3d6523e412a89a71
 {: .notice}
