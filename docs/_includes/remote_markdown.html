@@ -31,6 +31,7 @@
       $('.page__content').children('h2').each(function() {
         $('.toc__menu').append('<li><a href="#' + $(this).attr('id') + '" id="markdown-toc-' + $(this).attr('id') + '">' + $(this).text());
       });
+      $(".toc__menu a").smoothScroll({offset: -20});
     } else {
       $('.page__content').prepend(html);
     }
