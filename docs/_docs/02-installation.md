@@ -36,9 +36,9 @@ Download and install [Visual Studio Code for Windows](https://code.visualstudio.
 
 2. Download `.zip` file containing task scripts required for DevKit development in VS Code.
 
-  [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/installpackage/devkit_tasks_1.1.0.zip){: .click-download-tracker .btn .btn--success .btn--large}
+  [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/tasks/latest){: .click-download-tracker .btn .btn--success .btn--large}
 
-  **MD5:** 215a2e9b26e8d0f8d296986d31597c02
+  **MD5:** b0f4164e80d2ffc4f66cd96a124d2203
   {: .notice}
 
   Locate the `.zip` and extract it to your Windows user folder (`C:\Users\[your name]`). Then launch **Command Prompt** (`cmd`) and run the following commands to configure:
@@ -77,7 +77,7 @@ You need to add the DevKit board using the Board Manager in Visual Studio Code.
 
 [ST-Link/V2](http://www.st.com/en/development-tools/st-link-v2.html){:target="_blank"} driver is required to communicate with the DevKit. 
 
-1. Download the driver from [STMicro product page](http://www.st.com/en/embedded-software/stsw-link009.html){:target="_blank"} or [here](https://azureboard.azureedge.net/installpackage/st-link-windows.zip).
+1. Download the driver from [STMicro product page](http://www.st.com/en/embedded-software/stsw-link009.html){:target="_blank"}.
 
 2. Extract the `.zip` file and double click `stlink_winusb_install.bat` to install:
  ![installation-st-link]({{"/assets/images/installation-st-link-win.png" | absolute_url}})
@@ -115,9 +115,9 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
 2. Download `.zip` file containing task scripts required for DevKit development in VS Code.
 
-  [<i class='fa fa-download'></i> Download](https://azureboard.azureedge.net/prod/installpackage/devkit_tasks_mac_1.1.0.zip){: .click-download-tracker .btn .btn--success .btn--large}
+  [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-download-tracker .btn .btn--success .btn--large}
 
-  **MD5:** 5aac488ea530e5bdc9161145bb5d1254
+  **MD5:** a475e1c6184da201b21d7ac5caf7168e
   {: .notice}
 
   Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:
