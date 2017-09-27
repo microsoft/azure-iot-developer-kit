@@ -108,7 +108,7 @@ We encourage you to use the installation package to prepare the development envi
 
 The downloaded `.zip` file contains all necessary tools and packages required for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/1_1_0){: .click-action-tracker .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/latest){: .click-action-tracker .btn .btn--success .btn--large}
 
 **MD5:** 94cdaf37b3d0f12e3d6523e412a89a71
 {: .notice}
@@ -175,7 +175,7 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
 2. Download `.zip` file containing task scripts required for DevKit development in VS Code.
 
-  [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/1_1_0){: .click-action-tracker .btn .btn--success .btn--large}
+  [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-action-tracker .btn .btn--success .btn--large}
 
   **MD5:** a475e1c6184da201b21d7ac5caf7168e
   {: .notice}
