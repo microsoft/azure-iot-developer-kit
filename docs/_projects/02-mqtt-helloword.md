@@ -19,14 +19,14 @@ The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse
 
 Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
-* Have your DevKit connected to WiFi
+* Have your DevKit connected to Wi-Fi
 * Prepare the development environment
 
-## Step 1. Open project folder
+## Step 1. Open the project folder
 
 1. Disconnect DevKit from your computer if it is connected.
 
-2. Launch VS Code.
+2. Start VS Code.
 
 3. Connect DevKit to your computer.
     VS Code automatically detects your DevKit and opens the following pages:

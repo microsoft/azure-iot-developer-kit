@@ -9,7 +9,7 @@ header:
 layouts_gallery:
   - url: /assets/images/mini-solution/remote-monitoring/connect-wifi.jpg
     image_path: /assets/images/mini-solution/remote-monitoring/connect-wifi.jpg
-    alt: "Connect to WiFi"
+    alt: "Connect to Wi-Fi"
   - url: /assets/images/mini-solution/remote-monitoring/send-data.jpg
     image_path: /assets/images/mini-solution/remote-monitoring/send-data.jpg
     alt: "Send sensor data"
@@ -37,7 +37,7 @@ In this tutorial, you learn how to run a sample app on DevKit to send sensor dat
 
 Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
-* Have your DevKit connected to WiFi
+* Have your DevKit connected to Wi-Fi
 * Prepare the development environment
 
 An active Azure subscription. If you do not have one, you can register via one of the methods:
@@ -79,7 +79,7 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 1. Disconnect DevKit from your computer if it is connected.
 
-2. Launch VS Code.
+2. Start VS Code.
 
 3. Connect DevKit to your computer. VS Code automatically detects your DevKit and opens the following pages:
   * Preview README.md: The DevKit introduction page.

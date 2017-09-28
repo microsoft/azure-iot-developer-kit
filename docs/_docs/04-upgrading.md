@@ -36,7 +36,7 @@ Make sure you have gone through getting started tutorial to [prepare your develo
 
 ### Step 2. Update VS Code extension for Arduino
 
-1. Launch VS Code.
+1. Start VS Code.
 
 2. Make sure you have updated VS Code extension Arduino to the latest version.
 

@@ -21,7 +21,7 @@ last_modified_at: 2017-06-28
 
 {% include toc icon="columns" %}
 
-In this project, you will create an Azure IoT Hub, connect DevKit to it, and collect the temperature and humidity data from sensors and send the data to IoT hub.
+In this project, you will create an Azure IoT Hub, connect DevKit to it, and collect the temperature and humidity data from sensors and send the data to the IoT hub.
 
 ## What you learn
 
@@ -33,7 +33,7 @@ In this project, you will create an Azure IoT Hub, connect DevKit to it, and col
 
 Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
-* Have your DevKit connected to WiFi
+* Have your DevKit connected to Wi-Fi
 * Prepare the development environment
 
 An active Azure subscription. If you do not have one, you can register via one of the methods:
@@ -41,15 +41,15 @@ An active Azure subscription. If you do not have one, you can register via one o
 * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
 * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 
-## Step 1. Open project folder
+## Step 1. Open the project folder
 
-### A. Launch VS Code
+### A. Start VS Code
 
-Make sure your DevKit is not connected. Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pop up an introduction page:
+Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code automatically finds the DevKit and opens an introduction page:
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
-**Notice:** Occasionally, when you launch VS Code, you are prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once again, and VS Code should locate Arduino IDE path correctly.
+**Notice:** Occasionally, when you launch VS Code, you are prompted with error that cannot find Arduino IDE or related board package. Close VS Code, launch Arduino IDE once again, and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
 ### B. Open Arduino Examples folder

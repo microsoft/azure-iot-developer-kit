@@ -47,17 +47,17 @@ Sometimes SmartScreen prevents applications you know are not bad – for example
 
 To resolve, click on the **'More info'** link and then click the **'Run anyway'** button. You can check this [knowledge base article](https://www.itsupportguides.com/knowledge-base/windows-10/windows-defender-smartscreen-prevented-an-unrecognized-app-error/){:target="_blank"} for more details.
 
-## WiFi Configuration
+## Wi-Fi Configuration
 
-### Cannot connect to a WiFi hotspot.
+### Cannot connect to a Wi-Fi hotspot.
 
-This may be because the WiFi network needs extra certification (other than WPA/WPA2) or open WiFi requires a captive portal to log in such as Starbucks WiFi.
+This may be because the Wi-Fi network needs extra certification (other than WPA/WPA2) or open Wi-Fi requires a captive portal to log in such as Starbucks Wi-Fi.
 
-To resolve, try to use WiFi with normal WPA/WPA2 authentication.
+To resolve, try to use Wi-Fi with normal WPA/WPA2 authentication.
 
-### Cannot connect to 5 GHz WiFi.
+### Cannot connect to 5 GHz Wi-Fi.
 
-Currently, DevKit only can connect to 2.4 GHz WiFi, 5 GHz is not supported due to hardware restrictions.
+Currently, DevKit only can connect to 2.4 GHz Wi-Fi, 5 GHz is not supported due to hardware restrictions.
 
 ## Cloud Provisioning
 

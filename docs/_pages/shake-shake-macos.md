@@ -152,11 +152,11 @@ permalink: /docs/projects/shake-shake-macos/
 
 #### A. Open Arduino Examples folder in VS Code:
 
-Make sure your DevKit is not connected. Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page. Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoTHub` and click on `ShakeShake`.
+Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page. Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoTHub` and click on `ShakeShake`.
 
 ![shake-shake-example]({{"/assets/images/shake-shake-example.png" | absolute_url }})
 
-**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
+**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. Close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
 #### B. Modify the #hashtag
