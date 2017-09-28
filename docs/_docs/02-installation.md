@@ -38,7 +38,7 @@ Download and install [Visual Studio Code for Windows](https://code.visualstudio.
 
   [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/tasks/latest){: .click-download-tracker .btn .btn--success .btn--large}
 
-  **MD5:** f8c032a4b22fd3a401308fce349b7fe8
+  **MD5:** e70a4db1b90dbb279bb21420d6d008b0
   {: .notice}
 
   Locate the `.zip` and extract it to your Windows user folder (`C:\Users\[your name]`). Then launch **Command Prompt** (`cmd`) and run the following commands to configure:
