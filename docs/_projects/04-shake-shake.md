@@ -49,7 +49,7 @@ In this project, you will learn how to use the motion sensor to trigger an event
 
 Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
-* Have your DevKit connected to WiFi
+* Have your DevKit connected to Wi-Fi
 * Prepare the development environment
 
 An active Azure subscription. If you do not have one, you can register via one of the methods:
@@ -57,28 +57,28 @@ An active Azure subscription. If you do not have one, you can register via one o
 * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
 * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 
-## Step 1. Open project folder
+## Step 1. Open the project folder
 
-### A. Launch VS Code
+### A. Start VS Code
 
-Make sure your DevKit is not connected. Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
+Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
-**Notice:** Occasionally, when you launch VS Code, you will be prompted with an error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
+**Notice:** Occasionally, when you launch VS Code, you will be prompted with an error that cannot find Arduino IDE or related board package. Close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
 ### B. Open Arduino Examples folder
 
-Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `ShakeShake`. This will open a new VS Code window with project folder in it.
+Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **ShakeShake**. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
-If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
+If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
 ## Step 2. Provision Azure services
 
-In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
+In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
 
 In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services:
 
@@ -96,40 +96,40 @@ Replace the string `iot` in the curly brace with your preferred hashtag. And Dev
 
 ## Step 4. Deploy Azure Functions
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy'. It will start deploying the Azure Functions code:
+Use `Ctrl+P` (macOS: `Cmd+P`) to run `task cloud-deploy`. It will start deploying the Azure Functions code:
 
 ![cloud-deploy]({{"/assets/images/mini-solution/shake-shake/cloud-deploy.png" | absolute_url }})
 
-## Step 5. Build and upload device code
+## Step 5. Build and upload the device code
 
 {% include switch.html content = page.variable %}
 
 ### Windows
 
-1. Use `Ctrl+P` to run 'task device-upload'.
+1. Use `Ctrl+P` to run `task device-upload`.
 2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
 
-This is to set the connection string that retrieves from 'task cloud-provision' step.
+This is to set the connection string that retrieves from `task cloud-provision` step.
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
 ![device-upload]({{"/assets/images/mini-solution/shake-shake/device-upload.png" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+The DevKit reboots and starts running the code.
 
 ### macOS
 
 1. Put DevKit into configuration mode:
   Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
-2. Use `Cmd+P` to run 'task device-upload'.
+2. Use `Cmd+P` to run `task device-upload`.
 
-This is to set the connection string that retrieves from 'task cloud-provision' step.
+This is to set the connection string that retrieves from `task cloud-provision` step.
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
 ![device-upload]({{"/assets/images/mini-solution/shake-shake/device-upload.png" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+The DevKit reboots and starts running the code.
 
 ## Test the project
 
@@ -185,6 +185,6 @@ It normally happens for the first time you deploy and run the sample. This is be
 
 ### Feedback
 
-You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter other problems or reach out to us from the channels below.
+If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter other problems or reach out to us from the channels below.
 
 {% include feedback.html tutorial="shake-shake" %}

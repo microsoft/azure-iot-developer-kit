@@ -1,7 +1,7 @@
 ---
 title: "Connect to Azure IoT Hub"
 permalink: /docs/projects/connect-iot-hub
-excerpt: "Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub."
+excerpt: "Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to the IoT hub."
 header:
   overlay_image: /assets/images/projects-iothub.jpg
   overlay_full: true
@@ -18,7 +18,7 @@ last_modified_at: 2017-06-28
 
 ## What you do
 
-Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to IoT hub.
+Connect DevKit to an Azure IoT hub that you create, collect the temperature and humidity data from sensors and send the data to the IoT hub.
 
 ## What you learn
 
@@ -30,7 +30,7 @@ Connect DevKit to an Azure IoT hub that you create, collect the temperature and 
 
 Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
-* Have your DevKit connected to WiFi
+* Have your DevKit connected to Wi-Fi
 * Prepare the development environment
 
 ## Step 1. Create an IoT Hub and register a device for MXChip IoT DevKit
@@ -94,7 +94,7 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
 ## Step 2. Connect MXChip IoT DevKit with your computer
 
-Use the Micro USB to Type A USB cable to connect MXChip IoT DevKit to your computer.
+Use the Micro-USB to Type A USB cable to connect MXChip IoT DevKit to your computer.
 
 ## Step 3. Collect sensor data and send it to your IoT hub
 
@@ -195,7 +195,7 @@ The sample application is running successfully when you see the following result
 
 ## Problems and feedback
 
-You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
 
 ## Next steps
 

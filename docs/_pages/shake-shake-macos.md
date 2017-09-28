@@ -150,13 +150,13 @@ permalink: /docs/projects/shake-shake-macos/
 
 ### Step 5. Build and upload Arduino sketch
 
-#### A. Open Arduino Examples folder in VS Code:
+#### A. Open the Arduino Examples folder in VS Code:
 
-Make sure your DevKit is not connected. Launch VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page. Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoTHub` and click on `ShakeShake`.
+Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page. Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoTHub` and click on `ShakeShake`.
 
 ![shake-shake-example]({{"/assets/images/shake-shake-example.png" | absolute_url }})
 
-**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. To solve it, close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
+**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. Close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
 #### B. Modify the #hashtag
@@ -171,7 +171,7 @@ Replace the string `iot` in the curly brace with your preferred hashtag.
 
 #### C. Build and upload Arduino sketch
 
-Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Upload**. Then it will start compiling and uploading the Arduino sketch. After it is done, the DevKit will reboot and start running the code.
+Use `Cmd+Shift+P` to open the command palette, type **Arduino**, and then find and select **Arduino: Upload**. Then it will start compiling and uploading the Arduino sketch. After it is done, the DevKit reboots and starts running the code.
 
 ## Test the project
 
