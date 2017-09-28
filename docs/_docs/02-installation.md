@@ -38,7 +38,7 @@ Download and install [Visual Studio Code for Windows](https://code.visualstudio.
 
   [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/tasks/latest){: .click-download-tracker .btn .btn--success .btn--large}
 
-  **MD5:** b0f4164e80d2ffc4f66cd96a124d2203
+  **MD5:** e70a4db1b90dbb279bb21420d6d008b0
   {: .notice}
 
   Locate the `.zip` and extract it to your Windows user folder (`C:\Users\[your name]`). Then launch **Command Prompt** (`cmd`) and run the following commands to configure:
@@ -117,7 +117,7 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
   [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-download-tracker .btn .btn--success .btn--large}
 
-  **MD5:** a475e1c6184da201b21d7ac5caf7168e
+  **MD5:** e70a4db1b90dbb279bb21420d6d008b0
   {: .notice}
 
   Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:
