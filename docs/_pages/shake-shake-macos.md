@@ -150,7 +150,7 @@ permalink: /docs/projects/shake-shake-macos/
 
 ### Step 5. Build and upload Arduino sketch
 
-#### A. Open Arduino Examples folder in VS Code:
+#### A. Open the Arduino Examples folder in VS Code:
 
 Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page. Switch to **'Arduino Examples'** tab, navigate to `Examples for MXCHIP AZ3166 > AzureIoTHub` and click on `ShakeShake`.
 
@@ -171,7 +171,7 @@ Replace the string `iot` in the curly brace with your preferred hashtag.
 
 #### C. Build and upload Arduino sketch
 
-Use `Cmd+Shift+P` to invoke command palette and type **Arduino** then find and select **Arduino: Upload**. Then it will start compiling and uploading the Arduino sketch. After it is done, the DevKit will reboot and start running the code.
+Use `Cmd+Shift+P` to open the command palette, type **Arduino**, and then find and select **Arduino: Upload**. Then it will start compiling and uploading the Arduino sketch. After it is done, the DevKit reboots and starts running the code.
 
 ## Test the project
 

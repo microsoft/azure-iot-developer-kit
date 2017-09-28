@@ -66,22 +66,22 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code automatically finds the DevKit and opens an introduction page:
 
-![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
+![Introduction page]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
 **Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. Close VS Code, launch Arduino IDE once again and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
-### B. Open Arduino Examples folder
+### B. Open the Arduino Examples folder
 
-Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DevKitTranslator`. This will open a new VS Code window with project folder in it.
+Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **DevKitTranslator**. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
-If you happen to close the pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** to find and select **Arduino: Examples**.
+If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
 ## Step 2. Provision Azure services
 
-In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
+In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
 
 In the VS Code terminal, an interactive command line will guide you through provisioning all required Azure services:
 
@@ -89,7 +89,7 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ## Step 3. Deploy Azure Functions
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run 'task cloud-deploy' to deploy the Azure Functions code. It usually takes 2 to 5 minutes to complete:
+Use `Ctrl+P` (macOS: `Cmd+P`) to run `task cloud-deploy` to deploy the Azure Functions code. It usually takes 2 to 5 minutes to complete:
 
 ![mini-solution-deploy]({{"/assets/images/mini-solution/devkit-translator/cloud-deploy.png" | absolute_url }})
 
@@ -97,36 +97,36 @@ After auzre function deployed successfully, fill in the azure_config.h file with
 
 ![mini-solution-function-app]({{"/assets/images/mini-solution/devkit-translator/azure-function.png" | absolute_url }})
 
-## Step 4. Build and upload device code
+## Step 4. Build and upload the device code
 
 {% include switch.html content = page.variable %}
 
 ### Windows
 
-1. Use `Ctrl+P` to run 'task device-upload'.
+1. Use `Ctrl+P` to run `task device-upload`.
 2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
 
-This is to set the connection string that retrieves from 'task cloud-provision' step.
+This is to set the connection string that retrieves from `task cloud-provision` step.
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
 ![device-upload]({{"/assets/images/mini-solution/devkit-translator/device-upload.png" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+The DevKit reboots and starts running the code.
 
 ### macOS
 
 1. Put DevKit into configuration mode:
   Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
-2. Use `Cmd+P` to run 'task device-upload'.
+2. Use `Cmd+P` to run `task device-upload`.
 
-This is to set the connection string that retrieves from 'task cloud-provision' step.
+This is to set the connection string that retrieves from `task cloud-provision` step.
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
 ![device-upload]({{"/assets/images/mini-solution/devkit-translator/device-upload.png" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+The DevKit reboots and starts running the code.
 
 ## Test the project
 
@@ -145,6 +145,6 @@ The Arduino sketch records your voice, post a HTTP request to trigger Azure Func
 
 ## Problems and feedback
 
-You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter other problems or reach out to us from the channels below.
+If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter other problems or reach out to us from the channels below.
 
 {% include feedback.html tutorial="devkit-translator" %}

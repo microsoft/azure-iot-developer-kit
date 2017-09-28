@@ -57,7 +57,7 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 ### A. SendGrid Deployment
 
-To provision the service, we will use the **‘Deploy to Azure’** button to provision Azure services. The button enables quick and easy deployment of your open source projects to Microsoft Azure.
+To provision the service, we will use the **Deploy to Azure** button to provision Azure services. The button enables quick and easy deployment of your open source projects to Microsoft Azure.
 
 Click **Deploy to Azure** below. 
 
@@ -128,50 +128,50 @@ Make sure your DevKit is not connected. Start VS Code first and connect the DevK
 
 ### B. Open Arduino Examples folder
 
-Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `DoorMonitor`.
+Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **DoorMonitor**. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
-If you closed the **Arduino Examples** pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Examples**.
+If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
 ### C. Retrieve device connection string
 
-In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
+In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
 
 In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services. You need to select all the items from promprted list same as the ones you have previously provisioned in the [Step 2]({{"/docs/projects/door-monitor#step-2-deploy-iot-hub-in-azure" | absolute_url }}).
 
 ![Cloud Provision]({{"/assets/images/mini-solution/door-monitor/cloud-prevision.jpg" | absolute_url }})
 
-### D. Build and upload device code
+### D. Build and upload the device code
 
 {% include switch.html content = page.variable %}
 
 #### Windows
 
-1. Use `Ctrl+P` to run 'task device-upload'.
+1. Use `Ctrl+P` to run `task device-upload`.
 2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
 
-This is to set the connection string that retrieves from 'task cloud-provision' step.
+This is to set the connection string that retrieves from `task cloud-provision` step.
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
 ![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+The DevKit reboots and starts running the code.
 
 #### macOS
 
 1. Put DevKit into configuration mode:
   Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
-2. Use `Cmd+P` to run 'task device-upload'.
+2. Use `Cmd+P` to run `task device-upload`.
 
-This is to set the connection string that retrieves from 'task cloud-provision' step.
+This is to set the connection string that retrieves from `task cloud-provision` step.
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
 ![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+The DevKit reboots and starts running the code.
 
 ## Test the project
 
@@ -184,6 +184,6 @@ The program would first initialize with a stable magnetic field. After initializ
 
 ## Problems and feedback
 
-You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
 
 {% include feedback.html tutorial="door-monitor" %}

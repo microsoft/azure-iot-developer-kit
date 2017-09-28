@@ -31,7 +31,7 @@ Hook up the hardware to your computer.
 * DevKit board
 * Micro-USB cable
 
-![getting-started-hardware]({{"/assets/images/getting-started/hardware.jpg" | absolute_url }})
+![Required hardware]({{"/assets/images/getting-started/hardware.jpg" | absolute_url }})
 
 ### B. Connect DevKit to your computer
 
@@ -39,7 +39,7 @@ Hook up the hardware to your computer.
 2. Connect USB end to your computer
 3. The green LED for power confirms the connection
 
-![getting-started-connect]({{"/assets/images/getting-started/connect.jpg" | absolute_url }})
+![Hardware connections]({{"/assets/images/getting-started/connect.jpg" | absolute_url }})
 
 ## Step 3. Configure Wi-Fi
 
@@ -49,23 +49,23 @@ IoT projects rely on internet connectivity. Use the following instructions to co
 
 Hold down button B, push and release the reset button, and then release button B. Your DevKit enters AP mode for configuring Wi-Fi. The screen displays the service set identifier(SSID) of the DevKit and the configuration portal IP address:
 
-![getting-started-wifi-ap]({{"/assets/images/getting-started/wifi-ap.jpg" | absolute_url }})
+![Reset button, button B, and SSID]({{"/assets/images/getting-started/wifi-ap.jpg" | absolute_url }})
 
 ### B. Connect to DevKit AP
 
 Now, use another Wi-Fi enabled device (computer or mobile phone) to connect to the DevKit SSID (highlighted in the preview image). Leave the password empty.
 
-![getting-started-ssid]({{"/assets/images/getting-started/connect-ssid.png" | absolute_url }})
+![Network info and Connect button]({{"/assets/images/getting-started/connect-ssid.png" | absolute_url }})
 
 ### C. Configure Wi-Fi for the DevKit
 
 Open the IP address shown on the DevKit screen on your computer or mobile phone browser, select the Wi-Fi network that you want the DevKit to connect to, and then type the password. Select **Connect**:
 
-![getting-started-wifi-portal]({{"/assets/images/getting-started/wifi-portal.png" | absolute_url }})
+![Password box and Connect button]({{"/assets/images/getting-started/wifi-portal.png" | absolute_url }})
 
 When the connection succeeds, the DevKit reboots in a few seconds. You then see the Wi-Fi name and IP address on the screen:
 
-![getting-started-wifi-ip]({{"/assets/images/getting-started/wifi-ip.jpg" | absolute_url }})
+![Wi-Fi name and IP address]({{"/assets/images/getting-started/wifi-ip.jpg" | absolute_url }})
 
 **Note:** The IP address displayed in the photo might not match the actual IP address assigned and displayed on the DevKit screen. This is normal, because Wi-Fi uses DHCP to dynamically assign IPs.
 {: .notice--info}
@@ -83,7 +83,7 @@ The default app running on the DevKit checks the latest version of the firmware 
 
 If you need a firmware upgrade, the screen will show the current and latest firmware versions. To upgrade, follow the [Upgrade firmware](https://microsoft.github.io/azure-iot-developer-kit/docs/upgrading/) guide.
 
-![getting-started-firmware]({{"/assets/images/getting-started/firmware.jpg" | absolute_url }})
+![Display of current and latest firmware versions]({{"/assets/images/getting-started/firmware.jpg" | absolute_url }})
 
 **Note:** This is a one-time effort. After you start developing on the DevKit and upload your app, the latest firmware will come with your app.
 {: .notice--info}
@@ -223,7 +223,7 @@ You now have all the necessary tools and packages installed for macOS.
 
 ## Problems and feedback
 
-You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from our [Gitter channel](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"}.
+If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from our [Gitter channel](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"}.
 
 {% include feedback.html tutorial="get-started" %}
 

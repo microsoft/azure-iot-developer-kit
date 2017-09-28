@@ -18,7 +18,7 @@ In this mini solution, you will make the DevKit able to send a tweet by voice. B
 
 ## Step.1 Open mini solution folder
 
-In VS Code, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Examples** to open example pane:
+In VS Code, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**:
 
 **[TODO: Screenshot]**
 
@@ -52,7 +52,7 @@ Use **Quick Open** (`Ctrl+P`) to run 'task deploy'. It will start deploying Azur
 
 Use again **Quick Open** (`Ctrl+P`) to run 'task build':
 
-It will build Arduino code and deploy to the device. DevKit will reboot and start running the solution immediately after that:
+It will build Arduino code and deploy to the device. DevKit reboots and starts running the solution immediately after that:
 
 **[TODO: Screenshot]**
 

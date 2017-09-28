@@ -47,66 +47,66 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code automatically finds the DevKit and opens an introduction page:
 
-![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
+![Introduction page]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
 **Notice:** Occasionally, when you launch VS Code, you are prompted with error that cannot find Arduino IDE or related board package. Close VS Code, launch Arduino IDE once again, and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
 
-### B. Open Arduino Examples folder
+### B. Open the Arduino Examples folder
 
-Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT` and click on `GetStarted`. This will open a new VS Code window with project folder in it.
+Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **GetStarted**. This will open a new VS Code window with project folder in it.
 
-![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
+![Arduino Examples tab]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
 
-If you happen to close the pane, to reload it, use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** to find and select **Arduino: Examples**.
+If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
 ## Step 2. Provision Azure services
 
-In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by typing 'task cloud-provision':
+In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
 
 In the VS Code terminal, an interactive command line guides you through provisioning the required Azure services:
 
-![mini-solution-cloud-provision]({{"/assets/images/mini-solution/connect-iothub/cloud-provision.png" | absolute_url }})
+![Interactive command line]({{"/assets/images/mini-solution/connect-iothub/cloud-provision.png" | absolute_url }})
 
 ## Step 3. Build and upload Arduino sketch
 
-### A. Install required library
+### A. Install the required library
 
-1. Press `F1` or `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Library Manager**.
+1. Press `F1` or `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Library Manager**.
 
-2. Search for `ArduinoJson` library and click **Install**:
-  ![arduino-json]({{"/assets/images/mini-solution/connect-iothub/arduino-json.png" | absolute_url }})
+2. Search for the **ArduinoJson** library and select **Install**:
+  ![Install Arduino library]({{"/assets/images/mini-solution/connect-iothub/arduino-json.png" | absolute_url }})
 
-### B. Build and upload device code
+### B. Build and upload the device code
 
 {% include switch.html content = page.variable %}
 
 #### Windows
 
-1. Use `Ctrl+P` to run 'task device-upload'.
+1. Use `Ctrl+P` to run `task device-upload`.
 2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
 
-This is to set the connection string that retrieves from 'task cloud-provision' step.
+This is to set the connection string that retrieves from `task cloud-provision` step.
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
-![device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
+![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+The DevKit reboots and starts running the code.
 
 #### macOS
 
 1. Put DevKit into configuration mode:
   Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
-2. Use `Cmd+P` to run 'task device-upload'.
+2. Use `Cmd+P` to run `task device-upload`.
 
-This is to set the connection string that retrieves from 'task cloud-provision' step.
+This is to set the connection string that retrieves from `task cloud-provision` step.
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
 ![device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+The DevKit reboots and starts running the code.
 
 ## Test the project
 
@@ -130,20 +130,20 @@ The sample application is running successfully when you see the following result
 
 ## Problems and feedback
 
-You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
 
 {% include feedback.html tutorial="happy-path" %}
 
 ## Next steps
 
-You have successfully connected an MXChip IoT DevKit to your IoT Hub, and sent the captured sensor data to your IoT hub.
+You have successfully connected an MXChip IoT DevKit to your IoT hub, and you have sent the captured sensor data to your IoT hub.
 
-To continue getting started with IoT Hub and to explore other IoT scenarios, see:
+To continue getting started with Azure IoT Hub and to explore other IoT scenarios, see:
 
 - [Manage cloud device messaging with iothub-explorer](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-explorer-cloud-device-messaging){:target="_blank"}
 - [Save IoT Hub messages to Azure data storage](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-store-data-in-azure-table-storage){:target="_blank"}
 - [Use Power BI to visualize real-time sensor data from Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi){:target="_blank"}
-- [Use Azure Web Apps to visualize real-time sensor data from Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps){:target="_blank"}
+- [Use Web Apps to visualize real-time sensor data from Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps){:target="_blank"}
 - [Weather forecast using the sensor data from your IoT hub in Azure Machine Learning](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-weather-forecast-machine-learning){:target="_blank"}
 - [Device management with iothub-explorer](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-iothub-explorer){:target="_blank"}
 - [Remote monitoring and notifications with ​​Logic ​​Apps](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-monitoring-notifications-with-azure-logic-apps){:target="_blank"}
