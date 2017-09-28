@@ -110,7 +110,7 @@ The downloaded `.zip` file contains all necessary tools and packages required fo
 
 [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/latest){: .click-action-tracker .btn .btn--success .btn--large}
 
-**MD5:** 94cdaf37b3d0f12e3d6523e412a89a71
+**MD5:** f8c032a4b22fd3a401308fce349b7fe8
 {: .notice}
 
 > The `.zip` file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
@@ -177,7 +177,7 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
   [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-action-tracker .btn .btn--success .btn--large}
 
-  **MD5:** a475e1c6184da201b21d7ac5caf7168e
+  **MD5:** e70a4db1b90dbb279bb21420d6d008b0
   {: .notice}
 
   Locate the `.zip` and extract it. Then launch **Terminal** app and run the following commands to configure:
