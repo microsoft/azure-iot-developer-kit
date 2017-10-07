@@ -203,7 +203,9 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-autoprefixer
+  jekyll-paginate
+  jemoji
   tzinfo-data
 
 BUNDLED WITH
-   1.15.1
+   1.15.4

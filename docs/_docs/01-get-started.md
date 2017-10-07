@@ -148,78 +148,7 @@ Installation should take around 10 minutes, depending on your internet speed. Af
 
 ### macOS (preview)
 
-Follow these steps to prepare the development environment on macOS.
-
-#### A. Install Azure CLI 2.0
-
-Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli){:target="_blank"} to install Azure CLI 2.0:
-
-1. Install Azure CLI 2.0 by using one `curl` command:
-  ```bash
-  curl -L https://aka.ms/InstallAzureCli | bash
-  ```
-
-2. Restart your command shell for changes to take effect:
-  ```bash
-  exec -l $SHELL
-  ```
-
-#### B. Install Arduino IDE
-
-The Visual Studio Code Arduino extension relies on the Arduino IDE. Download and install the [Arduino IDE for macOS](https://www.arduino.cc/en/Main/Software){:target="_blank"}.
-
-#### C. Install Visual Studio Code
-
-Download and install [Visual Studio Code for macOS](https://code.visualstudio.com/){:target="_blank"}. This is the primary development tool for building DevKit IoT applications.
-
-#### D. Download the latest package
-
-1. Install Node.js. You can use popular macOS package manager [Homebrew](https://brew.sh/){:target="_blank"} or [pre-built installer](https://nodejs.org/en/download/){:target="_blank"} to install it.
-
-2. Download the .zip file that contains required task scripts for DevKit development in VS Code.
-
-  [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-action-tracker .btn .btn--success .btn--large}
-
-  **MD5:** e70a4db1b90dbb279bb21420d6d008b0
-  {: .notice}
-
-  Locate the .zip file and extract it. Then start the **Terminal** app and run the following commands:
-
-  a. Move extracted folder to your macOS user folder:
-  ```bash
-  mv [.zip extracted folder]/azure-board-cli ~/. ; cd ~/azure-board-cli
-  ```
-  
-  b. Install npm packages:
-  ```
-  npm install
-  ```
-
-#### E. Install the VS Code extension for Arduino
-
-You can install Azure Marketplace extensions directly in Visual Studio Code. Select the extensions icon in the left pane, search for **Arduino**, and then select **Install**:
-
-![Finding an Arduino extension]({{"/assets/images/installation-extensions-mac.png" | absolute_url}})
-
-#### F. Install the DevKit board package
-
-Add the DevKit board by using Board Manager in Visual Studio Code.
-
-1. Use `Cmd+Shift+P` to open the command palette, type **Arduino**, and then find and select **Arduino: Board Manager**.
-
-2. Select **Additional URLs** at the lower right.
- ![Additional URLs link]({{"/assets/images/installation-additional-urls-mac.png" | absolute_url}})
-
-3. In the `settings.json` file, add a line at the bottom of the **USER SETTINGS** pane and save.
- ```json
- "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
- ```
- ![Code added to USER SETTINGS pane]({{"/assets/images/installation-settings-json-mac.png" | absolute_url}})
-
-4. In Board Manager, search for **az3166** and install the [latest version]({{"/versions" | absolute_url }}).
- ![Installing az3166]({{"/assets/images/installation-az3166-mac.png" | absolute_url}})
-
-You now have all the necessary tools and packages installed for macOS.
+[Follow these steps]({{"/docs/installation/#macos-preview" | absolute_url}}) to prepare the development environment on macOS. We are working on the one-click installation experience and will release it soon.
 
 ## Problems and feedback
 
