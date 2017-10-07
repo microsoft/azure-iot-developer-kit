@@ -41,13 +41,13 @@ Make sure you have gone through getting started tutorial to [prepare your develo
 
 ### Step 2. Update VS Code extension for Arduino
 
-1. Launch VS Code.
+1. Start VS Code.
 
 2. Make sure you have updated VS Code extension Arduino to the latest version.
 
 ### Step 3. Upgrade board package
 
-1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to invoke command palette and type **Arduino** then find and select **Arduino: Board Manager**.
+1. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the  command palette, type **Arduino**, and then find and select **Arduino: Board Manager**.
 
 2. Click **Refresh Package Indexes** to update board packages information.
   ![upgrading-refresh]({{"/assets/images/upgrading-refresh.png" | absolute_url}})

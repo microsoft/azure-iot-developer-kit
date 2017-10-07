@@ -19,14 +19,14 @@ The MQTT client library we used is part of the [Eclipse Paho](http://www.eclipse
 
 Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
-* Have your DevKit connected to WiFi
+* Have your DevKit connected to Wi-Fi
 * Prepare the development environment
 
-## Step 1. Open project folder
+## Step 1. Open the project folder
 
 1. Disconnect DevKit from your computer if it is connected.
 
-2. Launch VS Code.
+2. Start VS Code.
 
 3. Connect DevKit to your computer.
     VS Code automatically detects your DevKit and opens the following pages:
@@ -37,18 +37,15 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
 ## Step 2. Open the MQTTClient Sample
 
-Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > MQTT` and then click `MQTTClient`. This will open a new VS Code window with project folder in it.
+Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > MQTT**, and select **MQTTClient**. This will open a new VS Code window with project folder in it.
 
 ![examples-folder]({{"/assets/images/mini-solution/mqtt-helloworld/examples.png" | absolute_url}})
 
-If the Arduino Examples page does not show up, open it by the following steps:
-
-1. Press `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette.
-2. In the command palette, type 'Arduino', and then click `Arduino: Examples`.
+If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
 ## Step 3. Build and upload Arduino sketch
 
-Type `Ctrl+P` (macOS: `Cmd+P`) to run 'task device-upload'. Once the upload is completed, DevKit restarts and runs the sample.
+Type `Ctrl+P` (macOS: `Cmd+P`) to run `task device-upload`. Once the upload is completed, DevKit restarts and runs the sample.
 
 ![device-upload]({{"/assets/images/mini-solution/mqtt-helloworld/device-upload.jpg" | absolute_url}})
 
@@ -74,7 +71,7 @@ The Serial Monitor displays all the messages sent from the sample. When the samp
 
 ## Problems and feedback
 
-You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
 
 {% include feedback.html tutorial="mqtt-helloworld" %}
 

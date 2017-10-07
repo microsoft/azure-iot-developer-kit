@@ -9,7 +9,7 @@ header:
 layouts_gallery:
   - url: /assets/images/mini-solution/remote-monitoring/connect-wifi.jpg
     image_path: /assets/images/mini-solution/remote-monitoring/connect-wifi.jpg
-    alt: "Connect to WiFi"
+    alt: "Connect to Wi-Fi"
   - url: /assets/images/mini-solution/remote-monitoring/send-data.jpg
     image_path: /assets/images/mini-solution/remote-monitoring/send-data.jpg
     alt: "Send sensor data"
@@ -37,7 +37,7 @@ In this tutorial, you learn how to run a sample app on DevKit to send sensor dat
 
 Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
-* Have your DevKit connected to WiFi
+* Have your DevKit connected to Wi-Fi
 * Prepare the development environment
 
 An active Azure subscription. If you do not have one, you can register via one of the methods:
@@ -79,20 +79,17 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 1. Disconnect DevKit from your computer if it is connected.
 
-2. Launch VS Code.
+2. Start VS Code.
 
 3. Connect DevKit to your computer. VS Code automatically detects your DevKit and opens the following pages:
   * Preview README.md: The DevKit introduction page.
   * Arduino Examples: Hands-on samples to get started with DevKit.
 
-4. Expand left side **'ARDUINO EXAMPLES'** section, navigate to `Examples for MXCHIP AZ3166 > AzureIoT`, and then click **RemoteMonitoring**. This will open a new VS Code window with project folder in it.
+4. Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **RemoteMonitoring**. This will open a new VS Code window with project folder in it.
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
 
-If the **Arduino Examples** page doesn’t show up, open it by the following steps:
-
-1. Press `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette.
-2. In the command palette, type `Arduino`, and then click **Arduino: Examples**.
+If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
 ## Step 3. Provision required Azure services
 
@@ -105,36 +102,36 @@ The cloud-provision task opens an interactive command line that guides you throu
 
 ![remote-monitoring-provision]({{"/assets/images/mini-solution/remote-monitoring/provision.png" | absolute_url }})
 
-## Step 4. Build and upload device code
+## Step 4. Build and upload the device code
 
 {% include switch.html content = page.variable %}
 
 ### Windows
 
-1. Use `Ctrl+P` to run 'task device-upload'.
+1. Use `Ctrl+P` to run `task device-upload`.
 2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
 
-This is to set the connection string that retrieves from 'task cloud-provision' step.
+This is to set the connection string that retrieves from `task cloud-provision` step.
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
 ![device-upload]({{"/assets/images/mini-solution/remote-monitoring/build.png" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+The DevKit reboots and starts running the code.
 
 ### macOS
 
 1. Put DevKit into configuration mode:
   Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
-2. Use `Cmd+P` to run 'task device-upload'.
+2. Use `Cmd+P` to run `task device-upload`.
 
-This is to set the connection string that retrieves from 'task cloud-provision' step.
+This is to set the connection string that retrieves from `task cloud-provision` step.
 
 Then it starts verifying and uploading the Arduino sketch:
 
 ![device-upload]({{"/assets/images/mini-solution/remote-monitoring/build.png" | absolute_url }})
 
-The DevKit will reboot and start running the code.
+The DevKit reboots and starts running the code.
 
 ## Test the project
 
@@ -148,6 +145,6 @@ When the sample app runs, DevKit sends sensor data over Wi-Fi to your Azure IoT 
 
 ## Problems and feedback
 
-You can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
 
 {% include feedback.html tutorial="remote-monitoring" %}
