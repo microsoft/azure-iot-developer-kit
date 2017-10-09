@@ -31,10 +31,10 @@ $(document).ready(function(){
     $(".author__urls-wrapper button").toggleClass("open");
   });
 
+  $.devKitExtends();
+
   // init smooth scroll
   $(".toc__menu a").smoothScroll({offset: -20});
-
-  $.devKitExtends();
 
   // init backstretch
   $('.page__hero--overlay-full').backstretch();
