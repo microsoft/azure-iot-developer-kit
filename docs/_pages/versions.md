@@ -7,6 +7,12 @@ last_modified_at: 2017-08-10
 
 {% include toc icon="columns" %}
 
+## Version 1.1.1 (September 27)
+
+### Release Summary
+
+* Minor fixes of internal Azure IoT Hub Device APIs.
+
 ## Version 1.1.0 (September 4)
 
 **Notice:** This release involves breaking changes, please [upgrade the DevKit firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
