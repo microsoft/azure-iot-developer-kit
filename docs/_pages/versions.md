@@ -9,7 +9,9 @@ last_modified_at: 2017-08-10
 
 ## Version 1.1.1 (September 27)
 
-Minor fixes of internal IoT Hub Device APIs.
+### Release Summary
+
+* Minor fixes of internal Azure IoT Hub Device APIs.
 
 ## Version 1.1.0 (September 4)
 
