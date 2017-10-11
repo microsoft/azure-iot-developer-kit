@@ -103,6 +103,10 @@ This is a known issue caused by the platform index of the board AZ3166 is not re
 
 To resolve, we need to refresh the platform index: 
 
-Open Arduino IDE, under Tools => Board:'local board name', click 'Boards Manager...'. Wait until all platform indexes are refreshed and then close Arduino IDE.
+Open Arduino IDE, under Tools => Board:'local board name', click 'Boards Manager...'. 
+
+![getting-started-faq-unknown-package]({{"/assets/images/getting-started-faq-unknown-package.png" | absolute_url }})
+
+Wait until all platform indexes are refreshed and then close Arduino IDE.
 
 [![Back to Top]({{"/assets/images/faq-back-to-top.png" | absolute_url }})](#){: .faq-back-to-top}
