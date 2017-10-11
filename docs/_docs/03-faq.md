@@ -83,18 +83,17 @@ Occasionally, when you launch Visual Studio Code, you are prompted with an error
 
 To resolve, close Visual Studio Code, then launches the actual Arduino IDE once. Subsequently, when you open Visual Studio Code it should correctly locate the Arduino IDE path.
 
-### Terminal text misaligned in Visual Studio Code.
+### Get "Error: AZ3166: Unknown package" when using task device-upload
 
-This is a known bug for the latest version of Visual Studio Code ([#19665](https://github.com/Microsoft/vscode/issues/19665){:target="_blank"}) if you are using Powershell or CMD in the terminal.
+This is a known issue caused by the platform index of the board AZ3166 is not refreshed.
 
-To resolve, there is a known [workaround](https://github.com/Microsoft/vscode/issues/19665#issuecomment-294536524){:target="_blank"}. Add this snippet to VS Code settings file:
+To resolve, we need to refresh the platform index: 
 
-```json
-"terminal.integrated.shellArgs.windows": [
-  "-NoExit",
-  "/c",
-  "chcp.com 65001"
-]
-```
+1. Open Arduino IDE, find **Tools > Board: 'local board name' > Boards Manager...**.
+  ![Open Arduino Board Manager]({{"/assets/images/getting-started-faq-unknown-package.png" | absolute_url }})
+
+2. Wait until all platforms index is refreshed and then close Arduino IDE.
+
+3. Re-open VS Code to run `task device-upload` again.
 
 [![Back to Top]({{"/assets/images/faq-back-to-top.png" | absolute_url }})](#){: .faq-back-to-top}

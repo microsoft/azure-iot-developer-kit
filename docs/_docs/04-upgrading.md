@@ -29,7 +29,7 @@ Once the DevKit is connected, in Windows you see a new USB mass storage device i
 
 3. Wait until the file is copied, then the DevKit will reboot to the latest firmware.
 
-After done, you will see the firmware version on the screen of the kit.
+After reboot and the DevKit connects to WiFi, you will see the firmware version on the screen of the kit.
 
 ## Upgrade board package
 
