@@ -12,7 +12,7 @@ header:
     - label: "Get a Kit"
       url: "https://aka.ms/iot-devkit-purchase"
   call_to_action_secondary:
-      label: "Not have a DevKit yet? Try our simulator now."
+      label: "Not having a DevKit yet? Try our simulator now."
       url: "https://aka.ms/iot-devkit-simulator"
   extra_logo:
     - image_path: /assets/images/logo-azure-certified.svg
