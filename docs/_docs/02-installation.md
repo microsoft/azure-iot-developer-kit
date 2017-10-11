@@ -103,7 +103,13 @@ Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-a
 
 ### Step 2. Install Arduino IDE
 
-The Visual Studio Code Arduino extension relies on the Arduino IDE. Download and install the [Arduino IDE for macOS](https://www.arduino.cc/en/Main/Software){:target="_blank"}.
+The Visual Studio Code Arduino extension relies on the Arduino IDE.
+
+1. Download the [Arduino IDE for macOS](https://www.arduino.cc/en/Main/Software){:target="_blank"}.
+
+2. Extract downloaded .zip file.
+
+3. Drag and drop `Arduino.app` into Applications folder to install.
 
 ### Step 3. Install Visual Studio Code
 
@@ -134,9 +140,18 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
 ### Step 5. Install the VS Code extension for Arduino
 
-You can install Azure Marketplace extensions directly in Visual Studio Code. Select the extensions icon in the left pane, search for **Arduino**, and then select **Install**:
+You can install Azure Marketplace extensions directly in Visual Studio Code.
 
-![installation-extensions]({{"/assets/images/installation-extensions-mac.png" | absolute_url}})
+1. Select the extensions icon in the left pane, search for **Arduino**, and then select **Install**:
+  ![installation-extensions]({{"/assets/images/installation-extensions-mac.png" | absolute_url}})
+
+2. Open **Preference > Settings**, add a line within the **USER SETTINGS** pane and save:
+  ```json
+  "arduino.path": "/Applications"
+  ```
+  
+  **Note:** Make sure the Arduino path is set the right location you have installed your Arduino IDE.
+  {: .notice}
 
 ### Step 6. Install the DevKit board package
 
@@ -147,7 +162,7 @@ Add the DevKit board by using Board Manager in Visual Studio Code.
 2. Select **Additional URLs** at the lower right.
  ![installation-additional-urls]({{"/assets/images/installation-additional-urls-mac.png" | absolute_url}})
 
-3. In the `settings.json` file, add a line at the bottom of the **USER SETTINGS** pane and save.
+3. In the `settings.json` file, add a line within the **USER SETTINGS** pane and save:
  ```json
  "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
  ```
