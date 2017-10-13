@@ -82,7 +82,7 @@ The error is: "'ServiceConnect, DeviceConnect, RegistryWrite' is not valid value
 
 We are waiting for the service to fix it soon.
 
-**Notice:** This is an [issue](https://github.com/Azure/azure-cli/issues/4654){:target="blank"} on IoT Hub since October 12th, one API (which is what `azure-mgmt-iothub` 0.2.2 uses) is returning the "rights" property value in a different order than [specified](https://docs.microsoft.com/en-us/python/api/azure.mgmt.iothub.models.accessrights?view=azure-python){:target="blank"}. It is being returned as "ServiceConnect, DeviceConnect, RegistryWrite" instead of "RegistryWrite, ServiceConnect, DeviceConnect" which ties to the registry_write_service_connect_device_connect enum member hence the exception.
+**Notice:** There is an [issue](https://github.com/Azure/azure-cli/issues/4654){:target="blank"} on IoT Hub since October 12th, one API (which is what `azure-mgmt-iothub` 0.2.2 uses) is returning the "rights" property value in a different order than [specified](https://docs.microsoft.com/en-us/python/api/azure.mgmt.iothub.models.accessrights?view=azure-python){:target="blank"}. It is being returned as "ServiceConnect, DeviceConnect, RegistryWrite" instead of "RegistryWrite, ServiceConnect, DeviceConnect" which ties to the registry_write_service_connect_device_connect enum member hence the exception.
 {: .notice--warning}
 
 ## Development
