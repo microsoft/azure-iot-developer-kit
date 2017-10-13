@@ -134,7 +134,10 @@ Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP A
 
 If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
-### C. Retrieve device connection string
+### C. Provision Azure services
+
+**Notice:** There is a IoT Hub service issue from **Oct, 12** which caused provision failed, for more detail please check [FAQ steps]({{"/docs/faq/#running-task-cloud-provision-fails" | absolute_url}}).
+{: .notice--warning}
 
 In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
 

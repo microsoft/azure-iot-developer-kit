@@ -75,6 +75,16 @@ You may encounter the error message as the screen below:
 
 This is because Azure IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal){:target="_blank"}. In this case, you may select the existing IoT Hub instead of trying to create a new one.
 
+### Running `task cloud-provision` fails
+
+The error is: "'ServiceConnect, DeviceConnect, RegistryWrite' is not valid value for enum <enum 'AccessRights'>" 
+![cli-list-device-error]({{"/assets/images/cli-list-device-error.png" | absolute_url }})
+
+We are waiting for the service to fix it soon.
+
+**Notice:** There is an [issue](https://github.com/Azure/azure-cli/issues/4654){:target="blank"} on IoT Hub since October 12th, one API (which is what `azure-mgmt-iothub` 0.2.2 uses) is returning the "rights" property value in a different order than [specified](https://docs.microsoft.com/en-us/python/api/azure.mgmt.iothub.models.accessrights?view=azure-python){:target="blank"}. It is being returned as "ServiceConnect, DeviceConnect, RegistryWrite" instead of "RegistryWrite, ServiceConnect, DeviceConnect" which ties to the registry_write_service_connect_device_connect enum member hence the exception.
+{: .notice--warning}
+
 ## Development
 
 ### Visual Studio Code cannot find Arduino IDE
@@ -83,7 +93,7 @@ Occasionally, when you launch Visual Studio Code, you are prompted with an error
 
 To resolve, close Visual Studio Code, then launches the actual Arduino IDE once. Subsequently, when you open Visual Studio Code it should correctly locate the Arduino IDE path.
 
-### Get "Error: AZ3166: Unknown package" when using task device-upload
+### Get "Error: AZ3166: Unknown package" when using `task device-upload`
 
 This is a known issue caused by the platform index of the board AZ3166 is not refreshed.
 
@@ -96,4 +106,7 @@ To resolve, we need to refresh the platform index:
 
 3. Re-open VS Code to run `task device-upload` again.
 
+
 [![Back to Top]({{"/assets/images/faq-back-to-top.png" | absolute_url }})](#){: .faq-back-to-top}
+
+
