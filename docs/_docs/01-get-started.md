@@ -201,7 +201,7 @@ You can install Azure Marketplace extensions directly in Visual Studio Code. Sel
 
 ![Finding an Arduino extension]({{"/assets/images/installation-extensions-mac.png" | absolute_url}})
 
-After VS Code extension is installed, open `settings.json`, add the setting of "arduino.path" with the path you install Arduino IDE.
+After VS Code extension is installed, open `settings.json`, add a new setting "arduino.path" and the value is the installation path of Arduino IDE.
  ![update setting az3166]({{"/assets/images/update-setting-az3166-mac.png" | absolute_url}})
  
 #### F. Install the DevKit board package
