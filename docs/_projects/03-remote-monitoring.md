@@ -93,7 +93,7 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
 
 ## Step 3. Provision required Azure services
 
-**Notice:** Unfortunately, there is a IoT Hub service livesite issue which caused provision failed, for more detail please check [FAQ steps]({{"/docs/faq/#get-error-erviceconnect-deviceconnect-registrywrite-is-not-valid-value-for-enum-enum-accessrights-when-running-task-cloud-provision" | absolute_url}}).
+**Notice:** Unfortunately, there is a IoT Hub service livesite issue which caused provision failed, for more detail please check [FAQ steps]({{"/docs/faq/#running-task-cloud-provision-fails" | absolute_url}}).
 {: .notice--warning}
 
 1. In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`.
