@@ -136,9 +136,6 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
 
 ### C. Provision Azure services
 
-**Notice:** There is a IoT Hub service issue from **Oct, 12** which caused provision failed, for more detail please check [FAQ steps]({{"/docs/faq/#running-task-cloud-provision-fails" | absolute_url}}).
-{: .notice--warning}
-
 In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
 
 In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services. You need to select all the items from promprted list same as the ones you have previously provisioned in the [Step 2]({{"/docs/projects/door-monitor#step-2-deploy-iot-hub-in-azure" | absolute_url }}).
