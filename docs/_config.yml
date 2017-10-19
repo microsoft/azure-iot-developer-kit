@@ -277,3 +277,6 @@ compress_html:
     envs: development
 
 github: [metadata]
+
+# site var to make array creation easier
+emptyArray: []
