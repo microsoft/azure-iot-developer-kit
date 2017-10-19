@@ -2,7 +2,7 @@
 permalink: /versions/
 title: "Versions and Release Notes"
 excerpt: "Versions and release notes"
-last_modified_at: 2017-08-10
+last_modified_at: 2017-10-11
 ---
 
 {% include toc icon="columns" %}
@@ -36,6 +36,12 @@ DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure
 
 * Development Tools
   * Visual Studio Code extension for Arduino now used tree view to display Arduino examples.
+
+### Downloads
+
+- [Installation Package](https://aka.ms/devkit/prod/installpackage/latest).
+- [Firmware](https://aka.ms/devkit/prod/firmware/latest).
+
 
 ## Version 1.0.2 (August 10)
 
