@@ -1,0 +1,3 @@
+[submodule "docs/minisolution/DevKitState"]
+	path = docs/minisolution/DevKitState
+	url = https://github.com/DevKitExamples/DevKitState.git

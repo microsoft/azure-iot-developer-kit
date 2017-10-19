@@ -129,6 +129,7 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - minisolution
 keep_files:
   - .git
   - .svn
