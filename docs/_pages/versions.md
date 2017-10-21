@@ -7,6 +7,28 @@ last_modified_at: 2017-10-11
 
 {% include toc icon="columns" %}
 
+## Version 1.2 (October 23)
+
+### Release Summary
+
+#### Firmware
+* Upgraded IoT Hub device SDK to version 1.1.23.
+* Refined IoT Hub MQTT Client that can be shared with all IoT Hub mini-solutions.
+* Fix HttpClient to enable response callback when handle large response body.
+* Enable float modifier for print/printf function
+* Remove json-c library and use parson JSON library instead
+ 
+#### Project Catalog
+o   Fixed gyroscope values and add acceleration sensor in SensorStatus mini-solution.
+o   Applied new MQTT Client wrapper in IoTGetStarted / RemoteMonitoring / ShakeShake projects.
+o   Telemetry improvement in mini solutions for mac.
+o   Add device twin mini solution to monitor DevKit state and control the user LED with Azure IoT Hub device twins. (pending on docs submodule hookup)
+ 
+·        Development Tools
+o   Upgrade all project tasks to version 2.0 to use CMD as the default shell in Windows.
+o   Fixed default device upload method to use openocd instead of st-link.
+o   Fixed VS Code Task issue due to double quotation marks.
+
 ## Version 1.1.1 (September 27)
 
 ### Release Summary
