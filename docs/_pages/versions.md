@@ -2,32 +2,36 @@
 permalink: /versions/
 title: "Versions and Release Notes"
 excerpt: "Versions and release notes"
-last_modified_at: 2017-10-11
+last_modified_at: 2017-10-23
 ---
 
 {% include toc icon="columns" %}
 
 ## Version 1.2 (October 23)
 
+No more manual steps to prepare your DevKit development environment on macOS! The time saving one-click installation now support macOS as well. And yes, we love bash.
+
 ### Release Summary
 
-#### Firmware
-* Upgraded IoT Hub device SDK to [1.1.23](https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-09-08){:target="_blank"}.
-* Made IoT Hub MQTT Client as a library that can be shared by all samples.
-* Enabled float modifier for `print/printf` function.
-* Removed `json-c` library and use [parson JSON library](https://github.com/kgabis/parson){:target="_blank"} instead.
-* Bug fix: Fixed HttpClient to enable response callback when handle large response body.
+* Firmware
+  * Upgraded IoT Hub device SDK to [1.1.23](https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-09-08){:target="_blank"}.
+  * Made IoT Hub MQTT Client as a wrapper that can be shared by all mini solutions.
+  * Enabled float modifier for `print/printf` function.
+  * Removed `json-c` library and use [parson JSON library](https://github.com/kgabis/parson){:target="_blank"} instead.
+  * Bug fix: Enabled HttpClient response callback when handling large response body.
  
-#### Project Catalog
-* Fixed gyroscope values and add acceleration sensor in SensorStatus mini-solution.
-* Applied new MQTT Client wrapper in IoTGetStarted / RemoteMonitoring / ShakeShake projects.
-* Telemetry improvement in mini solutions for mac.
-* Add device twin mini solution to monitor DevKit state and control the user LED with Azure IoT Hub device twins. (pending on docs submodule hookup)
+* Project Catalog
+  * New mini solution: DeviceStates. Use Azure IoT Hub device twins to monitor DevKit state and control the user LED.
+  * Fixed gyroscope values and added acceleration sensor in SensorStatus sample.
+  * Used MQTT Client wrapper for GetStarted, RemoteMonitoring and ShakeShake mini solutions.
+  * Improved telemetry logics in mini solutions on macOS.
  
-#### Development Tools
-* Upgrade all project tasks to version 2.0 to use CMD as the default shell in Windows.
-* Fixed default device upload method to use openocd instead of st-link.
-* Fixed VS Code Task issue due to double quotation marks.
+* Development Tools
+  * Enabled one-click install experience on macOS :wink:. 
+  * Upgraded all project tasks to version 2.0.
+  * Used `CMD` as the default shell on Windows.
+  * Set default device upload method to use OpenOCD instead of ST-Link.
+  * Bug fix: VS Code task failure due to double quotation marks.
 
 ## Version 1.1.1 (September 27)
 
