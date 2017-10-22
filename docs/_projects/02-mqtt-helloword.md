@@ -49,8 +49,8 @@ Type `Ctrl+P` (macOS: `Cmd+P`) to run `task device-upload`. Once the upload is c
 
 ![device-upload]({{"/assets/images/mini-solution/mqtt-helloworld/device-upload.jpg" | absolute_url}})
 
-**Note:** The upload takes a while to complete for the first time.
-{: .notice--info}
+**Notice:** Occasionally, you get error "Error: AZ3166: Unknown package". This is due to the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to solve it.
+{: .notice--warning}
 
 ## Test the project
 

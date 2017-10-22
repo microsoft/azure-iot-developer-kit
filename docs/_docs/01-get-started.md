@@ -7,10 +7,11 @@ variable:
     name: Windows
   - platform: macos-preview
     name: macOS
-last_modified_at: 2017-07-17
+last_modified_at: 2017-10-11
 ---
 
-For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications.
+For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications. 
+If you already did this, you can build your own IoT application. For samples, start with our [Projects Catalog]({{"/docs/projects/" | absolute_url }}).
 
 {% include toc icon="columns" %}
 
@@ -81,7 +82,7 @@ The default app running on the DevKit checks the latest version of the firmware 
 **Notice:** Since v1.1, DevKit enables ST-SAFE in bootloader. You need to upgrade firmware if you are running under v1.1 in order to make it work probably.
 {: .notice--warning}
 
-If you need a firmware upgrade, the screen will show the current and latest firmware versions. To upgrade, follow the [Upgrade firmware](https://microsoft.github.io/azure-iot-developer-kit/docs/upgrading/) guide.
+If you need a firmware upgrade, the screen will show the current and latest firmware versions. To upgrade, follow the [Upgrade firmware](https://microsoft.github.io/azure-iot-developer-kit/docs/firmware-upgrading/) guide.
 
 ![Display of current and latest firmware versions]({{"/assets/images/getting-started/firmware.jpg" | absolute_url }})
 

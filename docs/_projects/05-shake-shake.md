@@ -117,6 +117,9 @@ Then VS Code starts verifying and uploading the Arduino sketch:
 
 The DevKit reboots and starts running the code.
 
+**Notice:** Occasionally, you get error "Error: AZ3166: Unknown package". This is due to the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to solve it.
+{: .notice--warning}
+
 ### macOS
 
 1. Put DevKit into configuration mode:
@@ -130,6 +133,9 @@ Then VS Code starts verifying and uploading the Arduino sketch:
 ![device-upload]({{"/assets/images/mini-solution/shake-shake/device-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
+
+**Notice:** Occasionally, you get error "Error: AZ3166: Unknown package". This is due to the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to solve it.
+{: .notice--warning}
 
 ## Test the project
 

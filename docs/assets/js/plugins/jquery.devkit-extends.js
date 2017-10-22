@@ -95,9 +95,9 @@
         }, 2000);
     }
 
-    $.feedbackButtonClick = function(eventName) {
+    $.feedbackButtonClick = function(projectName, eventName) {
         try {
-            amplitude.getInstance().logEvent(eventName);
+            amplitude.getInstance().logEvent(eventName, {'Project Name': projectName});
         } catch(e) {
             console.log('ampltitude error: '+e);
         }
@@ -106,7 +106,7 @@
             ga('send', 'event', {
                 eventCategory: 'stepFinished',
                 eventAction: 'click',
-                eventLabel: eventName
+                eventLabel: projectName + '-' + eventName
                 });
         } catch(e) {
             console.log('ga error: '+e);

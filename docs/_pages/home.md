@@ -12,13 +12,13 @@ header:
     - label: "Get a Kit"
       url: "https://aka.ms/iot-devkit-purchase"
   call_to_action_secondary:
-      label: "Not have a DevKit yet? Try our simulator now."
+      label: "Not having a DevKit yet? Try our simulator now."
       url: "https://aka.ms/iot-devkit-simulator"
   extra_logo:
     - image_path: /assets/images/logo-azure-certified.svg
       url: "https://catalog.azureiotsuite.com/details?title=MXChip-IoT-DevKit&source=home-page"
   align: center
-excerpt: 'Rapidly develop IoT app using Microsoft Azure and Visual Studio Code'
+excerpt: 'An all-in-one IoT kit built for the cloud'
 intro:
   - image_path: /assets/images/devkit-board-vector@2x.png
     image_width: 50%

@@ -2,10 +2,42 @@
 permalink: /versions/
 title: "Versions and Release Notes"
 excerpt: "Versions and release notes"
-last_modified_at: 2017-08-10
+last_modified_at: 2017-10-23
 ---
 
 {% include toc icon="columns" %}
+
+## Version 1.2 (October 23)
+
+No more manual steps to prepare your DevKit development environment on macOS! The time saving one-click installation now support macOS as well. And yes, we love bash.
+
+### Release Summary
+
+* Firmware
+  * Upgraded IoT Hub device SDK to [1.1.23](https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-09-08){:target="_blank"}.
+  * Made IoT Hub MQTT Client as a wrapper that can be shared by all mini solutions.
+  * Enabled float modifier for `print/printf` function.
+  * Removed `json-c` library and use [parson JSON library](https://github.com/kgabis/parson){:target="_blank"} instead.
+  * Bug fix: Enabled HttpClient response callback when handling large response body.
+ 
+* Project Catalog
+  * New mini solution: DeviceStates. Use Azure IoT Hub device twins to monitor DevKit state and control the user LED.
+  * Fixed gyroscope values and added acceleration sensor in SensorStatus sample.
+  * Used MQTT Client wrapper for GetStarted, RemoteMonitoring and ShakeShake mini solutions.
+  * Improved telemetry logics in mini solutions on macOS.
+ 
+* Development Tools
+  * Enabled one-click install experience on macOS :wink:. 
+  * Upgraded all project tasks to version 2.0.
+  * Used `CMD` as the default shell on Windows.
+  * Set default device upload method to use OpenOCD instead of ST-Link.
+  * Bug fix: VS Code task failure due to double quotation marks.
+
+## Version 1.1.1 (September 27)
+
+### Release Summary
+
+* Minor fixes of internal Azure IoT Hub Device APIs.
 
 ## Version 1.1.0 (September 4)
 
@@ -30,6 +62,12 @@ DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure
 
 * Development Tools
   * Visual Studio Code extension for Arduino now used tree view to display Arduino examples.
+
+### Downloads
+
+- [Installation Package](https://aka.ms/devkit/prod/installpackage/latest).
+- [Firmware](https://aka.ms/devkit/prod/firmware/latest).
+
 
 ## Version 1.0.2 (August 10)
 

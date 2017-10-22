@@ -134,7 +134,7 @@ Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP A
 
 If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
-### C. Retrieve device connection string
+### C. Provision Azure services
 
 In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
 
@@ -159,6 +159,9 @@ Then VS Code starts verifying and uploading the Arduino sketch:
 
 The DevKit reboots and starts running the code.
 
+**Notice:** Occasionally, you get error "Error: AZ3166: Unknown package". This is due to the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to solve it.
+{: .notice--warning}
+
 #### macOS
 
 1. Put DevKit into configuration mode:
@@ -172,6 +175,9 @@ Then VS Code starts verifying and uploading the Arduino sketch:
 ![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
 
 The DevKit reboots and starts running the code.
+
+**Notice:** Occasionally, you get error "Error: AZ3166: Unknown package". This is due to the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to solve it.
+{: .notice--warning}
 
 ## Test the project
 
