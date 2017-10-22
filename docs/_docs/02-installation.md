@@ -89,16 +89,20 @@ You now have all the necessary tools and packages installed for Windows.
 
 ### Step 1. Install Azure CLI 2.0
 
-Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli#macos){:target="_blank"} to install Azure CLI 2.0:
+Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli#macos){:target="_blank"} to install Azure CLI 2.0. We recommend install with [Homebrew](https://brew.sh/){:target="_blank"}:
 
-1. Install Azure CLI 2.0 by using one `curl` command:
+1. If you don't have it already, install Homebrew by following the [Homebrew installation instructions](https://docs.brew.sh/Installation.html){:target="_blank"}.
+
+2. If you have previously installed the CLI manually, follow the [manual uninstall](manual uninstall){:target="blank"} instructions.
+
+3. Update your local Homebrew repositories.
   ```bash
-  curl -L https://aka.ms/InstallAzureCli | bash
+  brew update
   ```
 
-2. Restart your command shell for changes to take effect:
+4. Install the `azure-cli` package.
   ```bash
-  exec -l $SHELL
+  brew install azure-cli
   ```
 
 ### Step 2. Install Arduino IDE
