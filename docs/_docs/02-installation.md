@@ -5,12 +5,12 @@ excerpt: "Instructions for manually install tools and packages."
 variable:
   - platform: windows
     name: Windows
-  - platform: macos-preview
+  - platform: macos
     name: macOS
-last_modified_at: 2017-07-19
+last_modified_at: 2017-10-23
 ---
 
-Follow these  steps to manually install tools and packages for DevKit development. If you are on Windows, we suggest you use the [installation package]({{"/docs/get-started/#a-download-latest-package" | absolute_url}}) to install everything automatically.
+We suggest you use the [installation package]({{"/docs/get-started/#a-download-latest-package" | absolute_url}}) to install everything automatically. If you have problems on using the one-click install experience, follow these  steps to manually install tools and packages for DevKit development. 
 
 {% include switch.html content = page.variable %}
 
@@ -82,10 +82,9 @@ Add the DevKit board by using Board Manager in Visual Studio Code.
 2. Extract the .zip file and double click `stlink_winusb_install.bat` to install:
  ![installation-st-link]({{"/assets/images/installation-st-link-win.png" | absolute_url}})
 
-
 You now have all the necessary tools and packages installed for Windows.
 
-## macOS (preview)
+## macOS
 
 ### Step 1. Install Azure CLI 2.0
 
