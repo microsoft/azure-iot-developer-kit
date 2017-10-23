@@ -18,8 +18,8 @@ docs:
         url: /docs/get-started/
       - title: "Manual Installation"
         url: /docs/installation/
-      - title: "Upgrading"
-        url: /docs/upgrading/
+      - title: "Firmware Upgrading"
+        url: /docs/firmware-upgrading/
       - title: "FAQ"
         url: /docs/faq/
   - title: Projects Catalog
