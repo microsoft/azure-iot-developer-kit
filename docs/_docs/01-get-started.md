@@ -5,9 +5,9 @@ excerpt: "How to quickly install and set up your development environment to use 
 variable:
   - platform: windows
     name: Windows
-  - platform: macos-preview
+  - platform: macos
     name: macOS
-last_modified_at: 2017-10-11
+last_modified_at: 2017-10-23
 ---
 
 For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications. 
@@ -103,7 +103,7 @@ Now it's time to set up the development environment: tools and packages for you 
 
 ### Windows
 
-We encourage you to use the installation package to prepare the development environment. If you encounter any problems, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
+We encourage you to use one-click installation experience to prepare the development environment. If you encounter any problems, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
 
 #### A. Download the latest package
 
@@ -111,12 +111,9 @@ The .zip file that you download contains all the necessary tools and packages fo
 
 [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/latest){: .click-action-tracker .btn .btn--success .btn--large}
 
-**MD5:** f8c032a4b22fd3a401308fce349b7fe8
-{: .notice}
-
-> The .zip file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
+> The .zip file installs the following tools and packages. If you already have some of them installed, the script will can and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks.
-> * [Azure CLI 2.0 MSI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli#windows){:target="_blank"} - Cross-platform  command-line experience for managing Azure resources. The MSI contains dependent Python and pip.
+> * [Azure CLI 2.0 MSI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest#install-on-windows){:target="_blank"} - Cross-platform  command-line experience for managing Azure resources. The MSI contains dependent Python and pip.
 > * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"} (VS Code): Lightweight code editor for DevKit development.
 > * [Visual Studio Code extension for Arduino](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino){:target="_blank"}: Extension that enables Arduino development in Visual Studio Code. 
 > * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: The extension for Arduino relies on this tool.
@@ -147,9 +144,45 @@ Installation should take around 10 minutes, depending on your internet speed. Af
 **Notice:** Occasionally, when you start VS Code, you're prompted with an error that it cannot find the Arduino IDE or related board package. To solve it, close VS Code and restart the Arduino IDE. VS Code should then locate the Arduino IDE path correctly.
 {: .notice--warning}
 
-### macOS (preview)
+### macOS
 
-[Follow these steps]({{"/docs/installation/#macos-preview" | absolute_url}}) to prepare the development environment on macOS. We are working on the one-click installation experience and will release it soon.
+We encourage you to use one-click installation experience to prepare the development environment. If you encounter any problems, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
+
+#### A. Install Homebrew
+
+**Note:** If you have installed Homebrew, you can skip this step.
+{: .notice--info}
+
+Follow the [Homebrew installation instructions](https://docs.brew.sh/Installation.html){:target="_blank"} to install it.
+
+#### B. Download the latest package
+
+The .zip file that you download contains all the necessary tools and packages for DevKit development.
+
+[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-action-tracker .btn .btn--success .btn--large}
+
+> The .zip file installs the following tools and packages. If you already have some of them installed, the script can detect and skip them.
+> * Node.js and Yarn: Runtime for the setup script and automated tasks.
+> * [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest#a-namemacosinstall-on-macos){:target="_blank"} - Cross-platform  command-line experience for managing Azure resources.
+> * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"} (VS Code): Lightweight code editor for DevKit development.
+> * [Visual Studio Code extension for Arduino](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino){:target="_blank"}: Extension that enables Arduino development in Visual Studio Code. 
+> * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: The extension for Arduino relies on this tool.
+> * DevKit Board Package: Tool chains, libraries, and projects for the DevKit
+> * ST-Link Utility: Essential tools and drivers.
+
+#### C. Run the installation script
+
+In the Finder, locate the .zip and extract it:
+
+![Finder]({"/assets/images/getting-started/mac-finder.png" | absolute_url }})
+
+Launch Terminal app, locate the folder you extract .zip file and run:
+
+```bash
+./install.sh
+```
+
+![]({"/assets/images/getting-started/mac-install-sh.png" | absolute_url }})
 
 ## Problems and feedback
 

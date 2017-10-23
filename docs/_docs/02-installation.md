@@ -5,12 +5,12 @@ excerpt: "Instructions for manually install tools and packages."
 variable:
   - platform: windows
     name: Windows
-  - platform: macos-preview
+  - platform: macos
     name: macOS
-last_modified_at: 2017-07-19
+last_modified_at: 2017-10-23
 ---
 
-Follow these  steps to manually install tools and packages for DevKit development. If you are on Windows, we suggest you use the [installation package]({{"/docs/get-started/#a-download-latest-package" | absolute_url}}) to install everything automatically.
+We suggest you use the [installation package]({{"/docs/get-started/#a-download-latest-package" | absolute_url}}) to install everything automatically. If you have problems on using the one-click install experience, follow these  steps to manually install tools and packages for DevKit development. 
 
 {% include switch.html content = page.variable %}
 
@@ -37,9 +37,6 @@ Download and install [Visual Studio Code for Windows](https://code.visualstudio.
 2. Download the .zip file that contains required task scripts for DevKit development in VS Code.
 
   [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/tasks/latest){: .click-download-tracker .btn .btn--success .btn--large}
-
-  **MD5:** e70a4db1b90dbb279bb21420d6d008b0
-  {: .notice}
 
   Locate the .zip and extract it to your Windows user folder (`C:\Users\[your name]`). Then launch **Command Prompt** (`cmd`) and run the following commands to configure:
 
@@ -82,10 +79,9 @@ Add the DevKit board by using Board Manager in Visual Studio Code.
 2. Extract the .zip file and double click `stlink_winusb_install.bat` to install:
  ![installation-st-link]({{"/assets/images/installation-st-link-win.png" | absolute_url}})
 
-
 You now have all the necessary tools and packages installed for Windows.
 
-## macOS (preview)
+## macOS
 
 ### Step 1. Install Azure CLI 2.0
 
@@ -126,9 +122,6 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 2. Download the .zip file that contains required task scripts for DevKit development in VS Code.
 
   [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-download-tracker .btn .btn--success .btn--large}
-
-  **MD5:** e70a4db1b90dbb279bb21420d6d008b0
-  {: .notice}
 
   Locate the .zip file and extract it. Then start the **Terminal** app and run the following commands:
 
