@@ -93,12 +93,9 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
 
 ## Step 3. Provision required Azure services
 
-1. In the RemoteMonitoring sample window, use `Ctrl+P` (macOS: `Cmd+P`), type `task cloud`, and then click **cloud-provision**.
-The cloud-provision task opens an interactive command line that guides you through provisioning the required Azure services.
+In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
 
-2. In the interactive command line, select the IoT hub represented by the IoT Hub Hostname that you noted down.
-
-3. Wait for the provision to complete.
+In the VS Code terminal, an interactive command line guides you through provisioning the required Azure services:
 
 ![remote-monitoring-provision]({{"/assets/images/mini-solution/remote-monitoring/provision.png" | absolute_url }})
 

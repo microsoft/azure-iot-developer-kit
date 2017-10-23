@@ -83,7 +83,7 @@ Occasionally, when you launch Visual Studio Code, you are prompted with an error
 
 To resolve, close Visual Studio Code, then launches the actual Arduino IDE once. Subsequently, when you open Visual Studio Code it should correctly locate the Arduino IDE path.
 
-### Get "Error: AZ3166: Unknown package" when using task device-upload
+### Get "Error: AZ3166: Unknown package" when using `task device-upload`
 
 This is a known issue caused by the platform index of the board AZ3166 is not refreshed.
 
@@ -96,4 +96,7 @@ To resolve, we need to refresh the platform index:
 
 3. Re-open VS Code to run `task device-upload` again.
 
+
 [![Back to Top]({{"/assets/images/faq-back-to-top.png" | absolute_url }})](#){: .faq-back-to-top}
+
+
