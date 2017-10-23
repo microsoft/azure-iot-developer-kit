@@ -33,17 +33,31 @@ You can purchase the kit from our hardware partner's product page: [https://aka.
 
 This could be due to putting the Windows command window in "Selection" mode. To verify, check the command window title:
 
-![getting-started-faq-select]({{"/assets/images/getting-started-faq-select.png" | absolute_url }})
+![Window select mode]({{"/assets/images/faq/window-select.png" | absolute_url }})
 
 If you see **select** on the title, this means you are in Selection mode. It prevents refresh of the output, that is why you cannot see any progress.
 
 To resolve, press any key within the command window area and you see **select** disappear in the title.
 
+### Homebrew permission error on macOS
+
+When you run `install.sh` to install development environment on macOS. You may get a Homebrew perssion error:
+
+![Homebrew permission error]({{"/assets/images/faq/brew-permission-error.png" | absolute_url }})
+
+To resolve, follow the instruction of Homebrew by running:
+
+```bash
+brew doctor
+```
+
+![Homebrew doctor]({{"/assets/images/faq/brew-doctor.png" | absolute_url }})
+
 ### Windows Defender SmartScreen prevented an unrecognized app error.
 
-![getting-started-faq-select]({{"/assets/images/getting-started-faq-smartscreen.png" | absolute_url }})
-
 Sometimes SmartScreen prevents applications you know are not bad – for example, it’s a CMD or VBS script.
+
+![Smartscreen]({{"/assets/images/faq/smartscreen.png" | absolute_url }})
 
 To resolve, click on the **'More info'** link and then click the **'Run anyway'** button. You can check this [knowledge base article](https://www.itsupportguides.com/knowledge-base/windows-10/windows-defender-smartscreen-prevented-an-unrecognized-app-error/){:target="_blank"} for more details.
 
@@ -71,7 +85,7 @@ To fix, delete the web browser history that includes login data and run the prov
 
 You may encounter the error message as the screen below:
 
-![getting-started-faq-iothub]({{"/assets/images/getting-started-faq-iothub.png" | absolute_url }})
+![Only one IoT Hub]({{"/assets/images/faq/iothub.png" | absolute_url }})
 
 This is because Azure IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal){:target="_blank"}. In this case, you may select the existing IoT Hub instead of trying to create a new one.
 
@@ -90,7 +104,7 @@ This is a known issue caused by the platform index of the board AZ3166 is not re
 To resolve, we need to refresh the platform index: 
 
 1. Open Arduino IDE, find **Tools > Board: 'local board name' > Boards Manager...**.
-  ![Open Arduino Board Manager]({{"/assets/images/getting-started-faq-unknown-package.png" | absolute_url }})
+  ![Open Arduino Board Manager]({{"/assets/images/faq/unknown-package.png" | absolute_url }})
 
 2. Wait until all platforms index is refreshed and then close Arduino IDE.
 

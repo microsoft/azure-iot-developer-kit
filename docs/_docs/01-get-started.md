@@ -184,6 +184,9 @@ Launch Terminal app, locate the folder you extract .zip file and run:
 
 ![]({"/assets/images/getting-started/mac-install-sh.png" | absolute_url }})
 
+**Notice:** If you meet Homebrew permission error, run `brew doctor` to get it fixed. Check [FAQ]({{"/docs/faq/#homebrew-permission-error-on-macos" | absolute_url }}) for more details.
+{: .notice--warning}
+
 ## Problems and feedback
 
 If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from our [Gitter channel](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"}.
