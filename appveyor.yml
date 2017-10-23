@@ -9,6 +9,8 @@ branches:
 install:
   - git submodule update --init --recursive
   - set PATH=C:\Ruby22\bin;%PATH%
+  - git config core.symlinks true
+  - git reset --hard
   - cd docs
   - bundle install
   - printf "url:" > _config.dev.yml
