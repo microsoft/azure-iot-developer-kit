@@ -38,9 +38,6 @@ Download and install [Visual Studio Code for Windows](https://code.visualstudio.
 
   [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/tasks/latest){: .click-download-tracker .btn .btn--success .btn--large}
 
-  **MD5:** e70a4db1b90dbb279bb21420d6d008b0
-  {: .notice}
-
   Locate the .zip and extract it to your Windows user folder (`C:\Users\[your name]`). Then launch **Command Prompt** (`cmd`) and run the following commands to configure:
 
   ```
@@ -125,9 +122,6 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 2. Download the .zip file that contains required task scripts for DevKit development in VS Code.
 
   [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-download-tracker .btn .btn--success .btn--large}
-
-  **MD5:** e70a4db1b90dbb279bb21420d6d008b0
-  {: .notice}
 
   Locate the .zip file and extract it. Then start the **Terminal** app and run the following commands:
 

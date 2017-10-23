@@ -21,9 +21,6 @@ Once the DevKit is connected, in Windows you see a new USB mass storage device i
  
 	[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/firmware/latest){: .click-download-tracker .btn .btn--success .btn--large}
 
-   **MD5:** cd701c908175b126d9742907785ec669
-   {: .notice}
-
   
 2. Drag & drop the `.bin` file you downloaded to `AZ3166` device.
 

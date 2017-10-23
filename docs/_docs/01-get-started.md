@@ -111,9 +111,6 @@ The .zip file that you download contains all the necessary tools and packages fo
 
 [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/latest){: .click-action-tracker .btn .btn--success .btn--large}
 
-**MD5:** f8c032a4b22fd3a401308fce349b7fe8
-{: .notice}
-
 > The .zip file installs the following tools and packages. If you already have some of them installed, the script will can and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks.
 > * [Azure CLI 2.0 MSI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest#install-on-windows){:target="_blank"} - Cross-platform  command-line experience for managing Azure resources. The MSI contains dependent Python and pip.
@@ -156,16 +153,13 @@ We encourage you to use one-click installation experience to prepare the develop
 **Note:** If you have installed Homebrew, you can skip this step.
 {: .notice--info}
 
-Follow the instructions on [Homebrew](https://brew.sh){:target="_blank"} to install it.
+Follow the [Homebrew installation instructions](https://docs.brew.sh/Installation.html){:target="_blank"} to install it.
 
 #### B. Download the latest package
 
 The .zip file that you download contains all the necessary tools and packages for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/latest){: .click-action-tracker .btn .btn--success .btn--large}
-
-**MD5:** f8c032a4b22fd3a401308fce349b7fe8
-{: .notice}
+[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-action-tracker .btn .btn--success .btn--large}
 
 > The .zip file installs the following tools and packages. If you already have some of them installed, the script can detect and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks.
@@ -180,7 +174,7 @@ The .zip file that you download contains all the necessary tools and packages fo
 
 In the Finder, locate the .zip and extract it:
 
-![Finder]({"/assets/images/getting-started/finder.png" | absolute_url }})
+![Finder]({"/assets/images/getting-started/mac-finder.png" | absolute_url }})
 
 Launch Terminal app, locate the folder you extract .zip file and run:
 
@@ -188,7 +182,7 @@ Launch Terminal app, locate the folder you extract .zip file and run:
 ./install.sh
 ```
 
-![]({"/assets/images/getting-started/install-sh.png" | absolute_url }})
+![]({"/assets/images/getting-started/mac-install-sh.png" | absolute_url }})
 
 ## Problems and feedback
 
