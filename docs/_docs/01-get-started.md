@@ -174,7 +174,7 @@ The .zip file that you download contains all the necessary tools and packages fo
 
 In the Finder, locate the .zip and extract it:
 
-![Finder]({"/assets/images/getting-started/mac-finder.png" | absolute_url }})
+![macOS finder]({{"/assets/images/getting-started/mac-finder.png" | absolute_url }})
 
 Launch Terminal app, locate the folder you extract .zip file and run:
 
@@ -182,7 +182,7 @@ Launch Terminal app, locate the folder you extract .zip file and run:
 ./install.sh
 ```
 
-![]({"/assets/images/getting-started/mac-install-sh.png" | absolute_url }})
+![macOS install]({{"/assets/images/getting-started/mac-install-sh.png" | absolute_url }})
 
 **Notice:** If you meet Homebrew permission error, run `brew doctor` to get it fixed. Check [FAQ]({{"/docs/faq/#homebrew-permission-error-on-macos" | absolute_url }}) for more details.
 {: .notice--warning}
