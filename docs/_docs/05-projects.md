@@ -24,7 +24,7 @@ author_profile: false
   {% endfor %}
   
 
-  {% for post in projects %}
+  {% for post in site.projects %}
     {% include archive-single.html type="grid" %}
   {% endfor %}
   
