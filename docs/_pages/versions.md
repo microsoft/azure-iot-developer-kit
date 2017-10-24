@@ -35,9 +35,9 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
 
 ### Downloads
 
-- [Installation Package 1.2.0 for Windows](https://aka.ms/devkit/prod/installpackage/latest).
-- [Installation Package 1.2.0 for macOS](https://aka.ms/devkit/prod/installpackage/mac/latest).
-- [Firmware 1.2.0](https://aka.ms/devkit/prod/firmware/latest).
+- [Installation Package 1.2.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.2.0.28.zip).
+- [Installation Package 1.2.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.2.0.28.zip).
+- [Firmware 1.2.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
 
 **Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
 {: .notice--warning}
