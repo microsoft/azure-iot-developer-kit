@@ -39,7 +39,7 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
 - [Installation Package 1.2.0 for macOS](https://aka.ms/devkit/prod/installpackage/mac/latest).
 - [Firmware 1.2.0](https://aka.ms/devkit/prod/firmware/latest).
 
-**Notice:** If you are upgrading from version 1.0.2 or even earlier This release involves breaking changes, please [upgrade your firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
+**Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
 {: .notice--warning}
 
 
@@ -55,7 +55,7 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
 - [Installation Package 1.1.1 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_tasks_mac_1.1.1.15.zip).
 - [Firmware 1.1.1](https://azureboard2.azureedge.net/prod/devkit-firmware-1.1.1.15.bin).
 
-**Notice:** If you are upgrading from version 1.0.2 or even earlier This release involves breaking changes, please [upgrade your firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
+**Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
 {: .notice--warning}
 
 
