@@ -61,9 +61,6 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
 
 ## Version 1.1.0 (September 4)
 
-**Notice:** This release involves breaking changes, please [upgrade the DevKit firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
-{: .notice--warning}
-
 DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure-mcus/stsafe-a100.html){:target="_blank"}, the security chip that provides secure authentication and data management for IoT solutions. Since it's enabled on bootloader level, a [firmware upgrade]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) is mandatory to make the DevKit work properly.
 
 ### Release Summary
@@ -89,6 +86,8 @@ DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure
 - [Installation Package 1.1.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_tasks_mac_1.1.0.zip).
 - [Firmware 1.1.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.1.0.bin).
 
+**Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
+{: .notice--warning}
 
 ## Version 1.0.2 (August 10)
 
