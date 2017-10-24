@@ -2,10 +2,46 @@
 permalink: /versions/
 title: "Versions and Release Notes"
 excerpt: "Versions and release notes"
-last_modified_at: 2017-08-10
+last_modified_at: 2017-10-23
 ---
 
 {% include toc icon="columns" %}
+
+## Version 1.2.0 (October 24)
+
+No more manual steps to prepare your DevKit development environment on macOS! The time saving one-click installation now support macOS as well. And yes, we love bash.
+
+### Release Summary
+
+* Firmware
+  * Upgraded IoT Hub device SDK to [1.1.23](https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-09-08){:target="_blank"}.
+  * Made IoT Hub MQTT Client as a wrapper that can be shared by all mini solutions.
+  * Enabled float modifier for `print/printf` function.
+  * Removed `json-c` library and use [parson JSON library](https://github.com/kgabis/parson){:target="_blank"} instead.
+  * Bug fix: Enabled HttpClient response callback when handling large response body.
+ 
+* Project Catalog
+  * New mini solution: DeviceStates. Use Azure IoT Hub device twins to monitor DevKit state and control the user LED.
+  * Fixed gyroscope values and added acceleration sensor in SensorStatus sample.
+  * Used MQTT Client wrapper for GetStarted, RemoteMonitoring and ShakeShake mini solutions.
+  * Improved telemetry logics in mini solutions on macOS.
+ 
+* Development Tools
+  * Enabled one-click install experience on macOS :wink:. 
+  * Upgraded all project tasks to version 2.0.
+  * Used `CMD` as the default shell on Windows.
+  * Set default device upload method to use OpenOCD instead of ST-Link.
+  * Bug fix: VS Code task failure due to double quotation marks.
+
+### Downloads
+
+- [Installation Package 1.2.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.2.0.28.zip).
+- [Installation Package 1.2.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.2.0.28.zip).
+- [Firmware 1.2.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
+
+**Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
+{: .notice--warning}
+
 
 ## Version 1.1.1 (September 27)
 
@@ -13,10 +49,17 @@ last_modified_at: 2017-08-10
 
 * Minor fixes of internal Azure IoT Hub Device APIs.
 
-## Version 1.1.0 (September 4)
+### Downloads
 
-**Notice:** This release involves breaking changes, please [upgrade the DevKit firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
+- [Installation Package 1.1.1 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_1.1.1.15.zip).
+- [Installation Package 1.1.1 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_tasks_mac_1.1.1.15.zip).
+- [Firmware 1.1.1](https://azureboard2.azureedge.net/prod/devkit-firmware-1.1.1.15.bin).
+
+**Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
 {: .notice--warning}
+
+
+## Version 1.1.0 (September 4)
 
 DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure-mcus/stsafe-a100.html){:target="_blank"}, the security chip that provides secure authentication and data management for IoT solutions. Since it's enabled on bootloader level, a [firmware upgrade]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) is mandatory to make the DevKit work properly.
 
@@ -36,6 +79,15 @@ DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure
 
 * Development Tools
   * Visual Studio Code extension for Arduino now used tree view to display Arduino examples.
+
+### Downloads
+
+- [Installation Package 1.1.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_1.1.0.zip).
+- [Installation Package 1.1.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_tasks_mac_1.1.0.zip).
+- [Firmware 1.1.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.1.0.bin).
+
+**Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/upgrading/#upgrade-firmware" | absolute_url}}) first.
+{: .notice--warning}
 
 ## Version 1.0.2 (August 10)
 
@@ -60,6 +112,12 @@ Summer does not mean slow down. We further enriched our project catalog and tune
   * Adapted VS Code task for all sample projects to remove tedious manual steps.
   * Bug fix: Occasionally installation will fail to set Arduino custom board URL.
 
+### Downloads
+
+- [Installation Package 1.0.2 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_1.0.2.zip).
+- [Firmware 1.0.2](https://azureboard2.azureedge.net/prod/devkit-firmware-1.0.2.bin).
+
+
 ## Version 1.0.1 (July 13)
 
 The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our “Shake, Shake” sample project on macOS now. To further smooth the development tools and package installation, we are using the official [MSI](https://aka.ms/InstallAzureCliWindows){:target="_blank"} for the Windows Azure CLI 2.0 installation, so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.
@@ -79,6 +137,11 @@ The optimization continues. We are now supporting VS Code tasks on macOS as well
   * Switched to [ARM (Azure Resource Manager) template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template){:target="_blank"} for provisioning Azure services.
   * Put Azure Function creation logic into cloud provision step to further isolate the tasks.
   * Added telemetries to distinguish each mini solution from BI perspective.
+
+### Downloads
+
+- [Installation Package 1.0.1 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_1.0.1.zip).
+- [Firmware 1.0.1](https://azureboard2.azureedge.net/prod/devkit-firmware-1.0.1.bin).
 
 
 ## Version 1.0.0 (June 26)
@@ -112,6 +175,12 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
   * Added 'MQTT Client' example and documentation that send MQTT messages to public free MQTT broker.
   * Shake, Shake: Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.
   * Shake, Shake: Added delay and retry logic when not receiving any message due to function delay.
+
+### Downloads
+
+- [Installation Package 1.0.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_1.0.0.zip).
+- [Firmware 1.0.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.0.0.bin).
+
 
 ## Version 0.8.1 (May 21)
 

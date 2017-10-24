@@ -5,12 +5,13 @@ excerpt: "How to quickly install and set up your development environment to use 
 variable:
   - platform: windows
     name: Windows
-  - platform: macos-preview
+  - platform: macos
     name: macOS
-last_modified_at: 2017-07-17
+last_modified_at: 2017-10-23
 ---
 
-For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications.
+For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications. 
+If you already did this, you can build your own IoT application. For samples, start with our [Projects Catalog]({{"/docs/projects/" | absolute_url }}).
 
 {% include toc icon="columns" %}
 
@@ -81,7 +82,7 @@ The default app running on the DevKit checks the latest version of the firmware 
 **Notice:** Since v1.1, DevKit enables ST-SAFE in bootloader. You need to upgrade firmware if you are running under v1.1 in order to make it work probably.
 {: .notice--warning}
 
-If you need a firmware upgrade, the screen will show the current and latest firmware versions. To upgrade, follow the [Upgrade firmware](https://microsoft.github.io/azure-iot-developer-kit/docs/upgrading/) guide.
+If you need a firmware upgrade, the screen will show the current and latest firmware versions. To upgrade, follow the [Upgrade firmware](https://microsoft.github.io/azure-iot-developer-kit/docs/firmware-upgrading/) guide.
 
 ![Display of current and latest firmware versions]({{"/assets/images/getting-started/firmware.jpg" | absolute_url }})
 
@@ -102,7 +103,7 @@ Now it's time to set up the development environment: tools and packages for you 
 
 ### Windows
 
-We encourage you to use the installation package to prepare the development environment. If you encounter any problems, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
+We encourage you to use one-click installation experience to prepare the development environment. If you encounter any problems, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
 
 #### A. Download the latest package
 
@@ -110,12 +111,9 @@ The .zip file that you download contains all the necessary tools and packages fo
 
 [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/latest){: .click-action-tracker .btn .btn--success .btn--large}
 
-**MD5:** f8c032a4b22fd3a401308fce349b7fe8
-{: .notice}
-
-> The .zip file contains the following tools and packages. If you already have some components installed, the script will detect and skip them.
+> The .zip file installs the following tools and packages. If you already have some of them installed, the script will can and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks.
-> * [Azure CLI 2.0 MSI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli#windows){:target="_blank"} - Cross-platform  command-line experience for managing Azure resources. The MSI contains dependent Python and pip.
+> * [Azure CLI 2.0 MSI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest#install-on-windows){:target="_blank"} - Cross-platform  command-line experience for managing Azure resources. The MSI contains dependent Python and pip.
 > * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"} (VS Code): Lightweight code editor for DevKit development.
 > * [Visual Studio Code extension for Arduino](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino){:target="_blank"}: Extension that enables Arduino development in Visual Studio Code. 
 > * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: The extension for Arduino relies on this tool.
@@ -146,83 +144,48 @@ Installation should take around 10 minutes, depending on your internet speed. Af
 **Notice:** Occasionally, when you start VS Code, you're prompted with an error that it cannot find the Arduino IDE or related board package. To solve it, close VS Code and restart the Arduino IDE. VS Code should then locate the Arduino IDE path correctly.
 {: .notice--warning}
 
-### macOS (preview)
+### macOS
 
-Follow these steps to prepare the development environment on macOS.
+We encourage you to use one-click installation experience to prepare the development environment. If you encounter any problems, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to get it done.
 
-#### A. Install Azure CLI 2.0
+#### A. Install Homebrew
 
-Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli){:target="_blank"} to install Azure CLI 2.0:
+**Note:** If you have installed Homebrew, you can skip this step.
+{: .notice--info}
 
-1. Install Azure CLI 2.0 by using one `curl` command:
-  ```bash
-  curl -L https://aka.ms/InstallAzureCli | bash
-  ```
+Follow the [Homebrew installation instructions](https://docs.brew.sh/Installation.html){:target="_blank"} to install it.
 
-2. Restart your command shell for changes to take effect:
-  ```bash
-  exec -l $SHELL
-  ```
+#### B. Download the latest package
 
-#### B. Install Arduino IDE
+The .zip file that you download contains all the necessary tools and packages for DevKit development.
 
-The Visual Studio Code Arduino extension relies on the Arduino IDE. Download and install the [Arduino IDE for macOS](https://www.arduino.cc/en/Main/Software){:target="_blank"}.
+[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-action-tracker .btn .btn--success .btn--large}
 
-#### C. Install Visual Studio Code
+> The .zip file installs the following tools and packages. If you already have some of them installed, the script can detect and skip them.
+> * Node.js and Yarn: Runtime for the setup script and automated tasks.
+> * [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest#a-namemacosinstall-on-macos){:target="_blank"} - Cross-platform  command-line experience for managing Azure resources.
+> * [Visual Studio Code](https://code.visualstudio.com/){:target="_blank"} (VS Code): Lightweight code editor for DevKit development.
+> * [Visual Studio Code extension for Arduino](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino){:target="_blank"}: Extension that enables Arduino development in Visual Studio Code. 
+> * [Arduino IDE](https://www.arduino.cc/en/Main/Software){:target="_blank"}: The extension for Arduino relies on this tool.
+> * DevKit Board Package: Tool chains, libraries, and projects for the DevKit
+> * ST-Link Utility: Essential tools and drivers.
 
-Download and install [Visual Studio Code for macOS](https://code.visualstudio.com/){:target="_blank"}. This is the primary development tool for building DevKit IoT applications.
+#### C. Run the installation script
 
-#### D. Download the latest package
+In the Finder, locate the .zip and extract it:
 
-1. Install Node.js. You can use popular macOS package manager [Homebrew](https://brew.sh/){:target="_blank"} or [pre-built installer](https://nodejs.org/en/download/){:target="_blank"} to install it.
+![macOS finder]({{"/assets/images/getting-started/mac-finder.png" | absolute_url }})
 
-2. Download the .zip file that contains required task scripts for DevKit development in VS Code.
+Launch Terminal app, locate the folder you extract .zip file and run:
 
-  [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-action-tracker .btn .btn--success .btn--large}
+```bash
+./install.sh
+```
 
-  **MD5:** e70a4db1b90dbb279bb21420d6d008b0
-  {: .notice}
+![macOS install]({{"/assets/images/getting-started/mac-install-sh.png" | absolute_url }})
 
-  Locate the .zip file and extract it. Then start the **Terminal** app and run the following commands:
-
-  a. Move extracted folder to your macOS user folder:
-  ```bash
-  mv [.zip extracted folder]/azure-board-cli ~/. ; cd ~/azure-board-cli
-  ```
-  
-  b. Install npm packages:
-  ```
-  npm install
-  ```
-
-#### E. Install the VS Code extension for Arduino
-
-You can install Azure Marketplace extensions directly in Visual Studio Code. Select the extensions icon in the left pane, search for **Arduino**, and then select **Install**:
-
-![Finding an Arduino extension]({{"/assets/images/installation-extensions-mac.png" | absolute_url}})
-
-After VS Code extension is installed, open `settings.json`, add a new setting "arduino.path" and the value is the installation path of Arduino IDE.
- ![update setting az3166]({{"/assets/images/update-setting-az3166-mac.png" | absolute_url}})
- 
-#### F. Install the DevKit board package
-
-Add the DevKit board by using Board Manager in Visual Studio Code.
-
-1. Use `Cmd+Shift+P` to open the command palette, type **Arduino**, and then find and select **Arduino: Board Manager**.
-
-2. Select **Additional URLs** at the lower right.
- ![Additional URLs link]({{"/assets/images/installation-additional-urls-mac.png" | absolute_url}})
-
-3. In the `settings.json` file, add a line at the bottom of the **USER SETTINGS** pane and save.
- ```json
- "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
- ```
- ![Code added to USER SETTINGS pane]({{"/assets/images/installation-settings-json-mac.png" | absolute_url}})
-
-4. In Board Manager, search for **az3166** and install the [latest version]({{"/versions" | absolute_url }}).
- ![Installing az3166]({{"/assets/images/installation-az3166-mac.png" | absolute_url}})
-
-You now have all the necessary tools and packages installed for macOS.
+**Notice:** If you meet Homebrew permission error, run `brew doctor` to get it fixed. Check [FAQ]({{"/docs/faq/#homebrew-permission-error-on-macos" | absolute_url }}) for more details.
+{: .notice--warning}
 
 ## Problems and feedback
 
