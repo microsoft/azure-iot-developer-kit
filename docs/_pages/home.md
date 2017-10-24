@@ -24,7 +24,7 @@ intro:
     image_width: 50%
     alt: "DevKit Board"
     title: "Build a Cloud Powered IoT App in Minutes"
-    excerpt: 'You can use MXChip IoT DevKit (a.k.a DevKit) to develop and prototype Internet of Things (IoT) solutions that take advantage of Microsoft Azure services. It includes an Arduino-compatible board with rich peripherals and sensors, an open-source board package, and a growing projects catalog.'
+    excerpt: 'The MXChip IoT DevKit (a.k.a DevKit) is an all-in-one IoT Device Kit, you can use it to develop and prototype IoT (Internet of Things) solutions that take advantage of Microsoft Azure services. It includes an Arduino-compatible development board with rich peripherals and sensors, an open-source board package, and a growing projects catalog.'
     url: "/docs/get-started"
     btn_label: "Get Started"
     btn_class: "btn--inverse"

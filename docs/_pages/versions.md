@@ -7,7 +7,7 @@ last_modified_at: 2017-10-23
 
 {% include toc icon="columns" %}
 
-## Version 1.2.0 (October 23)
+## Version 1.2.0 (October 24)
 
 No more manual steps to prepare your DevKit development environment on macOS! The time saving one-click installation now support macOS as well. And yes, we love bash.
 
