@@ -114,7 +114,7 @@ To resolve, we need to refresh the platform index:
 
 In certain environment, lots of warnings message pops up in the VS Code OUTPUT windows when you invoke `Arduino Verify`, `Arduino Upload` or `task device-upload` to compile the project.
 
-It is caused by the incorrect warning handling between Visual Studio Code Arduino extension and Arduino IDE. To solve this problem, the work aroudn is uninstalling Arduino IDE from your local system and download the latest version of [Arduino IDE](https://www.arduino.cc/en/Main/Software) and then re-install it. 
+It is caused by the incorrect warning handling between Visual Studio Code Arduino extension and Arduino IDE. To solve this problem, the work around is to uninstall Arduino IDE from your local system and install the latest version of [Arduino IDE](https://www.arduino.cc/en/Main/Software). 
 
 
 [![Back to Top]({{"/assets/images/faq-back-to-top.png" | absolute_url }})](#){: .faq-back-to-top}
