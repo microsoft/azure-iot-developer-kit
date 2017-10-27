@@ -122,10 +122,12 @@
                 $('.feedback-btn-fixed').css('bottom', '');
             }
         }
-
-        feedbackButtonFixedCallback();
-        $(window).scroll(feedbackButtonFixedCallback);
-        $(window).resize(feedbackButtonFixedCallback);
+        
+        if ($('.page__content').length) {
+            feedbackButtonFixedCallback();
+            $(window).scroll(feedbackButtonFixedCallback);
+            $(window).resize(feedbackButtonFixedCallback);
+        }
     }
 
     var tocScroll = function () {
