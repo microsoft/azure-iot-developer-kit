@@ -7,7 +7,7 @@ author_profile: false
 
 <div class="grid__wrapper">
 
-  {% assign projects = site.emptyArray %}
+  {% assign projects = '' | split: '' %} {% comment %} Empty array {% endcomment %}
   
   {% for project in site.projects %}
     
@@ -24,7 +24,7 @@ author_profile: false
   {% endfor %}
   
 
-  {% for post in site.projects %}
+  {% for post in projects %}
     {% include archive-single.html type="grid" %}
   {% endfor %}
   
