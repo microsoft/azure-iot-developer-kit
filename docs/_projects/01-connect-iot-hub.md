@@ -68,7 +68,8 @@ In the VS Code terminal, an interactive command line guides you through provisio
 
 ![Interactive command line]({{"/assets/images/mini-solution/connect-iothub/cloud-provision.png" | absolute_url }})
 
-**Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. {: .notice--warning}
+**Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. 
+{: .notice--warning}
 
 ## Step 3. Build and upload Arduino sketch
 
