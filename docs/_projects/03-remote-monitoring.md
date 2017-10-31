@@ -99,6 +99,8 @@ In the VS Code terminal, an interactive command line guides you through provisio
 
 ![remote-monitoring-provision]({{"/assets/images/mini-solution/remote-monitoring/provision.png" | absolute_url }})
 
+**Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. {: .notice--warning}
+
 ## Step 4. Build and upload the device code
 
 {% include switch.html content = page.variable %}

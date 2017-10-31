@@ -142,6 +142,8 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ![Cloud Provision]({{"/assets/images/mini-solution/door-monitor/cloud-prevision.jpg" | absolute_url }})
 
+**Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. {: .notice--warning}
+
 ### D. Build and upload the device code
 
 {% include switch.html content = page.variable %}

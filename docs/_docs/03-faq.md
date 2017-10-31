@@ -81,13 +81,13 @@ Due to a previous Azure login, your access token may have expired.
 
 To fix, delete the web browser history that includes login data and run the provisioning task again. Alternatively, you can try to log in to Azure manually by launching Command Prompt and running `az login`.
 
-### Page hangs in the loading status.
+### Page hangs when log in Azure.
 
-This issue can occur if you use more than one user account in an internet browser.
+This issue can occur if you have logged in mutliple Azure subscriptions in the browser.
 
-To resolve the issue, please clear the cache and delete Internet cookies. 
+To resolve the issue, please clear the cache and cookies for the browser. 
 
-For more detail please check [I can't sign in to manage my Azure subscription](https://docs.microsoft.com/en-us/azure/billing/billing-cannot-login-subscription).
+For more details please check [I can't sign in to manage my Azure subscription](https://docs.microsoft.com/en-us/azure/billing/billing-cannot-login-subscription){:target="_blank"}.
 
 ### Creating new Azure IoT Hub fails.
 
