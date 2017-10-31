@@ -39,7 +39,7 @@ If you see **select** on the title, this means you are in Selection mode. It pre
 
 To resolve, press any key within the command window area and you see **select** disappear in the title.
 
-### Homebrew permission error on macOS
+### Homebrew permission error on macOS.
 
 When you run `install.sh` to install development environment on macOS. You may get a Homebrew perssion error:
 
@@ -81,7 +81,15 @@ Due to a previous Azure login, your access token may have expired.
 
 To fix, delete the web browser history that includes login data and run the provisioning task again. Alternatively, you can try to log in to Azure manually by launching Command Prompt and running `az login`.
 
-### Creating new Azure IoT Hub fails
+### Page hangs in the loading status.
+
+This issue can occur if you use more than one user account in an internet browser.
+
+To resolve the issue, please clear the cache and delete Internet cookies. 
+
+For more detail please check [I can't sign in to manage my Azure subscription](https://docs.microsoft.com/en-us/azure/billing/billing-cannot-login-subscription).
+
+### Creating new Azure IoT Hub fails.
 
 You may encounter the error message as the screen below:
 
@@ -91,13 +99,13 @@ This is because Azure IoT Hub only allows [one free hub per Azure subscription](
 
 ## Development
 
-### Visual Studio Code cannot find Arduino IDE
+### Visual Studio Code cannot find Arduino IDE.
 
 Occasionally, when you launch Visual Studio Code, you are prompted with an error message that it cannot find the Arduino IDE or related board package.
 
 To resolve, close Visual Studio Code, then launches the actual Arduino IDE once. Subsequently, when you open Visual Studio Code it should correctly locate the Arduino IDE path.
 
-### Get "Error: AZ3166: Unknown package" when using `task device-upload`
+### Get "Error: AZ3166: Unknown package" when using `task device-upload`.
 
 This is a known issue caused by the platform index of the board AZ3166 is not refreshed.
 
@@ -110,7 +118,7 @@ To resolve, we need to refresh the platform index:
 
 3. Re-open VS Code to run `task device-upload` again.
 
-### Additional warnings during compilation
+### Additional warnings during compilation.
 
 In certain environment, lots of warnings message pops up in the VS Code OUTPUT windows when you invoke `Arduino Verify`, `Arduino Upload` or `task device-upload` to compile the project.
 
