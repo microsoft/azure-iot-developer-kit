@@ -21,9 +21,7 @@ last_modified_at: 2017-10-30
 
 Scenarios for the application of real-time data analytics are legion and include fraud detection, identity-theft protection, optimizing the allocation of resources (think of an Uber-like transportation service that sends drivers to areas of increasing demand *before* that demand peaks), click-stream analysis on Web sites, shopping suggestions on retail-sales sites, and countless others. Having the ability to process data *as it comes in* rather than waiting until after it has been aggregated offers a competitive advantage to businesses that are agile enough to make adjustments on the fly.
 
-In this lab, you will create an Azure Stream Analytics job and use it to analyze data streaming in from simulated aircraft driven the IoT devices provided to attendees at the event. Specifically, you will perform a query that identifies aircraft that are within a specified distance of each other in order to alert the pilots of those aircraft that evasive maneuvers might be required. Then you will connect the ATC app that runs on the "big screen" at the front of the room to the Stream Analytics inputs and outputs so that in Lab 4, the ATC app can show all air traffic and color-code aircraft that are too close together.
-
-> ### The instructions in this lab must be performed by the instructor leading the event because the Azure resources created herein are shared resources that will be used by all participants. ###
+In this lab, you will create an Azure Stream Analytics job and use it to analyze data streaming in from the simulated aircraft driven by the IoT device. Specifically, you will perform a query that identifies aircraft that are within a specified distance of each other in order to alert the pilots of those aircraft that evasive maneuvers might be required. Then you will connect the ATC app to the Stream Analytics inputs and outputs so that in Lab 4, the ATC app can show all air traffic and color-code aircraft that are too close together.
 
 <a name="Prerequisites"></a>
 ## Prerequisites ##
@@ -57,7 +55,7 @@ Here's a synopsis of the four labs that comprise this project:
 <a name="Exercises"></a>
 ## Exercises ##
 
-This instructor-led lab includes the following exercises:
+This lab includes the following exercises:
 
 - [Exercise 1: Create Event Hubs for input and output](#Exercise1)
 - [Exercise 2: Create a Stream Analytics job](#Exercise2)
@@ -71,7 +69,7 @@ Estimated time to complete this lab: **45** minutes.
 
 Azure Stream Analytics supports several types of input, including input from Azure blobs,  input from Azure Event Hubs, and input from Azure IoT Hubs. A single Azure Event Hub or IoT Hub can handle millions of events per second transmitted from devices spread throughout the world.
 
-In this exercise, you will create two Azure Event Hubs. One will provide input to Stream Analytics, while the other will receive output from Stream Analytics. In the next lab, attendees will modify the Azure Function they wrote in Lab 2 to transmit data to the input Event Hub, enabling Stream Analytics to see all activity emanating from all aircraft. They will also connect the client app to the output Event Hub and modify the app to transmit messages back to their MXChips.
+In this exercise, you will create two Azure Event Hubs. One will provide input to Stream Analytics, while the other will receive output from Stream Analytics. In the next lab, you will modify the Azure Function written in Lab 2 to transmit data to the input Event Hub, enabling Stream Analytics to see all activity emanating from all aircraft. You will also connect the client app to the output Event Hub and modify the app to transmit messages back to their MXChips.
 
 1. In your browser, navigate to the [Azure Portal](https://portal.azure.com). If you are asked to sign in, do so using your Microsoft account.
 
@@ -83,7 +81,7 @@ In this exercise, you will create two Azure Event Hubs. One will provide input t
 
 1. Type a namespace name into the **Name** box. The name must be unique within Azure, so make sure a green check mark appears next to it. Select **Create new** under **Resource group** and enter the resource-group name "cloud-city-rg" (without quotation marks). Choose the **East US** region in the **Location** drop-down, and then click the **Create** button.
 
-	> It is important to select the East US region to locate the Event Hub in the same region as the resources that attendees create. Keeping everything in one data center reduces cost and minimizes latency.
+	> It is important to select the East US region to locate the Event Hub in the same region as the other resources. Keeping everything in one data center reduces cost and minimizes latency.
 
     ![Creating a namespace]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/create-namespace.png" | absolute_url }})
 
@@ -308,12 +306,12 @@ To identify aircraft that are too close together, the query will ask for all air
 
     _Specifying the job start time_
 
-It will probably take the Stream Analytics job a minute or two to start, but that's OK because it's not receiving data at the moment anyway. The live data stream will start in Lab 4 when attendees modify their Azure Function to send output to the shared input hub that provides input to Stream Analytics.
+It will probably take the Stream Analytics job a minute or two to start, but that's OK because it's not receiving data at the moment anyway. The live data stream will start in Lab 4 when you modify the Azure Function to send output to the shared input hub that provides input to Stream Analytics.
 
 <a name="Exercise4"></a>
 ## Exercise 4: Connect the ATC app to the Event Hubs ##
 
-Now it's time to connect the ATC app, which is located in the "AirTrafficSim" folder of the Cloud City download, to the Event Hubs you created in Exercise 1. The app, named **AirTrafficSim**, is a Universal Windows Platform (UWP) app. Connecting AirTrafficSim to the Event Hub named "flysim-shared-input-hub" enables it to see all the aircraft that are flying (or *will be* flying once attendees connect to it, too.) Connecting it to the Event Hub named "flysim-shared-output-hub" lets it know when two aircraft are too close together so it can color them red. Modifying the app to connect to the Event Hubs is a simple matter of copying a connection string into the source code.
+Now it's time to connect the ATC app, which is located in the "AirTrafficSim" folder of the Cloud City download, to the Event Hubs you created in Exercise 1. The app, named **AirTrafficSim**, is a Universal Windows Platform (UWP) app. Connecting AirTrafficSim to the Event Hub named "flysim-shared-input-hub" enables it to see all the aircraft that are flying. Connecting it to the Event Hub named "flysim-shared-output-hub" lets it know when two aircraft are too close together so it can color them red. Modifying the app to connect to the Event Hubs is a simple matter of copying a connection string into the source code.
 
 1. Open **AirTrafficSim.sln** in Visual Studio.
 

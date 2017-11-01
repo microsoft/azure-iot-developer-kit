@@ -16,7 +16,7 @@ last_modified_at: 2017-10-30
 <a name="Introduction"></a>
 ## Introduction ##
 
-In this hands-on lab and the ones that follow, you will build a comprehensive IoT solution that demonstrates some of the very best features Microsoft Azure has to offer, including [IoT Hubs](https://azure.microsoft.com/services/iot-hub/), [Event Hubs](https://azure.microsoft.com/services/event-hubs/), [Azure Functions](https://azure.microsoft.com/services/functions/), [Stream Analytics](https://azure.microsoft.com/services/stream-analytics/), and [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/). The solution you build today will culminate with an air-traffic control (ATC) app that shows simulated aircraft flying through an ATC sector and warns users when aircraft get too close to each other.
+In this hands-on lab and the ones that follow, you will build a comprehensive IoT solution that demonstrates some of the very best features Microsoft Azure has to offer, including [IoT Hubs](https://azure.microsoft.com/services/iot-hub/), [Event Hubs](https://azure.microsoft.com/services/event-hubs/), [Azure Functions](https://azure.microsoft.com/services/functions/), [Stream Analytics](https://azure.microsoft.com/services/stream-analytics/), and [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/). The solution you build today will culminate with an air-traffic control (ATC) app that shows simulated aircraft flying through an ATC sector and warns users when aircraft get too close to each other. While these labs are best to do with several peers, there is an application in the lab assets which can inject simulated drone planes into the workstream (details avaialbe in the [Labs section](#labs).)
 
 ![A user interface for an Air Traffic Control Application with dots and heading information overlaid on a geographical map.  Also includes summary statistics for all flights shown on the map, as well as attitude information for selected airplanes.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png" | absolute_url }})
 
@@ -38,22 +38,22 @@ Accelerometer data from the device is transmitted to an Azure IoT Hub. An Azure 
 
 The goal of this lab is to get the device up and running and sending events to an Azure IoT Hub. Let's get started!
 
-<a name="Lab-Sections"></a>
-## Lab Sections ##
+<a name="Labs"></a>
+## Labs ##
 
 Here's a synopsis of the four labs that comprise this project:
 
-- [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) - Attendees create an Azure IoT Hub and program an [MXCHIP]([MXChip](https://microsoft.github.io/azure-iot-developer-kit/)) to send accelerometer data to it.
-- [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) - Attendees create an Azure Event Hub and deploy an Azure Function that transforms accelerometer data input to the IoT Hub into "flight data" denoting the disposition on an airplane and transmits it to the Event Hub. Then they connect a UWP client app to the Event Hub and use their MXChip to fly a simulated airplane.
-- [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}) - The instructor creates a pair of Event Hubs and deploys a Stream Analytics job that analyzes all the air traffic in the room for aircraft that are within two miles of each another. He or she also deploys a UWP app that shows all the air traffic.
-- [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}) - Attendees modify the Azure Function they deployed in HOL 2 to transmit flight data to the input hub used by Stream Analytics. They also connect the client app to the Stream Analytics output and modify the app to transmit warning messages back to the MXChip when their aircraft are within two miles of another.
+- [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) - Create an Azure IoT Hub and program an [MXCHIP]([MXChip](https://microsoft.github.io/azure-iot-developer-kit/)) to send accelerometer data to it.
+- [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) - Create an Azure Event Hub and deploy an Azure Function that transforms accelerometer data input to the IoT Hub into "flight data" denoting the disposition on an airplane and transmits it to the Event Hub. Then connect a UWP client app to the Event Hub and use their MXChip to fly a simulated airplane.
+- [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}) - Creates a pair of Event Hubs and deploy a Stream Analytics job that analyzes all the air traffic for aircraft that are within two miles of each another. Also deploys a UWP app that shows all the air traffic.
+- [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}) - Modify the Azure Function deployed in Lab 2 to transmit flight data to the input hub used by Stream Analytics. Then connect the client app to the Stream Analytics output and modify the app to transmit warning messages back to the MXChip when aircraft are within two miles of another.
 
 The [asset repository] also has four source-code folders:
 
-- FlySim - A Visual Studio 2017 solution containing the client app that attendees use to fly simulated airplanes.
-- FlySimEmbedded - The code attendees upload to the MXChip to program it to send accelerometer data to an Azure IoT Hub.
+- FlySim - A Visual Studio 2017 solution containing the client app that you use to fly simulated airplanes.
+- FlySimEmbedded - The code you upload to the MXChip to program it to send accelerometer data to an Azure IoT Hub.
 - AirTrafficSim - A Visual Studio 2017 solution containing the air-traffic control (ATC) app that shows all the airplanes in flight and highlights those that are within two miles of each other.
-- FlySimTest - A Visual Studio 2017 solution containing a command-line app for injecting simulated aircraft into AirTrafficSim. It's great for testing, and also for adding airplanes to the ATC sector if there aren't enough attendees at the event to make things interesting. To prepare it for use, replace SHARED_EVENT_HUB_ENDPOINT on line 54 with the endpoint connection string for the Event Hub that provides input to Stream Analytics. By default, it injects 20 airplanes. You can inject more (or less) by specifying the desired number as a command-line parameter.
+- FlySimTest - A Visual Studio 2017 solution containing a command-line app for injecting simulated aircraft into AirTrafficSim. It's great for testing, and also for adding airplanes to the ATC sector if you don't have peers working with you through this content. To prepare it for use, replace SHARED_EVENT_HUB_ENDPOINT on line 54 with the endpoint connection string for the Event Hub that provides input to Stream Analytics. By default, it injects 20 airplanes. You can inject more (or less) by specifying the desired number as a command-line parameter.
 
 <a name="Prerequisites"></a>
 ## Prerequisites ##
