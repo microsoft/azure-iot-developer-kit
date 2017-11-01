@@ -81,7 +81,7 @@ In Lab 2, you deployed an Azure Function that reads input from an Azure IoT Hub,
 
 1. Add the following parameter to the ```Run``` method:
 
-	```C#
+	```csharp
 	[EventHub("sharedouteventhub", Connection = "SharedEventHubConnection")] IAsyncCollector<string> sharedOutputMessage,
 	```
 
@@ -95,7 +95,7 @@ In Lab 2, you deployed an Azure Function that reads input from an Azure IoT Hub,
 
 1. Scroll down to the end of the ```Run``` method and add the following statement, just after the statement that calls ```outputMessage.AddAsync()``` and before the call to ```log.Info()```:
 
-	```C#
+	```csharp
 	await sharedOutputMessage.AddAsync(outputPayload);
 	```
 
@@ -109,7 +109,7 @@ In Lab 2, you deployed an Azure Function that reads input from an Azure IoT Hub,
 
 1. Open **local.settings.json** and insert the following statement directly below   "EventHubConnection:"
 
-	```Json
+	```json
 	 "SharedEventHubConnection": "SHARED_EVENT_HUB_ENDPOINT",
 	```
 
@@ -150,7 +150,7 @@ In Lab 3, the instructor created an Event Hub and configured Stream Analytics to
 
 1. Open **CoreConstants.cs** in the "Common" folder, and add the following statements after the statements that declare static strings named ```FlightActivityEventHubEndpoint``` and ```FlightActivityEventHubName```:
 
-	```C#
+	```csharp
 	public static string SharedAirTrafficEventHubEndpoint = "SHARED_EVENT_HUB_ENDPOINT";
     public static string SharedAirTrafficHubName = "flysim-shared-output-hub";
 	```
@@ -164,7 +164,7 @@ In Lab 3, the instructor created an Event Hub and configured Stream Analytics to
 
 1. Right-click the "Listeners" folder in Solution Explorer and use the **Add** > **Class...** command to add a class file named **AirTrafficListener.cs**. Then replace the contents of the file with the following code:
 
-	```C#
+	```csharp
 	using Newtonsoft.Json;
 	using ppatierno.AzureSBLite.Messaging;
 	using System;
@@ -279,13 +279,13 @@ In Lab 3, the instructor created an Event Hub and configured Stream Analytics to
 
 1. Open **MainViewModel.cs** in the project's "ViewModels" folder and insert the following line of code below the ```FlightActivityListener``` property on line 40 to create an instance of ```AirTrafficListener```:
 
-	```C#
+	```csharp
 	public AirTrafficListener AirTrafficListener = new AirTrafficListener();
 	```
 
 1. Still in **MainViewModel.cs**, locate the ```InitializeSystem``` method and add the following line of code to it: 
 
-	```C#
+	```csharp
 	AirTrafficListener.StartListeningAsync();
 	```
 
@@ -300,7 +300,7 @@ One of the benefits of using Azure IoT Hubs is that they support bidirectional c
 
 1. In Visual Studio, open **CoreConstants.cs** in the project's "Common" folder and insert the following statement after the statement declaring ```SharedAirTrafficHubName``` that you added in the previous exercise:
 
-	```C#
+	```csharp
 	public static string DeviceMessagingConnectionString = "IOT_DEVICE_ENDPOINT";
 	```
 
@@ -320,7 +320,7 @@ One of the benefits of using Azure IoT Hubs is that they support bidirectional c
 
 1. Right-click the "Helpers" folder in Solution Explorer and use the **Add** > **Class...** command to add a class file named **MessageHelper.cs**. Then replace the contents of the file with the following code:
 
-	```C#
+	```csharp
 	using Microsoft.Azure.Devices;
 	using System;
 	using System.Collections.Generic;
@@ -401,7 +401,7 @@ One of the benefits of using Azure IoT Hubs is that they support bidirectional c
 
 1. Return to **MainViewModel.cs** in Visual Studio and replace the ```SendWarningMessage``` method with this one:
 
-	```C#
+	```csharp
 	private async void SendWarningMessage()
     {
         string message = "Warning";

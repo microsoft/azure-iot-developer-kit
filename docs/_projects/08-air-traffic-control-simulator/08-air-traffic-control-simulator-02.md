@@ -302,7 +302,7 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 1. Open **local.settings.json** and replace the contents of the file with the following JSON:
 
-	```Json
+	```json
 	{
 	  "IsEncrypted": false,
 	  "Values": {
@@ -464,7 +464,7 @@ The "FlySim" folder in the Cloud City download contains a Universal Windows Plat
 
 1. Right-click the "Listeners" folder in Solution Explorer and use the **Add** > **Class...** command to add a class file named **FlightActivityListener.cs**. Then replace the contents of the file with the following code:
 
-	```C#
+	```csharp
 	using System;
 	using System.Collections.ObjectModel;
 	using System.Text;
@@ -556,13 +556,13 @@ The "FlySim" folder in the Cloud City download contains a Universal Windows Plat
 
 1. Open **MainViewModel.cs** in the project's "ViewModels" folder and the following ```using``` statement to those at the top of the file:
 
-	```C#
+	```csharp
 	using FlySim.Listeners;
 	```
 
 1. Now add the following statement just before the class constructor:
 
-	```C#
+	```csharp
 	public FlightActivityListener FlightActivityListener = new FlightActivityListener();
 	```
 
@@ -570,7 +570,7 @@ The "FlySim" folder in the Cloud City download contains a Universal Windows Plat
 
 1. Add the following statement to the ```MainViewModel``` class's ```InitializeSystem``` method to start listening for events from the Event Hub when the app starts up:
 
-	```C#
+	```csharp
 	FlightActivityListener.StartListeningAsync(CurrentFlightInformation, ActivePlanes);
 	```
 
