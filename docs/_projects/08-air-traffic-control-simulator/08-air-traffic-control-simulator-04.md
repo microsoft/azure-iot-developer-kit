@@ -1,12 +1,12 @@
 ---
-title: "Door Monitor"
-permalink: /docs/projects/door-monitor/
+title: "Air Traffic Control Simulator - Lab 4"
+permalink: /docs/projects/air-traffic-control-simulator-04/
 excerpt: "Complete the solution with Cloud-to-Device communication"
 part: 4
 header:
-  overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png
+  overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
   overlay_full: true
-  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png
+  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
 
 difficulty: HARD
 
@@ -21,7 +21,7 @@ In the previous session, your flight instructor created an [Azure Stream Analyti
 
 In this lab, you will close the loop by marrying what you built in Labs 1 and 2 with what the instructor built in Lab 3 to assemble a complete end-to-end solution. First, you will modify the Azure Function you wrote in Lab 2 to transmit flight data to the shared input hub — the one that provides input to Stream Analytics — so Stream Analytics *and* the ATC app presented at the end of the previous session can see all of the aircraft in the room.
 
-![The ATC app with many planes in flight](Images/atc-app.png)
+![The ATC app with many planes in flight]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab4/atc-app.png" | absolute_url }})
 
 _The ATC app with many planes in flight_
 

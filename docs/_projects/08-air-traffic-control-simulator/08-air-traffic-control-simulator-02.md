@@ -1,12 +1,12 @@
 ---
-title: "Air Traffic Control Simulator"
+title: "Air Traffic Control Simulator - Lab 2"
 permalink: /docs/projects/air-traffic-control-simulator-02/
 excerpt: "Using Azure Functions and Azure Event Hubs to Process IoT Data."
 part: 2
 header:
-  overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png
+  overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
   overlay_full: true
-  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png
+  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
 
 difficulty: HARD
 
@@ -21,7 +21,7 @@ In [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}),
 
 In Lab 2, you will build the infrastructure necessary to fly a simulated aircraft using your MXChip. That infrastructure will consist of an Azure Function that transforms accelerometer readings passing through the IoT Hub into flight data denoting the position and attitude of an aircraft, as well as an Azure Event Hub that receives data from the Azure Function. Once the Function and Event Hub are in place, you will connect a client app named **FlySim** to the Event Hub and practice flying an aircraft using your MXChip. The client app, pictured below, subscribes to events from the Event Hub and shows the disposition of your aircraft in near real time.
 
-![The FlySim app](Images/app-in-flight.png)
+![The FlySim app]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png" | absolute_url }})
 
 _The FlySim app_
 
@@ -80,7 +80,7 @@ In this exercise, you will use the Azure Portal to create an Event Hub that will
 
 1. Click **+ New**, followed by **Internet of Things** and **Event Hubs**.
 
-	![Adding a new Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/new-event-hub.png)
+	![Adding a new Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/new-event-hub.png" | absolute_url }})
 
     _Adding a new event hub_
 
@@ -88,37 +88,37 @@ In this exercise, you will use the Azure Portal to create an Event Hub that will
 
 	> It is important to select the East US region to locate the Event Hub in the same region as the IoT Hub you created in Lab 1. This reduces cost and minimizes latency.
 
-    ![Creating a namespace]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/create-namespace.png)
+    ![Creating a namespace]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/create-namespace.png" | absolute_url }})
 
     _Creating a namespace_
 
 1. Click **Resource groups** in the ribbon on the left side of the portal, and then click **FlySimResources** to open the resource group.
 
-	![Opening the resource group]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/open-resource-group.png)
+	![Opening the resource group]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/open-resource-group.png" | absolute_url }})
 
     _Opening the resource group_
 
 1. Wait until "Deploying" changes to "Succeeded," indicating that the IoT Hub has been provisioned. (You can click the **Refresh** button at the top of the blade to refresh the deployment status.) Then click the Event Hub that you just created.
 
-	![Successful deployment]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/open-event-hub.png)
+	![Successful deployment]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/open-event-hub.png" | absolute_url }})
 
     _Successful deployment_
  
 1. Click **+ Event Hub** at the top of the blade.
 
-	![Adding an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/add-event-hub.png)
+	![Adding an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/add-event-hub.png" | absolute_url }})
 
     _Adding an Event Hub_
  
 1. Type "flysim" (without quotation marks) into the **Name** box. Then click the **Create** button.
  
-	![Creating an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/create-event-hub.png)
+	![Creating an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/create-event-hub.png" | absolute_url }})
 
     _Creating an Event Hub_
 
 1. Wait a moment for the Event Hub to be created. Then confirm that "flysim" appears in the list of Event Hubs.
  
-	![The new Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/flysim-event-hub.png)
+	![The new Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/flysim-event-hub.png" | absolute_url }})
 
     _The new Event Hub_
 
@@ -131,13 +131,13 @@ Before you deploy an Azure Function from Visual Studio, you need to create a rep
 
 1. Return to the Azure Portal. Click **+ New**, followed by **Storage** and **Storage account**.
 
-	![Creating a new storage account]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/new-storage-account.png)
+	![Creating a new storage account]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/new-storage-account.png" | absolute_url }})
 
     _Creating a new storage account_
  
 1. Enter a unique name for the storage account and make sure a green check mark appears next to it. Select **Use existing** under **Resource group** and select the "FlySimResources" resource group that you created in Lab 1. Choose **East US** as the **Location**, and then click the **Create** button.
 
-	![Creating a new storage account]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/create-storage-account.png)
+	![Creating a new storage account]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/create-storage-account.png" | absolute_url }})
 
     _Creating a new storage account_
  
@@ -154,25 +154,25 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 1. Select **Extensions and Updates...** from Visual Studio's **Tools** menu, and select **Visual Studio Marketplace** under **Updates** on the left. If "Azure Functions and Web Jobs Tools" appears in the list of updates, click the **Update** button next to it.
 
-	![Installing the Azure Functions update]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/install-azure-tools.png)
+	![Installing the Azure Functions update]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/install-azure-tools.png" | absolute_url }})
 
     _Installing the Azure Functions update_
 
 1. Use Visual Studio's **File** > **New Project** command to create a new C# Azure Functions project named "FlySimFunctions."
 
-	![Creating a new Azure Functions project]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/vs-add-project.png)
+	![Creating a new Azure Functions project]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/vs-add-project.png" | absolute_url }})
 
     _Creating a new Azure Functions project_
 
 1. Right-click the FlySimFunctions project in Solution Explorer and use the **Add** > **New Item...** command to add an Azure Function file named **FlySimIoTFlightData.cs**.
 
-	![Adding an Azure Function to the project]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/vs-add-new-function.png)
+	![Adding an Azure Function to the project]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/vs-add-new-function.png" | absolute_url }})
 
     _Adding an Azure Function to the project_
 
 1. In the "New Azure Function" dialog, select **Event Hub trigger**, type "IoTHubConnection" into the **Connection** box, delete any default **Path** value, and then click **OK**.
 
-	![Specifying the Function trigger]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/vs-select-event-hub-trigger.png)
+	![Specifying the Function trigger]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/vs-select-event-hub-trigger.png" | absolute_url }})
 
     _Specifying the Function trigger_
 
@@ -324,19 +324,19 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 1. Return to the "FlySimResources" resource group in the Azure Portal and click the IoT Hub that you created in Lab 1.
 
-	![Opening a blade for the IoT Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/open-iot-hub.png)
+	![Opening a blade for the IoT Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/open-iot-hub.png" | absolute_url }})
 
 	_Opening a blade for the IoT Hub_
 
 1. Click **Endpoints**, and then click **Events**.
 
-	![Viewing endpoint information]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/portal-click-iot-endpoints.png)
+	![Viewing endpoint information]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-click-iot-endpoints.png" | absolute_url }})
 
     _Viewing endpoint information_
 
 1. Click the **Copy** button next to "Event Hub-compatible endpoint" to copy the endpoint the clipboard.
 
-	![_Copying the endpoint to the clipboard]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/portal-copy-iot-endpoint.png)
+	![_Copying the endpoint to the clipboard]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-copy-iot-endpoint.png" | absolute_url }})
 
     _Copying the endpoint to the clipboard_
 
@@ -344,19 +344,19 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 1. Return to the "FlySimResources" resource group in the Azure Portal and click the Event Hub that you created in [Exercise 1](#Exercise1).
 
-	![Opening a blade for the Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/open-event-hub-2.png)
+	![Opening a blade for the Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/open-event-hub-2.png" | absolute_url }})
 
 	_Opening a blade for the event hub_
 
 1. Click **Shared access policies**, followed by **RootManageSharedAccessKey**.
 
-	![Opening RootManageSharedAccessKey]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/portal-click-event-hub-policy.png)
+	![Opening RootManageSharedAccessKey]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-click-event-hub-policy.png" | absolute_url }})
 
     _Opening RootManageSharedAccessKey_
 
 1. Click the **Copy** button next to "Connection string–primary key" to copy the connection string the clipboard.
 
-	![Copying the connection string to the clipboard]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/portal-copy-event-hub-sas.png)
+	![Copying the connection string to the clipboard]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-copy-event-hub-sas.png" | absolute_url }})
 
     _Copying the connection string to the clipboard_
 
@@ -364,13 +364,13 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 1. Return to the "FlySimResources" resource group in the Azure Portal and click the storage account that you created in [Exercise 2](#Exercise2).
 
-	![Opening a blade for the storage account]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/open-storage-account.png)
+	![Opening a blade for the storage account]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/open-storage-account.png" | absolute_url }})
 
 	_Opening a blade for the storage account_
 
 1. Click **Access keys**, and then click the **Copy** button next to the first connection string to copy the connection string to the clipboard.
 
-	![Copying the connection string to the clipboard]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/portal-copy-storage-key.png)
+	![Copying the connection string to the clipboard]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-copy-storage-key.png" | absolute_url }})
 
     _Copying the connection string to the clipboard_
 
@@ -378,7 +378,7 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 1. Now it's time to test the Function and make sure it is triggered each time an event from the MXChip reaches the IoT Hub. If your MXChip isn't plugged in, connect it to your laptop and confirm that the device screen says "IN FLIGHT."
 
-	![The MXChip in flight]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/chip-in-flight.png)
+	![The MXChip in flight]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/chip-in-flight.png" | absolute_url }})
 
     _The MXChip in flight_ 
 
@@ -390,7 +390,7 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 	> If the breakpoint is never hit but your MXChip is plugged in and transmitting data, then the Azure Function isn't properly connected to the IoT Hub. If that's the case, confirm that the setting named "IoTHubConnection" in **local.settings.json** contains the connection string and IoT Hub name shown in Step 10 of this exercise.
 
-	![Viewing the input message in the debugger]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/vs-view-debug-info.png)
+	![Viewing the input message in the debugger]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/vs-view-debug-info.png" | absolute_url }})
 
     _Viewing the input message in the debugger_
 
@@ -405,7 +405,7 @@ In this exercise, you will use Visual Studio to deploy an Azure Function App con
 
 1. In Solution Explorer, right-click the FlySimFunctions project and select **Publish...**. Make sure **Azure Function App** and **Create New** are selected, and then click the **Publish** button. 
 
-	![Publishing an Azure Function App]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/vs-select-publish.png)
+	![Publishing an Azure Function App]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/vs-select-publish.png" | absolute_url }})
 
     _Publishing an Azure Function App_
  
@@ -413,19 +413,19 @@ In this exercise, you will use Visual Studio to deploy an Azure Function App con
 
 	> Azure Function Apps deployed with an App Service plan are billed at [normal App Service rates](https://azure.microsoft.com/pricing/details/app-service/). Function Apps can also employ a consumption plan that bills based on execution time, but Functions running under the consumption plan aren't guaranteed to execute immediately. For more information on consumption plans versus App Service plans, see [Azure Functions hosting plans comparison](https://docs.microsoft.com/azure/azure-functions/functions-scale).
 
-	![Entering Function App parameters]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/vs-create-app-service-dialog.png)
+	![Entering Function App parameters]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/vs-create-app-service-dialog.png" | absolute_url }})
 
     _Entering Function App parameters_
 
 1. Wait for the Function App to be deployed. (It typically takes a few minutes.) Then return to the "FlySimResources" resource group in the Azure portal and click the Function App.
 
-	![Opening the Function App]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/open-function-app.png)
+	![Opening the Function App]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/open-function-app.png" | absolute_url }})
 
     _Opening the Function App_
   
 1. Click **Application settings**.
 
-	![Opening application settings for the Function App]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/portal-click-app-settings.png)
+	![Opening application settings for the Function App]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-click-app-settings.png" | absolute_url }})
 
     _Opening application settings for the Function App_
  
@@ -433,7 +433,7 @@ In this exercise, you will use Visual Studio to deploy an Azure Function App con
 
 	> When you tested the Function locally, these settings came from **local.settings.json**. Now that the Function is running in the cloud, the same settings will come from the Function App's application settings.
 
-	![Adding application settings]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/portal-add-app-settings.png)
+	![Adding application settings]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-add-app-settings.png" | absolute_url }})
 
     _Adding application settings_
  
@@ -441,7 +441,7 @@ In this exercise, you will use Visual Studio to deploy an Azure Function App con
 
 	> If the log shows no output but your MXChip is plugged in and transmitting data, then the Azure Function isn't properly connected to the IoT Hub. If that's the case, review Step 5 of this exercise and confirm that the application setting named "IoTHubConnection" contains the connection string and IoT Hub name shown in Exercise 3, Step 10.
 
-	![The FlySimIoTFlightData Function running in the portal]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/portal-function-running.png)
+	![The FlySimIoTFlightData Function running in the portal]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-function-running.png" | absolute_url }})
 
     _The FlySimIoTFlightData Function running in the portal_
 
@@ -578,7 +578,7 @@ The "FlySim" folder in the Cloud City download contains a Universal Windows Plat
 
 1. Reset your aircraft to its default starting position over the Nevada desert by going to the Function App in the Azure Portal and clicking **Restart**.
 
-	![Restarting the Function App]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/restart-function-app.png)
+	![Restarting the Function App]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/restart-function-app.png" | absolute_url }})
 
     _Restarting the Function App_
 
@@ -586,7 +586,7 @@ The "FlySim" folder in the Cloud City download contains a Universal Windows Plat
 
 	> If your aircraft never appears in the app but your MXChip is plugged in and transmitting data, review Step 4 of this exercise and confirm that the connection string you pasted into **CoreConstants.cs** is the one shown in Exercise 3, Step 14. Also review Exercise 4, Step 5 and make sure the application setting named "EventHubConnection" contains the same connection string.
 
-	![FlySim showing Amelia Earhart over the Nevada desert]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/app-in-flight.png)
+	![FlySim showing Amelia Earhart over the Nevada desert]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png" | absolute_url }})
 
     _FlySim showing Amelia Earhart over the Nevada desert_
 
@@ -596,7 +596,7 @@ The "FlySim" folder in the Cloud City download contains a Universal Windows Plat
 
 	> Expect a slight delay between the time you move the board and the app responds. Most of the delay is due to the fact that the app running on the MXChip is only transmitting events every couple of seconds. The latency resulting from events being transmitted from the MXChip to an IoT Hub in the cloud, then transformed, sent to an Event Hub, and transmitted down to the client app is minimal unless you have a very slow WiFi connection.
 
-	![Making a right turn]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/app-turning.png)
+	![Making a right turn]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/app-turning.png" | absolute_url }})
 
     _Making a right turn_
 
@@ -604,7 +604,7 @@ The "FlySim" folder in the Cloud City download contains a Universal Windows Plat
 
 	> Tip: If your plane flies off the screen and is no longer visible on the map, click the airplane in the artificial horizon to bring it back into view.
 
-	![Pointing the nose up]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-configure-hub.png" | absolute_url }}Images/app-ascending.png)
+	![Pointing the nose up]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/app-ascending.png" | absolute_url }})
 
     _Pointing the nose up_
 

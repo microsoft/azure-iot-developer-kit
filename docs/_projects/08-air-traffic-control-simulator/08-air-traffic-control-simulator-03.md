@@ -1,12 +1,12 @@
 ---
-title: "Door Monitor"
-permalink: /docs/projects/door-monitor/
+title: "Air Traffic Control Simulator - Lab 3"
+permalink: /docs/projects/air-traffic-control-simulator-03/
 excerpt: "Performing Real-Time Proximity Detection with Azure Stream Analytics"
 part: 3
 header:
-  overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png
+  overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
   overlay_full: true
-  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png
+  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
 
 difficulty: HARD
 
@@ -77,7 +77,7 @@ In this exercise, you will create two Azure Event Hubs. One will provide input t
 
 1. In the portal, click **+ New**, followed by **Internet of Things** and **Event Hubs**.
 
-    ![Adding a new Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/new-event-hub.png)
+    ![Adding a new Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/new-event-hub.png" | absolute_url }})
 
     _Adding a new Event Hub_
 
@@ -85,61 +85,61 @@ In this exercise, you will create two Azure Event Hubs. One will provide input t
 
 	> It is important to select the East US region to locate the Event Hub in the same region as the resources that attendees create. Keeping everything in one data center reduces cost and minimizes latency.
 
-    ![Creating a namespace]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/create-namespace.png)
+    ![Creating a namespace]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/create-namespace.png" | absolute_url }})
 
     _Creating a namespace_
 
 1. Click **Resource groups** in the ribbon on the left, and then click the resource group created in the previous step.
 
-    ![Opening the resource group]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/open-resource-group.png)
+    ![Opening the resource group]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/open-resource-group.png" | absolute_url }})
 
     _Opening the resource group_
 
 1. Wait until "Deploying" changes to "Succeeded." (You can click the **Refresh** button at the top of the blade to refresh the deployment status.) Then click the namespace whose name you specified in Step 3.
 
-    ![Opening the namespace]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/open-namespace.png)
+    ![Opening the namespace]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/open-namespace.png" | absolute_url }})
 
     _Opening the namespace_
 
 1. Click **+ Event Hub** to add an Event Hub to the namespace.
 
-    ![Adding an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/add-event-hub.png)
+    ![Adding an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/add-event-hub.png" | absolute_url }})
 
     _Adding an Event Hub_
 
 1. Type "flysim-shared-input-hub" (without quotation marks) into the **Name** box. Then click the **Create** button.
 
-    ![Creating an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/create-input-hub.png)
+    ![Creating an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/create-input-hub.png" | absolute_url }})
 
     _Creating an Event Hub_
 
 1. Wait a moment for the Event Hub to be created. Then click **+ Event Hub** again.
 
-    ![Adding an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/add-event-hub.png)
+    ![Adding an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/add-event-hub.png" | absolute_url }})
 
     _Adding an Event Hub_
 
 1. Type "flysim-shared-output-hub" (without quotation marks) into the **Name** box. Then click the **Create** button.
 
-    ![Creating an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/create-output-hub.png)
+    ![Creating an Event Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/create-output-hub.png" | absolute_url }})
 
     _Creating an Event Hub_
 
 1. Wait a moment for the Event Hub to be created. Then scroll to the bottom of the blade and confirm that both Event Hubs appear in the list. Also confirm the spelling, since the apps that connect to these Event Hubs assume that the Event Hubs are named exactly as shown.
 
-    ![Event Hubs created for input and output]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/event-hubs.png)
+    ![Event Hubs created for input and output]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/event-hubs.png" | absolute_url }})
 
     _Event Hubs created for input and output_
 
 1. Click **Shared access policies**, followed by **RootManageSharedAccessKey**.
 
-    ![Opening the shared access key]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/open-shared-access-key.png)
+    ![Opening the shared access key]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/open-shared-access-key.png" | absolute_url }})
 
     _Opening the shared access key_
 
 1. Click the **Copy** button next to "Connection string—primary key" to copy the connection string to the clipboard.
 
-    ![Copying the connection string]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/copy-connection-string.png)
+    ![Copying the connection string]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/copy-connection-string.png" | absolute_url }})
 
     _Copying the connection string_
 
@@ -147,7 +147,7 @@ In this exercise, you will create two Azure Event Hubs. One will provide input t
 
 	> Remember to delete this gist when the event is over since it contains a shared-access signature that allows anyone to connect to the Event Hubs you just created.
 
-	![Creating a gist]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/create-gist.png)
+	![Creating a gist]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/create-gist.png" | absolute_url }})
 
 	_Creating a gist_
 
@@ -160,73 +160,73 @@ In this exercise, you will use the Azure Portal to create a Stream Analytics job
 
 1. Return to the [Azure Portal](https://portal.azure.com) and click **+ New**, followed by **Internet of Things** and **Stream Analytics job**.
 
-    ![Creating a Stream Analytics job]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/new-stream-analytics-job.png)
+    ![Creating a Stream Analytics job]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/new-stream-analytics-job.png" | absolute_url }})
 
     _Creating a Stream Analytics job_
 
 1. Type "flysim-analytics" (without quotation marks) into the **Job name** box. Select **Use Existing** under **Resource group** and select the "cloud-city-rg" resource group that you created in [Exercise 1](#Exercise1). Select the **East US** region in the **Location** drop-down. Then click the **Create** button.
 
-    ![Specifying parameters for the Stream Analytics job]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/create-stream-analytics-job.png)
+    ![Specifying parameters for the Stream Analytics job]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/create-stream-analytics-job.png" | absolute_url }})
 
     _Specifying parameters for the Stream Analytics job_
 
 1. Click **Resource groups** in the ribbon on the left, and then click the "cloud-city-rg" resource group.
 
-    ![Opening the resource group]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/open-resource-group.png)
+    ![Opening the resource group]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/open-resource-group.png" | absolute_url }})
 
     _Opening the resource group_
 
 1. Wait until the Stream Analytics job is created. Then click **flysim-analytics** to open the Stream Analytics job in the portal.
 
-    ![Opening the Stream Analytics job]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/open-stream-analytics-job.png)
+    ![Opening the Stream Analytics job]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/open-stream-analytics-job.png" | absolute_url }})
 
     _Opening the Stream Analytics job_
 
 1. Click **Inputs** to add an input to the Stream Analytics job.
 
-    ![Adding an input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/add-input-1.png)
+    ![Adding an input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/add-input-1.png" | absolute_url }})
 
     _Adding an input_
 
 1. Click **+ Add**.
 
-    ![Adding an input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/add-input-2.png)
+    ![Adding an input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/add-input-2.png" | absolute_url }})
 
     _Adding an input_
 
 1. Type "FlightDataInput" (without quotation marks) into the **Input alias** box. Select the namespace that you created in Exercise 1 in the **Service bus namespace** drop-down, and select **flysim-shared-input-hub** as the **Event Hub name**. Fill out the remainder of the form exactly as shown, and then click the **Create** button at the bottom of the blade.
 
-    ![Creating an input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/create-input.png)
+    ![Creating an input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/create-input.png" | absolute_url }})
 
     _Creating an input_
 
 1. Confirm that the new input appears in the list of inputs to the Stream Analytics job.
 
-    ![Confirming the input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/confirm-input.png)
+    ![Confirming the input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/confirm-input.png" | absolute_url }})
 
     _Confirming the input_
 
 1. Return to the blade for the Stream Analytics job and click **Outputs** to add an output.
 
-    ![Adding an output]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/add-output-1.png)
+    ![Adding an output]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/add-output-1.png" | absolute_url }})
 
     _Adding an output_
 
 1. Click **+ Add**.
 
-    ![Adding an output]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/add-output-2.png)
+    ![Adding an output]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/add-output-2.png" | absolute_url }})
 
     _Adding an output_
 
 1. Type "FlightDataOutput" (without quotation marks) into the **Output alias** box. Select the namespace that you created in Exercise 1 in the **Service bus namespace** drop-down, and select **flysim-shared-output-hub** as the **Event Hub name**. Fill out the remainder of the form exactly as shown, and then click the **Create** button at the bottom of the blade.
 
-    ![Creating an input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/create-output.png)
+    ![Creating an input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/create-output.png" | absolute_url }})
 
     _Creating an input_
 
 1. Confirm that the new output appears in the list of outputs.
 
-    ![Confirming the input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/confirm-output.png)
+    ![Confirming the input]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/confirm-output.png" | absolute_url }})
 
     _Confirming the output_
 
@@ -241,19 +241,19 @@ To identify aircraft that are too close together, the query will ask for all air
 
 1. Return to the blade for the Stream Analytics job and click **Query**.
 
-    ![Opening the query viewer]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/add-query.png)
+    ![Opening the query viewer]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/add-query.png" | absolute_url }})
 
     _Opening the query viewer_
 
 1. Click the **ellipsis** (the three dots) to the right of **FlightDataInput** and select **Upload sample data from file** from the menu.
 
-    ![Uploading sample data for testing queries]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/upload-test-data-1.png)
+    ![Uploading sample data for testing queries]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/upload-test-data-1.png" | absolute_url }})
 
     _Uploading sample data for testing queries_
 
 1. Click the **folder** icon on the right and select the file named **flysim-2-in-proximity.json** from the "resources" subdirectory of this lab. Then click **OK** to upload the file.
 
-    ![Uploading flysim-2-in-proximity.json]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/upload-test-data-2.png)
+    ![Uploading flysim-2-in-proximity.json]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/upload-test-data-2.png" | absolute_url }})
 
     _Uploading flysim-2-in-proximity.json_
 
@@ -284,19 +284,19 @@ To identify aircraft that are too close together, the query will ask for all air
 
 1. Click the **Save** button at the top of the blade to save the query. Then click the **Test** button to execute it against the sample data you uploaded.
 
-    ![Testing a query]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/test-query.png)
+    ![Testing a query]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/test-query.png" | absolute_url }})
 
     _Testing a query_
 
 1. Confirm that you see the output pictured below. The test data contains 20 rows of flight data for two aircraft. The data was intentionally constructed so that the two aircraft pass within four miles of each other. The output comprises a 20-second time period, and each row identifies two aircraft that were within four miles of each other during that time and the distance (in feet) that separates them.
 
-    ![Query results]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/query-results.png)
+    ![Query results]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/query-results.png" | absolute_url }})
 
     _Query results_
 
 1. With the query now formulated and tested against a set of sample data, it's time to start the Stream Analytics job so it can process live data. Return to the blade for the Stream Analytics job. Then click **Start**.
 
-    ![Starting the Stream Analytics job]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/start-stream-analytics-job-1.png)
+    ![Starting the Stream Analytics job]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/start-stream-analytics-job-1.png" | absolute_url }})
 
     _Starting the Stream Analytics job_
 
@@ -304,7 +304,7 @@ To identify aircraft that are too close together, the query will ask for all air
 
 	> Billing for a Stream Analytics job starts when the job is fully running. A Stream Analytics job configured to use one streaming unit costs a few cents an hour to run. For the latest information regarding pricing, see [Stream Analytics pricing](https://azure.microsoft.com/pricing/details/stream-analytics/).
 
-    ![Specifying the job start time]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/start-stream-analytics-job-2.png)
+    ![Specifying the job start time]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/start-stream-analytics-job-2.png" | absolute_url }})
 
     _Specifying the job start time_
 
@@ -323,7 +323,7 @@ Now it's time to connect the ATC app, which is located in the "AirTrafficSim" fo
 
 1. Press **Ctrl+F5** to launch the app. After a short delay, AirTrafficSim will load and display an empty air traffic control map somewhere over the Nevada desert. The flight-information panel (A) shows the number of aircraft that are flying and indicates how many are "safe" and how many are "at risk" — that is, within two miles of each other. The Altitudes panel (B) shows the altitudes of the aircraft. The traffic map (C) shows where the aircraft are, and the status bar (D) shows the current time and provides controls for zooming out to show all active flights and showing the original grid coordinates. You can zoom in and out by clicking the **+** and **-** buttons, or by placing the cursor over the map and rolling the mouse wheel. You can also pan by dragging the map.
 
-	![The AirTrafficSim app]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/portal-configure-hub.png" | absolute_url }}Images/app-environment-labels.png)
+	![The AirTrafficSim app]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/app-environment-labels.png" | absolute_url }})
 
     _The AirTrafficSim app_
  

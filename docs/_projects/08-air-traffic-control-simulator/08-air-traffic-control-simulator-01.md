@@ -4,9 +4,9 @@ permalink: /docs/projects/air-traffic-control-simulator/
 excerpt: "Build a comprehensive IoT solution that demonstrates some of the very best features Microsoft Azure has to offer."
 part: 1
 header:
-  overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png
+  overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
   overlay_full: true
-  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png
+  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
 
 difficulty: HARD
 
@@ -24,13 +24,13 @@ _The air-traffic control application_
 
 You will be the pilot of one of these aircraft. And to do the flying, you will use hardware provided to you for this event. The [MXChip](https://microsoft.github.io/azure-iot-developer-kit/) is an Arduino-based device that is ideal for prototyping IoT solutions. It features an array of sensors, including an accelerometer, a gyrometer, and temperature and humidity sensors, and it includes built-in WiFi so it can transmit data to Azure IoT Hubs wirelessly. It also features a micro-USB port by which you can connect it to your laptop, upload software, and power the hardware. You will control your aircraft by tilting the MXChip backward and forward to go up and down, and rotating it left and right to turn.
 
-![A Micro USB cable placed next to an Azure MXChip IoT Development Board]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png" | absolute_url }}Images/cable-and-chip.png )
+![A Micro USB cable placed next to an Azure MXChip IoT Development Board]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/cable-and-chip.png" | absolute_url }})
 
 _IoT development board_
 
 Here is how the solution is architected, with elements that you will build or deploy highlighted in light blue:
 
-![A data flow diagram showing IoT information originating from an Azure MXChip flowing through IoT Hub and onto an Azure Function.  From the Azure Function, data is bifercated to flow through a client application, as well as to an Event Hub shared by all workshop participants.  The shared Event Hub forwads data to Azure Stream Analytics, where it is forwarded onto another event hub for distribution to the client application.  Additionally, there are data flows from the client application to Cognitive Services and from Stream Analytics to Cosmos DB]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png" | absolute_url }}Images/architecture.png)
+![A data flow diagram showing IoT information originating from an Azure MXChip flowing through IoT Hub and onto an Azure Function.  From the Azure Function, data is bifercated to flow through a client application, as well as to an Event Hub shared by all workshop participants.  The shared Event Hub forwads data to Azure Stream Analytics, where it is forwarded onto another event hub for distribution to the client application.  Additionally, there are data flows from the client application to Cognitive Services and from Stream Analytics to Cosmos DB]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/architecture.png" | absolute_url }})
 
 _Solution architecture_
 
