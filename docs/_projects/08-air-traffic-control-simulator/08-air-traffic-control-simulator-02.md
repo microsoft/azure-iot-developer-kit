@@ -322,7 +322,7 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 	You will update these values in the next few steps.
 
-1. Return to the "FlySimResources" resource group in the Azure Portal and click the IoT Hub that you created in Lab 1.
+1. Return to the "FlySimResources" resource group in the Azure Portal and click the IoT Hub that you created in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}).
 
 	![Opening a blade for the IoT Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/open-iot-hub.png" | absolute_url }})
 
@@ -582,7 +582,7 @@ The "FlySim" folder in the Cloud City download contains a Universal Windows Plat
 
     _Restarting the Function App_
 
-1. Make sure your MXChip is plugged into your laptop. Then return to Visual Studio and press **Ctrl+F5** to launch FlySim. Confirm that the app starts and that after a few seconds, an "aircraft" labeled with the display name you entered in Lab 1 appears on the screen. Maximize the window so you can see all the readouts and controls.
+1. Make sure your MXChip is plugged into your laptop. Then return to Visual Studio and press **Ctrl+F5** to launch FlySim. Confirm that the app starts and that after a few seconds, an "aircraft" labeled with the display name you entered in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) appears on the screen. Maximize the window so you can see all the readouts and controls.
 
 	> If your aircraft never appears in the app but your MXChip is plugged in and transmitting data, review Step 4 of this exercise and confirm that the connection string you pasted into **CoreConstants.cs** is the one shown in Exercise 3, Step 14. Also review Exercise 4, Step 5 and make sure the application setting named "EventHubConnection" contains the same connection string.
 
@@ -608,11 +608,11 @@ The "FlySim" folder in the Cloud City download contains a Universal Windows Plat
 
     _Pointing the nose up_
 
-Practice flying around until you feel confident in your ability to control the plane. Try flying a straight heading while maintaining a constant altitude. Also pick landmarks on the ground and practice flying around them at different altitudes. These skills will come in handy in Lab 4.
+Practice flying around until you feel confident in your ability to control the plane. Try flying a straight heading while maintaining a constant altitude. Also pick landmarks on the ground and practice flying around them at different altitudes. These skills will come in handy in [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}).
 
 <a name="Summary"></a>
 ## Summary ##
 
-You can now fly a simulated aircraft using the MXChip that you configured in Lab 1. An Azure Function transforms accelerometer data from the MXChip into flight data, the flight data is transmitted to an Azure Event Hub, and a client app subscribes to events from the Event Hub so it can show the aircraft's position and attitude in real time.
+You can now fly a simulated aircraft using the MXChip that you configured in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}). An Azure Function transforms accelerometer data from the MXChip into flight data, the flight data is transmitted to an Azure Event Hub, and a client app subscribes to events from the Event Hub so it can show the aircraft's position and attitude in real time.
 
 In [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), you will add Azure Stream Analytics to the mix so it can see all the aircraft in the room, determine when two aircraft are too close together, and transmit a warning to affected pilots. It's about to get very real — and also very intense!

@@ -21,7 +21,7 @@ last_modified_at: 2017-10-30
 
 Scenarios for the application of real-time data analytics are legion and include fraud detection, identity-theft protection, optimizing the allocation of resources (think of an Uber-like transportation service that sends drivers to areas of increasing demand *before* that demand peaks), click-stream analysis on Web sites, shopping suggestions on retail-sales sites, and countless others. Having the ability to process data *as it comes in* rather than waiting until after it has been aggregated offers a competitive advantage to businesses that are agile enough to make adjustments on the fly.
 
-In this lab, you will create an Azure Stream Analytics job and use it to analyze data streaming in from the simulated aircraft driven by the IoT device. Specifically, you will perform a query that identifies aircraft that are within a specified distance of each other in order to alert the pilots of those aircraft that evasive maneuvers might be required. Then you will connect the ATC app to the Stream Analytics inputs and outputs so that in Lab 4, the ATC app can show all air traffic and color-code aircraft that are too close together.
+In this lab, you will create an Azure Stream Analytics job and use it to analyze data streaming in from the simulated aircraft driven by the IoT device. Specifically, you will perform a query that identifies aircraft that are within a specified distance of each other in order to alert the pilots of those aircraft that evasive maneuvers might be required. Then you will connect the ATC app to the Stream Analytics inputs and outputs so that in [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}), the ATC app can show all air traffic and color-code aircraft that are too close together.
 
 <a name="Prerequisites"></a>
 ## Prerequisites ##
@@ -69,7 +69,7 @@ Estimated time to complete this lab: **45** minutes.
 
 Azure Stream Analytics supports several types of input, including input from Azure blobs,  input from Azure Event Hubs, and input from Azure IoT Hubs. A single Azure Event Hub or IoT Hub can handle millions of events per second transmitted from devices spread throughout the world.
 
-In this exercise, you will create two Azure Event Hubs. One will provide input to Stream Analytics, while the other will receive output from Stream Analytics. In the next lab, you will modify the Azure Function written in Lab 2 to transmit data to the input Event Hub, enabling Stream Analytics to see all activity emanating from all aircraft. You will also connect the client app to the output Event Hub and modify the app to transmit messages back to their MXChips.
+In this exercise, you will create two Azure Event Hubs. One will provide input to Stream Analytics, while the other will receive output from Stream Analytics. In the next lab, you will modify the Azure Function written in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to transmit data to the input Event Hub, enabling Stream Analytics to see all activity emanating from all aircraft. You will also connect the client app to the output Event Hub and modify the app to transmit messages back to their MXChips.
 
 1. In your browser, navigate to the [Azure Portal](https://portal.azure.com). If you are asked to sign in, do so using your Microsoft account.
 
@@ -306,7 +306,7 @@ To identify aircraft that are too close together, the query will ask for all air
 
     _Specifying the job start time_
 
-It will probably take the Stream Analytics job a minute or two to start, but that's OK because it's not receiving data at the moment anyway. The live data stream will start in Lab 4 when you modify the Azure Function to send output to the shared input hub that provides input to Stream Analytics.
+It will probably take the Stream Analytics job a minute or two to start, but that's OK because it's not receiving data at the moment anyway. The live data stream will start in [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}) when you modify the Azure Function to send output to the shared input hub that provides input to Stream Analytics.
 
 <a name="Exercise4"></a>
 ## Exercise 4: Connect the ATC app to the Event Hubs ##

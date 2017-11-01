@@ -46,7 +46,7 @@ Here's a synopsis of the four labs that comprise this project:
 - [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) - Create an Azure IoT Hub and program an [MXCHIP]([MXChip](https://microsoft.github.io/azure-iot-developer-kit/)) to send accelerometer data to it.
 - [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) - Create an Azure Event Hub and deploy an Azure Function that transforms accelerometer data input to the IoT Hub into "flight data" denoting the disposition on an airplane and transmits it to the Event Hub. Then connect a UWP client app to the Event Hub and use their MXChip to fly a simulated airplane.
 - [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}) - Creates a pair of Event Hubs and deploy a Stream Analytics job that analyzes all the air traffic for aircraft that are within two miles of each another. Also deploys a UWP app that shows all the air traffic.
-- [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}) - Modify the Azure Function deployed in Lab 2 to transmit flight data to the input hub used by Stream Analytics. Then connect the client app to the Stream Analytics output and modify the app to transmit warning messages back to the MXChip when aircraft are within two miles of another.
+- [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}) - Modify the Azure Function deployed in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to transmit flight data to the input hub used by Stream Analytics. Then connect the client app to the Stream Analytics output and modify the app to transmit warning messages back to the MXChip when aircraft are within two miles of another.
 
 The [asset repository] also has four source-code folders:
 
@@ -100,7 +100,7 @@ In this exercise, you will provision an Azure IoT Hub for your MXChip to transmi
  
 1. Enter a unique name for IoT Hub in the **Name** field. IoT Hub names must be unique across Azure, so make sure a green check mark appears next to it. Also make sure **S1 - Standard** is selected as the pricing tier. Select **Create new** under **Resource group** and enter the resource-group name "FlySimResources." Select **East US** as the **Location** (important!). Accept the default values everywhere else, and then click **Create**.
 
-	> You selected East US as the location because in Lab 3, the instructor will create Azure resources in that same region for the IoT Hub to connect to. Azure resources can be connected across regions, but keeping everything within the same data center reduces cost and minimizes latency.
+	> You selected East US as the location because in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), the instructor will create Azure resources in that same region for the IoT Hub to connect to. Azure resources can be connected across regions, but keeping everything within the same data center reduces cost and minimizes latency.
 
 	![The Azure Portal's IoT Hub Configuration pane shows relevant configuration settings.  The pricing tier is set to S1, and a single unit of IoT Hub and 4 Device-to-cloud partitions are entered.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/portal-configure-hub.png" | absolute_url }})
 
