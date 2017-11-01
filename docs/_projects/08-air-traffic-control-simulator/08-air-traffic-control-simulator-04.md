@@ -19,13 +19,13 @@ last_modified_at: 2017-10-30
 
 In the previous session, your flight instructor created an [Azure Stream Analytics](https://azure.microsoft.com/services/stream-analytics/) job that analyzes incoming data for aircraft that are too close together. He or she also created a pair of Event Hubs: one to provide input to the Stream Analytics job, and another to receive output.
 
-In this lab, you will close the loop by marrying what you built in Labs 1 and 2 with what the instructor built in Lab 3 to assemble a complete end-to-end solution. First, you will modify the Azure Function you wrote in Lab 2 to transmit flight data to the shared input hub — the one that provides input to Stream Analytics — so Stream Analytics *and* the ATC app presented at the end of the previous session can see all of the aircraft in the room.
+In this lab, you will close the loop by marrying what you built in Labs 1 and 2 with what the instructor built in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}) to assemble a complete end-to-end solution. First, you will modify the Azure Function you wrote in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to transmit flight data to the shared input hub — the one that provides input to Stream Analytics — so Stream Analytics *and* the ATC app presented at the end of the previous session can see all of the aircraft in the room.
 
 ![The ATC app with many planes in flight]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab4/atc-app.png" | absolute_url }})
 
 _The ATC app with many planes in flight_
 
-Second, you will connect the client app that you built in Lab 2 to the shared output hub — the one that receives output from Stream Analytics — so that when your aircraft comes too close to another and turns red in the ATC app, it turns red in the client app, too.
+Second, you will connect the client app that you built in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to the shared output hub — the one that receives output from Stream Analytics — so that when your aircraft comes too close to another and turns red in the ATC app, it turns red in the client app, too.
 
 Third, you will modify the client app so that when it is notified that your aircraft is too close to another, it transmits a warning message back to the MXChip through the IoT Hub that the device is connected to. The MXChip will respond by displaying the warning on its screen and lighting an LED. To top it off, you will use [Microsoft Cognitive Services](https://azure.microsoft.com/services/cognitive-services/) to translate the warning message into the language of the user's choice.
 
@@ -75,9 +75,9 @@ Estimated time to complete this lab: **60** minutes.
 <a name="Exercise1"></a>
 ## Exercise 1: Connect the Azure Function to the shared input hub ##
 
-In Lab 2, you deployed an Azure Function that reads input from an Azure IoT Hub, transforms accelerometer data coming from your MXChip into flight data, and transmits the output to an Azure Event Hub that provides input to the FlySim app. In this exercise, you will add an output to the Azure Function so that it transmits the same flight data to the shared input hub created by the instructor in Lab 3. Because everyone else in the room is making the same modification, and because the shared input hub provides data to the ATC app and to Stream Analytics, the ATC app will be able to show all the aircraft that are in the air, and the Stream Analytics job will be able to detect when aircraft come too close together.   
+In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}), you deployed an Azure Function that reads input from an Azure IoT Hub, transforms accelerometer data coming from your MXChip into flight data, and transmits the output to an Azure Event Hub that provides input to the FlySim app. In this exercise, you will add an output to the Azure Function so that it transmits the same flight data to the shared input hub created by the instructor in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}). Because everyone else in the room is making the same modification, and because the shared input hub provides data to the ATC app and to Stream Analytics, the ATC app will be able to show all the aircraft that are in the air, and the Stream Analytics job will be able to detect when aircraft come too close together.   
 
-1. Start Visual Studio and open the FlySimFunctions solution that you created in Lab 2.
+1. Start Visual Studio and open the FlySimFunctions solution that you created in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}).
 
 1. Add the following parameter to the ```Run``` method:
 
@@ -105,7 +105,7 @@ In Lab 2, you deployed an Azure Function that reads input from an Azure IoT Hub,
 
     _The modified Run method_
 
-	The statement that you added transmits the same flight data to the shared Event Hub that is already being transmitted to the "private" Event Hub you created in Lab 2.
+	The statement that you added transmits the same flight data to the shared Event Hub that is already being transmitted to the "private" Event Hub you created in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}).
 
 1. Open **local.settings.json** and insert the following statement directly below   "EventHubConnection:"
 
@@ -123,7 +123,7 @@ In Lab 2, you deployed an Azure Function that reads input from an Azure IoT Hub,
 
 1. Save your changes and rebuild the solution to ensure that it builds successfully. Then right-click the project in Solution Explorer and use the **Publish...** command to publish the updated Azure Function.
 
-1. The next step is to add the shared input hub's connection string to the Function App's application settings. Go to the Azure Portal and open the Function App that you published in Lab 2. Then click **Application settings**.
+1. The next step is to add the shared input hub's connection string to the Function App's application settings. Go to the Azure Portal and open the Function App that you published in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}). Then click **Application settings**.
 
 	![Opening application settings]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab4/open-application-settings.png" | absolute_url }})
 
@@ -144,9 +144,9 @@ The Azure Function has now been updated to send flight information to the shared
 <a name="Exercise2"></a>
 ## Exercise 2: Connect the client app to the shared output hub ##
 
-In Lab 3, the instructor created an Event Hub and configured Stream Analytics to send output to it. He or she also connected the ATC app to the Event Hub so the app could highlight planes that are too close together on the air-traffic control map. In this exercise, you will connect the FlySim client app to the same Event Hub so it can notify individual pilots when the distance between their aircraft and any other is less than two miles.
+In [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), the instructor created an Event Hub and configured Stream Analytics to send output to it. He or she also connected the ATC app to the Event Hub so the app could highlight planes that are too close together on the air-traffic control map. In this exercise, you will connect the FlySim client app to the same Event Hub so it can notify individual pilots when the distance between their aircraft and any other is less than two miles.
 
-1. Open the FlySim solution from Lab 2 in Visual Studio.
+1. Open the FlySim solution from [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) in Visual Studio.
 
 1. Open **CoreConstants.cs** in the "Common" folder, and add the following statements after the statements that declare static strings named ```FlightActivityEventHubEndpoint``` and ```FlightActivityEventHubName```:
 
@@ -304,7 +304,7 @@ One of the benefits of using Azure IoT Hubs is that they support bidirectional c
 	public static string DeviceMessagingConnectionString = "IOT_DEVICE_ENDPOINT";
 	```
 
-1. Return to the Azure Portal and open the IoT Hub that you created in Lab 1. Click **Shared access policies**, and then click **iothubowner**.
+1. Return to the Azure Portal and open the IoT Hub that you created in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}). Click **Shared access policies**, and then click **iothubowner**.
 
 	![Viewing shared access policies for the IoT Hub]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab4/open-shared-access-policies.png" | absolute_url }})
 
@@ -351,7 +351,7 @@ One of the benefits of using Azure IoT Hubs is that they support bidirectional c
 	}
 	```
 
-	The ```MessageHelper``` class contains a method named ```SendMessageToDeviceAsync``` that transmits an ASCII message to the device connected to the IoT hub. The message is transmitted by calling ```SendAsync``` on an instance of the ```Microsoft.Azure.Devices.ServiceClient``` class, which is included in the NuGet package named Microsoft.Azure.Devices. A listener in the embedded code you uploaded to the device in Lab 1 handles the message and executes the appropriate commands to display the text contained in the message on the screen of the device for 5 seconds before reverting back to the normal "IN FLIGHT" display. It also lights the red LED on the board.
+	The ```MessageHelper``` class contains a method named ```SendMessageToDeviceAsync``` that transmits an ASCII message to the device connected to the IoT hub. The message is transmitted by calling ```SendAsync``` on an instance of the ```Microsoft.Azure.Devices.ServiceClient``` class, which is included in the NuGet package named Microsoft.Azure.Devices. A listener in the embedded code you uploaded to the device in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) handles the message and executes the appropriate commands to display the text contained in the message on the screen of the device for 5 seconds before reverting back to the normal "IN FLIGHT" display. It also lights the red LED on the board.
 
 1. In the lower-right corner of the FlySim app, there is a ```ComboBox``` control containing a list of languages. The default is English. The purpose of the ```ComboBox``` is to allow you to select the language used for warning messages displayed on the screen of the MXChip.
 
@@ -432,7 +432,7 @@ In this exercise, you will join other pilots in the room to fly your airplane th
 
     _Restarting the Function App_
 
-1. Make sure your MXChip is plugged into your laptop. Then return to Visual Studio and press **Ctrl+F5** to launch the FlySim app. Confirm that the app starts and that after a few seconds, an aircraft labeled with the display name you entered in Lab 1 appears on the screen. Maximize the window so you can see all the readouts and controls.
+1. Make sure your MXChip is plugged into your laptop. Then return to Visual Studio and press **Ctrl+F5** to launch the FlySim app. Confirm that the app starts and that after a few seconds, an aircraft labeled with the display name you entered in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) appears on the screen. Maximize the window so you can see all the readouts and controls.
 
 	> Remember that if your plane flies off the screen and is no longer visible on the map, you can click the airplane in the artificial horizon to bring it back into view.
 
@@ -473,7 +473,7 @@ When you're finished, unplug your MXChip from your laptop to stop the flow of me
 <a name="Summary"></a>
 ## Summary ##
 
-Let's take a moment to review what you built today. Here is the architecture diagram presented at the start of Lab 1:
+Let's take a moment to review what you built today. Here is the architecture diagram presented at the start of [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}):
 
 ![Solution architecture]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab4/architecture.png" | absolute_url }})
 
