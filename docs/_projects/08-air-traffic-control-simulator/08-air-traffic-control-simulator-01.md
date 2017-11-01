@@ -16,13 +16,13 @@ last_modified_at: 2017-10-30
 <a name="Introduction"></a>
 ## Introduction ##
 
-In this hands-on lab and the ones that follow, you will build a comprehensive IoT solution that demonstrates some of the very best features Microsoft Azure has to offer, including [IoT Hubs](https://azure.microsoft.com/services/iot-hub/), [Event Hubs](https://azure.microsoft.com/services/event-hubs/), [Azure Functions](https://azure.microsoft.com/services/functions/), [Stream Analytics](https://azure.microsoft.com/services/stream-analytics/), and [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/). The solution you build today will culminate with an air-traffic control (ATC) app that shows simulated aircraft flying through an ATC sector and warns users when aircraft get too close to each other. While these labs are best to do with several peers, there is an application in the lab assets which can inject simulated drone planes into the workstream (details avaialbe in the [Labs section](#labs).)
+In this hands-on lab and the ones that follow, you will build a comprehensive IoT solution that demonstrates some of the very best features Microsoft Azure has to offer, including [IoT Hubs](https://azure.microsoft.com/services/iot-hub/), [Event Hubs](https://azure.microsoft.com/services/event-hubs/), [Azure Functions](https://azure.microsoft.com/services/functions/), [Stream Analytics](https://azure.microsoft.com/services/stream-analytics/), and [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/). The solution you build today will culminate with an air-traffic control (ATC) app that shows simulated aircraft flying through an ATC sector and warns users when aircraft get too close to each other. While these labs are best to do with several peers, there is an application in the lab assets which can inject simulated drones into the workstream (details available in the [Labs section](#labs).)
 
 ![A user interface for an Air Traffic Control Application with dots and heading information overlaid on a geographical map.  Also includes summary statistics for all flights shown on the map, as well as attitude information for selected airplanes.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/atc-app.png" | absolute_url }})
 
 _The air-traffic control application_
 
-You will be the pilot of one of these aircraft. And to do the flying, you will use hardware provided to you for this event. The [MXChip](https://microsoft.github.io/azure-iot-developer-kit/) is an Arduino-based device that is ideal for prototyping IoT solutions. It features an array of sensors, including an accelerometer, a gyrometer, and temperature and humidity sensors, and it includes built-in WiFi so it can transmit data to Azure IoT Hubs wirelessly. It also features a micro-USB port by which you can connect it to your laptop, upload software, and power the hardware. You will control your aircraft by tilting the MXChip backward and forward to go up and down, and rotating it left and right to turn.
+You will be the pilot of one of these aircraft. And to do the flying, you will use the [MXChip](https://microsoft.github.io/azure-iot-developer-kit/), which is an Arduino-based device that is ideal for prototyping IoT solutions. It features an array of sensors, including an accelerometer, a gyrometer, and temperature and humidity sensors, and it includes built-in WiFi so it can transmit data to Azure IoT Hubs wirelessly. It also features a micro-USB port by which you can connect it to your laptop, upload software, and power the hardware. You will control your aircraft by tilting the MXChip backward and forward to go up and down, and rotating it left and right to turn.
 
 ![A Micro USB cable placed next to an Azure MXChip IoT Development Board]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/cable-and-chip.png" | absolute_url }})
 
@@ -34,7 +34,7 @@ Here is how the solution is architected, with elements that you will build or de
 
 _Solution architecture_
 
-Accelerometer data from the device is transmitted to an Azure IoT Hub. An Azure Function transforms the raw accelerometer data into *flight data* denoting airspeed, heading, altitude, latitude, longitude, pitch, and roll. The destination for that data is a pair of Event Hubs — one that you set up, and one that is shared by every pilot in the room. Events from the "private" Event Hub are consumed by a client app running on your laptop that shows the position and attitude of your aircraft. The events sent to the shared Event Hub go to a Stream Analytics job that analyzes fast-moving data for aircraft that are in danger of colliding and provides that data to the client app and the ATC app. When your aircraft comes too close to another, it turns red on the screen, and a warning appears on the screen of your MXChip. To top it off, Microsoft Cognitive Services translates the warning into the language of your choice.
+Accelerometer data from the device is transmitted to an Azure IoT Hub. An Azure Function transforms the raw accelerometer data into *flight data* denoting airspeed, heading, altitude, latitude, longitude, pitch, and roll. The destination for that data is a pair of Event Hubs — one that you set up, and one that is shared by your peers or the simulator drones. Events from the your Event Hub are consumed by a client app running on your laptop that shows the position and attitude of your aircraft. The events sent to the shared Event Hub go to a Stream Analytics job that analyzes fast-moving data for aircraft that are in danger of colliding and provides that data to the client app and the ATC app. When your aircraft comes too close to another, it turns red on the screen, and a warning appears on the screen of your MXChip. To top it off, Microsoft Cognitive Services translates the warning into the language of your choice.
 
 The goal of this lab is to get the device up and running and sending events to an Azure IoT Hub. Let's get started!
 
@@ -48,12 +48,12 @@ Here's a synopsis of the four labs that comprise this project:
 - [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}) - Creates a pair of Event Hubs and deploy a Stream Analytics job that analyzes all the air traffic for aircraft that are within two miles of each another. Also deploys a UWP app that shows all the air traffic.
 - [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}) - Modify the Azure Function deployed in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to transmit flight data to the input hub used by Stream Analytics. Then connect the client app to the Stream Analytics output and modify the app to transmit warning messages back to the MXChip when aircraft are within two miles of another.
 
-The [asset repository] also has four source-code folders:
+The [asset repository](https://github.com/Azure/CloudIoTHack) also has four source-code folders:
 
 - FlySim - A Visual Studio 2017 solution containing the client app that you use to fly simulated airplanes.
 - FlySimEmbedded - The code you upload to the MXChip to program it to send accelerometer data to an Azure IoT Hub.
 - AirTrafficSim - A Visual Studio 2017 solution containing the air-traffic control (ATC) app that shows all the airplanes in flight and highlights those that are within two miles of each other.
-- FlySimTest - A Visual Studio 2017 solution containing a command-line app for injecting simulated aircraft into AirTrafficSim. It's great for testing, and also for adding airplanes to the ATC sector if you don't have peers working with you through this content. To prepare it for use, replace SHARED_EVENT_HUB_ENDPOINT on line 54 with the endpoint connection string for the Event Hub that provides input to Stream Analytics. By default, it injects 20 airplanes. You can inject more (or less) by specifying the desired number as a command-line parameter.
+- FlySimTest - A Visual Studio 2017 solution containing a command-line app for injecting simulated aircraft into AirTrafficSim. It's great for testing, and also for adding airplanes to the ATC sector, if you don't have peers working with you through this content. To prepare it for use, replace SHARED_EVENT_HUB_ENDPOINT on line 54 with the endpoint connection string for the Event Hub that provides input to Stream Analytics. By default, it injects 20 airplanes. You can inject more (or less) by specifying the desired number as a command-line parameter.
 
 <a name="Prerequisites"></a>
 ## Prerequisites ##
@@ -101,7 +101,7 @@ In this exercise, you will provision an Azure IoT Hub for your MXChip to transmi
  
 1. Enter a unique name for IoT Hub in the **Name** field. IoT Hub names must be unique across Azure, so make sure a green check mark appears next to it. Also make sure **S1 - Standard** is selected as the pricing tier. Select **Create new** under **Resource group** and enter the resource-group name "FlySimResources." Select **East US** as the **Location** (important!). Accept the default values everywhere else, and then click **Create**.
 
-	> You selected East US as the location because in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), the instructor will create Azure resources in that same region for the IoT Hub to connect to. Azure resources can be connected across regions, but keeping everything within the same data center reduces cost and minimizes latency.
+	> You selected East US as the location because in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), you will create Azure resources in that same region for the IoT Hub to connect to. Azure resources can be connected across regions, but keeping everything within the same data center reduces cost and minimizes latency.
 
 	![The Azure Portal's IoT Hub Configuration pane shows relevant configuration settings.  The pricing tier is set to S1, and a single unit of IoT Hub and 4 Device-to-cloud partitions are entered.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/portal-configure-hub.png" | absolute_url }})
 
@@ -119,14 +119,16 @@ In this exercise, you will provision an Azure IoT Hub for your MXChip to transmi
 
     _Successful deployment_
 
-Because you selected **S1 - Standard** as the pricing tier in Step 3, you can transmit up to 400,000 messages a day to the IoT Hub for $50 per month. A **Free** tier that accepts up to 8,000 messages per day is also available, but that tier might be too limiting for today's exercise. For more information on the various pricing tiers that are available, see [IoT Hub pricing](https://azure.microsoft.com/pricing/details/iot-hub/).
+Because you selected **S1 - Standard** as the pricing tier in Step 3, you can transmit up to 400,000 messages a day to the IoT Hub for $50 per month. A **Free** tier that accepts up to 8,000 messages per day is also available, but that tier might be too limiting for this exercise. For more information on the various pricing tiers that are available, see [IoT Hub pricing](https://azure.microsoft.com/pricing/details/iot-hub/).
 
 <a name="Exercise2"></a>
 ### Exercise 2: Deploy an app to the device ###
 
 In this exercise, you will compile an embedded C++ app that transmits events to your Azure IoT Hub and use Visual Studio Code to upload it to the MXChip. Once the app is uploaded, it will begin executing on the device, and it will send a JSON payload containing three accelerometer values (X, Y, and Z) as well as temperature and humidity readings approximately every two seconds. The app is persisted in the firmware and automatically resumes execution if the device is powered off and back on.
 
-1. Start Visual Studio Code and select **Open Folder...** from the **File** menu. Browse to the "FlySimEmbedded" folder included in the lab download. 
+1. Using git, clone the [lab's assets](https://github.com/Azure/CloudIoTHack) to your local file system. You can optionally use the download link on the repository's home page to download the assets as a zip file.
+
+1. Start Visual Studio Code and select **Open Folder...** from the **File** menu. Browse to the "FlySimEmbedded" folder included in the lab's assets. 
 
 1. Open **config.h** and replace YOUR_DISPLAY_NAME with a friendly display name. Then save the file. **This name will be seen by everyone when the ATC app is run in Lab 4**, so please choose a name that's appropriate. Also make it as **unique as possible** by including birth dates (for example, "Amelia Earhart 093059") or other values that are unlikely to be duplicated.
 

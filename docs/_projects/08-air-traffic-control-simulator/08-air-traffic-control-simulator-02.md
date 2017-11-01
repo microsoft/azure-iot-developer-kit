@@ -19,7 +19,7 @@ last_modified_at: 2017-10-30
 
 In [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}), you configured an [MXChip](https://microsoft.github.io/azure-iot-developer-kit/) to transmit accelerometer data to an Azure IoT Hub. That IoT Hub receives a stream of data revealing the device's 3D orientation in space. It knows, for example, whether the device is tilted forward or backward (and by how much), and it knows when the device is rotated left and right. The app that you uploaded to the device transmits an event containing X, Y, and Z accelerometer readings every two seconds.
 
-In Lab 2, you will build the infrastructure necessary to fly a simulated aircraft using your MXChip. That infrastructure will consist of an Azure Function that transforms accelerometer readings passing through the IoT Hub into flight data denoting the position and attitude of an aircraft, as well as an Azure Event Hub that receives data from the Azure Function. Once the Function and Event Hub are in place, you will connect a client app named **FlySim** to the Event Hub and practice flying an aircraft using your MXChip. The client app, pictured below, subscribes to events from the Event Hub and shows the disposition of your aircraft in near real time.
+In this lab, you will build the infrastructure necessary to fly a simulated aircraft using your MXChip. That infrastructure will consist of an Azure Function that transforms accelerometer readings passing through the IoT Hub into flight data denoting the position and attitude of an aircraft, as well as an Azure Event Hub that receives data from the Azure Function. Once the Function and Event Hub are in place, you will connect a client app named **FlySim** to the Event Hub and practice flying an aircraft using your MXChip. The client app, pictured below, subscribes to events from the Event Hub and shows the disposition of your aircraft in near real time.
 
 ![The FlySim app]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png" | absolute_url }})
 
@@ -74,7 +74,7 @@ Estimated time to complete this lab: **60** minutes.
 
 Azure IoT Hubs were created to provide secure, bidirectional endpoints for IoT devices to talk to. They are wrappers around [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/), which support unidirectional communication only but are ideal for aggregating events at scale and disseminating those events to interested clients. "Client" could mean another Azure service such as [Stream Analytics](https://azure.microsoft.com/services/stream-analytics/), or it could be an app you've written that subscribes to events reaching the Event Hub.
 
-In this exercise, you will use the Azure Portal to create an Event Hub that will ultimately receive data from an Azure Function attached to the IoT Hub you created in Lab 1, and that will provide input to the FlySim app. 
+In this exercise, you will use the Azure Portal to create an Event Hub that will ultimately receive data from an Azure Function attached to the IoT Hub you created in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}), and that will provide input to the FlySim app. 
 
 1. Open the [Azure Portal](https://portal.azure.com) in your browser. If asked to log in, do so using your Microsoft account.
 
@@ -86,7 +86,7 @@ In this exercise, you will use the Azure Portal to create an Event Hub that will
 
 1. Type a namespace name into the **Name** box. The name must be unique within Azure, so make sure a green check mark appears next to it. Also make sure **Pricing tier** is set to **Standard**. Select **Use existing** under **Resource group** and select the "FlySimResources" resource group that you created in Lab 1. Choose the **East US** region in the **Location** drop-down, and then click **Create**.
 
-	> It is important to select the East US region to locate the Event Hub in the same region as the IoT Hub you created in Lab 1. This reduces cost and minimizes latency.
+	> It is important to select the East US region to locate the Event Hub in the same region as the IoT Hub you created in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}). This reduces cost and minimizes latency.
 
     ![Creating a namespace]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/create-namespace.png" | absolute_url }})
 
@@ -146,7 +146,7 @@ Now that the storage account has been created, it's time to create an Azure Func
 <a name="Exercise3"></a>
 ### Exercise 3: Write an Azure Function to transform data ###
 
-[Azure Functions](https://azure.microsoft.com/services/functions/) enable you to deploy code to the cloud and execute it there without separately spinning up virtual machines (VMs) or other infrastructure to host them. They can be written in a number of languages, including C#, F#, JavaScript, Python, Bash, and PowerShell, and they are easily connected to Azure IoT Hubs and Event Hubs.
+[Azure Functions](https://azure.microsoft.com/services/functions/) enable you to deploy code to the cloud and execute it there without separately spinning up virtual machines (VMs) or other infrastructure to host them. They can be written in a number of languages, including C#, F#, JavaScript, Python, Bash, and PowerShell, and they are easily connected to Azure IoT Hubs, Event Hubs and other Azure services.
 
 You can write Azure Functions in the Azure Portal, or you can write them in Visual Studio 2017. The latter provides a more robust environment for testing and debugging your code. In this exercise, you will use Visual Studio 2017 to write an Azure Function that transforms raw accelerometer data arriving at the IoT Hub you created in Lab 1 into flight data denoting the disposition of an aircraft, and that transmits the transformed data to the Event Hub you created in [Exercise 1](#Exercise1). 
 
@@ -317,8 +317,8 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 	This file contains three values that must be updated before you build and test your Function:
 
 	- **IoTHubConnection** - Connection string for the IoT Hub created in the previous lab
-	- **EventHubConnection** - Connection string for the Event Hub created in Exercise 1
-	- **AzureWebJobsStorage** - Connection string for the storage account created in Exercise 2
+	- **EventHubConnection** - Connection string for the Event Hub created in [Exercise 1](#Exercise1)
+	- **AzureWebJobsStorage** - Connection string for the storage account created in [Exercise 2](#Exercise2)
 
 	You will update these values in the next few steps.
 
@@ -445,12 +445,12 @@ In this exercise, you will use Visual Studio to deploy an Azure Function App con
 
     _The FlySimIoTFlightData Function running in the portal_
 
-The Azure Function that you wrote is now running in cloud, transforming accelerometer data reaching the IoT Hub  into flight data, and sending the flight data to the Event Hub. Now comes the fun part: wiring the Event Hub up to a client app so you can use the MXChip to fly an aircraft!
+The Azure Function that you wrote is now running in cloud, transforming accelerometer data reaching the IoT Hub into flight data, and sending the flight data to the Event Hub. Now comes the fun part: wiring the Event Hub up to a client app so you can use the MXChip to fly an aircraft!
 
 <a name="Exercise5"></a>
 ### Exercise 5: Connect the client app to the Event Hub ###
 
-The "FlySim" folder in the Cloud City download contains a Universal Windows Platform (UWP) app that you can run to fly a simulated aircraft on your laptop using your MXChip. Before you run it, you need to make some modifications to connect it to the Event Hub that receives data from the Azure Function.
+The "FlySim" folder in the lab's assets contains a Universal Windows Platform (UWP) app that you can run to fly a simulated aircraft on your laptop using your MXChip. Before you run it, you need to make some modifications to connect it to the Event Hub that receives data from the Azure Function.
 
 1. Go to the "FlySim" folder included in the lab download and open **FlySim.sln** in Visual Studio.
 
@@ -615,4 +615,4 @@ Practice flying around until you feel confident in your ability to control the p
 
 You can now fly a simulated aircraft using the MXChip that you configured in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}). An Azure Function transforms accelerometer data from the MXChip into flight data, the flight data is transmitted to an Azure Event Hub, and a client app subscribes to events from the Event Hub so it can show the aircraft's position and attitude in real time.
 
-In [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), you will add Azure Stream Analytics to the mix so it can see all the aircraft in the room, determine when two aircraft are too close together, and transmit a warning to affected pilots. It's about to get very real — and also very intense!
+In [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), you will add Azure Stream Analytics to the mix so it can see your peer's aircraft (or drones), determine when two aircraft are too close together, and transmit a warning to affected pilots. It's about to get very real — and also very intense!
