@@ -178,7 +178,7 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 1. Replace the contents of **FlySimIotFlightData.cs** with the following code:
 
-	```C#
+	```csharp
 	using Microsoft.Azure.WebJobs;
 	using Microsoft.Azure.WebJobs.Host;
 	using Microsoft.Azure.WebJobs.ServiceBus;
