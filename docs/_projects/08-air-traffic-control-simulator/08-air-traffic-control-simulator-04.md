@@ -1,7 +1,7 @@
 ---
 title: "Air Traffic Control Simulator - Lab 4"
 permalink: /docs/projects/air-traffic-control-simulator-04/
-excerpt: "Complete the solution with Cloud-to-Device communication"
+excerpt: "Complete the solution and enable Cloud-to-Device communication."
 part: 4
 header:
   overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
@@ -17,9 +17,9 @@ last_modified_at: 2017-10-30
 <a name="Overview"></a>
 ## Overview ##
 
-In the previous session, your flight instructor created an [Azure Stream Analytics](https://azure.microsoft.com/services/stream-analytics/) job that analyzes incoming data for aircraft that are too close together. He or she also created a pair of Event Hubs: one to provide input to the Stream Analytics job, and another to receive output.
+In the previous session, you or your peer created an [Azure Stream Analytics](https://azure.microsoft.com/services/stream-analytics/) job that analyzes incoming data for aircraft that are too close together. Additionally, you created a pair of Event Hubs: one to provide input to the Stream Analytics job, and another to receive output.
 
-In this lab, you will close the loop by marrying what you built in Labs 1 and 2 with what the instructor built in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}) to assemble a complete end-to-end solution. First, you will modify the Azure Function you wrote in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to transmit flight data to the shared input hub — the one that provides input to Stream Analytics — so Stream Analytics *and* the ATC app presented at the end of the previous session can see all of the aircraft in the room.
+In this lab, you will close the loop by marrying what you built in Labs 1 and 2 with the Event Hubs and Azure Stream Analytics query built in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}) to assemble a complete end-to-end solution. First, you will modify the Azure Function you wrote in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to transmit flight data to the shared input hub — the one that provides input to Stream Analytics — so Stream Analytics *and* the ATC app presented at the end of the previous session can see all of the aircraft.
 
 ![The ATC app with many planes in flight]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab4/atc-app.png" | absolute_url }})
 
@@ -29,7 +29,7 @@ Second, you will connect the client app that you built in [Lab 2]({{"/docs/proje
 
 Third, you will modify the client app so that when it is notified that your aircraft is too close to another, it transmits a warning message back to the MXChip through the IoT Hub that the device is connected to. The MXChip will respond by displaying the warning on its screen and lighting an LED. To top it off, you will use [Microsoft Cognitive Services](https://azure.microsoft.com/services/cognitive-services/) to translate the warning message into the language of the user's choice.
 
-Finally, you will join with others in the room to fly through a crowded air-traffic control sector, and see all the different pieces of the solution work together to analyze large volumes of data in real time and help ensure that all planes arrive safely at their destinations.
+Finally, you will join with your peers (or the drones spawned by the **FlySimTest** application) to fly through a crowded air-traffic control sector, and see all the different pieces of the solution work together to analyze large volumes of data in real time and help ensure that all planes arrive safely at their destinations.
 
 <a name="Prerequisites"></a>
 ## Prerequisites ##
@@ -51,12 +51,12 @@ The following are required to complete this lab:
 <a name="Lab-Sections"></a>
 ## Lab Sections ##
 
-Here's a synopsis of the four labs that comprise this project:
+Here are labs that comprise this project:
 
 - [Lab 1 - Getting started with the Azure MxChip and Azure IoT]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }})
 - [Lab 2 - Using Azure Functions and Azure Event Hubs to Process IoT Data.]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }})
 - [Lab 3 - Performing Real-Time Proximity Detection with Azure Stream Analytics]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }})
-- [Lab 4 - Complete the solution with Cloud-to-Device communication]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }})
+- [Lab 4 - Complete the solution and enable Cloud-to-Device communication.]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }})
 
 ---
 
@@ -75,7 +75,7 @@ Estimated time to complete this lab: **60** minutes.
 <a name="Exercise1"></a>
 ## Exercise 1: Connect the Azure Function to the shared input hub ##
 
-In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}), you deployed an Azure Function that reads input from an Azure IoT Hub, transforms accelerometer data coming from your MXChip into flight data, and transmits the output to an Azure Event Hub that provides input to the FlySim app. In this exercise, you will add an output to the Azure Function so that it transmits the same flight data to the shared input hub created by the instructor in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}). Because everyone else in the room is making the same modification, and because the shared input hub provides data to the ATC app and to Stream Analytics, the ATC app will be able to show all the aircraft that are in the air, and the Stream Analytics job will be able to detect when aircraft come too close together.   
+In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}), you deployed an Azure Function that reads input from an Azure IoT Hub, transforms accelerometer data coming from your MXChip into flight data, and transmits the output to an Azure Event Hub that provides input to the FlySim app. In this exercise, you will add an output to the Azure Function so that it transmits the same flight data to the shared input hub created by the instructor in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}). Because you and your peers are making the same modification, and because the shared input hub provides data to the ATC app and to Stream Analytics, the ATC app will be able to show all the aircraft that are in the air, and the Stream Analytics job will be able to detect when aircraft come too close together.   
 
 1. Start Visual Studio and open the FlySimFunctions solution that you created in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}).
 
@@ -105,7 +105,7 @@ In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }
 
     _The modified Run method_
 
-	The statement that you added transmits the same flight data to the shared Event Hub that is already being transmitted to the "private" Event Hub you created in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}).
+	The statement that you added transmits the same flight data to the shared Event Hub that is already being transmitted to the personal Event Hub created in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}).
 
 1. Open **local.settings.json** and insert the following statement directly below   "EventHubConnection:"
 
@@ -113,7 +113,7 @@ In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }
 	 "SharedEventHubConnection": "SHARED_EVENT_HUB_ENDPOINT",
 	```
 
-1. Navigate to the Gist URL provided to you by the instructor (for example, https://gist.github.com/scottgu) and copy the connection string from the public gist that the instructor created in the previous lab to the clipboard. Leave the browser window open so you can easily retrieve this connection string again.
+1. Navigate to the Gist URL you created in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}) (for example, https://gist.github.com/scottgu) and copy the connection string from the public gist to the clipboard. Leave the browser window open so you can easily retrieve this connection string again.
 
 	![Copying the connection string to the clipboard]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab4/copy-from-gist.png" | absolute_url }})
 
@@ -135,16 +135,16 @@ In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }
 
     _Adding an application setting_
 
-1. Connect your MXChip to your laptop if it isn't already connected. Confirm that it's sending data by watching for "IN FLIGHT" to appear on the screen of the device. Then turn to the ATC app on the screen at the front of the room and watch for your airplane to appear. If necessary, ask the instructor to zoom out so that all aircraft are visible. Seeing your airplane on the big screen is confirmation that you did everything correctly in this exercise.
+1. Connect your MXChip to your laptop if it isn't already connected. Confirm that it's sending data by watching for "IN FLIGHT" to appear on the screen of the device. Then turn to the ATC app and watch for your airplane to appear. If necessary, zoom the ATC app out so that all aircraft are visible. Seeing your airplane in the ATC app is confirmation that you did everything correctly in this exercise.
 
-	> If your airplane doesn't show up on the big screen, go to the Azure Function in the portal and check the output log to make sure it's sending and receiving data. If it's not, unplug the MXChip and plug it back in. If the Azure Function *is* sending and receiving data, double-check the application setting named "SharedEventHubConnection" you added in Step 9 of this exercise and make sure its value is the connection string you retrieved in Step 5.
+	> If your airplane doesn't show up, go to the Azure Function in the portal and check the output log to make sure it's sending and receiving data. If it's not, unplug the MXChip and plug it back in. If the Azure Function *is* sending and receiving data, double-check the application setting named "SharedEventHubConnection" you added in Step 9 of this exercise and make sure its value is the connection string you retrieved in Step 5.
 
 The Azure Function has now been updated to send flight information to the shared input hub, enabling air-traffic control to be aware of your plane's location. Now it's time to connect the Event Hub that receives output from Stream Analytics to the client app so the client app can be notified when your airplane is too close to another.
 
 <a name="Exercise2"></a>
 ## Exercise 2: Connect the client app to the shared output hub ##
 
-In [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), the instructor created an Event Hub and configured Stream Analytics to send output to it. He or she also connected the ATC app to the Event Hub so the app could highlight planes that are too close together on the air-traffic control map. In this exercise, you will connect the FlySim client app to the same Event Hub so it can notify individual pilots when the distance between their aircraft and any other is less than two miles.
+In [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), you created an Event Hub and configured Stream Analytics to send output to it. You also connected the ATC app to the Event Hub so the app could highlight planes that are too close together on the air-traffic control map. In this exercise, you will connect the FlySim client app to the same Event Hub so it can notify individual pilots when the distance between their aircraft and any other is less than two miles.
 
 1. Open the FlySim solution from [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) in Visual Studio.
 
@@ -424,7 +424,7 @@ The stage is set. The FlySim app is connected to the output from Stream Analytic
 <a name="Exercise4"></a>
 ## Exercise 4: Test the finished solution ##
 
-In this exercise, you will join other pilots in the room to fly your airplane through a crowded air-traffic control sector. And each time you come within two miles of another airplane, you will confirm that your airplane turns red in the ATC app and in the client app, and that the MXChip alerts you to the danger.
+In this exercise, you will join your peers (or the drones spawned by the **FlySimTest** app) to fly your airplane through a crowded air-traffic control sector. And each time you come within two miles of another airplane, you will confirm that your airplane turns red in the ATC app and in the client app, and that the MXChip alerts you to the danger.
 
 1. Reset your aircraft to its default starting position over the Nevada desert by going to the Function App in the Azure Portal and clicking the **Restart** button.
 
@@ -479,7 +479,7 @@ Let's take a moment to review what you built today. Here is the architecture dia
 
 _Solution architecture_
 
-Your MXChip transmits messages containing accelerometer data to an Azure IoT Hub. An Azure Function receives those messages and transforms the accelerometer data into flight data. Flight data flows to a private event hub connected to the client app, and to a shared event hub that provides input to Azure Stream Analytics and to the ATC app. The Stream Analytics job analyzes the data for aircraft that are in close proximity and provides that information to the client app and the ATC app. When your aircraft comes too close to another, it turns red on the screen, and a warning appears on the screen of your MXChip. Microsoft Cognitive Services translates the warning into the language selected in the client app.
+Your MXChip transmits messages containing accelerometer data to an Azure IoT Hub. An Azure Function receives those messages and transforms the accelerometer data into flight data. Flight data flows to a personal event hub connected to the client app, and to a shared event hub that provides input to Azure Stream Analytics and to the ATC app. The Stream Analytics job analyzes the data for aircraft that are in close proximity and provides that information to the client app and the ATC app. When your aircraft comes too close to another, it turns red on the screen, and a warning appears on the screen of your MXChip. Microsoft Cognitive Services translates the warning into the language selected in the client app.
 
 This a great example of how enterprise developers build end-to-end solutions by connecting Azure services and utilizing those services from their code. And the fact that you could assemble it all in one day, from scratch, is indicative of the richness of the Azure ecosystem and of the tools that support it.
 

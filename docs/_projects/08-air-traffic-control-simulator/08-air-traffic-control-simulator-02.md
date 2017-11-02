@@ -47,12 +47,12 @@ The following are required to complete this lab:
 <a name="Lab-Sections"></a>
 ## Lab Sections ##
 
-Here's a synopsis of the four labs that comprise this project:
+Here are labs that comprise this project:
 
 - [Lab 1 - Getting started with the Azure MxChip and Azure IoT]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }})
 - [Lab 2 - Using Azure Functions and Azure Event Hubs to Process IoT Data.]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }})
 - [Lab 3 - Performing Real-Time Proximity Detection with Azure Stream Analytics]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }})
-- [Lab 4 - Complete the solution with Cloud-to-Device communication]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }})
+- [Lab 4 - Complete the solution and enable Cloud-to-Device communication.]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }})
 
 ---
 

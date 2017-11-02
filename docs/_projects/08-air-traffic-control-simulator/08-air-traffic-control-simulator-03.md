@@ -19,9 +19,9 @@ last_modified_at: 2017-10-30
 
 [Azure Stream Analytics](https://azure.microsoft.com/services/stream-analytics/) is a cloud-based service for ingesting high-velocity data streaming from devices, sensors, applications, Web sites, and other data sources and analyzing that data in real time. It supports a [SQL-like query language](https://msdn.microsoft.com/library/azure/dn834998.aspx) that works over dynamic data streams and makes analyzing constantly changing data no more difficult than performing queries on static data stored in traditional databases. With Azure Stream Analytics, you can set up jobs that analyze incoming data for anomalies or information of interest and record the results, present notifications on dashboards, or even fire off alerts to mobile devices. And all of it can be done at low cost and with a minimum of effort.
 
-Scenarios for the application of real-time data analytics are legion and include fraud detection, identity-theft protection, optimizing the allocation of resources (think of an Uber-like transportation service that sends drivers to areas of increasing demand *before* that demand peaks), click-stream analysis on Web sites, shopping suggestions on retail-sales sites, and countless others. Having the ability to process data *as it comes in* rather than waiting until after it has been aggregated offers a competitive advantage to businesses that are agile enough to make adjustments on the fly.
+Scenarios for the application of real-time data analytics are numerous and include fraud detection, identity-theft protection, optimizing the allocation of resources (think of an Uber-like transportation service that sends drivers to areas of increasing demand *before* that demand peaks), click-stream analysis on Web sites, shopping suggestions on retail-sales sites, and countless others. Having the ability to process data *as it comes in* rather than waiting until after it has been aggregated offers a competitive advantage to businesses that are agile enough to make adjustments on the fly.
 
-In this lab, you will create an Azure Stream Analytics job and use it to analyze data streaming in from the simulated aircraft driven by the IoT device. Specifically, you will perform a query that identifies aircraft that are within a specified distance of each other in order to alert the pilots of those aircraft that evasive maneuvers might be required. Then you will connect the ATC app to the Stream Analytics inputs and outputs so that in [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}), the ATC app can show all air traffic and color-code aircraft that are too close together.
+In this lab, you, or one of yoru peers, will create an Azure Stream Analytics job and use it to analyze data streaming in from the simulated aircraft driven by the IoT device. Specifically, you will perform a query that identifies aircraft that are within a specified distance of each other in order to alert the pilots of those aircraft that evasive maneuvers might be required. Then you will connect the ATC app to the Stream Analytics inputs and outputs so that in [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}), the ATC app can show all air traffic and color-code aircraft that are too close together.
 
 <a name="Prerequisites"></a>
 ## Prerequisites ##
@@ -43,12 +43,12 @@ The following are required to complete this lab:
 <a name="Lab-Sections"></a>
 ## Lab Sections ##
 
-Here's a synopsis of the four labs that comprise this project:
+Here are labs that comprise this project:
 
 - [Lab 1 - Getting started with the Azure MxChip and Azure IoT]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }})
 - [Lab 2 - Using Azure Functions and Azure Event Hubs to Process IoT Data.]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }})
 - [Lab 3 - Performing Real-Time Proximity Detection with Azure Stream Analytics]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }})
-- [Lab 4 - Complete the solution with Cloud-to-Device communication]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }})
+- [Lab 4 - Complete the solution and enable Cloud-to-Device communication.]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }})
 
 ---
 
@@ -143,7 +143,7 @@ In this exercise, you will create two Azure Event Hubs. One will provide input t
 
 1. Go to https://gist.github.com/ and sign in with your GitHub account if you aren't already signed in. Type "Endpoint for connecting to shared input and output hubs" into the description box, and paste the connection string that's on the clipboard into the content box. Then click **Create public gist** to create a public gist. Leave your browser window open so you can easily retrieve the connection string in Exercise 4.
 
-	> Remember to delete this gist when the event is over since it contains a shared-access signature that allows anyone to connect to the Event Hubs you just created.
+	> Remember to delete this gist when you are finished since it contains a shared-access signature that allows anyone to connect to the Event Hubs you just created.
 
 	![Creating a gist]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab3/create-gist.png" | absolute_url }})
 
@@ -334,4 +334,4 @@ Azure Stream Analytics is a powerful tool for analyzing live data streams from I
 
 In closing, be aware that a single Stream Analytics job can accept multiple inputs and outputs. If you wanted to create a permanent record of all the events produced by the query's tumbling window, for example, you could add a second output — a Cosmos DB output — to the Stream Analytics job. Then output would flow both to the Event Hub and to a [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/) database, and you could dive into the database to view a history of close calls.
 
-Continue on to [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}) where you will complete the solution by setting up Cloud-to-Device communication. 
+Continue on to [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}) where you will complete the wiring up of the solution and set up Cloud-to-Device communication. 

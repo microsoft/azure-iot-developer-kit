@@ -156,7 +156,7 @@ In this exercise, you will compile an embedded C++ app that transmits events to 
 
 1. When a "Device Login" screen appears in your browser, copy the login code displayed in Visual Studio Code's Terminal window to the clipboard.
 
-	![A VSCode terminakl is displaying a device login code as the result of running the 'cloud-provision' task.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/vs-code-prompt.png" | absolute_url }})
+	![A VSCode terminal is displaying a device login code as the result of running the 'cloud-provision' task.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/vs-code-prompt.png" | absolute_url }})
 
     _Getting the device-login code_
 
