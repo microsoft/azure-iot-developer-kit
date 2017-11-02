@@ -30,11 +30,11 @@ _IoT development board_
 
 Here is how the solution is architected, with elements that you will build or deploy highlighted in light blue:
 
-![A data flow diagram showing IoT information originating from an Azure MXChip flowing through IoT Hub and onto an Azure Function.  From the Azure Function, data is bifercated to flow through a client application, as well as to an Event Hub shared by all workshop participants.  The shared Event Hub forwads data to Azure Stream Analytics, where it is forwarded onto another event hub for distribution to the client application.  Additionally, there are data flows from the client application to Cognitive Services and from Stream Analytics to Cosmos DB]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/architecture.png" | absolute_url }})
+![A data flow diagram showing IoT information originating from an Azure MXChip flowing through IoT Hub and onto an Azure Function.  From the Azure Function, data is bifurcated to flow through a client application, as well as to an Event Hub shared by all workshop participants.  The shared Event Hub forwards data to Azure Stream Analytics, where it is forwarded onto another event hub for distribution to the client application.  Additionally, there are data flows from the client application to Cognitive Services and from Stream Analytics to Cosmos DB]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/architecture.png" | absolute_url }})
 
 _Solution architecture_
 
-Accelerometer data from the device is transmitted to an Azure IoT Hub. An Azure Function transforms the raw accelerometer data into *flight data* denoting airspeed, heading, altitude, latitude, longitude, pitch, and roll. The destination for that data is a pair of Event Hubs — one that you set up, and one that is shared by your peers or the simulator drones. Events from the your Event Hub are consumed by a client app running on your laptop that shows the position and attitude of your aircraft. The events sent to the shared Event Hub go to a Stream Analytics job that analyzes fast-moving data for aircraft that are in danger of colliding and provides that data to the client app and the ATC app. When your aircraft comes too close to another, it turns red on the screen, and a warning appears on the screen of your MXChip. To top it off, Microsoft Cognitive Services translates the warning into the language of your choice.
+Accelerometer data from the device is transmitted to an Azure IoT Hub. An Azure Function transforms the raw accelerometer data into *flight data* denoting airspeed, heading, altitude, latitude, longitude, pitch, and roll. The destination for that data is a pair of Event Hubs — one that you set up, and one that is shared by your peers or the simulator drones. Events from your Event Hub are consumed by a client app running on your laptop that shows the position and attitude of your aircraft. The events sent to the shared Event Hub go to a Stream Analytics job that analyzes fast-moving data for aircraft that are in danger of colliding and provides that data to the client app and the ATC app. When your aircraft comes too close to another, it turns red on the screen, and a warning appears on the screen of your MXChip. To top it off, Microsoft Cognitive Services translates the warning into the language of your choice.
 
 The goal of this lab is to get the device up and running and sending events to an Azure IoT Hub. Let's get started!
 
@@ -101,7 +101,7 @@ In this exercise, you will provision an Azure IoT Hub for your MXChip to transmi
  
 1. Enter a unique name for IoT Hub in the **Name** field. IoT Hub names must be unique across Azure, so make sure a green check mark appears next to it. Also make sure **S1 - Standard** is selected as the pricing tier. Select **Create new** under **Resource group** and enter the resource-group name "FlySimResources." Select **East US** as the **Location** (important!). Accept the default values everywhere else, and then click **Create**.
 
-	> You selected East US as the location because in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), you will create Azure resources in that same region for the IoT Hub to connect to. Azure resources can be connected across regions, but keeping everything within the same data center reduces cost and minimizes latency.
+	> You selected East US as the location because in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), you will create Azure resources in that same region for the IoT Hub to connect to. Azure resources can be connected across regions but keeping everything within the same data center reduces cost and minimizes latency.
 
 	![The Azure Portal's IoT Hub Configuration pane shows relevant configuration settings.  The pricing tier is set to S1, and a single unit of IoT Hub and 4 Device-to-cloud partitions are entered.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/portal-configure-hub.png" | absolute_url }})
 
@@ -115,7 +115,7 @@ In this exercise, you will provision an Azure IoT Hub for your MXChip to transmi
 
 1. Wait until "Deploying" changes to "Succeeded," indicating that the IoT Hub has been provisioned. You can click the **Refresh** button at the top of the blade to refresh the deployment status.
 
-	![The Asure Portal's Resource Group indicates that the IoT Hub deployment completed successfully.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/deployment-succeeded.png" | absolute_url }})
+	![The Azure Portal's Resource Group indicates that the IoT Hub deployment completed successfully.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/deployment-succeeded.png" | absolute_url }})
 
     _Successful deployment_
 
@@ -194,7 +194,7 @@ In this exercise, you will compile an embedded C++ app that transmits events to 
 
 	After a brief pause, the C++ app that reads accelerometer data and transmits it to the IoT Hub will begin uploading to your device. If you are curious to see what the source code looks like, examine the CPP files in the project directory in Visual Studio Code. 
 
-1. Wait until the message "Terminal will be reused by tasks, press any key to close it" appears in the Terminal window. After the device restarts, confirm that the message "IN FLIGHT" appears on the screen of the device, followed by X, Y, and Z values that change when you tilt the board in any direction. These are the accelerometer values passed to the IoT Hub. The fact that they appear on the screen confirms that the upload was successful and that the app is running on the device.
+1. Wait until the message "Terminal will be reused by tasks, press any key to close it" appears in the Terminal window. After the device restarts, confirm that the message "IN FLIGHT" appears on the screen of the device, followed by X, Y, and Z values that change when you tilt the board in any direction. These are the accelerometer values passed to the IoT Hub. The fact that they appear on the screen confirms that the upload was successful, and that the app is running on the device.
 
 	![The MXChip display shows a label of "In Flight" with telemetry data for x, y and z axis readings from the onboard gyroscope.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/chip-in-flight.png" | absolute_url }})
 

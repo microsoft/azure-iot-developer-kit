@@ -615,4 +615,4 @@ Practice flying around until you feel confident in your ability to control the p
 
 You can now fly a simulated aircraft using the MXChip that you configured in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}). An Azure Function transforms accelerometer data from the MXChip into flight data, the flight data is transmitted to an Azure Event Hub, and a client app subscribes to events from the Event Hub so it can show the aircraft's position and attitude in real time.
 
-In [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), you will add Azure Stream Analytics to the mix so it can see your peer's aircraft (or drones), determine when two aircraft are too close together, and transmit a warning to affected pilots. It's about to get very real — and also very intense!
+In [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), you will add Azure Stream Analytics to the mix so it can see your peer's aircraft (or drones), determine when two aircraft are too close together, and transmit a warning to affected pilots. It's about to get very real — and very intense!
