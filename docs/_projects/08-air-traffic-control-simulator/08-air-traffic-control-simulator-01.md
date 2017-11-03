@@ -39,7 +39,7 @@ In this hands-on lab and the ones that follow, you will build a comprehensive Io
 
 _The Air-Traffic Control application_
 
-You will be the pilot of one of these aircraft. And to do the flying, you will use the [MXChip](https://microsoft.github.io/azure-iot-developer-kit/), which is an Arduino-based device that is ideal for prototyping IoT solutions. It features an array of sensors, including an accelerometer, a gyrometer, and temperature and humidity sensors, and it includes built-in Wi-Fi so it can transmit data to Azure IoT Hubs wirelessly. It also features a micro-USB port by which you can connect it to your laptop, upload software, and power the hardware. You will control your aircraft by tilting the MXChip backward and forward to go up and down, and rotating it left and right to turn.
+You will be the pilot of one of these aircraft. And to do the flying, you will use the [MXChip](https://microsoft.github.io/azure-iot-developer-kit/), which is an Arduino-compatible device that is ideal for prototyping IoT solutions. It features an array of sensors, including an accelerometer, a gyrometer, and temperature and humidity sensors, and it includes built-in Wi-Fi so it can transmit data to Azure IoT Hubs wirelessly. It also features a micro-USB port by which you can connect it to your laptop, upload software, and power the hardware. You will control your aircraft by tilting the MXChip backward and forward to go up and down, and rotating it left and right to turn.
 
 ![A Micro USB cable placed next to an Azure MXChip IoT Development Board]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/cable-and-chip.png" | absolute_url }})
 
