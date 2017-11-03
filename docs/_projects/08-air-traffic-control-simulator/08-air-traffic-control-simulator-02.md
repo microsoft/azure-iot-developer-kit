@@ -376,11 +376,11 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 1. Return to Visual Studio and replace STORAGE_ACCOUNT_ENDPOINT in **local.settings.json** with the value on the clipboard.
 
-1. Now it's time to test the Function and make sure it is triggered each time an event from the MXChip reaches the IoT Hub. If your MXChip isn't plugged in, connect it to your laptop and confirm that the device screen says "IN FLIGHT."
+1. Now it's time to test the Function and make sure it is triggered each time an event from the MXChip IoT DevKit reaches the IoT Hub. If your MXChip IoT DevKit isn't plugged in, connect it to your laptop and confirm that the device screen says "IN FLIGHT."
 
-	![The MXChip in flight]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/chip-in-flight.png" | absolute_url }})
+	![The MXChip IoT DevKit in flight]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/chip-in-flight.png" | absolute_url }})
 
-    _The MXChip in flight_ 
+    _The MXChip IoT DevKit in flight_ 
 
 1. Open **FlySimIoTFlightData.cs** in Visual Studio and set a breakpoint on line 27. Then press **F5** to start debugging.
 
@@ -388,7 +388,7 @@ You can write Azure Functions in the Azure Portal, or you can write them in Visu
 
 1. Wait for execution to stop at the breakpoint on line 27. Then hover the cursor over the ```inputMessage``` parameter to view the JSON payload sent from the device to the IoT Hub and input to the Azure Function.
 
-	> If the breakpoint is never hit but your MXChip is plugged in and transmitting data, then the Azure Function isn't properly connected to the IoT Hub. If that's the case, confirm that the setting named "IoTHubConnection" in **local.settings.json** contains the connection string and IoT Hub name shown in Step 10 of this exercise.
+	> If the breakpoint is never hit but your MXChip IoT DevKit is plugged in and transmitting data, then the Azure Function isn't properly connected to the IoT Hub. If that's the case, confirm that the setting named "IoTHubConnection" in **local.settings.json** contains the connection string and IoT Hub name shown in Step 10 of this exercise.
 
 	![Viewing the input message in the debugger]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/vs-view-debug-info.png" | absolute_url }})
 
@@ -437,15 +437,15 @@ In this exercise, you will use Visual Studio to deploy an Azure Function App con
 
     _Adding application settings_
  
-1. Make sure your MXChip is plugged in and transmitting data. Then click the Function name in the menu on the left. Watch the output log at the bottom of the screen and confirm that the Function is sending and receiving data. A new entry should appear in the output log every couple of seconds. Observe that the JSON output includes properties such as "Heading" and "Altitude."
+1. Make sure your MXChip IoT DevKit is plugged in and transmitting data. Then click the Function name in the menu on the left. Watch the output log at the bottom of the screen and confirm that the Function is sending and receiving data. A new entry should appear in the output log every couple of seconds. Observe that the JSON output includes properties such as "Heading" and "Altitude."
 
-	> If the log shows no output but your MXChip is plugged in and transmitting data, then the Azure Function isn't properly connected to the IoT Hub. If that's the case, review Step 5 of this exercise and confirm that the application setting named "IoTHubConnection" contains the connection string and IoT Hub name shown in Exercise 3, Step 10.
+	> If the log shows no output but your MXChip IoT DevKit is plugged in and transmitting data, then the Azure Function isn't properly connected to the IoT Hub. If that's the case, review Step 5 of this exercise and confirm that the application setting named "IoTHubConnection" contains the connection string and IoT Hub name shown in Exercise 3, Step 10.
 
 	![The FlySimIoTFlightData Function running in the portal]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/portal-function-running.png" | absolute_url }})
 
     _The FlySimIoTFlightData Function running in the portal_
 
-The Azure Function that you wrote is now running in cloud, transforming accelerometer data reaching the IoT Hub into flight data, and sending the flight data to the Event Hub. Now comes the fun part: wiring the Event Hub up to a client app so you can use the MXChip to fly an aircraft!
+The Azure Function that you wrote is now running in cloud, transforming accelerometer data reaching the IoT Hub into flight data, and sending the flight data to the Event Hub. Now comes the fun part: wiring the Event Hub up to a client app so you can use the MXChip IoT DevKit to fly an aircraft!
 
 <a name="Exercise5"></a>
 ### Exercise 5: Connect the client app to the Event Hub ###
@@ -582,19 +582,19 @@ The "FlySim" folder in the lab's assets contains a Universal Windows Platform (U
 
     _Restarting the Function App_
 
-1. Make sure your MXChip is plugged into your laptop. Then return to Visual Studio and press **Ctrl+F5** to launch FlySim. Confirm that the app starts and that after a few seconds, an "aircraft" labeled with the display name you entered in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) appears on the screen. Maximize the window so you can see all the readouts and controls.
+1. Make sure your MXChip IoT DevKit is plugged into your laptop. Then return to Visual Studio and press **Ctrl+F5** to launch FlySim. Confirm that the app starts and that after a few seconds, an "aircraft" labeled with the display name you entered in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) appears on the screen. Maximize the window so you can see all the readouts and controls.
 
-	> If your aircraft never appears in the app but your MXChip is plugged in and transmitting data, review Step 4 of this exercise and confirm that the connection string you pasted into **CoreConstants.cs** is the one shown in Exercise 3, Step 14. Also review Exercise 4, Step 5 and make sure the application setting named "EventHubConnection" contains the same connection string.
+	> If your aircraft never appears in the app but your MXChip IoT DevKit is plugged in and transmitting data, review Step 4 of this exercise and confirm that the connection string you pasted into **CoreConstants.cs** is the one shown in Exercise 3, Step 14. Also review Exercise 4, Step 5 and make sure the application setting named "EventHubConnection" contains the same connection string.
 
 	![FlySim showing Amelia Earhart over the Nevada desert]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png" | absolute_url }})
 
     _FlySim showing Amelia Earhart over the Nevada desert_
 
-1. Hold the MXChip in the palm of your hand so that the gold connectors are at the rear (pointed toward your body). Imagine that the MXChip is an aircraft, and that the end with the gold connectors is the tail of the plane and the end with the micro-USB connector is the nose of the plane.
+1. Hold the MXChip IoT DevKit in the palm of your hand so that the gold connectors are at the rear (pointed toward your body). Imagine that the MXChip IoT DevKit is an aircraft, and that the end with the gold connectors is the tail of the plane and the end with the micro-USB connector is the nose of the plane.
  
 1. Tilt the board to the right and confirm that the artificial horizon rotates accordingly. Note that the artificial horizon will rotate in the **opposite direction of the board** — just like the artificial horizon in the instrument panel of a real plane. Also confirm that if you hold the right turn, the heading readout increases and the airplane on the map rotates clockwise.
 
-	> Expect a slight delay between the time you move the board and the app responds. Most of the delay is due to the fact that the app running on the MXChip is only transmitting events every couple of seconds. The latency resulting from events being transmitted from the MXChip to an IoT Hub in the cloud, then transformed, sent to an Event Hub, and transmitted down to the client app is minimal unless you have a very slow Wi-Fi connection.
+	> Expect a slight delay between the time you move the board and the app responds. Most of the delay is due to the fact that the app running on the MXChip IoT DevKit is only transmitting events every couple of seconds. The latency resulting from events being transmitted from the MXChip IoT DevKit to an IoT Hub in the cloud, then transformed, sent to an Event Hub, and transmitted down to the client app is minimal unless you have a very slow Wi-Fi connection.
 
 	![Making a right turn]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab2/app-turning.png" | absolute_url }})
 
@@ -613,6 +613,6 @@ Practice flying around until you feel confident in your ability to control the p
 <a name="Summary"></a>
 ## Summary ##
 
-You can now fly a simulated aircraft using the MXChip that you configured in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}). An Azure Function transforms accelerometer data from the MXChip into flight data, the flight data is transmitted to an Azure Event Hub, and a client app subscribes to events from the Event Hub so it can show the aircraft's position and attitude in real time.
+You can now fly a simulated aircraft using the MXChip IoT DevKit that you configured in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}). An Azure Function transforms accelerometer data from the MXChip IoT DevKit into flight data, the flight data is transmitted to an Azure Event Hub, and a client app subscribes to events from the Event Hub so it can show the aircraft's position and attitude in real time.
 
 In [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}), you will add Azure Stream Analytics to the mix so it can see your peer's aircraft (or drones), determine when two aircraft are too close together, and transmit a warning to affected pilots. It's about to get very real — and very intense!

@@ -39,15 +39,15 @@ In this hands-on lab and the ones that follow, you will build a comprehensive Io
 
 _The Air-Traffic Control application_
 
-You will be the pilot of one of these aircraft. And to do the flying, you will use the [MXChip](https://microsoft.github.io/azure-iot-developer-kit/), which is an Arduino-compatible device that is ideal for prototyping IoT solutions. It features an array of sensors, including an accelerometer, a gyrometer, and temperature and humidity sensors, and it includes built-in Wi-Fi so it can transmit data to Azure IoT Hubs wirelessly. It also features a micro-USB port by which you can connect it to your laptop, upload software, and power the hardware. You will control your aircraft by tilting the MXChip backward and forward to go up and down, and rotating it left and right to turn.
+You will be the pilot of one of these aircraft. And to do the flying, you will use the [MXChip IoT DevKit](https://microsoft.github.io/azure-iot-developer-kit/), which is an Arduino-compatible device that is ideal for prototyping IoT solutions. It features an array of sensors, including an accelerometer, a gyrometer, and temperature and humidity sensors, and it includes built-in Wi-Fi so it can transmit data to Azure IoT Hubs wirelessly. It also features a micro-USB port by which you can connect it to your laptop, upload software, and power the hardware. You will control your aircraft by tilting the MXChip IoT DevKit backward and forward to go up and down, and rotating it left and right to turn.
 
-![A Micro USB cable placed next to an Azure MXChip IoT Development Board]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/cable-and-chip.png" | absolute_url }})
+![A Micro USB cable placed next to an Azure MXChip IoT DevKit IoT Development Board]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/cable-and-chip.png" | absolute_url }})
 
 _IoT development board_
 
 Here is how the solution is architected, with elements that you will build or deploy highlighted in light blue:
 
-![A data flow diagram showing IoT information originating from an Azure MXChip flowing through IoT Hub and onto an Azure Function.  From the Azure Function, data is bifurcated to flow through a client application, as well as to an Event Hub shared by all workshop participants.  The shared Event Hub forwards data to Azure Stream Analytics, where it is forwarded onto another event hub for distribution to the client application.  Additionally, there are data flows from the client application to Cognitive Services and from Stream Analytics to Cosmos DB]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/architecture.png" | absolute_url }})
+![A data flow diagram showing IoT information originating from an Azure MXChip IoT DevKit flowing through IoT Hub and onto an Azure Function.  From the Azure Function, data is bifurcated to flow through a client application, as well as to an Event Hub shared by all workshop participants.  The shared Event Hub forwards data to Azure Stream Analytics, where it is forwarded onto another event hub for distribution to the client application.  Additionally, there are data flows from the client application to Cognitive Services and from Stream Analytics to Cosmos DB]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/architecture.png" | absolute_url }})
 
 _Solution architecture_
 
@@ -60,15 +60,15 @@ The goal of this lab is to get the device up and running and sending events to a
 
 Here's a synopsis of the four labs that comprise this project:
 
-- [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) - Create an Azure IoT Hub and program an [MXCHIP]([MXChip](https://microsoft.github.io/azure-iot-developer-kit/)) to send accelerometer data to it.
-- [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) - Create an Azure Event Hub and deploy an Azure Function that transforms accelerometer data input to the IoT Hub into "flight data" denoting the disposition on an airplane and transmits it to the Event Hub. Then connect a UWP client app to the Event Hub and use their MXChip to fly a simulated airplane.
+- [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) - Create an Azure IoT Hub and program an [MXChip IoT DevKit](https://microsoft.github.io/azure-iot-developer-kit/) to send accelerometer data to it.
+- [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) - Create an Azure Event Hub and deploy an Azure Function that transforms accelerometer data input to the IoT Hub into "flight data" denoting the disposition on an airplane and transmits it to the Event Hub. Then connect a UWP client app to the Event Hub and use their MXChip IoT DevKit to fly a simulated airplane.
 - [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}) - Creates a pair of Event Hubs and deploy a Stream Analytics job that analyzes all the air traffic for aircraft that are within two miles of each another. Also deploys a UWP app that shows all the air traffic.
-- [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}) - Modify the Azure Function deployed in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to transmit flight data to the input hub used by Stream Analytics. Then connect the client app to the Stream Analytics output and modify the app to transmit warning messages back to the MXChip when aircraft are within two miles of another.
+- [Lab 4]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }}) - Modify the Azure Function deployed in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to transmit flight data to the input hub used by Stream Analytics. Then connect the client app to the Stream Analytics output and modify the app to transmit warning messages back to the MXChip IoT DevKit when aircraft are within two miles of another.
 
 The [asset repository](https://github.com/Azure/CloudIoTHack) also has four source-code folders:
 
 - FlySim - A Visual Studio 2017 solution containing the client app that you use to fly simulated airplanes.
-- FlySimEmbedded - The code you upload to the MXChip to program it to send accelerometer data to an Azure IoT Hub.
+- FlySimEmbedded - The code you upload to the MXChip IoT DevKit to program it to send accelerometer data to an Azure IoT Hub.
 - AirTrafficSim - A Visual Studio 2017 solution containing the air-traffic control (ATC) app that shows all the airplanes in flight and highlights those that are within two miles of each other.
 - FlySimTest - A Visual Studio 2017 solution containing a command-line app for injecting simulated aircraft into AirTrafficSim. It's great for testing, and also for adding airplanes to the ATC sector, if you don't have peers working with you through this content. To prepare it for use, replace SHARED_EVENT_HUB_ENDPOINT on line 54 with the endpoint connection string for the Event Hub that provides input to Stream Analytics. By default, it injects 20 airplanes. You can inject more (or less) by specifying the desired number as a command-line parameter.
 
@@ -107,7 +107,7 @@ Estimated time to complete this lab: **60** minutes including development enviro
 
 [Azure IoT Hubs](https://docs.microsoft.com/azure/iot-hub/iot-hub-what-is-iot-hub) enable IoT devices to connect securely to the cloud and transmit messages (events) that can be ingested by apps and other Azure services. They support bidirectional communication, and they are built to be massively scalable. A single IoT Hub can handle millions of events per second. Messages can be sent over HTTP, or using the [Advanced Message Queuing Protocol](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-what-is-iot-hub) (AMQP) or [Message Queueing Telemetry Transport](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-what-is-iot-hub) (MQTT) protocol. Devices can be authenticated using per-device security keys or X.509 certificates.
 
-In this exercise, you will provision an Azure IoT Hub for your MXChip to transmit events to.
+In this exercise, you will provision an Azure IoT Hub for your MXChip IoT DevKit to transmit events to.
 
 1. Open the [Azure Portal](https://portal.azure.com) in your browser. If asked to log in, do so using your Microsoft account.
 
@@ -192,7 +192,7 @@ In this exercise, you will compile an embedded C++ app that transmits events to 
 
     _Selecting an Azure IoT Hub_
 
-1. Wait until the message "Terminal will be reused by tasks, press any key to close it" appears in the Terminal window. This indicates that the cloud-provisioning process completed successfully. Your MXChip can now authenticate with the IoT Hub and send messages to it securely.
+1. Wait until the message "Terminal will be reused by tasks, press any key to close it" appears in the Terminal window. This indicates that the cloud-provisioning process completed successfully. Your MXChip IoT DevKit can now authenticate with the IoT Hub and send messages to it securely.
 
 	![The VSCode terminal window is displayed showing the results of running the 'cloud-provision' task.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/vs-completed-provisioning.png" | absolute_url }})
 
@@ -214,16 +214,16 @@ In this exercise, you will compile an embedded C++ app that transmits events to 
 
 1. Wait until the message "Terminal will be reused by tasks, press any key to close it" appears in the Terminal window. After the device restarts, confirm that the message "IN FLIGHT" appears on the screen of the device, followed by X, Y, and Z values that change when you tilt the board in any direction. These are the accelerometer values passed to the IoT Hub. The fact that they appear on the screen confirms that the upload was successful, and that the app is running on the device.
 
-	![The MXChip display shows a label of "In Flight" with telemetry data for x, y and z axis readings from the onboard gyroscope.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/chip-in-flight.png" | absolute_url }})
+	![The MXChip IoT DevKit display shows a label of "In Flight" with telemetry data for x, y and z axis readings from the onboard gyroscope.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/chip-in-flight.png" | absolute_url }})
 
-    _MXChip with your embedded code running on it_
+    _MXChip IoT DevKit with your embedded code running on it_
 
 We know that the device is transmitting events. Now let's make sure those events are being received by the IoT Hub.
 
 <a name="Exercise3"></a>
 ### Exercise 3: Check IoT Hub activity ###
 
-In this exercise, you will use the Azure portal to confirm that the MXCHip is registered with the IoT Hub you created in [Exercise 1](#Exercise1), and also confirm that the hub is receiving messages from the device.
+In this exercise, you will use the Azure portal to confirm that the MXChip IoT DevKit is registered with the IoT Hub you created in [Exercise 1](#Exercise1), and also confirm that the hub is receiving messages from the device.
 
 1.  Return to the Azure portal and to the "FlySimResources" resource group. Then click the IoT Hub that you created in Exercise 1.
 
@@ -239,13 +239,13 @@ In this exercise, you will use the Azure portal to confirm that the MXCHip is re
 
 1. Click **Device Explorer** to display a list of all devices that are registered to communicate with this IoT Hub. Confirm that your device ("AZ3166") appears in the list.
 
-	![The Azure Portal's IoT Hub blade is displayed with the Device Explorer tab highlighted.  The pane to the right shows that the MXChip has been registered with IoT Hub.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/portal-device-explorer.png" | absolute_url }})
+	![The Azure Portal's IoT Hub blade is displayed with the Device Explorer tab highlighted.  The pane to the right shows that the MXChip IoT DevKit has been registered with IoT Hub.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/portal-device-explorer.png" | absolute_url }})
 
     _Devices registered with the IoT Hub_
 
 1. Return to Visual Studio Code and click the **Connect** icon in the status bar at lower right.
 
-	![The document information display bar at the bottom of a VSCode window shows a two-prong plug symbol indicating where to click to change the baud rate of the MXChip connection.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/vs-click-connect.png" | absolute_url }})
+	![The document information display bar at the bottom of a VSCode window shows a two-prong plug symbol indicating where to click to change the baud rate of the MXChip IoT DevKit connection.]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab1/vs-click-connect.png" | absolute_url }})
 
     _Connecting to the device via a COM port_
 
@@ -261,11 +261,11 @@ In this exercise, you will use the Azure portal to confirm that the MXCHip is re
 
     _Events transmitted from the device to the IoT Hub_
 
-The MXChip is now running embedded code that sends accelerometer data to the IoT Hub. Consumers of that data can examine the X, Y, and Z values and determine the device's physical orientation in space. This sets the stage for the next lab, in which you will make use of that data.
+The MXChip IoT DevKit is now running embedded code that sends accelerometer data to the IoT Hub. Consumers of that data can examine the X, Y, and Z values and determine the device's physical orientation in space. This sets the stage for the next lab, in which you will make use of that data.
 
 <a name="Summary"></a>
 ## Summary ##
 
-In this lab, you created an Azure IoT Hub and configured your MXChip to send data to it.
+In this lab, you created an Azure IoT Hub and configured your MXChip IoT DevKit to send data to it.
 
-In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}), you will build the infrastructure necessary to fly a simulated aircraft using the MXChip. That infrastructure will consist of an Azure Function that transforms accelerometer readings passing through the IoT Hub into flight data denoting the position and attitude of an aircraft, as well as an Azure Event Hub that receives data from the Azure Function. Once the Function and Event Hub are in place, you will connect a client app to the Event Hub and practice flying an aircraft by tilting your MXChip backward and forward to go up and down and rotating it right and left to bank and turn. In other words, the fun is just beginning!
+In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}), you will build the infrastructure necessary to fly a simulated aircraft using the MXChip. That infrastructure will consist of an Azure Function that transforms accelerometer readings passing through the IoT Hub into flight data denoting the position and attitude of an aircraft, as well as an Azure Event Hub that receives data from the Azure Function. Once the Function and Event Hub are in place, you will connect a client app to the Event Hub and practice flying an aircraft by tilting your MXChip IoT DevKit backward and forward to go up and down and rotating it right and left to bank and turn. In other words, the fun is just beginning!

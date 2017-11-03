@@ -46,7 +46,7 @@ The following are required to complete this lab:
 
 Here are labs that comprise this project:
 
-- [Lab 1 - Getting started with the Azure MxChip and Azure IoT]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }})
+- [Lab 1 - Getting started with the Azure MXChip IoT DevKit and Azure IoT]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }})
 - [Lab 2 - Using Azure Functions and Azure Event Hubs to Process IoT Data.]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }})
 - [Lab 3 - Performing Real-Time Proximity Detection with Azure Stream Analytics]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }})
 - [Lab 4 - Complete the solution and enable Cloud-to-Device communication.]({{"/docs/projects/air-traffic-control-simulator-04/" | absolute_url }})
@@ -70,7 +70,7 @@ Estimated time to complete this lab: **45** minutes.
 
 Azure Stream Analytics supports several types of input, including input from Azure blobs,  input from Azure Event Hubs, and input from Azure IoT Hubs. A single Azure Event Hub or IoT Hub can handle millions of events per second transmitted from devices spread throughout the world.
 
-In this exercise, you will create two Azure Event Hubs. One will provide input to Stream Analytics, while the other will receive output from Stream Analytics. In the next lab, you will modify the Azure Function written in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to transmit data to the input Event Hub, enabling Stream Analytics to see all activity emanating from all aircraft. You will also connect the client app to the output Event Hub and modify the app to transmit messages back to their MXChips.
+In this exercise, you will create two Azure Event Hubs. One will provide input to Stream Analytics, while the other will receive output from Stream Analytics. In the next lab, you will modify the Azure Function written in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to transmit data to the input Event Hub, enabling Stream Analytics to see all activity emanating from all aircraft. You will also connect the client app to the output Event Hub and modify the app to transmit messages back to their MXChip IoT DevKits.
 
 1. In your browser, navigate to the [Azure Portal](https://portal.azure.com). If you are asked to sign in, do so using your Microsoft account.
 

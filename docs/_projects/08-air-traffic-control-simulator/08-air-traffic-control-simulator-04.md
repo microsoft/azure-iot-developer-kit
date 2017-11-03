@@ -27,7 +27,7 @@ _The ATC app with many planes in flight_
 
 Second, you will connect the client app that you built in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}) to the shared output hub — the one that receives output from Stream Analytics — so that when your aircraft comes too close to another and turns red in the ATC app, it turns red in the client app, too.
 
-Third, you will modify the client app so that when it is notified that your aircraft is too close to another, it transmits a warning message back to the MXChip through the IoT Hub that the device is connected to. The MXChip will respond by displaying the warning on its screen and lighting an LED. To top it off, you will use [Microsoft Cognitive Services](https://azure.microsoft.com/services/cognitive-services/) to translate the warning message into the language of the user's choice.
+Third, you will modify the client app so that when it is notified that your aircraft is too close to another, it transmits a warning message back to the MXChip IoT DevKit through the IoT Hub that the device is connected to. The MXChip IoT DevKit will respond by displaying the warning on its screen and lighting an LED. To top it off, you will use [Microsoft Cognitive Services](https://azure.microsoft.com/services/cognitive-services/) to translate the warning message into the language of the user's choice.
 
 Finally, you will join with your peers (or the drones spawned by the **FlySimTest** application) to fly through a crowded air-traffic control sector, and see all the different pieces of the solution work together to analyze large volumes of data in real time and help ensure that all planes arrive safely at their destinations.
 
@@ -76,7 +76,7 @@ Estimated time to complete this lab: **60** minutes.
 <a name="Exercise1"></a>
 ## Exercise 1: Connect the Azure Function to the shared input hub ##
 
-In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}), you deployed an Azure Function that reads input from an Azure IoT Hub, transforms accelerometer data coming from your MXChip into flight data, and transmits the output to an Azure Event Hub that provides input to the FlySim app. In this exercise, you will add an output to the Azure Function so that it transmits the same flight data to the shared input hub created by the instructor in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}). Because you and your peers are making the same modification, and because the shared input hub provides data to the ATC app and to Stream Analytics, the ATC app will be able to show all the aircraft that are in the air, and the Stream Analytics job will be able to detect when aircraft come too close together.   
+In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}), you deployed an Azure Function that reads input from an Azure IoT Hub, transforms accelerometer data coming from your MXChip IoT DevKit into flight data, and transmits the output to an Azure Event Hub that provides input to the FlySim app. In this exercise, you will add an output to the Azure Function so that it transmits the same flight data to the shared input hub created by the instructor in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}). Because you and your peers are making the same modification, and because the shared input hub provides data to the ATC app and to Stream Analytics, the ATC app will be able to show all the aircraft that are in the air, and the Stream Analytics job will be able to detect when aircraft come too close together.   
 
 1. Start Visual Studio and open the FlySimFunctions solution that you created in [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }}).
 
@@ -136,9 +136,9 @@ In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }
 
     _Adding an application setting_
 
-1. Connect your MXChip to your laptop if it isn't already connected. Confirm that it's sending data by watching for "IN FLIGHT" to appear on the screen of the device. Then turn to the ATC app and watch for your airplane to appear. If necessary, zoom the ATC app out so that all aircraft are visible. Seeing your airplane in the ATC app is confirmation that you did everything correctly in this exercise.
+1. Connect your MXChip IoT DevKit to your laptop if it isn't already connected. Confirm that it's sending data by watching for "IN FLIGHT" to appear on the screen of the device. Then turn to the ATC app and watch for your airplane to appear. If necessary, zoom the ATC app out so that all aircraft are visible. Seeing your airplane in the ATC app is confirmation that you did everything correctly in this exercise.
 
-	> If your airplane doesn't show up, go to the Azure Function in the portal and check the output log to make sure it's sending and receiving data. If it's not, unplug the MXChip and plug it back in. If the Azure Function *is* sending and receiving data, double-check the application setting named "SharedEventHubConnection" you added in Step 9 of this exercise and make sure its value is the connection string you retrieved in Step 5.
+	> If your airplane doesn't show up, go to the Azure Function in the portal and check the output log to make sure it's sending and receiving data. If it's not, unplug the MXChip IoT DevKit and plug it back in. If the Azure Function *is* sending and receiving data, double-check the application setting named "SharedEventHubConnection" you added in Step 9 of this exercise and make sure its value is the connection string you retrieved in Step 5.
 
 The Azure Function has now been updated to send flight information to the shared input hub, enabling air-traffic control to be aware of your plane's location. Now it's time to connect the Event Hub that receives output from Stream Analytics to the client app so the client app can be notified when your airplane is too close to another.
 
@@ -292,12 +292,12 @@ In [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }
 
 1. Rebuild the solution and confirm that your changes compile successfully.
  
-FlySim now has the smarts to turn your airplane red if it receives information from the shared output hub indicating that it's within two miles of another plane. But don't run it just yet. Let's further enhance the app to display a warning on the screen of the MXChip when your plane is too close to another.
+FlySim now has the smarts to turn your airplane red if it receives information from the shared output hub indicating that it's within two miles of another plane. But don't run it just yet. Let's further enhance the app to display a warning on the screen of the MXChip IoT DevKit when your plane is too close to another.
 
 <a name="Exercise3"></a>
 ## Exercise 3: Update the client app to talk back to the device ##
 
-One of the benefits of using Azure IoT Hubs is that they support bidirectional communication. Devices can send messages to IoT Hubs, and IoT Hubs can send messages back to the devices connected to them. In this exercise, you will modify the FlySim client app to send a message to your MXChip through the IoT Hub it's connected to when your airplane is too close to another airplane. That message will command the MXChip to display a warning message on its screen. For an added touch, you will use Microsoft Cognitive Services to translate the warning message into the language of the user's choice. 
+One of the benefits of using Azure IoT Hubs is that they support bidirectional communication. Devices can send messages to IoT Hubs, and IoT Hubs can send messages back to the devices connected to them. In this exercise, you will modify the FlySim client app to send a message to your MXChip IoT DevKit through the IoT Hub it's connected to when your airplane is too close to another airplane. That message will command the MXChip IoT DevKit to display a warning message on its screen. For an added touch, you will use Microsoft Cognitive Services to translate the warning message into the language of the user's choice. 
 
 1. In Visual Studio, open **CoreConstants.cs** in the project's "Common" folder and insert the following statement after the statement declaring ```SharedAirTrafficHubName``` that you added in the previous exercise:
 
@@ -425,7 +425,7 @@ The stage is set. The FlySim app is connected to the output from Stream Analytic
 <a name="Exercise4"></a>
 ## Exercise 4: Test the finished solution ##
 
-In this exercise, you will join your peers (or the drones spawned by the **FlySimTest** app) to fly your airplane through a crowded air-traffic control sector. And each time you come within two miles of another airplane, you will confirm that your airplane turns red in the ATC app and in the client app, and that the MXChip alerts you to the danger.
+In this exercise, you will join your peers (or the drones spawned by the **FlySimTest** app) to fly your airplane through a crowded air-traffic control sector. And each time you come within two miles of another airplane, you will confirm that your airplane turns red in the ATC app and in the client app, and that the MXChip IoT DevKit alerts you to the danger.
 
 1. Reset your aircraft to its default starting position over the Nevada desert by going to the Function App in the Azure Portal and clicking the **Restart** button.
 
@@ -433,7 +433,7 @@ In this exercise, you will join your peers (or the drones spawned by the **FlySi
 
     _Restarting the Function App_
 
-1. Make sure your MXChip is plugged into your laptop. Then return to Visual Studio and press **Ctrl+F5** to launch the FlySim app. Confirm that the app starts and that after a few seconds, an aircraft labeled with the display name you entered in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) appears on the screen. Maximize the window so you can see all the readouts and controls.
+1. Make sure your MXChip IoT DevKit is plugged into your laptop. Then return to Visual Studio and press **Ctrl+F5** to launch the FlySim app. Confirm that the app starts and that after a few seconds, an aircraft labeled with the display name you entered in [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}) appears on the screen. Maximize the window so you can see all the readouts and controls.
 
 	> Remember that if your plane flies off the screen and is no longer visible on the map, you can click the airplane in the artificial horizon to bring it back into view.
 
@@ -447,7 +447,7 @@ In this exercise, you will join your peers (or the drones spawned by the **FlySi
 
 	_Specifying a language preference_
 
-1. Turn to the ATC app running on the big screen in the front of the room and find your airplane. Navigate toward an airplane near you and try to get within two miles of it. Pay attention to the altitude of the two aircraft, because if one is at 10,000 feet and the other is at 30,000, they won't turn red even if their flight paths cross. Remember that you can control your altitude by tilting your MXChip forward (down) and backward (up).
+1. Turn to the ATC app running on the big screen in the front of the room and find your airplane. Navigate toward an airplane near you and try to get within two miles of it. Pay attention to the altitude of the two aircraft, because if one is at 10,000 feet and the other is at 30,000, they won't turn red even if their flight paths cross. Remember that you can control your altitude by tilting your MXChip IoT DevKit forward (down) and backward (up).
 
 	![Two airplanes approaching each other]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab4/two-approaching.png" | absolute_url }})
 
@@ -461,15 +461,15 @@ In this exercise, you will join your peers (or the drones spawned by the **FlySi
 
 	_Two airplanes within two miles of each other_
 
-1. At the same time, check your MXChip. Confirm that the red LED in the lower-left corner lights up, and that the screen displays a warning message in the language selected in Step 3. The message disappears after 5 seconds, so if you miss it, circle around and aim for another close encounter.
+1. At the same time, check your MXChip IoT DevKit. Confirm that the red LED in the lower-left corner lights up, and that the screen displays a warning message in the language selected in Step 3. The message disappears after 5 seconds, so if you miss it, circle around and aim for another close encounter.
 
 	![Warning messages displayed in English, French, and Polish]({{"/assets/images/mini-solution/air-traffic-control-simulator/lab4/warning-messages.png" | absolute_url }})
 
 	_Warning messages displayed in English, French, and Polish_
 
-1. Continue flying until you're comfortable that your app — and your device — are working as expected. If your airplane freezes on the screen, try unplugging your MXChip and plugging it back in again. And if, at any time, you would like to reset your aircraft to its original position, restart the Function App as you did at the beginning of this exercise.
+1. Continue flying until you're comfortable that your app — and your device — are working as expected. If your airplane freezes on the screen, try unplugging your MXChip IoT DevKit and plugging it back in again. And if, at any time, you would like to reset your aircraft to its original position, restart the Function App as you did at the beginning of this exercise.
 
-When you're finished, unplug your MXChip from your laptop to stop the flow of messages to the IoT Hub. Also go into the Azure Portal and stop the Function App since your subscription incurs charges while it's running, even if it isn't processing messages — that is, even when the VM that hosts the Function App is idle. If you want to stop all charges for all of the Azure resources you deployed today, simply go into the portal and delete the "FlySimResources" resource group. But be careful, because once a resource group is deleted, it can't be undeleted.
+When you're finished, unplug your MXChip IoT DevKit from your laptop to stop the flow of messages to the IoT Hub. Also go into the Azure Portal and stop the Function App since your subscription incurs charges while it's running, even if it isn't processing messages — that is, even when the VM that hosts the Function App is idle. If you want to stop all charges for all of the Azure resources you deployed today, simply go into the portal and delete the "FlySimResources" resource group. But be careful, because once a resource group is deleted, it can't be undeleted.
 
 <a name="Summary"></a>
 ## Summary ##
@@ -480,7 +480,7 @@ Let's take a moment to review what you built today. Here is the architecture dia
 
 _Solution architecture_
 
-Your MXChip transmits messages containing accelerometer data to an Azure IoT Hub. An Azure Function receives those messages and transforms the accelerometer data into flight data. Flight data flows to a personal event hub connected to the client app, and to a shared event hub that provides input to Azure Stream Analytics and to the ATC app. The Stream Analytics job analyzes the data for aircraft that are in close proximity and provides that information to the client app and the ATC app. When your aircraft comes too close to another, it turns red on the screen, and a warning appears on the screen of your MXChip. Microsoft Cognitive Services translates the warning into the language selected in the client app.
+Your MXChip IoT DevKit transmits messages containing accelerometer data to an Azure IoT Hub. An Azure Function receives those messages and transforms the accelerometer data into flight data. Flight data flows to a personal event hub connected to the client app, and to a shared event hub that provides input to Azure Stream Analytics and to the ATC app. The Stream Analytics job analyzes the data for aircraft that are in close proximity and provides that information to the client app and the ATC app. When your aircraft comes too close to another, it turns red on the screen, and a warning appears on the screen of your MXChip IoT DevKit. Microsoft Cognitive Services translates the warning into the language selected in the client app.
 
 This a great example of how enterprise developers build end-to-end solutions by connecting Azure services and utilizing those services from their code. And the fact that you could assemble it all in one day, from scratch, is indicative of the richness of the Azure ecosystem and of the tools that support it.
 
