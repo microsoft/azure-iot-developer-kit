@@ -148,7 +148,7 @@ Now that the storage account has been created, it's time to create an Azure Func
 <a name="Exercise3"></a>
 ### Exercise 3: Write an Azure Function to transform data ###
 
-[Azure Functions](https://azure.microsoft.com/services/functions/) enable you to deploy code to the cloud and execute it there without separately spinning up virtual machines (VMs) or other infrastructure to host them. They can be written in a number of languages, including C#, F#, JavaScript, Python, Bash, and PowerShell, and they are easily connected to Azure IoT Hubs, Event Hubs and other Azure services.
+[Azure Functions](https://azure.microsoft.com/services/functions/) enable you to deploy code to the cloud and execute it there without separately spinning up virtual machines (VMs) or other infrastructure to host them. They can be written in a number of languages, including C#, F#, Java, JavaScript, Python, Bash, and PowerShell, and they are easily connected to Azure IoT Hubs, Event Hubs and other Azure services.
 
 You can write Azure Functions in the Azure Portal, or you can write them in Visual Studio 2017. The latter provides a more robust environment for testing and debugging your code. In this exercise, you will use Visual Studio 2017 to write an Azure Function that transforms raw accelerometer data arriving at the IoT Hub you created in Lab 1 into flight data denoting the disposition of an aircraft, and that transmits the transformed data to the Event Hub you created in [Exercise 1](#Exercise1). 
 
