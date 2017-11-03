@@ -8,6 +8,23 @@ header:
   overlay_full: true
   teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
 
+icons:
+  - url: /assets/images/icon-iot-hub.svg
+    target: https://azure.microsoft.com/en-us/services/iot-hub/
+    title: Azure IoT Hub
+  - url: /assets/images/icon-azure-functions.svg
+    target: https://azure.microsoft.com/en-us/services/functions/
+    title: Azure Functions
+  - url: /assets/images/icon-event-hub.svg
+    target: https://azure.microsoft.com/en-us/services/event-hubs/
+    title: Azure Event Hubs
+  - url: /assets/images/icon-stream-analytics.svg
+    target: https://azure.microsoft.com/en-us/services/stream-analytics/
+    title: Azure Stream Analytics
+  - url: /assets/images/icon-cognitive-services.svg
+    target: https://azure.microsoft.com/en-us/services/cognitive-services/
+    title: Cognitive Services
+
 difficulty: HARD
 
 last_modified_at: 2017-10-30
