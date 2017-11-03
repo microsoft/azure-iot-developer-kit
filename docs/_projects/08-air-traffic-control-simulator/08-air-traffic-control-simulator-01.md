@@ -84,12 +84,12 @@ The following are required to complete this lab:
     * Upgrade to the latest firmware
     * Prepare the development environment
 - An active Azure subscription. If you do not have one, you can register via one of the methods:
-    * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
+    * Activate a [free 30-day trial Microsoft Azure account](https://azure.microsoft.com/free/?wt.mc_id=DX_9703536&OC.ID=DX_9703536){:target="_blank"}
     * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 - An available Wi-Fi connection or mobile hotspot. Note that the Wi-Fi connection can (and should) be secure, but it must be ungated (i.e. no intermediate login page is required. Gated Wi-Fi is common in public venues and hotels).
 
     Note: For developers work on a Mac, please see [this article](https://docs.microsoft.com/en-us/windows/uwp/porting/setting-up-your-mac-with-windows-10) for installing Windows 10 to enable building and running the UWP portion of this lab.
-    
+
 ---
 
 ## Exercises ##
