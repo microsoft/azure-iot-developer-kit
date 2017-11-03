@@ -39,17 +39,15 @@ The following are required to complete this lab:
 - An [MXChip IoT DevKit](https://microsoft.github.io/azure-iot-developer-kit/)
 - A computer running [Windows 10 Anniversary Edition](https://www.microsoft.com/en-us/software-download/windows10) or higher
 - Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
-
     * Have your DevKit connected to Wi-Fi
     * Upgrade to the latest firmware
     * Prepare the development environment
-
 - An active Azure subscription. If you do not have one, you can register via one of the methods:
-
     * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
     * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
-
 - An available Wi-Fi connection or mobile hotspot. Note that the Wi-Fi connection can (and should) be secure, but it must be ungated (i.e. no intermediate login page is required. Gated Wi-Fi is common in public venues and hotels).
+
+	Note: For developers work on a Mac, please see [this article](https://docs.microsoft.com/en-us/windows/uwp/porting/setting-up-your-mac-with-windows-10) for installing Windows 10 to enable building and running the UWP portion of this lab.
 
 <a name="Lab-Sections"></a>
 ## Lab Sections ##
