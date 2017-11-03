@@ -82,6 +82,7 @@ The following are required to complete this lab:
 - Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
     * Have your DevKit connected to Wi-Fi
+    * Upgrade to the latest firmware
     * Prepare the development environment
 
 - An active Azure subscription. If you do not have one, you can register via one of the methods:
