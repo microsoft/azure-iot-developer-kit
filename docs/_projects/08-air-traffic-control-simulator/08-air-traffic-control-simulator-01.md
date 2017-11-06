@@ -6,7 +6,7 @@ part: 1
 header:
   overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
   overlay_full: true
-  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
+  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight-th.jpg
 
 icons:
   - url: /assets/images/icon-iot-hub.svg
@@ -30,8 +30,9 @@ difficulty: HARD
 last_modified_at: 2017-10-30
 ---
 
-<a name="Introduction"></a>
-## Introduction ##
+{% include toc icon="columns" %}
+
+## Introduction
 
 In this hands-on lab and the ones that follow, you will build a comprehensive IoT solution that demonstrates some of the very best features Microsoft Azure has to offer, including [IoT Hubs](https://azure.microsoft.com/services/iot-hub/), [Event Hubs](https://azure.microsoft.com/services/event-hubs/), [Azure Functions](https://azure.microsoft.com/services/functions/), [Stream Analytics](https://azure.microsoft.com/services/stream-analytics/), and [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/). The solution you build today will culminate into an Air-Traffic Control (ATC) app that shows simulated aircraft flying through an ATC sector and warns users when aircraft get too close to each other. While these labs are best to do with several peers, there is an application in the lab assets which can inject simulated drones into the workstream (details available in the [Labs section](#labs).)
 
@@ -88,7 +89,8 @@ The following are required to complete this lab:
     * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 - An available Wi-Fi connection or mobile hotspot. Note that the Wi-Fi connection can (and should) be secure, but it must be ungated (i.e. no intermediate login page is required. Gated Wi-Fi is common in public venues and hotels).
 
-    Note: For developers work on a Mac, please see [this article](https://docs.microsoft.com/en-us/windows/uwp/porting/setting-up-your-mac-with-windows-10) for installing Windows 10 to enable building and running the UWP portion of this lab.
+**Note:** For developers work on a Mac, please see [this article](https://docs.microsoft.com/en-us/windows/uwp/porting/setting-up-your-mac-with-windows-10) for installing Windows 10 to enable building and running the UWP portion of this lab.
+{: .notice--info}
 
 ---
 

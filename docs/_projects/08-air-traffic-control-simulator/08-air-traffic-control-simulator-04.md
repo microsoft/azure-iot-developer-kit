@@ -6,16 +6,16 @@ part: 4
 header:
   overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
   overlay_full: true
-  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
+  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight-th.jpg
 
 difficulty: HARD
 
 last_modified_at: 2017-10-30
 ---
 
+{% include toc icon="columns" %}
 
-<a name="Overview"></a>
-## Overview ##
+## Overview
 
 In the previous session, you or your peer created an [Azure Stream Analytics](https://azure.microsoft.com/services/stream-analytics/) job that analyzes incoming data for aircraft that are too close together. Additionally, you created a pair of Event Hubs: one to provide input to the Stream Analytics job, and another to receive output.
 
@@ -47,7 +47,8 @@ The following are required to complete this lab:
     * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 - An available Wi-Fi connection or mobile hotspot. Note that the Wi-Fi connection can (and should) be secure, but it must be ungated (i.e. no intermediate login page is required. Gated Wi-Fi is common in public venues and hotels).
 
-	Note: For developers work on a Mac, please see [this article](https://docs.microsoft.com/en-us/windows/uwp/porting/setting-up-your-mac-with-windows-10) for installing Windows 10 to enable building and running the UWP portion of this lab.
+**Note:** For developers work on a Mac, please see [this article](https://docs.microsoft.com/en-us/windows/uwp/porting/setting-up-your-mac-with-windows-10) for installing Windows 10 to enable building and running the UWP portion of this lab.
+{: .notice--info}
 
 <a name="Lab-Sections"></a>
 ## Lab Sections ##

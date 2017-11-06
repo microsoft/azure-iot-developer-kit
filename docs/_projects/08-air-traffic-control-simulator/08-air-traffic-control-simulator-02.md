@@ -6,16 +6,16 @@ part: 2
 header:
   overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
   overlay_full: true
-  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
+  teaser: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight-th.jpg
 
 difficulty: HARD
 
 last_modified_at: 2017-10-30
 ---
 
+{% include toc icon="columns" %}
 
-<a name="Overview"></a>
-## Overview ##
+## Overview
 
 In [Lab 1]({{"/docs/projects/air-traffic-control-simulator/" | absolute_url }}), you configured an [MXChip](https://microsoft.github.io/azure-iot-developer-kit/) to transmit accelerometer data to an Azure IoT Hub. That IoT Hub receives a stream of data revealing the device's 3D orientation in space. It knows, for example, whether the device is tilted forward or backward (and by how much), and it knows when the device is rotated left and right. The app that you uploaded to the device transmits an event containing X, Y, and Z accelerometer readings every two seconds.
 
@@ -42,7 +42,8 @@ The following are required to complete this lab:
     * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 - An available Wi-Fi connection or mobile hotspot. Note that the Wi-Fi connection can (and should) be secure, but it must be ungated (i.e. no intermediate login page is required. Gated Wi-Fi is common in public venues and hotels).
 
-	Note: For developers work on a Mac, please see [this article](https://docs.microsoft.com/en-us/windows/uwp/porting/setting-up-your-mac-with-windows-10) for installing Windows 10 to enable building and running the UWP portion of this lab.
+**Note:** For developers work on a Mac, please see [this article](https://docs.microsoft.com/en-us/windows/uwp/porting/setting-up-your-mac-with-windows-10) for installing Windows 10 to enable building and running the UWP portion of this lab.
+{: .notice--info}
 
 <a name="Lab-Sections"></a>
 ## Lab Sections ##
