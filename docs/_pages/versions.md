@@ -35,7 +35,7 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
 
 ### Downloads
 
-- [Installation Package 1.2.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.2.0.28.zip).
+- [Installation Package 1.2.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.2.0.29.zip).
 - [Installation Package 1.2.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.2.0.28.zip).
 - [Firmware 1.2.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
 
