@@ -1,14 +1,20 @@
 <section class="page__share">
+  <div>
     <p>Reach us at</p>
-  <a href="http://gitter.im/Microsoft/azure-iot-developer-kit">
-    <img src="https://badges.gitter.im/iot-devkit.svg" alt="Join Gitter chat" style="height:25px">
-  </a>
+    <a href="http://gitter.im/Microsoft/azure-iot-developer-kit" target="_blank">
+      <img src="https://badges.gitter.im/iot-devkit.svg" alt="Join Gitter chat" style="height:25px">
+    </a>
 
-  <p>or share on</p>
-  
-  <a href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username }}&{% endif %}text={{ page.title }} {{ page.url | absolute_url }}" class="btn btn--twitter" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a>
+    <p>, get support at</p>
+    <a href="https://stackoverflow.com/questions/tagged/iot-devkit" target="_blank">
+      <img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.svg" alt="Get help from Stack Olverflow" style="height:37px">
+    </a>
+  </div>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" class="btn btn--facebook" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" class="btn btn--linkedin" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i></a>
+  <div>
+    <p>Or share us on</p>
+    <a href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username }}&{% endif %}text={{ page.title }} {{ page.url | absolute_url }}" class="btn btn--twitter" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" class="btn btn--facebook" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" class="btn btn--linkedin" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i></a>
+  </div>
 </section>
