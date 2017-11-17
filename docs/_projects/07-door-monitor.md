@@ -121,7 +121,7 @@ Then, you will see the following page (or you should first sign in to the Azure)
 
 Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
 
-![VSCode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
+![VSCode]({{"/assets/images/mini-solution-vscodemini-solution/vscode_start.png" | absolute_url }})
 
 **Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. Close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
@@ -130,7 +130,7 @@ Make sure your DevKit is not connected. Start VS Code first and connect the DevK
 
 Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **DoorMonitor**. This will open a new VS Code window with project folder in it.
 
-![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
+![mini-solution-examples]({{"/assets/images/mini-solution/vscode_examples.png" | absolute_url }})
 
 If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 

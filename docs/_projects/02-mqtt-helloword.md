@@ -33,7 +33,7 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
     * Preview ‘README.md: The DevKit introduction page.
     * Arduino Examples: Hands-on samples to get started with DevKit.
 
-    ![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
+    ![mini-solution-vscode]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
 
 ## Step 2. Open the MQTTClient Sample
 
