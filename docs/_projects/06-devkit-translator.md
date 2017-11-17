@@ -100,6 +100,9 @@ After auzre function deployed successfully, fill in the azure_config.h file with
 
 ![mini-solution-function-app]({{"/assets/images/mini-solution/devkit-translator/azure-function.png" | absolute_url }})
 
+**Notice:** Occasionally, if the Azure Function can't work properly please check this [FAQ steps]({{"/docs/faq/#compilation-error-for-azure-function" | absolute_url}}) to solve it.
+{: .notice--warning}
+
 ## Step 4. Build and upload the device code
 
 {% include switch.html content = page.variable %}
