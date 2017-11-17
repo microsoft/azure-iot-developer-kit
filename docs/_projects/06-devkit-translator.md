@@ -66,7 +66,7 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code automatically finds the DevKit and opens an introduction page:
 
-![Introduction page]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
+![Introduction page]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
 
 **Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. Close VS Code, launch Arduino IDE once again and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
@@ -75,7 +75,7 @@ Make sure your DevKit is not connected. Start VS Code first and connect the DevK
 
 Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **DevKitTranslator**. This will open a new VS Code window with project folder in it.
 
-![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
+![mini-solution-examples]({{"/assets/images/mini-solution/vscode_examples.png" | absolute_url }})
 
 If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
@@ -99,6 +99,9 @@ Use `Ctrl+P` (macOS: `Cmd+P`) to run `task cloud-deploy` to deploy the Azure Fun
 After auzre function deployed successfully, fill in the azure_config.h file with function app name. You could navigate to [Azure portal](https://portal.azure.com/){:target="_blank"} to find it:
 
 ![mini-solution-function-app]({{"/assets/images/mini-solution/devkit-translator/azure-function.png" | absolute_url }})
+
+**Notice:** Occasionally, if the Azure Function can't work properly please check this [FAQ steps]({{"/docs/faq/#compilation-error-for-azure-function" | absolute_url}}) to solve it.
+{: .notice--warning}
 
 ## Step 4. Build and upload the device code
 

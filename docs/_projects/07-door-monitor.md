@@ -121,7 +121,7 @@ Then, you will see the following page (or you should first sign in to the Azure)
 
 Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code will automatically find it and pops up introduction page:
 
-![VSCode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
+![VSCode]({{"/assets/images/mini-solution-vscodemini-solution/vscode_start.png" | absolute_url }})
 
 **Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. Close VS Code, launch Arduino IDE once and VS Code should locate Arduino IDE path correctly.
 {: .notice--warning}
@@ -130,7 +130,7 @@ Make sure your DevKit is not connected. Start VS Code first and connect the DevK
 
 Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **DoorMonitor**. This will open a new VS Code window with project folder in it.
 
-![mini-solution-examples]({{"/assets/images/mini-solution-examples.png" | absolute_url }})
+![mini-solution-examples]({{"/assets/images/mini-solution/vscode_examples.png" | absolute_url }})
 
 If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
@@ -140,7 +140,7 @@ In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by enter
 
 In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services. You need to select all the items from promprted list same as the ones you have previously provisioned in the [Step 2]({{"/docs/projects/door-monitor#step-2-deploy-iot-hub-in-azure" | absolute_url }}).
 
-![Cloud Provision]({{"/assets/images/mini-solution/door-monitor/cloud-prevision.jpg" | absolute_url }})
+![Cloud Provision]({{"/assets/images/mini-solution/door-monitor/cloud-prevision.png" | absolute_url }})
 
 **Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. 
 {: .notice--warning}
@@ -158,7 +158,7 @@ This is to set the connection string that retrieves from `task cloud-provision` 
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
-![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
+![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 

@@ -122,9 +122,24 @@ To resolve, we need to refresh the platform index:
 
 In certain environment, lots of warnings message pops up in the VS Code OUTPUT windows when you invoke `Arduino Verify`, `Arduino Upload` or `task device-upload` to compile the project.
 
-It is caused by the incorrect warning handling between Visual Studio Code Arduino extension and Arduino IDE. To solve this problem, the work around is to uninstall Arduino IDE from your local system and install the latest version of [Arduino IDE](https://www.arduino.cc/en/Main/Software). 
+It is caused by the incorrect warning handling between Visual Studio Code Arduino extension and Arduino IDE. To solve this problem, the work around is to uninstall Arduino IDE from your local system and install the latest version of [Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
+### Compilation error for Azure Function.
+
+When the mini solution of Shake-Shake and DevKit Translater do not work, in Azure portal, you got the following error for the Azure Function you deployed:
+
+```2017-11-15T03:24:23.426 Function compilation error
+2017-11-15T03:24:23.426 run.csx(11,23): error CS0234: The type or namespace name 'Devices' does not exist in the namespace 'Microsoft.Azure' (are you missing an assembly reference?)
+2017-11-15T03:24:23.426 run.csx(95,15): error CS0246: The type or namespace name 'ServiceClient' could not be found (are you missing a using directive or an assembly reference?)
+2017-11-15T03:24:23.426 run.csx(95,45): error CS0103: The name 'ServiceClient' does not exist in the current context
+```
+And you could not find porject.lock.json in files of the Azure Function. This is caused by a new  [Azure Function issue](https://github.com/Azure/Azure-Functions/issues/590). 
+
+Here is the workaround:
+1. In 'Platform features' tab of the deployed Function App, click 'Application settings'.
+2. Add a new Application setting named `WEBSITE_USE_PLACEHOLDER` with value 0.
+3. Save and Restart the Function App.
+
+{% include social-share.html %}
 
 [![Back to Top]({{"/assets/images/faq-back-to-top.png" | absolute_url }})](#){: .faq-back-to-top}
-
-

@@ -87,7 +87,7 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 4. Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **RemoteMonitoring**. This will open a new VS Code window with project folder in it.
 
-![mini-solution-vscode]({{"/assets/images/mini-solution-vscode.png" | absolute_url }})
+![mini-solution-vscode]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
 
 If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
