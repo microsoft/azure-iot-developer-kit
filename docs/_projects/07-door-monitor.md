@@ -140,7 +140,7 @@ In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by enter
 
 In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services. You need to select all the items from promprted list same as the ones you have previously provisioned in the [Step 2]({{"/docs/projects/door-monitor#step-2-deploy-iot-hub-in-azure" | absolute_url }}).
 
-![Cloud Provision]({{"/assets/images/mini-solution/door-monitor/cloud-prevision.jpg" | absolute_url }})
+![Cloud Provision]({{"/assets/images/mini-solution/door-monitor/cloud-prevision.png" | absolute_url }})
 
 **Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. 
 {: .notice--warning}
@@ -158,7 +158,7 @@ This is to set the connection string that retrieves from `task cloud-provision` 
 
 Then VS Code starts verifying and uploading the Arduino sketch:
 
-![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.jpg" | absolute_url }})
+![device-upload]({{"/assets/images/mini-solution/door-monitor/device-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
