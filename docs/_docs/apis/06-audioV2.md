@@ -41,22 +41,6 @@ AudioClassV2.h
 | [convertToMono](#converttomono) - `int convertToMono(char* audioBuffer, int size, int sampleBitLength)` |
 ## Types
 
-### AUDIO_STATE_TypeDef
-
-> Enum for audio status
-
-```cpp
-typedef enum 
-{
-  AUDIO_STATE_IDLE = 0,
-  AUDIO_STATE_INIT,
-  AUDIO_STATE_RECORDING,
-  AUDIO_STATE_PLAYING,
-  AUDIO_STATE_RECORDING_FINISH,
-  AUDIO_STATE_PLAYING_FINISH
-} AUDIO_STATE_TypeDef;
-```
-
 ### WaveHeader
 
 > Wave header structure.
@@ -78,6 +62,22 @@ typedef struct
     char data_chunk_id[4];
     uint32_t data_chunk_size;
 } WaveHeader;
+```
+
+### AUDIO_STATE_TypeDef
+
+> Enum for audio status
+
+```cpp
+typedef enum 
+{
+  AUDIO_STATE_IDLE = 0,
+  AUDIO_STATE_INIT,
+  AUDIO_STATE_RECORDING,
+  AUDIO_STATE_PLAYING,
+  AUDIO_STATE_RECORDING_FINISH,
+  AUDIO_STATE_PLAYING_FINISH
+} AUDIO_STATE_TypeDef;
 ```
 
 ## Common methods
