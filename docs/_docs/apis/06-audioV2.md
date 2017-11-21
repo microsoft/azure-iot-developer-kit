@@ -16,7 +16,7 @@ AudioClassV2.h
 | Types |
 | :---- |
 | [WaveHeader](#waveheader) |
-| [AUDIO_STATE_TypeDef](#audiostatetypedef) |
+| [AUDIO_STATE_TypeDef](#audio_state_typedef) |
 
 
 | Common methods |
@@ -64,7 +64,7 @@ typedef struct
 } WaveHeader;
 ```
 
-### AUDIO_STATE_TypeDef
+### AUDIO\_STATE\_TypeDef
 
 > Enum for audio status
 
