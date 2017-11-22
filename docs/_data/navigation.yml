@@ -38,8 +38,8 @@ docs:
         url: /docs/apis/display/
       - title: "LED"
         url: /docs/apis/led/
-      - title: "Audio"
-        url: /docs/apis/audio/
+      - title: "AudioV2"
+        url: /docs/apis/audioV2/
       - title: "HTS221"
         url: /docs/apis/hts221/
       - title: "LSM6DSL"
@@ -50,3 +50,5 @@ docs:
         url: /docs/apis/lps22hb/
       - title: "IrDA"
         url: /docs/apis/irda/
+      - title: "Audio-Retired"
+        url: /docs/apis/audio-retired/
