@@ -5,7 +5,7 @@ excerpt: "The second version Audio module for AZ3166"
 last_modified_at: 2017-11-22T10:16:34-04:00
 ---
 
-Audio class version 2. There are two ways to use AudioClass recording and playing music : by callback or by WAV format data. In callback scenario, it record / play audio data to / from a 512 bytes data inside audio class. Application can control the data on play callback called or read the data on record callback called. In WAV format data scenario, it record / play audio data to / from a WAV format data.
+Audio class version 2. There are two ways to use `AudioClass` recording and playing music : by callback or by WAV format data. In callback scenario, it records / plays audio data to / from a 512 bytes data inside audio class. Application can control the data on play callback called or read the data on record callback called. In WAV format data scenario, it records / plays audio data to / from WAV format data.
 
 ## Assembly
 
@@ -247,7 +247,7 @@ int writeToPlayBuffer(char* buffer, int length);
 int startRecord(char* audioBuffer, int size);
 ```
 
-> Start recording audio data and save a WAV format data to audioBuffer.
+> Start recording audio data and save WAV format data to audioBuffer.
 > 
 > #### Parameters
 > 
