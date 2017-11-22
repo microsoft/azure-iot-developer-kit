@@ -39,6 +39,7 @@ AudioClassV2.h
 | [startPlay](#startplay-1) - `int startPlay(char* audioBuffer, int size)` |
 | [getCurrentSize](#getcurrentsize) - `int getCurrentSize()` |
 | [convertToMono](#converttomono) - `int convertToMono(char* audioBuffer, int size, int sampleBitLength)` |
+
 ## Types
 
 ### WaveHeader
