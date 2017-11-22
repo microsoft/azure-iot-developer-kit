@@ -14,17 +14,14 @@ The new Audio library gives the ability to continuous recording voice through th
 ### Release Summary
 
 * SDK
-  * A new version of the Audio driver library (AudioClassV2) has been added. This new version supports call-backs, allowing you to greatly simplify Arduino sketches which need to monitor and react to the current audio state as, for example, when it changes from AUDIO_STATE_RECORDING to AUDIO_STATE_PLAYING.  An example Arduino sketch making use of this new feature may be found in the Audio2 folder under "Examples for MXCHIP AZ3166". Note: The previous AudioClass library has been retained for backward compatibility with legacy sketches. (Sample sketches utilizing the AudioClass.h library may be found in the Audio folder under "Examples for MXCHIP AZ3166".)  Provide V2 version of Audio driver library to support callback in record and play. 
-  ![1](https://user-images.githubusercontent.com/20514459/33115922-bea1f684-cf9d-11e7-8681-ead76c3f2698.png)
+  * A new version of the Audio driver library (AudioClassV2) has been added. This new version supports call-backs, allowing you to greatly simplify Arduino sketches which need to monitor and react to the current audio state as, for example, when it changes from AUDIO_STATE_RECORDING to AUDIO_STATE_PLAYING.  An example Arduino sketch making use of this new feature may be found in the Audio2 folder under "Examples for MXCHIP AZ3166". Note: The previous AudioClass library has been retained for backward compatibility with legacy sketches. (Sample sketches utilizing the AudioClass.h library may be found in the Audio folder under "Examples for MXCHIP AZ3166".)  Provide V2 version of Audio driver library to support callback in record and play.
   * A name conflict (INADDR_NONE) in source code was generating the error "Expected ')' before numeric constant". This error (documented in Issue 169) has been corrected.
 
 * New Mini Solution
   * A cool mini-solution was added. You can check it out [here](https://microsoft.github.io/azure-iot-developer-kit/docs/projects/air-traffic-control-simulator/).
 * Development Tools
   * A Resource Group Location selection option was added when creating  a new resource group in `task cloud provision`.
-  ![2](https://user-images.githubusercontent.com/20514459/33115923-bed68354-cf9d-11e7-8a1b-0906d59e1914.png)
-  * A privacy statement has been added during installation to allow users to choose to enable or disable data collection.
-  ![3](https://user-images.githubusercontent.com/20514459/33115924-bf0d6a0e-cf9d-11e7-8e92-ab5025154399.png)
+  * A privacy statement has been added during installation to allow users to choose to enable or disable data collection. 
   * Error handling during development tool installation has been improved.
   * Installation of Visual Studio Code has been updated to better support both X86 and X64 environments.
   * The Azure CLI installation has been updated to version 2.0.20
