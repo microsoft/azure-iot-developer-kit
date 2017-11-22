@@ -7,13 +7,41 @@ last_modified_at: 2017-10-23
 
 {% include toc icon="columns" %}
 
+## Version 1.2.1 (November 22)
+
+The new Audio library gives the ability to continuous recording voice through the microphone.
+
+### Release Summary
+
+* SDK
+  * A new version of the Audio driver library (AudioClassV2) has been added. This new version supports call-backs, allowing you to greatly simplify Arduino sketches which need to monitor and react to the current audio state as, for example, when it changes from AUDIO_STATE_RECORDING to AUDIO_STATE_PLAYING.  An example Arduino sketch making use of this new feature may be found in the Audio2 folder under "Examples for MXCHIP AZ3166". Note: The previous AudioClass library has been retained for backward compatibility with legacy sketches. (Sample sketches utilizing the AudioClass.h library may be found in the Audio folder under "Examples for MXCHIP AZ3166".)  Provide V2 version of Audio driver library to support callback in record and play. 
+  ![1](https://user-images.githubusercontent.com/20514459/33115922-bea1f684-cf9d-11e7-8681-ead76c3f2698.png)
+  * A name conflict (INADDR_NONE) in source code was generating the error "Expected ')' before numeric constant". This error (documented in Issue 169) has been corrected.
+
+* New Mini Solution
+  * A cool mini-solution was added. You can check it out [here](https://microsoft.github.io/azure-iot-developer-kit/docs/projects/air-traffic-control-simulator/).
+* Development Tools
+  * A Resource Group Location selection option was added when creating  a new resource group in `task cloud provision`.
+  ![2](https://user-images.githubusercontent.com/20514459/33115923-bed68354-cf9d-11e7-8a1b-0906d59e1914.png)
+  * A privacy statement has been added during installation to allow users to choose to enable or disable data collection.
+  ![3](https://user-images.githubusercontent.com/20514459/33115924-bf0d6a0e-cf9d-11e7-8e92-ab5025154399.png)
+  * Error handling during development tool installation has been improved.
+  * Installation of Visual Studio Code has been updated to better support both X86 and X64 environments.
+  * The Azure CLI installation has been updated to version 2.0.20
+
+### Downloads
+
+- [Installation Package 1.2.1 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.2.1.33.zip).
+- [Installation Package 1.2.1 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.2.1.33.zip).
+- [Firmware 1.2.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
+
 ## Version 1.2.0 (October 24)
 
 No more manual steps to prepare your DevKit development environment on macOS! The time saving one-click installation now support macOS as well. And yes, we love bash.
 
 ### Release Summary
 
-* Firmware
+* SDK
   * Upgraded IoT Hub device SDK to [1.1.23](https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-09-08){:target="_blank"}.
   * Made IoT Hub MQTT Client as a wrapper that can be shared by all mini solutions.
   * Enabled float modifier for `print/printf` function.
@@ -67,6 +95,8 @@ DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure
 
 * Firmware
   * Upgraded the DevKit firmware to enable STSAFE.
+
+* SDK
   * Bug fix: Under bad network environment, the Device SDK in mbed OS occasionally crashes.
   * Added more NTP servers for better globalization support.
 
@@ -98,7 +128,7 @@ Summer does not mean slow down. We further enriched our project catalog and tune
 * Firmware
   * Enabled detection of latest firmware version and display on the screen.
 
-* Arduino Library
+* SDK
   * Added support for audio playback API.
 
 * Project Catalog
