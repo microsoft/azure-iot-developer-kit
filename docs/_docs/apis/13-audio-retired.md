@@ -1,7 +1,7 @@
 ---
-title: "Audio"
-permalink: /docs/apis/audio/
-excerpt: "The Audio module for AZ3166"
+title: "Audio-retired"
+permalink: /docs/apis/audio-retired/
+excerpt: "The retired Audio module for AZ3166"
 last_modified_at: 2017-04-30T10:16:34-04:00
 ---
 
