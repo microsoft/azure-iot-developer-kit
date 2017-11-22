@@ -91,6 +91,9 @@ static AudioClass& getInstance()
 
 > Get the single instance of AudioClass.
 > 
+> #### Parameters
+> 
+> None.
 > 
 > #### Return value
 > 
@@ -143,7 +146,11 @@ int getAudioState();
 ```
 
 > Get status of the audio driver. Please use this API to query whether the playing/recoding process is completed.
+>
+> #### Parameters
 > 
+> None.
+>
 > #### Return value
 > 
 > | Type | Description |
@@ -318,6 +325,7 @@ int convertToMono(char * audioBuffer, int size, int sampleBitLength);
 > | char * | audioBuffer | Pointer to the WAV format data. |
 > | int | size |  size of WAV format data. |
 > | int | sampleBitLength |  Sample bit depth of the given audio data. |
+>
 > #### Return value
 > 
 > | Type | Description |
