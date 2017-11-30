@@ -62,7 +62,7 @@ $text-color                 : $dark-gray !default;
 $border-color               : $lighter-gray !default;
 
 // $primary-color              : #7a8288 !default;
-$primary-color              : #1e6bb8 !default;
+$primary-color              : #006699 !default;
 $success-color              : #159957 !default;
 $warning-color              : #f89406 !default;
 $danger-color               : #ee5f5b !default;
@@ -81,10 +81,10 @@ $twitter-color              : #55acee !default;
 
 /* links */
 $link-color                 : $primary-color !default;
-$link-color-hover           : mix(#000, $link-color, 25%) !default;
+$link-color-hover           : #66a3c2 !default;
 $link-color-visited         : mix(#fff, $link-color, 25%) !default;
 $masthead-link-color        : $primary-color !default;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%) !default;
+$masthead-link-color-hover  : #fff !default;
 
 
 /*

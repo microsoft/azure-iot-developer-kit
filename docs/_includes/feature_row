@@ -4,9 +4,10 @@
   {% assign feature_row = page.feature_row %}
 {% endif %}
 
+<div class="{{ feature_row.class }}">
 <div class="feature__wrapper">
 
-  {% for f in feature_row %}
+  {% for f in feature_row.content %}
 
     {% if f.url contains "://" %}
       {% capture f_url %}{{ f.url }}{% endcapture %}
@@ -41,7 +42,33 @@
           {% endif %}
 
           {% if f.url %}
-            <p><a href="{{ f_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+            <p><a href="{{ f_url }}" class="archive__item-excerpt">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+          {% endif %}
+
+          {% if f.attach %}
+            <hr>
+            <div class="archive__item-excerpt">
+              <p> "{{ f.attach.words }}" </p>
+              <div class="author">
+                {% if f.attach.author.photo %}
+                  <div class="author-photo">
+                    <img src=
+                      {% if f.attach.author.photo contains "://" %}
+                        "{{ f.attach.author.photo }}"
+                      {% else %}
+                        "{{ f.attach.author.photo | absolute_url }}"
+                      {%endif %}
+                    >
+                  </div>
+                {% endif %}
+                <div class="author-inform">
+                  <p> {{ f.attach.author.name }} </p>
+                {% if f.attach.author.title %}
+                  <p> {{ f.attach.author.title }} </p>
+                {% endif %}
+                </div>
+              </div>
+            </div>
           {% endif %}
         </div>
       </div>
@@ -49,3 +76,5 @@
   {% endfor %}
 
 </div>
+</div>
+    

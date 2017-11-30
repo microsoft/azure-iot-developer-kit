@@ -36,7 +36,7 @@ a.switch:hover{
 
 .switch_active{
     font-weight: bold;
-    border-bottom: 2px solid #1e6bb8;
+    border-bottom: 2px solid $primary-color;
 }
 
 a.switch:focus{

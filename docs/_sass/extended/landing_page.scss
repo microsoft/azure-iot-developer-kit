@@ -1,0 +1,167 @@
+.layout--splash {
+
+  .page__hero--overlay {
+    .page__hero-teaser {
+      float: left;
+      margin: -6.8em -2em -3.4em;
+    }
+
+    @include breakpoint($small) {
+      .page__hero-teaser {
+        margin-bottom: -6.8em;
+      }
+
+      .page__extra-logo {
+        margin-top: 0;
+        top: 0;
+      }
+    }
+
+    @include breakpoint($medium-wide) {
+      .page__hero-teaser {
+        z-index: -1;
+        position: relative;
+        width: 65%;
+        margin-right: -15%;
+    
+        .page__hero-teaser-image {
+          width: 100%;
+          position: relative;
+        }
+      }
+
+      .page__hero-body {
+        float: left;
+        text-align: left;
+        width: calc(50% + 2em - 120px);
+      }
+    }
+
+    .page__cta_secondary {
+      margin-top: 2em;
+    }
+  }
+
+  .landing-page-btn {
+    padding: 0.5em 2em;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    
+    margin-right: 1em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background: #66a3c2;
+      border: 1px solid #66a3c2;
+    }
+
+    &-blue {
+      background: #069;
+      border: 1px solid #069;
+    }
+
+    &-clear {
+      background: none;
+      border: 1px solid #fff;
+    }
+  }
+  
+  #main {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
+    .feature__wrapper {
+      max-width: $x-large;
+      margin: auto;
+      padding-left: 1em;
+      padding-right: 1em;
+
+      .author {
+        .author-photo {
+          float: left;
+          height: 48px;
+          margin-right: 1em;
+
+          img {
+            height: 100%;
+          }
+        }
+
+        .author-inform {
+          p {
+            margin: 0;
+            font-size: 16px;
+            font-style: oblique;
+            font-weight: bold;
+            color: #999;
+          }
+        }
+      }
+    }
+
+    hr {
+      border-color: #e8e8e8;
+    }
+  }
+
+  .landing-page-project {
+    max-width: $x-large;
+    text-align: center;
+    margin: auto;
+    padding: 0 1em 2em;
+
+    .landing-page-projects {
+      float: left;
+      width: 100%;
+
+      .grid__item {
+        text-align: left;
+
+        .archive__item {
+
+          a {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  .feature__wrapper{
+
+    .landing-page-final-item {
+      background: #f2f2f2;
+      padding: 2em 1em;
+      width: 100%;
+      text-align: center;
+      float: left;
+
+      @include breakpoint($medium-wide) {
+        padding: 2em 20%;
+      }
+
+      .landing-page-final-body {
+        margin: 0;
+        font-weight: bold;
+        width: 60%;
+        float: left;
+      }
+
+      .landing-page-final-teaser {
+        max-width: 30%;
+        float: right;
+      }
+    }
+  }
+}
+
+.light-gray {
+  background: #f2f2f2;
+}

@@ -184,28 +184,38 @@
   &.reverse-color {
     a {
       color: #fff;
-
-      &:hover,
-      &:active {
-        color: rgba(255, 255, 255, 0.6);
-      }
     }
 
     .hidden-links {
-      background: #1e6bb8;
+      background: $primary-color;
+    }
+
+    .masthead-circle {
+      border: 1px solid #fff;
     }
   }
 
   a {
     display: block;
     color: $masthead-link-color;
-    margin: 0 1rem;
-    padding: 0.5rem 0;
+    margin: 0 1rem 0.5rem;
+    padding: 0.5rem 0 0;
     text-decoration: none;
+    transition: none;
+    -webkit-transition: none;
 
     &.site-title {
       margin-left: 0;
     }
+
+    &:hover {
+      border-bottom: 1px solid;
+    }
+  }
+
+  .masthead-circle {
+    border: 1px solid $masthead-link-color;
+    border-radius: 50px;
   }
 
   button {
@@ -231,12 +241,6 @@
     li {
       -webkit-box-flex: 0;
                   flex: none;
-
-      &:last-child {
-        a {
-          margin-right: 0;
-        }
-      }
     }
 
     a {
@@ -247,7 +251,7 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 4px;
+        height: 0px;
         background: mix(#fff, $primary-color, 50%);
         width: 100%;
         -webkit-transition: $global-transition;
@@ -286,7 +290,8 @@
 
       &:hover {
         color: $masthead-link-color-hover;
-        background: mix(#fff, $primary-color, 75%);
+        background: #66a3c2;
+        border-bottom: none;
       }
     }
 
@@ -323,6 +328,10 @@
       &:last-child {
         border-bottom: none;
       }
+    }
+
+    .masthead-circle {
+      border: 0;
     }
   }
 }
