@@ -19,39 +19,39 @@ header:
     - image_path: /assets/images/logo-azure-certified.svg
       url: "https://catalog.azureiotsuite.com/details?title=MXChip-IoT-DevKit&source=home-page"
   align: center
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+excerpt: "All the sensors and parts you love, no soldering needed. Welcome to cloud IoT development."
 part1:
   class: "light-gray"
   content:
     - title: "Essential modules and sensors on the board save your time and money"
-      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      excerpt: "Wifi, OLED display, headphone, microphone, sensors like temperature, humidity, motion, pressure, you will love how much time and money you save to build your best IoT project."
       url: "/docs/get-started"
       btn_label: "Learn more about IoT DevKit hardware spec"
       image_path: /assets/images/landingpage-banner2.png
       attach: 
-        words: "Customer testimonal starts from here. A customer says this is pretty awesome"
+        words: "This eliminates the need to have electronics knowledge and the need to do any wiring or soldering in order to get started prototyping IoT solutions."
         author:
           photo: /assets/images/user.png
-          name: John Doe
-          title: Director of Software at Contoso
+          name: Chris Pietschmann
+          title: BuildAzure.com
 part2:
   content:
     - title: "Visual Studio Code streamlines your development experiences"
-      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      excerpt: "Visual Studio Code is lightweight and your goto editor of choice. It is your all-in-one tool from coding the first line to deploying to the cloud."
       url: "/docs/projects"
       btn_label: "Learn more about the one-click installation"
       image_path: /assets/images/landingpage-banner3.png
       attach: 
-        words: "Customer testimonal starts from here. A customer says this is pretty awesome"
+        words: "The sample code included scripts taking advantage of Visual Studio Code’s built-in terminal, so I didn’t have to leave my IDE to use the Azure Portal."
         author:
           photo: /assets/images/user.png
-          name: John Doe
-          title: Director of Software at Contoso
+          name: Simon Bisson
+          title: InfoWorld
 part3:
   class: "light-gray"
   content:
     - title: "Cloud empowers your IoT solutions to next level"
-      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      excerpt: "Code your IoT solution in the cloud! Using Azure services like IoT Hub, Stream Analytics, Machine Learning to build the best IoT solutions."
       url: "http://www.mxchip.com/az3166"
       btn_label: "Learn more about projects using Azure services"
       image_path: /assets/images/landingpage-banner4.png
@@ -84,7 +84,7 @@ projects: "0, 4, 6"
       {% endfor %}
 
     </div>
-    <a href="{{ '/docs/projects' | absolute_url }}"> See our documentation for more details </a>
+    <a href="{{ '/docs/projects' | absolute_url }}">View our Project Catalog to learn and build more IoT solutions</a>
   </div>
 </div>
 
@@ -92,8 +92,8 @@ projects: "0, 4, 6"
 
   <div class="feature__wrapper">
     <div class="landing-page-final-item">
-      <p class="landing-page-final-body"> Build your own IoT application with Azure and Visual Studio Code helped today. </p>
-      <a class="landing-page-final-teaser landing-page-btn landing-page-btn-blue btn--large" href="https://aka.ms/iot-devkit-purchase"> Get a Kit </a>
+      <p class="landing-page-final-body">Build your own IoT application with Azure and Visual Studio Code helped today.</p>
+      <a class="landing-page-final-teaser landing-page-btn landing-page-btn-blue btn--large" href="https://aka.ms/iot-devkit-purchase">Get a Kit</a>
     </div>
   </div>
 
