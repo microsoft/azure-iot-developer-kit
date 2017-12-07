@@ -193,6 +193,19 @@
     .masthead-circle {
       border: 1px solid #fff;
     }
+
+    .navicon {
+      background: #fff;
+
+      &:before,
+      &:after {
+        background: #fff;
+      }
+    }
+      
+    .close .navicon {
+      background: transparent;
+    }  
   }
 
   a {
@@ -210,6 +223,7 @@
 
     &:hover {
       border-bottom: 1px solid;
+      margin-bottom: calc(0.5rem - 1px);
     }
   }
 
@@ -224,7 +238,7 @@
     border: 0;
     outline: none;
     color: #fff;
-    background-color: $primary-color;
+    background-color: initial;
     cursor: pointer;
   }
 

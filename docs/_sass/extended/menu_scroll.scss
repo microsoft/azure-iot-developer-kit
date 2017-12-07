@@ -12,12 +12,34 @@
             }
         }
 
+        .navicon {
+            background: $primary-color;
+
+            &:before,
+            &:after {
+                background: $primary-color;
+            }
+        }
+
+        .close .navicon {
+            background: transparent;
+        }
+
         .masthead-circle {
             border: 1px solid $masthead-link-color;
         }
 
         .hidden-links {
             background: #fff;
+
+            .masthead-circle {
+                border: 0;
+            }
+
+            a:hover, 
+            a:active {
+                color: #fff;
+            }
         }
     }
 }

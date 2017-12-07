@@ -195,12 +195,7 @@
   margin-bottom: 2em;
   font-size: 1.25rem;
 
-  .archive__item-teaser {
-    width: 80%;
-    margin: auto;
-  }
-
-  @include breakpoint($medium-wide) {
+  @include breakpoint($large) {
     margin-bottom: 0;
     @include gallery(4 of 12);
 
@@ -215,17 +210,7 @@
     font-size: 1.25rem;
     padding: 2em 0;
 
-    .archive__item-teaser {
-      width: 80%;
-      margin: auto;
-
-      img {
-        transition: none;
-        -webkit-transition: none;
-      }
-    }
-
-    @include breakpoint($medium-wide) {
+    @include breakpoint($large) {
       .archive__item-teaser {
         @include span(6 of 12);
       }
@@ -243,18 +228,7 @@
     font-size: 1.25rem;
     padding: 2em 0;
 
-    .archive__item-teaser {
-      width: 80%;
-      margin: auto;
-
-      img {
-        transition: none;
-        -webkit-transition: none;
-      }
-    }
-
-    @include breakpoint($medium-wide) {
-
+    @include breakpoint($large) {
       .archive__item-teaser {
         @include span(6 of 12 rtl);
       }
@@ -272,17 +246,7 @@
     font-size: 1.25rem;
     padding: 2em 0;
 
-    .archive__item-teaser {
-      width: 80%;
-      margin: auto;
-
-      img {
-        transition: none;
-        -webkit-transition: none;
-      }
-    }
-
-    @include breakpoint($medium-wide) {
+    @include breakpoint($large) {
       text-align: center;
 
       .archive__item-teaser {

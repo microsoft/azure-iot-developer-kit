@@ -3,7 +3,8 @@ layout: splash
 permalink: /
 title: "An all-in-one IoT kit built for the cloud"
 header:
-  overlay_color: "#003c5c"
+  overlay_color: "#082434"
+  overlay_gradient: "120deg, #082434, #0c3f76"
   image_path: /assets/images/landingpage-banner1.png
   call_to_action:
     - label: "Get a Kit"

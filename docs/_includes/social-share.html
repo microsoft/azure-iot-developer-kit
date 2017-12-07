@@ -13,8 +13,10 @@
 
   <div>
     <p>Or share us on</p>
-    <a href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username }}&{% endif %}text={{ page.title }} {{ page.url | absolute_url }}" class="btn btn--twitter" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" class="btn btn--facebook" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i></a>
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" class="btn btn--linkedin" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i></a>
+    <div style="display: inline-block">
+      <a href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username }}&{% endif %}text={{ page.title }} {{ page.url | absolute_url }}" class="btn btn--twitter" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" class="btn btn--facebook" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" class="btn btn--linkedin" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i></a>
+    </div>
   </div>
 </section>
