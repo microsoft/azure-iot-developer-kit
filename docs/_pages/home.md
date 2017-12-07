@@ -32,7 +32,7 @@ part1:
       attach: 
         words: "This eliminates the need to have electronics knowledge and the need to do any wiring or soldering in order to get started prototyping IoT solutions."
         author:
-          photo: /assets/images/user.png
+          photo: /assets/images/testimony-chris-pietschmann.jpg
           name: Chris Pietschmann
           title: BuildAzure.com
 part2:
@@ -45,7 +45,7 @@ part2:
       attach: 
         words: "The sample code included scripts taking advantage of Visual Studio Code’s built-in terminal, so I didn’t have to leave my IDE to use the Azure Portal."
         author:
-          photo: /assets/images/user.png
+          photo: /assets/images/testimony-simon-bisson.jpg
           name: Simon Bisson
           title: InfoWorld
 part3:
@@ -57,11 +57,10 @@ part3:
       btn_label: "Learn more about projects using Azure services"
       image_path: /assets/images/landingpage-banner4.png
       attach: 
-        words: "Customer testimonal starts from here. A customer says this is pretty awesome"
+        words: "Getting excited about this awesome new product from @MicrosoftIoT build a #Cloud powered #IoT app in mins!"
         author:
-          photo: /assets/images/user.png
-          name: John Doe
-          title: Director of Software at Contoso
+          photo: /assets/images/testimony-sciencescope.jpg
+          name: ScienceScope
 projects: "0, 4, 6"
 ---
 
