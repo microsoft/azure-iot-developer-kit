@@ -4,7 +4,7 @@ permalink: /
 title: "An all-in-one IoT kit built for the cloud"
 header:
   overlay_color: "#082434"
-  overlay_gradient: "120deg, #082434, #0c3f76"
+  overlay_gradient: "120deg, #0c3f76, #082434"
   image_path: /assets/images/landingpage-banner1.png
   call_to_action:
     - label: "Get a Kit"
@@ -72,7 +72,7 @@ projects: "0, 4, 6"
 
 <div class="feature__wrapper">
   <div class="landing-page-project">
-    <h2>Highlighted Projects</h2>
+    <h2 class="landing-page-project-title">Highlighted Projects</h2>
     <div class="landing-page-projects">
     
       {% assign projects = page.projects | split: "," %}

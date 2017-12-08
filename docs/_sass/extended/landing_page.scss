@@ -7,6 +7,14 @@
     }
 
     .page__hero-body {
+      .page__title {
+        font-size: 40px;
+      }
+
+      .page__lead {
+        font-size: 20px;
+      }
+
       .landing-page-btn {
         margin: 0 0.5em 1em;
       }
@@ -50,6 +58,7 @@
     }
 
     .page__cta_secondary {
+      font-size: 15px;
       margin-top: 1em;
     }
   }
@@ -104,6 +113,22 @@
           max-width: 360px;
           margin: auto;
         }
+        
+        .archive__item-body {
+          .archive__item-title {
+            font-size: 24px;
+          }
+
+          .archive__item-excerpt {
+            font-size: 15px;
+          }
+        }
+
+        &:hover {
+          .archive__item-title {
+            text-decoration: none;
+          }
+        }
       }
 
       @include breakpoint($large) {
@@ -131,10 +156,14 @@
         }
       }
 
+      .attach-words {
+        font-style: italic;
+      }
+
       .author {
         .author-photo {
           float: left;
-          height: 48px;
+          height: 38px;
           margin-right: 1em;
 
           img {
@@ -146,17 +175,15 @@
         .author-inform {
           p {
             margin: 0;
-            font-size: 16px;
-            font-style: oblique;
-            font-weight: bold;
-            color: #999;
+            font-size: 13px;
+            color: #666;
           }
         }
       }
     }
 
     hr {
-      border-color: #e8e8e8;
+      border-color: #e6e6e6;
     }
   }
 
@@ -165,6 +192,10 @@
     text-align: center;
     margin: auto;
     padding: 0 1em 2em;
+
+    h2.landing-page-project-title {
+      font-size: 24px;
+    }
 
     .landing-page-projects {
       float: left;
@@ -175,7 +206,12 @@
 
         .archive__item {
           a {
+            font-size: 15px;
             color: inherit;
+          }
+
+          .archive__item-excerpt {
+            font-size: 13px;
           }
         }
       }
@@ -185,7 +221,6 @@
   .feature__wrapper{
 
     .landing-page-final-item {
-      background: #f2f2f2;
       padding: 2em 1em;
       width: 100%;
       text-align: center;
@@ -193,7 +228,7 @@
       position: relative;
 
       .landing-page-final-body {
-        font-weight: bold;
+        font-size: 15px;
       }
 
       @include breakpoint($small) {

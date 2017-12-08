@@ -32,15 +32,13 @@ $(document).ready(function(){
     requiredSpace = breakWidths[numOfVisibleItems - 1];
 
     // There is not enough space
-    if (requiredSpace > availableSpace) {
-      $vlinks.children().last().prependTo($hlinks);
-      numOfVisibleItems -= 1;
-      check();
+    if (window.innerWidth < 1024) {
+      $vlinks.children().prependTo($hlinks);
+      numOfVisibleItems = 0;
       // There is more than enough space
-    } else if (availableSpace > breakWidths[numOfVisibleItems]) {
-      $hlinks.children().first().appendTo($vlinks);
-      numOfVisibleItems += 1;
-      check();
+    } else {
+      $hlinks.children().appendTo($vlinks);
+      numOfVisibleItems = numOfItems;
     }
     // Update the button accordingly
     $btn.attr("count", numOfItems - numOfVisibleItems);

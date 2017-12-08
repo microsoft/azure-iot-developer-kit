@@ -212,7 +212,7 @@
 
     @include breakpoint($large) {
       .archive__item-teaser {
-        @include span(6 of 12);
+        @include span(5 of 12);
       }
 
       .archive__item-body {
@@ -230,7 +230,7 @@
 
     @include breakpoint($large) {
       .archive__item-teaser {
-        @include span(6 of 12 rtl);
+        @include span(5 of 12 rtl);
       }
 
       .archive__item-body {
@@ -251,7 +251,7 @@
 
       .archive__item-teaser {
         margin: 0 auto;
-        width: span(6 of 12);
+        width: span(5 of 12);
       }
 
       .archive__item-body {

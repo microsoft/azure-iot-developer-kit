@@ -48,7 +48,7 @@
           {% if f.attach %}
             <hr>
             <div class="archive__item-excerpt">
-              <p> "{{ f.attach.words }}" </p>
+              <p class="attach-words"> "{{ f.attach.words }}" </p>
               <div class="author">
                 {% if f.attach.author.photo %}
                   <div class="author-photo">
