@@ -8,11 +8,21 @@
 
     .page__hero-body {
       .page__title {
-        font-size: 40px;
+        font-size: 28px;
       }
 
       .page__lead {
-        font-size: 20px;
+        font-size: 16px;
+      }
+
+      @include breakpoint($medium) {
+        .page__title {
+          font-size: 40px;
+        }
+
+        .page__lead {
+          font-size: 20px;
+        }
       }
 
       .landing-page-btn {
@@ -36,10 +46,10 @@
     @include breakpoint($large) {
       .page__hero-teaser {
         position: relative;
-        width: 65%;
+        width: 60%;
         margin-bottom: -6.8em;
         margin-left: -2em;
-        margin-right: -15%;
+        margin-right: -10%;
     
         .page__hero-teaser-image {
           width: 100%;
@@ -58,7 +68,7 @@
     }
 
     .page__cta_secondary {
-      font-size: 15px;
+      font-size: 16px;
       margin-top: 1em;
     }
   }
@@ -94,6 +104,10 @@
     padding-left: 0;
     padding-right: 0;
 
+    h2 {
+      font-weight: normal;
+    }
+
     .feature__wrapper {
       max-width: $x-large;
       margin: auto;
@@ -110,7 +124,7 @@
 
       > * > .archive__item {
         .archive__item-teaser {
-          max-width: 360px;
+          max-width: 400px;
           margin: auto;
         }
         
@@ -120,7 +134,7 @@
           }
 
           .archive__item-excerpt {
-            font-size: 15px;
+            font-size: 16px;
           }
         }
 
@@ -135,7 +149,7 @@
         > * > .archive__item {
 
           .archive__item-teaser {
-            max-width: none;
+            max-width: 520px;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -163,7 +177,7 @@
       .author {
         .author-photo {
           float: left;
-          height: 38px;
+          height: 42px;
           margin-right: 1em;
 
           img {
@@ -175,7 +189,7 @@
         .author-inform {
           p {
             margin: 0;
-            font-size: 13px;
+            font-size: 14px;
             color: #666;
           }
         }
@@ -206,12 +220,12 @@
 
         .archive__item {
           a {
-            font-size: 15px;
+            font-size: 16px;
             color: inherit;
           }
 
           .archive__item-excerpt {
-            font-size: 13px;
+            font-size: 14px;
           }
         }
       }
@@ -228,7 +242,7 @@
       position: relative;
 
       .landing-page-final-body {
-        font-size: 15px;
+        font-size: 16px;
       }
 
       @include breakpoint($small) {
