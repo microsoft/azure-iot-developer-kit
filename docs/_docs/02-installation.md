@@ -18,21 +18,21 @@ We suggest you use the [installation package]({{"/docs/get-started/#a-download-l
 
 ### Step 1. Install Azure CLI 2.0 MSI
 
-Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli#windows){:target="_blank"} to install Azure CLI 2.0 with MSI:
+Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli#windows) to install Azure CLI 2.0 with MSI:
 
-Download and run MSI for the Windows command line from: [https://aka.ms/InstallAzureCliWindows](https://aka.ms/InstallAzureCliWindows){:target="_blank"}
+Download and run MSI for the Windows command line from: [https://aka.ms/InstallAzureCliWindows](https://aka.ms/InstallAzureCliWindows)
 
 ### Step 2. Install Arduino IDE
 
-The Visual Studio Code Arduino extension relies on the Arduino IDE. Download and install the [Arduino IDE for Windows](https://www.arduino.cc/en/Main/Software){:target="_blank"}. Make sure you download the **Windows Installer** version.
+The Visual Studio Code Arduino extension relies on the Arduino IDE. Download and install the [Arduino IDE for Windows](https://www.arduino.cc/en/Main/Software). Make sure you download the **Windows Installer** version.
 
 ### Step 3. Install Visual Studio Code
 
-Download and install [Visual Studio Code for Windows](https://code.visualstudio.com/){:target="_blank"}. This is the primary development tool for building DevKit IoT applications.
+Download and install [Visual Studio Code for Windows](https://code.visualstudio.com/). This is the primary development tool for building DevKit IoT applications.
 
 ### Step 4. Download the latest package
 
-1. Download [Windows Installer](https://nodejs.org/en/download/){:target="_blank"} to install Node.js.
+1. Download [Windows Installer](https://nodejs.org/en/download/) to install Node.js.
 
 2. Download the .zip file that contains required task scripts for DevKit development in VS Code.
 
@@ -72,9 +72,9 @@ Add the DevKit board by using Board Manager in Visual Studio Code.
 
 ### Step 7. Install ST-Link drivers
 
-[ST-Link/V2](http://www.st.com/en/development-tools/st-link-v2.html){:target="_blank"} driver is required to communicate with the DevKit. 
+[ST-Link/V2](http://www.st.com/en/development-tools/st-link-v2.html) driver is required to communicate with the DevKit. 
 
-1. Download the driver from [STMicro product page](http://www.st.com/en/embedded-software/stsw-link009.html){:target="_blank"}.
+1. Download the driver from [STMicro product page](http://www.st.com/en/embedded-software/stsw-link009.html).
 
 2. Extract the .zip file and double click `stlink_winusb_install.bat` to install:
  ![installation-st-link]({{"/assets/images/installation-st-link-win.png" | absolute_url}})
@@ -85,11 +85,11 @@ You now have all the necessary tools and packages installed for Windows.
 
 ### Step 1. Install Azure CLI 2.0
 
-Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli#macos){:target="_blank"} to install Azure CLI 2.0. We recommend install with [Homebrew](https://brew.sh/){:target="_blank"}:
+Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli#macos) to install Azure CLI 2.0. We recommend install with [Homebrew](https://brew.sh/):
 
-1. If you don't have it already, install Homebrew by following the [Homebrew installation instructions](https://docs.brew.sh/Installation.html){:target="_blank"}.
+1. If you don't have it already, install Homebrew by following the [Homebrew installation instructions](https://docs.brew.sh/Installation.html).
 
-2. If you have previously installed the CLI manually, follow the [manual uninstall](manual uninstall){:target="blank"} instructions.
+2. If you have previously installed the CLI manually, follow the [manual uninstall](manual uninstall) instructions.
 
 3. Update your local Homebrew repositories.
   ```bash
@@ -105,7 +105,7 @@ Follow the [official guide](https://docs.microsoft.com/en-us/cli/azure/install-a
 
 The Visual Studio Code Arduino extension relies on the Arduino IDE.
 
-1. Download the [Arduino IDE for macOS](https://www.arduino.cc/en/Main/Software){:target="_blank"}.
+1. Download the [Arduino IDE for macOS](https://www.arduino.cc/en/Main/Software).
 
 2. Extract downloaded .zip file.
 
@@ -113,11 +113,11 @@ The Visual Studio Code Arduino extension relies on the Arduino IDE.
 
 ### Step 3. Install Visual Studio Code
 
-Download and install [Visual Studio Code for macOS](https://code.visualstudio.com/){:target="_blank"}. This is the primary development tool for building DevKit IoT applications.
+Download and install [Visual Studio Code for macOS](https://code.visualstudio.com/). This is the primary development tool for building DevKit IoT applications.
 
 ### Step 4. Download the latest package
 
-1. Install Node.js. You can use popular macOS package manager [Homebrew](https://brew.sh/){:target="_blank"} or [pre-built installer](https://nodejs.org/en/download/){:target="_blank"} to install it.
+1. Install Node.js. You can use popular macOS package manager [Homebrew](https://brew.sh/){:target="_blank"} or [pre-built installer](https://nodejs.org/en/download/) to install it.
 
 2. Download the .zip file that contains required task scripts for DevKit development in VS Code.
 
