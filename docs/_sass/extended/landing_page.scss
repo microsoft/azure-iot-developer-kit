@@ -1,6 +1,8 @@
 .layout--splash {
 
   .page__hero--overlay {
+    margin-bottom: 0;
+
     .page__hero-teaser {
       float: left;
       margin: -6.8em -2em -3.4em;
@@ -101,11 +103,31 @@
   
   #main {
     max-width: 100%;
+    margin-top: 0;
     padding-left: 0;
     padding-right: 0;
+    animation: none;
+    -webkit-animation: none;
 
     h2 {
       font-weight: normal;
+    }
+
+    .landing-page-video {
+      animation: intro 0.3s both;
+      -webkit-animation: intro 0.3s both;
+      padding: 0 2em;
+      max-width: $x-large;
+      margin: 1em auto;
+
+      @include breakpoint($large) {
+        padding: 0 1em;
+
+        p {
+          margin: 0;
+          @include prefix(0.5 of 12);
+        }
+      }
     }
 
     .feature__wrapper {
@@ -123,6 +145,8 @@
       }
 
       > * > .archive__item {
+        padding: 0 1em;
+
         .archive__item-teaser {
           max-width: 400px;
           margin: auto;
@@ -147,6 +171,7 @@
 
       @include breakpoint($large) {
         > * > .archive__item {
+          padding: 0;
 
           .archive__item-teaser {
             max-width: 520px;
@@ -270,6 +295,10 @@
         }
       }
     }
+  }
+
+  .page__share__inline {
+    padding-top: 40px;
   }
 
   .page__footer {

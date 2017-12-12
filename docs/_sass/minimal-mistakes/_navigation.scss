@@ -187,7 +187,9 @@
     }
 
     .hidden-links {
-      background: $primary-color;
+      a {
+        color: $link-color;
+      }
     }
 
     .masthead-circle {
@@ -303,8 +305,7 @@
       font-size: $type-size-5;
 
       &:hover {
-        color: #fff;
-        background: #66a3c2;
+        color: $link-color-hover;
         border-bottom: none;
       }
     }

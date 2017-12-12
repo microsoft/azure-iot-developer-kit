@@ -5,11 +5,6 @@
     .greedy-nav {
         a {
             color: $masthead-link-color;
-    
-            &:hover,
-            &:active {
-                color: $masthead-link-color-hover;
-            }
         }
 
         .navicon {
@@ -34,11 +29,6 @@
 
             .masthead-circle {
                 border: 0;
-            }
-
-            a:hover, 
-            a:active {
-                color: #fff;
             }
         }
     }

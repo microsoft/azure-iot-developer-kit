@@ -64,6 +64,10 @@ part3:
 projects: "2, 5, 6"
 ---
 
+<div class="landing-page-video">
+  <p><strong> What's new: </strong> DevKit v1.2 has been released with macOS one-click installation experience. </p>
+</div>
+
 {% include feature_row id="part1" type="right" %}
 
 {% include feature_row id="part2" type="left" %}
@@ -98,3 +102,5 @@ projects: "2, 5, 6"
   </div>
 
 </div>
+
+{% include social-share-inline.html %}
