@@ -1,7 +1,7 @@
 ---
 title: "Air Traffic Control Simulator"
 permalink: /docs/projects/air-traffic-control-simulator/
-excerpt: "Build a comprehensive IoT solution that demonstrates some of the very best features Microsoft Azure has to offer."
+excerpt: "A comprehensive IoT solution with the very best features Microsoft Azure has to offer."
 part: 1
 header:
   overlay_image: /assets/images/mini-solution/air-traffic-control-simulator/lab2/app-in-flight.png
