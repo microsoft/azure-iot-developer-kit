@@ -26,7 +26,7 @@ part1:
   content:
     - title: "Essential modules and sensors on the board save your time and money"
       excerpt: "Wifi, OLED display, headphone, microphone, sensors like temperature, humidity, motion, pressure, you will love how much time and money you save to build your best IoT project."
-      url: "/docs/get-started"
+      url: "http://www.mxchip.com/az3166"
       btn_label: "Learn more about IoT DevKit hardware spec"
       image_path: /assets/images/landingpage-banner2.png
       attach: 
@@ -39,7 +39,7 @@ part2:
   content:
     - title: "Visual Studio Code streamlines your development experiences"
       excerpt: "Visual Studio Code is lightweight and your goto editor of choice. It is your all-in-one tool from coding the first line to deploying to the cloud."
-      url: "/docs/projects"
+      url: "/docs/get-started"
       btn_label: "Learn more about the one-click installation"
       image_path: /assets/images/landingpage-banner3.png
       attach: 
@@ -53,7 +53,7 @@ part3:
   content:
     - title: "Cloud empowers your IoT solutions to next level"
       excerpt: "Code your IoT solution in the cloud! Using Azure services like IoT Hub, Stream Analytics, Machine Learning to build the best IoT solutions."
-      url: "http://www.mxchip.com/az3166"
+      url: "/docs/projects"
       btn_label: "Learn more about projects using Azure services"
       image_path: /assets/images/landingpage-banner4.png
       attach: 
@@ -61,7 +61,7 @@ part3:
         author:
           photo: /assets/images/testimony-sciencescope.jpg
           name: ScienceScope
-projects: "0, 4, 6"
+projects: "2, 5, 6"
 ---
 
 {% include feature_row id="part1" type="right" %}

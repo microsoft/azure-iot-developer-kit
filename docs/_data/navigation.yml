@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Get Started"
+    url: /docs/get-started/
   - title: "Docs"
     url: /docs/get-started/
   - title: "Projects"
