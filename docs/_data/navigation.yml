@@ -4,10 +4,11 @@ main:
     url: /docs/get-started/
   - title: "Projects"
     url: /docs/projects/
-  - title: "Versions"
-    url: /versions/
   - title: "Blog"
     url: https://blogs.msdn.microsoft.com/iotdev/
+  - title: "v1.2"
+    url: /versions/
+    class: "masthead-circle"
 
 
 # documentation links

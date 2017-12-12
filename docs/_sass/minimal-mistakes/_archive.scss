@@ -189,17 +189,15 @@
 
 .feature__wrapper {
   @include clearfix();
-  margin-bottom: 2em;
-  border-bottom: 1px solid $border-color;
 }
 
 .feature__item {
   margin-bottom: 2em;
   font-size: 1.25rem;
 
-  @include breakpoint($small) {
+  @include breakpoint($large) {
     margin-bottom: 0;
-    @include gallery(4 of 12);
+    @include gallery(5 of 12);
 
     .feature__item-teaser {
       max-height: 200px;
@@ -210,20 +208,17 @@
   &--left {
     @include full();
     font-size: 1.25rem;
+    padding: 2em 0;
 
-    .archive__item-teaser {
-      margin-bottom: 2em;
-    }
-
-    @include breakpoint($small) {
+    @include breakpoint($large) {
       .archive__item-teaser {
-        @include span(5 of 12);
+        @include span(6 of 12);
       }
 
       .archive__item-body {
-        @include span(7 of 12 last);
+        @include span(6 of 12 last);
         @include prefix(0.5 of 12);
-        @include suffix(1 of 12);
+        @include suffix(0.5 of 12);
       }
     }
   }
@@ -231,22 +226,17 @@
   &--right {
     @include full();
     font-size: 1.25rem;
+    padding: 2em 0;
 
-    .archive__item-teaser {
-      margin-bottom: 2em;
-    }
-
-    @include breakpoint($small) {
-      text-align: right;
-
+    @include breakpoint($large) {
       .archive__item-teaser {
-        @include span(5 of 12 rtl);
+        @include span(6 of 12 rtl);
       }
 
       .archive__item-body {
-        @include span(7 of 12 last rtl);
+        @include span(6 of 12 last rtl);
         @include prefix(0.5 of 12);
-        @include suffix(1 of 12);
+        @include suffix(0.5 of 12);
       }
     }
   }
@@ -254,22 +244,19 @@
   &--center {
     @include full();
     font-size: 1.25rem;
+    padding: 2em 0;
 
-    .archive__item-teaser {
-      margin-bottom: 2em;
-    }
-
-    @include breakpoint($small) {
+    @include breakpoint($large) {
       text-align: center;
 
       .archive__item-teaser {
         margin: 0 auto;
-        width: span(5 of 12);
+        width: span(6 of 12);
       }
 
       .archive__item-body {
         margin: 0 auto;
-        width: span(7 of 12);
+        width: span(6 of 12);
       }
     }
   }
