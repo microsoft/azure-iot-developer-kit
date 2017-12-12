@@ -11,7 +11,7 @@ last_modified_at: 2017-05-05T10:16:34-04:00
 
 ### Is the DevKit Microsoft hardware?
 
-No. The hardware manufacturer is [MXChip](http://www.mxchip.com){:target="_blank"}, an established player for IoT hardware. Through a partnership between MXChip and Microsoft, we rapidly iterated on the design and engineering of an Arduino compatible board with rich pre-installed sensors. Microsoft's goal is to boost productivity for developers creating and prototyping IoT applications with awesome Visual Studio Code tooling that leverages the power of Microsoft Azure.
+No. The hardware manufacturer is [MXChip](http://www.mxchip.com), an established player for IoT hardware. Through a partnership between MXChip and Microsoft, we rapidly iterated on the design and engineering of an Arduino compatible board with rich pre-installed sensors. Microsoft's goal is to boost productivity for developers creating and prototyping IoT applications with awesome Visual Studio Code tooling that leverages the power of Microsoft Azure.
 
 ### Why Arduino compatible?
 
@@ -19,13 +19,13 @@ Based on industry data and customer research, we believe Arduino has a powerful 
 
 ### Are you going to open-source the product?
 
-Yes, we open source the firmware, toolchains, and all samples. Also, the board itself will be [open-source hardware](https://www.arduino.cc/en/Main/FAQ#toc3){:target="_blank"}. That means we will release all original hardware design files.
+Yes, we open source the firmware, toolchains, and all samples. Also, the board itself will be [open-source hardware](https://www.arduino.cc/en/Main/FAQ#toc3). That means we will release all original hardware design files.
 
 Our plan is to do that as soon as we reach a stage where the entire framework is stable.
 
 ### Where can I buy it?
 
-You can purchase the kit from our hardware partner's product page: [https://aka.ms/iot-devkit-purchase](https://aka.ms/iot-devkit-purchase){:target="_blank"}
+You can purchase the kit from our hardware partner's product page: [https://aka.ms/iot-devkit-purchase](https://aka.ms/iot-devkit-purchase)
 
 ## Installation
 
@@ -41,7 +41,7 @@ To resolve, press any key within the command window area and you see **select** 
 
 ### Homebrew permission error on macOS.
 
-When you run `install.sh` to install development environment on macOS. You may get a Homebrew perssion error:
+When you run `install.sh` to install development environment on macOS. You may get a Homebrew permission error:
 
 ![Homebrew permission error]({{"/assets/images/faq/brew-permission-error.png" | absolute_url }})
 
@@ -59,7 +59,7 @@ Sometimes SmartScreen prevents applications you know are not bad – for example
 
 ![Smartscreen]({{"/assets/images/faq/smartscreen.png" | absolute_url }})
 
-To resolve, click on the **'More info'** link and then click the **'Run anyway'** button. You can check this [knowledge base article](https://www.itsupportguides.com/knowledge-base/windows-10/windows-defender-smartscreen-prevented-an-unrecognized-app-error/){:target="_blank"} for more details.
+To resolve, click on the **'More info'** link and then click the **'Run anyway'** button. You can check this [knowledge base article](https://www.itsupportguides.com/knowledge-base/windows-10/windows-defender-smartscreen-prevented-an-unrecognized-app-error/) for more details.
 
 ## Wi-Fi Configuration
 
@@ -83,11 +83,11 @@ To fix, delete the web browser history that includes login data and run the prov
 
 ### Page hangs when log in Azure.
 
-This issue can occur if you have logged in mutliple Azure subscriptions in the browser.
+This issue can occur if you have logged in multiple Azure subscriptions in the browser.
 
-To resolve the issue, please clear the cache and cookies for the browser. 
+To resolve the issue, please clear the browser's cache and cookies. 
 
-For more details please check [I can't sign in to manage my Azure subscription](https://docs.microsoft.com/en-us/azure/billing/billing-cannot-login-subscription){:target="_blank"}.
+For more details please check [I can't sign in to manage my Azure subscription](https://docs.microsoft.com/en-us/azure/billing/billing-cannot-login-subscription).
 
 ### Creating new Azure IoT Hub fails.
 
@@ -95,7 +95,7 @@ You may encounter the error message as the screen below:
 
 ![Only one IoT Hub]({{"/assets/images/faq/iothub.png" | absolute_url }})
 
-This is because Azure IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal){:target="_blank"}. In this case, you may select the existing IoT Hub instead of trying to create a new one.
+This is because Azure IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal). In this case, you may select the existing IoT Hub instead of trying to create a new one.
 
 ## Development
 
@@ -126,7 +126,7 @@ It is caused by the incorrect warning handling between Visual Studio Code Arduin
 
 ### Compilation error for Azure Function.
 
-When the mini solution of Shake-Shake and DevKit Translater do not work, in Azure portal, you got the following error for the Azure Function you deployed:
+When the mini solution of Shake-Shake and DevKit Translator do not work, in Azure portal, you got the following error for the Azure Function you deployed:
 
 ```2017-11-15T03:24:23.426 Function compilation error
 2017-11-15T03:24:23.426 run.csx(11,23): error CS0234: The type or namespace name 'Devices' does not exist in the namespace 'Microsoft.Azure' (are you missing an assembly reference?)
@@ -136,7 +136,7 @@ When the mini solution of Shake-Shake and DevKit Translater do not work, in Azur
 And you could not find porject.lock.json in files of the Azure Function. This is caused by a new  [Azure Function issue](https://github.com/Azure/Azure-Functions/issues/590). 
 
 Here is the workaround:
-1. In 'Platform features' tab of the deployed Function App, click 'Application settings'.
+1. In `Platform features` tab of the deployed Function App, click `Application settings`.
 2. Add a new Application setting named `WEBSITE_USE_PLACEHOLDER` with value 0.
 3. Save and Restart the Function App.
 
