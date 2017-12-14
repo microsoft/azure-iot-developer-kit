@@ -96,8 +96,13 @@ projects: "2, 5, 6"
 
   <div class="feature__wrapper">
     <div class="landing-page-final-item">
-      <p class="landing-page-final-body">Build your own IoT application with Azure and Visual Studio Code helped today.</p>
-      <a class="landing-page-final-teaser landing-page-btn landing-page-btn-blue btn--large" href="https://aka.ms/iot-devkit-purchase">Get a Kit</a>
+      <div class="landing-page-final-teaser">
+        <img src="{{ '/assets/images/landingpage-get-a-kit.png' | absolute_url }}">
+      </div>
+      <div class="landing-page-final-body">
+        <p class="landing-page-final-title">Build your own IoT application with Azure and Visual Studio Code helped today.</p>
+        <a class="landing-page-btn landing-page-btn-blue btn--large" href="https://aka.ms/iot-devkit-purchase">Get a Kit</a>
+      </div>
     </div>
   </div>
 
