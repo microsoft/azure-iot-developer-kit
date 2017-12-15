@@ -65,7 +65,7 @@ projects: "2, 5, 6"
 ---
 
 <div class="landing-page-video">
-  <p><strong> What's new: </strong> DevKit v1.2 has been released with macOS one-click installation experience. </p>
+  {% include whatsnew.html news = "Use DevKit with Microsoft IoT Central to build your own IoT solution within 5 minutes." link = "Learn more about Microsoft IoT Central" url="https://docs.microsoft.com/en-us/microsoft-iot-central/howto-connect-devkit" %}
 </div>
 
 {% include feature_row id="part1" type="right" %}
