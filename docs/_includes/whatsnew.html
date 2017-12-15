@@ -1,0 +1,8 @@
+<div class="whats-new">
+    {% assign news = include.news %}
+    <p><span class="tag">What's New</span> {{ news }} </p>
+
+    {% assign url = include.url %}
+    {% assign link = include.link %}
+    <p><a href="{{ url }}" target="_blank">{{ link }}</a></p>
+</div>

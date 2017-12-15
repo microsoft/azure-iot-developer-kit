@@ -130,6 +130,31 @@
       }
     }
 
+    .whats-new {
+      font-size: 16px;
+
+      .tag {
+        font-size: $type-size-6;
+        background: $warning-color;
+        color: $background-color;
+        margin-right: 0.42em;
+        padding: 0.2em 0.75em;
+      }
+
+      @include breakpoint($large) {
+        display: flex;
+        justify-content: space-between;
+
+        > p:first-child {
+          flex-grow: 3;
+        }
+        > p:last-child {
+          flex-grow: 1;
+          text-align: right;
+        }
+      }
+    }
+
     .feature__wrapper {
       max-width: $x-large;
       margin: auto;
