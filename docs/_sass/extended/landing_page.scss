@@ -260,38 +260,37 @@
   .feature__wrapper{
 
     .landing-page-final-item {
-      padding: 2em 1em;
+      padding: 1em;
       width: 100%;
       text-align: center;
       float: left;
       position: relative;
 
-      .landing-page-final-body {
-        font-size: 16px;
+      .landing-page-final-title {
+        font-size: 24px;
       }
 
-      @include breakpoint($small) {
-        .landing-page-final-body {
-          margin: 0;
-          width: 60%;
-          float: left;
-        }
+      .landing-page-final-teaser {
+        max-width: 300px;
+        margin: 0 auto 1em;
+      }
+
+      @include breakpoint($large) {
+        text-align: left;
 
         .landing-page-final-teaser {
+          max-width: none;
+          margin: 0;
+          float: left;
+          width: 25%;
+        }
+
+        .landing-page-final-body {
           position: absolute;
           top: 50%;
           right: 1em;
           transform: translateY(-50%);
-          max-width: 30%;
-          float: right;
-        }
-      }
-
-      @include breakpoint($medium-wide) {
-        padding: 2em 20%;
-
-        .landing-page-final-teaser {
-          right: 20%;
+          max-width: 65%;
         }
       }
     }
