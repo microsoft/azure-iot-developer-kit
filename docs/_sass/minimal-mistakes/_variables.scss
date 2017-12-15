@@ -58,11 +58,11 @@ $body-color                 : #fff !default;
 $background-color           : #fff !default;
 $code-background-color      : #fafafa !default;
 $code-background-color-dark : $light-gray !default;
-$text-color                 : $dark-gray !default;
+$text-color                 : #333 !default;
 $border-color               : $lighter-gray !default;
 
 // $primary-color              : #7a8288 !default;
-$primary-color              : #1e6bb8 !default;
+$primary-color              : #006699 !default;
 $success-color              : #159957 !default;
 $warning-color              : #f89406 !default;
 $danger-color               : #ee5f5b !default;
@@ -81,10 +81,10 @@ $twitter-color              : #55acee !default;
 
 /* links */
 $link-color                 : $primary-color !default;
-$link-color-hover           : mix(#000, $link-color, 25%) !default;
+$link-color-hover           : #66a3c2 !default;
 $link-color-visited         : mix(#fff, $link-color, 25%) !default;
 $masthead-link-color        : $primary-color !default;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%) !default;
+$masthead-link-color-hover  : #66a3c2 !default;
 
 
 /*
@@ -114,5 +114,5 @@ $right-sidebar-width-wide   : 320px !default;
 $border-radius              : 4px !default;
 $box-shadow                 : 0 0 2px rgba(0, 0, 0, 0.075) !default;
 $navicon-width              : 1.5rem !default;
-$navicon-height             : 0.25rem !default;
+$navicon-height             : 0.1rem !default;
 $global-transition          : all 0.2s ease-in-out !default;

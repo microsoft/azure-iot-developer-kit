@@ -232,7 +232,7 @@ body:hover .visually-hidden button {
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
-  background: #fff;
+  background: $primary-color;
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -244,17 +244,17 @@ body:hover .visually-hidden button {
     left: 0;
     width: $navicon-width;
     height: $navicon-height;
-    background: #fff;
+    background: $primary-color;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
 
   &:before {
-    top: (-2 * $navicon-height);
+    top: -0.5rem;
   }
 
   &:after {
-    bottom: (-2 * $navicon-height);
+    bottom: -0.5rem;
   }
 }
 

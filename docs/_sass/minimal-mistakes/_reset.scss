@@ -78,6 +78,10 @@ audio:not([controls]) {
 
 a {
   color: $link-color;
+
+  &:hover {
+    color: $link-color-hover
+  }
 }
 
 /* Apply focus state */

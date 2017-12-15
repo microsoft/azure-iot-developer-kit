@@ -1,6 +1,7 @@
 
 @import "minimal-mistakes/variables";
 @import "minimal-mistakes/vendor/breakpoint/breakpoint";
+@import "minimal-mistakes/vendor/susy/susy";
 
 @import 'extended/menu_scroll';
 @import 'extended/toc';
@@ -8,3 +9,4 @@
 @import 'extended/feedback';
 @import 'extended/projects';
 @import 'extended/faq_menu';
+@import 'extended/landing_page';

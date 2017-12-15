@@ -65,6 +65,8 @@
         faqMenu();
 
         feedbackButtonFixed();
+
+        landingPageConfig();
     };
 
     $.closeReportIssue = function() {
@@ -340,6 +342,19 @@
         } else {
             $('.faq-back-to-top').css('display', 'none');
         }
+    }
+
+    var landingPageConfig = function() {
+        var thirdProjectDisappear = function() {
+            if (600 <= window.innerWidth && window.innerWidth < 768) {
+                $('.layout--splash .grid__item:nth-child(3)').css('display', 'none');
+            } else {
+                $('.layout--splash .grid__item:nth-child(3)').css('display', 'block');
+            }
+        }
+
+        thirdProjectDisappear();
+        $(window).resize(thirdProjectDisappear);
     }
 
 }(jQuery, window));

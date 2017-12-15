@@ -22,58 +22,71 @@
   {% comment %} Overlay Image {% endcomment %}
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper" style="{% if page.header.align %}text-align: {{page.header.align}};{% endif %}">
-      <h1 class="page__title" itemprop="headline">
-        {% if paginator and site.paginate_show_page_num %}
-          {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
-        {% else %}
-          {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
-        {% endif %}
-        {% if page.title_sup %}
-          <sup>{{ page.title_sup }}</sup>
-        {% endif %}
-      </h1>
-      {% if page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% endif %}
-      {% if site.read_time and page.read_time %}
-        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
-      {% endif %}
-      <!--{% if page.header.cta_url %}
-        <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large">{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
-      {% endif %}-->
-      {% if page.header.call_to_action %}
-        <div>
-        {% for cta in page.header.call_to_action %}
 
-          {% if cta.url contains "://" %}
-            {% capture cta_path %}{{ cta.url }}{% endcapture %}
+      {% if page.header.image_path %}
+      <div class="page__hero-teaser">
+        <img src="{{ page.header.image_path | absolute_url }}" class="page__hero-teaser-image">
+      </div>
+      <div class="page__hero-body">
+      {% endif %}
+
+        <h1 class="page__title" itemprop="headline">
+          {% if paginator and site.paginate_show_page_num %}
+            {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
           {% else %}
-            {% capture cta_path %}{{ cta.url | absolute_url }}{% endcapture %}
+            {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
           {% endif %}
-
-          <a href="{{ cta_path }}" class="btn btn--light-outline btn--large">{{ cta.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
-
-        {% endfor %}
-        </div>
-      {% endif %}
-      <!-- Secondary actions -->
-      {% if page.header.call_to_action_secondary %}
-      
-        {% if page.header.call_to_action_secondary.url contains "://" %}
-          {% capture cta_sec_path %}{{ page.header.call_to_action_secondary.url }}{% endcapture %}
-        {% else %}
-          {% capture cta_sec_path %}{{ page.header.call_to_action_secondary.url | absolute_url }}{% endcapture %}
+          {% if page.title_sup %}
+            <sup>{{ page.title_sup }}</sup>
+          {% endif %}
+        </h1>
+        {% if page.excerpt %}
+          <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
         {% endif %}
-        <p class="page__cta_secondary">
-          <a href="{{ cta_sec_path }}" target="_blank">{{ page.header.call_to_action_secondary.label }}</a>
-        </p>
+        {% if site.read_time and page.read_time %}
+          <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+        {% endif %}
+        <!--{% if page.header.cta_url %}
+          <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large">{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+        {% endif %}-->
+        {% if page.header.call_to_action %}
+          <div>
+          {% for cta in page.header.call_to_action %}
+
+            {% if cta.url contains "://" %}
+              {% capture cta_path %}{{ cta.url }}{% endcapture %}
+            {% else %}
+              {% capture cta_path %}{{ cta.url | absolute_url }}{% endcapture %}
+            {% endif %}
+
+            <a href="{{ cta_path }}" class="{% if cta.btn_class %}{{ cta.btn_class }}{% endif %} btn--large">{{ cta.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
+
+          {% endfor %}
+          </div>
+        {% endif %}
+        <!-- Secondary actions -->
+        {% if page.header.call_to_action_secondary %}
+        
+          {% if page.header.call_to_action_secondary.url contains "://" %}
+            {% capture cta_sec_path %}{{ page.header.call_to_action_secondary.url }}{% endcapture %}
+          {% else %}
+            {% capture cta_sec_path %}{{ page.header.call_to_action_secondary.url | absolute_url }}{% endcapture %}
+          {% endif %}
+          <p class="page__cta_secondary">
+            <a href="{{ cta_sec_path }}" target="_blank">{{ page.header.call_to_action_secondary.label }}</a>
+          </p>
+        {% endif %}
+
+        {% if page.header.extra_logo %}
+          {% for extra in page.header.extra_logo %}
+            <a class="page__extra-logo" href="{{ extra.url }}" target="_blank" style="background: url({{ extra.image_path | absolute_url }});"></a>
+          {% endfor %}
+        {% endif %}
+      
+      {% if page.header.image_path %}
+      </div>
       {% endif %}
 
-      {% if page.header.extra_logo %}
-        {% for extra in page.header.extra_logo %}
-          <a class="page__extra-logo" href="{{ extra.url }}" target="_blank" style="background: url({{ extra.image_path | absolute_url }});"></a>
-        {% endfor %}
-      {% endif %}
     </div>
   {% comment %} Hero Image {% endcomment %}
   {% else %}

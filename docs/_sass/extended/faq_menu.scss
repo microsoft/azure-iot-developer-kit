@@ -6,7 +6,7 @@
 
   li.faq-menu-li {
     font-size: 16px;
-    color: #1e6bb8;
+    color: $primary-color;
   }
 
   a.faq-menu-a {
@@ -18,7 +18,7 @@
     @include breakpoint($large) {
       visibility: visible;
       margin: 26px 0 0 0;
-      border-top: 1px solid #1e6bb8;
+      border-top: 1px solid $primary-color;
     }
   }
 
