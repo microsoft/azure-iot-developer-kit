@@ -140,6 +140,13 @@ Here is the workaround:
 2. Add a new Application setting named `WEBSITE_USE_PLACEHOLDER` with value 0.
 3. Save and Restart the Function App.
 
+### Get "serialport.node" error when using `task device-upload`
+
+If the Node.js installed on your machine is not a LTS one, you might get below error when using the `task device-upload`:
+![Node.js not LTS]({{"/assets/images/faq/node-lts.png" | absolute_url }})
+
+To resolve, please uninstall the existing Node.js and then re-install [the package](https://microsoft.github.io/azure-iot-developer-kit/docs/get-started/#step-5-prepare-the-development-environment).
+
 {% include social-share.html %}
 
 [![Back to Top]({{"/assets/images/faq-back-to-top.png" | absolute_url }})](#){: .faq-back-to-top}
