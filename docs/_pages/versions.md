@@ -7,6 +7,23 @@ last_modified_at: 2017-10-23
 
 {% include toc icon="columns" %}
 
+## Version 1.2.2 (December 20)
+
+We were focusing on the script refinement in this release.
+
+### Release Summary
+
+* Development Tools
+  * Improved MacOS installation script to handle error friendly.
+  * Refactored Windows installation script to improve code quality.
+  * Refined VS Code task for mini-solutions to improve code quality.
+
+### Downloads
+
+- [Installation Package 1.2.2 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.2.2.35.zip).
+- [Installation Package 1.2.2 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.2.2.35.zip).
+- [Firmware 1.2.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
+
 ## Version 1.2.1 (November 22)
 
 The new Audio library gives the ability to continuous recording voice through the microphone.
