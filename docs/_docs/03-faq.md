@@ -147,6 +147,28 @@ If the Node.js installed on your machine is not a LTS one, you might get below e
 
 To resolve, please uninstall the existing Node.js and then re-install [the package](https://microsoft.github.io/azure-iot-developer-kit/docs/get-started/#step-5-prepare-the-development-environment).
 
+### Get "Error Presented: #include errors detected" when opening a project
+
+The error message is **Error Presented: #include errors detected. Please update your includePath.**
+
+This is an issue coming from the [Microsoft C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+Switch the IntelliSense engine to "**Tag Parser**" can fix this issue:
+
+1. Press F1 and key in 'settings' and select the `Preference: Open User Settings`
+
+![vsc-intellisense-issue-1]({{"/assets/images/faq/vsc-intellisense-1.png" | absolute_url }})
+
+then add this setting to your user settings
+![vsc-intellisense-issue-2]({{"/assets/images/faq/vsc-intellisense-2.png" | absolute_url }})
+
+2. Press F1 and key in 'cpp' and select the C/Cpp: Edit Configurations...
+![vsc-intellisense-issue-3]({{"/assets/images/faq/vsc-intellisense-3.png" | absolute_url }})
+
+this will open / create the **c_cpp_properties.json** file, add the path of Arduino package into the include path:
+![vsc-intellisense-issue-4]({{"/assets/images/faq/vsc-intellisense-4.png" | absolute_url }})
+
+You can get more detail from [C/C++ for VS Code](https://code.visualstudio.com/docs/languages/cpp). 
+
 {% include social-share.html %}
 
 [![Back to Top]({{"/assets/images/faq-back-to-top.png" | absolute_url }})](#){: .faq-back-to-top}
