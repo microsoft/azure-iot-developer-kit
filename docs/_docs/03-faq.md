@@ -155,17 +155,14 @@ This is an issue coming from the [Microsoft C/C++ extension](https://marketplace
 Switch the IntelliSense engine to "**Tag Parser**" can fix this issue:
 
 1. Press F1 and key in 'settings' and select the `Preference: Open User Settings`
-
-![vsc-intellisense-issue-1]({{"/assets/images/faq/vsc-intellisense-1.png" | absolute_url }})
-
-then add this setting to your user settings
-![vsc-intellisense-issue-2]({{"/assets/images/faq/vsc-intellisense-2.png" | absolute_url }})
-
+  ![vsc-intellisense-issue-1]({{"/assets/images/faq/vsc-intellisense-1.png" | absolute_url }})
+   then add this setting to your user settings
+   ![vsc-intellisense-issue-2]({{"/assets/images/faq/vsc-intellisense-2.png" | absolute_url }})
 2. Press F1 and key in 'cpp' and select the C/Cpp: Edit Configurations...
-![vsc-intellisense-issue-3]({{"/assets/images/faq/vsc-intellisense-3.png" | absolute_url }})
+  ![vsc-intellisense-issue-3]({{"/assets/images/faq/vsc-intellisense-3.png" | absolute_url }})
+   this will open / create the **c_cpp_properties.json** file, add the path of Arduino package into the include  path:
+  ![vsc-intellisense-issue-4]({{"/assets/images/faq/vsc-intellisense-4.png" | absolute_url }})
 
-this will open / create the **c_cpp_properties.json** file, add the path of Arduino package into the include path:
-![vsc-intellisense-issue-4]({{"/assets/images/faq/vsc-intellisense-4.png" | absolute_url }})
 
 You can get more detail from [C/C++ for VS Code](https://code.visualstudio.com/docs/languages/cpp). 
 
