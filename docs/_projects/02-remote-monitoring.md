@@ -51,6 +51,9 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 ![remote-monitoring-azure-iot-suite-solution-types]({{"/assets/images/mini-solution/remote-monitoring/azure-iot-suite-solution-types.png" | absolute_url }})
 
+**Notice:** By default, it will create a S2 IoT Hub after creates one IoT Suite. If it's not used to connect with massive of devices, highly recommand to downgrade this IoT Hub from S2 to S1, and delete the IoT Suite (the IoT Hub will also be deleted) when you no longer need it, that will save your money :). 
+{: .notice--warning}
+
 2. Select **Remote monitoring**.
 
 3. Enter a solution name, select a subscription and a region, and then click **Create solution**. The solution may take a while to be provisioned.
