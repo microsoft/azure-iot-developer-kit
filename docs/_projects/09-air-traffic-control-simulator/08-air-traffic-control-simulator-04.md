@@ -112,7 +112,7 @@ In [Lab 2]({{"/docs/projects/air-traffic-control-simulator-02/" | absolute_url }
 1. Open **local.settings.json** and insert the following statement directly below   "EventHubConnection:"
 
 	```json
-	 "SharedEventHubConnection": "SHARED_EVENT_HUB_ENDPOINT",
+	 "SharedEventHubConnection": "SHARED_EVENT_HUB_ENDPOINT;EntityPath=flysim-shared-input-hub",
 	```
 
 1. Navigate to the Gist URL you created in [Lab 3]({{"/docs/projects/air-traffic-control-simulator-03/" | absolute_url }}) (for example, https://gist.github.com/scottgu) and copy the connection string from the public gist to the clipboard. Leave the browser window open so you can easily retrieve this connection string again.
