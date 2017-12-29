@@ -45,7 +45,10 @@ Microsoft Azure provides a rich set of integrated public cloud services for all 
 
 This project shows how to configure DevKit in order to make it automatically register to IoT Hub using the Device Provisioning Service. In this tutorial, you will learn how to:
 
-* This follows the h2
+* Set up the Device Provisioning Service configuration on the device
+* Save Unique Device Secret on STSAFE security chip
+* Generate X.509 certificate
+* Create a device enrollment entry in the Device Provisioning Service
 
 {% include toc icon="columns" %}
 
