@@ -53,5 +53,7 @@ docs:
         url: /docs/apis/lps22hb/
       - title: "IrDA"
         url: /docs/apis/irda/
+      - title: "EEPROMInterface"
+        url: /docs/apis/EEPROMInterface/
       - title: "Audio-Retired"
         url: /docs/apis/audio-retired/
