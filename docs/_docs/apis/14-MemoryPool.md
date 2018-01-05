@@ -125,7 +125,7 @@ void loop() {
         message_t *message = (message_t*)evt.value.p;          
         Serial.printf("\nVoltage: %.2f V\n\r"   , message->voltage);
         Serial.printf("Current: %.2f A\n\r"     , message->current);
-        Serial.printf("Number of cycles: %u\n\r", message->counter);            
+        Serial.printf("Number of cycles: %d\n\r", message->counter);            
         mpool.free(message);
     }
 }
