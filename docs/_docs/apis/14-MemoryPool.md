@@ -5,7 +5,7 @@ excerpt: "Library for MemoryPool on AZ3166"
 last_modified_at: 2018-01-05T05:16:34-04:00
 ---
 
-The core of the Arduino package of DevKit is built upon mbed. MemoryPool class is used to manage the fixed-size momory pools.
+The MemoryPool class, provides by the underlining mbed OS, is used for managing the fixed-size momory pools.
 For more information about MemoryPool, please visit [MbedOS](https://os.mbed.com/docs/v5.6/mbed-os-api-doxy/classrtos_1_1_memory_pool.html){:target="_blank"}
 
 ## Assembly
