@@ -55,5 +55,9 @@ docs:
         url: /docs/apis/irda/
       - title: "EEPROMInterface"
         url: /docs/apis/EEPROMInterface/
+      - title: "MemoryPool"
+        url: /docs/apis/MemoryPool/
+      - title: "Queue"
+        url: /docs/apis/Queue/
       - title: "Audio-Retired"
         url: /docs/apis/audio-retired/
