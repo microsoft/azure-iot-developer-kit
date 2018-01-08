@@ -19,14 +19,18 @@ docs:
     children:
       - title: "Get Started"
         url: /docs/get-started/
-      - title: "Manual Installation"
-        url: /docs/installation/
-      - title: "Firmware Upgrading"
-        url: /docs/firmware-upgrading/
       - title: "FAQ"
         url: /docs/faq/
   - title: Projects Catalog
     url: /docs/projects/
+  - title: How-to Guides
+    children:
+      - title: "Manual Installation"
+        url: /docs/installation/
+      - title: "Firmware Upgrading"
+        url: /docs/firmware-upgrading/
+      - title: "Use Configure Mode"
+        url: /docs/use-configuration-mode/
   - title: API Reference
     children:
       - title: "WiFi"
