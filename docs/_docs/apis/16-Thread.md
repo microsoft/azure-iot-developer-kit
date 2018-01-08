@@ -14,6 +14,11 @@ Arduino.h
 
 ## Summary
 
+| Enums |
+| :---- |
+| [osStatus](#osStatus) |
+| [osPriority](#osPriority) |
+
 | Constructors |
 | :----------- |
 | [Thread](#Thread) - `Thread(osPriority priority=osPriorityNormal, uint32_t stack_size=OS_STACK_SIZE, unsigned char *stack_mem=NULL, const char *name=NULL)` |
@@ -43,6 +48,44 @@ Arduino.h
 | [gettid](#gettid) - `static osThreadId gettid() ` |
 | [attach_idle_hook](#attach_idle_hook) - `static void attach_idle_hook(void(*fptr)(void)) ` |
 | [attach_terminate_hook](#attach_terminate_hook) - `static void attach_terminate_hook(void(*fptr)(osThreadId id))` |
+
+##Enums
+
+###osStatus
+
+```cpp
+typedef enum  {
+  osOK                    =     0,       ///< function completed; no error or event occurred.
+  osEventSignal           =  0x08,       ///< function completed; signal event occurred.
+  osEventMessage          =  0x10,       ///< function completed; message event occurred.
+  osEventMail             =  0x20,       ///< function completed; mail event occurred.
+  osEventTimeout          =  0x40,       ///< function completed; timeout occurred.
+  osErrorParameter        =  0x80,       ///< parameter error: a mandatory parameter was missing or specified an incorrect object.
+  osErrorResource         =  0x81,       ///< resource not available: a specified resource was not available.
+  osErrorTimeoutResource  =  0xC1,       ///< resource not available within given time: a specified resource was not available within the timeout period.
+  osErrorISR              =  0x82,       ///< not allowed in ISR context: the function cannot be called from interrupt service routines.
+  osErrorISRRecursive     =  0x83,       ///< function called multiple times from ISR with same object.
+  osErrorPriority         =  0x84,       ///< system cannot determine priority or thread has illegal priority.
+  osErrorNoMemory         =  0x85,       ///< system is out of memory: it was impossible to allocate or reserve memory for the operation.
+  osErrorValue            =  0x86,       ///< value of a parameter is out of range.
+  osErrorOS               =  0xFF,       ///< unspecified RTOS error: run-time error but no other error message fits.
+  os_status_reserved      =  0x7FFFFFFF  ///< prevent from enum down-size compiler optimization.
+} osStatus; 
+```
+
+###osPriority
+```cpp
+typedef enum  {
+  osPriorityIdle          = -3,          ///< priority: idle (lowest)
+  osPriorityLow           = -2,          ///< priority: low
+  osPriorityBelowNormal   = -1,          ///< priority: below normal
+  osPriorityNormal        =  0,          ///< priority: normal (default)
+  osPriorityAboveNormal   = +1,          ///< priority: above normal
+  osPriorityHigh          = +2,          ///< priority: high
+  osPriorityRealtime      = +3,          ///< priority: realtime (highest)
+  osPriorityError         =  0x84        ///< system cannot determine priority or thread has illegal priority
+} osPriority; 
+```
 
 ## Constructors
 
@@ -83,7 +126,7 @@ osStatus rtos::Thread::start( mbed::Callback<void()> task )
 >
 > #### Return value
 > 
-> status code that indicates the execution status of the function. 
+> Status code that indicates the execution status of the function. 
 
 ```cpp
 Thread thread(priority, stack_size, stack_mem);
@@ -106,7 +149,7 @@ osStatus rtos::Thread::join()
 
 > #### Return value
 > 
-> status code that indicates the execution status of the function. 
+> Status code that indicates the execution status of the function. 
 
 
 ### terminate 
@@ -120,7 +163,7 @@ osStatus rtos::Thread::terminate()
 
 > #### Return value
 > 
-> status code that indicates the execution status of the function. 
+> Status code that indicates the execution status of the function. 
 
 
 ### set_priority 
@@ -139,7 +182,7 @@ osStatus rtos::Thread::set_priority(osPriority priority)
 >
 > #### Return value
 > 
-> status code that indicates the execution status of the function. 
+> Status code that indicates the execution status of the function. 
 
 
 ### get_priority 
@@ -153,7 +196,7 @@ osPriority rtos::Thread::get_priority()
 
 > #### Return value
 > 
-> current priority value of the thread function.
+> Current priority value of the thread function.
 
  
 ### signal_set 
@@ -172,7 +215,7 @@ int32_t rtos::Thread::signal_set(int32_t signals)
 >
 > #### Return value
 > 
-> signal flags after setting or osFlagsError in case of incorrect parameters.
+> Signal flags after setting or osFlagsError in case of incorrect parameters.
 
 
 ### get_state  
@@ -186,7 +229,7 @@ Thread::State rtos::Thread::get_state()
 
 > #### Return value
 > 
-> the State of this Thread.
+> The State of this Thread.
 
 
 ### stack_size  
@@ -200,7 +243,7 @@ uint32_t rtos::Thread::stack_size()
 
 > #### Return value
 > 
-> the total stack memory size in bytes.
+> The total stack memory size in bytes.
 
 
 ### free_stack  
@@ -214,7 +257,7 @@ uint32_t rtos::Thread::free_stack()
 
 > #### Return value
 > 
-> the currently unused stack memory in bytes.
+> The currently unused stack memory in bytes.
 
 
 ### used_stack  
@@ -228,7 +271,7 @@ uint32_t rtos::Thread::used_stack()
 
 > #### Return value
 > 
-> the currently used stack memory in bytes.
+> The currently used stack memory in bytes.
 
 
 ### max_stack  
@@ -242,7 +285,7 @@ uint32_t rtos::Thread::max_stack()
 
 > #### Return value
 > 
-> the maximum stack memory usage to date in bytes.
+> The maximum stack memory usage to date in bytes.
 
 
 ### get_name  
@@ -256,7 +299,7 @@ const char * rtos::Thread::get_name()
 
 > #### Return value
 > 
-> thread name or NULL if the name was not set.
+> Thread name or NULL if the name was not set.
 
 
 ## Static Methods
@@ -267,7 +310,7 @@ const char * rtos::Thread::get_name()
 int32_t rtos::Thread::signal_clr(int32_t signals) 
 ```
 
-> Clears the specified Thread Flags of the currently running thread. 
+> Clear the specified Thread Flags of the currently running thread. 
 > 
 > #### Parameters
 > 
@@ -277,7 +320,7 @@ int32_t rtos::Thread::signal_clr(int32_t signals)
 >
 > #### Return value
 > 
-> signal flags before clearing or osFlagsError in case of incorrect parameters.
+> Signal flags before clearing or osFlagsError in case of incorrect parameters.
 
 
 ### signal_wait 
@@ -299,7 +342,7 @@ osEvent rtos::Thread::signal_wait( int32_t signals,
 >
 > #### Return value
 > 
-> event flag information or error code.
+> Event flag information or error code.
 
 
 ### wait 
@@ -319,7 +362,7 @@ osStatus rtos::Thread::wait(uint32_t millisec)
 >
 > #### Return value
 > 
-> status code that indicates the execution status of the function. 
+> Status code that indicates the execution status of the function. 
 
 
 ### yield 
@@ -332,7 +375,7 @@ osStatus rtos::Thread::yield()
 
 > #### Return value
 > 
-> status code that indicates the execution status of the function. 
+> Status code that indicates the execution status of the function. 
 
 
 ### gettid 
@@ -345,7 +388,7 @@ osThreadId rtos::Thread::gettid()
 
 > #### Return value
 > 
-> thread ID for reference by other functions or NULL in case of error.
+> Thread ID for reference by other functions or NULL in case of error.
 
 
 ### attach_idle_hook  
