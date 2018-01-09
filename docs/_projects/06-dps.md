@@ -103,7 +103,9 @@ To save Unique Device Secret on the DevKit:
 
 2. With the DevKit connected to computer, hold down button A, then push and release the reset button to enter configuration mode. The screen should show the DevKit id and **'Configuration'**.
 
-3. Open serial monitor. Type **set_dps_uds [your_own_uds_value]** and press the Enter key to save it.
+3. Open serial monitor by using tool like Putty, see [Use Configuration Mode]({{"/docs/use-configuration-mode/" | absolute_url }}) for details.
+
+4. In serial monitor window, type **set_dps_uds [your_own_uds_value]** and press the Enter key to save it.
 
 ## Generate X.509 certificate
 
@@ -137,7 +139,7 @@ TBD
 
 ## Start the DevKit
 
-1. Open serial monitor.
+1. Launch VS Code and open serial monitor.
 
 2. Press the **Reset** button on your DevKit.
 
