@@ -10,17 +10,17 @@ last_modified_at: 2018-01-08
 ## Before you begin
 
 * Connect DevKit to the computer.
+* Download SSH and Telnet client like [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) for Windows.
 
 ## Enter Configuration Mode
 
 1. Open VS Code and identify the COM port on the status bar.
     ![COM Port]({{"/assets/images/how-to/configuration-mode/com-port.png" | absolute_url }})
 
-2. Download and open [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), type the right COM port and **115200** for **Speed**.
+2. Download and open Putty, type the right COM port and **115200** for **Speed**.
     ![Putty]({{"/assets/images/how-to/configuration-mode/putty.png" | absolute_url }})
 
 3. Click **Open**. A serial monitor window will open.
-    ![Serial Monitor]({{"/assets/images/how-to/configuration-mode/serial-monitor.png" | absolute_url }})
 
 4. On the device, hold down button A, then push and release the reset button. Observe the screen displays your device MAC address and **'Configuration'**.
     ![Configuration Mode]({{"/assets/images/how-to/configuration-mode/configuration-mode.jpg" | absolute_url }})
@@ -34,17 +34,33 @@ Commands for the DevKit Configuration Mode.
 
 ### help
 
+```bash
+help
+```
+
 Display the commands list
 
 ### version
+
+```bash
+version
+```
 
 Display **DevKit SDK**, **Mico**, **mbed-os**, **mbed TLS lib** and **WiFi lib** version details.
 
 ### exit
 
+```bash
+exit
+```
+
 Exit Configuration Mode and reboot into normal mode.
 
 ### scan
+
+```bash
+scan
+```
 
 Scan and list all available WiFi SSID.
 
@@ -63,4 +79,27 @@ set_wifipwd [password]
 ```
 
 Set password for WiFi SSID you connected with command **set_wifissid**.
+
+### set_az_iothub
+
+```bash
+set_az_iothub [device connection string]
+```
+
+Set device connection string for Azur IoT Hub. View [Understand Different Connection Strings in Azure IoT Hub](https://blogs.msdn.microsoft.com/iotdev/2017/05/09/understand-different-connection-strings-in-azure-iot-hub/) to learn more.
+
+### set_dps_uds
+
+```bash
+set_dps_uds [unique device secret]
+```
+
+Set Unique Device Secret that is used as device unique key to be used for calcuation by [Device Identifier Composition Engine (DICE)](https://trustedcomputinggroup.org/work-groups/dice-architectures/) and be used to register on [IoT Hub Device Provisioning Service](https://docs.microsoft.com/en-us/azure/iot-dps/about-iot-dps).
+
+### enable_secure
+
+```bash
+enable_secure
+```
+
 

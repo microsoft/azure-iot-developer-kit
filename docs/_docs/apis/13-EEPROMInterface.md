@@ -81,9 +81,9 @@ int enableHostSecureChannel(int level = 1, uint8_t* key = NULL);
 
 > Enable secure channel between AZ3166 and secure chip.
 > On function called, a key will be set to secure chip, meanwhile the key will be stored in flash of AZ3166.
-	* And this will automaticly encrypt all data in secure chip.
-	* Notice that do not drag-drop firmware after secure channel enabled.
-	* Drag-drop bin file may rewrite the flash with key and the data in zone can not be decrypted correctlly.
+> * And this will automaticly encrypt all data in secure chip.
+> * Notice that do not drag-drop firmware after secure channel enabled.
+> * Drag-drop bin file may rewrite the flash with key and the data in zone can not be decrypted correctlly.
 > #### Parameters
 > 
 > | Type | Name | Description |
