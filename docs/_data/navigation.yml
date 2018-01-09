@@ -33,6 +33,8 @@ docs:
         url: /docs/use-configuration-mode/
   - title: API Reference
     children:
+      - title: "Arduino"
+        url: /docs/apis/arduino-language-reference/
       - title: "WiFi"
         url: /docs/apis/wifi/
       - title: "WiFiClient"
