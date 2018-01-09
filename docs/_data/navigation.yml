@@ -57,5 +57,13 @@ docs:
         url: /docs/apis/lps22hb/
       - title: "IrDA"
         url: /docs/apis/irda/
+      - title: "EEPROMInterface"
+        url: /docs/apis/EEPROMInterface/
+      - title: "MemoryPool"
+        url: /docs/apis/MemoryPool/
+      - title: "Queue"
+        url: /docs/apis/Queue/
+      - title: "Thread"
+        url: /docs/apis/Thread/
       - title: "Audio-Retired"
         url: /docs/apis/audio-retired/
