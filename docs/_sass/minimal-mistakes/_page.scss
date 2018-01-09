@@ -503,3 +503,44 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+/*
+   Statement
+   ========================================================================== */
+
+#statement {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 1000;
+}
+
+#statement > div {
+  width: 700px;
+  top: 30px;
+  left: -350px;
+  margin-left: 50%;
+  position: fixed;
+  background: white;
+  border: 1px solid #eee;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#statement > div textarea {
+  width: 100%;
+  height: 500px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  cursor: default;
+}
+
+#statement > div .btn {
+  margin: 10px;
+}

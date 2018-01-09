@@ -74,4 +74,26 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+  // Show statement before download
+  $('.statement-before-download').on('click', function(event) {
+    showStatement(event.currentTarget.href);
+    event.preventDefault();
+  });
 });
+
+function showStatement(downloadLink) {
+  var statement = '两只老虎，两只老虎，跑得快，跑得快……';
+  var statementBox = document.createElement('div');
+  statementBox.id = 'statement';
+  statementBox.innerHTML = '<div>' +
+  '<textarea readonly>' + statement + '</textarea>' +
+  '<a href="' + downloadLink + '" class="click-action-tracker btn btn--success">Accept &amp; Download</a>' +
+  '<a href="#" class="click-action-tracker btn btn--info">Close</a>' +
+  '</div>';
+  $('body').append(statementBox);
+  setTimeout(function() {
+    $('#statement .btn').on('click', function(event) {
+      $('#statement').remove();
+    });
+  }, 0);
+}

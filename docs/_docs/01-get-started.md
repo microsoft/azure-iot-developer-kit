@@ -109,7 +109,7 @@ We encourage you to use one-click installation experience to prepare the develop
 
 The .zip file that you download contains all the necessary tools and packages for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/latest){: .click-action-tracker .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/latest){: .click-action-tracker .btn .btn--success .btn--large .statement-before-download}
 
 > The .zip file installs the following tools and packages. If you already have some of them installed, the script will can and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks.
@@ -159,7 +159,7 @@ Follow the [Homebrew installation instructions](https://docs.brew.sh/Installatio
 
 The .zip file that you download contains all the necessary tools and packages for DevKit development.
 
-[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-action-tracker .btn .btn--success .btn--large}
+[<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/mac/latest){: .click-action-tracker .btn .btn--success .btn--large .statement-before-download}
 
 > The .zip file installs the following tools and packages. If you already have some of them installed, the script can detect and skip them.
 > * Node.js and Yarn: Runtime for the setup script and automated tasks.
