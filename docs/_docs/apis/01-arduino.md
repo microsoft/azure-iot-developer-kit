@@ -151,7 +151,6 @@ AZ3166 supported Arduino language reference.
 [PROGMEM](https://www.arduino.cc/reference/en/language/variables/utilities/progmem/), 
 [sizeof()](https://www.arduino.cc/reference/en/language/variables/utilities/sizeof/)
 
-
 ## Structure
 
 ### Sketch
