@@ -30,9 +30,9 @@ DevKit became the first MCU device supports for the Microsoft IoT Hub Device Pro
 
 ### Downloads
 
-- [Installation Package 1.3.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.0.35.zip).
-- [Installation Package 1.3.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.0.35.zip).
-- [Firmware 1.3.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.0.28.bin).
+- [Installation Package 1.3.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.0.40.zip).
+- [Installation Package 1.3.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.0.40.zip).
+- [Firmware 1.3.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.0.40.bin).
 
 
 ## Version 1.2.2 (December 20, 2017)
