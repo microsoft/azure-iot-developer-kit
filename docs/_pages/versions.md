@@ -2,7 +2,7 @@
 permalink: /versions/
 title: "Versions and Release Notes"
 excerpt: "Versions and release notes"
-last_modified_at: 2017-10-23
+last_modified_at: 2018-01-09
 ---
 
 {% include toc icon="columns" %}
@@ -10,7 +10,7 @@ last_modified_at: 2017-10-23
 
 ## Version 1.3.0 (January 9, 2018)
 
-DevKit became the first MCU device supports for the Microsoft IoT Hub Device Provisioning Service, which is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning to the right IoT hub without requiring human intervention, enabling customers to provision millions of devices in a secure and scalable manner.
+Happy new year 2018! Let us talk about the fundamentals of IoT this time: the security. IoT DevKit is now amongst the first MCU devices that support [Microsoft IoT Hub Device Provisioning Service](https://docs.microsoft.com/en-us/azure/iot-dps/about-iot-dps), which is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning to the right IoT hub without requiring human intervention, enabling customers to provision millions of devices in a secure and scalable manner.
 
 ### Release Summary
 
@@ -23,10 +23,10 @@ DevKit became the first MCU device supports for the Microsoft IoT Hub Device Pro
   * Upgraded the Azure IoT C SDK to [1.1.28]( https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-11-17).
   * Archived the Azure IoT C SDK in the Arduino board package, greatly reduce the compile time.
   * Enabled the secure channel, protecting confidentiality and integrity of data with STSAFE chip on IoT DevKit.
-  * Add reset function ` SystemReboot`.
+  * Add reset function `SystemReboot`.
 
 * Mini Solution
-  * New mini-solution was added, check it out [here]({{"/docs/projects/dps/" | absolute_url }}).
+  * New mini-solution: [Device registration with Device Provisioning Service]({{"/docs/projects/dps/" | absolute_url }}).
 
 ### Downloads
 
