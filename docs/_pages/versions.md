@@ -26,7 +26,7 @@ DevKit became the first MCU device supports for the Microsoft IoT Hub Device Pro
   * Add reset function ` SystemReboot`.
 
 * Mini Solution
-  * New mini-solution was added, check it out [here]({{"/docs/projects/dps/).
+  * New mini-solution was added, check it out [here]({{"/docs/projects/dps/" | absolute_url }}).
 
 ### Downloads
 
