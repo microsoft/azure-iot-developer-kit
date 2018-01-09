@@ -88,7 +88,7 @@ function showStatement(downloadLink) {
   statementBox.innerHTML = '<div>' +
   '<textarea readonly>' + statement + '</textarea>' +
   '<a href="' + downloadLink + '" class="click-action-tracker btn btn--success">Accept &amp; Download</a>' +
-  '<a href="#" class="click-action-tracker btn btn--info">Close</a>' +
+  '<a href="#close-statement" class="click-action-tracker btn btn--info">Close</a>' +
   '</div>';
   $('body').append(statementBox);
   setTimeout(function() {
