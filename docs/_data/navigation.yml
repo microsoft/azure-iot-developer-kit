@@ -59,5 +59,7 @@ docs:
         url: /docs/apis/MemoryPool/
       - title: "Queue"
         url: /docs/apis/Queue/
+      - title: "Thread"
+        url: /docs/apis/Thread/
       - title: "Audio-Retired"
         url: /docs/apis/audio-retired/

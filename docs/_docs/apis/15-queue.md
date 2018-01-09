@@ -5,8 +5,8 @@ excerpt: "Library for Queue on AZ3166"
 last_modified_at: 2018-01-05T05:16:34-04:00
 ---
 
-The Queue class, provides by the underlining mbed OS, is used for queue pointers to data from producer threads to consumer threads..
-For more information about Queue, please visit [MbedOS](https://os.mbed.com/docs/v5.6/mbed-os-api-doxy/classrtos_1_1_queue.html){:target="_blank"}
+The Queue class, provides by the underlining mbed OS, is used for queue pointers to data from producer threads to consumer threads.
+For more information about Queue, please visit [MbedOS](https://os.mbed.com/docs/v5.6/mbed-os-api-doxy/classrtos_1_1_queue.html){:target="_blank"}.
 
 ## Assembly
 
