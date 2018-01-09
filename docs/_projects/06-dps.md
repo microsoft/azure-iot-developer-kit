@@ -3,16 +3,13 @@ title: "Device registration with DPS"
 permalink: /docs/projects/dps/
 excerpt: "Use the Device Provisioning Service to automatically provision security enabled devices to IoT hub."
 header:
-  overlay_image: /assets/images/projects-shake-shake.jpg
+  overlay_image: /assets/images/projects-dps.jpg
   overlay_full: true
-  teaser: /assets/images/projects-shake-shake-th.jpg
+  teaser: /assets/images/projects-dps-th.jpg
 icons:
   - url: /assets/images/icon-iot-hub.svg
     target: https://azure.microsoft.com/en-us/services/iot-hub/
     title: IoT Hub
-  - url: /assets/images/icon-azure-functions.svg
-    target: https://azure.microsoft.com/en-us/services/functions/
-    title: Azure Functions
 difficulty: MEDIUM
 variable:
   - platform: windows
