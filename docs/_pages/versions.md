@@ -2,12 +2,40 @@
 permalink: /versions/
 title: "Versions and Release Notes"
 excerpt: "Versions and release notes"
-last_modified_at: 2017-10-23
+last_modified_at: 2018-01-09
 ---
 
 {% include toc icon="columns" %}
 
-## Version 1.2.2 (December 20)
+
+## Version 1.3.0 (January 9, 2018)
+
+Happy new year 2018! Let us talk about the fundamentals of IoT this time: the security. IoT DevKit is now amongst the first MCU devices that support [Microsoft IoT Hub Device Provisioning Service](https://docs.microsoft.com/en-us/azure/iot-dps/about-iot-dps), which is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning to the right IoT hub without requiring human intervention, enabling customers to provision millions of devices in a secure and scalable manner.
+
+### Release Summary
+
+* Firmware
+  * Upgraded the DevKit firmware to enable DPS feature.
+  * New tool `set_dps_uds` was added in the configuration mode, which help to save the **Unique Device Secret (UDS)** into the STSAFE chip, for more detail please check [this topic]({{"/docs/projects/dps/#save-unique-device-secret-on-stsafe-security-chip" | absolute_url }}).
+
+* SDK
+  * Open sourced [DevKit SDK](https://github.com/Microsoft/devkit-sdk), you are welcome to contribute :)
+  * Upgraded the Azure IoT C SDK to [1.1.28]( https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-11-17).
+  * Archived the Azure IoT C SDK in the Arduino board package, greatly reduce the compile time.
+  * Enabled the secure channel, protecting confidentiality and integrity of data with STSAFE chip on IoT DevKit.
+  * Add reset function `SystemReboot`.
+
+* Mini Solution
+  * New mini-solution: [Device registration with Device Provisioning Service]({{"/docs/projects/dps/" | absolute_url }}).
+
+### Downloads
+
+- [Installation Package 1.3.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.0.40.zip).
+- [Installation Package 1.3.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.0.40.zip).
+- [Firmware 1.3.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.0.40.bin).
+
+
+## Version 1.2.2 (December 20, 2017)
 
 We were focusing on the script refinement in this release.
 
@@ -24,7 +52,7 @@ We were focusing on the script refinement in this release.
 - [Installation Package 1.2.2 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.2.2.35.zip).
 - [Firmware 1.2.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
 
-## Version 1.2.1 (November 22)
+## Version 1.2.1 (November 22, 2017)
 
 The new Audio library gives the ability to continuous recording voice through the microphone.
 
@@ -49,7 +77,7 @@ The new Audio library gives the ability to continuous recording voice through th
 - [Installation Package 1.2.1 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.2.1.33.zip).
 - [Firmware 1.2.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
 
-## Version 1.2.0 (October 24)
+## Version 1.2.0 (October 24, 2017)
 
 No more manual steps to prepare your DevKit development environment on macOS! The time saving one-click installation now support macOS as well. And yes, we love bash.
 
@@ -85,7 +113,7 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
 {: .notice--warning}
 
 
-## Version 1.1.1 (September 27)
+## Version 1.1.1 (September 27, 2017)
 
 ### Release Summary
 
@@ -101,7 +129,7 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
 {: .notice--warning}
 
 
-## Version 1.1.0 (September 4)
+## Version 1.1.0 (September 4, 2017)
 
 DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure-mcus/stsafe-a100.html){:target="_blank"}, the security chip that provides secure authentication and data management for IoT solutions. Since it's enabled on bootloader level, a [firmware upgrade]({{"/docs/firmware-upgrading" | absolute_url}}) is mandatory to make the DevKit work properly.
 
@@ -133,7 +161,7 @@ DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure
 **Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/firmware-upgrading" | absolute_url}}) first.
 {: .notice--warning}
 
-## Version 1.0.2 (August 10)
+## Version 1.0.2 (August 10, 2017)
 
 Summer does not mean slow down. We further enriched our project catalog and tuned their performances. And from our user feedback, we added the logic to detect the latest firmware so that you will no longer miss our new stuff.
 
@@ -162,7 +190,7 @@ Summer does not mean slow down. We further enriched our project catalog and tune
 - [Firmware 1.0.2](https://azureboard2.azureedge.net/prod/devkit-firmware-1.0.2.bin).
 
 
-## Version 1.0.1 (July 13)
+## Version 1.0.1 (July 13, 2017)
 
 The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our “Shake, Shake” sample project on macOS now. To further smooth the development tools and package installation, we are using the official [MSI](https://aka.ms/InstallAzureCliWindows){:target="_blank"} for the Windows Azure CLI 2.0 installation, so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.
  
@@ -188,7 +216,7 @@ The optimization continues. We are now supporting VS Code tasks on macOS as well
 - [Firmware 1.0.1](https://azureboard2.azureedge.net/prod/devkit-firmware-1.0.1.bin).
 
 
-## Version 1.0.0 (June 26)
+## Version 1.0.0 (June 26, 2017)
 
 After a month work of stabilizing the code, fixing bugs and adding more samples, we are happy to release the v1.0.0 for our IoT DevKit. And soon we will open source the stacks including firmware, toolchain and all sample projects code. Please check release summary for details about this update.
 
@@ -226,11 +254,11 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
 - [Firmware 1.0.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.0.0.bin).
 
 
-## Version 0.8.1 (May 21)
+## Version 0.8.1 (May 21, 2017)
 
 Some bug fixes before DevKit debut on [//Build](https://build.microsoft.com/){:target="_blank"} and [Maker Faire Bay Area](http://makerfaire.com/){:target="_blank"}.
 
-## Version 0.8.0 (May 5)
+## Version 0.8.0 (May 5, 2017)
 
 This is our first public release of the Microsoft Azure IoT Developer Kit.
 
