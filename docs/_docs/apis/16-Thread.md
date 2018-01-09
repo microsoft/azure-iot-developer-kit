@@ -49,9 +49,9 @@ Arduino.h
 | [attach_idle_hook](#attach_idle_hook) - `static void attach_idle_hook(void(*fptr)(void)) ` |
 | [attach_terminate_hook](#attach_terminate_hook) - `static void attach_terminate_hook(void(*fptr)(osThreadId id))` |
 
-##Enums
+## Enums
 
-###osStatus
+### osStatus
 
 ```cpp
 typedef enum  {
@@ -73,7 +73,7 @@ typedef enum  {
 } osStatus; 
 ```
 
-###osPriority
+### osPriority
 ```cpp
 typedef enum  {
   osPriorityIdle          = -3,          ///< priority: idle (lowest)
