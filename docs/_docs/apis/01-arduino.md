@@ -214,7 +214,7 @@ AZ3166 supported Arduino language reference.
 [&](https://www.arduino.cc/reference/en/language/structure/bitwise-operators/bitwiseand/) (bitwise and), 
 [<<](https://www.arduino.cc/reference/en/language/structure/bitwise-operators/bitshiftleft/) (bitshift left), 
 [>>](https://www.arduino.cc/reference/en/language/structure/bitwise-operators/bitshiftright/) (bitshift right), 
-[^](https://www.arduino.cc/reference/en/language/structure/bitwise-operators/bitwisexor/) (bitwise xor), 
+[&#94;](https://www.arduino.cc/reference/en/language/structure/bitwise-operators/bitwisexor/) (bitwise xor), 
 [|](https://www.arduino.cc/reference/en/language/structure/bitwise-operators/bitwiseor/) (bitwise or), 
 [~](https://www.arduino.cc/reference/en/language/structure/bitwise-operators/bitwisenot/) (bitwise not)
 
