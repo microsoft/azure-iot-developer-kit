@@ -56,6 +56,7 @@ To enable the DevKit to connect to the Device Provisiong Service instance you ju
 
 5. Open **DevKitDPS.ino**, Find and replace `[Global Device Endpoint]` and `[ID Scope]` with the values you just note down.
   ![DPS Endpoint]({{"/assets/images/mini-solution/dps/endpoint.png" | absolute_url }})
+  You can leave the **registrationId** as blank, the application will generate one for you based on the MAC address and firmware version. If you want to customized it, the Registration ID has to use alphanumeric, lowercase, and hyphen combinations only with maximum 128 characters long. See [Manage device enrollments with Azure portal](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-manage-enrollments) for more details.
 
 6. Use **Quick Open** in VS Code (Windows: `Ctrl+P`, macOS: `Cmd+P`) and type **task device-upload** to build and upload the code to the DevKit.
 
@@ -84,7 +85,7 @@ To save Unique Device Secret on the DevKit:
 
 3. With the DevKit connected to computer, hold down button A, then push and release the reset button to enter configuration mode. The screen should show the DevKit id and **'Configuration'**.
 
-4. In serial monitor window, type **set_dps_uds [your_own_uds_value]** and press the Enter key to save it.
+4. Copy the sample UDS above. In serial monitor window, type **set_dps_uds [your_own_uds_value]** and press the Enter key to save it.
 
 5. Without closing the serial monitor window, press reset button on the DevKit.
 
