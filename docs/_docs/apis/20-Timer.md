@@ -6,7 +6,7 @@ last_modified_at: 2018-01-09T05:16:34-04:00
 ---
 
 The Timer class, provides by the underlining mbed OS, is used to start, stop and read a timer for measuring small times (between microseconds and seconds).
-For more information about Mutex, please visit [MbedOS](https://os.mbed.com/docs/v5.6/reference/timer.html){:target="_blank"}
+For more information about Timer, please visit [MbedOS](https://os.mbed.com/docs/v5.6/reference/timer.html){:target="_blank"}
 
 ## Assembly
 
