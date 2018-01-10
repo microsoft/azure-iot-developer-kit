@@ -67,5 +67,9 @@ docs:
         url: /docs/apis/Queue/
       - title: "Thread"
         url: /docs/apis/Thread/
+      - title: "Mutex"
+        url: /docs/apis/Mutex/
+      - title: "Semaphore"
+        url: /docs/apis/Semaphore/
       - title: "Audio-Retired"
         url: /docs/apis/audio-retired/
