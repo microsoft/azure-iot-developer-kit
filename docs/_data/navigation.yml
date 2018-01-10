@@ -71,5 +71,7 @@ docs:
         url: /docs/apis/Mutex/
       - title: "Semaphore"
         url: /docs/apis/Semaphore/
+      - title: "Timer"
+        url: /docs/apis/Timer/
       - title: "Audio-Retired"
         url: /docs/apis/audio-retired/
