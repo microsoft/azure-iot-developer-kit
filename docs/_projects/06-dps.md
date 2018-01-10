@@ -101,6 +101,9 @@ To save Unique Device Secret on the DevKit:
 1. Open file explorer and go to the folder contain the DSP sample code you cloned, there is a **.build** folder, find and copy **DPS.ino.bin** and **DPS.ino.map** in it.
   ![Generated files]({{"/assets/images/mini-solution/dps/generated-files.png" | absolute_url }})
 
+**Note:** If you have changed the `built.path` configuration for Arduino to other folder. You need to find those files in the folder you configured.
+{: .notice--info}
+
 2. Paste these two files into **tools** folder on the same level with **.build** folder.
 
 3. Run **dps_cert_gen.exe**, follow the prompts to enter your **UDS**, **MAC address** for the DevKit and the **firmware version** to generate the X.509 certificate.
