@@ -67,14 +67,17 @@ Device Provisioning Service can be configured on device based on its [Hardware S
 
 A typical **Unique Device Secret (UDS)** is a 64 characters long string. A sample UDS is as below:
 
+<span id="uds"></span>
 ```
 19e25a259d0c2be03a02d416c05c48ccd0cc7d1743458aae1cb488b074993eae
 ```
 
+<span id="hex"></span>
 Each of two characters are used as Hex value in the security calculation. So the above sample UDS is resolved to: "`0x19`, `0xe2`, `0x5a`, `0x25`, `0x9d`, `0x0c`, `0x2b`, `0xe0`, `0x3a`, `0x02`, `0xd4`, `0x16`, `0xc0`, `0x5c`, `0x48`, `0xcc`, `0xd0`, `0xcc`, `0x7d`, `0x17`, `0x43`, `0x45`, `0x8a`, `0xae`, `0x1c`, `0xb4`, `0x88`, `0xb0`, `0x74`, `0x99`, `0x3e`, `0xae`".
 
 To save Unique Device Secret on the DevKit:
 
+<span id="steps"></span>
 1. Take the sample UDS string above and change one or many characters to other values between `0` and `f`. This is used as your own UDS.
 
 2. Open serial monitor by using tool like Putty, see [Use Configuration Mode]({{"/docs/use-configuration-mode/" | absolute_url }}) for details.
@@ -160,3 +163,34 @@ Advance to the other tutorials to learn:
 * [Revoke device access](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-revoke-device-access-portal)
 * [Use HSM with SDK](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-revoke-device-access-portal)
 * [Control access to Provisioning Service](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-control-access)
+
+<script>
+function generateUDS() {
+  var uds = [];
+  for (var i = 0; i < 32; i++) {
+    var char = Math.floor(Math.random() * 256).toString(16);
+    if (char.length === 1) {
+      char = `0${char}`;
+    }
+    uds.push(char);
+  }
+  return uds;
+}
+
+(function() {
+  var udsWatcher = setInterval(function(){
+    if($) {
+      clearInterval(udsWatcher);
+      var uds = generateUDS();
+      $('p:has(#uds) + .highlighter-rouge code').html(uds.join(''));
+
+      var chars = $('p:has(#hex) code');
+      for (var i = 0; i < 32; i++) {
+        $(chars.get(i)).html(`0x${uds[i]}`);
+      }
+
+      $('p:has(#steps) + ol li:first-child').remove();
+    }
+  }, 500);
+})();
+</script>
