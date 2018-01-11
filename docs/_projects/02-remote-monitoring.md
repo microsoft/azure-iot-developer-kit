@@ -29,7 +29,7 @@ variable:
 last_modified_at: 2017-06-28
 ---
 
-In this tutorial, you learn how to run a sample app on DevKit to send sensor data to your Azure IoT Suite.
+In this tutorial, you learn how to run a sample app on your DevKit to send sensor data to your Azure IoT Suite.
 
 {% include toc icon="columns" %}
 
@@ -40,7 +40,7 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 * Have your DevKit connected to Wi-Fi
 * Prepare the development environment
 
-An active Azure subscription. If you do not have one, you can register via one of the methods:
+An active Azure subscription. If you do not have one, you can register via one of these two methods:
 
 * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
 * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
@@ -51,7 +51,7 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 ![remote-monitoring-azure-iot-suite-solution-types]({{"/assets/images/mini-solution/remote-monitoring/azure-iot-suite-solution-types.png" | absolute_url }})
 
-**Notice:** By default, it will create a S2 IoT Hub after creates one IoT Suite. If it's not used to connect with massive of devices, highly recommand to downgrade this IoT Hub from S2 to S1, and delete the IoT Suite (the IoT Hub will also be deleted) when you no longer need it, that will save your money :). 
+**Notice:** By default, this creates an S2 IoT Hub after it creates one IoT Suite. If this IoT hub will not be used with massive number of devices, we highly recommend you downgrade it from S2 to S1, and delete the IoT Suite--the IoT Hub will also be deleted--when you no longer need it. This will save you money:). 
 {: .notice--warning}
 
 2. Select **Remote monitoring**.
@@ -80,15 +80,15 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 ## Step 2. Open the RemoteMonitoring sample
 
-1. Disconnect DevKit from your computer if it is connected.
+1. Disconnect the DevKit from your computer, if it is connected.
 
 2. Start VS Code.
 
-3. Connect DevKit to your computer. VS Code automatically detects your DevKit and opens the following pages:
-  * Preview README.md: The DevKit introduction page.
+3. Connect the DevKit to your computer. VS Code automatically detects your DevKit and opens the following pages:
+  * The DevKit introduction page.
   * Arduino Examples: Hands-on samples to get started with DevKit.
 
-4. Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **RemoteMonitoring**. This will open a new VS Code window with project folder in it.
+4. Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **RemoteMonitoring**. This will open a new VS Code window with a project folder in it.
 
 ![mini-solution-vscode]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
 
@@ -96,13 +96,13 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
 
 ## Step 3. Provision required Azure services
 
-In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
+In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision` in the provided text box:
 
 In the VS Code terminal, an interactive command line guides you through provisioning the required Azure services:
 
 ![remote-monitoring-provision]({{"/assets/images/mini-solution/remote-monitoring/provision.png" | absolute_url }})
 
-**Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. 
+**Notice:** If the page hangs in the loading status when trying to sign in to Azure, please check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to resolve the issue. 
 {: .notice--warning}
 
 ## Step 4. Build and upload the device code
@@ -114,32 +114,32 @@ In the VS Code terminal, an interactive command line guides you through provisio
 1. Use `Ctrl+P` to run `task device-upload`.
 2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
 
-This is to set the connection string that retrieves from `task cloud-provision` step.
+This sets the connection string that is retrieved from the `task cloud-provision` step.
 
-Then VS Code starts verifying and uploading the Arduino sketch:
+VS Code then starts verifying and uploading the Arduino sketch to the DevKit:
 
 ![device-upload]({{"/assets/images/mini-solution/remote-monitoring/build.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
-**Notice:** Occasionally, you get error "Error: AZ3166: Unknown package". This is due to the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to solve it.
+**Notice:** Occasionally, you may get an "Error: AZ3166: Unknown package" error message. This occurs when the board package index is not refreshed correctly. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to resolve this issue.
 {: .notice--warning}
 
 ### macOS
 
-1. Put DevKit into configuration mode:
+1. Put the DevKit into configuration mode:
   Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
 2. Use `Cmd+P` to run `task device-upload`.
 
-This is to set the connection string that retrieves from `task cloud-provision` step.
+This sets the connection string that is retrieved from the `task cloud-provision` step.
 
-Then it starts verifying and uploading the Arduino sketch:
+It then starts verifying and uploading the Arduino sketch to the DevKit:
 
 ![device-upload]({{"/assets/images/mini-solution/remote-monitoring/build.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
-**Notice:** Occasionally, you get error "Error: AZ3166: Unknown package". This is due to the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to solve it.
+**Notice:** Occasionally, you may get an "Error: AZ3166: Unknown package" error message. This occurs when the board package index is not refreshed correctly. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to resolve the issue.
 {: .notice--warning}
 
 ## Test the project
@@ -148,12 +148,12 @@ When the sample app runs, DevKit sends sensor data over Wi-Fi to your Azure IoT 
 
 1. Go to your Azure IoT Suite, and click **DASHBOARD**.
 
-2. Azure IoT Suite solution console, you will see DevKit sensor status.
+2. On the Azure IoT Suite solution console, you will see your DevKit sensor status.
 
 {% include gallery id="layouts_gallery" caption="View sensor information within Azure IoT Suite." %}
 
 ## Problems and feedback
 
-If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+If you encounter problems, please refer to [FAQs]({{"/docs/faq/" | absolute_url }}) or reach out to us from the channels below.
 
 {% include feedback.html tutorial="remote-monitoring" %}
