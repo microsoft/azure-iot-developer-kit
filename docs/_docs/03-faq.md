@@ -1,7 +1,7 @@
 ---
-title: "Frequently Asked Questions"
+title: "Frequently asked questions"
 permalink: /docs/faq/
-excerpt: "Frequently Asked Questions"
+excerpt: "Frequently asked questions"
 last_modified_at: 2017-05-05T10:16:34-04:00
 ---
 
