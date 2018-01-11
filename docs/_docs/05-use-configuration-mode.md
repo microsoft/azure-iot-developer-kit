@@ -102,4 +102,14 @@ Set Unique Device Secret that is used as device unique key to be used for calcua
 enable_secure
 ```
 
+Enable secure channel on STSAFE secure chip.
+
+Here are what will happen when enabling the security feature:
+
+* A symmetric key initiated by the chip will be set and stored on the secure chip.
+* All existing data stored in EEPROM (e.g. WiFi password) will be automaticly encrypted.
+* Once enabled, all data reading and writing on the device will be encrypted from that moment.
+
+See [Understand security chip]({{"/docs/understand-security-chip/" | absolute_url }}) for more details.
+
 
