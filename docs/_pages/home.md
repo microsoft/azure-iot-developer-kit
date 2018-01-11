@@ -65,7 +65,7 @@ projects: "2, 5, 6"
 ---
 
 <div class="landing-page-video">
-  {% include whatsnew.html news = "Use DevKit with Microsoft IoT Central to build your own IoT solution within 5 minutes." link = "Learn more about Microsoft IoT Central" url="https://docs.microsoft.com/en-us/microsoft-iot-central/howto-connect-devkit" %}
+  {% include whatsnew.html news = "Use DevKit with IoT Hub Device Provisioning Service to achieve zero-touch registration of device." link = "Learn more about use DPS" url="https://microsoft.github.io/azure-iot-developer-kit/docs/projects/dps/" %}
 </div>
 
 {% include feature_row id="part1" type="right" %}
