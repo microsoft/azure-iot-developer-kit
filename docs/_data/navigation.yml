@@ -8,7 +8,7 @@ main:
     url: /docs/projects/
   - title: "Blog"
     url: https://blogs.msdn.microsoft.com/iotdev/
-  - title: "v1.2"
+  - title: "v1.3"
     url: /versions/
     class: "masthead-circle"
 
@@ -19,16 +19,22 @@ docs:
     children:
       - title: "Get Started"
         url: /docs/get-started/
-      - title: "Manual Installation"
-        url: /docs/installation/
-      - title: "Firmware Upgrading"
-        url: /docs/firmware-upgrading/
       - title: "FAQ"
         url: /docs/faq/
   - title: Projects Catalog
     url: /docs/projects/
+  - title: How-to Guides
+    children:
+      - title: "Manual Installation"
+        url: /docs/installation/
+      - title: "Firmware Upgrading"
+        url: /docs/firmware-upgrading/
+      - title: "Use Configure Mode"
+        url: /docs/use-configuration-mode/
   - title: API Reference
     children:
+      - title: "Arduino"
+        url: /docs/apis/arduino-language-reference/
       - title: "WiFi"
         url: /docs/apis/wifi/
       - title: "WiFiClient"
@@ -53,5 +59,19 @@ docs:
         url: /docs/apis/lps22hb/
       - title: "IrDA"
         url: /docs/apis/irda/
+      - title: "EEPROMInterface"
+        url: /docs/apis/EEPROMInterface/
+      - title: "MemoryPool"
+        url: /docs/apis/MemoryPool/
+      - title: "Queue"
+        url: /docs/apis/Queue/
+      - title: "Thread"
+        url: /docs/apis/Thread/
+      - title: "Mutex"
+        url: /docs/apis/Mutex/
+      - title: "Semaphore"
+        url: /docs/apis/Semaphore/
+      - title: "Timer"
+        url: /docs/apis/Timer/
       - title: "Audio-Retired"
         url: /docs/apis/audio-retired/
