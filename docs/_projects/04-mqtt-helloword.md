@@ -24,14 +24,14 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
 ## Step 1. Open the project folder
 
-1. Disconnect DevKit from your computer if it is connected.
+1. Disconnect the DevKit from your computer, if it is alrerady connected.
 
 2. Start VS Code.
 
-3. Connect DevKit to your computer.
+3. Connect the DevKit to your computer.
     VS Code automatically detects your DevKit and opens the following pages:
-    * Preview ‘README.md: The DevKit introduction page.
-    * Arduino Examples: Hands-on samples to get started with DevKit.
+    * The DevKit introduction page.
+    * Arduino Examples: Hands-on samples to get you started with your DevKit.
 
     ![mini-solution-vscode]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
 
@@ -43,39 +43,39 @@ Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP A
 
 If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
-## Step 3. Build and upload Arduino sketch
+## Step 3. Build and upload the Arduino sketch to the DevKit
 
-Type `Ctrl+P` (macOS: `Cmd+P`) to run `task device-upload`. Once the upload is completed, DevKit restarts and runs the sample.
+Type `Ctrl+P` (macOS: `Cmd+P`) to run `task device-upload`. Once the upload is completed, DevKit restarts and runs the sketch.
 
 ![device-upload]({{"/assets/images/mini-solution/mqtt-helloworld/device-upload.jpg" | absolute_url}})
 
-**Notice:** Occasionally, you get error "Error: AZ3166: Unknown package". This is due to the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to solve it.
+**Notice:** Occasionally, you may get the "Error: AZ3166: Unknown package" error message. This occurs when the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to resolve this issue.
 {: .notice--warning}
 
 ## Test the project
 
-In VS Code, following these steps to open and set up the Serial Monitor:
+In VS Code, follow these steps to open and set up the Serial Monitor:
 
 1. Click the `COM[X]` word on the status bar to set the right COM port with `STMicroelectronics`:
   ![set-com-port]({{"/assets/images/mini-solution/mqtt-helloworld/set-com-port.jpg" | absolute_url}})
 
-2. Click power plug icon on the status bar to open the Serial Monitor:
+2. Click the power plug icon on the status bar to open the Serial Monitor:
   ![serial-monitor]({{"/assets/images/mini-solution/mqtt-helloworld/serial-monitor.jpg" | absolute_url}})
   
-3. On the status bar, click the number that represents the Baud Rate and set to `115200`:
+3. On the status bar, click the number that represents the Baud Rate and set it to `115200`:
   ![set-baud-rate]({{"/assets/images/mini-solution/mqtt-helloworld/set-baud-rate.jpg" | absolute_url}})
 
-The Serial Monitor displays all the messages sent from the sample. When the sample runs, it connects DevKit to Wi-Fi. When the connection is successful, the sample sends a message to the MQTT broker. After that, the sample repeatedly sends two "iot.eclipse.org" messages using QoS 0 and QoS 1, respectively.
+The Serial Monitor displays all the messages sent by the sample setch. When the sample runs, it connects the DevKit to Wi-Fi. When the Wi-Fi connection is successful, the sketch sends a message to the MQTT broker. After that, the sample repeatedly sends two "iot.eclipse.org" messages using QoS 0 and QoS 1, respectively.
 
 ![serial-output]({{"/assets/images/mini-solution/mqtt-helloworld/serial-output.jpg" | absolute_url}})
 
 ## Problems and feedback
 
-If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.
+If you encounter problems, you can refer to [FAQs]({{"/docs/faq/" | absolute_url }}) or reach out to us from the channels below.
 
 {% include feedback.html tutorial="mqtt-helloworld" %}
 
 ## See Also
 
-* [Connect DevKits to Azure IoT Hub ]({{"/docs/getting-started/" | absolute_url }})
-* [Shake Shake to get twitter message]({{"/docs/projects/shake-shake/" | absolute_url }})
+* [Connect IoT DevKit AZ3166 to Azure IoT Hub in the cloud]({{"/docs/getting-started/" | absolute_url }})
+* [Shake, Shake for a Tweet]({{"/docs/projects/shake-shake/" | absolute_url }})
