@@ -30,7 +30,7 @@ By default, the security chip is not enabled. It means the data you store on EEP
 
 After enabled, the DevKit will negotiate a key with secure chip. The key will be stored at both DevKit and secure chip side. All data as well as the read / write operations on I2C will then be encrypted.
 
-**Notice:** **Enable the security chip with caution.** Previous data saved in EEPROM will no longer be readable immediately after enabling the security channel. And using drag and drop to upgrade firmware will do the same. This is a design with the security chip to ensure data can not be breached.
+**Notice:** **Enable the security chip with caution.** Using drag and drop to upgrade firmware will make data saved in EEPROM will no longer be readable immediately after enabling the security channel. This is a design with the security chip to ensure data can not be breached.
 {: .notice--warning}
 
 The status between enabling and disabling the security channel.
