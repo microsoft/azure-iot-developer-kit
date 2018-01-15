@@ -24,7 +24,7 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
 ## Step 1. Open the project folder
 
-1. Disconnect the DevKit from your computer, if it is alrerady connected.
+1. Disconnect the DevKit from your computer, if it is already connected.
 
 2. Start VS Code.
 
@@ -32,12 +32,12 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
     VS Code automatically detects your DevKit and opens the following pages:
     * The DevKit introduction page.
     * Arduino Examples: Hands-on samples to get you started with your DevKit.
+      Links to these two pages appear on the EXPLORER panel on the left side of the Visual Studio Code window.
+      ![mini-solution-vscode]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
 
-    ![mini-solution-vscode]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
+## Step 2. Open the MQTTClient Arduino sample sketch
 
-## Step 2. Open the MQTTClient Sample
-
-Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > MQTT**, and select **MQTTClient**. This will open a new VS Code window with project folder in it.
+Expand left side **Aduino Examples** section, browse to **Examples for MXCHIP AZ3166 > MQTT**, and select **MQTTClient**. This will open a new VS Code window with a project folder in it.
 
 ![examples-folder]({{"/assets/images/mini-solution/mqtt-helloworld/examples.png" | absolute_url}})
 
@@ -49,14 +49,14 @@ Type `Ctrl+P` (macOS: `Cmd+P`) to run `task device-upload`. Once the upload is c
 
 ![device-upload]({{"/assets/images/mini-solution/mqtt-helloworld/device-upload.jpg" | absolute_url}})
 
-**Notice:** Occasionally, you may get the "Error: AZ3166: Unknown package" error message. This occurs when the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to resolve this issue.
+**Notice:** Occasionally, you may get the "Error: AZ3166: Unknown package" message. This occurs when the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to resolve this issue.
 {: .notice--warning}
 
 ## Test the project
 
 In VS Code, follow these steps to open and set up the Serial Monitor:
 
-1. Click the `COM[X]` word on the status bar to set the right COM port with `STMicroelectronics`:
+1. Click the `COM[X]` word on the status bar to set the correct COM port with `STMicroelectronics`:
   ![set-com-port]({{"/assets/images/mini-solution/mqtt-helloworld/set-com-port.jpg" | absolute_url}})
 
 2. Click the power plug icon on the status bar to open the Serial Monitor:
@@ -65,7 +65,7 @@ In VS Code, follow these steps to open and set up the Serial Monitor:
 3. On the status bar, click the number that represents the Baud Rate and set it to `115200`:
   ![set-baud-rate]({{"/assets/images/mini-solution/mqtt-helloworld/set-baud-rate.jpg" | absolute_url}})
 
-The Serial Monitor displays all the messages sent by the sample setch. When the sample runs, it connects the DevKit to Wi-Fi. When the Wi-Fi connection is successful, the sketch sends a message to the MQTT broker. After that, the sample repeatedly sends two "iot.eclipse.org" messages using QoS 0 and QoS 1, respectively.
+The Serial Monitor displays all the messages sent by the sample sketch. When the sketch runs, it connects the DevKit to Wi-Fi. When the Wi-Fi connection is successful, the sketch sends a message to the MQTT broker. After that, the sketch repeatedly sends two "iot.eclipse.org" messages using QoS 0 and QoS 1, respectively.
 
 ![serial-output]({{"/assets/images/mini-solution/mqtt-helloworld/serial-output.jpg" | absolute_url}})
 

@@ -44,7 +44,7 @@ variable:
 last_modified_at: 2017-07-17
 ---
 
-In this project, you will learn how to use DevKit as a translator. The app will record your voice and translate it to English text show on the screen.
+In this project, you learn how to use DevKit as a translator. The app records your voice and translates it to English text shown on the DevKit screen.
 
 {% include toc icon="columns" %}
 
@@ -64,16 +64,20 @@ An active Azure subscription. If you do not have one, you can register via one o
 
 ### A. Start VS Code
 
-Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code automatically finds the DevKit and opens an introduction page:
+- Make sure your DevKit is not connected to your PC.
+- Start VS Code
+- Connect the DevKit to your computer.
+
+VS Code automatically finds the DevKit and opens an introduction page:
 
 ![Introduction page]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
 
-**Notice:** Occasionally, when you launch VS Code, you will be prompted with error that cannot find Arduino IDE or related board package. Close VS Code, launch Arduino IDE once again and VS Code should locate Arduino IDE path correctly.
+**Notice:** Occasionally, when you launch VS Code, you may be prompted with error saying that the Arduino IDE or related board package cannot be found. If this happens, close VS Code, launch the Arduino IDE once again, and VS Code should locate the Arduino IDE path correctly.
 {: .notice--warning}
 
 ### B. Open the Arduino Examples folder
 
-Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **DevKitTranslator**. This will open a new VS Code window with project folder in it.
+Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **DevKitTranslator**. This will open a new VS Code window with the DEVKITTRANSLATOR project folder in it.
 
 ![mini-solution-examples]({{"/assets/images/mini-solution/vscode_examples.png" | absolute_url }})
 
@@ -81,26 +85,26 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
 
 ## Step 2. Provision Azure services
 
-In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
+In the solution window, run the cloud-provisioniong task by typing `Ctrl+P` (macOS: `Cmd+P`) and entering `task cloud-provision` in the text box:
 
 In the VS Code terminal, an interactive command line will guide you through provisioning all required Azure services:
 
 ![mini-solution-provision-sub]({{"/assets/images/mini-solution/devkit-translator/cloud-provision.png" | absolute_url }})
 
-**Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. 
+**Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to resolve this issue. 
 {: .notice--warning}
 
 ## Step 3. Deploy Azure Functions
 
-Use `Ctrl+P` (macOS: `Cmd+P`) to run `task cloud-deploy` to deploy the Azure Functions code. It usually takes 2 to 5 minutes to complete:
+Use `Ctrl+P` (macOS: `Cmd+P`) to run `task cloud-deploy` to deploy the Azure Functions code. This process usually takes 2 to 5 minutes to complete:
 
 ![mini-solution-deploy]({{"/assets/images/mini-solution/devkit-translator/cloud-deploy.png" | absolute_url }})
 
-After auzre function deployed successfully, fill in the azure_config.h file with function app name. You could navigate to [Azure portal](https://portal.azure.com/){:target="_blank"} to find it:
+After Azure Function deploys successfully, fill in the azure_config.h file with function app name. You can navigate to [Azure portal](https://portal.azure.com/){:target="_blank"} to find it:
 
 ![mini-solution-function-app]({{"/assets/images/mini-solution/devkit-translator/azure-function.png" | absolute_url }})
 
-**Notice:** Occasionally, if the Azure Function can't work properly please check this [FAQ steps]({{"/docs/faq/#compilation-error-for-azure-function" | absolute_url}}) to solve it.
+**Notice:** If the Azure Function does not work properly, please check this [FAQ steps]({{"/docs/faq/#compilation-error-for-azure-function" | absolute_url}}) to resolve this issue.
 {: .notice--warning}
 
 ## Step 4. Build and upload the device code
@@ -110,53 +114,65 @@ After auzre function deployed successfully, fill in the azure_config.h file with
 ### Windows
 
 1. Use `Ctrl+P` to run `task device-upload`.
-2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button on the DevKit. The screen displays the DevKit ID and 'Configuration'.
 
-This is to set the connection string that retrieves from `task cloud-provision` step.
+This sets the connection string that is retrieved from the `task cloud-provision` step.
 
-Then VS Code starts verifying and uploading the Arduino sketch:
+VS Code then starst verifying and uploading the Arduino sketch to the DevKit:
 
 ![device-upload]({{"/assets/images/mini-solution/devkit-translator/device-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
-**Notice:** Occasionally, you get error "Error: AZ3166: Unknown package". This is due to the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to solve it.
+**Notice:** Occasionally, you may get an "Error: AZ3166: Unknown package" eror message. This occurs when the board package index is not refreshed correctly. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to resolve this issue.
 {: .notice--warning}
 
 ### macOS
 
-1. Put DevKit into configuration mode:
-  Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
+1. Put the DevKit into configuration mode:
+  Hold down button A, then push and release the reset button on the DevKit. The screen displays 'Configuration'.
 2. Use `Cmd+P` to run `task device-upload`.
 
-This is to set the connection string that retrieves from `task cloud-provision` step.
+This sets the connection string that is retrieved from the `task cloud-provision` step.
 
-Then VS Code starts verifying and uploading the Arduino sketch:
+VS Code then starts verifying and uploading the Arduino sketch to the DevKit:
 
 ![device-upload]({{"/assets/images/mini-solution/devkit-translator/device-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
-**Notice:** Occasionally, you get error "Error: AZ3166: Unknown package". This is due to the board package index is not refreshed. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to solve it.
+**Notice:** Occasionally, you may get an "Error: AZ3166: Unknown package" error message. This is occurs when the board package index is not refreshed correctly. Check this [FAQ steps]({{"/docs/faq/#development" | absolute_url}}) to resolve this issue.
 {: .notice--warning}
 
 ## Test the project
 
-After app initialization, follow the instructions on the screen to setup. You could just press button B to talk. The default language is Chinese. Or, you may press button A to enter setup mode. Press button B to scroll all supported languages, then press button A to confirm your choice. After source language is set, press button B to talk and release to send the voice. Several seconds later, the translation will be shown on the screen.
+After app initialization, follow the instructions on the DevKit screen.
+The default source language is Chinese.
+
+To translate Chinese to English:
+
+- Simply press and hold button B while speaking, then release button B to initiate the translation. Several seconds later, the translation will be shown on the screen.
+
+To select a source language other than Chinese:
+
+- Press button A to enter setup mode.
+- Press button B to scroll all supported source languages.
+- Press button A to confirm your choice of source language.
+- Press and hold button B while speaking, then release button B to initiate the translation. Several seconds later, the translation will be shown on the screen.
 
 {% include gallery id="layouts_gallery" caption="Translate as you go" %}
 
-- Press button A and B to scroll and select source language
+- Press button A and B to scroll and select the source language.
 - Press button B to talk, release to send the voice and get the translation text
 
 ## How it works
 
 ![mini-solution-voice-to-tweet-diagram]({{"/assets/images/mini-solution/devkit-translator/diagram.png" | absolute_url }})
 
-The Arduino sketch records your voice, post a HTTP request to trigger Azure Functions. Azure Functions calls the cognitive service speech translator API to do the translation. After Azure Functions gets the translation text, it sends a C2D message to the device. Then the translation shows on the screen.
+The Arduino sketch records your voice then posts an HTTP request to trigger Azure Functions. Azure Functions calls the cognitive service speech translator API to do the translation. After Azure Functions gets the translation text, it sends a C2D message to the device. Then the translation is displayed on the screen.
 
 ## Problems and feedback
 
-If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter other problems or reach out to us from the channels below.
+If you encounter problems, you can refer to [FAQs]({{"/docs/faq/" | absolute_url }}) or reach out to us from the channels below.
 
 {% include feedback.html tutorial="devkit-translator" %}
