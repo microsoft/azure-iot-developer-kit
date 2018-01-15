@@ -17,7 +17,7 @@ main:
 docs:
   - title: Quick Start
     children:
-      - title: "Get Started"
+      - title: "Get started"
         url: /docs/get-started/
       - title: "FAQ"
         url: /docs/faq/
@@ -25,12 +25,14 @@ docs:
     url: /docs/projects/
   - title: How-to Guides
     children:
-      - title: "Manual Installation"
+      - title: "Manual installation"
         url: /docs/installation/
-      - title: "Firmware Upgrading"
+      - title: "Firmware upgrading"
         url: /docs/firmware-upgrading/
-      - title: "Use Configure Mode"
+      - title: "Use configure mode"
         url: /docs/use-configuration-mode/
+      - title: "Understand security chip"
+        url: /docs/understand-security-chip
   - title: API Reference
     children:
       - title: "Arduino"

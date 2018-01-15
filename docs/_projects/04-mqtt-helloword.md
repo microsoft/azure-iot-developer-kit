@@ -32,10 +32,8 @@ Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
     VS Code automatically detects your DevKit and opens the following pages:
     * The DevKit introduction page.
     * Arduino Examples: Hands-on samples to get you started with your DevKit.
-
-    Links to these two pages appear on the EXPLORER panel on the left side of the Visual Studio Code window.
-
-    ![mini-solution-vscode]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
+      Links to these two pages appear on the EXPLORER panel on the left side of the Visual Studio Code window.
+      ![mini-solution-vscode]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
 
 ## Step 2. Open the MQTTClient Arduino sample sketch
 
@@ -45,7 +43,7 @@ Expand left side **Aduino Examples** section, browse to **Examples for MXCHIP AZ
 
 If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the command palette, type **Arduino**, and then find and select **Arduino: Examples**.
 
-## Step 3. Build and upload the Arduino sketch to the Devit
+## Step 3. Build and upload the Arduino sketch to the DevKit
 
 Type `Ctrl+P` (macOS: `Cmd+P`) to run `task device-upload`. Once the upload is completed, DevKit restarts and runs the sketch.
 

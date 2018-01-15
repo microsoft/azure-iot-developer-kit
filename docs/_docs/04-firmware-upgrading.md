@@ -1,7 +1,7 @@
 ---
-title: "Upgrade DevKit Firmware"
+title: "Upgrade DevKit firmware"
 permalink: /docs/firmware-upgrading/
-excerpt: "Instructions for upgrading board firmware."
+excerpt: "Instructions for upgrading device firmware."
 last_modified_at: 2017-10-11
 ---
 

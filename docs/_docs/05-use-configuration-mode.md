@@ -1,5 +1,5 @@
 ---
-title: "Use Configuration Mode"
+title: "Use configuration mode"
 permalink: /docs/use-configuration-mode/
 excerpt: "Get into DevKit Configuration Mode to configure your device."
 last_modified_at: 2018-01-08
@@ -112,4 +112,8 @@ Here are what will happen when enabling the security feature:
 
 See [Understand security chip]({{"/docs/understand-security-chip/" | absolute_url }}) for more details.
 
+## Problems and feedback
 
+If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from our [Gitter channel](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"}.
+
+{% include feedback.html tutorial="use-configuraton-mode" %}

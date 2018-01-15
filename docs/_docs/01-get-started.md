@@ -1,5 +1,5 @@
 ---
-title: "Get Started"
+title: "Get started"
 permalink: /docs/get-started/
 excerpt: "How to quickly install and set up your development environment to use the DevKit."
 variable:

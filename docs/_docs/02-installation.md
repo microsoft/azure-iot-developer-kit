@@ -1,5 +1,5 @@
 ---
-title: "Manual Installation"
+title: "Manual installation"
 permalink: /docs/installation/
 excerpt: "Instructions for manually install tools and packages."
 variable:
