@@ -53,6 +53,21 @@ brew doctor
 
 ![Homebrew doctor]({{"/assets/images/faq/brew-doctor.png" | absolute_url }})
 
+### Node incompatible error on macOS.
+
+When you run `install.sh` to install development environment on macOS. You may get a node incompatible error:
+
+The engine "node" is incompatible with this module. Expected version ">= 8".
+Found incompatible module
+
+To resolve, follow the instruction of Homebrew by running:
+
+```bash
+brew update
+brew upgrade node
+npm install -g npm
+```
+
 ### Windows Defender SmartScreen prevented an unrecognized app error.
 
 Sometimes SmartScreen prevents applications you know are not bad – for example, it’s a CMD or VBS script.
