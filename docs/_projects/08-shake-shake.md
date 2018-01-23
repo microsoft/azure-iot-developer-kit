@@ -156,6 +156,9 @@ After app initialization, click button A and gently shake the DevKit board to re
 - Press button A again, then shake for a new tweet.
 - Press button B to scroll through the rest of the tweet.
 
+**Notice:** If the screen displays **No Tweets**, please check [this step]({{"/docs/projects/shake-shake/#problems-and-feedback" | absolute_url}}).
+{: .notice--warning}
+
 ## How it works
 
 ![diagram]({{"/assets/images/mini-solution/shake-shake/diagram.png" | absolute_url }})

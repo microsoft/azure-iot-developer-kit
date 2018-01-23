@@ -7,6 +7,25 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.3.1 (January 23, 2018)
+
+During the past 2 weeks, we got chance to revisit our code and did some minor changes to improve the stability and dev experience.
+
+### Release Summary
+
+* SDK
+	* Fixed memory leak issue in IoT Hub MQTT client when there was a long drop on Wi-Fi.
+
+* Development Tools
+	* Improved the stability for DevKit Windows/Mac installation.
+	* Supported customized IoT Hub Device ID in configuring device connection string.
+
+### Downloads
+
+- [Installation Package 1.3.1 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.1.42.zip).
+- [Installation Package 1.3.1 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.1.42.zip).
+- [Firmware 1.3.1](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.1.42.bin).
+
 
 ## Version 1.3.0 (January 9, 2018)
 
