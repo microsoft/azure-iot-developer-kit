@@ -53,20 +53,14 @@ brew doctor
 
 ![Homebrew doctor]({{"/assets/images/faq/brew-doctor.png" | absolute_url }})
 
-### Node incompatible error on macOS.
+### Inconsistency between node versions of npm and yarn.
 
 When you run `install.sh` to install development environment on macOS. You may get a node incompatible error:
 
 The engine "node" is incompatible with this module. Expected version ">= 8".
 Found incompatible module
 
-To resolve, follow the instruction of Homebrew by running:
-
-```bash
-brew update
-brew upgrade node
-npm install -g npm
-```
+To resolve, please upgrade node to the latest version.
 
 ### Windows Defender SmartScreen prevented an unrecognized app error.
 
