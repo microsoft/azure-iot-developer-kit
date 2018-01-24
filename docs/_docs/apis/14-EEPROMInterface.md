@@ -37,8 +37,17 @@ Write data to secure chip.
 > | :--- | :--- | :---------- |
 > | uint8_t* | dataBuff | The data to be written secure chip. |
 > | int | buffSize | The size of written data. The valid range of different data zone is different. |
-> | uint8_t | dataZoneIndex | The index of zone written data to. The valid input is {0, 2, 3, 5, 6, 7, 8, 10}. {3, 5, 10} are used for wifi and iot hub connection string. 6 is used for DPS mini solution. {0, 2} are reserved for later mini solutions. So we recommand user to use {7, 8}. |
+> | uint8_t | dataZoneIndex | The index of zone written data to. The valid input is {0, 2, 3, 5, 6, 7, 8, 10}. We recommend to use {7, 8}. See below for the reserved zones.|
 > 
+>The following zones are used for:
+>
+> | Zone | Description |
+> | :--- | :---------- |
+> | 3 | wifi ssid |
+> | 10 | wifi password |
+> | 5 | IoT Hub connection string |
+> | 0 and 2 | reserved for later mini solutions |
+>
 > #### Return value
 > 
 > | Type | Description |
@@ -48,8 +57,7 @@ Write data to secure chip.
 >The max dataSize input for each data zone was defined in library like:
 >`const static int DATA_SEGMENT_LENGTH[11] = {976, 0, 192, 120, 0, 584, 680, 784, 880, 0, 88};`
 >For zone 7, the max dataSize is 784. For zone 8, the max dataSize is 880.
-
-
+>
 ### read
 
 ```cpp
