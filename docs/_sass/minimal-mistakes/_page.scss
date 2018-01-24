@@ -301,7 +301,6 @@
 }
 
 .page__share__inline {
-  text-align: center;
   padding-bottom: 40px;
 
   @include breakpoint(max-width $small) {
@@ -318,11 +317,27 @@
   }
 }
 
-.page__share__inline a,.page__share__inline p {
+.page__share__inline,
+.page__share {
+  p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+  }
+  a {
     margin: 0 5px;
     display: inline-block;
+    vertical-align: center;
+  }
+  .social-icons-list {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+  }
 }
-
 
 /*
    Page meta
