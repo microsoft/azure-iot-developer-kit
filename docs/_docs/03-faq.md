@@ -84,6 +84,10 @@ To resolve, try to use Wi-Fi with normal WPA/WPA2 authentication.
 
 Currently, DevKit only can connect to 2.4 GHz Wi-Fi, 5 GHz is not supported due to hardware restrictions.
 
+### The WiFi network I am connecting to is restricted and I need to register the deviceS MAC address. Where can I find it?
+
+Follow the steps to connect the device to a WiFi hotspot to the point where the device is in AP mode and you connect to its administrative web interface with a browser. After making a connection to the device on its IP address (e.g. 192.168.0.1), open a command prompt on Windows or a terminal window on Mac/Linux and query your ARP table to retrieve the device's MAC address. On Windows, type "arp -a" and find your device by its IP address. On Mac/Linux, type "arp".
+
 ## Cloud Provisioning
 
 ### Cannot log in Azure as access token expired.
