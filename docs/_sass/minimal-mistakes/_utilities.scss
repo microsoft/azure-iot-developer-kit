@@ -229,6 +229,7 @@ body:hover .visually-hidden button {
    ========================================================================== */
 
 .navicon {
+  display: inline-block;
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
