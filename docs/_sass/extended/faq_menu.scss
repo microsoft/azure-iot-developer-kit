@@ -23,12 +23,26 @@
   }
 
   a.faq-back-to-top {
+    $size: 52px;
     display: none;
     position: fixed;
-    height: 52px;
-    width: 52px;
-    bottom: 26px;
-    margin-left: 2.5423728814%;
+    height: $size;
+    width: $size;
+    bottom: $size;
+    right: $size;
+    // hit area round image
+    padding: $size/8;
+    box-sizing: content-box;
+    // slightly off-color by default
+    img {
+      opacity: .8;
+      transition: none;
+    }
+    // remove squared shadow from the circle shape
+    &:hover img {
+      box-shadow: none;
+      opacity: 1.0;
+    }
 
     @include breakpoint($large) {
       display: block;
