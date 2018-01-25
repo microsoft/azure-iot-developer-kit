@@ -38,7 +38,7 @@ Download and install [Visual Studio Code for Windows](https://code.visualstudio.
 
   [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/tasks/latest){: .click-download-tracker .btn .btn--success .btn--large}
 
-  Locate the .zip and extract it to your Windows user folder (`C:\Users\[your name]`). Then launch **Command Prompt** (`cmd`) and run the following commands to configure:
+  Locate the .zip and extract it to your Windows user folder (`C:\Users\[your name]\azure-board-cli`). Then launch **Command Prompt** (`cmd`) and run the following commands to configure:
 
   ```
   cd C:\Users\[your name]\azure-board-cli
@@ -127,7 +127,8 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 
   a. Move extracted folder to your macOS user folder:
   ```bash
-  mv [.zip extracted folder]/azure-board-cli ~/. ; cd ~/azure-board-cli
+  mv [.zip extracted folder] ~/azure-board-cli
+  cd ~/azure-board-cli
   ```
   
   b. Install npm packages:
