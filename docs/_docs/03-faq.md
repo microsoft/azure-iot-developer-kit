@@ -139,7 +139,8 @@ It is caused by the incorrect warning handling between Visual Studio Code Arduin
 
 When the mini solution of Shake-Shake and DevKit Translator do not work, in Azure portal, you got the following error for the Azure Function you deployed:
 
-```2017-11-15T03:24:23.426 Function compilation error
+```
+2017-11-15T03:24:23.426 Function compilation error
 2017-11-15T03:24:23.426 run.csx(11,23): error CS0234: The type or namespace name 'Devices' does not exist in the namespace 'Microsoft.Azure' (are you missing an assembly reference?)
 2017-11-15T03:24:23.426 run.csx(95,15): error CS0246: The type or namespace name 'ServiceClient' could not be found (are you missing a using directive or an assembly reference?)
 2017-11-15T03:24:23.426 run.csx(95,45): error CS0103: The name 'ServiceClient' does not exist in the current context
@@ -182,6 +183,35 @@ Switch the IntelliSense engine to "**Tag Parser**" can fix this issue:
  ![vsc-intellisense-issue-4]({{"/assets/images/faq/vsc-intellisense-4.png" | absolute_url }})
 
 You can get more detail from [C/C++ for VS Code](https://code.visualstudio.com/docs/languages/cpp). 
+
+### Customize device ID
+
+The default device ID in IoT Hub for DevKit is AZ3166, you can change it if you need in your own scenario.
+
+To customize device ID, open `.bin/config.json` in the mini-solution project, and add `device` field. For example:
+
+```json
+{
+  "sketch": "../GetStarted.ino",
+  "config": "deviceConnectionString",
+  "provision_iot_hub": true,
+  "provision_azure_function": false,
+  "tasks": {
+    "provision": ["subscription", "iothub", "armtemplatedeployment", "device"],
+    "deploy": []
+  },
+  "device": "CUSTOMIZED_DEVICE_ID"
+}
+```
+
+Notice: device ID is hardcoding in some places of mini-solutions, we will improve the development experience to resolve this issue. However, you still need to change the hardcoding `AZ3166` to customized device ID in the code currently. Here's the full list of files you need to modify:
+
+* DevKitTranslator - [azurefunction/devkit-translator/run.csx](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/DevKitTranslator/azurefunction/devkit-translator/run.csx#L42)
+* GetStarted - [config.h](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/GetStarted/config.h#L9)
+* RemoteMonitoring - [RemoteMonitoring.ino](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/RemoteMonitoring/RemoteMonitoring.ino#L23)
+* ShakeShake - [azureFunction/shakeshake-cs/run.csx](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/ShakeShake/azureFunction/shakeshake-cs/run.csx#L91) & [azureFunction/shakeshake-node/index.js](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/ShakeShake/azureFunction/shakeshake-node/index.js#L29)
+* DevKitDPS - [config.h](https://github.com/DevKitExamples/DevKitDPS/blob/master/config.h#L9)
+* DevKitState - [azureFunction/devkit-state/run.csx](https://github.com/DevKitExamples/DevKitState/blob/master/azureFunction/devkit-state/run.csx#L60) & [web/js/main.js](https://github.com/DevKitExamples/DevKitState/blob/master/web/js/main.js#L7)
 
 {% include social-share.html %}
 
