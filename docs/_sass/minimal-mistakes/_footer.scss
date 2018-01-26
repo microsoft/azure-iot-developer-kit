@@ -20,6 +20,7 @@
           animation-delay: 0.45s;
   background-color: $lighter-gray;
   border-top: 1px solid $light-gray;
+  z-index: -1;
 
   footer {
     @include container;
