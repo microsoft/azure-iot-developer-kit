@@ -152,6 +152,12 @@ When the sample app runs, DevKit sends sensor data over Wi-Fi to your Azure IoT 
 
 {% include gallery id="layouts_gallery" caption="View sensor information within Azure IoT Suite." %}
 
+## Customize device ID
+
+You can customize device ID in IoT Hub by following [this doc]({{"/docs/customize-device-id/" | absolute_url }}), however, you still need to change the hardcoding `AZ3166` to customized device ID in the code currently. Here's the list of files you need to modify:
+
+* [RemoteMonitoring.ino](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/RemoteMonitoring/RemoteMonitoring.ino#L23)
+
 ## Problems and feedback
 
 If you encounter problems, please refer to [FAQs]({{"/docs/faq/" | absolute_url }}) or reach out to us from the channels below.
