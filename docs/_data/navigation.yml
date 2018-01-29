@@ -75,5 +75,7 @@ docs:
         url: /docs/apis/Semaphore/
       - title: "Timer"
         url: /docs/apis/Timer/
+      - title: "FileSystem"
+        url: /docs/apis/FileSystem/
       - title: "Audio-Retired"
         url: /docs/apis/audio-retired/
