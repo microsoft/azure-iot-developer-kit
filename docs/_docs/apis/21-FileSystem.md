@@ -26,8 +26,8 @@ fatfs_exfuns.h
 | Methods |
 | :------ |
 | [format](#format) - `static int format(BlockDevice *bd, int allocation_unit = 0)` |
-| [mount](#mount) - `virtual int mount(BlockDevice *bd)` |
-| [mount()](#mount()) - `virtual int mount(BlockDevice *bd, bool force)` |
+| [mount(BlockDevice *)](#mount(BlockDevice *)) - `virtual int mount(BlockDevice *bd)` |
+| [mount(BlockDevice *, bool)](#mount(BlockDevice *, bool)) - `virtual int mount(BlockDevice *bd, bool force)` |
 | [unmount](#unmount) - `virtual int unmount()` |
 | [remove](#remove) - `virtual int remove(const char *path)` |
 | [rename](#rename) - `virtual int rename(const char *path, const char *newpath)` |
@@ -76,12 +76,12 @@ static int format(BlockDevice *bd, int allocation_unit = 0)
 > 
 >  0 on success, negative error code on failure. 
 
-### mount
+### mount(BlockDevice *)
 
 ```cpp
 virtual int mount(BlockDevice *bd)
 ```
-> Mounts a filesystem to a block device
+> Mounts a filesystem to a block device.
 >
 
 > #### Parameters
@@ -95,12 +95,12 @@ virtual int mount(BlockDevice *bd)
 >  0 on success, negative error code on failure. 
 
 
-### mount()
+### mount(BlockDevice *, bool)
 
 ```cpp
 virtual int mount(BlockDevice *bd, bool force)
 ```
-> Mounts a filesystem to a block device
+> Mounts a filesystem to a block device.
 
 > #### Parameters
  
@@ -119,7 +119,7 @@ virtual int mount(BlockDevice *bd, bool force)
 ```cpp
 virtual int unmount();
 ```
-> Unmounts a filesystem from the underlying block device
+> Unmounts a filesystem from the underlying block device.
 
 > #### Return value
 > 
@@ -209,7 +209,7 @@ filesystem_info fatfs_get_info()
 
 > #### Return value
 > 
->  file system information 
+>  file system information.
 >```
 >typedef struct _filesystem_info_t {
 >  int total_space;
@@ -221,7 +221,6 @@ filesystem_info fatfs_get_info()
 ## Sample code
 
 ```cpp
-
 #include "mbed.h"
 #include "FATFileSystem.h"
 #include "SFlashBlockDevice.h"
