@@ -33,6 +33,8 @@
 }
 
 .archive__item-title {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 0.5em;
   font-family: $sans-serif-narrow;
 
