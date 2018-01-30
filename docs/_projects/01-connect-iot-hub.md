@@ -77,14 +77,15 @@ In the VS Code terminal, an interactive command line guides you through provisio
 
 #### Windows
 
-1. Use `Ctrl+P` to run `task device-upload`.
-2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+1. Use `Ctrl+P` to run `task config-device-connection`.
+2. The terminal will ask you whether you want to use connection string that retrieves from `task cloud-provision` step. You could also input your own device connection string by clicking 'Create New...'
+3. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
 
-This is to set the connection string that retrieves from `task cloud-provision` step.
+![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/connect-iothub/config-device-connection.png.png" | absolute_url }})
 
-Then VS Code starts verifying and uploading the Arduino sketch:
+4. After `task config-device-connection` finished, click `F1` to load VS Code commands and select `Arduino: Upload`, then VS Code starts verifying and uploading the Arduino sketch:
 
-![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
+![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/connect-iothub/arduino-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
@@ -95,13 +96,14 @@ The DevKit reboots and starts running the code.
 
 1. Put DevKit into configuration mode:
   Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
-2. Use `Cmd+P` to run `task device-upload`.
+2. Use `Cmd+P` to run `task config-device-connection`.
+3. The terminal will ask you whether you want to use connection string that retrieves from `task cloud-provision` step. You could also input your own device connection string by clicking 'Create New...'
 
-This is to set the connection string that retrieves from `task cloud-provision` step.
+![device-upload]({{"/assets/images/mini-solution/connect-iothub/config-device-connection.png" | absolute_url }})
 
-Then VS Code starts verifying and uploading the Arduino sketch:
+4. After `task config-device-connection` finished, click `Cmd + shift + p` to load VS Code commands and select `Arduino: Upload`, then VS Code starts verifying and uploading the Arduino sketch:
 
-![device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
+![device-upload]({{"/assets/images/mini-solution/connect-iothub/arduino-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
