@@ -204,7 +204,7 @@ To customize device ID, open `.bin/config.json` in the mini-solution project, an
 }
 ```
 
-Notice: device ID is hardcoding in some places of mini-solutions, we will improve the development experience to resolve this issue. However, you still need to change the hardcoding `AZ3166` to customized device ID in the code currently. Here's the full list of files you need to modify:
+Notice: The device ID is hardcoded now in the project catalog samples. We will improve the development experience to resolve this issue. However, if you need to change the default **AZ3166** to other, here's the list of files you need to modify for each sample:
 
 * DevKitTranslator - [azurefunction/devkit-translator/run.csx](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/DevKitTranslator/azurefunction/devkit-translator/run.csx#L42)
 * GetStarted - [config.h](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/GetStarted/config.h#L9)
