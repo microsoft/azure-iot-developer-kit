@@ -116,14 +116,15 @@ Use `Ctrl+P` (macOS: `Cmd+P`) to run `task cloud-deploy`. This will start deploy
 
 ### Windows
 
-1. Use `Ctrl+P` to run `task device-upload`.
-2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit ID and 'Configuration'.
+1. Use `Ctrl+P` to run `task config-device-connection`.
 
-This sets the connection string that is retrieved from the `task cloud-provision` step.
+2. The terminal will ask you whether you want to use connection string that retrieves from `task cloud-provision` step. You could also input your own device connection string by clicking 'Create New...'
 
-VS Code then starts verifying and uploading the Arduino sketch to your DevKit:
+3. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+  ![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/shake-shake/config-device-connection.png" | absolute_url }})
 
-![device-upload]({{"/assets/images/mini-solution/shake-shake/device-upload.png" | absolute_url }})
+4. After `task config-device-connection` finished, click `F1` to load VS Code commands and select `Arduino: Upload`, then VS Code starts verifying and uploading the Arduino sketch:
+  ![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/shake-shake/arduino-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
@@ -134,13 +135,14 @@ The DevKit reboots and starts running the code.
 
 1. Put DevKit into configuration mode:
   Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
-2. Use `Cmd+P` to run `task device-upload`.
 
-This sets the connection string that is retrieved from the `task cloud-provision` step.
+2. Use `Cmd+P` to run `task config-device-connection`.
 
-VS Code then starts verifying and uploading the Arduino sketch to your DevKit:
+3. The terminal will ask you whether you want to use connection string that retrieves from `task cloud-provision` step. You could also input your own device connection string by clicking 'Create New...'
+  ![device-upload]({{"/assets/images/mini-solution/shake-shake/config-device-connection.png" | absolute_url }})
 
-![device-upload]({{"/assets/images/mini-solution/shake-shake/device-upload.png" | absolute_url }})
+4. After `task config-device-connection` finished, click `Cmd + shift + p` to load VS Code commands and select `Arduino: Upload`, then VS Code starts verifying and uploading the Arduino sketch:
+  ![device-upload]({{"/assets/images/mini-solution/shake-shake/arduino-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
