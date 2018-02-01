@@ -133,6 +133,9 @@ During installation, you see the progress of each tool or package.
 **Notice:** Depending on your environment, sometimes you will get failure when installing Arduino IDE. In this case, you may try [install Arduino IDE individually]({{"/docs/installation/#windows" | absolute_url}}) and run `install.cmd` again. Otherwise, please follow the [manual steps]({{"/docs/installation/#windows" | absolute_url}}) to install all necessary tools and packages.
 {: .notice--warning}
 
+**Notice:** Please don't unzip the downloaded .zip file into a network folder.
+{: .notice--warning}
+
 #### C. Install drivers
 
 The VS Code for Arduino extension relies on the Arduino IDE. If this is the first time you are installing the Arduino IDE, you are prompted to install relevant drivers:
@@ -185,6 +188,9 @@ Launch Terminal app, locate the folder you extract .zip file and run:
 ![macOS install]({{"/assets/images/getting-started/mac-install-sh.png" | absolute_url }})
 
 **Notice:** If you meet Homebrew permission error, run `brew doctor` to get it fixed. Check [FAQ]({{"/docs/faq/#homebrew-permission-error-on-macos" | absolute_url }}) for more details.
+{: .notice--warning}
+
+**Notice:** Please don't unzip the downloaded .zip file into a network folder.
 {: .notice--warning}
 
 ## Problems and feedback
