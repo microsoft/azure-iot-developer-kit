@@ -91,7 +91,7 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ![mini-solution-provision-sub]({{"/assets/images/mini-solution/devkit-translator/cloud-provision.png" | absolute_url }})
 
-**Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to resolve this issue. 
+**Notice:** If the page hangs in the loading status when trying to sign in to Azure, please check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to resolve this issue. 
 {: .notice--warning}
 
 ## Step 3. Deploy Azure Functions

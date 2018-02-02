@@ -82,7 +82,7 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
 
 ## Step 2. Provision Azure services
 
-In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
+1. In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
 
 In the VS Code terminal, an interactive command line will guide you through provisioning the required Azure services:
 
@@ -90,6 +90,58 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 **Notice:** If the page hangs in the loading status when trying to sign in to Azure, please refer to this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to resolve the issue. 
 {: .notice--warning}
+
+2. When a list of Azure subscriptions display in the terminal, use the **up** and **down** arrow keys to select the Azure subscription that you will use to provision the Azure IoT Hub. Then press **Enter** to confirm the selected subscription.
+
+    ![Select Azure subscription]({{"/assets/images/mini-solution/shake-shake/select-subscription.png" | absolute_url }})
+
+    _Select Azure subscription_
+
+3. Provision IoT Hub
+      * If you've provisioned IoT Hub(s) before, a list of IoT Hubs associated with the subscription appears in the terminal. Please use **up** and **down** arrow keys to select one from the list and press **Enter** to confirm.
+
+        ![Select an existing IoT Hub]({{"/assets/images/mini-solution/shake-shake/select-existing-iothub.png" | absolute_url }})
+
+        _Select existing Free IoT Hub_
+
+        Wait several minutes to finish ARM Template deployment and IoT Hub Device provision. Then press any key to exit the terminal.
+
+        ![[Select an existing IoT Hub done]({{"/assets/images/mini-solution/shake-shake/select-iothub-done.png" | absolute_url }})
+
+        _Finish selecting IoT Hub_
+
+      * If you don't have any IoT Hub, please follow the steps to create a free IoT Hub:
+        * Resource group provision:
+          Use **up** and **down** arrow keys to choose a resource group you've created before or select **Create New...** to provision a new resource group. Complete the resource group provision according to the command line prompt.
+
+          ![Select or create Azure resource group]({{"/assets/images/mini-solution/shake-shake/select-or-create-resource-group.png" | absolute_url }})
+
+          If you choose to create a new resource group:
+          * Use **up** and **down** arrow keys to select region for a new resource group provision, and then press **Enter** to confirm.
+
+            ![Select region for a new resource group provision]({{"/assets/images/mini-solution/shake-shake/select-region-for-resource-group.png.png" | absolute_url }})
+
+            _Select region for resource group provision_
+
+          * Input a name for new resource group.
+
+            ![Input name for resource group]({{"/assets/images/mini-solution/shake-shake/input-name-for-resource-group.png" | absolute_url }})
+
+            _Input a name for resource group provision_
+
+        * IoT Hub provision:
+
+          Enter a name for your new IoT Hub, and press **Enter** to confirm.
+
+          ![Input a name for IoT Hub]({{"/assets/images/mini-solution/shake-shake/input-name-for-iothub.png" | absolute_url }})
+
+          _Input a name for IoT Hub provision_
+
+          Wait several minutes to finish ARM Template deployment and IoT Hub Device provision. Then press any key to exit the terminal.
+
+          ![Provision Azure IoT Hub done]({{"/assets/images/mini-solution/shake-shake/provision-iothub-done.png" | absolute_url }})
+
+          _Finish cloud provision_
 
 ## Step 3. Modify the #hashtag
 
