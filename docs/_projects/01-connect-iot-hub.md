@@ -66,7 +66,7 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
 
     ![Interactive command line]({{"/assets/images/mini-solution/connect-iothub/cloud-provision.png" | absolute_url }})
 
-    **Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. 
+    **Notice:** If the page hangs in the loading status when trying to sign in to Azure, please check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. 
     {: .notice--warning}
 
 2. When a list of Azure subscriptions display in the terminal, use the **up** and **down** arrow keys to select the Azure subscription that you will use to provision the Azure IoT Hub. Then press **Enter** to confirm the selected subscription.
@@ -74,15 +74,20 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
     ![Select Azure subscription]({{"/assets/images/mini-solution/connect-iothub/select-subscription.png" | absolute_url }})
 
 3. Provision IoT Hub
-      * If you've provisioned a free trial IoT Hub before, select it and press **Enter** to confirm.
+      * If you've provisioned IoT Hub(s) before, a list of IoT Hubs associated with the subscription appears in the terminal. Please use **up** and **down** arrow keys to select one from the list and press **Enter** to confirm.
 
         ![Select an existing IoT Hub]({{"/assets/images/mini-solution/connect-iothub/select-existing-iothub.png" | absolute_url }})
+
+        _Select existing Free IoT Hub_
 
         Wait several minutes to finish ARM Template deployment and IoT Hub Device provision. Then press any key to exit the terminal.
 
         ![[Select an existing IoT Hub done]({{"/assets/images/mini-solution/connect-iothub/select-iothub-done.png" | absolute_url }})
 
-      * If you don't have an IoT Hub before:
+        _Finish selecting IoT Hub_
+
+      * If you don't have any IoT Hub, please follow the steps to create a free IoT Hub:
+      
         * Resource group provision:
           Use **up** and **down** arrow keys to choose a resource group you've created before or select **Create New...** to provision a new resource group. Complete the resource group provision according to the command line prompt.
 
@@ -93,9 +98,13 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
 
             ![Select region for a new resource group provision]({{"/assets/images/mini-solution/connect-iothub/select-region-for-resource-group.png.png" | absolute_url }})
 
+            _Select region for resource group provision_
+
           * Input a name for new resource group.
 
             ![Input name for resource group]({{"/assets/images/mini-solution/connect-iothub/input-name-for-resource-group.png" | absolute_url }})
+
+            _Input a name for resource group provision_
 
         * IoT Hub provision:
 
@@ -103,9 +112,13 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
 
           ![Input a name for IoT Hub]({{"/assets/images/mini-solution/connect-iothub/input-name-for-iothub.png" | absolute_url }})
 
+          _Input a name for IoT Hub provision_
+
           Wait several minutes to finish ARM Template deployment and IoT Hub Device provision. Then press any key to exit the terminal.
 
           ![Provision Azure IoT Hub done]({{"/assets/images/mini-solution/connect-iothub/provision-iothub-done.png" | absolute_url }})
+
+          _Finish cloud provision_
 
 ## Step 3. Build and upload Arduino sketch
 

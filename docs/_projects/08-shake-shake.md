@@ -95,16 +95,22 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
     ![Select Azure subscription]({{"/assets/images/mini-solution/shake-shake/select-subscription.png" | absolute_url }})
 
+    _Select Azure subscription_
+
 3. Provision IoT Hub
-      * If you've provisioned a free trial IoT Hub before, select it and press **Enter** to confirm.
+      * If you've provisioned IoT Hub(s) before, a list of IoT Hubs associated with the subscription appears in the terminal. Please use **up** and **down** arrow keys to select one from the list and press **Enter** to confirm.
 
         ![Select an existing IoT Hub]({{"/assets/images/mini-solution/shake-shake/select-existing-iothub.png" | absolute_url }})
+
+        _Select existing Free IoT Hub_
 
         Wait several minutes to finish ARM Template deployment and IoT Hub Device provision. Then press any key to exit the terminal.
 
         ![[Select an existing IoT Hub done]({{"/assets/images/mini-solution/shake-shake/select-iothub-done.png" | absolute_url }})
 
-      * If you don't have an IoT Hub before:
+        _Finish selecting IoT Hub_
+
+      * If you don't have any IoT Hub, please follow the steps to create a free IoT Hub:
         * Resource group provision:
           Use **up** and **down** arrow keys to choose a resource group you've created before or select **Create New...** to provision a new resource group. Complete the resource group provision according to the command line prompt.
 
@@ -115,9 +121,13 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
             ![Select region for a new resource group provision]({{"/assets/images/mini-solution/shake-shake/select-region-for-resource-group.png.png" | absolute_url }})
 
+            _Select region for resource group provision_
+
           * Input a name for new resource group.
 
             ![Input name for resource group]({{"/assets/images/mini-solution/shake-shake/input-name-for-resource-group.png" | absolute_url }})
+
+            _Input a name for resource group provision_
 
         * IoT Hub provision:
 
@@ -125,9 +135,13 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
           ![Input a name for IoT Hub]({{"/assets/images/mini-solution/shake-shake/input-name-for-iothub.png" | absolute_url }})
 
+          _Input a name for IoT Hub provision_
+
           Wait several minutes to finish ARM Template deployment and IoT Hub Device provision. Then press any key to exit the terminal.
 
           ![Provision Azure IoT Hub done]({{"/assets/images/mini-solution/shake-shake/provision-iothub-done.png" | absolute_url }})
+
+          _Finish cloud provision_
 
 ## Step 3. Modify the #hashtag
 
