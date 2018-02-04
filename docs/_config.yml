@@ -165,7 +165,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
-
+  communities:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -203,6 +205,14 @@ defaults:
   - scope:
       path: ""
       type: projects
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  # _communities
+  - scope:
+      path: ""
+      type: communities
     values:
       layout: single
       author_profile: false
