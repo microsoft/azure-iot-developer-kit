@@ -115,6 +115,9 @@
 /*
    Grid view
    ========================================================================== */
+.grid__wrapper {
+  overflow: auto;
+}
 
 .grid__item {
   margin-bottom: 2em;

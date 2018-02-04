@@ -38,6 +38,8 @@
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
       {% endif %}
       {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+
+      {% comment %} Azure services the tutorial is using {% endcomment %}
       {% if post.icons %}
         <div class="project-icons-div archive__item-excerpt">
         {% for icon in post.icons %}
@@ -52,6 +54,16 @@
             {% endif %}
           </div>
         {% endfor %}
+        </div>
+      {% endif %}
+
+      {% comment %} Contributor from community {% endcomment %}
+      {% if post.contributor %}
+        <div class="contributor">
+          <a href="{{ post.contributor.github_url }}" target="_blank">
+            <img src="{{ post.contributor.github_avatar_url }}">
+            <span>{{ post.contributor.github_id }}</span>
+          </a>
         </div>
       {% endif %}
     </div>

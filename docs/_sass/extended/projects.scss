@@ -1,3 +1,9 @@
+.archive {
+  > h3 {
+    margin-bottom: 1rem;
+  }
+}
+
 .grid__item p.project-icon-title {
   display: none;
   position: absolute;
@@ -38,6 +44,26 @@ div.project-icons-div {
 
 img.project-icon:hover + p.project-icon-title {
   display: block;
+}
+
+
+.contributor {
+  font-size: .75em;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    height: 24px;
+    border-radius: 50%;
+  }
+
+  span {
+    margin-left: 3px;
+    font-weight: 700;
+    color: $primary-color;
+  }
 }
 
 p.project-difficulty {
