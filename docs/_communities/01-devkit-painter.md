@@ -1,6 +1,6 @@
 ---
 title: "Pixelcraft - A DevKit Painter"
-link: "https://docs.microsoft.com/en-us/microsoft-iot-central/howto-connect-devkit"
+link: "http://pixelcraft.cc/"
 excerpt: "Paint the pixels or import an image to modify on DevKit screen, all within browser now."
 header:
   image: /assets/images/communities-pixelcraft.jpg
