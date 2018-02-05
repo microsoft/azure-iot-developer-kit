@@ -106,7 +106,7 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
         Wait several minutes to finish ARM Template deployment and IoT Hub Device provision. Then press any key to exit the terminal.
 
-        ![[Select an existing IoT Hub done]({{"/assets/images/mini-solution/shake-shake/select-iothub-done.png" | absolute_url }})
+        ![Select an existing IoT Hub done]({{"/assets/images/mini-solution/shake-shake/select-iothub-done.png" | absolute_url }})
 
         _Finish selecting IoT Hub_
 
@@ -119,7 +119,7 @@ In the VS Code terminal, an interactive command line will guide you through prov
           If you choose to create a new resource group:
           * Use **up** and **down** arrow keys to select region for a new resource group provision, and then press **Enter** to confirm.
 
-            ![Select region for a new resource group provision]({{"/assets/images/mini-solution/shake-shake/select-region-for-resource-group.png.png" | absolute_url }})
+            ![Select region for a new resource group provision]({{"/assets/images/mini-solution/shake-shake/select-region-for-resource-group.png" | absolute_url }})
 
             _Select region for resource group provision_
 
