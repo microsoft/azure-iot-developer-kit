@@ -7,16 +7,16 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
-## Version 1.3.2 (February 6, 2018)
+## Version 1.3.2 (February 7, 2018)
 
 ### Release Summary
 
 * SDK
-	* Exposed setOption API in DevKitMQTTClient.
-	* Fix some bugs related to memory management.
+  * Exposed setOption API in DevKitMQTTClient.
+  * Fix some bugs related to memory management.
 
 * Development Tools
-	* Hided warning message when verify device code.
+  * Hided warning message when verify device code.
 
 ### Downloads
 
