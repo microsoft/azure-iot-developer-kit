@@ -20,6 +20,7 @@
           animation-delay: 0.45s;
   background-color: $lighter-gray;
   border-top: 1px solid $light-gray;
+  z-index: -1;
 
   footer {
     @include container;
@@ -53,14 +54,17 @@
 
 .page__footer-follow {
 
-  ul {
+  dl {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  li {
+  dt,
+  dd {
     display: inline-block;
+    margin: 0 0 0.5em 0;
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: $sans-serif-narrow;
@@ -68,7 +72,11 @@
     text-transform: uppercase;
   }
 
-  li + li:before {
+  dt {
+    padding-right: 10px;
+  }
+
+  dd + dd:before {
     content: "";
     padding-right: 5px;
   }

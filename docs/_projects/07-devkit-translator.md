@@ -91,7 +91,7 @@ In the VS Code terminal, an interactive command line will guide you through prov
 
 ![mini-solution-provision-sub]({{"/assets/images/mini-solution/devkit-translator/cloud-provision.png" | absolute_url }})
 
-**Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to resolve this issue. 
+**Notice:** If the page hangs in the loading status when trying to sign in to Azure, please check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to resolve this issue. 
 {: .notice--warning}
 
 ## Step 3. Deploy Azure Functions
@@ -113,14 +113,15 @@ After Azure Function deploys successfully, fill in the azure_config.h file with 
 
 ### Windows
 
-1. Use `Ctrl+P` to run `task device-upload`.
-2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button on the DevKit. The screen displays the DevKit ID and 'Configuration'.
+1. Use `Ctrl+P` to run `task config-device-connection`.
 
-This sets the connection string that is retrieved from the `task cloud-provision` step.
+2. The terminal will ask you whether you want to use connection string that retrieves from `task cloud-provision` step. You could also input your own device connection string by clicking 'Create New...'
 
-VS Code then starst verifying and uploading the Arduino sketch to the DevKit:
+3. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+  ![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/devkit-translator/config-device-connection.png" | absolute_url }})
 
-![device-upload]({{"/assets/images/mini-solution/devkit-translator/device-upload.png" | absolute_url }})
+4. After `task config-device-connection` finished, click `F1` to load VS Code commands and select `Arduino: Upload`, then VS Code starts verifying and uploading the Arduino sketch:
+  ![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/devkit-translator/arduino-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
@@ -129,15 +130,16 @@ The DevKit reboots and starts running the code.
 
 ### macOS
 
-1. Put the DevKit into configuration mode:
-  Hold down button A, then push and release the reset button on the DevKit. The screen displays 'Configuration'.
-2. Use `Cmd+P` to run `task device-upload`.
+1. Put DevKit into configuration mode:
+  Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
 
-This sets the connection string that is retrieved from the `task cloud-provision` step.
+2. Use `Cmd+P` to run `task config-device-connection`.
 
-VS Code then starts verifying and uploading the Arduino sketch to the DevKit:
+3. The terminal will ask you whether you want to use connection string that retrieves from `task cloud-provision` step. You could also input your own device connection string by clicking 'Create New...'
+  ![device-upload]({{"/assets/images/mini-solution/devkit-translator/config-device-connection.png" | absolute_url }})
 
-![device-upload]({{"/assets/images/mini-solution/devkit-translator/device-upload.png" | absolute_url }})
+4. After `task config-device-connection` finished, click `Cmd + shift + p` to load VS Code commands and select `Arduino: Upload`, then VS Code starts verifying and uploading the Arduino sketch:
+  ![device-upload]({{"/assets/images/mini-solution/devkit-translator/arduino-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
@@ -170,6 +172,12 @@ To select a source language other than Chinese:
 ![mini-solution-voice-to-tweet-diagram]({{"/assets/images/mini-solution/devkit-translator/diagram.png" | absolute_url }})
 
 The Arduino sketch records your voice then posts an HTTP request to trigger Azure Functions. Azure Functions calls the cognitive service speech translator API to do the translation. After Azure Functions gets the translation text, it sends a C2D message to the device. Then the translation is displayed on the screen.
+
+## Customize device ID
+
+You can customize device ID in IoT Hub by following [this doc]({{"/docs/customize-device-id/" | absolute_url }}), however, you still need to change the hardcoding `AZ3166` to customized device ID in the code currently. Here's the list of files you need to modify:
+
+* [azurefunction/devkit-translator/run.csx](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/DevKitTranslator/azurefunction/devkit-translator/run.csx#L42)
 
 ## Problems and feedback
 

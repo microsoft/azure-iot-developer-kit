@@ -1,22 +1,17 @@
 <section class="page__share">
-  <div>
-    <p>Reach us at</p>
-    <a href="http://gitter.im/Microsoft/azure-iot-developer-kit" target="_blank">
-      <img src="https://badges.gitter.im/iot-devkit.svg" alt="Join Gitter chat" style="height:25px">
-    </a>
-
-    <p>, get support at</p>
-    <a href="https://stackoverflow.com/questions/tagged/iot-devkit" target="_blank">
-      <img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.svg" alt="Get help from Stack Olverflow" style="width:150px; height:37px">
-    </a>
-  </div>
-
-  <div>
-    <p>Or share us on</p>
-    <div style="display: inline-block">
-      <a href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username }}&{% endif %}text={{ page.title }} {{ page.url | absolute_url }}" class="btn btn--twitter" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" class="btn btn--facebook" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i></a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" class="btn btn--linkedin" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i></a>
-    </div>
-  </div>
+  <p>Reach us at
+      <a href="http://gitter.im/Microsoft/azure-iot-developer-kit" target="_blank">
+        <img src="https://badges.gitter.im/iot-devkit.svg" alt="Join Gitter chat" style="height:25px">
+        <span class="screen-reader-text">Gitter</span>
+      </a>, get support at
+      <a href="https://stackoverflow.com/questions/tagged/iot-devkit" target="_blank">
+        <img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.svg" alt="Get help from Stack Overflow" style="width:150px; height:37px">
+        <span class="screen-reader-text">Stack Overflow</span>
+      </a> or share us on
+      <span class="social-icons-list">
+        <a href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username }}&{% endif %}text={{ page.title }} {{ page.url | absolute_url }}" class="btn btn--twitter" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span class="screen-reader-text">Twitter</span></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" class="btn btn--facebook" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span class="screen-reader-text">Facebook</span></a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" class="btn btn--linkedin" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span class="screen-reader-text">LinkedIn</span></a>
+      </span>
+  </p>
 </section>

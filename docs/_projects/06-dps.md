@@ -150,6 +150,12 @@ Once your device boots, the following actions should take place:
 5. On successful connection to the hub, you should see the device appear in the IoT hub's Device Explorer.
   ![Device registered]({{"/assets/images/mini-solution/dps/device-registered.png" | absolute_url }})
 
+## Customize device ID
+
+You can customize device ID in IoT Hub by following [this doc]({{"/docs/customize-device-id/" | absolute_url }}), however, you still need to change the hardcoding `AZ3166` to customized device ID in the code currently. Here's the list of files you need to modify:
+
+* [config.h](https://github.com/DevKitExamples/DevKitDPS/blob/master/config.h#L9)
+
 ## Problems and feedback
 
 If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from the channels below.

@@ -7,6 +7,8 @@ variable:
     name: Windows
   - platform: macos
     name: macOS
+  - platform: ubuntu
+    name: Ubuntu
 last_modified_at: 2017-10-23
 ---
 
@@ -170,6 +172,10 @@ Add the DevKit board by using Board Manager in Visual Studio Code.
  ![installation-az3166]({{"/assets/images/installation-az3166-mac.png" | absolute_url}})
 
 You now have all the necessary tools and packages installed for macOS.
+
+## Ubuntu
+
+The DevKit development environment can be installed and ran on Linux such as Ubuntu with manual configurations. Here is a detailed instructions from [Noel Bundick](https://twitter.com/acanthamoeba) about it: [Using the Azure IoT DevKit with Linux](https://www.noelbundick.com/2018/01/28/Using-the-Azure-IoT-DevKit-with-Linux/).
 
 ## Next Steps
 

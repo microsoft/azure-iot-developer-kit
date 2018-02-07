@@ -1,7 +1,7 @@
 ---
 title: "Your Ideas?"
 link: "http://gitter.im/Microsoft/azure-iot-developer-kit"
-excerpt: "Join our Gitter channel to share your project ideas with us!"
+excerpt: "Join our Gitter channel to contribute your cool projects or share your ideas with us!"
 header:
   image: /assets/images/projects-your-ideas.jpg
   teaser: /assets/images/projects-your-ideas-th.jpg

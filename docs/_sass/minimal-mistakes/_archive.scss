@@ -33,6 +33,8 @@
 }
 
 .archive__item-title {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 0.5em;
   font-family: $sans-serif-narrow;
 
@@ -60,11 +62,15 @@
 }
 
 .archive__item-teaser {
-  border-radius: $border-radius $border-radius 0 0;
+  border-radius: $border-radius;
   overflow: hidden;
   text-align: center;
   img {
     width: 100%;
+  }
+
+  @include breakpoint($small) {
+    border-radius: $border-radius $border-radius 0 0;
   }
 }
 
@@ -109,6 +115,9 @@
 /*
    Grid view
    ========================================================================== */
+.grid__wrapper {
+  overflow: auto;
+}
 
 .grid__item {
   margin-bottom: 2em;
@@ -131,6 +140,13 @@
     width: 100%;
     padding: 2em 1em;
     background: linear-gradient(180deg, rgba(#000, 0), #000);
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+
+    @include breakpoint($small) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 
   .archive__item-title {

@@ -2,17 +2,28 @@
 title: "Use configuration mode"
 permalink: /docs/use-configuration-mode/
 excerpt: "Get into DevKit Configuration Mode to configure your device."
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
 last_modified_at: 2018-01-08
 ---
 
 {% include toc icon="columns" %}
+
+DevKit has the configuration model that you can configure settings like WiFi, IoT Hub connection string and security feature for it.
 
 ## Before you begin
 
 * Connect DevKit to the computer.
 * Download SSH and Telnet client like [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) for Windows.
 
-## Enter Configuration Mode
+{% include switch.html content = page.variable %}
+
+## Windows
+
+### Enter Configuration Mode
 
 1. Open VS Code and identify the COM port on the status bar.
     ![COM Port]({{"/assets/images/how-to/configuration-mode/com-port.png" | absolute_url }})
@@ -26,7 +37,36 @@ last_modified_at: 2018-01-08
     ![Configuration Mode]({{"/assets/images/how-to/configuration-mode/configuration-mode.jpg" | absolute_url }})
 
 5. Serial monitor window displays command list available.
-    ![Available Commands]({{"/assets/images/how-to/configuration-mode/available-commands.png" | absolute_url }})
+    ![Available Commands]({{"/assets/images/how-to/configuration-mode/available-commands-win.png" | absolute_url }})
+
+## macOS
+
+### Enter Configuration Mode
+
+1. Launch Spotlight by pressing **Cmd + Space**.
+
+2. Type `terminal` and select **Terminal** app.
+
+3. List DevKit device.
+	```bash
+	ls /dev/cu.usbmodem*
+	```
+
+4. In the list of connected devices, the device name is like **/dev/cu.usbmodem1433**
+
+5. Connect to the DevKit using the Terminal screen utility.
+	```bash
+	screen /dev/cu.usbmodemXXXX 115200 –L
+	```
+
+6. On the device, hold down button A, then push and release the reset button. Observe the screen displays your device MAC address and **'Configuration'**.
+    ![Configuration Mode]({{"/assets/images/how-to/configuration-mode/configuration-mode.jpg" | absolute_url }})
+
+7. Serial monitor window displays command list available.
+    ![Available Commands]({{"/assets/images/how-to/configuration-mode/available-commands-mac.png" | absolute_url }})
+
+**Note:** Make sure you exit screen utility and terminate it by using the **Ctrl + A** followed by the **Ctrl + \\**. Otherwise, you may not able to enter the screen utility again.
+{: .notice}
 
 ## Commands
 

@@ -7,6 +7,24 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.3.2 (February 7, 2018)
+
+### Release Summary
+
+* SDK
+  * Exposed setOption API in DevKitMQTTClient.
+  * Fix some bugs related to memory management.
+
+* Development Tools
+  * Hided warning message when verify device code.
+
+### Downloads
+
+- [Installation Package 1.3.2 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.2.44.zip).
+- [Installation Package 1.3.2 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.2.44.zip).
+- [Firmware 1.3.2](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.2.44.bin).
+
+
 ## Version 1.3.1 (January 23, 2018)
 
 During the past 2 weeks, we got chance to revisit our code and did some minor changes to improve the stability and dev experience.

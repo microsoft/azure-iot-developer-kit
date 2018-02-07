@@ -13,7 +13,10 @@
             <li class="masthead__menu-item {% if link.class %} {{ link.class }} {% endif %}"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
-        <button class="hidden"><div class="navicon"></div></button>
+        <button type="button" class="hidden" aria-haspopup="true">
+          <span class="navicon"></span>
+          <span class="screen-reader-text">Toggle Navigation</span>
+        </button>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>

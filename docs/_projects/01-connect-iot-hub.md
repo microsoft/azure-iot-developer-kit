@@ -62,14 +62,63 @@ If you happen to close the pane, you can reopen it. Use `Ctrl+Shift+P` (macOS: `
 
 ## Step 2. Provision Azure services
 
-In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`:
+1. In the solution window, run your task through `Ctrl+P` (macOS: `Cmd+P`) by entering `task cloud-provision`: In the VS Code terminal, an interactive command line guides you through provisioning the required Azure services:
 
-In the VS Code terminal, an interactive command line guides you through provisioning the required Azure services:
+    ![Interactive command line]({{"/assets/images/mini-solution/connect-iothub/cloud-provision.png" | absolute_url }})
 
-![Interactive command line]({{"/assets/images/mini-solution/connect-iothub/cloud-provision.png" | absolute_url }})
+    **Notice:** If the page hangs in the loading status when trying to sign in to Azure, please check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. 
+    {: .notice--warning}
 
-**Notice:** If the page hangs in the loading status when trying to sign in to Azure, plese check this [FAQ steps]({{"/docs/faq/#page-hangs-when-log-in-azure" | absolute_url}}) to solve it. 
-{: .notice--warning}
+2. When a list of Azure subscriptions display in the terminal, use the **up** and **down** arrow keys to select the Azure subscription that you will use to provision the Azure IoT Hub. Then press **Enter** to confirm the selected subscription.
+
+    ![Select Azure subscription]({{"/assets/images/mini-solution/connect-iothub/select-subscription.png" | absolute_url }})
+
+3. Provision IoT Hub
+      * If you've provisioned IoT Hub(s) before, a list of IoT Hubs associated with the subscription appears in the terminal. Please use **up** and **down** arrow keys to select one from the list and press **Enter** to confirm.
+
+        ![Select an existing IoT Hub]({{"/assets/images/mini-solution/connect-iothub/select-existing-iothub.png" | absolute_url }})
+
+        _Select existing Free IoT Hub_
+
+        Wait several minutes to finish ARM Template deployment and IoT Hub Device provision. Then press any key to exit the terminal.
+
+        ![Select an existing IoT Hub done]({{"/assets/images/mini-solution/connect-iothub/select-iothub-done.png" | absolute_url }})
+
+        _Finish selecting IoT Hub_
+
+      * If you don't have any IoT Hub, please follow the steps to create a free IoT Hub:
+      
+        * Resource group provision:
+          Use **up** and **down** arrow keys to choose a resource group you've created before or select **Create New...** to provision a new resource group. Complete the resource group provision according to the command line prompt.
+
+          ![Select or create Azure resource group]({{"/assets/images/mini-solution/connect-iothub/select-or-create-resource-group.png" | absolute_url }})
+
+          If you choose to create a new resource group:
+          * Use **up** and **down** arrow keys to select region for a new resource group provision, and then press **Enter** to confirm.
+
+            ![Select region for a new resource group]({{"/assets/images/mini-solution/connect-iothub/select-region-for-resource-group.png" | absolute_url }})
+
+            _Select region for resource group provision_
+
+          * Input a name for new resource group.
+
+            ![Input name for resource group]({{"/assets/images/mini-solution/connect-iothub/input-name-for-resource-group.png" | absolute_url }})
+
+            _Input a name for resource group provision_
+
+        * IoT Hub provision:
+
+          Enter a name for your new IoT Hub, and press **Enter** to confirm.
+
+          ![Input a name for IoT Hub]({{"/assets/images/mini-solution/connect-iothub/input-name-for-iothub.png" | absolute_url }})
+
+          _Input a name for IoT Hub provision_
+
+          Wait several minutes to finish ARM Template deployment and IoT Hub Device provision. Then press any key to exit the terminal.
+
+          ![Provision Azure IoT Hub done]({{"/assets/images/mini-solution/connect-iothub/provision-iothub-done.png" | absolute_url }})
+
+          _Finish cloud provision_
 
 ## Step 3. Build and upload Arduino sketch
 
@@ -77,14 +126,15 @@ In the VS Code terminal, an interactive command line guides you through provisio
 
 #### Windows
 
-1. Use `Ctrl+P` to run `task device-upload`.
-2. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+1. Use `Ctrl+P` to run `task config-device-connection`.
 
-This is to set the connection string that retrieves from `task cloud-provision` step.
+2. The terminal will ask you whether you want to use connection string that retrieves from `task cloud-provision` step. You could also input your own device connection string by clicking 'Create New...'
 
-Then VS Code starts verifying and uploading the Arduino sketch:
+3. The terminal prompts you to enter configuration mode. To do so, hold down button A, then push and release the reset button. The screen displays the DevKit id and 'Configuration'.
+  ![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/connect-iothub/config-device-connection.png" | absolute_url }})
 
-![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
+4. After `task config-device-connection` finished, click `F1` to load VS Code commands and select `Arduino: Upload`, then VS Code starts verifying and uploading the Arduino sketch:
+  ![Verification and upload of the Arduino sketch]({{"/assets/images/mini-solution/connect-iothub/arduino-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
@@ -95,13 +145,14 @@ The DevKit reboots and starts running the code.
 
 1. Put DevKit into configuration mode:
   Hold down button A, then push and release the reset button. The screen displays 'Configuration'.
-2. Use `Cmd+P` to run `task device-upload`.
 
-This is to set the connection string that retrieves from `task cloud-provision` step.
+2. Use `Cmd+P` to run `task config-device-connection`.
 
-Then VS Code starts verifying and uploading the Arduino sketch:
+3. The terminal will ask you whether you want to use connection string that retrieves from `task cloud-provision` step. You could also input your own device connection string by clicking 'Create New...'
+  ![device-upload]({{"/assets/images/mini-solution/connect-iothub/config-device-connection.png" | absolute_url }})
 
-![device-upload]({{"/assets/images/mini-solution/connect-iothub/device-upload.png" | absolute_url }})
+4. After `task config-device-connection` finished, click `Cmd + shift + p` to load VS Code commands and select `Arduino: Upload`, then VS Code starts verifying and uploading the Arduino sketch:
+  ![device-upload]({{"/assets/images/mini-solution/connect-iothub/arduino-upload.png" | absolute_url }})
 
 The DevKit reboots and starts running the code.
 
@@ -127,6 +178,12 @@ The sample application is running successfully when you see the following result
 * The LED on MXChip IoT DevKit is blinking.
 
 ![Final output in VS Code]({{"/assets/images/mini-solution/connect-iothub/result-serial-output.png" | absolute_url }})
+
+## Customize device ID
+
+You can customize device ID in IoT Hub by following [this doc]({{"/docs/customize-device-id/" | absolute_url }}), however, you still need to change the hardcoding `AZ3166` to customized device ID in the code currently. Here's the list of files you need to modify:
+
+* [config.h](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/GetStarted/config.h#L9)
 
 ## Problems and feedback
 
