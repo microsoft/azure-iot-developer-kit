@@ -113,7 +113,7 @@ To save Unique Device Secret on the DevKit:
 
 ### macOS
 
-*To be done.*
+*Coming soon.*
 
 ## Create a device enrollment entry in the Device Provisioning Service
 
