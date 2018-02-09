@@ -163,14 +163,11 @@ The DevKit reboots and starts running the code.
 
 In VS Code, following these steps to open and set up the Serial Monitor:
 
-1. Click the `COM[X]` word on the status bar to set the right COM port with `STMicroelectronics`:
+1. Click the **COM[X]** on the status bar to set the right COM port with **STMicroelectronics**:
   ![com-port]({{"/assets/images/mini-solution/connect-iothub/com-port.png" | absolute_url }})
 
 2. Click power plug icon on the status bar to open the Serial Monitor:
   ![serial-monitor]({{"/assets/images/mini-solution/connect-iothub/serial-monitor.png" | absolute_url }})
-
-3. On the status bar, click the number that represents the Baud Rate and set to `115200`:
-  ![baud-rate]({{"/assets/images/mini-solution/connect-iothub/baud-rate.png" | absolute_url }})
 
 The sample application is running successfully when you see the following results:
 
@@ -181,45 +178,32 @@ The sample application is running successfully when you see the following result
 
 ## Check data in IoT Hub
 
-In VS Code, following these steps to monitor D2C messages in IoT Hub:
+In VS Code, you can use [Azure IoT Toolkit](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-toolkit) to monitor device to cloud (D2C) messages in IoT Hub.
 
-1. Bring up the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of VS Code or the View: Extensions command `(Ctrl+Shift+X)`:
+1. Log in Azure portal.
+
+2. Find the IoT Hub you just created.
+  ![azure-portal-iot-hub]({{"/assets/images/mini-solution/connect-iothub/azure-iot-hub-portal.png" | absolute_url }})
+
+3. In the **Shared access policies pane**, click the **iothubowner policy**, and note down the Connection string of your IoT hub.
+  ![azure-portal-iot-hub-conn-string]({{"/assets/images/mini-solution/connect-iothub/azure-portal-conn-string.png" | absolute_url }})
+
+4. In VS Code, click the Extensions icon in the Activity Bar:
   ![vscode-extensions-icon]({{"/assets/images/mini-solution/connect-iothub/vsc-extensions-icon.png" | absolute_url }})
 
-2. In `Search Extensions in Marketplace` bar on the left size, type `Azure IoT Toolkit` and press Enter. 
-
-3. After a while for search, you will find `Azure IoT Toolkit` appears as the first extension in the list.
-  ![azure-iot-toolkit-in-extensions-list]({{"/assets/images/mini-solution/connect-iothub/azure-iot-toolkit-in-extensions.png" | absolute_url }})
-
-4. Click `Install` button and it will enter Installing status.
+5. Search for **Azure IoT Toolkit** and install it.
   ![azure-iot-toolkit-installing]({{"/assets/images/mini-solution/connect-iothub/azure-iot-toolkit-install.png" | absolute_url }})
 
-5. Click `Reload` button after it appears then click `Reload Window` button in the small popup window
-  ![azure-iot-toolkit-reload]({{"/assets/images/mini-solution/connect-iothub/azure-iot-toolkit-done.png" | absolute_url }})
-
-6. In Explorer of VS Code, click `IoT Hub Devices` in the bottom left corner.
+6. Expand **IoT Hub Devices** on the bottom left corner.
   ![azure-iot-toolkit-iot-hub-devices]({{"/assets/images/mini-solution/connect-iothub/azure-iot-toolkit-devices.png" | absolute_url }})
 
-7. Click `Set IoT Hub Connection String` in context menu.
+7. Click **Set IoT Hub Connection String** in context menu.
   ![azure-iot-toolkit-iot-hub-conn-string]({{"/assets/images/mini-solution/connect-iothub/azure-iot-toolkit-conn-string.png" | absolute_url }})
 
-  To find the IoT Hub connection string,
-    a. login in Azure portal and find IoT Hub you created on `Step 2. Provision Azure services`, and then click Shared access policies.
-      ![azure-portal-iot-hub]({{"/assets/images/mini-solution/connect-iothub/azure-iot-hub-portal.png" | absolute_url }})
+8. Click **IoT: Start monitoring D2C message** in context menu.
 
-    b. In the Shared access policies pane, click the iothubowner policy, and then copy and make a note of the Connection string of your IoT hub.
-      ![azure-portal-iot-hub-conn-string]({{"/assets/images/mini-solution/connect-iothub/azure-portal-conn-string.png" | absolute_url }})
-
-8. Click `IoT: Start monitoring D2C message` in context menu of `IoT Hub Devices`.
-
-9. In `OUTPUT` console at the right bottom window, you would see the incoming D2C messages to IoT Hub.
+9. In **OUTPUT** pane, you can see the incoming D2C messages to IoT Hub.
   ![azure-iot-toolkit-output-console]({{"/assets/images/mini-solution/connect-iothub/azure-iot-toolkit-console.png" | absolute_url }})
-
-## Customize device ID
-
-You can customize device ID in IoT Hub by following [this doc]({{"/docs/customize-device-id/" | absolute_url }}), however, you still need to change the hardcoding `AZ3166` to customized device ID in the code currently. Here's the list of files you need to modify:
-
-* [config.h](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/GetStarted/config.h#L9)
 
 ## Problems and feedback
 
