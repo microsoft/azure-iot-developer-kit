@@ -244,6 +244,12 @@
     cursor: pointer;
   }
 
+  button {
+    &:focus {
+      @extend %tab-focus;
+    }
+  }
+
   .visible-links {
     display: -webkit-box;
     display: flex;
