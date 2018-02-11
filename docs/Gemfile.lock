@@ -221,6 +221,7 @@ DEPENDENCIES
   github-pages (= 170)
   jekyll-autoprefixer
   jekyll-paginate
+  jekyll-redirect-from
   jemoji
   tzinfo-data
 

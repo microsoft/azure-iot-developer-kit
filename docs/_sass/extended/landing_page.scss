@@ -125,7 +125,8 @@
 
         p {
           margin: 0;
-          @include prefix(0.5 of 12);
+          // @include prefix(0.5 of 12);
+          padding-left: gutter(0.5 of 12);
         }
       }
     }

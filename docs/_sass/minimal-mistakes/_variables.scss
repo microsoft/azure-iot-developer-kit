@@ -59,7 +59,9 @@ $background-color           : #fff !default;
 $code-background-color      : #fafafa !default;
 $code-background-color-dark : $light-gray !default;
 $text-color                 : #333 !default;
+$muted-text-color: mix(#fff, $text-color, 35%) !default;
 $border-color               : $lighter-gray !default;
+$footer-background-color: $lighter-gray !default;
 
 // $primary-color              : #7a8288 !default;
 $primary-color              : #006699 !default;
@@ -116,3 +118,4 @@ $box-shadow                 : 0 0 2px rgba(0, 0, 0, 0.075) !default;
 $navicon-width              : 1.5rem !default;
 $navicon-height             : 0.1rem !default;
 $global-transition          : all 0.2s ease-in-out !default;
+$intro-transition           : intro 0.3s both !default;
