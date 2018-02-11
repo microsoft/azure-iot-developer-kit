@@ -36,9 +36,10 @@ div.project-icons-div {
 
 .grid__item .archive__item {
   position: relative;
+  box-shadow: inset 0 0 1px $muted-text-color;
 
-  @include breakpoint($x-large) {
-    height: 335px;
+  @include breakpoint($large) {
+    height: 346px;
   }
 }
 

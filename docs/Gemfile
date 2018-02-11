@@ -10,6 +10,7 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw]
 group :jekyll_plugins do
   gem "jekyll-autoprefixer"
   gem "jekyll-paginate"
+  gem "jekyll-redirect-from"
   # gem "jekyll-sitemap"
   # gem "jekyll-gist"
   # gem "jekyll-feed"

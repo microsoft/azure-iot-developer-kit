@@ -41,6 +41,10 @@ An active Azure subscription. If you do not have one, you can register via one o
 * Activate a [free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html){:target="_blank"}
 * Claim your [Azure credit](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} if you are MSDN or Visual Studio subscriber
 
+## Use Visual Studio Code
+
+Visual Studio Code is the primary development tool for IoT DevKit. If this is the first time you learn about Visual Studio Code, there are a series of [Getting Started](https://code.visualstudio.com/docs) tutorials are dedicated for it.
+
 ## Step 1. Open the project folder
 
 ### A. Start VS Code
