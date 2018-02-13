@@ -11,11 +11,6 @@ icons:
     target: https://azure.microsoft.com/en-us/services/iot-hub/
     title: IoT Hub
 difficulty: MEDIUM
-variable:
-  - platform: windows
-    name: Windows
-  - platform: macos
-    name: macOS
 last_modified_at: 2018-01-05
 ---
 
@@ -96,8 +91,6 @@ To save Unique Device Secret on the DevKit:
 
 {% include switch.html content = page.variable %}
 
-### Windows
-
 1. Open file explorer and go to the folder contain the DSP sample code you cloned, there is a **.build** folder, find and copy **DPS.ino.bin** and **DPS.ino.map** in it.
   ![Generated files]({{"/assets/images/mini-solution/dps/generated-files.png" | absolute_url }})
 
@@ -106,14 +99,16 @@ To save Unique Device Secret on the DevKit:
 
 2. Paste these two files into **tools** folder on the same level with **.build** folder.
 
-3. Run **dps_cert_gen.exe**, follow the prompts to enter your **UDS**, **MAC address** for the DevKit and the **firmware version** to generate the X.509 certificate.
-  ![Run dps-cert-gen.exe]({{"/assets/images/mini-solution/dps/dps-cert-gen.png" | absolute_url }})
+3. Run **dps_cert_gen.exe** (or **./dps_cert_gen_mac** for macOS), follow the prompts to enter your **UDS**, **MAC address** for the DevKit and the **firmware version** to generate the X.509 certificate.
+
+    Windows:
+    ![Run dps_cert_gen.exe]({{"/assets/images/mini-solution/dps/dps-cert-gen.png" | absolute_url }})
+
+    macOS:
+    ![Run dps_cert_gen_mac for mac]({{"/assets/images/mini-solution/dps/dps-cert-gen-mac.png" | absolute_url }})
 
 4. Observe the success of generation, a **.pem** certificate is saved in the same folder.
 
-### macOS
-
-*Coming soon.*
 
 ## Create a device enrollment entry in the Device Provisioning Service
 
