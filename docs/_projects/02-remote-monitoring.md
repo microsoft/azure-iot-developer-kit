@@ -2,7 +2,7 @@
 title: "Remote Monitoring"
 permalink: /docs/projects/remote-monitoring/
 redirect_to:
-  - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-devkit-remote-monitoring#what-you-need
+  - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-devkit-remote-monitoring
 excerpt: "Send status of sensors on DevKit to Azure IoT Suite for monitoring."
 header:
   overlay_image: /assets/images/projects-remote-monitoring.jpg
