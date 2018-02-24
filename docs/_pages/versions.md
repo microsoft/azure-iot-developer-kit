@@ -12,11 +12,11 @@ last_modified_at: 2018-01-09
 ### Release Summary
 
 * SDK
-  * Exposed setOption API in DevKitMQTTClient.
+  * Expose setOption API in DevKitMQTTClient.
   * Fix some bugs related to memory management.
 
 * Development Tools
-  * Hided warning message when verify device code.
+  * Hide meaningless warning messages when build the Arduino code in VS Code.
 
 ### Downloads
 
@@ -32,11 +32,11 @@ During the past 2 weeks, we got chance to revisit our code and did some minor ch
 ### Release Summary
 
 * SDK
-	* Fixed memory leak issue in IoT Hub MQTT client when there was a long drop on Wi-Fi.
+	* Fix memory leak issue in IoT Hub MQTT client when there was a long drop on Wi-Fi.
 
 * Development Tools
-	* Improved the stability for DevKit Windows/Mac installation.
-	* Supported customized IoT Hub Device ID in configuring device connection string.
+	* Improve the stability for DevKit Windows/Mac installation.
+	* Support customized IoT Hub Device ID in configuring device connection string.
 
 ### Downloads
 
@@ -52,14 +52,14 @@ Happy new year 2018! Let us talk about the fundamentals of IoT this time: the se
 ### Release Summary
 
 * Firmware
-  * Upgraded the DevKit firmware to enable DPS feature.
-  * New tool `set_dps_uds` was added in the configuration mode, which help to save the **Unique Device Secret (UDS)** into the STSAFE chip, for more detail please check [this topic]({{"/docs/projects/dps/#save-unique-device-secret-on-stsafe-security-chip" | absolute_url }}).
+  * Upgrade the DevKit firmware to enable DPS feature.
+  * New tool `set_dps_uds` is add in the configuration mode, which help to save the **Unique Device Secret (UDS)** into the STSAFE chip, for more detail please check [this topic]({{"/docs/projects/dps/#save-unique-device-secret-on-stsafe-security-chip" | absolute_url }}).
 
 * SDK
-  * Open sourced [DevKit SDK](https://github.com/Microsoft/devkit-sdk), you are welcome to contribute :)
-  * Upgraded the Azure IoT C SDK to [1.1.28]( https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-11-17).
-  * Archived the Azure IoT C SDK in the Arduino board package, greatly reduce the compile time.
-  * Enabled the secure channel, protecting confidentiality and integrity of data with STSAFE chip on IoT DevKit.
+  * Open source [DevKit SDK](https://github.com/Microsoft/devkit-sdk), you are welcome to contribute :)
+  * Upgrade the Azure IoT C SDK to [1.1.28]( https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-11-17).
+  * Archive the Azure IoT C SDK in the Arduino board package, greatly reduce the compile time.
+  * Enable the secure channel, protecting confidentiality and integrity of data with STSAFE chip on IoT DevKit.
   * Add reset function `SystemReboot`.
 
 * Mini Solution
@@ -74,14 +74,14 @@ Happy new year 2018! Let us talk about the fundamentals of IoT this time: the se
 
 ## Version 1.2.2 (December 20, 2017)
 
-We were focusing on the script refinement in this release.
+We are focusing on the script refinement in this release.
 
 ### Release Summary
 
 * Development Tools
-  * Improved MacOS installation script to handle error friendly.
-  * Refactored Windows installation script to improve code quality.
-  * Refined VS Code task for mini-solutions to improve code quality.
+  * Improve MacOS installation script to handle error friendly.
+  * Refactor Windows installation script to improve code quality.
+  * Refine VS Code task for mini-solutions to improve code quality.
 
 ### Downloads
 
@@ -121,22 +121,22 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
 ### Release Summary
 
 * SDK
-  * Upgraded IoT Hub device SDK to [1.1.23](https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-09-08){:target="_blank"}.
+  * Upgrade IoT Hub device SDK to [1.1.23](https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-09-08){:target="_blank"}.
   * Made IoT Hub MQTT Client as a wrapper that can be shared by all mini solutions.
-  * Enabled float modifier for `print/printf` function.
-  * Removed `json-c` library and use [parson JSON library](https://github.com/kgabis/parson){:target="_blank"} instead.
-  * Bug fix: Enabled HttpClient response callback when handling large response body.
+  * Enable float modifier for `print/printf` function.
+  * Remove `json-c` library and use [parson JSON library](https://github.com/kgabis/parson){:target="_blank"} instead.
+  * Bug fix: Enable HttpClient response callback when handling large response body.
  
 * Project Catalog
   * New mini solution: DeviceStates. Use Azure IoT Hub device twins to monitor DevKit state and control the user LED.
-  * Fixed gyroscope values and added acceleration sensor in SensorStatus sample.
-  * Used MQTT Client wrapper for GetStarted, RemoteMonitoring and ShakeShake mini solutions.
-  * Improved telemetry logics in mini solutions on macOS.
+  * Fix gyroscope values and added acceleration sensor in SensorStatus sample.
+  * Use MQTT Client wrapper for GetStarted, RemoteMonitoring and ShakeShake mini solutions.
+  * Improve telemetry logics in mini solutions on macOS.
  
 * Development Tools
-  * Enabled one-click install experience on macOS :wink:. 
-  * Upgraded all project tasks to version 2.0.
-  * Used `CMD` as the default shell on Windows.
+  * Enable one-click install experience on macOS :wink:. 
+  * Upgrade all project tasks to version 2.0.
+  * Use `CMD` as the default shell on Windows.
   * Set default device upload method to use OpenOCD instead of ST-Link.
   * Bug fix: VS Code task failure due to double quotation marks.
 
@@ -173,21 +173,21 @@ DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure
 ### Release Summary
 
 * Firmware
-  * Upgraded the DevKit firmware to enable STSAFE.
+  * Upgrade the DevKit firmware to enable STSAFE.
 
 * SDK
   * Bug fix: Under bad network environment, the Device SDK in mbed OS occasionally crashes.
-  * Added more NTP servers for better globalization support.
+  * Add more NTP servers for better globalization support.
 
 * Arduino Library
-  * Tuned OLED library display performance.
+  * Tune OLED library display performance.
 
 * Project Catalog
-  * Massively improved Azure Functions deployment(`task cloud-deploy`) performance.
-  * Improved 'Shake, Shake' example flow further by adding more logging data on the display.
+  * Massively improve Azure Functions deployment(`task cloud-deploy`) performance.
+  * Improve 'Shake, Shake' example flow further by adding more logging data on the display.
 
 * Development Tools
-  * Visual Studio Code extension for Arduino now used tree view to display Arduino examples.
+  * Visual Studio Code extension for Arduino now use tree view to display Arduino examples.
 
 ### Downloads
 
@@ -205,20 +205,20 @@ Summer does not mean slow down. We further enriched our project catalog and tune
 ### Release Summary
 
 * Firmware
-  * Enabled detection of latest firmware version and display on the screen.
+  * Enable detection of latest firmware version and display on the screen.
 
 * SDK
-  * Added support for audio playback API.
+  * Add support for audio playback API.
 
 * Project Catalog
-  * Added 'DevKit Translator' example for DevKit to understand more languages :robot:.
-  * Added 'Door Monitor' example uses third party email service to send notifications.
-  * Replaced manual steps with VS Code tasks for 'Connect to Azure IoT Hub' example.
+  * Add 'DevKit Translator' example for DevKit to understand more languages :robot:.
+  * Add 'Door Monitor' example uses third party email service to send notifications.
+  * Replace manual steps with VS Code tasks for 'Connect to Azure IoT Hub' example.
   * Improve Azure Functions stability and performance used by examples.
   * Improve the telemetry API, and add more telemetry for 'Shake Shake' to track the running status.
 
 * Development Tools
-  * Adapted VS Code task for all sample projects to remove tedious manual steps.
+  * Adapt VS Code task for all sample projects to remove tedious manual steps.
   * Bug fix: Occasionally installation will fail to set Arduino custom board URL.
 
 ### Downloads
@@ -229,23 +229,23 @@ Summer does not mean slow down. We further enriched our project catalog and tune
 
 ## Version 1.0.1 (July 13, 2017)
 
-The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our “Shake, Shake” sample project on macOS now. To further smooth the development tools and package installation, we are using the official [MSI](https://aka.ms/InstallAzureCliWindows){:target="_blank"} for the Windows Azure CLI 2.0 installation, so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.
+The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our 'Shake, Shake' sample project on macOS now. To further smooth the development tools and package installation, we are using the official [MSI](https://aka.ms/InstallAzureCliWindows){:target="_blank"} for the Windows Azure CLI 2.0 installation, so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.
  
 ### Release Summary
  
 * Installation Package 
-  * Removed the dependency of Python installation by using Windows Azure CLI 2.0 MSI (v 2.0.9).
-  * Upgraded to the latest version of VS Code (v 1.13.1) and Arduino Extension (v 0.2.4).
-  * Switched to Azure CDN to accelerate the package downloading speed.
+  * Remove the dependency of Python installation by using Windows Azure CLI 2.0 MSI (v 2.0.9).
+  * Upgrade to the latest version of VS Code (v 1.13.1) and Arduino Extension (v 0.2.4).
+  * Switch to Azure CDN to accelerate the package downloading speed.
  
 * Firmware 
-  * Stabilized Wi-Fi connection and minor optimizations to Azure IoT Device C SDK
+  * Stabilize Wi-Fi connection and minor optimizations to Azure IoT Device C SDK
  
 * Project Catalog 
-  * Previewed cloud provision, deploy and device upload tasks for “Shake, Shake” mini solution in VS Code on macOS.
+  * Preview cloud provision, deploy and device upload tasks for “Shake, Shake” mini solution in VS Code on macOS.
   * Switched to [ARM (Azure Resource Manager) template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template){:target="_blank"} for provisioning Azure services.
   * Put Azure Function creation logic into cloud provision step to further isolate the tasks.
-  * Added telemetries to distinguish each mini solution from BI perspective.
+  * Add telemetries to distinguish each mini solution from BI perspective.
 
 ### Downloads
 
@@ -259,31 +259,31 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
 
 ### Release Summary
 
-* Updated underlying mbed OS to 5.4
+* Update underlying mbed OS to 5.4
 
 * Show version number for the default app
  
 * Installation Package
-  * Installed pip with `get-pip.py` script.
-  * Optimized error handling when running commands.
-  * Adapted to updates of Azure subscription return format using Azure CLI.
+  * Install pip with `get-pip.py` script.
+  * Optimize error handling when running commands.
+  * Adapt to update of Azure subscription return format using Azure CLI.
  
 * Stabilization
   * Bug fix: Memory leak on socket layer of Wi-Fi driver.
-  * Bug fix: Added retry logic to improve the stability of Azure IoT Device SDK.
+  * Bug fix: Add retry logic to improve the stability of Azure IoT Device SDK.
  
 * Arduino Library
-  * Refined library APIs to follow Arduino Standard like function naming conventions. 
-  * Added [OLED draw method]({{"/docs/apis/display/" | absolute_url}}) to control every pixel in display screen.
-  * Added support for file system based on mbed file system implementation.
-  * Added support for [IrDA]({{"/docs/apis/irda/" | absolute_url}}).
+  * Refine library APIs to follow Arduino Standard like function naming conventions. 
+  * Add [OLED draw method]({{"/docs/apis/display/" | absolute_url}}) to control every pixel in display screen.
+  * Add support for file system based on mbed file system implementation.
+  * Add support for [IrDA]({{"/docs/apis/irda/" | absolute_url}}).
  
 * Project Catalog
-  * Added 'Connect to Azure IoT Hub' example and documentation that align with other [Azure IoT Hub get started tutorials](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-get-started){:target="_blank"}.
-  * Added 'Remote Monitoring' example and documentation that make DevKit connect to [Azure IoT Suite](https://www.azureiotsuite.com){:target="_blank"}.
-  * Added 'MQTT Client' example and documentation that send MQTT messages to public free MQTT broker.
+  * Add 'Connect to Azure IoT Hub' example and documentation that align with other [Azure IoT Hub get started tutorials](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-get-started){:target="_blank"}.
+  * Add 'Remote Monitoring' example and documentation that make DevKit connect to [Azure IoT Suite](https://www.azureiotsuite.com){:target="_blank"}.
+  * Add 'MQTT Client' example and documentation that send MQTT messages to public free MQTT broker.
   * Shake, Shake: Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.
-  * Shake, Shake: Added delay and retry logic when not receiving any message due to function delay.
+  * Shake, Shake: Add delay and retry logic when not receiving any message due to function delay.
 
 ### Downloads
 
