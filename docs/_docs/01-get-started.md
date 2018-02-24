@@ -10,7 +10,7 @@ variable:
 last_modified_at: 2017-10-23
 ---
 
-For first-time users of the MXChip IoT DevKit (a.k.a DevKit), follow these quick steps to prepare your development environment and begin building IoT applications. 
+For first-time users of the MXChip IoT DevKit (a.k.a. DevKit), follow these quick steps to prepare your development environment and begin building IoT applications.
 If you already did this, you can build your own IoT application. For samples, start with our [Projects Catalog]({{"/docs/projects/" | absolute_url }}).
 
 {% include toc icon="columns" %}
@@ -48,7 +48,7 @@ IoT projects rely on internet connectivity. Use the following instructions to co
 
 ### A. Enter AP Mode
 
-Hold down button B, push and release the reset button, and then release button B. Your DevKit enters AP mode for configuring Wi-Fi. The screen displays the service set identifier(SSID) of the DevKit and the configuration portal IP address:
+Hold down button B, push and release the reset button, and then release button B. Your DevKit enters AP mode for configuring Wi-Fi. The screen displays the service set identifier (SSID) of the DevKit and the configuration portal IP address:
 
 ![Reset button, button B, and SSID]({{"/assets/images/getting-started/wifi-ap.jpg" | absolute_url }})
 
