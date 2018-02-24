@@ -145,7 +145,7 @@ Once your device boots, the following actions should take place:
 
 1. The device sends a registration request to your Device Provisioning Service.
 2. The Device Provisioning Service sends back a registration challenge to which your device responds.
-3. On successful registration, the Device Provisioning Service sends the IoT hub URI, device ID and the encrypted key back to the device.
+3. On successful registration, the Device Provisioning Service sends the IoT hub URI and device ID back to the device.
 4. The IoT Hub client application on the device then connects to your hub.
 5. On successful connection to the hub, you should see the device appear in the IoT hub's Device Explorer.
   ![Device registered]({{"/assets/images/mini-solution/dps/device-registered.png" | absolute_url }})
@@ -171,7 +171,7 @@ Advance to the other tutorials to learn:
 * [Create and provision a simulated device](https://docs.microsoft.com/en-us/azure/iot-dps/quick-create-simulated-device)
 * [Manage device enrollments](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-manage-enrollments)
 * [Revoke device access](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-revoke-device-access-portal)
-* [Use HSM with SDK](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-revoke-device-access-portal)
+* [Use HSM with SDK](https://docs.microsoft.com/en-us/azure/iot-dps/use-hsm-with-sdk)
 * [Control access to Provisioning Service](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-control-access)
 
 <script>
