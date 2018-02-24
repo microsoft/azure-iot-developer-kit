@@ -53,7 +53,7 @@ Happy new year 2018! Let us talk about the fundamentals of IoT this time: the se
 
 * Firmware
   * Upgrade the DevKit firmware to enable DPS feature.
-  * New tool `set_dps_uds` is add in the configuration mode, which help to save the **Unique Device Secret (UDS)** into the STSAFE chip, for more detail please check [this topic]({{"/docs/projects/dps/#save-unique-device-secret-on-stsafe-security-chip" | absolute_url }}).
+  * New tool `set_dps_uds` is added in the configuration mode, which help to save the **Unique Device Secret (UDS)** into the STSAFE chip, for more detail please check [this topic]({{"/docs/projects/dps/#save-unique-device-secret-on-stsafe-security-chip" | absolute_url }}).
 
 * SDK
   * Open source [DevKit SDK](https://github.com/Microsoft/devkit-sdk), you are welcome to contribute :)
