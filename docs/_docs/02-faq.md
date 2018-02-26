@@ -213,6 +213,16 @@ Notice: The device ID is hardcoded now in the project catalog samples. We will i
 * DevKitDPS - [config.h](https://github.com/DevKitExamples/DevKitDPS/blob/master/config.h#L9)
 * DevKitState - [azureFunction/devkit-state/run.csx](https://github.com/DevKitExamples/DevKitState/blob/master/azureFunction/devkit-state/run.csx#L60) & [web/js/main.js](https://github.com/DevKitExamples/DevKitState/blob/master/web/js/main.js#L7)
 
+### Arduino upload return Error: STLinkMethod: Invalid option for "upload_method" option for board "MXCHIP_AZ3166" 
+
+In Visual Studio Code, when trying to invoke "Arduion:Board Config" to configure MXChip board ,the Upload Method selection wasn’t visible:
+
+![upload_method invisible]({{"/assets/images/faq/upload_method_invisible.png" | absolute_url }})
+
+This is because Arduino configuration for curret project is not set correctly.
+To resolve, in `.vsode\arduino.json`, replace `"configuration": "upload_method=STLinkMethod"` to `"configuration": "upload_method=OpenOCDMethod"`.
+
+
 {% include social-share.html %}
 
 [![Back to Top]({{"/assets/images/faq-back-to-top.png" | absolute_url }})](#){: .faq-back-to-top}
