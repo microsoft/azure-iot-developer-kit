@@ -120,7 +120,7 @@ To resolve, close Visual Studio Code, then launches the actual Arduino IDE once.
 
 This is a known issue caused by the platform index of the board AZ3166 is not refreshed.
 
-To resolve, we need to refresh the platform index: 
+To solve this problem, we need to refresh the platform index: 
 
 1. Open Arduino IDE, find **Tools > Board: 'local board name' > Boards Manager...**.
   ![Open Arduino Board Manager]({{"/assets/images/faq/unknown-package.png" | absolute_url }})
@@ -220,7 +220,7 @@ In Visual Studio Code, when trying to invoke "Arduion:Board Config" to configure
 ![upload_method invisible]({{"/assets/images/faq/upload_method_invisible.png" | absolute_url }})
 
 This is because Arduino configuration for curret project is not set correctly.
-To resolve, in `.vsode\arduino.json`, replace `"configuration": "upload_method=STLinkMethod"` to `"configuration": "upload_method=OpenOCDMethod"`.
+To solve this problem, in `.vsode\arduino.json`, replace `"configuration": "upload_method=STLinkMethod"` to `"configuration": "upload_method=OpenOCDMethod"`.
 
 
 {% include social-share.html %}
