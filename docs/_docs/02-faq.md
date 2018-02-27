@@ -120,7 +120,7 @@ To resolve, close Visual Studio Code, then launches the actual Arduino IDE once.
 
 This is a known issue caused by the platform index of the board AZ3166 is not refreshed.
 
-To resolve, we need to refresh the platform index: 
+To solve this problem, we need to refresh the platform index: 
 
 1. Open Arduino IDE, find **Tools > Board: 'local board name' > Boards Manager...**.
   ![Open Arduino Board Manager]({{"/assets/images/faq/unknown-package.png" | absolute_url }})
@@ -212,6 +212,16 @@ Notice: The device ID is hardcoded now in the project catalog samples. We will i
 * ShakeShake - [azureFunction/shakeshake-cs/run.csx](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/ShakeShake/azureFunction/shakeshake-cs/run.csx#L91) & [azureFunction/shakeshake-node/index.js](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/ShakeShake/azureFunction/shakeshake-node/index.js#L29)
 * DevKitDPS - [config.h](https://github.com/DevKitExamples/DevKitDPS/blob/master/config.h#L9)
 * DevKitState - [azureFunction/devkit-state/run.csx](https://github.com/DevKitExamples/DevKitState/blob/master/azureFunction/devkit-state/run.csx#L60) & [web/js/main.js](https://github.com/DevKitExamples/DevKitState/blob/master/web/js/main.js#L7)
+
+### Arduino upload return Error: STLinkMethod: Invalid option for "upload_method" option for board "MXCHIP_AZ3166" 
+
+In Visual Studio Code, when trying to invoke "Arduion:Board Config" to configure MXChip board ,the Upload Method selection wasn’t visible:
+
+![upload_method invisible]({{"/assets/images/faq/upload_method_invisible.png" | absolute_url }})
+
+This is because Arduino configuration for curret project is not set correctly.
+To solve this problem, in `.vsode\arduino.json`, replace `"configuration": "upload_method=STLinkMethod"` to `"configuration": "upload_method=OpenOCDMethod"`.
+
 
 {% include social-share.html %}
 
