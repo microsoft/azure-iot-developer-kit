@@ -100,7 +100,7 @@ projects: "2, 5, 6"
         <img src="{{ '/assets/images/landingpage-get-a-kit.png' | absolute_url }}">
       </div>
       <div class="landing-page-final-body">
-        <p class="landing-page-final-title">Build your own IoT application with Azure and Visual Studio Code helped today.</p>
+        <p class="landing-page-final-title">Build your own IoT application with Azure and help from Visual Studio Code today!</p>
         <a class="landing-page-btn landing-page-btn-blue btn--large" href="https://aka.ms/iot-devkit-purchase">Get a Kit</a>
       </div>
     </div>
