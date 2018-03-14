@@ -17,6 +17,7 @@ Arduino.h
 | :------ |
 | [mbed_stats_heap_get](#mbed_stats_heap_get) - `void mbed_stats_heap_get(mbed_stats_heap_t *stats)` |
 | [mbed_stats_stack_get](#mbed_stats_stack_get) - `void mbed_stats_stack_get(mbed_stats_stack_t *stats)` |
+| [mbed_stats_stack_get_each](#mbed_stats_stack_get) - `size_t mbed_stats_stack_get_each(mbed_stats_stack_t *stats, size_t count)` |
 
 ## Struct
 
