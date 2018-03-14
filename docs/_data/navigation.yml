@@ -81,3 +81,5 @@ docs:
         url: /docs/apis/FileSystem/
       - title: "Audio-Retired"
         url: /docs/apis/audio-retired/
+      - title: "Memory Status"
+        url: /docs/apis/memory-status/
