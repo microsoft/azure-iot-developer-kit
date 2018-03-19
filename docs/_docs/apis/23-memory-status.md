@@ -51,7 +51,7 @@ typedef struct {
 void mbed_stats_heap_get(mbed_stats_heap_t *stats);
 ```
 
-> Print heap statistics, which provide exact information about the number of bytes dynamically allocated by a program. It does not take into account heap fragmentation or allocation overhead. This allows allocation size reports to remain consistent, regardless of order of allocation (fragmentation) or allocation algorithm (overhead).
+> Retrieve heap statistics, which provide exact information about the number of bytes dynamically allocated by a program. It does not take into account heap fragmentation or allocation overhead. This allows allocation size reports to remain consistent, regardless of order of allocation (fragmentation) or allocation algorithm (overhead).
 > 
 > #### Parameters
 > 
