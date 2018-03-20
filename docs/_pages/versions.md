@@ -7,6 +7,31 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.3.3 (March 20, 2018)
+
+### Release Summary
+
+* SDK
+  * Add [WebSocket API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/websocket-client/) (not include SSL).
+  * Add [memory status API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/memory-status/).
+  * Bug fix
+	* Compile error of file missing in Linux and macOS environment.
+	* Some bugs found in security check and review.
+  
+* Mini Solution
+  * Add new mini solution to support Remote Monitoring v2
+	* Document will come soon
+  * Update mini solution of DPS to provide the device enrollment tool for macOS 
+
+* Special thanks to [Alexandre Dumont](https://github.com/adumont) , [Juan Manuel Servera Bondroit](https://github.com/jmservera) , [Chris Lovett](https://github.com/lovettchris) , [Prafull Kotecha](https://github.com/prafullkotecha) , thank you for your contributions and feedbacks.
+  
+### Downloads
+
+- [Installation Package 1.3.3 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.3.45.zip).
+- [Installation Package 1.3.3 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.3.45.zip).
+- [Firmware 1.3.3](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.3.45.bin).
+
+
 ## Version 1.3.2 (February 7, 2018)
 
 ### Release Summary
