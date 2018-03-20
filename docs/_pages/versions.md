@@ -19,7 +19,7 @@ last_modified_at: 2018-01-09
 	* Some bugs found in security check and review.
   
 * Mini Solution
-  * Add new mini solution to support Remote Monitoring v2e
+  * Add new mini solution to support Remote Monitoring v2
 	* Document will come soon
   * Update mini solution of DPS to provide the device enrollment tool for macOS 
 
