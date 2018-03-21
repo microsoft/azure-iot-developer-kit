@@ -11,7 +11,7 @@ last_modified_at: 2018-03-12
 ---
 
 For first-time users of the MXChip IoT DevKit (a.k.a. DevKit), follow these quick steps to:
-- Prepare your development environment and
+- Prepare your development environment.
 - Send temperature and humidity data from built-in DevKit sensors to the Azure IoT Hub.
 
 If you have already done this, you can try more samples from the [Projects Catalog]({{"/docs/projects/" | absolute_url }}) or build your own IoT application.
