@@ -21,9 +21,9 @@ OledDisplay.h
 | :------ |
 | [init](#init) - `void init()` |
 | [clean](#clean) - `void clean()` |
-| [print](#print) - `int print(const char *s, bool wrap)` |
-| [print](#print-1) - `int print(unsigned int line, const char *s, bool wrap)` |
-| [draw](#draw) - `void draw(unsigned char x0, unsigned char y0, unsigned char x1, unsigned char y1, unsigned char *BMP)` |
+| [print](#print) - `int print(const char s, bool wrap)` |
+| [print](#print-1) - `int print(unsigned int line, const char s, bool wrap)` |
+| [draw](#draw) - `void draw(unsigned char x0, unsigned char y0, unsigned char x1, unsigned char y1, unsigned char BMP)` |
 
 ## Constructors
 
@@ -74,7 +74,7 @@ void clean()
 ### print
 
 ```cpp
-int print(const char *s, bool wrap)
+int print(const char s, bool wrap)
 ```
 
 > Print text in the first line on OLED display.
@@ -83,7 +83,7 @@ int print(const char *s, bool wrap)
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | const char * | s | Text to display. |
+> | const char  | s | Text to display. |
 > | bool | wrap | Line wrap. |
 > 
 > #### Return value
@@ -95,7 +95,7 @@ int print(const char *s, bool wrap)
 ### print
 
 ```cpp
-int print(unsigned int line, const char *s, bool wrap)
+int print(unsigned int line, const char s, bool wrap)
 ```
 
 > Print text in the specific line on OLED display.
@@ -105,7 +105,7 @@ int print(unsigned int line, const char *s, bool wrap)
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
 > | unsigned int | line | Specific line number. |
-> | const char * | s | Text to display. |
+> | const char   | s | Text to display. |
 > | bool | wrap | Line wrap. |
 > 
 > #### Return value
@@ -117,7 +117,7 @@ int print(unsigned int line, const char *s, bool wrap)
 ### draw
 
 ```cpp
-void draw(unsigned char x0, unsigned char y0, unsigned char x1, unsigned char y1, unsigned char *BMP)
+void draw(unsigned char x0, unsigned char y0, unsigned char x1, unsigned char y1, unsigned char BMP)
 ```
 
 > Show BMP image in OLED specified place.
@@ -126,11 +126,11 @@ void draw(unsigned char x0, unsigned char y0, unsigned char x1, unsigned char y1
 >
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | unsigned char | x0 | Position the X axis of the top left corner of the area image to display, valid value is [0, 127]. |
-> | unsigned char | y0 | Position the Y axis of the top left corner of the area image to display, valid value is [0, 7]. |
-> | unsigned char | x1 | Position the X axis of the bottom right corner of the area image to display, valid value is [1, 128]. |
-> | unsigned char | y1 | Position the Y axis of the bottom right corner of the area image to display, valid value is [1, 8]. |
-> | unsigned char * | BMP | BMP image pixel byte array. Every array element is an 8-bit binary data that draws 8-connected pixels in the same column. |
+> | unsigned char | x0 | Position the X axis of the top left corner of the area image to display, valid value range is [0, 127]. |
+> | unsigned char | y0 | Position the Y axis of the top left corner of the area image to display, valid value range is [0, 7]. |
+> | unsigned char | x1 | Position the X axis of the bottom right corner of the area image to display, valid value range is [1, 128]. |
+> | unsigned char | y1 | Position the Y axis of the bottom right corner of the area image to display, valid value range is [1, 8]. |
+> | unsigned char  | BMP | BMP image pixel byte array. Every array element is an 8-bit binary data that draws 8-connected pixels in the same column. |
 >
 > #### Return value
 > 
@@ -140,6 +140,9 @@ void draw(unsigned char x0, unsigned char y0, unsigned char x1, unsigned char y1
 
 ```cpp
 #include <OledDisplay.h>
+
+unsigned char BMP[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,128,192,192,224,240,56,12,192,240,224,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,128,224,224,224,224,128,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,192,224,248,252,254,255,255,63,15,3,64,248,254,255,255,255,255,255,252,248,224,128,0,0,0,0,0,0,0,0,0,0,0,0,0,0,128,240,252,127,31,3,3,15,127,254,240,192,0,0,0,0,8,28,28,28,28,156,220,252,124,60,28,0,0,0,252,252,248,0,0,0,0,0,0,252,252,248,0,0,0,0,252,252,252,112,56,28,28,28,0,128,224,240,248,28,28,12,12,28,248,248,240,128,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,128,224,248,252,255,255,255,255,63,15,3,0,0,0,0,0,0,3,7,15,31,63,127,255,255,255,255,255,252,240,224,128,0,0,0,0,0,0,64,112,124,127,31,7,7,7,7,7,7,7,7,31,127,126,120,64,0,96,112,120,126,127,103,99,97,96,96,96,0,0,0,63,127,127,240,224,224,96,96,56,127,127,127,0,0,0,0,127,127,127,0,0,0,0,0,0,15,63,127,123,243,227,227,227,227,99,99,35,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,8,8,8,8,8,12,12,12,12,12,14,14,14,14,14,15,15,15,15,15,15,15,15,15,15,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+
 void setup(){
     Screen.init();
 }
@@ -157,8 +160,12 @@ void loop(){
         Screen.print(i, buf);
     }
     delay(1000);
-    // Clean up the screen
-    Screen.clean();
+    // draw a bitmap to the screen
+    Screen.draw(0, 0, 128, 8, BMP);
     delay(1000);
+    // clean screen ready for next loop
+    Screen.clean();
 }
 ```
+
+
