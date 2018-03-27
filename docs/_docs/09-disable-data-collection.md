@@ -60,7 +60,7 @@ If you have already installed our package and enabled data collection. You can s
 1. Open SDK floder (`~/Library/Arduino15/packages/AZ3166/hardware/stm32f4/{version}`).
 
 2. If there is a file named `platform.local.txt`.
-   Replace "-DENABLETRACE=1" with "-DENABLETRACE=0". Notice that there are two and you need to replace both.
+   Replace `-DENABLETRACE=1` with `-DENABLETRACE=0`. Notice that there are two and you need to replace both.
 
    If there is no file named `platform.local.txt`. Create a new one and paste following content:
 ```
