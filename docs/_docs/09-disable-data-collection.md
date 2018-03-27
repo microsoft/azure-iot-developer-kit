@@ -12,16 +12,13 @@ last_modified_at: 2018-03-27
 
 Microsoft would collect data about how users use Azure IoT DevKit and some problems they encounter. Microsoft uses this information to improve our DevKit experience. Participation is voluntary and when you choose to participate your device automatically sends information to Microsoft about how you use Azure IoT DevKit.
 
-
-## How to disable data collection at the beginning
-
-Before your installation, you can set environment variable in terminal and then run installation script. Data collection during installation and after installation will be disabled.
-
 {% include switch.html content = page.variable %}
 
-### Windows
+## Windows
 
-Windows: Instead of run `install.exe` as an administrator directly, you need to:
+### How to install development environment with data collection disabled
+
+Before your installation, you can set environment variable in terminal and then run installation script. Data collection during installation and after installation will be disabled.
 
 Launch **Command Prompt** as an administrator, locate the folder into which you extracted the .zip file, and run:
   ```bash
@@ -29,22 +26,9 @@ Launch **Command Prompt** as an administrator, locate the folder into which you 
   install.cmd
   ```
 
-### macOS
-
-Launch Terminal app, locate the folder into which you extracted the .zip file, and run:
-  ```bash
-  export TRACEOFF=true
-  ./install.sh
-  ```
-
-
-## How to disable data collection after installation
+### How to disable data collection after installation
 
 If you have already installed our package and enabled data collection. You can still disable data collection.
-
-{% include switch.html content = page.variable %}
-
-### Windows
 
 1. Open SDK floder (`C:\Users\{your name}\azure-board-cli\AppData\Local\Arduino15\packages\AZ3166\hardware\stm32f4\{version}`).
 
@@ -57,7 +41,21 @@ compiler.c.extra_flags=-DCORRELATIONID="70c81fd765c4b124d16c848013e774bcc0f63c48
 compiler.cpp.extra_flags=-DCORRELATIONID="70c81fd765c4b124d16c848013e774bcc0f63c483bc5247f73deaf694d567224"  -DENABLETRACE=0
 ```
 
-### macOS
+## macOS
+
+### How to install development environment with data collection disabled
+
+Before your installation, you can set environment variable in terminal and then run installation script. Data collection during installation and after installation will be disabled.
+
+Launch Terminal app, locate the folder into which you extracted the .zip file, and run:
+  ```bash
+  export TRACEOFF=true
+  ./install.sh
+  ```
+
+### How to disable data collection after installation
+
+If you have already installed our package and enabled data collection. You can still disable data collection.
 
 1. Open SDK floder (`~/Library/Arduino15/packages/AZ3166/hardware/stm32f4/{version}`).
 
