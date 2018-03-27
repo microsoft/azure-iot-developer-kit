@@ -12,11 +12,12 @@ last_modified_at: 2018-03-27
 
 Microsoft would collect data about how users use Azure IoT DevKit and some problems they encounter. Microsoft uses this information to improve our DevKit experience. Participation is voluntary and when you choose to participate your device automatically sends information to Microsoft about how you use Azure IoT DevKit.
 
-{% include switch.html content = page.variable %}
 
 ## How to disable data collection at the beginning
 
 Before your installation, you can set environment variable in terminal and then run installation script. Data collection during installation and after installation will be disabled.
+
+{% include switch.html content = page.variable %}
 
 ### Windows
 
@@ -40,6 +41,8 @@ Launch Terminal app, locate the folder into which you extracted the .zip file, a
 ## How to disable data collection after installation
 
 If you have already installed our package and enabled data collection. You can still disable data collection.
+
+{% include switch.html content = page.variable %}
 
 ### Windows
 
