@@ -37,8 +37,8 @@ If you have already installed our package and enabled data collection. You can s
 
    If there is no file named `platform.local.txt`. Create a new one and paste following content:
 ```
-compiler.c.extra_flags=-DCORRELATIONID="70c81fd765c4b124d16c848013e774bcc0f63c483bc5247f73deaf694d567224"  -DENABLETRACE=0
-compiler.cpp.extra_flags=-DCORRELATIONID="70c81fd765c4b124d16c848013e774bcc0f63c483bc5247f73deaf694d567224"  -DENABLETRACE=0
+compiler.c.extra_flags=-DCORRELATIONID="0000000000000000000000000000000000000000000000000000000000000000"  -DENABLETRACE=0
+compiler.cpp.extra_flags=-DCORRELATIONID="0000000000000000000000000000000000000000000000000000000000000000"  -DENABLETRACE=0
 ```
 
 ## macOS
@@ -64,8 +64,8 @@ If you have already installed our package and enabled data collection. You can s
 
    If there is no file named `platform.local.txt`. Create a new one and paste following content:
 ```
-compiler.c.extra_flags=-DCORRELATIONID="70c81fd765c4b124d16c848013e774bcc0f63c483bc5247f73deaf694d567224"  -DENABLETRACE=0
-compiler.cpp.extra_flags=-DCORRELATIONID="70c81fd765c4b124d16c848013e774bcc0f63c483bc5247f73deaf694d567224"  -DENABLETRACE=0
+compiler.c.extra_flags=-DCORRELATIONID="0000000000000000000000000000000000000000000000000000000000000000"  -DENABLETRACE=0
+compiler.cpp.extra_flags=-DCORRELATIONID="0000000000000000000000000000000000000000000000000000000000000000"  -DENABLETRACE=0
 ```
 
 
