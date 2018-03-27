@@ -30,7 +30,7 @@ If you have already done this, you can try more samples from the [Projects Catal
 
 * An MXChip IoT DevKit. [Get it now](https://aka.ms/iot-devkit-purchase){:target="_blank"}.
 * A computer running Windows 10 or macOS 10.10+.
-* An active Azure subscription. [Activate a free 30-day trial Microsoft Azure account](https://azureinfo.microsoft.com/us-freetrial.html).
+* An active Azure subscription. [Activate a free 30-day trial Microsoft Azure account](https://azure.microsoft.com/en-us/free/).
 
 ![Required hardware]({{"/assets/images/getting-started/hardware.jpg" | absolute_url }})
 
