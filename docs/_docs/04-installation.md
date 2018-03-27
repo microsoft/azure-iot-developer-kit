@@ -40,10 +40,10 @@ Download and install [Visual Studio Code for Windows](https://code.visualstudio.
 
   [<i class='fa fa-download'></i> Download](https://aka.ms/devkit/prod/installpackage/tasks/latest){: .click-download-tracker .btn .btn--success .btn--large}
 
-  Locate the .zip and extract it to your Windows user folder (`C:\Users\[your name]\azure-board-cli`). Then launch **Command Prompt** (`cmd`) and run the following commands to configure:
+  Locate the .zip and extract it to your Windows user folder (`C:\Users\{your name}\azure-board-cli`). Then launch **Command Prompt** (`cmd`) and run the following commands to configure:
 
   ```
-  cd C:\Users\[your name]\azure-board-cli
+  cd C:\Users\{your name}\azure-board-cli
 
   npm install
   ```
