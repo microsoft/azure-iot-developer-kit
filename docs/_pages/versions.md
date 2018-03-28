@@ -13,7 +13,6 @@ last_modified_at: 2018-01-09
 
 * Minor fixes for the mini solution of Remote Monitoring V2.
 
-  
 ### Downloads
 
 - [Installation Package 1.3.4 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.4.50.zip).
@@ -29,16 +28,16 @@ last_modified_at: 2018-01-09
   * Add [WebSocket API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/websocket-client/) (not include SSL).
   * Add [memory status API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/memory-status/).
   * Bug fix
-	* Compile error of file missing in Linux and macOS environment.
-	* Some bugs found in security check and review.
+  * Compile error of file missing in Linux and macOS environment.
+  * Some bugs found in security check and review.
   
 * Mini Solution
   * Add new mini solution to support Remote Monitoring v2
-	* Document will come soon
+  * Document will come soon
   * Update mini solution of DPS to provide the device enrollment tool for macOS 
 
 * Special thanks to [Alexandre Dumont](https://github.com/adumont) , [Juan Manuel Servera Bondroit](https://github.com/jmservera) , [Chris Lovett](https://github.com/lovettchris) , [Prafull Kotecha](https://github.com/prafullkotecha) , thank you for your contributions and feedbacks.
-  
+
 ### Downloads
 
 - [Installation Package 1.3.3 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.3.45.zip).
@@ -71,11 +70,11 @@ During the past 2 weeks, we got chance to revisit our code and did some minor ch
 ### Release Summary
 
 * SDK
-	* Fix memory leak issue in IoT Hub MQTT client when there was a long drop on Wi-Fi.
+  * Fix memory leak issue in IoT Hub MQTT client when there was a long drop on Wi-Fi.
 
 * Development Tools
-	* Improve the stability for DevKit Windows/Mac installation.
-	* Support customized IoT Hub Device ID in configuring device connection string.
+  * Improve the stability for DevKit Windows/Mac installation.
+  * Support customized IoT Hub Device ID in configuring device connection string.
 
 ### Downloads
 
@@ -165,13 +164,13 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
   * Enable float modifier for `print/printf` function.
   * Remove `json-c` library and use [parson JSON library](https://github.com/kgabis/parson){:target="_blank"} instead.
   * Bug fix: Enable HttpClient response callback when handling large response body.
- 
+
 * Project Catalog
   * New mini solution: DeviceStates. Use Azure IoT Hub device twins to monitor DevKit state and control the user LED.
   * Fix gyroscope values and added acceleration sensor in SensorStatus sample.
   * Use MQTT Client wrapper for GetStarted, RemoteMonitoring and ShakeShake mini solutions.
   * Improve telemetry logics in mini solutions on macOS.
- 
+
 * Development Tools
   * Enable one-click install experience on macOS :wink:. 
   * Upgrade all project tasks to version 2.0.
@@ -276,10 +275,10 @@ The optimization continues. We are now supporting VS Code tasks on macOS as well
   * Remove the dependency of Python installation by using Windows Azure CLI 2.0 MSI (v 2.0.9).
   * Upgrade to the latest version of VS Code (v 1.13.1) and Arduino Extension (v 0.2.4).
   * Switch to Azure CDN to accelerate the package downloading speed.
- 
+
 * Firmware 
   * Stabilize Wi-Fi connection and minor optimizations to Azure IoT Device C SDK
- 
+
 * Project Catalog 
   * Preview cloud provision, deploy and device upload tasks for “Shake, Shake” mini solution in VS Code on macOS.
   * Switched to [ARM (Azure Resource Manager) template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template){:target="_blank"} for provisioning Azure services.
@@ -301,22 +300,22 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
 * Update underlying mbed OS to 5.4
 
 * Show version number for the default app
- 
+
 * Installation Package
   * Install pip with `get-pip.py` script.
   * Optimize error handling when running commands.
   * Adapt to update of Azure subscription return format using Azure CLI.
- 
+
 * Stabilization
   * Bug fix: Memory leak on socket layer of Wi-Fi driver.
   * Bug fix: Add retry logic to improve the stability of Azure IoT Device SDK.
- 
+
 * Arduino Library
   * Refine library APIs to follow Arduino Standard like function naming conventions. 
   * Add [OLED draw method]({{"/docs/apis/display/" | absolute_url}}) to control every pixel in display screen.
   * Add support for file system based on mbed file system implementation.
   * Add support for [IrDA]({{"/docs/apis/irda/" | absolute_url}}).
- 
+
 * Project Catalog
   * Add 'Connect to Azure IoT Hub' example and documentation that align with other [Azure IoT Hub get started tutorials](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-get-started){:target="_blank"}.
   * Add 'Remote Monitoring' example and documentation that make DevKit connect to [Azure IoT Suite](https://www.azureiotsuite.com){:target="_blank"}.
