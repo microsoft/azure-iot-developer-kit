@@ -7,7 +7,7 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
-## Version 1.3.3 (March 28, 2018)
+## Version 1.3.4 (March 28, 2018)
 
 ### Release Summary
 
