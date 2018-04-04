@@ -1,6 +1,8 @@
 ---
 title: "Door Monitor"
 permalink: /docs/projects/door-monitor/
+redirect_to:
+  - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-door-monitor
 excerpt: "Use magnetic sensor to detect the change of magnetic field, and send notifications."
 header:
   overlay_image: /assets/images/projects-door-monitor.jpg
