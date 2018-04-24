@@ -87,3 +87,5 @@ docs:
         url: /docs/apis/memory-status/
       - title: "WebSocket Client"
         url: /docs/apis/websocket-client/
+      - title: "Watchdog Timer"
+        url: /docs/apis/watchdog-timer/
