@@ -126,7 +126,6 @@ Homebrew is the easiest way to manage your CLI install. It provides convenient w
 ## Open sample projects folder
 
 1. Make sure your DevKit is **not connected** to your computer. Start VS Code first, and then connect the DevKit to your computer.
-  ![Introduction page]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
 
 2. Expand left side **ARDUINO EXAMPLES** section, browse to **Examples for MXCHIP AZ3166 > AzureIoT**, and select **GetStarted**.
   ![Arduino Examples tab]({{"/assets/images/mini-solution/vscode_examples.png" | absolute_url }})
