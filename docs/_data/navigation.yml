@@ -89,3 +89,5 @@ docs:
         url: /docs/apis/websocket-client/
       - title: "Watchdog Timer"
         url: /docs/apis/watchdog-timer/
+      - title: "External Interrupts"
+        url: /docs/apis/external-interrupts/
