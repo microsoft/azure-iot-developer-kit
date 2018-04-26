@@ -10,7 +10,10 @@ variable:
 last_modified_at: 2018-03-27
 ---
 
-Microsoft would collect data about how users use Azure IoT DevKit and some problems they encounter. Microsoft uses this information to improve our DevKit experience. Participation is voluntary and when you choose to participate your device automatically sends information to Microsoft about how you use Azure IoT DevKit.
+Microsoft collects data to operate effectively and provide you the best experiences. 
+Participation is voluntary and when you choose to participate, your device automatically sends data to Microsoft about how you use the IoT DevKit.
+
+If you choose to participate, you can stop at any time by following below steps.
 
 {% include switch.html content = page.variable %}
 
