@@ -35,8 +35,6 @@ WebSocketClient.h
 
 ### WebSocketReceiveResult
 
-> Struct that provide the information of data receive response.
-
 ``` cpp
 typedef struct
 {
@@ -46,6 +44,9 @@ typedef struct
     nsapi_error_t error;
 } WebSocketReceiveResult;
 ```
+
+> Struct that provide the information of data receive response.
+>
 
 ## Enums
 
@@ -63,12 +64,12 @@ typedef enum
 
 ### WebSocketClient
 
-> Constructor of `WebSocketClient` class
-
 ``` cpp
 WebSocketClient(char * url)
 ```
 
+> Constructor of `WebSocketClient` class
+>
 > #### Parameters
 > 
 > | Type | Name | Description |
@@ -79,49 +80,50 @@ WebSocketClient(char * url)
 
 ### ~WebSocketClient
 
-> Destructor of `WebSocketClient` class
-
 ``` cpp
 ~WebSocketClient()
 ```
+
+> Destructor of `WebSocketClient` class
 
 ## Methods
 
 ### connect
 
-> Connect to the WebSocket url
-
 ``` cpp
  bool connect()
 ```
 
+> Connect to the WebSocket url
+>
 > #### Parameters
 > 
 > None
-
+>
 > #### Return value
 > 
 > Returns true on success, or false on failure.
 
 ### connected
 
-> Check if the WebSocket client is on connected state.
-
 ``` cpp
 bool connected()
 ```
 
+> Check if the WebSocket client is on connected state.
+>
 > #### Return value
 > 
 > Returns true if the WebSocket connection is alive, false for connection lost.
 
 ### send
 
-> Send a data frame to WebSocket server
-
 ``` cpp
 int send(const char * data, long size, WS_Message_Type messageType = WS_Message_Text, bool isFinal = true);
 ```
+
+> Send a data frame to WebSocket server
+>
 > #### Parameters
 > 
 > | Type | Name | Description |
@@ -130,41 +132,42 @@ int send(const char * data, long size, WS_Message_Type messageType = WS_Message_
 > | long | size | length of the message payload in bytes |
 > | WS_Message_Type | messageType | data message type, can be *WS_Message_Text* or *WS_Message_Binary* |
 > | bool | isFinal | Flag indicates whether this is a final data frame. By default it is true. For a message with a big payload you may need to send it with smaller pieces and mark the final piece with this flag. |
-
+>
 > #### Return value
 > 
 > the number of bytes sent, or negative number on error.
 
 ### receive
 
-> Receive a WebSocker message and fill it into a given message buffer.
-
 ``` cpp
 WebSocketReceiveResult* receive(char * msgBuffer, int size)
 ```
 
+> Receive a WebSocker message and fill it into a given message buffer.
+>
 > #### Parameters
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
 > | char * | msgBuffer | message buffer to fill in the received message |
 > | int | size | size of the message buffer in bytes |
-
+>
 > #### Return value
 > 
 > Return a `WebSocketReceiveResult` pointer contains the information of the received message on success, or NULL on failure.
 
 ### close
 
-> Close the WebSocket connection from client side.
-
 ``` cpp
 bool close()
 ```
+
+> Close the WebSocket connection from client side.
+>
 > #### Parameters
 >
 > None
-
+>
 > #### Return value
 >
 > Returns true on success, or false on failure.

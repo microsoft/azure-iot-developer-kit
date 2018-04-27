@@ -28,59 +28,60 @@ Arduino.h
 
 ### Watchdog
 
-> Constructor of `Watchdog` class
-
 ``` cpp
 Watchdog()
 ```
+
+> Constructor of `Watchdog` class
 
 ## Methods
 
 ### configure
 
-> Configure Watchdog timer with reset interval.
-
 ```cpp
 bool configure(float timeoutInMs)
 ```
+
+> Configure Watchdog timer with reset interval.
+>
 > #### Parameters
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
 > | float | timeoutInMs | timeout interval in milliseconds, as a float |
-
+>
 > #### Return value
 > 
 > Returns true if the Watchdog is configured successfully, false for invalid input.
 
 ### resetTimer
 
-> Reset Watchdog timer to prevent it from a system reset.
-
 ```cpp
 void resetTimer()
 ```
 
+> Reset Watchdog timer to prevent it from a system reset.
+>
 > #### Parameters
 > 
 > None
-
+>
 > #### Return value
 > 
 > None
 
 ### resetTriggered
 
-> Get the flag to indicate if the Watchdog trigger a system reset.
-
 ```cpp
 bool resetTriggered()
 ```
 
+> Get the flag to indicate if the Watchdog trigger a system reset.
+>
 > #### Parameters
 > 
 > None
-
+>
 > #### Return value
 > 
 > Returns true if the Watchdog reset is triggered, else return false.
