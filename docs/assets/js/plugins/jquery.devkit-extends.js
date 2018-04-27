@@ -98,12 +98,7 @@
     }
 
     $.feedbackButtonClick = function(projectName, eventName) {
-        try {
-            amplitude.getInstance().logEvent(eventName, {'Project Name': projectName});
-        } catch(e) {
-            console.log('ampltitude error: '+e);
-        }
-    
+
         try {
             ga('send', 'event', {
                 eventCategory: 'stepFinished',
