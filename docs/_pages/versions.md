@@ -7,6 +7,34 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.3.5 (April 28, 2018)
+
+### Release Summary
+
+* SDK
+  * Add [Watchdog Timer API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/watchdog-timer/).
+  * Add [External Interrupts API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/external-interrupts/).
+  * Fix MQTT client reconnect issue.
+  * Filter out DevKit hotspot in the WiFi configuration page.
+  * Fix bugs.
+
+* Mini Solution
+  * New mini-solution: [Connect to IoT Edge device gateway as Modbus TCP device](https://github.com/DevKitExamples/DevKitModbus#connect-to-iot-edge-device-gateway-as-modbus-tcp-device).
+
+* Development Tools
+  * Fix bug such that it works for users who only have resource group-level access
+  * Fix azure-cli bug by updating azure-cli to latest version.
+  * Allow users to disable data collection.
+
+* Special thanks to [Kirk Munro](https://github.com/KirkMunro) , [fmuntean](https://github.com/fmuntean) , [Thomas Mutzl](https://github.com/mutzl), thank you for your contributions and feedbacks.
+
+### Downloads
+
+- [Installation Package 1.3.5 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.5.53.zip).
+- [Installation Package 1.3.5 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.5.53.zip).
+- [Firmware 1.3.5](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.5.53.bin).
+
+
 ## Version 1.3.4 (March 28, 2018)
 
 ### Release Summary
