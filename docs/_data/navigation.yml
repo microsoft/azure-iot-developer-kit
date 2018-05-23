@@ -91,3 +91,5 @@ docs:
         url: /docs/apis/watchdog-timer/
       - title: "External Interrupts"
         url: /docs/apis/external-interrupts/
+      - title: "Sleep Mode"
+        url: /docs/apis/sleep-mode/
