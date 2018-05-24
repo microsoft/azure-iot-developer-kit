@@ -23,7 +23,7 @@ http_client.h
 
 | Destructors |
 | :----------- |
-| [~HTTPClient](#~HTTPClient)] - `virtual ~HTTPClient(void)` |
+| [~HTTPClient](#~HTTPClient) - `virtual ~HTTPClient(void)` |
 
 | Methods |
 | :------ |
