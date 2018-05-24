@@ -22,6 +22,7 @@ http_client.h
 | [HTTPClient](#HTTPClient) - `HTTPClient(const char* ssl_ca_pem, http_method method, const char* url, Callback<void(const char *at, size_t length)> body_callback = 0)` |
 
 | Destructors |
+| :----------- |
 | [~HTTPClient](#~HTTPClient)] - `virtual ~HTTPClient(void)` |
 
 | Methods |
