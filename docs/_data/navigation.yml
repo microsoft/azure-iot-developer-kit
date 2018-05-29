@@ -93,3 +93,5 @@ docs:
         url: /docs/apis/external-interrupts/
       - title: "System Function"
         url: /docs/apis/system-function/
+      - title: "HTTP Client"
+        url: /docs/apis/http-client/
