@@ -65,6 +65,13 @@ IoT projects rely on internet connectivity. Use AP Mode on the DevKit to configu
 
 ## Install development environment
 
+We recommend [Azure IoT Workbench](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench) extension for Visual Studio Code to develop on the IoT DevKit.
+
+Azure IoT Workbench provides an integrated experience to develop IoT solutions. It helps both on device and cloud development using Azure IoT and other services. You can watch this [Channel9 video](https://channel9.msdn.com/Shows/Internet-of-Things-Show/IoT-Workbench-extension-for-VS-Code) to have an overview of what it does.
+
+Follow these steps to prepare the development environment for IoT DevKit:
+1. Install [Visual Studio Code](), a cross platform source code editor with powerful developer tooling, like IntelliSense code completion and debugging.
+
 We encourage you to use the following one-click installation process to prepare the development environment. If you encounter any problems, you can always follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to complete the process.
 
 {% include switch.html content = page.variable %}
