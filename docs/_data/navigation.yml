@@ -8,7 +8,7 @@ main:
     url: /docs/projects/
   - title: "Blog"
     url: https://blogs.msdn.microsoft.com/iotdev/
-  - title: "v1.3.5"
+  - title: "v1.3.7"
     url: /versions/
     class: "masthead-circle"
 
@@ -91,3 +91,7 @@ docs:
         url: /docs/apis/watchdog-timer/
       - title: "External Interrupts"
         url: /docs/apis/external-interrupts/
+      - title: "System Function"
+        url: /docs/apis/system-function/
+      - title: "HTTP Client"
+        url: /docs/apis/http-client/
