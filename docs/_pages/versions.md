@@ -7,6 +7,28 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.3.7 (Jun 8, 2018)
+
+### Release Summary
+
+* SDK
+  * Add [System Function](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/system-function/) for power saving.
+  * Display the IP address for default firmware.
+  * Fix memory usage API issue.
+  * Fix bugs.
+
+* Development Tools
+  * Improve error message when serial port occupied
+
+* Special thanks to [Oguz Bastemur](https://github.com/obastemur), thank you for your contributions and feedbacks.
+
+### Downloads
+
+- [Installation Package 1.3.7 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.7.56.zip).
+- [Installation Package 1.3.7 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.7.56.zip).
+- [Firmware 1.3.7](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.7.56.bin).
+
+
 ## Version 1.3.5 (April 28, 2018)
 
 ### Release Summary
