@@ -24,7 +24,8 @@ AudioClassV2.h
 | [getInstance](#getinstance) - `static AudioClass& getInstance()` |
 | [format](#format) - `void format(unsigned int sampleRate, unsigned short sampleBitLength)` |
 | [stop](#stop) - `void stop()` |
-| [getAudioState](#getaudiostate) - `int getAudioState();` |
+| [getAudioState](#getaudiostate) - `int getAudioState()` |
+| [setVolume](#setVolume) - ` bool setVolume(uint8_t volume)` |
 
 | Callback scenario methods |
 | :------ |
@@ -156,6 +157,26 @@ int getAudioState();
 > | Type | Description |
 > | :--- | :---------- |
 > | int | Value of AUDIO_STATE_TypeDef. |
+
+### setVolume
+
+```
+ bool setVolume(uint8_t volume)
+```
+
+> Controls the current audio volume level.
+>
+> #### Parameters
+>
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | uint8_t | volume | Volume level to be set in percentage from 0% to 100% (0 for Mute and 100 for Max volume level). |
+>
+> #### Return value
+>
+> | Type | Description |
+> | :--- | :---------- |
+> | bool | returns true on success, or false on failure |
 
 
 ## Callback scenario methods
@@ -439,6 +460,7 @@ void play()
 {
   Serial.println("start playing");
   Audio.format(8000, 16);
+  Audio.setVolume(80);
   Audio.startPlay(playCallback);
 }
 
@@ -533,6 +555,7 @@ void record()
 {
   // Re-config the audio data format
   Audio.format(8000, 16);
+  Audio.setVolume(80);
 
   Serial.println("start recording");
   Screen.clean();
