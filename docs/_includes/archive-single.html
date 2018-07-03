@@ -38,12 +38,12 @@
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
       {% endif %}
       {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
-      {% if post.PreviousVersionUrl %}
-        <a class="archive__version" href="{{ post.PreviousVersionUrl }}">{{ site.PreviousVersionText }}</a>
-      {% endif %}
+
       {% comment %} Azure services the tutorial is using {% endcomment %}
-      {% if post.icons %}
+      <div class="archive__item-metadata">
+      
         <div class="project-icons-div archive__item-excerpt">
+        {% if post.icons %}
         {% for icon in post.icons %}
           <div class="project-icon-div">
             {% if icon.target %}
@@ -56,8 +56,12 @@
             {% endif %}
           </div>
         {% endfor %}
+        {% endif %}
         </div>
-      {% endif %}
+      {% if post.PreviousVersionUrl %}
+        <a class="archive__version" href="{{ post.PreviousVersionUrl }}">{{ site.PreviousVersionText }}</a>
+      {% endif %} 
+      </div>
 
       {% comment %} Contributor from community {% endcomment %}
       {% if post.contributor %}
