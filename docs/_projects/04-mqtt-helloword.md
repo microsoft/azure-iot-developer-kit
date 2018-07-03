@@ -4,7 +4,6 @@ permalink: /docs/projects/mqtt-helloworld/
 redirect_to:
   - https://github.com/Microsoft/vscode-iot-workbench/blob/master/docs/iot-devkit/devkit-mqtt-client.md
 excerpt: "Use DevKit as a client to send messages to MQTT server."
-PreviousVersionText: "Previous version"
 PreviousVersionUrl: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-mqtt-helloworld
 header:
   overlay_image: /assets/images/projects-mqtt-helloworld.jpg

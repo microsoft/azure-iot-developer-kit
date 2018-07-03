@@ -4,7 +4,6 @@ permalink: /docs/projects/door-monitor/
 redirect_to:
   - https://github.com/Microsoft/vscode-iot-workbench/blob/master/docs/iot-devkit/devkit_door_monitor.md
 excerpt: "Use magnetic sensor to detect the change of magnetic field, and send notifications."
-PreviousVersionText: "Previous version"
 PreviousVersionUrl: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-door-monitor
 header:
   overlay_image: /assets/images/projects-door-monitor.jpg

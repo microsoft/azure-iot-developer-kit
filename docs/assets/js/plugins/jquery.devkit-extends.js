@@ -278,7 +278,7 @@
             $(this).css('cursor', 'pointer');
             $(this).click(function (event) {
                 var target = event.target;
-                if (!($(target).prop('className') == 'project-icon')) {
+                if (!($(target).prop('className') == 'project-icon'||$(target).prop('className') == 'archive__version')) {
                     var projectTitle = $(this).find('.archive__item-title a');
                     if (projectTitle.length) {
                         trackClickNumber(projectTitle[0]);
