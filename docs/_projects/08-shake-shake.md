@@ -2,8 +2,9 @@
 title: "Shake, Shake for a Tweet"
 permalink: /docs/projects/shake-shake/
 redirect_to:
-  - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-retrieve-twitter-message
+  - https://github.com/Microsoft/vscode-iot-workbench/blob/master/docs/iot-devkit/devkit-shakeshake.md
 excerpt: "Use the motion sensor to detect shaking and  find a random tweet with a #hashtag."
+PreviousVersionUrl: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-retrieve-twitter-message
 header:
   overlay_image: /assets/images/projects-shake-shake.jpg
   overlay_full: true
