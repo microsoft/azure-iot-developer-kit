@@ -95,3 +95,5 @@ docs:
         url: /docs/apis/system-function/
       - title: "HTTP Client"
         url: /docs/apis/http-client/
+      - title: "OTA Update"
+        url: /docs/apis/ota-update/
