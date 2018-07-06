@@ -75,7 +75,7 @@ int checkFirmwareCRC16(uint16_t fwPackageCheckValue, int fwSize)
 > Return 0 on success, otherwise return -1.
 
 ## Sample code
-Before running this sample code, you need to update the bootloader first.
+Before running this sample code, please update the bootloader first.
 
 ```cpp
 #include "AZ3166WiFi.h"
