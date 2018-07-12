@@ -290,3 +290,6 @@ compress_html:
     envs: development
 
 github: [metadata]
+
+# Project catalog
+PreviousVersionText: "Previous version"
