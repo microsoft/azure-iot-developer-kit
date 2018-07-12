@@ -221,6 +221,15 @@
     }
   }
 
+  .archive__item-metadata {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .archive__version {
+
+  }
+
   .archive__item-teaser {
     @include breakpoint($small) {
       max-height: 200px;

@@ -7,6 +7,8 @@ author_profile: false
 
 <h3>Official tutorials that guide you build and learn IoT empowered by Azure.</h3>
 
+<p class="notice--warning">DevKit is moving to use Azure IoT Workbench as the new tool for developing on it. If you are looking for old experience, you can still find it by clicking <strong>"Previous verion"<strong>.</p>
+
 <div class="grid__wrapper">
 
   {% assign projects = '' | split: '' %} {% comment %} Empty array {% endcomment %}
