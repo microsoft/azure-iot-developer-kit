@@ -65,7 +65,7 @@ projects: "2, 5, 6"
 ---
 
 <div class="landing-page-video">
-  {% include whatsnew.html news = "Use DevKit with IoT Hub Device Provisioning Service to achieve zero-touch registration of device." link = "Learn more about use DPS" url="https://microsoft.github.io/azure-iot-developer-kit/docs/projects/dps/" %}
+  {% include whatsnew.html news = "The DevKit is now using Azure IoT Workbench, an integrated tool on Visual Studio Code to develop IoT application." link = "Learn more about Azure IoT Workbench" url="https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench" %}
 </div>
 
 {% include feature_row id="part1" type="right" %}

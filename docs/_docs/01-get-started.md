@@ -10,6 +10,9 @@ variable:
 last_modified_at: 2018-03-12
 ---
 
+**Notice:** [Azure IoT Workbench](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench) is the new tool for developing on DevKit. If you are looking for old experiences by using the installer, you can find it [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started)
+{: .notice--warning}
+
 For first-time users of the MXChip IoT DevKit (a.k.a. DevKit), follow these quick steps to:
 - Prepare your development environment.
 - Send temperature and humidity data from built-in DevKit sensors to the Azure IoT Hub.
