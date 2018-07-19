@@ -2,8 +2,9 @@
 title: "Device registration with DPS"
 permalink: /docs/projects/dps/
 redirect_to:
-  - https://docs.microsoft.com/en-us/azure/iot-dps/how-to-connect-mxchip-iot-devkit
+  - https://github.com/Microsoft/vscode-iot-workbench/blob/master/docs/iot-devkit/devkit_dps.md
 excerpt: "Use the Device Provisioning Service to automatically provision security enabled devices to IoT hub."
+PreviousVersionUrl: https://docs.microsoft.com/en-us/azure/iot-dps/how-to-connect-mxchip-iot-devkit
 header:
   overlay_image: /assets/images/projects-dps.jpg
   overlay_full: true
