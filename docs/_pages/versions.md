@@ -7,7 +7,7 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
-## Version 1.4.8 (July 19, 2018)
+## Version 1.4.0 (July 19, 2018)
 
 ### Release Summary
 
@@ -18,6 +18,7 @@ last_modified_at: 2018-01-09
 
 * SDK
   * Reduce the size of file system which builds upon the 2MB on-board SPI flash.
+    
     **Notice:** Because it need more on-board SPI flash space to store the new firmware for firmware updating, we reduced the space of [file system]({{"docs/apis/FileSystem" | absolute_url }}). So if you have files on IoT DevKit, please make sure they have been well backed up before upgrade to this new SDK.
     {: .notice--warning}
     
