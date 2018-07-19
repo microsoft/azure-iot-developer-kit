@@ -93,7 +93,7 @@ Follow these steps to prepare the development environment for IoT DevKit:
     ```
   * macOS:
     ```json
-    "arduino.path": "/Application",
+    "arduino.path": "/Applications",
     "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
     ```
   * Ubuntu:

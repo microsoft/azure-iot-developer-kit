@@ -7,6 +7,37 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.4.0 (July 19, 2018)
+
+### Release Summary
+
+* Firmware
+  * Enable firmware update capability in bootloader.
+    Now the bootloader can upgrade the firmware from the on-board SPI flash, this is part of the OTA programming (firmware update) feature.
+    By integrating with the Azure Automatic Device Configuration service, the OTA firmware update function will be enabled in next release.
+
+* SDK
+  * Reduce the size of file system which builds upon the 2MB on-board SPI flash.
+    
+    **Notice:** Because it need more on-board SPI flash space to store the new firmware for firmware updating, we reduced the space of [file system]({{"docs/apis/FileSystem" | absolute_url }}). So if you have files on IoT DevKit, please make sure they have been well backed up before upgrade to this new SDK.
+    {: .notice--warning}
+    
+  * Add [setVolume API]({{"docs/apis/audioV2" | absolute_url }}) to support change the audio volume.
+
+* Mini Solution
+  * Update the DevKit Translator to use the new [Audio APIs]({{"docs/apis/audioV2" | absolute_url }}).
+
+* Development Tools
+  * Deprecate existing one-click installation package.
+    Our new VS Code extension: [IoT Workbench]( https://aka.ms/iot-workbench) can provide better development experience for IoT DevKit, you can install it from the VS Code marketplace directly and follow this [tutorial]( https://aka.ms/iot-workbench/getstarted) to start using IoT DevKit. 
+    
+    So starting with 1.4.0 we only provide the Arduino board package (SDK only) and no longer to have the on-click installation package.
+
+### Downloads
+
+- [Firmware 1.4.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.4.0.60.bin).
+
+
 ## Version 1.3.7 (Jun 8, 2018)
 
 ### Release Summary
@@ -318,9 +349,9 @@ Summer does not mean slow down. We further enriched our project catalog and tune
 ## Version 1.0.1 (July 13, 2017)
 
 The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our 'Shake, Shake' sample project on macOS now. To further smooth the development tools and package installation, we are using the official [MSI](https://aka.ms/InstallAzureCliWindows){:target="_blank"} for the Windows Azure CLI 2.0 installation, so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.
- 
+
 ### Release Summary
- 
+
 * Installation Package 
   * Remove the dependency of Python installation by using Windows Azure CLI 2.0 MSI (v 2.0.9).
   * Upgrade to the latest version of VS Code (v 1.13.1) and Arduino Extension (v 0.2.4).
