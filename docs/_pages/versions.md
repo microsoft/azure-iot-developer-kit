@@ -31,7 +31,7 @@ last_modified_at: 2018-01-09
   * Deprecate existing one-click installation package.
     Our new VS Code extension: [IoT Workbench]( https://aka.ms/iot-workbench) can provide better development experience for IoT DevKit, you can install it from the VS Code marketplace directly and follow this [tutorial]( https://aka.ms/iot-workbench/getstarted) to start using IoT DevKit. 
     
-    So starting with 1.4.0 we only provide the Arduino board package (SDK only) and no longer to have the on-click installation package.
+    So starting with 1.4.0 we only provide the Arduino board package (SDK only) and no longer to have the one-click installation package.
 
 ### Downloads
 
