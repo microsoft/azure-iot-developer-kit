@@ -1,12 +1,12 @@
 ---
-title: "MemoryPool"
-permalink: /docs/apis/MemoryPool/
-excerpt: "Library for MemoryPool on AZ3166"
+title: "Queue"
+permalink: /docs/apis/queue/
+excerpt: "Library for Queue on AZ3166"
 last_modified_at: 2018-01-05T05:16:34-04:00
 ---
 
-The MemoryPool class, provides by the underlining mbed OS, is used for managing the fixed-size momory pools.
-For more information about MemoryPool, please visit [MbedOS](https://os.mbed.com/docs/v5.6/mbed-os-api-doxy/classrtos_1_1_memory_pool.html){:target="_blank"}
+The Queue class, provides by the underlining mbed OS, is used for queue pointers to data from producer threads to consumer threads.
+For more information about Queue, please visit [MbedOS](https://os.mbed.com/docs/v5.6/mbed-os-api-doxy/classrtos_1_1_queue.html){:target="_blank"}.
 
 ## Assembly
 
@@ -17,53 +17,46 @@ Arduino.h
 
 | Constructors |
 | :----------- |
-| [MEMORY_POOL](#MemoryPool) - `template<typename T, uint32_t pool_sz> class rtos::MemoryPool< T, pool_sz >` |
+| [Queue](#Queue) - `template<typename T, uint32_t queue_sz> class rtos::Queue< T, queue_sz >` |
 
 | Methods |
 | :------ |
-| [alloc](#alloc) - `T* alloc (void) ` |
-| [calloc](#calloc) - `T* calloc (void) ` |
-| [free](#free) - `osStatus free (T *block) ` |
+| [put](#put) - `osEvent put(T *data, uint32_t millisec=0, uint8_t prio=0) ` |
+| [get](#get) - `osEvent get(uint32_t millisec=osWaitForever)` |
 
 ## Constructors
 
-### MEMORY_POOL
+### Queue
 
 ```cpp
-template<typename T, uint32_t pool_sz> rtos::MemoryPool<T, pool_sz>::MemoryPool() 
+template<typename T, uint32_t queue_sz> rtos::Queue< T, queue_sz >::Queue  (  ) 
 ```
 
 > #### Parameters
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | typename | T | Data type of the object in memory pool. |
-> | uint32_t | pool_sz | Size of the memory pool. |
+> | typename | T | Data type of the object in the queue. |
+> | uint32_t | pool_sz | Size of the queue. |
 
 ## Methods
 
-### alloc
+### put
 
 ```cpp
-template<typename T, uint32_t pool_sz> T* rtos::MemoryPool< T, pool_sz >::alloc(void) 
+template<typename T, uint32_t queue_sz> osStatus rtos::Queue<T, queue_sz>::put( T* data, uint32_t millisec = 0, uint8_t prio = 0)  
 ```
 
-> Allocate a memory block of type T from a memory pool. 
+> Put message in a Queue. 
 > 
+> #### Parameters
 > 
-> #### Return value
-> 
-> address of the allocated memory block or NULL in case of no memory available. 
-
-### calloc
-
-```cpp
-template<typename T, uint32_t pool_sz> T* rtos::MemoryPool< T, pool_sz >::calloc(void) 
-```
-
-> Allocate a memory block of type T from a memory pool and set memory block to zero. 
-> 
-> 
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | data | T | message pointer. |
+> | uint32_t | millisec | timeout value or 0 in case of no time-out. (default: 0) |
+> | uint32_t | prio | priority value or 0 in case of default. (default: 0)  |
+>
 > #### Return value
 > 
 > address of the allocated memory block or NULL in case of no memory available. 

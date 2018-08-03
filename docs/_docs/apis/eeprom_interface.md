@@ -1,6 +1,6 @@
 ---
 title: "EEPROMInterface"
-permalink: /docs/apis/EEPROMInterface/
+permalink: /docs/apis/eeprom-interface/
 excerpt: "Library for EEPROMInterface on AZ3166"
 last_modified_at: 2018-01-04T05:16:34-04:00
 ---
