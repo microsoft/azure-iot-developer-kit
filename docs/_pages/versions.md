@@ -7,6 +7,30 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.4.1 (Augest 6, 2018)
+
+### Release Summary
+
+* SDK
+
+  * Add [OTA Programming API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/ota/).
+
+  * UARTClass class support extra serial port (PB_6 & PB_7).
+
+    ![UART1]({{"/assets/images/release/141_uart.png" | absolute_url }})
+
+  * [Audio class]({{"docs/apis/audio-v2" | absolute_url }}) support automatic level control on microphone.
+
+* Mini Solution
+
+  * Add IoT DevKit firmware OTA update mini solution.
+
+    **Notice:**  Please make sure you have upgrade the firmware before running the OTA mini solution.
+    {: .notice--warning}
+
+* Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://github.com/Adamantinu) and [Chris Lovett](https://github.com/lovettchris), thank you for your contributions and feedbacks.
+
+
 ## Version 1.4.0 (July 19, 2018)
 
 ### Release Summary
@@ -19,13 +43,13 @@ last_modified_at: 2018-01-09
 * SDK
   * Reduce the size of file system which builds upon the 2MB on-board SPI flash.
     
-    **Notice:** Because it need more on-board SPI flash space to store the new firmware for firmware updating, we reduced the space of [file system]({{"docs/apis/FileSystem" | absolute_url }}). So if you have files on IoT DevKit, please make sure they have been well backed up before upgrade to this new SDK.
+    **Notice:** Because it need more on-board SPI flash space to store the new firmware for firmware updating, we reduced the space of [file system]({{"docs/apis/file-system" | absolute_url }}). So if you have files on IoT DevKit, please make sure they have been well backed up before upgrade to this new SDK.
     {: .notice--warning}
     
-  * Add [setVolume API]({{"docs/apis/audioV2" | absolute_url }}) to support change the audio volume.
+  * Add [setVolume API]({{"docs/apis/audio-v2" | absolute_url }}) to support change the audio volume.
 
 * Mini Solution
-  * Update the DevKit Translator to use the new [Audio APIs]({{"docs/apis/audioV2" | absolute_url }}).
+  * Update the DevKit Translator to use the new [Audio APIs]({{"docs/apis/audio-v2" | absolute_url }}).
 
 * Development Tools
   * Deprecate existing one-click installation package.

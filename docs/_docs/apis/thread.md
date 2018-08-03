@@ -1,6 +1,6 @@
 ---
 title: "Thread"
-permalink: /docs/apis/Thread/
+permalink: /docs/apis/thread/
 excerpt: "Library for Thread on AZ3166"
 last_modified_at: 2018-01-08T05:16:34-04:00
 ---

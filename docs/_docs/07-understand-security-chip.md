@@ -19,14 +19,14 @@ The STSAFE-A100 consists of a full turnkey solution with a secure operating syst
 
 ![STSAFE on DevKit]({{"/assets/images/how-to/stsafe/stsafe-on-devkit.png" | absolute_url }})
 
-On the chip, it employs data partitions to be used to store critical data such as Wi-Fi SSID, Wi-Fi password and IoT hub connection string safely. Credential data can be isolated in those partitions. To read and write those partitions, a developer uses `dataZoneIndex` for operating on specific partition. See [API Reference](http://microsoft.github.io/azure-iot-developer-kit/docs/apis/EEPROMInterface/) to learn about using it on Arduino.
+On the chip, it employs data partitions to be used to store critical data such as Wi-Fi SSID, Wi-Fi password and IoT hub connection string safely. Credential data can be isolated in those partitions. To read and write those partitions, a developer uses `dataZoneIndex` for operating on specific partition. See [API Reference](http://microsoft.github.io/azure-iot-developer-kit/docs/apis/eeprom-interface/) to learn about using it on Arduino.
 
 ### Enable the secure channel
 
 By default, the security chip is not enabled. It means the data you store on EEPROM is in plain text. There are two ways to enable it:
 
 1. Use `enable_secure 1` command in [Configurition Mode]({{"/docs/use-configuration-mode/" | absolute_url }}).
-2. Call `enableHostSecurityChannel()` function in Arduino. see [API reference]({{"/docs/apis/EEPROMInterface/" | absolute_url }}).
+2. Call `enableHostSecurityChannel()` function in Arduino. see [API reference]({{"/docs/apis/eeprom-interface/" | absolute_url }}).
 
 After enabled, the DevKit will negotiate a key with secure chip. The key will be stored at both DevKit and secure chip side. All data as well as the read / write operations on I2C will then be encrypted.
 
