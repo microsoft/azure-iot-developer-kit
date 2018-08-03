@@ -10,7 +10,7 @@ variable:
 last_modified_at: 2018-03-12
 ---
 
-**Notice:** [Azure IoT Workbench](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench) is the new tool for developing on DevKit. If you are looking for old experiences by using the installer, you can find it [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started)
+**Notice:** [Azure IoT Workbench](https://aka.ms/iot-workbench) is the new tool for developing on DevKit. If you are looking for old experiences by using the installer, you can find it [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started)
 {: .notice--warning}
 
 For first-time users of the MXChip IoT DevKit (a.k.a. DevKit), follow these quick steps to:
@@ -68,7 +68,7 @@ IoT projects rely on internet connectivity. Use AP Mode on the DevKit to configu
 
 ## Install development environment
 
-We recommend [Azure IoT Workbench](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench) extension for Visual Studio Code to develop on the IoT DevKit.
+We recommend [Azure IoT Workbench](https://aka.ms/iot-workbench) extension for Visual Studio Code to develop on the IoT DevKit.
 
 Azure IoT Workbench provides an integrated experience to develop IoT solutions. It helps both on device and cloud development using Azure IoT and other services. You can watch this [Channel9 video](https://channel9.msdn.com/Shows/Internet-of-Things-Show/IoT-Workbench-extension-for-VS-Code) to have an overview of what it does.
 

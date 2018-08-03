@@ -95,5 +95,3 @@ docs:
         url: /docs/apis/wifi-server/
       - title: "WiFiUDP"
         url: /docs/apis/wifi-udp/
-      - title: "Retired: AudioV1"
-        url: /docs/apis/retired/audio-v1/

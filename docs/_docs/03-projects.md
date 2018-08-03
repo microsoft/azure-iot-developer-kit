@@ -9,7 +9,8 @@ author_profile: false
 
 
 
-> **Notice:**  IoT DevKit is moving to use [Azure IoT Workbench](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench) as the new tool for developing on it. If you are looking for old experience, you can still find it by clicking "**Previous version**".
+**Notice:** [Azure IoT Workbench](https://aka.ms/iot-workbench) is the new tool for developing on DevKit. If you are looking for old experience, you can still find it by clicking "**Previous version**".
+{: .notice--warning}
 
 
 

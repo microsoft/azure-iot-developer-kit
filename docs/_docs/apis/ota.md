@@ -36,6 +36,29 @@ int OTADownloadFirmware(const char *url, uint16_t *crc16Checksum, const char* ss
 > | const char* | [in] url | The url to download firmware from. |
 > | uint16_t* | [out] crc16Checksum | Return the CRC-16 (xmodem) checksum of the downloaded firmware |
 > | const char* | [in] ssl_ca_pem | Cert of the site of the given url to ensure the connection is under a secure manner, default is NULL which means use cert of Microsoft Azure for TLS communiction. |
+>
+> #### Return value
+>
+> Return the size of the new firmware on success, otherwise return -1 if encounter network issue, return -2 if encounter external flash accessing issue.
+
+### OTAApplyNewFirmware]
+
+```cpp
+int OTAApplyNewFirmware(int fwSize, uint16_t crc16Checksum);
+```
+
+> Apply the new firmware, after reboot the Device will update to the new version.
+> 
+> #### Parameters
+> 
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | int | [in] fwSize | Size of the firmware. |
+> | uint16_t | [in] crc16Checksum | The CRC-16 (xmodem) checksum value of the firmware |
+>
+> #### Return value
+>
+> Return 0 on success, otherwise return -1.
 
 ## Sample Code
 
@@ -58,4 +81,12 @@ int OTADownloadFirmware(const char *url, uint16_t *crc16Checksum, const char* ss
     // Report error status, FileSizeNotMatch
     return;
   }
+  
+  // Applying
+  if (OTAApplyNewFirmware(fwSize, checksum) != 0)
+  {
+    // Report error status, ApplyFirmwareFailed
+      return;
+  }
+  
 ```
