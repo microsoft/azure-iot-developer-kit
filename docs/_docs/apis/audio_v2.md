@@ -1,6 +1,6 @@
 ---
 title: "Audio"
-permalink: /docs/apis/audio_v2/
+permalink: /docs/apis/audio-v2/
 excerpt: "The Audio module for AZ3166"
 last_modified_at: 2017-11-22T10:16:34-04:00
 ---

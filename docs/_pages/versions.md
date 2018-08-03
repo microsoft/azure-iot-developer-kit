@@ -13,7 +13,7 @@ last_modified_at: 2018-01-09
 
 * SDK
 
-  * Add [OTA Programming API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/ota/).
+  * Add [OTA Programming API]({{"docs/apis/ota" | absolute_url }}).
 
   * UARTClass class support extra serial port (PB_6 & PB_7).
 
