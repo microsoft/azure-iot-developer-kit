@@ -25,14 +25,14 @@ docs:
     url: /docs/projects/
   - title: How-to Guides
     children:
-      - title: "Manual installation"
-        url: /docs/installation/
       - title: "Firmware upgrading"
         url: /docs/firmware-upgrading/
       - title: "Use configure mode"
         url: /docs/use-configuration-mode/
       - title: "Understand security chip"
         url: /docs/understand-security-chip
+      - title: "Manual installation"
+        url: /docs/installation/
   - title: API Reference
     children:
       - title: "Arduino"
