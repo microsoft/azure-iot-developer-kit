@@ -1,5 +1,5 @@
 ---
-title: "DevKit OTA updates"
+title: "IoT DevKit OTA updates"
 permalink: /docs/projects/devkit-ota/
 redirect_to:
   - https://github.com/Microsoft/vscode-iot-workbench/blob/master/docs/iot-devkit/devkit-ota.md

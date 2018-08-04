@@ -5,7 +5,7 @@ excerpt: "Library for FileSystem on AZ3166"
 last_modified_at: 2018-01-09T05:16:34-04:00
 ---
 
-The FATFileSystem class implemented on mbed OS APIs, provides the core API for file system operations on DevKit. The SFlashBlockDevice class provides the underlying API for representing block-based storage that can be used to back a file system.
+The FATFileSystem class implemented on mbed OS APIs, provides the core API for file system operations on IoT DevKit. The SFlashBlockDevice class provides the underlying API for representing block-based storage that can be used to back a file system.
 For more information about File System, please visit [MbedOS](https://docs.mbed.com/docs/mbed-os-api-reference/en/latest/APIs/storage/filesystem/){:target="_blank"}
 
 ## Assembly

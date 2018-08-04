@@ -1,7 +1,7 @@
 ---
-title: "Pixelcraft - A DevKit Painter"
+title: "Pixelcraft - A IoT DevKit Painter"
 link: "http://pixelcraft.cc/"
-excerpt: "Paint the pixels or import an image to modify on DevKit screen, all within browser now."
+excerpt: "Paint the pixels or import an image to modify on IoT DevKit screen, all within browser now."
 header:
   image: /assets/images/communities-pixelcraft.jpg
   teaser: /assets/images/communities-pixelcraft-th.jpg
@@ -13,4 +13,4 @@ difficulty: EASY
 last_modified_at: 2018-02-02
 ---
 
-This article describes how to use Pixcelcraft tool to paint or modify an imported image to display on DevKit screen. Kudos to Zhe Li.
+This article describes how to use Pixcelcraft tool to paint or modify an imported image to display on IoT DevKit screen. Kudos to Zhe Li.

@@ -1,14 +1,21 @@
 ---
-title: "Disable data collection"
-permalink: /docs/disable-data-collection/
+title: "[Obsoleted] Disable data collection"
+permalink: /docs/legacy/disable-data-collection/
 excerpt: "Instructions for disable data collection."
 variable:
   - platform: windows
     name: Windows
   - platform: macos
     name: macOS
-last_modified_at: 2018-03-27
+last_modified_at: 2018-08-4
 ---
+
+
+
+**Notice:** We strongly recommend you to use [Azure IoT Workbench](https://aka.ms/iot-workbench) for developing on IoT DevKit.
+{: .notice--warning}
+
+
 
 Microsoft collects data to operate effectively and provide you the best experiences. 
 Participation is voluntary and when you choose to participate, your device automatically sends data to Microsoft about how you use the IoT DevKit.

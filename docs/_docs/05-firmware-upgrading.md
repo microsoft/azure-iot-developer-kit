@@ -24,7 +24,7 @@ Once the IoT DevKit is connected, in Windows you see a new USB mass storage devi
 
 2. Drag & drop the `.bin` file you downloaded to `AZ3166` device.
 
-3. Wait until the file is copied, then the DevKit will reboot to the latest firmware.
+3. Wait until the file is copied, then the IoT DevKit will reboot to the latest firmware.
 
 After done, you will see the firmware version on the screen of the kit if it has connected with Internet.
 

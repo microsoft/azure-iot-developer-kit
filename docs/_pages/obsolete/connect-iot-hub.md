@@ -21,7 +21,7 @@ last_modified_at: 2017-06-28
 
 {% include toc icon="columns" %}
 
-In this project, you will create an Azure IoT Hub, connect DevKit to it, and collect the temperature and humidity data from sensors and send the data to the IoT hub.
+In this project, you will create an Azure IoT Hub, connect IoT DevKit to it, and collect the temperature and humidity data from sensors and send the data to the IoT hub.
 
 ## What you learn
 
@@ -33,7 +33,7 @@ In this project, you will create an Azure IoT Hub, connect DevKit to it, and col
 
 Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
 
-* Have your DevKit connected to Wi-Fi
+* Have your IoT evKit connected to Wi-Fi
 * Prepare the development environment
 
 An active Azure subscription. If you do not have one, you can register via one of the methods:
@@ -49,7 +49,7 @@ Visual Studio Code is the primary development tool for IoT DevKit. If this is th
 
 ### A. Start VS Code
 
-Make sure your DevKit is not connected. Start VS Code first and connect the DevKit to your computer. VS Code automatically finds the DevKit and opens an introduction page:
+Make sure your IoT DevKit is not connected. Start VS Code first and connect the IoT DevKit to your computer. VS Code automatically finds the IoT DevKit and opens an introduction page:
 
 ![Introduction page]({{"/assets/images/mini-solution/vscode_start.png" | absolute_url }})
 

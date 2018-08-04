@@ -11,7 +11,7 @@ sidebar:
     image_alt: "logo"
     text: "IoT Maker, Tinker, Developer"
   - title: "Responsibilities"
-    text: "Your coolest ideas that can make the DevKit rock 'n roll."
+    text: "Your coolest ideas that can make the IoT DevKit rock 'n roll."
 ---
 
-Don't hesitate to let us know the next best and coolest ideas you come up with for the DevKit. Let us make it even a better IoT development kit.
+Don't hesitate to let us know the next best and coolest ideas you come up with for the IoT DevKit. Let us make it even a better IoT development kit.

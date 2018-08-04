@@ -1,7 +1,7 @@
 ---
 title: "Get started"
 permalink: /docs/get-started/
-excerpt: "How to quickly install and set up your development environment to use the DevKit."
+excerpt: "How to quickly install and set up your development environment to use the IoT DevKit."
 variable:
   - platform: windows
     name: Windows
@@ -10,12 +10,12 @@ variable:
 last_modified_at: 2018-03-12
 ---
 
-**Notice:** [Azure IoT Workbench](https://aka.ms/iot-workbench) is the new tool for developing on DevKit. If you are looking for old experiences by using the installer, you can find it [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started)
+**Notice:** [Azure IoT Workbench](https://aka.ms/iot-workbench) is the new tool for developing on IoT DevKit. If you are looking for old experiences by using the installer, you can find it [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started).
 {: .notice--warning}
 
 For first-time users of the MXChip IoT DevKit (a.k.a. DevKit), follow these quick steps to:
 - Prepare your development environment.
-- Send temperature and humidity data from built-in DevKit sensors to the Azure IoT Hub.
+- Send temperature and humidity data from built-in IoT DevKit sensors to the Azure IoT Hub.
 
 If you have already done this, you can try more samples from the [Projects Catalog]({{"/docs/projects/" | absolute_url }}) or build your own IoT application.
 
@@ -23,11 +23,11 @@ If you have already done this, you can try more samples from the [Projects Catal
 
 ## What you learn
 
-* How to connect the DevKit to a wireless access point.
+* How to connect the IoT DevKit to a wireless access point.
 * How to install the development environment.
-* How to create an IoT Hub and register a device for the DevKit.
-* How to collect sensor data by running a sample application on the DevKit.
-* How to send the DevKit sensor data to your IoT hub.
+* How to create an IoT Hub and register a device for the IoT DevKit.
+* How to collect sensor data by running a sample application on the IoT DevKit.
+* How to send the IoT DevKit sensor data to your IoT hub.
 
 ## What you need
 
@@ -39,9 +39,9 @@ If you have already done this, you can try more samples from the [Projects Catal
 
 ## Prepare your hardware
 
-To connect the DevKit to your computer:
+To connect the IoT DevKit to your computer:
 
-1. Connect the Micro-USB end to the DevKit.
+1. Connect the Micro-USB end to the IoT DevKit.
 2. Connect the USB end to your computer.
 3. The green LED for power confirms the connection.
 
@@ -49,21 +49,21 @@ To connect the DevKit to your computer:
 
 ## Configure Wi-Fi
 
-IoT projects rely on internet connectivity. Use AP Mode on the DevKit to configure and connect to Wi-Fi.
+IoT projects rely on internet connectivity. Use AP Mode on the IoT DevKit to configure and connect to Wi-Fi.
 
-1. Hold down button B, push and release the reset button, and then release button B. Your DevKit enters AP mode for configuring the Wi-Fi connection. The screen displays the service set identifier (SSID) of the DevKit and the configuration portal IP address:
+1. Hold down button B, push and release the reset button, and then release button B. Your IoT DevKit enters AP mode for configuring the Wi-Fi connection. The screen displays the service set identifier (SSID) of the IoT DevKit and the configuration portal IP address:
   ![Reset button, button B, and SSID]({{"/assets/images/getting-started/wifi-ap.jpg" | absolute_url }})
 
-2. Use a Web browser on a different Wi-Fi enabled device (computer or mobile phone) to connect to the DevKit SSID displayed in the previous step. If it asks for a password, leave it empty.
+2. Use a Web browser on a different Wi-Fi enabled device (computer or mobile phone) to connect to the IoT DevKit SSID displayed in the previous step. If it asks for a password, leave it empty.
   ![Network info and Connect button]({{"/assets/images/getting-started/connect-ssid.png" | absolute_url }})
 
-3. Open **192.168.0.1** in the browser. Select the Wi-Fi network that you want the DevKit to connect to, type the password for the Wi-Fi conection, and then click **Connect**.
+3. Open **192.168.0.1** in the browser. Select the Wi-Fi network that you want the IoT DevKit to connect to, type the password for the Wi-Fi conection, and then click **Connect**.
   ![Password box and Connect button]({{"/assets/images/getting-started/wifi-portal.png" | absolute_url }})
 
-4. The DevKit reboots in a few seconds. You then see the Wi-Fi name and assigned IP address on the screen of the DevKit:
+4. The IoT DevKit reboots in a few seconds. You then see the Wi-Fi name and assigned IP address on the screen of the IoT DevKit:
   ![Wi-Fi name and IP address]({{"/assets/images/getting-started/wifi-ip.jpg" | absolute_url }})
 
-**Note:** After  asuccessful Wi-Fi connection, the currently-installed and latest available version of the DevKit's firmware is displayed on the DevKit screen. If the DevKit is not running on the latest available version, follow the [firmware upgrading guide]({{"/docs/firmware-upgrading/" | absolute_url }}) to install the latest version.
+**Note:** After  asuccessful Wi-Fi connection, the currently-installed and latest available version of the IoT DevKit's firmware is displayed on the IoT DevKit screen. If the IoT DevKit is not running on the latest available version, follow the [firmware upgrading guide]({{"/docs/firmware-upgrading/" | absolute_url }}) to install the latest version.
 {: .notice--info}
 
 ## Install development environment
@@ -136,7 +136,7 @@ Now you are all set with preparing and configuring your development environment.
 
 ## Build your first project
 
-1. Make sure your DevKit is **not connected** to your computer. Start VS Code first, and then connect the DevKit to your computer.
+1. Make sure your IoT DevKit is **not connected** to your computer. Start VS Code first, and then connect the IoT DevKit to your computer.
 
 1. In the bottom right status bar, check the **MXCHIP AZ3166** is shown as selected board and serial port with **STMicroelectronics** is used.
   ![Select board and serial port]({{"/assets/images/getting-started/select-board.png" | absolute_url }})
@@ -153,13 +153,13 @@ Now you are all set with preparing and configuring your development environment.
 
 1. Click `F1` to open the command palette, type and select **IoT Workbench: Device**, then select **Config Device Settings > Select IoT Hub Device Connection String**.
 
-1. On IoT DevKit, hold down button **A**, push and release the **reset** button, and then release button **A**. Your DevKit enters configuration mode and saves the connection string.
+1. On IoT DevKit, hold down button **A**, push and release the **reset** button, and then release button **A**. Your IoT DevKit enters configuration mode and saves the connection string.
   ![Set connection string]({{"/assets/images/getting-started/connection-string.png" | absolute_url }})
 
 1. Click `F1` again, type and select **IoT Workbench: Device**, then select **Device Upload**.
   ![Verification and upload of the Arduino sketch]({{"/assets/images/getting-started/arduino-upload.png" | absolute_url }})
 
-The DevKit reboots and starts running the code.
+The IoT DevKit reboots and starts running the code.
 
 **Note:** If there is errors or interruptions, you can always recover by running the command again.
 {: .notice--info}
@@ -204,4 +204,4 @@ If you encounter problems, you can refer to [FAQs]({{"/docs/faq/" | absolute_url
 ## Next Steps
 
 You have successfully connected an MXChip IoT DevKit to your IoT hub, and you have sent the captured sensor data to your IoT hub. 
-Check our [Projects Catalog]({{"/docs/projects/" | absolute_url }}) for more samples you can build with the DevKit and Azure multiple services.
+Check our [Projects Catalog]({{"/docs/projects/" | absolute_url }}) for more samples you can build with the IoT DevKit and Azure multiple services.

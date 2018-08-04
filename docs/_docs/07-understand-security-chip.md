@@ -17,7 +17,7 @@ IoT security is the area of endeavor concerned with safeguarding connected devic
 
 The STSAFE-A100 consists of a full turnkey solution with a secure operating system running on the latest generation of secure microcontrollers.
 
-![STSAFE on DevKit]({{"/assets/images/how-to/stsafe/stsafe-on-devkit.png" | absolute_url }})
+![STSAFE on IoT DevKit]({{"/assets/images/how-to/stsafe/stsafe-on-devkit.png" | absolute_url }})
 
 On the chip, it employs data partitions to be used to store critical data such as Wi-Fi SSID, Wi-Fi password and IoT hub connection string safely. Credential data can be isolated in those partitions. To read and write those partitions, a developer uses `dataZoneIndex` for operating on specific partition. See [API Reference](http://microsoft.github.io/azure-iot-developer-kit/docs/apis/eeprom-interface/) to learn about using it on Arduino.
 
@@ -28,7 +28,7 @@ By default, the security chip is not enabled. It means the data you store on EEP
 1. Use `enable_secure 1` command in [Configurition Mode]({{"/docs/use-configuration-mode/" | absolute_url }}).
 2. Call `enableHostSecurityChannel()` function in Arduino. see [API reference]({{"/docs/apis/eeprom-interface/" | absolute_url }}).
 
-After enabled, the DevKit will negotiate a key with secure chip. The key will be stored at both DevKit and secure chip side. All data as well as the read / write operations on I2C will then be encrypted.
+After enabled, the IoT DevKit will negotiate a key with secure chip. The key will be stored at both IoT DevKit and secure chip side. All data as well as the read / write operations on I2C will then be encrypted.
 
 **Notice:** **Enable the security chip with caution.** Using drag and drop to upgrade firmware will make data saved in EEPROM will no longer be readable immediately after enabling the security channel. This is a design with the security chip to ensure data can not be breached.
 {: .notice--warning}
@@ -37,9 +37,9 @@ The status between enabling and disabling the security channel.
 
 ![STSAFE status]({{"/assets/images/how-to/stsafe/stsafe-status.png" | absolute_url }})
 
-The difference of the data commuinication between DevKit and the security chip (EEPROM).
+The difference of the data commuinication between IoT DevKit and the security chip (EEPROM).
 
-![STSAFE communication with DevKit]({{"/assets/images/how-to/stsafe/communication.png" | absolute_url }})
+![STSAFE communication with IoT DevKit]({{"/assets/images/how-to/stsafe/communication.png" | absolute_url }})
 
 ## Problems and feedback
 
