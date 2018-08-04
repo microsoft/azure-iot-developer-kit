@@ -24,8 +24,7 @@ If you choose to participate, you can stop at any time as described [here](https
 
 
 
-**Notice:** [Azure IoT Workbench](https://aka.ms/iot-workbench) is the tool for developing on IoT DevKit. If you are looking for disable the data collection for old installation package, please follow the steps in [this document]({{"/docs/legacy/disable-data-collection" | absolute_url}}) .
-{: .notice--warning}
+>  If you are looking for disable the data collection for old installation package, please follow the steps in [this document]({{"/docs/legacy/disable-data-collection" | absolute_url}}) .
 
 
 
@@ -57,11 +56,13 @@ Sometimes, whatever in Arduino IDE or VS Code, people get failed to install the 
 
 This might be a cache issue both on local Arduino cache and remote CDN cache.
 Please clean the local cache first:
-1.	Uninstall the IoT DevKit package, whatever in Arduino IDE or VS Code.
-2.	Manually remove the cache folder:
-   * Windows: %localappdata%/Arduino15/staging/packages
-   * macOS: ~/Library/Arduino15/staging
-3. Then re-install the package.
+1. Uninstall the IoT DevKit package, whatever in Arduino IDE or VS Code.
+
+2. Manually remove the cache folder:
+   * For **Windows **, remove *%localappdata%/Arduino15/staging/packages*
+   * For **macOS**, remove *~/Library/Arduino15/staging*
+
+2. Then re-install the package.
 
 If it's still not work please contact [us](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"} for support.
 
