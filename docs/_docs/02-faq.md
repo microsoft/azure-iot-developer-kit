@@ -52,6 +52,22 @@ You can purchase the kit from our hardware partner's product page: [https://aka.
 
 ## Installation
 
+### Failed to install Arduino Package for IoT DevKit
+
+Sometimes, whatever in Arduino IDE or VS Code, people get failed to install the MXChip IoT DevKit package and have bellowing error:
+
+![Smartscreen]({{"/assets/images/faq/crc.png" | absolute_url }})
+
+This might be a cache issue both on local Arduino cache and remote CDN cache.
+Please clean the local cache first:
+1.	Uninstall the IoT DevKit package, whatever in Arduino IDE or VS Code.
+2.	Manually remove the cache folder:
+   * Windows: %localappdata%/Arduino15/staging/packages
+   * macOS: ~/Library/Arduino15/staging
+3. Then re-install the package.
+
+If it's still not work please contact [us](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"} for support.
+
 ### Windows Defender SmartScreen prevented an unrecognized app error.
 
 Sometimes SmartScreen prevents applications you know are not bad – for example, it’s a CMD or VBS script.
