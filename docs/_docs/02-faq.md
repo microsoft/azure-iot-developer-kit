@@ -59,8 +59,9 @@ Please clean the local cache first:
 1. Uninstall the IoT DevKit package, whatever in Arduino IDE or VS Code.
 
 2. Manually remove the cache folder:
-   * For **Windows **, remove *%localappdata%/Arduino15/staging/packages*
-   * For **macOS**, remove *~/Library/Arduino15/staging*
+
+   - For **Windows **, remove *%localappdata%/Arduino15/staging/packages*
+   - For **macOS**, remove *~/Library/Arduino15/staging*
 
 2. Then re-install the package.
 
