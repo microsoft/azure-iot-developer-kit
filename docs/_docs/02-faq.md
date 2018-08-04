@@ -10,9 +10,7 @@ last_modified_at: 2017-05-05T10:16:34-04:00
 
 
 **Notice:** [Azure IoT Workbench](https://aka.ms/iot-workbench) is the new tool for developing on IoT DevKit. If you are looking for FAQ for old experiences by using the installer, you can try the [old one]({{"/docs/legacy/faq" | absolute_url}}) .
-
 {: .notice--warning}
-
 
 
 ## General
