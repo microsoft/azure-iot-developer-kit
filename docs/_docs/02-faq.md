@@ -25,7 +25,6 @@ If you choose to participate, you can stop at any time as described [here](https
 
 
 **Notice:** [Azure IoT Workbench](https://aka.ms/iot-workbench) is the tool for developing on IoT DevKit. If you are looking for disable the data collection for old installation package, please follow the steps in [this document]({{"/docs/legacy/disable-data-collection" | absolute_url}}) .
-
 {: .notice--warning}
 
 
