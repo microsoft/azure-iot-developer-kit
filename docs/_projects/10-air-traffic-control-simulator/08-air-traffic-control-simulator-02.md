@@ -34,7 +34,7 @@ The following are required to complete this lab:
 - An [MXChip IoT DevKit](https://microsoft.github.io/azure-iot-developer-kit/)
 - A computer running [Windows 10 Anniversary Edition](https://www.microsoft.com/en-us/software-download/windows10) or higher
 - Finish the [Getting Started Guide]({{"/docs/get-started/" | absolute_url }}) to:
-    * Have your DevKit connected to Wi-Fi
+    * Have your IoT DevKit connected to Wi-Fi
     * Upgrade to the latest firmware
     * Prepare the development environment
 - An active Azure subscription. If you do not have one, you can register via one of the methods:

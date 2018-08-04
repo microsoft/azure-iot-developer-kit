@@ -5,7 +5,7 @@ excerpt: "Library for EEPROMInterface on AZ3166"
 last_modified_at: 2018-01-04T05:16:34-04:00
 ---
 
-EEPROMInterface class is used to store critical data like passwords, keys and other configurations need encrypted. Data is stored on the STSAFE secure chip on DevKit. Security feature is not enabled by default. To enable it, refer to `enableHostSecureChannel()`. And our EEPROM supports secure channel between our MCU and secure chip after function  called.
+EEPROMInterface class is used to store critical data like passwords, keys and other configurations need encrypted. Data is stored on the STSAFE secure chip on IoT DevKit. Security feature is not enabled by default. To enable it, refer to `enableHostSecureChannel()`. And our EEPROM supports secure channel between our MCU and secure chip after function  called.
 
 ## Assembly
 

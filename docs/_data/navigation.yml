@@ -33,10 +33,6 @@ docs:
         url: /docs/use-configuration-mode/
       - title: "Understand security chip"
         url: /docs/understand-security-chip
-      - title: "Customize device ID"
-        url: /docs/customize-device-id/
-      - title: "Disable data collection"
-        url: /docs/disable-data-collection/
   - title: API Reference
     children:
       - title: "Arduino"
