@@ -1,11 +1,11 @@
 ---
 title: "OTA Programing"
 permalink: /docs/apis/ota/
-excerpt: "The OTA module for AZ3166"
+excerpt: "The OTA programing module for AZ3166"
 last_modified_at: 2018-8-3T10:16:34-04:00
 ---
 
-The OTA (Over-the-Air) programing API provide the capbility of update the firmware from Azure cloud for IoT DevKit.
+The OTA (Over-the-Air) programing API provide the capability of update the firmware from Azure cloud for IoT DevKit.
 
 ## Assembly
 
@@ -27,15 +27,15 @@ OTAFirmwareUpdate.h
 int OTADownloadFirmware(const char *url, uint16_t *crc16Checksum, const char* ssl_ca_pem);
 ```
 
-> Download new firmware from given url.
+> Download new firmware from the given URL.
 > 
 > #### Parameters
 > 
 > | Type | Name | Description |
 > | :--- | :--- | :---------- |
-> | const char* | [in] url | The url to download firmware from. |
-> | uint16_t* | [out] crc16Checksum | Return the CRC-16 (xmodem) checksum of the downloaded firmware |
-> | const char* | [in] ssl_ca_pem | Cert of the site of the given url to ensure the connection is under a secure manner, default is NULL which means use cert of Microsoft Azure for TLS communiction. |
+> | const char* | [in] url | The URL to download firmware from. |
+> | uint16_t* | [out] crc16Checksum | Return the CRC-16 (XMODEM) checksum of the downloaded firmware |
+> | const char* | [in] ssl_ca_pem | Cert of the site of the given URL to ensure the connection is under a secure manner, default is NULL which means use cert of Microsoft Azure for TLS communication. |
 >
 > #### Return value
 >
@@ -47,7 +47,7 @@ int OTADownloadFirmware(const char *url, uint16_t *crc16Checksum, const char* ss
 int OTAApplyNewFirmware(int fwSize, uint16_t crc16Checksum);
 ```
 
-> Apply the new firmware, after reboot the Device will update to the new version.
+> Apply the new firmware, after reboot the device will update to the new version.
 > 
 > #### Parameters
 > 
