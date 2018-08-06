@@ -1,6 +1,6 @@
 ---
-title: "[Obsoleted] Manual installation"
-permalink: /docs/legacy/installation/
+title: "Manual installation"
+permalink: /docs/installation/
 excerpt: "[] Instructions for manually install tools and packages."
 variable:
   - platform: windows
@@ -12,10 +12,12 @@ variable:
 last_modified_at: 2018-8-4
 ---
 
-**Notice:** We strongly recommend you to use [Azure IoT Workbench](https://aka.ms/iot-workbench) for developing on IoT DevKit.
+**Notice:** This article is only for the old experiences by using the installer, and will be obsoleted soon.
+we strongly recommend you to use [Azure IoT Workbench](https://aka.ms/iot-workbench) which has much better experiences on both installation and development for developing on IoT DevKit.
+You can follow this [tutorial]({{"/docs/get-started" | absolute_url}}) to install [Azure IoT Workbench](https://aka.ms/iot-workbench) and start up the new journey with IoT DevKit. 
 {: .notice--warning}
 
-We suggest you use the [installation package]({{"/docs/get-started/#a-download-latest-package" | absolute_url}}) to install everything automatically. If you have problems on using the one-click install experience, follow these  steps to manually install tools and packages for IoT DevKit development. 
+If you have problems on using the one-click install experience, follow these  steps to manually install tools and packages for IoT DevKit development. 
 
 {% include switch.html content = page.variable %}
 
@@ -135,7 +137,7 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
   mv [.zip extracted folder] ~/azure-board-cli
   cd ~/azure-board-cli
   ```
-  
+
   b. Install npm packages:
   ```
   npm install
@@ -146,13 +148,13 @@ Download and install [Visual Studio Code for macOS](https://code.visualstudio.co
 You can install Azure Marketplace extensions directly in Visual Studio Code.
 
 1. Select the extensions icon in the left pane, search for **Arduino**, and then select **Install**:
-  ![installation-extensions]({{"/assets/images/installation-extensions-mac.png" | absolute_url}})
+    ![installation-extensions]({{"/assets/images/installation-extensions-mac.png" | absolute_url}})
 
 2. Open **Preference > Settings**, add a line within the **USER SETTINGS** pane and save:
   ```json
   "arduino.path": "/Applications"
   ```
-  
+
   **Note:** Make sure the Arduino path is set the right location you have installed your Arduino IDE.
   {: .notice}
 
