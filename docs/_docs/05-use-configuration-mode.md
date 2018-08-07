@@ -1,7 +1,7 @@
 ---
 title: "Use configuration mode"
 permalink: /docs/use-configuration-mode/
-excerpt: "Get into DevKit Configuration Mode to configure your device."
+excerpt: "Get into IoT DevKit Configuration Mode to configure your device."
 variable:
   - platform: windows
     name: Windows
@@ -12,11 +12,11 @@ last_modified_at: 2018-01-08
 
 {% include toc icon="columns" %}
 
-DevKit has the configuration model that you can configure settings like WiFi, IoT Hub connection string and security feature for it.
+IoT DevKit has the configuration model that you can configure settings like WiFi, IoT Hub connection string and security feature for it.
 
 ## Before you begin
 
-* Connect DevKit to the computer.
+* Connect IoT DevKit to the computer.
 * Download SSH and Telnet client like [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) for Windows.
 
 {% include switch.html content = page.variable %}
@@ -47,14 +47,14 @@ DevKit has the configuration model that you can configure settings like WiFi, Io
 
 2. Type `terminal` and select **Terminal** app.
 
-3. List DevKit device.
+3. List IoT DevKit device.
 	```bash
 	ls /dev/cu.usbmodem*
 	```
 
 4. In the list of connected devices, the device name is like **/dev/cu.usbmodem1433**
 
-5. Connect to the DevKit using the Terminal screen utility.
+5. Connect to the IoT DevKit using the Terminal screen utility.
 	```bash
 	screen /dev/cu.usbmodemXXXX 115200 –L
 	```
@@ -70,7 +70,7 @@ DevKit has the configuration model that you can configure settings like WiFi, Io
 
 ## Commands
 
-Commands for the DevKit Configuration Mode.
+Commands for the IoT DevKit Configuration Mode.
 
 ### help
 

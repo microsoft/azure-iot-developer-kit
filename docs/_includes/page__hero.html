@@ -79,7 +79,7 @@
 
         {% if page.header.extra_logo %}
           {% for extra in page.header.extra_logo %}
-            <a class="page__extra-logo" href="{{ extra.url }}" target="_blank" style="background: url({{ extra.image_path | absolute_url }});"></a>
+            <a class="page__extra-logo" href="{{ extra.url }}" target="_blank" style="background: url({{ extra.image_path | absolute_url }});"><span class="screen-reader-text">Azure Certified for IoT device catalog</span></a>
           {% endfor %}
         {% endif %}
       

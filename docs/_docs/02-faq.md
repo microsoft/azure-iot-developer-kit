@@ -7,9 +7,28 @@ last_modified_at: 2017-05-05T10:16:34-04:00
 
 {% include toc icon="columns" %}
 
+
+
+**Notice:** [Azure IoT Workbench](https://aka.ms/iot-workbench) is the new tool for developing on IoT DevKit. If you are looking for FAQ for old experiences by using the installer, you can try the [old one]({{"/docs/legacy/faq" | absolute_url}}) .
+{: .notice--warning}
+
+
 ## General
 
-### Is the DevKit Microsoft hardware?
+### GDPR and IoT DevKit
+
+Microsoft collects data to operate effectively and provide you the best experiences. 
+Participation is voluntary and when you choose to participate, your device automatically sends data to Microsoft about how you use the IoT DevKit.
+
+If you choose to participate, you can stop at any time as described [here](https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-telemetry-reporting).
+
+
+
+>  If you are looking for disable the data collection for old installation package, please follow the steps in [this document]({{"/docs/legacy/disable-data-collection" | absolute_url}}) .
+
+
+
+### Is the IoT DevKit Microsoft hardware?
 
 No. The hardware manufacturer is [MXChip](http://www.mxchip.com), an established player for IoT hardware. Through a partnership between MXChip and Microsoft, we rapidly iterated on the design and engineering of an Arduino compatible board with rich pre-installed sensors. Microsoft's goal is to boost productivity for developers creating and prototyping IoT applications with awesome Visual Studio Code tooling that leverages the power of Microsoft Azure.
 
@@ -29,40 +48,24 @@ You can purchase the kit from our hardware partner's product page: [https://aka.
 
 ## Installation
 
-### Command window seems stuck and there is no progress update for a while.
+### Failed to install Arduino Package for IoT DevKit
 
-This could be due to putting the Windows command window in "Selection" mode. To verify, check the command window title:
+Sometimes, whatever in Arduino IDE or VS Code, people get failed to install the MXChip IoT DevKit package and have bellowing error:
 
-![Window select mode]({{"/assets/images/faq/window-select.png" | absolute_url }})
+![Smartscreen]({{"/assets/images/faq/crc.png" | absolute_url }})
 
-If you see **select** on the title, this means you are in Selection mode. It prevents refresh of the output, that is why you cannot see any progress.
+This might be a cache issue both on local Arduino cache and remote CDN cache.
+Please clean the local cache first:
+1. Uninstall the IoT DevKit package, whatever in Arduino IDE or VS Code.
 
-To resolve, press any key within the command window area and you see **select** disappear in the title.
+2. Manually remove the cache folder:
 
-### Homebrew permission error on macOS.
+   - For Windows, remove *%localappdata%/Arduino15/staging/packages*
+   - For macOS, remove *~/Library/Arduino15/staging*
 
-When you run `install.sh` to install development environment on macOS. You may get a Homebrew permission error:
+2. Then re-install the package.
 
-![Homebrew permission error]({{"/assets/images/faq/brew-permission-error.png" | absolute_url }})
-
-To resolve, follow the instruction of Homebrew by running:
-
-```bash
-brew doctor
-```
-
-![Homebrew doctor]({{"/assets/images/faq/brew-doctor.png" | absolute_url }})
-
-### Inconsistency between node versions of npm and Yarn.
-
-When you run `install.sh` to install development environment on macOS, you may get a node incompatible error:
-
-```
-The engine "node" is incompatible with this module. Expected version ">= 8".
-Found incompatible module
-```
-
-To resolve, please upgrade node to the latest version.
+If it's still not work please contact [us](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"} for support.
 
 ### Windows Defender SmartScreen prevented an unrecognized app error.
 
@@ -82,7 +85,7 @@ To resolve, try to use Wi-Fi with normal WPA/WPA2 authentication.
 
 ### Cannot connect to 5 GHz Wi-Fi.
 
-Currently, DevKit only can connect to 2.4 GHz Wi-Fi, 5 GHz is not supported due to hardware restrictions.
+Currently, IoT DevKit only can connect to 2.4 GHz Wi-Fi, 5 GHz is not supported due to hardware restrictions.
 
 ## Cloud Provisioning
 
@@ -100,14 +103,6 @@ To resolve the issue, please clear the browser's cache and cookies.
 
 For more details please check [I can't sign in to manage my Azure subscription](https://docs.microsoft.com/en-us/azure/billing/billing-cannot-login-subscription).
 
-### Creating new Azure IoT Hub fails.
-
-You may encounter the error message as the screen below:
-
-![Only one IoT Hub]({{"/assets/images/faq/iothub.png" | absolute_url }})
-
-This is because Azure IoT Hub only allows [one free hub per Azure subscription](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal). In this case, you may select the existing IoT Hub instead of trying to create a new one.
-
 ## Development
 
 ### Visual Studio Code cannot find Arduino IDE.
@@ -115,19 +110,6 @@ This is because Azure IoT Hub only allows [one free hub per Azure subscription](
 Occasionally, when you launch Visual Studio Code, you are prompted with an error message that it cannot find the Arduino IDE or related board package.
 
 To resolve, close Visual Studio Code, then launches the actual Arduino IDE once. Subsequently, when you open Visual Studio Code it should correctly locate the Arduino IDE path.
-
-### Get "Error: AZ3166: Unknown package" when using `task device-upload`.
-
-This is a known issue caused by the platform index of the board AZ3166 is not refreshed.
-
-To solve this problem, we need to refresh the platform index: 
-
-1. Open Arduino IDE, find **Tools > Board: 'local board name' > Boards Manager...**.
-  ![Open Arduino Board Manager]({{"/assets/images/faq/unknown-package.png" | absolute_url }})
-
-2. Wait until all platforms index is refreshed and then close Arduino IDE.
-
-3. Re-open VS Code to run `task device-upload` again.
 
 ### Additional warnings during compilation.
 
@@ -137,7 +119,7 @@ It is caused by the incorrect warning handling between Visual Studio Code Arduin
 
 ### Compilation error for Azure Function.
 
-When the mini solution of Shake-Shake and DevKit Translator do not work, in Azure portal, you got the following error for the Azure Function you deployed:
+When the mini solution of Shake-Shake and IoT DevKit Translator do not work, in Azure portal, you got the following error for the Azure Function you deployed:
 
 ```
 2017-11-15T03:24:23.426 Function compilation error
@@ -152,19 +134,12 @@ Here is the workaround:
 2. Add a new Application setting named `WEBSITE_USE_PLACEHOLDER` with value 0.
 3. Save and Restart the Function App.
 
-### Get "serialport.node" error when using `task device-upload`
-
-If the Node.js installed on your machine is not a LTS one, you might get below error when using the `task device-upload`:
-![Node.js not LTS]({{"/assets/images/faq/node-lts.png" | absolute_url }})
-
-To resolve, please uninstall the existing Node.js and then re-install [the package](https://microsoft.github.io/azure-iot-developer-kit/docs/get-started/#step-5-prepare-the-development-environment).
-
 ### Get "Error Presented: #include errors detected" when opening a project
 
 The error message is **Error Presented: #include errors detected. Please update your includePath.**
 
 This is an issue coming from the [Microsoft C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
-Switch the IntelliSense engine to "**Tag Parser**" can fix this issue:
+Switch the IntelliSense engine to "**Tag Parser**" can workaround this issue:
 
 * Press F1 and key in 'settings' and select the `Preference: Open User Settings`
 
@@ -183,35 +158,6 @@ Switch the IntelliSense engine to "**Tag Parser**" can fix this issue:
  ![vsc-intellisense-issue-4]({{"/assets/images/faq/vsc-intellisense-4.png" | absolute_url }})
 
 You can get more detail from [C/C++ for VS Code](https://code.visualstudio.com/docs/languages/cpp). 
-
-### Customize device ID
-
-The default device ID in IoT Hub for DevKit is AZ3166, you can change it if you need in your own scenario.
-
-To customize device ID, open `.bin/config.json` in the mini-solution project, and add `device` field. For example:
-
-```json
-{
-  "sketch": "../GetStarted.ino",
-  "config": "deviceConnectionString",
-  "provision_iot_hub": true,
-  "provision_azure_function": false,
-  "tasks": {
-    "provision": ["subscription", "iothub", "armtemplatedeployment", "device"],
-    "deploy": []
-  },
-  "device": "CUSTOMIZED_DEVICE_ID"
-}
-```
-
-Notice: The device ID is hardcoded now in the project catalog samples. We will improve the development experience to resolve this issue. However, if you need to change the default **AZ3166** to other, here's the list of files you need to modify for each sample:
-
-* DevKitTranslator - [azurefunction/devkit-translator/run.csx](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/DevKitTranslator/azurefunction/devkit-translator/run.csx#L42)
-* GetStarted - [config.h](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/GetStarted/config.h#L9)
-* RemoteMonitoring - [RemoteMonitoring.ino](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/RemoteMonitoring/RemoteMonitoring.ino#L23)
-* ShakeShake - [azureFunction/shakeshake-cs/run.csx](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/ShakeShake/azureFunction/shakeshake-cs/run.csx#L91) & [azureFunction/shakeshake-node/index.js](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/AzureIoT/examples/ShakeShake/azureFunction/shakeshake-node/index.js#L29)
-* DevKitDPS - [config.h](https://github.com/DevKitExamples/DevKitDPS/blob/master/config.h#L9)
-* DevKitState - [azureFunction/devkit-state/run.csx](https://github.com/DevKitExamples/DevKitState/blob/master/azureFunction/devkit-state/run.csx#L60) & [web/js/main.js](https://github.com/DevKitExamples/DevKitState/blob/master/web/js/main.js#L7)
 
 ### Arduino upload return Error: STLinkMethod: Invalid option for "upload_method" option for board "MXCHIP_AZ3166" 
 

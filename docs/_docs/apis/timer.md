@@ -1,6 +1,6 @@
 ---
 title: "Timer"
-permalink: /docs/apis/Timer/
+permalink: /docs/apis/timer/
 excerpt: "Library for Timer on AZ3166"
 last_modified_at: 2018-01-09T05:16:34-04:00
 ---

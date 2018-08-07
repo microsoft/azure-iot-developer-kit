@@ -8,7 +8,7 @@ main:
     url: /docs/projects/
   - title: "Blog"
     url: https://blogs.msdn.microsoft.com/iotdev/
-  - title: "v1.4.0"
+  - title: "v1.4.1"
     url: /versions/
     class: "masthead-circle"
 
@@ -25,22 +25,64 @@ docs:
     url: /docs/projects/
   - title: How-to Guides
     children:
-      - title: "Manual installation"
-        url: /docs/installation/
       - title: "Firmware upgrading"
         url: /docs/firmware-upgrading/
       - title: "Use configure mode"
         url: /docs/use-configuration-mode/
       - title: "Understand security chip"
         url: /docs/understand-security-chip
-      - title: "Customize device ID"
-        url: /docs/customize-device-id/
-      - title: "Disable data collection"
-        url: /docs/disable-data-collection/
+      - title: "Manual installation"
+        url: /docs/installation/
   - title: API Reference
     children:
       - title: "Arduino"
         url: /docs/apis/arduino-language-reference/
+      - title: "AudioV2"
+        url: /docs/apis/audio-v2/
+      - title: "Display"
+        url: /docs/apis/display/
+      - title: "EEPROMInterface"
+        url: /docs/apis/eeprom-interface/
+      - title: "FileSystem"
+        url: /docs/apis/file-system/
+      - title: "HTTP Client"
+        url: /docs/apis/http-client/
+      - title: "External Interrupts"
+        url: /docs/apis/external-interrupts/
+      - title: "IrDA"
+        url: /docs/apis/irda/
+      - title: "LED"
+        url: /docs/apis/led/
+      - title: "MemoryPool"
+        url: /docs/apis/memory-pool/
+      - title: "Memory Status"
+        url: /docs/apis/memory-status/
+      - title: "Mutex"
+        url: /docs/apis/mutex/
+      - title: "OTA Programing"
+        url: /docs/apis/ota/
+      - title: "Queue"
+        url: /docs/apis/queue/
+      - title: "Semaphore"
+        url: /docs/apis/semaphore/
+      - title: "Sensor: Humidity & Temperature (HTS221)"
+        url: /docs/apis/hts221/
+      - title: "Sensor: Magnetic (LIS2MDL)"
+        url: /docs/apis/lis2mdl/
+      - title: "Sensor: Pressure  (LPS22HB)"
+        url: /docs/apis/lps22hb/
+      - title: "Sensor: Accelerometer & Gyroscope (LSM6DSL)"
+        url: /docs/apis/lsm6dsl/
+      - title: "System Function"
+        url: /docs/apis/system-function/
+      - title: "Thread"
+        url: /docs/apis/thread/
+      - title: "Timer"
+        url: /docs/apis/timer/
+      - title: "Watchdog Timer"
+        url: /docs/apis/watchdog-timer/
+      - title: "WebSocket Client"
+        url: /docs/apis/websocket-client/
       - title: "WiFi"
         url: /docs/apis/wifi/
       - title: "WiFiClient"
@@ -49,49 +91,3 @@ docs:
         url: /docs/apis/wifi-server/
       - title: "WiFiUDP"
         url: /docs/apis/wifi-udp/
-      - title: "Display"
-        url: /docs/apis/display/
-      - title: "LED"
-        url: /docs/apis/led/
-      - title: "AudioV2"
-        url: /docs/apis/audioV2/
-      - title: "HTS221"
-        url: /docs/apis/hts221/
-      - title: "LSM6DSL"
-        url: /docs/apis/lsm6dsl/
-      - title: "LIS2MDL"
-        url: /docs/apis/lis2mdl/
-      - title: "LPS22HB"
-        url: /docs/apis/lps22hb/
-      - title: "IrDA"
-        url: /docs/apis/irda/
-      - title: "EEPROMInterface"
-        url: /docs/apis/EEPROMInterface/
-      - title: "MemoryPool"
-        url: /docs/apis/MemoryPool/
-      - title: "Queue"
-        url: /docs/apis/Queue/
-      - title: "Thread"
-        url: /docs/apis/Thread/
-      - title: "Mutex"
-        url: /docs/apis/Mutex/
-      - title: "Semaphore"
-        url: /docs/apis/Semaphore/
-      - title: "Timer"
-        url: /docs/apis/Timer/
-      - title: "FileSystem"
-        url: /docs/apis/FileSystem/
-      - title: "Audio-Retired"
-        url: /docs/apis/audio-retired/
-      - title: "Memory Status"
-        url: /docs/apis/memory-status/
-      - title: "WebSocket Client"
-        url: /docs/apis/websocket-client/
-      - title: "Watchdog Timer"
-        url: /docs/apis/watchdog-timer/
-      - title: "External Interrupts"
-        url: /docs/apis/external-interrupts/
-      - title: "System Function"
-        url: /docs/apis/system-function/
-      - title: "HTTP Client"
-        url: /docs/apis/http-client/

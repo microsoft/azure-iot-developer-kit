@@ -8,5 +8,3 @@ header:
 difficulty: EASY
 last_modified_at: 2017-12-12
 ---
-
-This article describes how, as a device developer, to connect a MXChip IoT DevKit (DevKit) device to your Microsoft IoT Central application.

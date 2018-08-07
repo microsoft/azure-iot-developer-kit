@@ -1,6 +1,6 @@
 ---
 title: "Semaphore"
-permalink: /docs/apis/Semaphore/
+permalink: /docs/apis/semaphore/
 excerpt: "Library for Semaphore on AZ3166"
 last_modified_at: 2018-01-09T05:16:34-04:00
 ---

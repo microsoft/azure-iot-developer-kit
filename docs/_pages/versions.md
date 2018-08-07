@@ -7,6 +7,30 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.4.1 (August 6, 2018)
+
+### Release Summary
+
+* SDK
+
+  * Add [OTA Programming API]({{"docs/apis/ota" | absolute_url }}).
+
+  * UARTClass class support extra serial port (PB_6 & PB_7).
+
+    ![UART1]({{"/assets/images/release/141_uart.png" | absolute_url }})
+
+  * [Audio class]({{"docs/apis/audio-v2" | absolute_url }}) support automatic level control on microphone.
+
+* Mini Solution
+
+  * Add IoT DevKit firmware OTA update mini solution.
+
+    **Notice:**  Please make sure you have upgrade the firmware before running the OTA mini solution.
+    {: .notice--warning}
+
+* Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://github.com/Adamantinu) and [Chris Lovett](https://github.com/lovettchris), thank you for your contributions and feedbacks.
+
+
 ## Version 1.4.0 (July 19, 2018)
 
 ### Release Summary
@@ -19,13 +43,13 @@ last_modified_at: 2018-01-09
 * SDK
   * Reduce the size of file system which builds upon the 2MB on-board SPI flash.
     
-    **Notice:** Because it need more on-board SPI flash space to store the new firmware for firmware updating, we reduced the space of [file system]({{"docs/apis/FileSystem" | absolute_url }}). So if you have files on IoT DevKit, please make sure they have been well backed up before upgrade to this new SDK.
+    **Notice:** Because it need more on-board SPI flash space to store the new firmware for firmware updating, we reduced the space of [file system]({{"docs/apis/file-system" | absolute_url }}). So if you have files on IoT DevKit, please make sure they have been well backed up before upgrade to this new SDK.
     {: .notice--warning}
     
-  * Add [setVolume API]({{"docs/apis/audioV2" | absolute_url }}) to support change the audio volume.
+  * Add [setVolume API]({{"docs/apis/audio-v2" | absolute_url }}) to support change the audio volume.
 
 * Mini Solution
-  * Update the DevKit Translator to use the new [Audio APIs]({{"docs/apis/audioV2" | absolute_url }}).
+  * Update the DevKit Translator to use the new [Audio APIs]({{"docs/apis/audio-v2" | absolute_url }}).
 
 * Development Tools
   * Deprecate existing one-click installation package.
@@ -68,7 +92,7 @@ last_modified_at: 2018-01-09
   * Add [Watchdog Timer API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/watchdog-timer/).
   * Add [External Interrupts API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/external-interrupts/).
   * Fix MQTT client reconnect issue.
-  * Filter out DevKit hotspot in the WiFi configuration page.
+  * Filter out IoT DevKit hotspot in the WiFi configuration page.
   * Fix bugs.
 
 * Mini Solution
@@ -154,7 +178,7 @@ During the past 2 weeks, we got chance to revisit our code and did some minor ch
   * Fix memory leak issue in IoT Hub MQTT client when there was a long drop on Wi-Fi.
 
 * Development Tools
-  * Improve the stability for DevKit Windows/Mac installation.
+  * Improve the stability for IoT DevKit Windows/Mac installation.
   * Support customized IoT Hub Device ID in configuring device connection string.
 
 ### Downloads
@@ -171,11 +195,11 @@ Happy new year 2018! Let us talk about the fundamentals of IoT this time: the se
 ### Release Summary
 
 * Firmware
-  * Upgrade the DevKit firmware to enable DPS feature.
+  * Upgrade the IoT DevKit firmware to enable DPS feature.
   * New tool `set_dps_uds` is added in the configuration mode, which help to save the **Unique Device Secret (UDS)** into the STSAFE chip, for more detail please check [this topic]({{"/docs/projects/dps/#save-unique-device-secret-on-stsafe-security-chip" | absolute_url }}).
 
 * SDK
-  * Open source [DevKit SDK](https://github.com/Microsoft/devkit-sdk), you are welcome to contribute :)
+  * Open source [IoT DevKit SDK](https://github.com/Microsoft/devkit-sdk), you are welcome to contribute :)
   * Upgrade the Azure IoT C SDK to [1.1.28]( https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-11-17).
   * Archive the Azure IoT C SDK in the Arduino board package, greatly reduce the compile time.
   * Enable the secure channel, protecting confidentiality and integrity of data with STSAFE chip on IoT DevKit.
@@ -235,7 +259,7 @@ The new Audio library gives the ability to continuous recording voice through th
 
 ## Version 1.2.0 (October 24, 2017)
 
-No more manual steps to prepare your DevKit development environment on macOS! The time saving one-click installation now support macOS as well. And yes, we love bash.
+No more manual steps to prepare your IoT DevKit development environment on macOS! The time saving one-click installation now support macOS as well. And yes, we love bash.
 
 ### Release Summary
 
@@ -247,7 +271,7 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
   * Bug fix: Enable HttpClient response callback when handling large response body.
 
 * Project Catalog
-  * New mini solution: DeviceStates. Use Azure IoT Hub device twins to monitor DevKit state and control the user LED.
+  * New mini solution: DeviceStates. Use Azure IoT Hub device twins to monitor IoT DevKit state and control the user LED.
   * Fix gyroscope values and added acceleration sensor in SensorStatus sample.
   * Use MQTT Client wrapper for GetStarted, RemoteMonitoring and ShakeShake mini solutions.
   * Improve telemetry logics in mini solutions on macOS.
@@ -287,12 +311,12 @@ No more manual steps to prepare your DevKit development environment on macOS! Th
 
 ## Version 1.1.0 (September 4, 2017)
 
-DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure-mcus/stsafe-a100.html){:target="_blank"}, the security chip that provides secure authentication and data management for IoT solutions. Since it's enabled on bootloader level, a [firmware upgrade]({{"/docs/firmware-upgrading" | absolute_url}}) is mandatory to make the DevKit work properly.
+IoT DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure-mcus/stsafe-a100.html){:target="_blank"}, the security chip that provides secure authentication and data management for IoT solutions. Since it's enabled on bootloader level, a [firmware upgrade]({{"/docs/firmware-upgrading" | absolute_url}}) is mandatory to make the IoT DevKit work properly.
 
 ### Release Summary
 
 * Firmware
-  * Upgrade the DevKit firmware to enable STSAFE.
+  * Upgrade the IoT DevKit firmware to enable STSAFE.
 
 * SDK
   * Bug fix: Under bad network environment, the Device SDK in mbed OS occasionally crashes.
@@ -330,7 +354,7 @@ Summer does not mean slow down. We further enriched our project catalog and tune
   * Add support for audio playback API.
 
 * Project Catalog
-  * Add 'DevKit Translator' example for DevKit to understand more languages :robot:.
+  * Add 'DevKit Translator' example for IoT DevKit to understand more languages :robot:.
   * Add 'Door Monitor' example uses third party email service to send notifications.
   * Replace manual steps with VS Code tasks for 'Connect to Azure IoT Hub' example.
   * Improve Azure Functions stability and performance used by examples.
@@ -399,7 +423,7 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
 
 * Project Catalog
   * Add 'Connect to Azure IoT Hub' example and documentation that align with other [Azure IoT Hub get started tutorials](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-get-started){:target="_blank"}.
-  * Add 'Remote Monitoring' example and documentation that make DevKit connect to [Azure IoT Suite](https://www.azureiotsuite.com){:target="_blank"}.
+  * Add 'Remote Monitoring' example and documentation that make IoT DevKit connect to [Azure IoT Suite](https://www.azureiotsuite.com){:target="_blank"}.
   * Add 'MQTT Client' example and documentation that send MQTT messages to public free MQTT broker.
   * Shake, Shake: Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.
   * Shake, Shake: Add delay and retry logic when not receiving any message due to function delay.
@@ -412,7 +436,7 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
 
 ## Version 0.8.1 (May 21, 2017)
 
-Some bug fixes before DevKit debut on [//Build](https://build.microsoft.com/){:target="_blank"} and [Maker Faire Bay Area](http://makerfaire.com/){:target="_blank"}.
+Some bug fixes before IoT DevKit debut on [//Build](https://build.microsoft.com/){:target="_blank"} and [Maker Faire Bay Area](http://makerfaire.com/){:target="_blank"}.
 
 ## Version 0.8.0 (May 5, 2017)
 
