@@ -31,6 +31,14 @@ last_modified_at: 2018-01-09
 * Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://github.com/Adamantinu) and [Chris Lovett](https://github.com/lovettchris), thank you for your contributions and feedbacks.
 
 
+
+### Downloads
+
+- [Firmware 1.4.1](https://azureboard2.azureedge.net/prod/devkit-firmware-1.4.1.65.bin).
+
+
+
+
 ## Version 1.4.0 (July 19, 2018)
 
 ### Release Summary
