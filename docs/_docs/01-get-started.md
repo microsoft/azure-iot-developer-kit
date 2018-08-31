@@ -14,8 +14,9 @@ last_modified_at: 2018-03-12
 {: .notice--warning}
 
 For first-time users of the MXChip IoT DevKit (a.k.a. DevKit), follow these quick steps to:
-- Prepare your development environment.
-- Send temperature and humidity data from built-in IoT DevKit sensors to the Azure IoT Hub.
+
+* Prepare your development environment.
+* Send temperature and humidity data from built-in IoT DevKit sensors to the Azure IoT Hub.
 
 If you have already done this, you can try more samples from the [Projects Catalog]({{"/docs/projects/" | absolute_url }}) or build your own IoT application.
 
@@ -75,9 +76,9 @@ Azure IoT Workbench provides an integrated experience to develop IoT solutions. 
 Follow these steps to prepare the development environment for IoT DevKit:
 
 1. Download and install [Arduino IDE](https://www.arduino.cc/en/Main/Software). It provides the necessary toolchain for compiling and uploading Arduino code.
-  * Windows: Use Windows Installer version
-  * macOS: Drag and drop the Arduino into `/Applications`
-  * Ubuntu: Unzip it into `$HOME/Downloads/arduino-1.8.5`
+  * **Windows**: Use Windows Installer version
+  * **macOS**: Drag and drop the Arduino into `/Applications`
+  * **Ubuntu**: Unzip it into `$HOME/Downloads/arduino-1.8.5`
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/), a cross platform source code editor with powerful developer tooling, like IntelliSense code completion and debugging.
 
@@ -86,17 +87,17 @@ Follow these steps to prepare the development environment for IoT DevKit:
   Together with the IoT Workbench, other dependent extensions will be installed.
 
 1. Open **File > Preference > Settings** and add following lines to configure Arduino.
-  * Windows:
+  * **Windows**:
     ```json
     "arduino.path": "C:\\Program Files (x86)\\Arduino",
     "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
     ```
-  * macOS:
+  * **macOS**:
     ```json
     "arduino.path": "/Applications",
     "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
     ```
-  * Ubuntu:
+  * **Ubuntu**:
     ```json
     "arduino.path": "/home/{username}/Downloads/arduino-1.8.5",
     "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
@@ -145,6 +146,9 @@ Now you are all set with preparing and configuring your development environment.
 
 1. In the pop-up page, scroll down and click **Open Sample** on Get Started tile. Also selects the default path download the sample.
   ![Open sample]({{"/assets/images/getting-started/open-sample.png" | absolute_url }})
+
+1. If you don't have Arduino extension in VS Code installed, click the **Install** in the notification pane.
+  ![Install Arduino Extension]({{"/assets/images/getting-started/install-arduino-ext.png" | absolute_url }})
 
 1. In the new opened project window, click `F1` to open the command palette, type and select **IoT Workbench: Cloud**, then select **Azure Provision**.
 
