@@ -10,15 +10,16 @@ variable:
 last_modified_at: 2018-03-12
 ---
 
-**Notice:** [Azure IoT Workbench](https://aka.ms/iot-workbench) is the new tool for developing on IoT DevKit. If you are looking for old experiences by using the installer, you can find it [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started).
-{: .notice--warning}
-
 For first-time users of the MXChip IoT DevKit (a.k.a. DevKit), follow these quick steps to:
 
 * Prepare your development environment.
 * Send temperature and humidity data from built-in IoT DevKit sensors to the Azure IoT Hub.
 
 If you have already done this, you can try more samples from the [Projects Catalog]({{"/docs/projects/" | absolute_url }}) or build your own IoT application.
+
+
+**Note:** Azure IoT Workbench is the new tool for developing on IoT DevKit. If you are looking for old experiences by using the installer, you can find it [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started).
+{: .notice--info}
 
 {% include toc icon="columns" %}
 
@@ -56,20 +57,22 @@ IoT projects rely on internet connectivity. Use AP Mode on the IoT DevKit to con
   ![Reset button, button B, and SSID]({{"/assets/images/getting-started/wifi-ap.jpg" | absolute_url }})
 
 2. Use a Web browser on a different Wi-Fi enabled device (computer or mobile phone) to connect to the IoT DevKit SSID displayed in the previous step. If it asks for a password, leave it empty.
-  ![Network info and Connect button]({{"/assets/images/getting-started/connect-ssid.png" | absolute_url }})
+   ![Network info and Connect button]({{"/assets/images/getting-started/connect-ssid.png" | absolute_url }})
 
 3. Open **192.168.0.1** in the browser. Select the Wi-Fi network that you want the IoT DevKit to connect to, type the password for the Wi-Fi conection, and then click **Connect**.
-  ![Password box and Connect button]({{"/assets/images/getting-started/wifi-portal.png" | absolute_url }})
+   ![Password box and Connect button]({{"/assets/images/getting-started/wifi-portal.png" | absolute_url }})
 
 4. The IoT DevKit reboots in a few seconds. You then see the Wi-Fi name and assigned IP address on the screen of the IoT DevKit:
-  ![Wi-Fi name and IP address]({{"/assets/images/getting-started/wifi-ip.jpg" | absolute_url }})
+   
+   ![Wi-Fi name and IP address]({{"/assets/images/getting-started/wifi-ip.jpg" | absolute_url }})
+
 
 **Note:** After  asuccessful Wi-Fi connection, the currently-installed and latest available version of the IoT DevKit's firmware is displayed on the IoT DevKit screen. If the IoT DevKit is not running on the latest available version, follow the [firmware upgrading guide]({{"/docs/firmware-upgrading/" | absolute_url }}) to install the latest version.
 {: .notice--info}
 
 ## Install development environment
 
-We recommend [Azure IoT Workbench](https://aka.ms/iot-workbench) extension for Visual Studio Code to develop on the IoT DevKit.
+We recommend **Azure IoT Workbench** extension for Visual Studio Code to develop on the IoT DevKit.
 
 Azure IoT Workbench provides an integrated experience to develop IoT solutions. It helps both on device and cloud development using Azure IoT and other services. You can watch this [Channel9 video](https://channel9.msdn.com/Shows/Internet-of-Things-Show/IoT-Workbench-extension-for-VS-Code) to have an overview of what it does.
 
@@ -80,13 +83,13 @@ Follow these steps to prepare the development environment for IoT DevKit:
   * **macOS**: Drag and drop the Arduino into `/Applications`
   * **Ubuntu**: Unzip it into `$HOME/Downloads/arduino-1.8.5`
 
-1. Install [Visual Studio Code](https://code.visualstudio.com/), a cross platform source code editor with powerful developer tooling, like IntelliSense code completion and debugging.
+2. Install [Visual Studio Code](https://code.visualstudio.com/), a cross platform source code editor with powerful developer tooling, like IntelliSense code completion and debugging.
 
-1. Look for **Azure IoT Workbench** in the extension marketplace and install it.
+3. Look for **Azure IoT Workbench** in the extension marketplace and install it.
   ![Install IoT Workbench]({{"/assets/images/getting-started/install-workbench.png" | absolute_url }})
   Together with the IoT Workbench, other dependent extensions will be installed.
 
-1. Open **File > Preference > Settings** and add following lines to configure Arduino.
+4. Open **File > Preference > Settings** and add following lines to configure Arduino.
   * **Windows**:
     ```json
     "arduino.path": "C:\\Program Files (x86)\\Arduino",
@@ -103,7 +106,7 @@ Follow these steps to prepare the development environment for IoT DevKit:
     "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
     ```
 
-1. Click `F1` to open the command palette, type and select **Arduino: Board Manager**. Search for **AZ3166** and install the latest version.
+5. Click `F1` to open the command palette, type and select **Arduino: Board Manager**. Search for **AZ3166** and install the latest version.
   ![Install DevKit SDK]({{"/assets/images/getting-started/install-sdk.png" | absolute_url }})
   
 As a fallback, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to install the environment.
