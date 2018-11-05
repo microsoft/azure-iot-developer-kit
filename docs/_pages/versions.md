@@ -7,6 +7,35 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+
+## Version 1.5.1 (September 1, 2018)
+
+### Release Summary
+
+My apologies for haven't updated this page in a timely manner.
+
+As a minor version increase, we did some critical changes  as bellowing:
+
+* SDK
+
+  * Update the Azure IoT DPS SDK to 1.2.8 to support DPS group enrollment.
+  
+  * Fix the memory leak caused by GetHostNameFromConnectionString.
+  
+  * Make the SystemTickCounterRead thread  safety.
+  
+  * Fix the file system example.
+
+* Installation Package
+
+  * Retire the old installation package since the [Azure IoT Workbench](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench) is fully support IoT DevKit now. All download links have been removed from our site.
+
+Special thanks to [Oguz Bastemur](https://github.com/obastemur) and **Paul Batsii**, thank you for your contributions and feedbacks.
+
+### Downloads
+
+- [Firmware 1.5.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.5.1.68.bin).
+
 ## Version 1.4.1 (August 6, 2018)
 
 ### Release Summary
@@ -28,15 +57,12 @@ last_modified_at: 2018-01-09
     **Notice:**  Please make sure you have upgrade the firmware before running the OTA mini solution.
     {: .notice--warning}
 
-* Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://github.com/Adamantinu) and [Chris Lovett](https://github.com/lovettchris), thank you for your contributions and feedbacks.
-
+Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://github.com/Adamantinu) and [Chris Lovett](https://github.com/lovettchris), thank you for your contributions and feedbacks.
 
 
 ### Downloads
 
-- [Firmware 1.4.1](https://azureboard2.azureedge.net/prod/devkit-firmware-1.4.1.65.bin).
-
-
+- [Firmware 1.4.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.4.1.65.bin).
 
 
 ## Version 1.4.0 (July 19, 2018)
@@ -67,7 +93,7 @@ last_modified_at: 2018-01-09
 
 ### Downloads
 
-- [Firmware 1.4.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.4.0.60.bin).
+- [Firmware 1.4.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.4.0.60.bin).
 
 
 ## Version 1.3.7 (Jun 8, 2018)
@@ -87,9 +113,9 @@ last_modified_at: 2018-01-09
 
 ### Downloads
 
-- [Installation Package 1.3.7 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.7.56.zip).
-- [Installation Package 1.3.7 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.7.56.zip).
-- [Firmware 1.3.7](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.7.56.bin).
+- *Installation Package 1.3.7 for Windows (obsoleted)*.
+- *Installation Package 1.3.7 for macOS (obsoleted)*.
+- [Firmware 1.3.7](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.7.56.bin).
 
 
 ## Version 1.3.5 (April 28, 2018)
@@ -115,9 +141,9 @@ last_modified_at: 2018-01-09
 
 ### Downloads
 
-- [Installation Package 1.3.5 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.5.53.zip).
-- [Installation Package 1.3.5 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.5.53.zip).
-- [Firmware 1.3.5](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.5.53.bin).
+- *Installation Package 1.3.5 for Windows (obsoleted)*.
+- *Installation Package 1.3.5 for macOS (obsoleted)*.
+- [Firmware 1.3.5](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.5.53.bin).
 
 
 ## Version 1.3.4 (March 28, 2018)
@@ -128,9 +154,9 @@ last_modified_at: 2018-01-09
 
 ### Downloads
 
-- [Installation Package 1.3.4 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.4.50.zip).
-- [Installation Package 1.3.4 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.4.50.zip).
-- [Firmware 1.3.4](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.4.50.bin).
+- *Installation Package 1.3.4 for Windows (obsoleted)*.
+- *Installation Package 1.3.4 for macOS (obsoleted)*.
+- [Firmware 1.3.4](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.4.50.bin).
 
 
 ## Version 1.3.3 (March 20, 2018)
@@ -153,9 +179,9 @@ last_modified_at: 2018-01-09
 
 ### Downloads
 
-- [Installation Package 1.3.3 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.3.45.zip).
-- [Installation Package 1.3.3 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.3.45.zip).
-- [Firmware 1.3.3](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.3.45.bin).
+- *Installation Package 1.3.3 for Windows (obsoleted)*.
+- *Installation Package 1.3.3 for macOS (obsoleted)*.
+- [Firmware 1.3.3](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.3.45.bin).
 
 
 ## Version 1.3.2 (February 7, 2018)
@@ -171,9 +197,9 @@ last_modified_at: 2018-01-09
 
 ### Downloads
 
-- [Installation Package 1.3.2 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.2.44.zip).
-- [Installation Package 1.3.2 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.2.44.zip).
-- [Firmware 1.3.2](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.2.44.bin).
+- *Installation Package 1.3.2 for Windows (obsoleted)*.
+- *Installation Package 1.3.2 for macOS (obsoleted)*.
+- [Firmware 1.3.2](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.2.44.bin).
 
 
 ## Version 1.3.1 (January 23, 2018)
@@ -191,9 +217,9 @@ During the past 2 weeks, we got chance to revisit our code and did some minor ch
 
 ### Downloads
 
-- [Installation Package 1.3.1 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.1.42.zip).
-- [Installation Package 1.3.1 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.1.42.zip).
-- [Firmware 1.3.1](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.1.42.bin).
+- *Installation Package 1.3.1 for Windows (obsoleted)*.
+- *Installation Package 1.3.1 for macOS (obsoleted)*.
+- [Firmware 1.3.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.1.42.bin).
 
 
 ## Version 1.3.0 (January 9, 2018)
@@ -218,9 +244,9 @@ Happy new year 2018! Let us talk about the fundamentals of IoT this time: the se
 
 ### Downloads
 
-- [Installation Package 1.3.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.3.0.40.zip).
-- [Installation Package 1.3.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.3.0.40.zip).
-- [Firmware 1.3.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.3.0.40.bin).
+- *Installation Package 1.3.0 for Windows (obsoleted)*.
+- *Installation Package 1.3.0 for macOS (obsoleted)*.
+- [Firmware 1.3.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.0.40.bin).
 
 
 ## Version 1.2.2 (December 20, 2017)
@@ -236,9 +262,10 @@ We are focusing on the script refinement in this release.
 
 ### Downloads
 
-- [Installation Package 1.2.2 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.2.2.35.zip).
-- [Installation Package 1.2.2 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.2.2.35.zip).
-- [Firmware 1.2.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
+- *Installation Package 1.2.2 for Windows (obsoleted)*.
+- *Installation Package 1.2.2 for macOS (obsoleted)*.
+- [Firmware 1.2.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
+
 
 ## Version 1.2.1 (November 22, 2017)
 
@@ -261,9 +288,10 @@ The new Audio library gives the ability to continuous recording voice through th
 
 ### Downloads
 
-- [Installation Package 1.2.1 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.2.1.33.zip).
-- [Installation Package 1.2.1 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.2.1.33.zip).
-- [Firmware 1.2.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
+- *Installation Package 1.2.1 for Windows (obsoleted)*.
+- *Installation Package 1.2.1 for macOS (obsoleted)*.
+- [Firmware 1.2.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
+
 
 ## Version 1.2.0 (October 24, 2017)
 
@@ -293,9 +321,9 @@ No more manual steps to prepare your IoT DevKit development environment on macOS
 
 ### Downloads
 
-- [Installation Package 1.2.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_win_1.2.0.29.zip).
-- [Installation Package 1.2.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_install_mac_1.2.0.28.zip).
-- [Firmware 1.2.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
+- *Installation Package 1.2.0 for Windows (obsoleted)*.
+- *Installation Package 1.2.0 for macOS (obsoleted)*.
+- [Firmware 1.2.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
 
 **Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/firmware-upgrading" | absolute_url}}) first.
 {: .notice--warning}
@@ -309,9 +337,9 @@ No more manual steps to prepare your IoT DevKit development environment on macOS
 
 ### Downloads
 
-- [Installation Package 1.1.1 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_1.1.1.15.zip).
-- [Installation Package 1.1.1 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_tasks_mac_1.1.1.15.zip).
-- [Firmware 1.1.1](https://azureboard2.azureedge.net/prod/devkit-firmware-1.1.1.15.bin).
+- *Installation Package 1.1.1 for Windows (obsoleted)*.
+- *Installation Package 1.1.1 for macOS (obsoleted)*.
+- [Firmware 1.1.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.1.1.15.bin).
 
 **Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/firmware-upgrading" | absolute_url}}) first.
 {: .notice--warning}
@@ -342,9 +370,9 @@ IoT DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/se
 
 ### Downloads
 
-- [Installation Package 1.1.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_1.1.0.zip).
-- [Installation Package 1.1.0 for macOS](https://azureboard2.azureedge.net/prod/mac/devkit_tasks_mac_1.1.0.zip).
-- [Firmware 1.1.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.1.0.bin).
+- *Installation Package 1.1.0 for Windows (obsoleted)*.
+- *Installation Package 1.1.0 for macOS (obsoleted)*.
+- [Firmware 1.1.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.1.0.bin).
 
 **Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/firmware-upgrading" | absolute_url}}) first.
 {: .notice--warning}
@@ -374,8 +402,8 @@ Summer does not mean slow down. We further enriched our project catalog and tune
 
 ### Downloads
 
-- [Installation Package 1.0.2 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_1.0.2.zip).
-- [Firmware 1.0.2](https://azureboard2.azureedge.net/prod/devkit-firmware-1.0.2.bin).
+- *Installation Package 1.0.2 for Windows (obsoleted)*.
+- [Firmware 1.0.2](https://azureboard.azureedge.net/prod/devkit-firmware-1.0.2.bin).
 
 
 ## Version 1.0.1 (July 13, 2017)
@@ -400,8 +428,8 @@ The optimization continues. We are now supporting VS Code tasks on macOS as well
 
 ### Downloads
 
-- [Installation Package 1.0.1 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_1.0.1.zip).
-- [Firmware 1.0.1](https://azureboard2.azureedge.net/prod/devkit-firmware-1.0.1.bin).
+- *Installation Package 1.0.1 for Windows (obsoleted)*.
+- [Firmware 1.0.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.0.1.bin).
 
 
 ## Version 1.0.0 (June 26, 2017)
@@ -438,13 +466,14 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
 
 ### Downloads
 
-- [Installation Package 1.0.0 for Windows](https://azureboard2.azureedge.net/prod/windows/devkit_install_1.0.0.zip).
-- [Firmware 1.0.0](https://azureboard2.azureedge.net/prod/devkit-firmware-1.0.0.bin).
+- *Installation Package 1.0.0 for Windows (obsoleted)*.
+- [Firmware 1.0.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.0.0.bin).
 
 
 ## Version 0.8.1 (May 21, 2017)
 
 Some bug fixes before IoT DevKit debut on [//Build](https://build.microsoft.com/){:target="_blank"} and [Maker Faire Bay Area](http://makerfaire.com/){:target="_blank"}.
+
 
 ## Version 0.8.0 (May 5, 2017)
 
