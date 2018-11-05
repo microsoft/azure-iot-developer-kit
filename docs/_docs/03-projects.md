@@ -8,6 +8,12 @@ author_profile: false
 <h3>Official tutorials that guide you build and learn IoT empowered by Azure.</h3>
 
 
+
+**Notice:** [Azure IoT Workbench](https://aka.ms/iot-workbench) is the new tool for developing on IoT DevKit. If you are looking for old experience, you can still find it by clicking "**Previous version**".
+{: .notice--warning}
+
+
+
 <div class="grid__wrapper">
 
   {% assign projects = '' | split: '' %} {% comment %} Empty array {% endcomment %}
