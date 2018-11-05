@@ -17,17 +17,12 @@ My apologies for haven't updated this page in a timely manner.
 As a minor version increase, we did some critical changes  as bellowing:
 
 * SDK
-
   * Update the Azure IoT DPS SDK to 1.2.8 to support DPS group enrollment.
-  
   * Fix the memory leak caused by GetHostNameFromConnectionString.
-  
   * Make the SystemTickCounterRead thread  safety.
-  
   * Fix the file system example.
 
 * Installation Package
-
   * Retire the old installation package since the [Azure IoT Workbench](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench) is fully support IoT DevKit now. All download links have been removed from our site.
 
 Special thanks to [Oguz Bastemur](https://github.com/obastemur) and **Paul Batsii**, thank you for your contributions and feedbacks.
@@ -41,9 +36,7 @@ Special thanks to [Oguz Bastemur](https://github.com/obastemur) and **Paul Batsi
 ### Release Summary
 
 * SDK
-
   * Add [OTA Programming API]({{"docs/apis/ota" | absolute_url }}).
-
   * UARTClass class support extra serial port (PB_6 & PB_7).
 
     ![UART1]({{"/assets/images/release/141_uart.png" | absolute_url }})
@@ -51,7 +44,6 @@ Special thanks to [Oguz Bastemur](https://github.com/obastemur) and **Paul Batsi
   * [Audio class]({{"docs/apis/audio-v2" | absolute_url }}) support automatic level control on microphone.
 
 * Mini Solution
-
   * Add IoT DevKit firmware OTA update mini solution.
 
     **Notice:**  Please make sure you have upgrade the firmware before running the OTA mini solution.
