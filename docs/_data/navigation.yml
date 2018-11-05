@@ -31,8 +31,6 @@ docs:
         url: /docs/use-configuration-mode/
       - title: "Understand security chip"
         url: /docs/understand-security-chip
-      - title: "Manual installation"
-        url: /docs/installation/
   - title: API Reference
     children:
       - title: "Arduino"
