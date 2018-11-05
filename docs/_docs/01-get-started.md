@@ -1,476 +1,210 @@
 ---
-permalink: /versions/
-title: "Versions and Release Notes"
-excerpt: "Versions and release notes"
-last_modified_at: 2018-01-09
+title: "Get started"
+permalink: /docs/get-started/
+excerpt: "How to quickly install and set up your development environment to use the IoT DevKit."
+variable:
+  - platform: windows
+    name: Windows
+  - platform: macos
+    name: macOS
+last_modified_at: 2018-03-12
 ---
+
+For first-time users of the MXChip IoT DevKit (a.k.a. DevKit), follow these quick steps to:
+
+* Prepare your development environment.
+* Send temperature and humidity data from built-in IoT DevKit sensors to the Azure IoT Hub.
+
+If you have already done this, you can try more samples from the [Projects Catalog]({{"/docs/projects/" | absolute_url }}) or build your own IoT application.
 
 {% include toc icon="columns" %}
 
+## What you learn
 
-## Version 1.5.1 (September 1, 2018)
+* How to connect the IoT DevKit to a wireless access point.
+* How to install the development environment.
+* How to create an IoT Hub and register a device for the IoT DevKit.
+* How to collect sensor data by running a sample application on the IoT DevKit.
+* How to send the IoT DevKit sensor data to your IoT hub.
 
-### Release Summary
+## What you need
 
-My apologies for haven't updated this page in a timely manner.
+* An MXChip IoT DevKit. [Get it now](https://aka.ms/iot-devkit-purchase){:target="_blank"}.
+* A computer running Windows 10 or macOS 10.10+.
+* An active Azure subscription. [Activate a free 30-day trial Microsoft Azure account](https://azure.microsoft.com/en-us/free/).
 
-As a minor version increase, we did some critical changes  as bellowing:
+![Required hardware]({{"/assets/images/getting-started/hardware.jpg" | absolute_url }})
 
-* SDK
-  * Update the Azure IoT DPS SDK to 1.2.8 to support DPS group enrollment.
-  * Fix the memory leak caused by GetHostNameFromConnectionString.
-  * Make the SystemTickCounterRead thread  safety.
-  * Fix the file system example.
+## Prepare your hardware
 
-* Installation Package
-  * Retire the old installation package since the [Azure IoT Workbench](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench) is fully support IoT DevKit now. All download links have been removed from our site.
+To connect the IoT DevKit to your computer:
 
-Special thanks to [Oguz Bastemur](https://github.com/obastemur) and **Paul Batsii**, thank you for your contributions and feedbacks.
+1. Connect the Micro-USB end to the IoT DevKit.
+2. Connect the USB end to your computer.
+3. The green LED for power confirms the connection.
 
-### Downloads
+![Hardware connections]({{"/assets/images/getting-started/connect.jpg" | absolute_url }})
 
-- [Firmware 1.5.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.5.1.68.bin).
+## Configure Wi-Fi
 
-## Version 1.4.1 (August 6, 2018)
+IoT projects rely on internet connectivity. Use AP Mode on the IoT DevKit to configure and connect to Wi-Fi.
 
-### Release Summary
+1. Hold down button B, push and release the reset button, and then release button B. Your IoT DevKit enters AP mode for configuring the Wi-Fi connection. The screen displays the service set identifier (SSID) of the IoT DevKit and the configuration portal IP address:
+    ![Reset button, button B, and SSID]({{"/assets/images/getting-started/wifi-ap.jpg" | absolute_url }})
 
-* SDK
-  * Add [OTA Programming API]({{"docs/apis/ota" | absolute_url }}).
-  * UARTClass class support extra serial port (PB_6 & PB_7).
+2. Use a Web browser on a different Wi-Fi enabled device (computer or mobile phone) to connect to the IoT DevKit SSID displayed in the previous step. If it asks for a password, leave it empty.
+   ![Network info and Connect button]({{"/assets/images/getting-started/connect-ssid.png" | absolute_url }})
 
-    ![UART1]({{"/assets/images/release/141_uart.png" | absolute_url }})
+3. Open **192.168.0.1** in the browser. Select the Wi-Fi network that you want the IoT DevKit to connect to, type the password for the Wi-Fi conection, and then click **Connect**.
+   ![Password box and Connect button]({{"/assets/images/getting-started/wifi-portal.png" | absolute_url }})
 
-  * [Audio class]({{"docs/apis/audio-v2" | absolute_url }}) support automatic level control on microphone.
+4. The IoT DevKit reboots in a few seconds. You then see the Wi-Fi name and assigned IP address on the screen of the IoT DevKit:
+   
+   ![Wi-Fi name and IP address]({{"/assets/images/getting-started/wifi-ip.jpg" | absolute_url }})
 
-* Mini Solution
-  * Add IoT DevKit firmware OTA update mini solution.
 
-    **Notice:**  Please make sure you have upgrade the firmware before running the OTA mini solution.
-    {: .notice--warning}
+**Note:** After  asuccessful Wi-Fi connection, the currently-installed and latest available version of the IoT DevKit's firmware is displayed on the IoT DevKit screen. If the IoT DevKit is not running on the latest available version, follow the [firmware upgrading guide]({{"/docs/firmware-upgrading/" | absolute_url }}) to install the latest version.
+{: .notice--info}
 
-Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://github.com/Adamantinu) and [Chris Lovett](https://github.com/lovettchris), thank you for your contributions and feedbacks.
+## Install development environment
 
+We recommend **Azure IoT Workbench** extension for Visual Studio Code to develop on the IoT DevKit.
 
-### Downloads
+Azure IoT Workbench provides an integrated experience to develop IoT solutions. It helps both on device and cloud development using Azure IoT and other services. You can watch this [Channel9 video](https://channel9.msdn.com/Shows/Internet-of-Things-Show/IoT-Workbench-extension-for-VS-Code) to have an overview of what it does.
 
-- [Firmware 1.4.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.4.1.65.bin).
+Follow these steps to prepare the development environment for IoT DevKit:
 
+1. Download and install [Arduino IDE](https://www.arduino.cc/en/Main/Software). It provides the necessary toolchain for compiling and uploading Arduino code.
+  * **Windows**: Use Windows Installer version
+  * **macOS**: Drag and drop the Arduino into `/Applications`
+  * **Ubuntu**: Unzip it into `$HOME/Downloads/arduino-1.8.5`
 
-## Version 1.4.0 (July 19, 2018)
+2. Install [Visual Studio Code](https://code.visualstudio.com/), a cross platform source code editor with powerful developer tooling, like IntelliSense code completion and debugging.
 
-### Release Summary
+3. Look for **Azure IoT Workbench** in the extension marketplace and install it.
+    ![Install IoT Workbench]({{"/assets/images/getting-started/install-workbench.png" | absolute_url }})
+    Together with the IoT Workbench, other dependent extensions will be installed.
 
-* Firmware
-  * Enable firmware update capability in bootloader.
-    Now the bootloader can upgrade the firmware from the on-board SPI flash, this is part of the OTA programming (firmware update) feature.
-    By integrating with the Azure Automatic Device Configuration service, the OTA firmware update function will be enabled in next release.
+4. Open **File > Preference > Settings** and add following lines to configure Arduino.
+  * **Windows**:
+    ```json
+    "arduino.path": "C:\\Program Files (x86)\\Arduino",
+    "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+    ```
+  * **macOS**:
+    ```json
+    "arduino.path": "/Applications",
+    "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+    ```
+  * **Ubuntu**:
+    ```json
+    "arduino.path": "/home/{username}/Downloads/arduino-1.8.5",
+    "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+    ```
 
-* SDK
-  * Reduce the size of file system which builds upon the 2MB on-board SPI flash.
-    
-    **Notice:** Because it need more on-board SPI flash space to store the new firmware for firmware updating, we reduced the space of [file system]({{"docs/apis/file-system" | absolute_url }}). So if you have files on IoT DevKit, please make sure they have been well backed up before upgrade to this new SDK.
-    {: .notice--warning}
-    
-  * Add [setVolume API]({{"docs/apis/audio-v2" | absolute_url }}) to support change the audio volume.
+5. Click `F1` to open the command palette, type and select **Arduino: Board Manager**. Search for **AZ3166** and install the latest version.
+    ![Install DevKit SDK]({{"/assets/images/getting-started/install-sdk.png" | absolute_url }})
 
-* Mini Solution
-  * Update the DevKit Translator to use the new [Audio APIs]({{"docs/apis/audio-v2" | absolute_url }}).
+As a fallback, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to install the environment.
 
-* Development Tools
-  * Deprecate existing one-click installation package.
-    Our new VS Code extension: [IoT Workbench]( https://aka.ms/iot-workbench) can provide better development experience for IoT DevKit, you can install it from the VS Code marketplace directly and follow this [tutorial]( https://aka.ms/iot-workbench/getstarted) to start using IoT DevKit. 
-    
-    So starting with 1.4.0 we only provide the Arduino board package (SDK only) and no longer to have the one-click installation package.
+## ST-Link configuration
 
-### Downloads
+[ST-Link/V2](http://www.st.com/en/development-tools/st-link-v2.html) is the USB interface that IoT DevKit uses to communicate with your development machine. Follow the platform specific steps to allow the machine access to your device.
 
-- [Firmware 1.4.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.4.0.60.bin).
+### Windows
 
+Download and install USB driver from [STMicro](http://www.st.com/en/development-tools/stsw-link009.html).
 
-## Version 1.3.7 (Jun 8, 2018)
+### macOS
 
-### Release Summary
+No driver is required for macOS.
 
-* SDK
-  * Add [System Function](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/system-function/) for power saving.
-  * Display the IP address for default firmware.
-  * Fix memory usage API issue.
-  * Fix bugs.
+### Unbutu
 
-* Development Tools
-  * Improve error message when serial port occupied
+Run the following in terminal and logout and login for the group change to take effect:
+```bash
+# Copy the default rules. This grants permission to the group 'plugdev'
+sudo cp ~/.arduino15/packages/AZ3166/tools/openocd/0.10.0/linux/contrib/60-openocd.rules /etc/udev/rules.d/
+sudo udevadm control --reload-rules
 
-* Special thanks to [Oguz Bastemur](https://github.com/obastemur), thank you for your contributions and feedbacks.
+# Add yourself to the group 'plugdev'
+# Logout and log back in for the group to take effect
+sudo usermod -a -G plugdev $(whoami)
+```
 
-### Downloads
+Now you are all set with preparing and configuring your development environment. Let us build a "Hello World" sample for IoT: sending temperature telemetry data to Azure IoT Hub.
 
-- *Installation Package 1.3.7 for Windows (obsoleted)*.
-- *Installation Package 1.3.7 for macOS (obsoleted)*.
-- [Firmware 1.3.7](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.7.56.bin).
+## Build your first project
 
+1. Make sure your IoT DevKit is **not connected** to your computer. Start VS Code first, and then connect the IoT DevKit to your computer.
 
-## Version 1.3.5 (April 28, 2018)
+1. In the bottom right status bar, check the **MXCHIP AZ3166** is shown as selected board and serial port with **STMicroelectronics** is used.
+    ![Select board and serial port]({{"/assets/images/getting-started/select-board.png" | absolute_url }})
 
-### Release Summary
+1. Click `F1` to open the command palette, type and select **IoT Workbench: Examples**. Then select **IoT DevKit** as board.
 
-* SDK
-  * Add [Watchdog Timer API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/watchdog-timer/).
-  * Add [External Interrupts API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/external-interrupts/).
-  * Fix MQTT client reconnect issue.
-  * Filter out IoT DevKit hotspot in the WiFi configuration page.
-  * Fix bugs.
+1. In the pop-up page, scroll down and click **Open Sample** on Get Started tile. Also selects the default path download the sample.
+    ![Open sample]({{"/assets/images/getting-started/open-sample.png" | absolute_url }})
 
-* Mini Solution
-  * New mini-solution: [Connect to IoT Edge device gateway as Modbus TCP device](https://github.com/DevKitExamples/DevKitModbus#connect-to-iot-edge-device-gateway-as-modbus-tcp-device).
+1. If you don't have Arduino extension in VS Code installed, click the **Install** in the notification pane.
+    ![Install Arduino Extension]({{"/assets/images/getting-started/install-arduino-ext.png" | absolute_url }})
 
-* Development Tools
-  * Fix bug such that it works for users who only have resource group-level access
-  * Fix azure-cli bug by updating azure-cli to latest version.
-  * Allow users to disable data collection.
+1. In the new opened project window, click `F1` to open the command palette, type and select **IoT Workbench: Cloud**, then select **Azure Provision**.
 
-* Special thanks to [Kirk Munro](https://github.com/KirkMunro) , [fmuntean](https://github.com/fmuntean) , [Thomas Mutzl](https://github.com/mutzl), thank you for your contributions and feedbacks.
+1. Follow the step by step guide to finish provisioning your Azure IoT Hub and creating the device.
+    ![Cloud provision]({{"/assets/images/getting-started/cloud-provision.png" | absolute_url }})
 
-### Downloads
+1. Click `F1` to open the command palette, type and select **IoT Workbench: Device**, then select **Config Device Settings > Select IoT Hub Device Connection String**.
 
-- *Installation Package 1.3.5 for Windows (obsoleted)*.
-- *Installation Package 1.3.5 for macOS (obsoleted)*.
-- [Firmware 1.3.5](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.5.53.bin).
+1. On IoT DevKit, hold down button **A**, push and release the **reset** button, and then release button **A**. Your IoT DevKit enters configuration mode and saves the connection string.
+    ![Set connection string]({{"/assets/images/getting-started/connection-string.png" | absolute_url }})
 
+1. Click `F1` again, type and select **IoT Workbench: Device**, then select **Device Upload**.
+    ![Verification and upload of the Arduino sketch]({{"/assets/images/getting-started/arduino-upload.png" | absolute_url }})
 
-## Version 1.3.4 (March 28, 2018)
+The IoT DevKit reboots and starts running the code.
 
-### Release Summary
+**Note:** If there is errors or interruptions, you can always recover by running the command again.
+{: .notice--info}
 
-* Minor fixes for the mini solution of Remote Monitoring V2.
+## Test the project
 
-### Downloads
+Click the power plug icon on the status bar to open the Serial Monitor:
+  ![Open serial monitor]({{"/assets/images/mini-solution/connect-iothub/serial-monitor.png" | absolute_url }})
 
-- *Installation Package 1.3.4 for Windows (obsoleted)*.
-- *Installation Package 1.3.4 for macOS (obsoleted)*.
-- [Firmware 1.3.4](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.4.50.bin).
+The sample application is running successfully when you see the following results:
 
+* The Serial Monitor displays the message sent to the IoT Hub.
+* The LED on the MXChip IoT DevKit is blinking.
 
-## Version 1.3.3 (March 20, 2018)
+![Final output in VS Code]({{"/assets/images/mini-solution/connect-iothub/result-serial-output.png" | absolute_url }})
 
-### Release Summary
+You can use [Azure IoT Toolkit](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-toolkit) to monitor device-to-cloud (D2C) messages in IoT Hub.
 
-* SDK
-  * Add [WebSocket API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/websocket-client/) (not include SSL).
-  * Add [memory status API](https://microsoft.github.io/azure-iot-developer-kit/docs/apis/memory-status/).
-  * Bug fix
-  * Compile error of file missing in Linux and macOS environment.
-  * Some bugs found in security check and review.
-  
-* Mini Solution
-  * Add new mini solution to support Remote Monitoring v2
-  * Document will come soon
-  * Update mini solution of DPS to provide the device enrollment tool for macOS 
+1. Log in [Azure portal](https://portal.azure.com), find the IoT Hub you created.
+    ![azure-portal-iot-hub]({{"/assets/images/mini-solution/connect-iothub/azure-iot-hub-portal.png" | absolute_url }})
 
-* Special thanks to [Alexandre Dumont](https://github.com/adumont) , [Juan Manuel Servera Bondroit](https://github.com/jmservera) , [Chris Lovett](https://github.com/lovettchris) , [Prafull Kotecha](https://github.com/prafullkotecha) , thank you for your contributions and feedbacks.
+1. In the **Shared access policies pane**, click the **iothubowner policy**, and write down the Connection string of your IoT hub.
+    ![azure-portal-iot-hub-conn-string]({{"/assets/images/mini-solution/connect-iothub/azure-portal-conn-string.png" | absolute_url }})
 
-### Downloads
+1. Expand **AZURE IOT HUB DEVICES** on the bottom left corner.
+    ![azure-iot-toolkit-iot-hub-devices]({{"/assets/images/mini-solution/connect-iothub/azure-iot-toolkit-devices.png" | absolute_url }})
 
-- *Installation Package 1.3.3 for Windows (obsoleted)*.
-- *Installation Package 1.3.3 for macOS (obsoleted)*.
-- [Firmware 1.3.3](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.3.45.bin).
+1. Click **Set IoT Hub Connection String** in context menu.
+    ![azure-iot-toolkit-iot-hub-conn-string]({{"/assets/images/mini-solution/connect-iothub/azure-iot-toolkit-conn-string.png" | absolute_url }})
 
+1. Click **IoT: Start monitoring D2C message** in context menu.
 
-## Version 1.3.2 (February 7, 2018)
+1. In **OUTPUT** pane, you can see the incoming D2C messages to the IoT Hub.
+    ![azure-iot-toolkit-output-console]({{"/assets/images/mini-solution/connect-iothub/azure-iot-toolkit-console.png" | absolute_url }})
 
-### Release Summary
+## Problems and feedback
 
-* SDK
-  * Expose setOption API in DevKitMQTTClient.
-  * Fix some bugs related to memory management.
+If you encounter problems, you can refer to [FAQs]({{"/docs/faq/" | absolute_url }}) or reach out to us from [Gitter channel](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"}.
 
-* Development Tools
-  * Hide meaningless warning messages when build the Arduino code in VS Code.
+{% include feedback.html tutorial="get-started" %}
 
-### Downloads
+## Next Steps
 
-- *Installation Package 1.3.2 for Windows (obsoleted)*.
-- *Installation Package 1.3.2 for macOS (obsoleted)*.
-- [Firmware 1.3.2](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.2.44.bin).
-
-
-## Version 1.3.1 (January 23, 2018)
-
-During the past 2 weeks, we got chance to revisit our code and did some minor changes to improve the stability and dev experience.
-
-### Release Summary
-
-* SDK
-  * Fix memory leak issue in IoT Hub MQTT client when there was a long drop on Wi-Fi.
-
-* Development Tools
-  * Improve the stability for IoT DevKit Windows/Mac installation.
-  * Support customized IoT Hub Device ID in configuring device connection string.
-
-### Downloads
-
-- *Installation Package 1.3.1 for Windows (obsoleted)*.
-- *Installation Package 1.3.1 for macOS (obsoleted)*.
-- [Firmware 1.3.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.1.42.bin).
-
-
-## Version 1.3.0 (January 9, 2018)
-
-Happy new year 2018! Let us talk about the fundamentals of IoT this time: the security. IoT DevKit is now amongst the first MCU devices that support [Microsoft IoT Hub Device Provisioning Service](https://docs.microsoft.com/en-us/azure/iot-dps/about-iot-dps), which is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning to the right IoT hub without requiring human intervention, enabling customers to provision millions of devices in a secure and scalable manner.
-
-### Release Summary
-
-* Firmware
-  * Upgrade the IoT DevKit firmware to enable DPS feature.
-  * New tool `set_dps_uds` is added in the configuration mode, which help to save the **Unique Device Secret (UDS)** into the STSAFE chip, for more detail please check [this topic]({{"/docs/projects/dps/#save-unique-device-secret-on-stsafe-security-chip" | absolute_url }}).
-
-* SDK
-  * Open source [IoT DevKit SDK](https://github.com/Microsoft/devkit-sdk), you are welcome to contribute :)
-  * Upgrade the Azure IoT C SDK to [1.1.28]( https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-11-17).
-  * Archive the Azure IoT C SDK in the Arduino board package, greatly reduce the compile time.
-  * Enable the secure channel, protecting confidentiality and integrity of data with STSAFE chip on IoT DevKit.
-  * Add reset function `SystemReboot`.
-
-* Mini Solution
-  * New mini-solution: [Device registration with Device Provisioning Service]({{"/docs/projects/dps/" | absolute_url }}).
-
-### Downloads
-
-- *Installation Package 1.3.0 for Windows (obsoleted)*.
-- *Installation Package 1.3.0 for macOS (obsoleted)*.
-- [Firmware 1.3.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.0.40.bin).
-
-
-## Version 1.2.2 (December 20, 2017)
-
-We are focusing on the script refinement in this release.
-
-### Release Summary
-
-* Development Tools
-  * Improve MacOS installation script to handle error friendly.
-  * Refactor Windows installation script to improve code quality.
-  * Refine VS Code task for mini-solutions to improve code quality.
-
-### Downloads
-
-- *Installation Package 1.2.2 for Windows (obsoleted)*.
-- *Installation Package 1.2.2 for macOS (obsoleted)*.
-- [Firmware 1.2.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
-
-
-## Version 1.2.1 (November 22, 2017)
-
-The new Audio library gives the ability to continuous recording voice through the microphone.
-
-### Release Summary
-
-* SDK
-  * A new version of the Audio driver library (AudioClassV2) has been added. This new version supports call-backs, allowing you to greatly simplify Arduino sketches which need to monitor and react to the current audio state as, for example, when it changes from AUDIO_STATE_RECORDING to AUDIO_STATE_PLAYING.  An example Arduino sketch making use of this new feature may be found in the Audio2 folder under "Examples for MXCHIP AZ3166". Note: The previous AudioClass library has been retained for backward compatibility with legacy sketches. (Sample sketches utilizing the AudioClass.h library may be found in the Audio folder under "Examples for MXCHIP AZ3166".)  Provide V2 version of Audio driver library to support callback in record and play.
-  * A name conflict (INADDR_NONE) in source code was generating the error "Expected ')' before numeric constant". This error (documented in Issue 169) has been corrected.
-
-* New Mini Solution
-  * A cool mini-solution was added. You can check it out [here](https://microsoft.github.io/azure-iot-developer-kit/docs/projects/air-traffic-control-simulator/).
-* Development Tools
-  * A Resource Group Location selection option was added when creating  a new resource group in `task cloud provision`.
-  * A privacy statement has been added during installation to allow users to choose to enable or disable data collection. 
-  * Error handling during development tool installation has been improved.
-  * Installation of Visual Studio Code has been updated to better support both X86 and X64 environments.
-  * The Azure CLI installation has been updated to version 2.0.20
-
-### Downloads
-
-- *Installation Package 1.2.1 for Windows (obsoleted)*.
-- *Installation Package 1.2.1 for macOS (obsoleted)*.
-- [Firmware 1.2.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
-
-
-## Version 1.2.0 (October 24, 2017)
-
-No more manual steps to prepare your IoT DevKit development environment on macOS! The time saving one-click installation now support macOS as well. And yes, we love bash.
-
-### Release Summary
-
-* SDK
-  * Upgrade IoT Hub device SDK to [1.1.23](https://github.com/Azure/azure-iot-sdk-c/releases/tag/2017-09-08){:target="_blank"}.
-  * Made IoT Hub MQTT Client as a wrapper that can be shared by all mini solutions.
-  * Enable float modifier for `print/printf` function.
-  * Remove `json-c` library and use [parson JSON library](https://github.com/kgabis/parson){:target="_blank"} instead.
-  * Bug fix: Enable HttpClient response callback when handling large response body.
-
-* Project Catalog
-  * New mini solution: DeviceStates. Use Azure IoT Hub device twins to monitor IoT DevKit state and control the user LED.
-  * Fix gyroscope values and added acceleration sensor in SensorStatus sample.
-  * Use MQTT Client wrapper for GetStarted, RemoteMonitoring and ShakeShake mini solutions.
-  * Improve telemetry logics in mini solutions on macOS.
-
-* Development Tools
-  * Enable one-click install experience on macOS :wink:. 
-  * Upgrade all project tasks to version 2.0.
-  * Use `CMD` as the default shell on Windows.
-  * Set default device upload method to use OpenOCD instead of ST-Link.
-  * Bug fix: VS Code task failure due to double quotation marks.
-
-### Downloads
-
-- *Installation Package 1.2.0 for Windows (obsoleted)*.
-- *Installation Package 1.2.0 for macOS (obsoleted)*.
-- [Firmware 1.2.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.2.0.28.bin).
-
-**Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/firmware-upgrading" | absolute_url}}) first.
-{: .notice--warning}
-
-
-## Version 1.1.1 (September 27, 2017)
-
-### Release Summary
-
-* Minor fixes of internal Azure IoT Hub Device APIs.
-
-### Downloads
-
-- *Installation Package 1.1.1 for Windows (obsoleted)*.
-- *Installation Package 1.1.1 for macOS (obsoleted)*.
-- [Firmware 1.1.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.1.1.15.bin).
-
-**Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/firmware-upgrading" | absolute_url}}) first.
-{: .notice--warning}
-
-
-## Version 1.1.0 (September 4, 2017)
-
-IoT DevKit now officially has full support for [ST-SAFE](http://www.st.com/en/secure-mcus/stsafe-a100.html){:target="_blank"}, the security chip that provides secure authentication and data management for IoT solutions. Since it's enabled on bootloader level, a [firmware upgrade]({{"/docs/firmware-upgrading" | absolute_url}}) is mandatory to make the IoT DevKit work properly.
-
-### Release Summary
-
-* Firmware
-  * Upgrade the IoT DevKit firmware to enable STSAFE.
-
-* SDK
-  * Bug fix: Under bad network environment, the Device SDK in mbed OS occasionally crashes.
-  * Add more NTP servers for better globalization support.
-
-* Arduino Library
-  * Tune OLED library display performance.
-
-* Project Catalog
-  * Massively improve Azure Functions deployment(`task cloud-deploy`) performance.
-  * Improve 'Shake, Shake' example flow further by adding more logging data on the display.
-
-* Development Tools
-  * Visual Studio Code extension for Arduino now use tree view to display Arduino examples.
-
-### Downloads
-
-- *Installation Package 1.1.0 for Windows (obsoleted)*.
-- *Installation Package 1.1.0 for macOS (obsoleted)*.
-- [Firmware 1.1.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.1.0.bin).
-
-**Notice:** If you are upgrading from version 1.0.2 or even earlier, please [upgrade your firmware]({{"/docs/firmware-upgrading" | absolute_url}}) first.
-{: .notice--warning}
-
-## Version 1.0.2 (August 10, 2017)
-
-Summer does not mean slow down. We further enriched our project catalog and tuned their performances. And from our user feedback, we added the logic to detect the latest firmware so that you will no longer miss our new stuff.
-
-### Release Summary
-
-* Firmware
-  * Enable detection of latest firmware version and display on the screen.
-
-* SDK
-  * Add support for audio playback API.
-
-* Project Catalog
-  * Add 'DevKit Translator' example for IoT DevKit to understand more languages :robot:.
-  * Add 'Door Monitor' example uses third party email service to send notifications.
-  * Replace manual steps with VS Code tasks for 'Connect to Azure IoT Hub' example.
-  * Improve Azure Functions stability and performance used by examples.
-  * Improve the telemetry API, and add more telemetry for 'Shake Shake' to track the running status.
-
-* Development Tools
-  * Adapt VS Code task for all sample projects to remove tedious manual steps.
-  * Bug fix: Occasionally installation will fail to set Arduino custom board URL.
-
-### Downloads
-
-- *Installation Package 1.0.2 for Windows (obsoleted)*.
-- [Firmware 1.0.2](https://azureboard.azureedge.net/prod/devkit-firmware-1.0.2.bin).
-
-
-## Version 1.0.1 (July 13, 2017)
-
-The optimization continues. We are now supporting VS Code tasks on macOS as well, so you can easily provision and deploy our 'Shake, Shake' sample project on macOS now. To further smooth the development tools and package installation, we are using the official [MSI](https://aka.ms/InstallAzureCliWindows){:target="_blank"} for the Windows Azure CLI 2.0 installation, so Python installation is no longer needed. For all other underlying improvements, checkout our release notes for details.
-
-### Release Summary
-
-* Installation Package 
-  * Remove the dependency of Python installation by using Windows Azure CLI 2.0 MSI (v 2.0.9).
-  * Upgrade to the latest version of VS Code (v 1.13.1) and Arduino Extension (v 0.2.4).
-  * Switch to Azure CDN to accelerate the package downloading speed.
-
-* Firmware 
-  * Stabilize Wi-Fi connection and minor optimizations to Azure IoT Device C SDK
-
-* Project Catalog 
-  * Preview cloud provision, deploy and device upload tasks for “Shake, Shake” mini solution in VS Code on macOS.
-  * Switched to [ARM (Azure Resource Manager) template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template){:target="_blank"} for provisioning Azure services.
-  * Put Azure Function creation logic into cloud provision step to further isolate the tasks.
-  * Add telemetries to distinguish each mini solution from BI perspective.
-
-### Downloads
-
-- *Installation Package 1.0.1 for Windows (obsoleted)*.
-- [Firmware 1.0.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.0.1.bin).
-
-
-## Version 1.0.0 (June 26, 2017)
-
-After a month work of stabilizing the code, fixing bugs and adding more samples, we are happy to release the v1.0.0 for our IoT DevKit. And soon we will open source the stacks including firmware, toolchain and all sample projects code. Please check release summary for details about this update.
-
-### Release Summary
-
-* Update underlying mbed OS to 5.4
-
-* Show version number for the default app
-
-* Installation Package
-  * Install pip with `get-pip.py` script.
-  * Optimize error handling when running commands.
-  * Adapt to update of Azure subscription return format using Azure CLI.
-
-* Stabilization
-  * Bug fix: Memory leak on socket layer of Wi-Fi driver.
-  * Bug fix: Add retry logic to improve the stability of Azure IoT Device SDK.
-
-* Arduino Library
-  * Refine library APIs to follow Arduino Standard like function naming conventions. 
-  * Add [OLED draw method]({{"/docs/apis/display/" | absolute_url}}) to control every pixel in display screen.
-  * Add support for file system based on mbed file system implementation.
-  * Add support for [IrDA]({{"/docs/apis/irda/" | absolute_url}}).
-
-* Project Catalog
-  * Add 'Connect to Azure IoT Hub' example and documentation that align with other [Azure IoT Hub get started tutorials](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-get-started){:target="_blank"}.
-  * Add 'Remote Monitoring' example and documentation that make IoT DevKit connect to [Azure IoT Suite](https://www.azureiotsuite.com){:target="_blank"}.
-  * Add 'MQTT Client' example and documentation that send MQTT messages to public free MQTT broker.
-  * Shake, Shake: Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.
-  * Shake, Shake: Add delay and retry logic when not receiving any message due to function delay.
-
-### Downloads
-
-- *Installation Package 1.0.0 for Windows (obsoleted)*.
-- [Firmware 1.0.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.0.0.bin).
-
-
-## Version 0.8.1 (May 21, 2017)
-
-Some bug fixes before IoT DevKit debut on [//Build](https://build.microsoft.com/){:target="_blank"} and [Maker Faire Bay Area](http://makerfaire.com/){:target="_blank"}.
-
-
-## Version 0.8.0 (May 5, 2017)
-
-This is our first public release of the Microsoft Azure IoT Developer Kit.
-
-### Release Summary
-
-Everything is brand new!
+You have successfully connected an MXChip IoT DevKit to your IoT hub, and you have sent the captured sensor data to your IoT hub. 
+Check our [Projects Catalog]({{"/docs/projects/" | absolute_url }}) for more samples you can build with the IoT DevKit and Azure multiple services.
