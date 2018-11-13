@@ -30,7 +30,9 @@ docs:
       - title: "Use configure mode"
         url: /docs/use-configuration-mode/
       - title: "Understand security chip"
-        url: /docs/understand-security-chip
+        url: /docs/understand-security-chip/
+      - title: "Disable data collection"
+        url: /docs/disable-data-collection/
   - title: API Reference
     children:
       - title: "Arduino"
