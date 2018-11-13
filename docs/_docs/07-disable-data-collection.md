@@ -1,5 +1,5 @@
 ---
-title: "[Obsoleted] Disable data collection"
+title: "Disable data collection"
 permalink: /docs/disable-data-collection/
 excerpt: "Instructions for disable data collection."
 variable:
