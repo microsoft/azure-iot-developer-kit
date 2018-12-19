@@ -28,7 +28,7 @@ Special thanks to [Sean Kelly](https://github.com/seank-com) for polishing the W
 
 ### Downloads
 
-- [Firmware 1.6.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.6.0.69.bin).
+- [Firmware 1.6.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.6.0.71.bin).
 
 ## Version 1.5.1 (September 1, 2018)
 
