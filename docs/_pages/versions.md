@@ -12,8 +12,7 @@ last_modified_at: 2018-01-09
 
 ### Release Summary
 
-Happy holidays every !
-
+Happy holidays, everyone!
 This is a minor version increase of our IoT DevKit SDK!
 
 * Upgrade Azure IoT C SDK to 1.2.10, which is the most latest version, and much stable than old version.
