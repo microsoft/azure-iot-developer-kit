@@ -62,14 +62,6 @@ Please clean the local cache first:
 
 If it's still not work please contact [us](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"} for support.
 
-### Windows Defender SmartScreen prevented an unrecognized app error.
-
-Sometimes SmartScreen prevents applications you know are not bad – for example, it’s a CMD or VBS script.
-
-![Smartscreen]({{"/assets/images/faq/smartscreen.png" | absolute_url }})
-
-To resolve, click on the **'More info'** link and then click the **'Run anyway'** button. You can check this [knowledge base article](https://www.itsupportguides.com/knowledge-base/windows-10/windows-defender-smartscreen-prevented-an-unrecognized-app-error/) for more details.
-
 ## Wi-Fi Configuration
 
 ### Cannot connect to a Wi-Fi hotspot.
@@ -82,13 +74,13 @@ To resolve, try to use Wi-Fi with normal WPA/WPA2 authentication.
 
 Currently, IoT DevKit only can connect to 2.4 GHz Wi-Fi, 5 GHz is not supported due to hardware restrictions.
 
-## Cloud Provisioning
+## Provision Azure Services
 
 ### Cannot log in Azure as access token expired.
 
 Due to a previous Azure login, your access token may have expired. 
 
-To fix, delete the web browser history that includes login data and run the provisioning task again. Alternatively, you can try to log in to Azure manually by launching Command Prompt and running `az login`.
+To fix, delete the web browser history that includes login data and run the command of `Azure IoT Device Workbench: Provision Azure Services...` again. 
 
 ### Page hangs when log in Azure.
 
@@ -104,7 +96,28 @@ For more details please check [I can't sign in to manage my Azure subscription](
 
 Occasionally, when you launch Visual Studio Code, you are prompted with an error message that it cannot find the Arduino IDE or related board package.
 
-To resolve, close Visual Studio Code, then launches the actual Arduino IDE once. Subsequently, when you open Visual Studio Code it should correctly locate the Arduino IDE path.
+To resolve, please install the latest version of Arduino IDE [here](https://www.arduino.cc/en/Main/Software). Then Open **File > Preference > Settings** and add following lines to set the configurations for Arduino.
+	
+	* Windows
+
+		```JSON
+		"arduino.path": "C:\\Program Files (x86)\\Arduino",
+		"arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+		```
+
+	* macOS
+
+		```JSON
+		"arduino.path": "/Application",
+		"arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+		```
+
+	* Ubuntu
+
+		```JSON
+		"arduino.path": "/home/{username}/Downloads/arduino-1.8.8",
+		"arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+		```
 
 ### Additional warnings during compilation.
 
@@ -112,47 +125,16 @@ In certain environment, lots of warnings message pops up in the VS Code OUTPUT w
 
 It is caused by the incorrect warning handling between Visual Studio Code Arduino extension and Arduino IDE. To solve this problem, the work around is to uninstall Arduino IDE from your local system and install the latest version of [Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
-### Compilation error for Azure Function.
-
-When the mini solution of Shake-Shake and IoT DevKit Translator do not work, in Azure portal, you got the following error for the Azure Function you deployed:
-
-```
-2017-11-15T03:24:23.426 Function compilation error
-2017-11-15T03:24:23.426 run.csx(11,23): error CS0234: The type or namespace name 'Devices' does not exist in the namespace 'Microsoft.Azure' (are you missing an assembly reference?)
-2017-11-15T03:24:23.426 run.csx(95,15): error CS0246: The type or namespace name 'ServiceClient' could not be found (are you missing a using directive or an assembly reference?)
-2017-11-15T03:24:23.426 run.csx(95,45): error CS0103: The name 'ServiceClient' does not exist in the current context
-```
-And you could not find porject.lock.json in files of the Azure Function. This is caused by a new  [Azure Function issue](https://github.com/Azure/Azure-Functions/issues/590). 
-
-Here is the workaround:
-1. In `Platform features` tab of the deployed Function App, click `Application settings`.
-2. Add a new Application setting named `WEBSITE_USE_PLACEHOLDER` with value 0.
-3. Save and Restart the Function App.
 
 ### Get "Error Presented: #include errors detected" when opening a project
 
 The error message is **Error Presented: #include errors detected. Please update your includePath.**
 
-This is an issue coming from the [Microsoft C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
-Switch the IntelliSense engine to "**Tag Parser**" can workaround this issue:
+This is an issue coming from the different version of IoT DevKit SDK. To solve this problem,
 
-* Press F1 and key in 'settings' and select the `Preference: Open User Settings`
-
- ![vsc-intellisense-issue-1]({{"/assets/images/faq/vsc-intellisense-1.png" | absolute_url }})
-
-* Set the IntelliSense engine to "**Tag Parser**"
-
- ![vsc-intellisense-issue-2]({{"/assets/images/faq/vsc-intellisense-2.png" | absolute_url }})
-
-* Press F1 and key in 'cpp' and select the `C/Cpp: Edit Configurations`
-
- ![vsc-intellisense-issue-3]({{"/assets/images/faq/vsc-intellisense-3.png" | absolute_url }})
-
-* Open the **c_cpp_properties.json** file, add the path of Arduino package into the include  path
+* Open the **c_cpp_properties.json** file, update the version with the current installation SDK version in the include path:
 
  ![vsc-intellisense-issue-4]({{"/assets/images/faq/vsc-intellisense-4.png" | absolute_url }})
-
-You can get more detail from [C/C++ for VS Code](https://code.visualstudio.com/docs/languages/cpp). 
 
 ### Arduino upload return Error: STLinkMethod: Invalid option for "upload_method" option for board "MXCHIP_AZ3166" 
 
@@ -162,6 +144,28 @@ In Visual Studio Code, when trying to invoke "Arduion:Board Config" to configure
 
 This is because Arduino configuration for curret project is not set correctly.
 To solve this problem, in `.vsode\arduino.json`, replace `"configuration": "upload_method=STLinkMethod"` to `"configuration": "upload_method=OpenOCDMethod"`.
+
+### Unable to sync time with NTP time server
+
+IoT DevKit would synchronize time with NTP time server before connecting to Azure IoT Hub. Sometimes, user would get the following error from serial port:
+
+```
+Unable to get the NTP host pool.ntp.org
+Unable to get the NTP host cn.pool.ntp.org
+Unable to get the NTP host europe.pool.ntp.org
+Unable to get the NTP host asia.pool.ntp.org
+Unable to get the NTP host oceania.pool.ntp.org
+```
+
+This may caused by the NTP traffic blocked by firewall in the Gateway. To solve this problem, make sure that UDP port 123 is open on all firewalls between IoT DevKit and the remote time servers.
+
+| Time Server | port |
+| --- | --- |
+| pool.ntp.org | 123 |
+| cn.pool.ntp.org | 123 |
+| europe.pool.ntp.org | 123 |
+| asia.pool.ntp.org | 123 |
+| oceania.pool.ntp.org | 123 |
 
 
 {% include social-share.html %}

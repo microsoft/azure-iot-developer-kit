@@ -8,6 +8,27 @@ last_modified_at: 2018-01-09
 {% include toc icon="columns" %}
 
 
+## Version 1.6.0 (December 19, 2018)
+
+### Release Summary
+
+Happy holidays, everyone!
+This is a minor version increase of our IoT DevKit SDK!
+
+* Upgrade Azure IoT C SDK to 1.2.10, which is the most latest version, and much stable than old version.
+* Release the polished WebSocket library.
+* Fixed the SPI library. Sorry for finding this issue so late. This is not only the software bug but also circuit issue, so if you want to use the extern SPI pins please remove one resistor as bellow:
+  
+   ![SPI]({{"/assets/images/release/160_spi_fix.png" | absolute_url }})
+   
+   The extern SPI is shared with the built in codec chip, so there have one pin conflict. Remove this resistor can solve the SPI issue but the codec can’t work well, that means you can’t use any Audio functions if enable the extern SPI, vice versa.
+
+Special thanks to [Sean Kelly](https://github.com/seank-com) for polishing the WebSocket library and **Xavier Geerinck** found the SPI issue, thank you for your contributions and feedbacks.
+
+### Downloads
+
+- [Firmware 1.6.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.6.0.71.bin).
+
 ## Version 1.5.1 (September 1, 2018)
 
 ### Release Summary
