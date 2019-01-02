@@ -2,7 +2,7 @@
 title: "DevKit Translator"
 permalink: /docs/projects/devkit-translator/
 redirect_to:
-  - https://github.com/Microsoft/vscode-iot-workbench/blob/master/docs/iot-devkit/devkit-translator.md
+  - https://docs.microsoft.com/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-translator
 excerpt: "Turn IoT DevKit as a translator by using Bing Speech Translator service."
 header:
   overlay_image: /assets/images/projects-devkit-translator.jpg
@@ -43,5 +43,5 @@ variable:
     name: Windows
   - platform: macos
     name: macOS
-last_modified_at: 2017-07-17
+last_modified_at: 2019-01-02
 ---
