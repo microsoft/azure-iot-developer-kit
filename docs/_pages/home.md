@@ -65,7 +65,7 @@ projects: "2, 5, 6"
 ---
 
 <div class="landing-page-video">
-  {% include whatsnew.html news = "The IoT DevKit is now using Azure IoT Workbench, an integrated tool on Visual Studio Code to develop IoT application." link = "Learn more about Azure IoT Workbench" url="https://aka.ms/iot-workbench" %}
+  {% include whatsnew.html news = "11/30: There is a bug found in Arduino IDE v1.8.7. Please stick with v1.8.6 for the IoT DevKit." link = "Learn more" url="https://github.com/arduino/Arduino/issues/8040" %}
 </div>
 
 {% include feature_row id="part1" type="right" %}
