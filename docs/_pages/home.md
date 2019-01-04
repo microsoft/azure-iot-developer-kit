@@ -61,7 +61,7 @@ part3:
         author:
           photo: /assets/images/testimony-sciencescope.jpg
           name: ScienceScope
-projects: "2, 5, 6"
+projects: "0, 1, 4"
 ---
 
 <div class="landing-page-video">
