@@ -7,7 +7,7 @@ variable:
     name: Windows
   - platform: macos
     name: macOS
-last_modified_at: 2018-03-12
+last_modified_at: 2019-01-03
 ---
 
 For first-time users of the MXChip IoT DevKit (a.k.a. DevKit), follow these quick steps to:
@@ -47,10 +47,11 @@ To connect the IoT DevKit to your computer:
 
 ## Configure Wi-Fi
 
-IoT projects rely on internet connectivity. Use AP Mode on the IoT DevKit to configure and connect to Wi-Fi.
+IoT projects rely on internet connectivity. Use the following instructions to configure the DevKit to connect to Wi-Fi.
 
 1. Hold down button B, push and release the reset button, and then release button B. Your IoT DevKit enters AP mode for configuring the Wi-Fi connection. The screen displays the service set identifier (SSID) of the IoT DevKit and the configuration portal IP address:
     ![Reset button, button B, and SSID]({{"/assets/images/getting-started/wifi-ap.jpg" | absolute_url }})
+    ![Enter AP mode]({{"/assets/images/getting-started/set-ap-mode.gif" | absolute_url }})
 
 2. Use a Web browser on a different Wi-Fi enabled device (computer or mobile phone) to connect to the IoT DevKit SSID displayed in the previous step. If it asks for a password, leave it empty.
    ![Network info and Connect button]({{"/assets/images/getting-started/connect-ssid.png" | absolute_url }})
@@ -62,107 +63,122 @@ IoT projects rely on internet connectivity. Use AP Mode on the IoT DevKit to con
    
    ![Wi-Fi name and IP address]({{"/assets/images/getting-started/wifi-ip.jpg" | absolute_url }})
 
+## Start using the DevKit
 
-**Note:** After  asuccessful Wi-Fi connection, the currently-installed and latest available version of the IoT DevKit's firmware is displayed on the IoT DevKit screen. If the IoT DevKit is not running on the latest available version, follow the [firmware upgrading guide]({{"/docs/firmware-upgrading/" | absolute_url }}) to install the latest version.
+### Upgrade to the latest firmware
+
+The default app running on the DevKit checks the latest version of the firmware and displays some sensor diagnosis data for you. The currently-installed and latest available version of the IoT DevKit's firmware is displayed on the IoT DevKit screen. If the IoT DevKit is not running on the latest available version, follow the [firmware upgrading guide]({{"/docs/firmware-upgrading/" | absolute_url }}) to install the latest version.
+
+![Current firmware version]({{"/assets/images/getting-started/firmware.jpg" | absolute_url }})
+
+**Note:** Since v1.1, DevKit enables ST-SAFE in bootloader. You need to upgrade the firmware if you are running a version prior to v1.1.
 {: .notice--info}
 
-## Install development environment
+### Test various sensors
 
-We recommend **Azure IoT Workbench** extension for Visual Studio Code to develop on the IoT DevKit.
+Press button B to test the sensors. Continue pressing and releasing the button B to cycle through each sensor.
 
-Azure IoT Workbench provides an integrated experience to develop IoT solutions. It helps both on device and cloud development using Azure IoT and other services. You can watch this [Channel9 video](https://channel9.msdn.com/Shows/Internet-of-Things-Show/IoT-Workbench-extension-for-VS-Code) to have an overview of what it does.
+![Test sensors]({{"/assets/images/getting-started/sensors.jpg" | absolute_url }})
 
-Follow these steps to prepare the development environment for IoT DevKit:
+## Prepare the development environment
 
-1. Download and install [Arduino IDE](https://www.arduino.cc/en/Main/Software). It provides the necessary toolchain for compiling and uploading Arduino code.
-  * **Windows**: Use Windows Installer version
-  * **macOS**: Drag and drop the Arduino into `/Applications`
-  * **Ubuntu**: Unzip it into `$HOME/Downloads/arduino-1.8.5`
+We recommend [Azure IoT Tools](https://aka.ms/azure-iot-tools) extension pack for Visual Studio Code to develop on the DevKit. The Azure IoT Tools contains [Azure IoT Device Workbench](https://aka.ms/iot-workbench) to develop and debug on various IoT devkit devices and [Azure IoT Hub Toolkit](https://aka.ms/iot-toolkit) to manage and interact with Azure IoT Hub.
+
+You can watch these [Channel 9](https://channel9.msdn.com/) videos to have overview about what they do:
+* [Introduction to the new IoT Workbench extension for VS Code](https://channel9.msdn.com/Shows/Internet-of-Things-Show/IoT-Workbench-extension-for-VS-Code)
+* [What's new in the IoT Toolkit extension for VS Code](https://channel9.msdn.com/Shows/Internet-of-Things-Show/Whats-new-in-the-IoT-Toolkit-extension-for-VS-Code)
+
+Follow these steps to prepare the development environment for DevKit:
+
+1. Install [Arduino IDE](https://www.arduino.cc/en/Main/Software). It provides the necessary toolchain for compiling and uploading Arduino code.
+    * **Windows**: Use Windows Installer version. Do not install from the app store.
+    * **macOS**: Drag and drop the extracted **Arduino.app** into `/Applications` folder.
+    * **Ubuntu**: Unzip it into folder such as `$HOME/Downloads/arduino-1.8.8`
 
 2. Install [Visual Studio Code](https://code.visualstudio.com/), a cross platform source code editor with powerful developer tooling, like IntelliSense code completion and debugging.
 
-3. Look for **Azure IoT Workbench** in the extension marketplace and install it.
-    ![Install IoT Workbench]({{"/assets/images/getting-started/install-workbench.png" | absolute_url }})
-    Together with the IoT Workbench, other dependent extensions will be installed.
+3. Launch VS Code, look for **Arduino** in the extension marketplace and install it. This extension provides enhanced experiences for developing on Arduino platform.
+    ![Install Arduino]({{"/assets/images/getting-started/install-arduino.png" | absolute_url }})
 
-4. Open **File > Preference > Settings** and add following lines to configure Arduino.
-  * **Windows**:
-    ```json
-    "arduino.path": "C:\\Program Files (x86)\\Arduino",
-    "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+4. Look for **Azure IoT Tools** in the extension marketplace and install it.
+    ![Install Azure IoT Tools]({{"/assets/images/getting-started/install-azure-iot-tools.png" | absolute_url }})
+
+5. Configure VS Code with Arduino settings.
+
+    In Visual Studio Code, click **File > Preference > Settings**. Then click the **...** and **Open settings.json**.
+    ![Update Arduino settings]({{"/assets/images/getting-started/user-settings-arduino.png" | absolute_url }})
+    
+    Add following lines to configure Arduino depending on your platform: 
+
+    * **Windows**:
+      
+        ```json
+        "arduino.path": "C:\\Program Files (x86)\\Arduino",
+        "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+        ```
+
+    * **macOS**:
+
+        ```json
+        "arduino.path": "/Applications",
+        "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+        ```
+
+    * **Ubuntu**:
+    
+        Replace the **{username}** placeholder below with your username.
+
+        ```json
+        "arduino.path": "/home/{username}/Downloads/arduino-1.8.8",
+        "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
+        ```
+
+6. Click `F1` to open the command palette, type and select **Arduino: Board Manager**. Search for **AZ3166** and install the latest version.
+    ![Install DevKit SDK]({{"/assets/images/getting-started/install-az3166-sdk.png" | absolute_url }})
+
+### Install ST-Link drivers
+
+[ST-Link/V2](http://www.st.com/en/development-tools/st-link-v2.html) is the USB interface that IoT DevKit uses to communicate with your development machine. Follow the OS-specific steps to allow the machine access to your device.
+
+* **Windows**: Download and install USB driver from [STMicroelectronics website](http://www.st.com/en/development-tools/stsw-link009.html).
+* **macOS**: No driver is required for macOS.
+* **Ubuntu**: Run the following in terminal and log out and log in for the group change to take effect:
+    ```bash
+    # Copy the default rules. This grants permission to the group 'plugdev'
+    sudo cp ~/.arduino15/packages/AZ3166/tools/openocd/0.10.0/linux/contrib/60-openocd.rules /etc/udev/rules.d/
+    sudo udevadm control --reload-rules
+
+    # Add yourself to the group 'plugdev'
+    # Logout and log back in for the group to take effect
+    sudo usermod -a -G plugdev $(whoami)
     ```
-  * **macOS**:
-    ```json
-    "arduino.path": "/Applications",
-    "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
-    ```
-  * **Ubuntu**:
-    ```json
-    "arduino.path": "/home/{username}/Downloads/arduino-1.8.5",
-    "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
-    ```
 
-5. Click `F1` to open the command palette, type and select **Arduino: Board Manager**. Search for **AZ3166** and install the latest version.
-    ![Install DevKit SDK]({{"/assets/images/getting-started/install-sdk.png" | absolute_url }})
-
-As a fallback, you can follow the [manual steps]({{"/docs/installation/" | absolute_url }}) to install the environment.
-
-## ST-Link configuration
-
-[ST-Link/V2](http://www.st.com/en/development-tools/st-link-v2.html) is the USB interface that IoT DevKit uses to communicate with your development machine. Follow the platform specific steps to allow the machine access to your device.
-
-### Windows
-
-Download and install USB driver from [STMicro](http://www.st.com/en/development-tools/stsw-link009.html).
-
-### macOS
-
-No driver is required for macOS.
-
-### Unbutu
-
-Run the following in terminal and logout and login for the group change to take effect:
-```bash
-# Copy the default rules. This grants permission to the group 'plugdev'
-sudo cp ~/.arduino15/packages/AZ3166/tools/openocd/0.10.0/linux/contrib/60-openocd.rules /etc/udev/rules.d/
-sudo udevadm control --reload-rules
-
-# Add yourself to the group 'plugdev'
-# Logout and log back in for the group to take effect
-sudo usermod -a -G plugdev $(whoami)
-```
-
-Now you are all set with preparing and configuring your development environment. Let us build a "Hello World" sample for IoT: sending temperature telemetry data to Azure IoT Hub.
+Now you are all set with preparing and configuring your development environment. Let us build the “Hello World” sample for IoT: sending temperature telemetry data to Azure IoT Hub.
 
 ## Build your first project
 
-1. Make sure your IoT DevKit is **not connected** to your computer. Start VS Code first, and then connect the IoT DevKit to your computer.
+1. Make sure your IoT DevKit is **not connected** to your computer. Start VS Code first, and then connect the DevKit to your computer.
 
-1. In the bottom right status bar, check the **MXCHIP AZ3166** is shown as selected board and serial port with **STMicroelectronics** is used.
-    ![Select board and serial port]({{"/assets/images/getting-started/select-board.png" | absolute_url }})
+1. Click `F1` to open the command palette, type and select **Azure IoT Device Workbench: Open Examples...**. Then select **IoT DevKit** as board.
 
-1. Click `F1` to open the command palette, type and select **IoT Workbench: Examples**. Then select **IoT DevKit** as board.
-
-1. In the pop-up page, scroll down and click **Open Sample** on Get Started tile. Also selects the default path download the sample.
+1. In the IoT Workbench Examples page, find **Get Started** and click **Open Sample**. Then selects the default path to download the sample code.
     ![Open sample]({{"/assets/images/getting-started/open-sample.png" | absolute_url }})
 
-1. If you don't have Arduino extension in VS Code installed, click the **Install** in the notification pane.
-    ![Install Arduino Extension]({{"/assets/images/getting-started/install-arduino-ext.png" | absolute_url }})
-
-1. In the new opened project window, click `F1` to open the command palette, type and select **IoT Workbench: Cloud**, then select **Azure Provision**.
-
-1. Follow the step by step guide to finish provisioning your Azure IoT Hub and creating the device.
+1. In the new opened project window, click `F1` to open the command palette, type and select **Azure IoT Device Workbench: Provision Azure Services...**. Follow the step by step guide to finish provisioning your Azure IoT Hub and creating the IoT Hub device.
     ![Cloud provision]({{"/assets/images/getting-started/cloud-provision.png" | absolute_url }})
 
-1. Click `F1` to open the command palette, type and select **IoT Workbench: Device**, then select **Config Device Settings > Select IoT Hub Device Connection String**.
+1. In the bottom-right status bar, check the **MXCHIP AZ3166** is shown as selected board and serial port with **STMicroelectronics** is used.
+    ![Select board and COM]({{"/assets/images/getting-started/select-com.png" | absolute_url }})
 
-1. On IoT DevKit, hold down button **A**, push and release the **reset** button, and then release button **A**. Your IoT DevKit enters configuration mode and saves the connection string.
-    ![Set connection string]({{"/assets/images/getting-started/connection-string.png" | absolute_url }})
+1. Click `F1` to open the command palette, type and select **Azure IoT Device Workbench: Configure Device Settings...**, then select **Config Device Connection String > Select IoT Hub Device Connection String**.
 
-1. Click `F1` again, type and select **IoT Workbench: Device**, then select **Device Upload**.
-    ![Verification and upload of the Arduino sketch]({{"/assets/images/getting-started/arduino-upload.png" | absolute_url }})
+1. On DevKit, hold down **button A**, push and release the **reset** button, and then release **button A**. Your DevKit enters configuration mode and saves the connection string.
+    ![Connection string]({{"/assets/images/getting-started/connection-string.png" | absolute_url }})
 
-The IoT DevKit reboots and starts running the code.
+1. Click `F1` again, type and select **Azure IoT Device Workbench: Upload Device Code**. It starts compile and upload the code to DevKit.
+    ![Arduino upload]({{"/assets/images/getting-started/arduino-upload.png" | absolute_url }})
+
+The DevKit reboots and starts running the code.
 
 **Note:** If there is errors or interruptions, you can always recover by running the command again.
 {: .notice--info}
