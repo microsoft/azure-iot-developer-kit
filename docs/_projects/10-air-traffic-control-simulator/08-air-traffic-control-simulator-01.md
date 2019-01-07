@@ -27,10 +27,13 @@ icons:
 
 difficulty: HARD
 
-last_modified_at: 2017-10-30
+last_modified_at: 2018-12-18
 ---
 
 {% include toc icon="columns" %}
+
+**Notice:** Content of this tutorial might be obsolete and subject to be updated.
+{: .notice--warning}
 
 ## Introduction
 
