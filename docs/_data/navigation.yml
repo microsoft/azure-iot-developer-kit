@@ -7,7 +7,7 @@ main:
   - title: "Projects"
     url: /docs/projects/
   - title: "Blog"
-    url: https://blogs.msdn.microsoft.com/iotdev/
+    url: https://devblogs.microsoft.com/iotdev/
   - title: "v1.6.0"
     url: /versions/
     class: "masthead-circle"
