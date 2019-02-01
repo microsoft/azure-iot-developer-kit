@@ -7,6 +7,46 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.6.1 (February 1, 2019)
+
+### Release Summary
+
+Time passes by so quickly, now it's 2019.
+This is the first release in 2019 and the last release before Chinese Spring Festival holiday! 
+
+* Upgrade Azure IoT C SDK to 1.2.12.
+* Provide a set of new ANSI C [Board APIs](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/Sensors/src/IoT_DevKit_HW.h) :
+   * Retrieve board info: 
+      * Board name
+      * Serial number
+      * IoT device connection string
+   * Retrieve sensor data: 
+      * Temperature
+      * Pressure
+      * Magnetometer
+      * Gyroscope
+      * Accelerator
+   * Control onboard LEDs, include the user LED and the RGB LED"
+      * Turn on
+      * Turn off
+   * Control the onboard OLED screen:
+      * Write text
+      * Draw image
+      * Clean up
+   * Get button state.
+   * Transmit data via the onboard IrDA.
+   * Special commands:
+      * Blink user LED
+      * Blink RGB LED
+* Re-write the default firmware by using the new ANSI C [Board APIs](https://github.com/Microsoft/devkit-sdk/blob/master/AZ3166/src/libraries/Sensors/src/IoT_DevKit_HW.h).
+* Fixed compile error in [wire.h](https://github.com/Microsoft/devkit-sdk/pull/918).
+
+Special thanks to [douglas-johnston](https://github.com/douglas-johnston) for fixing the compile error in wire.h, thank you for your contributions and feedbacks.
+
+### Downloads
+
+- [Firmware 1.6.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.6.1.72.bin).
+
 
 ## Version 1.6.0 (December 19, 2018)
 
@@ -96,6 +136,7 @@ Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://g
   * Add [setVolume API]({{"docs/apis/audio-v2" | absolute_url }}) to support change the audio volume.
 
 * Mini Solution
+
   * Update the DevKit Translator to use the new [Audio APIs]({{"docs/apis/audio-v2" | absolute_url }}).
 
 * Development Tools
