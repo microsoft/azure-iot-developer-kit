@@ -65,7 +65,7 @@ projects: "0, 1, 4"
 ---
 
 <div class="landing-page-video">
-  {% include whatsnew.html news = "11/30: There is a bug found in Arduino IDE v1.8.7. Please stick with v1.8.6 for the IoT DevKit." link = "Learn more" url="https://github.com/arduino/Arduino/issues/8040" %}
+  {% include whatsnew.html news = "2/11: There is a bug found in Arduino IDE v1.8.7. If you have this version installed on your machine, please upgrade to v1.8.8 for the IoT DevKit." link = "Arduino IDE" url="https://www.arduino.cc/en/Main/Software" %}
 </div>
 
 {% include feature_row id="part1" type="right" %}
