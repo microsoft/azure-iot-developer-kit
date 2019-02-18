@@ -105,13 +105,17 @@ Follow these steps to prepare the development environment for DevKit:
 
 5. Configure VS Code with Arduino settings.
 
-    In Visual Studio Code, click **File > Preference > Settings**. Then click the **...** and **Open settings.json**.
-    ![Update Arduino settings]({{"/assets/images/getting-started/user-settings-arduino.png" | absolute_url }})
-    
-    Add following lines to configure Arduino depending on your platform: 
+    In Visual Studio Code, click **File > Preference > Settings**. 
+
+    ![Open settings]({{"/assets/images/getting-started/setting-1.png" | absolute_url }})
+
+    Type "Arduino" in the search textbox, the **Arduino:Additional Urls** is showed up, then click the hyperlink '**Edit in settings.json**'.
+    ![Find settings]({{"/assets/images/getting-started/setting-2.png" | absolute_url }})
+
+    Make sure the ```"arduino.path"``` and ```"arduino.additionalUrls"``` have been set correctly, if not please add following lines to configure Arduino depending on your platform: 
 
     * **Windows**:
-      
+
         ```json
         "arduino.path": "C:\\Program Files (x86)\\Arduino",
         "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
@@ -125,7 +129,7 @@ Follow these steps to prepare the development environment for DevKit:
         ```
 
     * **Ubuntu**:
-    
+
         Replace the **{username}** placeholder below with your username.
 
         ```json
