@@ -23,7 +23,9 @@ On the chip, it employs data partitions to be used to store critical data such a
 
 ### Enable the secure channel
 
-By default, the security chip is not enabled. It means the data you store on EEPROM is in plain text. There are two ways to enable it:
+By default,  the data you store in STSAFE-A100 is in plain text, enable security channel can encrypt the data and the communication between main chip and  STSAFE-A100 is also protected. 
+
+There are two ways to enable it:
 
 1. Use `enable_secure 1` command in [Configurition Mode]({{"/docs/use-configuration-mode/" | absolute_url }}).
 2. Call `enableHostSecurityChannel()` function in Arduino. see [API reference]({{"/docs/apis/eeprom-interface/" | absolute_url }}).
