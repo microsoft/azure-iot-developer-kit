@@ -11,14 +11,14 @@ last_modified_at: 2018-01-09
 
 ### Release Summary
 
-Two years passed since I got the first IoT DevKit prototype in hand (5 in total), and now tens of thousands of people are playing with it. 
+Two years passed since I got my first IoT DevKit prototype in hand (5 in total), and now tens of thousands of people are playing with it. 
 
 ![SPI]({{"/assets/images/release/first-batch.png" | absolute_url }})
 
 Love and struggle, it's my feeling and also feedback from all of our lovely customers, RESONANCE.
-We're keeping improving this lovely board: add new functions, improve the SDK, add new examples, build new development tool [IoT Device Workbench extension for VS Code](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench), and also try our best to help people in the[chat room](https://gitter.im/Microsoft/azure-iot-developer-kit).
+We're keeping improving this lovely board: add new functions, improve the SDK, add new examples, build new development tool - [IoT Device Workbench extension for VS Code](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-iot-workbench), and also try our best to help people in the [chat room](https://gitter.im/Microsoft/azure-iot-developer-kit).
 
-Now another spring, another step forward, let's have SDK releasd for the lovely board and all loverly customers.
+Now another spring, another step forward, let's have SDK released for the lovely board and all lovely customers.
 
 * Fix all build warnings pump up from underlying RTOS and libraries.
 * Support un-sorted server cert chain during TLS handshake, this is part of TLS 1.3 feature.
