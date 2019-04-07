@@ -13,7 +13,7 @@ last_modified_at: 2017-05-05T10:16:34-04:00
 
 ### GDPR and IoT DevKit
 
-Microsoft collects data to operate effectively and provide you the best experiences. 
+Microsoft collects data to operate effectively and provide you the best experiences
 Participation is voluntary and when you choose to participate, your device automatically sends data to Microsoft about how you use the IoT DevKit.
 
 If you choose to participate, you can stop at any time as described [here](https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-telemetry-reporting).
@@ -42,7 +42,7 @@ You can purchase the kit from our hardware partner's product page: [https://aka.
 
 ### Failed to install Arduino Package for IoT DevKit
 
-Sometimes, whether in the in Arduino IDE or VS Code, developers experience a failure to install the MXChip IoT DevKit package with the following error:
+Sometimes, whether in the Arduino IDE or VS Code, developers experience a failure to install the MXChip IoT DevKit package with the following error:
 
 ![Smartscreen]({{"/assets/images/faq/crc.png" | absolute_url }})
 
@@ -116,7 +116,7 @@ To resolvethis issue, please install the latest version of Arduino IDE [here](ht
         "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
         ```
 
-### Additional warnings during compilation.
+### Additional warnings during compilation
 
 In certain environments, lots of warnings message pops up in the VS Code OUTPUT windows when you invoke `Arduino Verify`, `Arduino Upload` or `task device-upload` to compile the project.
 
@@ -153,7 +153,7 @@ Unable to get the NTP host asia.pool.ntp.org
 Unable to get the NTP host oceania.pool.ntp.org
 ```
 
-This may caused by NTP trafficing at firewall in the Gateway. To solve this problem, make sure that UDP port 123 is open on all firewalls between IoT DevKit and the remote time servers.
+This may caused by NTP traffic blocking at the firewall in the Gateway. To solve this problem, make sure that UDP port 123 is open on all firewalls between IoT DevKit and the remote time servers.
 
 | Time Server | port |
 | --- | --- |
