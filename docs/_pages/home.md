@@ -26,7 +26,7 @@ part1:
   content:
     - title: "Essential modules and sensors on the board save your time and money"
       excerpt: "Wifi, OLED display, headphone, microphone, sensors like temperature, humidity, motion, pressure, you will love how much time and money you save to build your best IoT project."
-      url: "http://www.mxchip.com/az3166"
+      url: "https://aka.ms/iot-devkit-purchase"
       btn_label: "Learn more about IoT DevKit hardware spec"
       image_path: /assets/images/landingpage-banner2.png
       attach: 
