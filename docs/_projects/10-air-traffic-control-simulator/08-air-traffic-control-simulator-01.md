@@ -1,6 +1,6 @@
 ---
 title: "Air Traffic Control Simulator"
-permalink: /docs/projects/air-traffic-control-simulator/
+permalink: /docs/projects/air-traffic-control-simulator-01/
 excerpt: "A comprehensive IoT solution with the very best features Microsoft Azure has to offer."
 part: 1
 header:
