@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "Get Started"
-    url: /docs/get-started/
+    url: https://aka.ms/devkit/tutorial/start
   - title: "Docs"
-    url: /docs/get-started/
+    url: /docs/projects/
   - title: "Projects"
     url: /docs/projects/
   - title: "Blog"
@@ -15,12 +15,6 @@ main:
 
 # documentation links
 docs:
-  - title: Quick Start
-    children:
-      - title: "Get started"
-        url: /docs/get-started/
-      - title: "FAQ"
-        url: /docs/faq/
   - title: Projects Catalog
     url: /docs/projects/
   - title: How-to Guides
@@ -33,6 +27,8 @@ docs:
         url: /docs/understand-security-chip/
       - title: "Disable data collection"
         url: /docs/disable-data-collection/
+  - title: "FAQ"
+    url: /docs/faq/
   - title: API Reference
     children:
       - title: "Arduino"
