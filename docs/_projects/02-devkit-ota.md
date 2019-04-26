@@ -1,5 +1,5 @@
 ---
-title: "IoT DevKit OTA updates"
+title: "Firmware OTA"
 permalink: /docs/projects/devkit-ota/
 redirect_to:
   - https://github.com/Microsoft/vscode-iot-workbench/blob/master/docs/iot-devkit/devkit-ota.md
@@ -10,7 +10,7 @@ header:
   teaser: /assets/images/projects-ota-firmware-update-th.jpg
 icons:
   - url: /assets/images/icon-iot-hub.svg
-    target: https://azure.microsoft.com/en-us/services/iot-hub/
+    target: https://azure.microsoft.com/services/iot-hub/
     title: IoT Hub
 difficulty: MEDIUM
 variable:
