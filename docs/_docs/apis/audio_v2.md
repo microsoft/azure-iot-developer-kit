@@ -26,6 +26,11 @@ AudioClassV2.h
 | [stop](#stop) - `void stop()` |
 | [getAudioState](#getaudiostate) - `int getAudioState()` |
 | [setVolume](#setVolume) - ` bool setVolume(uint8_t volume)` |
+| [readRegister](#readRegister) - `uint16_t readRegister(uint16_t registerAddress)` |
+| [writeRegister](#writeRegister) - `void writeRegister(uint16_t registerAddress, uint16_t value)` |
+| [enableLevelControl](#enableLevelControl) - `void enableLevelControl(uint8_t maxGain, uint8_t minGain)` |
+| [disableLevelControl](#disableLevelControl) - `void disableLevelControl()` |
+| [setPGAGain](#setPGAGain) - `void setPGAGain(uint8_t gain)` |
 
 | Callback scenario methods |
 | :------ |
@@ -178,6 +183,96 @@ int getAudioState();
 > | :--- | :---------- |
 > | bool | returns true on success, or false on failure |
 
+### readRegister
+
+```
+uint16_t readRegister(uint16_t registerAddress)
+```
+
+> Read the given nau88c10 register.
+> 
+> #### Parameters
+>
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | uint16_t | registerAddress | Register address |
+>
+> #### Return value
+>
+> | Type | Description |
+> | :--- | :---------- |
+> | uint16_t | the integer value in the register |
+
+### writeRegister
+
+```
+void writeRegister(uint16_t registerAddress, uint16_t value)
+```
+
+> Write the given nau88c10 register.
+> 
+> #### Parameters
+>
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | uint16_t | registerAddress | Register address |
+> | uint16_t | value | The value to write |
+>
+> #### Return value
+>
+> None
+
+### enableLevelControl
+
+```
+void enableLevelControl(uint8_t maxGain, uint8_t minGain)
+```
+
+> Enable automatic level control with given min and max gain as per ALCMXGAIN and ALCMNGAIN (register 0x20).
+> 
+> #### Parameters
+>
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | uint8_t | maxGain | A value between 0 and 7 |
+> | uint8_t | minGain | A value between 0 and 7 |
+>
+> #### Return value
+>
+> None
+
+### disableLevelControl
+
+```
+void disableLevelControl()
+```
+
+>  Disable automatic level control (register 0x20).
+> 
+> #### Parameters
+> None
+>
+> #### Return value
+>
+> None
+
+### setPGAGain
+
+```
+void setPGAGain(uint8_t gain)
+```
+
+> set the Programmable Gain Amplifier directly (this will disable automatic level control).
+> 
+> #### Parameters
+>
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | uint8_t | gain | A value between 0 and 0x3F |
+>
+> #### Return value
+>
+> None
 
 ## Callback scenario methods
 ### startRecord
