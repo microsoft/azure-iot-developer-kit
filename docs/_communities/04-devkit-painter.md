@@ -6,7 +6,7 @@ header:
   image: /assets/images/communities-pixelcraft.jpg
   teaser: /assets/images/communities-pixelcraft-th.jpg
 contributor:
-  github_id: Sneerzy
+  github_id: Zhe Li
   github_url: "https://github.com/Sneezry"
   github_avatar_url: "https://avatars1.githubusercontent.com/u/1621293?s=60&v=4"
 difficulty: EASY
