@@ -1,5 +1,5 @@
 ---
-title: "MXChip and Cloud Controlled Fan"
+title: "Cloud Controlled Fan"
 link: "https://github.com/jimbobbennett/InternetConnectedFan/blob/master/README.md"
 excerpt: "Keep yourself cool with an internet connected fan that turns on when the temperature rises and turns off when it cools."
 header:
