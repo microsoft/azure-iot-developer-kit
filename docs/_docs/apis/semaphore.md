@@ -5,7 +5,7 @@ excerpt: "Library for Semaphore on AZ3166"
 last_modified_at: 2018-01-09T05:16:34-04:00
 ---
 
-The Semaphore class, provides by the underlining mbed OS, is used to manage thread access to a pool of shared resources of a certain type.
+The Semaphore class, provided by the underlining MbedOS, is used to manage thread access to a pool of shared resources of a certain type.
 For more information about Semaphore, please visit [MbedOS](https://os.mbed.com/docs/v5.6/reference/semaphore.html){:target="_blank"}.
 
 ## Assembly
@@ -48,7 +48,7 @@ rtos::Semaphore::Semaphore(int32_t count = 0)
 osStatus rtos::Semaphore::release(void) 
 ```
 
-> Release a Semaphore resource that was obtain with Semaphore::wait. 
+> Release a Semaphore resource that was obtained with Semaphore::wait. 
 >
 > #### Return value
 > 
