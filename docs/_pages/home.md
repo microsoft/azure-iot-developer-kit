@@ -18,7 +18,7 @@ header:
       url: "https://aka.ms/iot-devkit-simulator"
   extra_logo:
     - image_path: /assets/images/logo-azure-certified.svg
-      url: "https://catalog.azureiotsuite.com/details?title=MXChip-IoT-DevKit&source=home-page"
+      url: "https://catalog.azureiotsolutions.com/details?title=MXChip-IoT-DevKit&source=home-page"
   align: center
 excerpt: "All the sensors and parts you love, no soldering needed. Welcome to cloud IoT development."
 part1:
