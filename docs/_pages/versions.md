@@ -540,7 +540,7 @@ After a month work of stabilizing the code, fixing bugs and adding more samples,
 
 * Project Catalog
   * Add 'Connect to Azure IoT Hub' example and documentation that align with other [Azure IoT Hub get started tutorials](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-get-started){:target="_blank"}.
-  * Add 'Remote Monitoring' example and documentation that make IoT DevKit connect to [Azure IoT Suite](https://www.azureiotsuite.com){:target="_blank"}.
+  * Add 'Remote Monitoring' example and documentation that make IoT DevKit connect to [Azure IoT solution accelerators](https://www.azureiotsolutions.com/Accelerators){:target="_blank"}.
   * Add 'MQTT Client' example and documentation that send MQTT messages to public free MQTT broker.
   * Shake, Shake: Use testing Twitter bearer token as default, developer can replace it with her own by following the tutorial.
   * Shake, Shake: Add delay and retry logic when not receiving any message due to function delay.

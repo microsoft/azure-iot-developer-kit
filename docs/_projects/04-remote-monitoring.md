@@ -20,8 +20,8 @@ layouts_gallery:
     alt: "View sensor status"
 icons:
   - url: /assets/images/icon-azure-iot-suite.svg
-    target: https://azure.microsoft.com/suites/iot-suite/
-    title: Azure IoT Suite
+    target: https://azure.microsoft.com/en-us/features/iot-accelerators/
+    title: Azure IoT solution accelerators
 difficulty: EASY
 variable:
   - platform: windows
