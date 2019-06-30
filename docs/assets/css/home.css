@@ -1,8 +1,8 @@
 @font-face{
   font-family: FabricMDL2Icons;
-  src: url(https://static2.sharepointonline.com/files/fabric/assets/icons/fabricmdl2icons-2.68.woff2) format("woff2"),
-       url(https://static2.sharepointonline.com/files/fabric/assets/icons/fabricmdl2icons-2.68.woff) format("woff"),
-       url(https://static2.sharepointonline.com/files/fabric/assets/icons/fabricmdl2icons-2.68.ttf) format("truetype");
+  src: url(https://static2.sharepointonline.com/files/fabric/../icons/fabricmdl2icons-2.68.woff2) format("woff2"),
+       url(https://static2.sharepointonline.com/files/fabric/../icons/fabricmdl2icons-2.68.woff) format("woff"),
+       url(https://static2.sharepointonline.com/files/fabric/../icons/fabricmdl2icons-2.68.ttf) format("truetype");
   font-weight: 400;
   font-style: normal
 }
@@ -402,7 +402,7 @@ body {
   background-color: #0043b5;
   height: 720px;
   position: relative;
-  background-image: url(assets/images/banner_dot.svg);
+  background-image: url(../images/banner_dot.svg);
   background-size: 50px 50px;
 }
 
@@ -418,8 +418,8 @@ body {
 }
 
 .header::before {
-  background: url(assets/images/banner_module.svg) 0 0 / 990px 110px,
-              url(assets/images/banner_module.svg) 495px 55px / 990px 110px,
+  background: url(../images/banner_module.svg) 0 0 / 990px 110px,
+              url(../images/banner_module.svg) 495px 55px / 990px 110px,
               linear-gradient(rgba(0,50,143,1) 50px, rgba(0,50,143,0) 50%);
 }
 
@@ -465,7 +465,7 @@ body {
   width: 95px;
   height: 95px;
   display: block;
-  background: url(assets/images/logo-azure-certified.svg) no-repeat;
+  background: url(../images/logo-azure-certified.svg) no-repeat;
   background-size: 95px 95px;
   position: absolute;
   right: 90px;
@@ -506,7 +506,7 @@ body {
 }
 
 .header .content .devkit .back {
-  background-image: url(assets/images/board_back.png);
+  background-image: url(../images/board_back.png);
   right: 0;
   top: 0;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.75)) blur(0.4px) brightness(0.9);
@@ -514,7 +514,7 @@ body {
 }
 
 .header .content .devkit .front {
-  background-image: url(assets/images/board_front.png);
+  background-image: url(../images/board_front.png);
   left: 0;
   bottom: 0;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.35));
@@ -619,18 +619,18 @@ body {
 }
 
 .benefits .details .item .puzzle::after {
-  -webkit-mask-image: url(assets/images/benefits_puzzle.svg);
-  mask-image: url(assets/images/benefits_puzzle.svg);
+  -webkit-mask-image: url(../images/benefits_puzzle.svg);
+  mask-image: url(../images/benefits_puzzle.svg);
 }
 
 .benefits .details .item .vscode::after {
-  -webkit-mask-image: url(assets/images/benefits_vscode.svg);
-  mask-image: url(assets/images/benefits_vscode.svg);
+  -webkit-mask-image: url(../images/benefits_vscode.svg);
+  mask-image: url(../images/benefits_vscode.svg);
 }
 
 .benefits .details .item .cloud::after {
-  -webkit-mask-image: url(assets/images/benefits_cloud.svg);
-  mask-image: url(assets/images/benefits_cloud.svg);
+  -webkit-mask-image: url(../images/benefits_cloud.svg);
+  mask-image: url(../images/benefits_cloud.svg);
 }
 
 .benefits .details .item .content {
@@ -671,8 +671,8 @@ body {
 }
 
 .feedbacks .inner {
-  background: url(assets/images/quotation\ marks_left.svg) no-repeat 5px 0,
-              url(assets/images/quotation\ marks_right.svg) no-repeat right 5px bottom 5px;
+  background: url(../images/quotation\ marks_left.svg) no-repeat 5px 0,
+              url(../images/quotation\ marks_right.svg) no-repeat right 5px bottom 5px;
   background-size: 200px 200px;
   padding: 60px 0;
 }
@@ -812,7 +812,7 @@ body {
   position: relative;
   padding: 60px 0;
   color: white;
-  background: url(assets/images/cloud.svg) no-repeat center;
+  background: url(../images/cloud.svg) no-repeat center;
   background-size: cover;
   background-color: #0043b5;
 }
@@ -825,7 +825,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url(assets/images/banner_dot.svg);
+  background-image: url(../images/banner_dot.svg);
   background-size: 50px 50px;
 }
 
@@ -898,7 +898,7 @@ body {
   width: 16px;
   height: 16px;
   margin-left: -20px;
-  background: url(assets/images/github.svg) no-repeat center;
+  background: url(../images/github.svg) no-repeat center;
   background-size: contain;
   float: left;
 }
@@ -985,101 +985,101 @@ body {
 }
 
 .environment .extension .info .meta .star0::before {
-  background: url(assets/images/empty_star.svg) no-repeat 2px 0,
-              url(assets/images/empty_star.svg) no-repeat 20px 0,
-              url(assets/images/empty_star.svg) no-repeat 38px 0,
-              url(assets/images/empty_star.svg) no-repeat 56px 0,
-              url(assets/images/empty_star.svg) no-repeat 74px 0;
+  background: url(../images/empty_star.svg) no-repeat 2px 0,
+              url(../images/empty_star.svg) no-repeat 20px 0,
+              url(../images/empty_star.svg) no-repeat 38px 0,
+              url(../images/empty_star.svg) no-repeat 56px 0,
+              url(../images/empty_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
 .environment .extension .info .meta .star05::before {
-  background: url(assets/images/half_star.svg) no-repeat 2px 0,
-              url(assets/images/empty_star.svg) no-repeat 20px 0,
-              url(assets/images/empty_star.svg) no-repeat 38px 0,
-              url(assets/images/empty_star.svg) no-repeat 56px 0,
-              url(assets/images/empty_star.svg) no-repeat 74px 0;
+  background: url(../images/half_star.svg) no-repeat 2px 0,
+              url(../images/empty_star.svg) no-repeat 20px 0,
+              url(../images/empty_star.svg) no-repeat 38px 0,
+              url(../images/empty_star.svg) no-repeat 56px 0,
+              url(../images/empty_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
 .environment .extension .info .meta .star1::before {
-  background: url(assets/images/full_star.svg) no-repeat 2px 0,
-              url(assets/images/empty_star.svg) no-repeat 20px 0,
-              url(assets/images/empty_star.svg) no-repeat 38px 0,
-              url(assets/images/empty_star.svg) no-repeat 56px 0,
-              url(assets/images/empty_star.svg) no-repeat 74px 0;
+  background: url(../images/full_star.svg) no-repeat 2px 0,
+              url(../images/empty_star.svg) no-repeat 20px 0,
+              url(../images/empty_star.svg) no-repeat 38px 0,
+              url(../images/empty_star.svg) no-repeat 56px 0,
+              url(../images/empty_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
 .environment .extension .info .meta .star15::before {
-  background: url(assets/images/full_star.svg) no-repeat 2px 0,
-              url(assets/images/half_star.svg) no-repeat 20px 0,
-              url(assets/images/empty_star.svg) no-repeat 38px 0,
-              url(assets/images/empty_star.svg) no-repeat 56px 0,
-              url(assets/images/empty_star.svg) no-repeat 74px 0;
+  background: url(../images/full_star.svg) no-repeat 2px 0,
+              url(../images/half_star.svg) no-repeat 20px 0,
+              url(../images/empty_star.svg) no-repeat 38px 0,
+              url(../images/empty_star.svg) no-repeat 56px 0,
+              url(../images/empty_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
 .environment .extension .info .meta .star2::before {
-  background: url(assets/images/full_star.svg) no-repeat 2px 0,
-              url(assets/images/full_star.svg) no-repeat 20px 0,
-              url(assets/images/empty_star.svg) no-repeat 38px 0,
-              url(assets/images/empty_star.svg) no-repeat 56px 0,
-              url(assets/images/empty_star.svg) no-repeat 74px 0;
+  background: url(../images/full_star.svg) no-repeat 2px 0,
+              url(../images/full_star.svg) no-repeat 20px 0,
+              url(../images/empty_star.svg) no-repeat 38px 0,
+              url(../images/empty_star.svg) no-repeat 56px 0,
+              url(../images/empty_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
 .environment .extension .info .meta .star25::before {
-  background: url(assets/images/full_star.svg) no-repeat 2px 0,
-              url(assets/images/full_star.svg) no-repeat 20px 0,
-              url(assets/images/half_star.svg) no-repeat 38px 0,
-              url(assets/images/empty_star.svg) no-repeat 56px 0,
-              url(assets/images/empty_star.svg) no-repeat 74px 0;
+  background: url(../images/full_star.svg) no-repeat 2px 0,
+              url(../images/full_star.svg) no-repeat 20px 0,
+              url(../images/half_star.svg) no-repeat 38px 0,
+              url(../images/empty_star.svg) no-repeat 56px 0,
+              url(../images/empty_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
 .environment .extension .info .meta .star3::before {
-  background: url(assets/images/full_star.svg) no-repeat 2px 0,
-              url(assets/images/full_star.svg) no-repeat 20px 0,
-              url(assets/images/full_star.svg) no-repeat 38px 0,
-              url(assets/images/empty_star.svg) no-repeat 56px 0,
-              url(assets/images/empty_star.svg) no-repeat 74px 0;
+  background: url(../images/full_star.svg) no-repeat 2px 0,
+              url(../images/full_star.svg) no-repeat 20px 0,
+              url(../images/full_star.svg) no-repeat 38px 0,
+              url(../images/empty_star.svg) no-repeat 56px 0,
+              url(../images/empty_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
 .environment .extension .info .meta .star35::before {
-  background: url(assets/images/full_star.svg) no-repeat 2px 0,
-              url(assets/images/full_star.svg) no-repeat 20px 0,
-              url(assets/images/full_star.svg) no-repeat 38px 0,
-              url(assets/images/half_star.svg) no-repeat 56px 0,
-              url(assets/images/empty_star.svg) no-repeat 74px 0;
+  background: url(../images/full_star.svg) no-repeat 2px 0,
+              url(../images/full_star.svg) no-repeat 20px 0,
+              url(../images/full_star.svg) no-repeat 38px 0,
+              url(../images/half_star.svg) no-repeat 56px 0,
+              url(../images/empty_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
 .environment .extension .info .meta .star4::before {
-  background: url(assets/images/full_star.svg) no-repeat 2px 0,
-              url(assets/images/full_star.svg) no-repeat 20px 0,
-              url(assets/images/full_star.svg) no-repeat 38px 0,
-              url(assets/images/full_star.svg) no-repeat 56px 0,
-              url(assets/images/empty_star.svg) no-repeat 74px 0;
+  background: url(../images/full_star.svg) no-repeat 2px 0,
+              url(../images/full_star.svg) no-repeat 20px 0,
+              url(../images/full_star.svg) no-repeat 38px 0,
+              url(../images/full_star.svg) no-repeat 56px 0,
+              url(../images/empty_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
 .environment .extension .info .meta .star45::before {
-  background: url(assets/images/full_star.svg) no-repeat 2px 0,
-              url(assets/images/full_star.svg) no-repeat 20px 0,
-              url(assets/images/full_star.svg) no-repeat 38px 0,
-              url(assets/images/full_star.svg) no-repeat 56px 0,
-              url(assets/images/half_star.svg) no-repeat 74px 0;
+  background: url(../images/full_star.svg) no-repeat 2px 0,
+              url(../images/full_star.svg) no-repeat 20px 0,
+              url(../images/full_star.svg) no-repeat 38px 0,
+              url(../images/full_star.svg) no-repeat 56px 0,
+              url(../images/half_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
 .environment .extension .info .meta .star5::before {
-  background: url(assets/images/full_star.svg) no-repeat 2px 0,
-              url(assets/images/full_star.svg) no-repeat 20px 0,
-              url(assets/images/full_star.svg) no-repeat 38px 0,
-              url(assets/images/full_star.svg) no-repeat 56px 0,
-              url(assets/images/full_star.svg) no-repeat 74px 0;
+  background: url(../images/full_star.svg) no-repeat 2px 0,
+              url(../images/full_star.svg) no-repeat 20px 0,
+              url(../images/full_star.svg) no-repeat 38px 0,
+              url(../images/full_star.svg) no-repeat 56px 0,
+              url(../images/full_star.svg) no-repeat 74px 0;
   background-size: 16px;
 }
 
@@ -1168,27 +1168,27 @@ body {
 }
 
 .environment .gallery .item .services .iothub {
-  background-image: url(assets/images/icon-iot-hub.svg);
+  background-image: url(../images/icon-iot-hub.svg);
 }
 
 .environment .gallery .item .services .functions {
-  background-image: url(assets/images/icon-azure-functions.svg);
+  background-image: url(../images/icon-azure-functions.svg);
 }
 
 .environment .gallery .item .services .suite {
-  background-image: url(assets/images/icon-azure-iot-suite.svg);
+  background-image: url(../images/icon-azure-iot-suite.svg);
 }
 
 .environment .gallery .item .services .cognitive {
-  background-image: url(assets/images/icon-cognitive-services.svg);
+  background-image: url(../images/icon-cognitive-services.svg);
 }
 
 .environment .gallery .item .services .eventhub {
-  background-image: url(assets/images/icon-event-hub.svg);
+  background-image: url(../images/icon-event-hub.svg);
 }
 
 .environment .gallery .item .services .sendgrid {
-  background-image: url(assets/images/icon-sendgrid.svg);
+  background-image: url(../images/icon-sendgrid.svg);
 }
 
 .footer {
@@ -1233,14 +1233,14 @@ body {
 }
 
 .footer .social a.github::before {
-  mask-image: url(assets/images/github.svg);
-  -webkit-mask-image: url(assets/images/github.svg);
+  mask-image: url(../images/github.svg);
+  -webkit-mask-image: url(../images/github.svg);
   background-color: #212121
 }
 
 .footer .social a.feed::before {
-  mask-image: url(assets/images/feed.svg);
-  -webkit-mask-image: url(assets/images/feed.svg);
+  mask-image: url(../images/feed.svg);
+  -webkit-mask-image: url(../images/feed.svg);
   background-color: orange;
 }
 
