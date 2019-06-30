@@ -1,5 +1,5 @@
 ---
-layout: empty
+layout: new-home
 permalink: /
 ---
 <div id="nav">
