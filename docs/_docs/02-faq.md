@@ -105,7 +105,7 @@ To resolvethis issue, please install the latest version of Arduino IDE [here](ht
     * macOS
 
         ```JSON
-        "arduino.path": "/Application",
+        "arduino.path": "/Applications",
         "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json"
         ```
 
