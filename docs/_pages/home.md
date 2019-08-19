@@ -23,7 +23,7 @@ permalink: /
       <input type="checkbox" />
       <span class="inner-text">Help</span>
       <ul class="dropdown-list">
-        <li class="dropdown-item"><a href="#1">123</a></li>
+        <li class="dropdown-item"><a href="#1">test yangkai help</a></li>
       </ul>
     </span>
     <a href="https://devblogs.microsoft.com/iotdev/" class="item">Blog</a>
