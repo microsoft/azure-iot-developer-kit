@@ -10,7 +10,7 @@ permalink: /
     <label class="menu-switch" for="menu-switch"></label>
     <a href="https://aka.ms/devkit/tutorial/start" class="item">Get Started</a>
     <a href="{{ site.url }}/docs/projects/" class="item">Docs</a>
-    <a href="{{ site.url }}/docs/projects/" class="item">Projects</a>
+    <a href="{{ site.url }}{{ site.baseurl }}/docs/projects/" class="item">Projects</a>
     <span class="item dropdown">
       <input type="checkbox" />
       <span class="inner-text">Tools</span>
@@ -21,7 +21,7 @@ permalink: /
       </ul>
     </span>
     <a href="https://devblogs.microsoft.com/iotdev/" class="item">Blog</a>
-    <a href="{{ site.url }}/versions/" class="version">V1.6.2</a>
+    <a href="{{ site.baseurl }}/versions/" class="version">V1.6.2</a>
   </span>
 </div>
 
@@ -33,8 +33,8 @@ permalink: /
       <div class="description">All the seneors and parts you love, no soldering needed. Welcome to cloud IoT
         development.</div>
       <div class="button-group">
-        <button class="btn primary"><span>Get a Kit</span></button>
-        <button class="btn outline"><span>Project Catalog</span></button>
+        <button class="btn primary" onclick="window.location.href='https://aka.ms/iot-devkit-purchase'"><span>Get a Kit</span></button>
+        <button class="btn outline" onclick="window.location.href='{{ site.baseurl }}/docs/projects/'"><span>Project Catalog</span></button>
       </div>
       <div class="devkit">
         <input type="checkbox">
