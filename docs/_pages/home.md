@@ -8,22 +8,16 @@ permalink: /
   <label class="menu-switch" for="menu-switch"></label>
   <span class="menu">
     <label class="menu-switch" for="menu-switch"></label>
-    <a href="#" class="item">Get Started</a>
-    <a href="#" class="item">Docs</a>
-    <a href="#" class="item">Projects</a>
+    <a href="https://aka.ms/devkit/tutorial/start" class="item">Get Started</a>
+    <a href="{{ domain }}/docs/projects/" class="item">Docs</a>
+    <a href="{{ domain }}/docs/projects/" class="item">Projects</a>
     <span class="item dropdown">
       <input type="checkbox" />
       <span class="inner-text">Tools</span>
       <ul class="dropdown-list">
-        <li class="dropdown-item"><a href="#1">Simulator</a></li>
-        <li class="dropdown-item"><a href="#1">Get Started</a></li>
-      </ul>
-    </span>
-    <span class="item dropdown">
-      <input type="checkbox" />
-      <span class="inner-text">Help</span>
-      <ul class="dropdown-list">
-        <li class="dropdown-item"><a href="#1">test yangkai help</a></li>
+        <li class="dropdown-item"><a href="https://aka.ms/azure-iot-tools">Azure IoT Tools</a></li>
+        <li class="dropdown-item"><a href="https://aka.ms/iot-workbench">Azure IoT Device Workbench</a></li>
+        <li class="dropdown-item"><a href="https://aka.ms/iot-devkit-simulator">MXChip IoT DevKit Simulator</a></li>
       </ul>
     </span>
     <a href="https://devblogs.microsoft.com/iotdev/" class="item">Blog</a>
