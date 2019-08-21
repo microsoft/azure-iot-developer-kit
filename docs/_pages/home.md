@@ -18,6 +18,18 @@ benefits_content:
     icon: "icon cloud"
     content: "Visual Studio Code is lightweight and your goto editor of choice. It is your all-in-one tool from coding the first line to deploying to the cloud."
     more_content: "Learn more about projects using Azure services"
+comments_content:
+  - words: "This eliminates the need to have electronics knowledge and the need to do any wiring or soldering in order to get started prototyping IoT solutions."
+    photo: assets/images/testimony-chris-pietschmann.jpg
+    name: Chris Pietschmann
+    title: BuildAzure.com
+  - words: "The sample code included scripts taking advantage of Visual Studio Code’s built-in terminal, so I didn’t have to leave my IDE to use the Azure Portal."
+    photo: assets/images/testimony-simon-bisson.jpg
+    name: Simon Bisson
+    title: InfoWorld
+  - words: "Getting excited about this awesome new product from @MicrosoftIoT build a #Cloud powered #IoT app in mins!"
+    photo: assets/images/testimony-sciencescope.jpg
+    name: ScienceScope
 ---
 <div id="nav">
   <span class="title">IoT DevKit</span>
@@ -107,37 +119,18 @@ benefits_content:
       <input type="radio" id="feedback2" name="feedback-slider" checked>
       <input type="radio" id="feedback3" name="feedback-slider">
       <div class="slider">
+      {% for item in page.benefits_content %}
         <div class="talk-box">
-          <div class="words">"This eliminates the need to have electronics knowledge and the need to do any wiring or soldering in order to get started prototyping IoT solutions."</div>
+          <div class="words">{{ item.words }}</div>
           <div class="author">
-            <img src="assets/images/testimony-chris-pietschmann.jpg">
+            <img src="{{ item.photo }}">
             <div class="info">
-              <div class="name">Chris Pietschmann</div>
-              <div class="org">BuildAzure.com</div>
+              <div class="name">{{ item.name }}</div>
+              <div class="org">{{ item.tittle }}</div>
             </div>
           </div>
         </div>
-        <div class="talk-box">
-          <div class="words">"The sample code included scripts taking advantage of Visual Studio Code’s built-in
-            terminal, so I didn’t have to leave my IDE to use the Azure Portal."</div>
-          <div class="author">
-            <img src="assets/images/testimony-simon-bisson.jpg">
-            <div class="info">
-              <div class="name">Simon Bisson</div>
-              <div class="org">InfoWorld</div>
-            </div>
-          </div>
-        </div>
-        <div class="talk-box">
-          <div class="words">"Getting excited about this awesome new product from @MicrosoftIoT build a #Cloud powered #IoT app in mins!"</div>
-          <div class="author">
-            <img src="assets/images/testimony-sciencescope.jpg">
-            <div class="info">
-              <div class="name">ScienceScope</div>
-              <div class="org"></div>
-            </div>
-          </div>
-        </div>
+      {% endfor %}
       </div>
       <div class="arrow">
         <label for="feedback1" class="left"></label>
