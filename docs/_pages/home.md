@@ -179,8 +179,8 @@ projects: "0, 3, 10"
       {% for projectStr in projects %}
         {% assign projectNum = projectStr | plus: 0 %}
         {% assign post = site.projects[projectNum] %}
-        <div class="item">
-          <div class="cover" style="background-image: url({{ post.header.teaser }})"></div>
+        <div class="item" onclick="window.open('{{ post.redirect_to }}')">
+          <div class="cover" style="background-image: url({{ post.header.teaser_url }})"></div>
           <div class="title">{{ post.title }}</div>
           <div class="description">{{ post.excerpt }}</div>
           <div class="services"><span class="iothub"></span></div>

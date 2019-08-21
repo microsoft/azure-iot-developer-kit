@@ -8,6 +8,7 @@ header:
   overlay_image: /assets/images/projects-devkit-dictionary.png
   overlay_full: true
   teaser: /assets/images/projects-devkit-dictionary.png
+  teaser_url: assets/images/projects-devkit-dictionary.png
 icons:
   - url: /assets/images/icon-iot-hub.svg
     target: https://azure.microsoft.com/services/iot-hub/
