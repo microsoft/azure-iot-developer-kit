@@ -214,15 +214,23 @@ projects: "0, 3, 10"
   <div class="inner">
     <!-- <h2>Community</h2> -->
     <div class="list">
-      <div class="item">IoT DevKit:<a href="#">FAQ</a><a href="#" class="github">GITHUB</a><a href="#" class="gitter devkit"></a></div>
-      <div class="item">IoT Device Workbench:<a href="#" class="github">GITHUB</a><a href="#" class="gitter workbench"></a></div>
+      <div class="item">IoT DevKit:<a href="https://microsoft.github.io/azure-iot-developer-kit/docs/faq/">FAQ</a>
+      <a href="http://github.com/Microsoft/azure-iot-developer-kit" class="github">GITHUB</a>
+      <a href="https://gitter.im/Microsoft/azure-iot-developer-kit" class="gitter devkit"></a>
+      </div>
+      <div class="item">IoT Device Workbench:<a href="https://github.com/microsoft/vscode-iot-workbench" class="github">GITHUB</a>
+      <a href="https://gitter.im/Microsoft/vscode-iot-workbench" class="gitter workbench"></a>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="footer">
   <div class="social">
-    FOLLOW: <a href="#" class="github">GITHUB</a><a href="#" class="feed">FEED</a>
+    FOLLOW: 
+    {% if site.author.github %}
+      <a href="http://github.com/{{ site.author.github }}" class="github">GITHUB</a>
+    {% endif %}
   </div>
   <div class="copyright">
     Copyright &copy; 2019 Microsoft Corp.
