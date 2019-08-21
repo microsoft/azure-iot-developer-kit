@@ -186,7 +186,7 @@ projects: "0, 3, 10"
           <div class="services">
               {% if projectNum == 3 %}
                 <span class="suite"></span>
-              {% elseif projectNum == 10%}
+              {% elsif projectNum == 10 %}
                 <span class="iothub"></span><span class="cognitive"></span>
               {% else %}
                 <span class="iothub"></span>
