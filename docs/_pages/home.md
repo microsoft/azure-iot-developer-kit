@@ -9,8 +9,8 @@ permalink: /
   <span class="menu">
     <label class="menu-switch" for="menu-switch"></label>
     <a href="https://aka.ms/devkit/tutorial/start" class="item">Get Started</a>
-    <a href="{{ domain }}/docs/projects/" class="item">Docs</a>
-    <a href="{{ domain }}/docs/projects/" class="item">Projects</a>
+    <a href="{{ site.url }}/docs/projects/" class="item">Docs</a>
+    <a href="{{ site.url }}/docs/projects/" class="item">Projects</a>
     <span class="item dropdown">
       <input type="checkbox" />
       <span class="inner-text">Tools</span>
@@ -21,7 +21,7 @@ permalink: /
       </ul>
     </span>
     <a href="https://devblogs.microsoft.com/iotdev/" class="item">Blog</a>
-    <a href="#" class="version">V1.6.2</a>
+    <a href="{{ site.url }}/versions/" class="version">V1.6.2</a>
   </span>
 </div>
 

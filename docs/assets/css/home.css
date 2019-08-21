@@ -341,6 +341,7 @@ body {
 }
 
 #nav .dropdown .dropdown-list .dropdown-item a {
+  width: 200px;
   padding: 0 15px;
   display: block;
   text-decoration: none;
