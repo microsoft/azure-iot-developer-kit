@@ -80,7 +80,7 @@ benefits_content:
   <div class="inner">
     <h2>Benefits</h2>
     <div class="details">
-      {% for item in benefits_content %}
+      {% for item in page.benefits_content %}
         {% if item.url contains 'http' %}
           {% assign domain = '' %}
         {% else %}
