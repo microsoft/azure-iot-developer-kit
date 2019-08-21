@@ -30,6 +30,7 @@ comments_content:
   - words: "Getting excited about this awesome new product from @MicrosoftIoT build a #Cloud powered #IoT app in mins!"
     photo: assets/images/testimony-sciencescope.jpg
     name: ScienceScope
+ projects: "0, 3, 10"
 ---
 <div id="nav">
   <span class="title">IoT DevKit</span>
@@ -156,39 +157,37 @@ comments_content:
         <div class="title"><strong>Azure IoT Tools</strong></div>
         <div class="meta">
           <span class="publisher">Microsoft</span>
-          <span class="installs">9,246 installs</span>
-          <span class="downloads">14,014 downloads</span>
-          <span class="star star5">(1)</span>
+          <span class="installs">14,892 installs</span>
+          <span class="downloads">29,052 downloads</span>
+          <span class="star star5">(2)</span>
           <span class="free">Free</span>
         </div>
         <div class="description">
           The ultimate collection of extensions for working with Azure IoT in VS Code!
         </div>
         <div class="button">
+          <a href="https://aka.ms/iot-devkit-purchase">
           <button class="btn primary"><span>View more</span></button>
+          </a>
         </div>
       </div>
     </div>
     <h3>Sample projects for development</h3>
     <div class="gallery">
-      <div class="item">
-        <div class="cover" style="background-image: url(assets/images/projects-devkit-get-started-th.jpg)"></div>
-        <div class="title">Get Started</div>
-        <div class="description">Send sensor data from DevKit to Azure IoTHub.</div>
-        <div class="services"><span class="iothub"></span></div>
-      </div>
-      <div class="item">
-        <div class="cover" style="background-image: url(assets/images/projects-remote-monitoring-th.jpg)"></div>
-        <div class="title">Remote Monitoring</div>
-        <div class="description">Visualize sensors status on IoT DevKit using Azure IoT Remote Monitoring solution accelerator.</div>
-        <div class="services"><span class="suite"></span></div>
-      </div>
-      <div class="item">
-        <div class="cover" style="background-image: url(assets/images/projects-devkit-dictionary.png)"></div>
-        <div class="title">IoT Devkit Dictionary</div>
-        <div class="description">Learn how to configure DevKit to use Azure Speech Service and Oxford dictionaries API.</div>
-        <div class="services"><span class="iothub"></span><span class="cognitive"></span></div>
-      </div>
+      {% assign projects = page.projects | split: "," %}
+
+      {% for projectStr in projects %}
+        {% assign projectNum = projectStr | plus: 0 %}
+        {% assign post = site.projects[projectNum] %}
+        <a href="{{ post.redirect_to }}<">
+        <div class="item">
+          <div class="cover" style="background-image: url({{ post.header.teaser }})"></div>
+          <div class="title">{{ post.title }}</div>
+          <div class="description">{{ post.excerpt }}</div>
+          <div class="services"><span class="iothub"></span></div>
+        </div>
+        </a>
+      {% endfor %}
     </div>
   </div>
 </div>
