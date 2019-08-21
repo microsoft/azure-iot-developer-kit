@@ -30,7 +30,7 @@ comments_content:
   - words: "Getting excited about this awesome new product from @MicrosoftIoT build a #Cloud powered #IoT app in mins!"
     photo: assets/images/testimony-sciencescope.jpg
     name: ScienceScope
- projects: "0, 3, 10"
+projects: "0, 3, 10"
 ---
 <div id="nav">
   <span class="title">IoT DevKit</span>
