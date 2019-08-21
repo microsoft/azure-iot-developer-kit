@@ -9,8 +9,8 @@ permalink: /
   <span class="menu">
     <label class="menu-switch" for="menu-switch"></label>
     <a href="https://aka.ms/devkit/tutorial/start" class="item">Get Started</a>
-    <a href="{{ site.url }}/docs/projects/" class="item">Docs</a>
-    <a href="{{ site.url }}{{ site.baseurl }}/docs/projects/" class="item">Projects</a>
+    <a href="{{ site.baseurl }}/docs/projects/" class="item">Docs</a>
+    <a href="{{ site.baseurl }}/docs/projects/" class="item">Projects</a>
     <span class="item dropdown">
       <input type="checkbox" />
       <span class="inner-text">Tools</span>
@@ -33,8 +33,12 @@ permalink: /
       <div class="description">All the seneors and parts you love, no soldering needed. Welcome to cloud IoT
         development.</div>
       <div class="button-group">
-        <button class="btn primary" onclick="window.location.href='https://aka.ms/iot-devkit-purchase'"><span>Get a Kit</span></button>
-        <button class="btn outline" onclick="window.location.href='{{ site.baseurl }}/docs/projects/'"><span>Project Catalog</span></button>
+      <a href="https://aka.ms/iot-devkit-purchase">
+        <button class="btn primary"><span>Get a Kit</span></button>
+      </a>
+      <a href="{{ site.baseurl }}/docs/projects/">
+        <button class="btn outline"><span>Project Catalog</span></button>
+      </a>
       </div>
       <div class="devkit">
         <input type="checkbox">
@@ -51,7 +55,7 @@ permalink: /
 <div class="notification">
   <div class="inner">
     <span class="badge orange" data-text="What's New"></span>
-    2/11: There is a bug found in Arduino IDE v1.8.7. If you have this version installed on your machine, please upgrade to v1.8.8 for the IoT DevKit.
+    8/23: Learn connect the DevKit to Azure IoT Central application within minutes via IoT Plug and Play &emsp; <a href="https://docs.microsoft.com/en-us/azure/iot-central/howto-connect-devkit-pnp">IoT Plug and Play</a>
   </div>
 </div>
 
