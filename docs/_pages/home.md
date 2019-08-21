@@ -179,14 +179,12 @@ projects: "0, 3, 10"
       {% for projectStr in projects %}
         {% assign projectNum = projectStr | plus: 0 %}
         {% assign post = site.projects[projectNum] %}
-        <a href="{{ post.redirect_to }}<">
         <div class="item">
           <div class="cover" style="background-image: url({{ post.header.teaser }})"></div>
           <div class="title">{{ post.title }}</div>
           <div class="description">{{ post.excerpt }}</div>
           <div class="services"><span class="iothub"></span></div>
         </div>
-        </a>
       {% endfor %}
     </div>
   </div>
