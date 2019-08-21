@@ -166,7 +166,7 @@ projects: "0, 3, 10"
           The ultimate collection of extensions for working with Azure IoT in VS Code!
         </div>
         <div class="button">
-          <a href="https://aka.ms/iot-devkit-purchase">
+          <a href="https://aka.ms/azure-iot-tools">
           <button class="btn primary"><span>View more</span></button>
           </a>
         </div>
