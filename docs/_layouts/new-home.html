@@ -25,12 +25,18 @@
   <meta http-equiv="cleartype" content="on">
 
   {% include head/custom.html %}
-  
+
 </head>
 
 <body>
-{{ content }}
-<script src="assets/js/ui.js"></script>
+  {{ content }}
+  <script src="assets/js/ui.js"></script>
+
+  <script src="{{ '/assets/js/main.min.js' | absolute_url }}"></script>
+
+  {% include analytics.html %}
+  {% include /comments-providers/scripts.html %}
+
 </body>
 
 </html>
