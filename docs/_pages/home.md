@@ -1,6 +1,23 @@
 ---
 layout: new-home
 permalink: /
+title: "An all-in-one IoT kit built for the cloud"
+benefits_content:
+  - title: "Record-breaking Performance"
+    url: https://aka.ms/iot-devkit-purchase
+    icon: "icon puzzle"
+    content: "Wifi, OLED display, headphone, microphone, sensors like temperature, humidity, motion, pressure, you will love how much time and money you save to build your best IoT project."
+    more_content: "Learn more about IoT DevKit hardware spec"
+  - title: "Simplify Development"
+    url: /docs/get-started/
+    icon: "icon vscode"
+    content: "Visual Studio Code is lightweight and your goto editor of choice. It is your all-in-one tool from coding the first line to deploying to the cloud."
+    more_content: "Learn more about the one-click installation"
+  - title: "Cloud Empowers Your IoT Solutions"
+    url: /docs/projects/
+    icon: "icon cloud"
+    content: "Visual Studio Code is lightweight and your goto editor of choice. It is your all-in-one tool from coding the first line to deploying to the cloud."
+    more_content: "Learn more about projects using Azure services"
 ---
 <div id="nav">
   <span class="title">IoT DevKit</span>
@@ -63,33 +80,21 @@ permalink: /
   <div class="inner">
     <h2>Benefits</h2>
     <div class="details">
-      <div class="item">
-        <div class="icon puzzle"></div>
-        <h3>Record-breaking Performance</h3>
-        <div class="content">Wifi, OLED display, headphone, microphone, sensors like temperature, humidity, motion,
-          pressure, you will love how much time and money you save to build your best IoT project.</div>
-        <div class="more">
-          <a href="#">Learn more about IoT DevKit hardware spec</a>
+      {% for item in benefits_content %}
+        {% if item.url contains 'http' %}
+          {% assign domain = '' %}
+        {% else %}
+          {% assign domain = site.baseurl %}
+        {% endif %}
+        <div class="item">
+          <div class="{{ item.icon }}"></div>
+          <h3>{{ item.title }}</h3>
+          <div class="content">{{ item.content }}</div>
+          <div class="more">
+            <a href="{{ domain }}{{ item.url }}">{{ item.more_content }}</a>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="icon vscode"></div>
-        <h3>Simplify Development</h3>
-        <div class="content">Visual Studio Code is lightweight and your goto editor of choice. It is your all-in-one
-          tool from coding the first line to deploying to the cloud.</div>
-        <div class="more">
-          <a href="#">Learn more about the one-click installation</a>
-        </div>
-      </div>
-      <div class="item">
-        <div class="icon cloud"></div>
-        <h3>Cloud Empowers Your IoT Solutions</h3>
-        <div class="content">Visual Studio Code is lightweight and your goto editor of choice. It is your all-in-one
-          tool from coding the first line to deploying to the cloud.</div>
-        <div class="more">
-          <a href="#">Learn more about projects using Azure services</a>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
