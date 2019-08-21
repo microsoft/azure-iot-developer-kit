@@ -32,6 +32,10 @@ comments_content:
     name: ScienceScope
 projects: "0, 3, 10"
 ---
+
+{% assign btn_primary_url = "https://aka.ms/iot-devkit-purchase" %}
+{% assign btn_outline_url = "/docs/projects/" %}
+
 <div id="nav">
   <span class="title">IoT DevKit</span>
   <input type="checkbox" id="menu-switch">
@@ -63,12 +67,8 @@ projects: "0, 3, 10"
       <div class="description">All the seneors and parts you love, no soldering needed. Welcome to cloud IoT
         development.</div>
       <div class="button-group">
-      <a href="https://aka.ms/iot-devkit-purchase">
-        <button class="btn primary"><span>Get a Kit</span></button>
-      </a>
-      <a href="{{ site.baseurl }}/docs/projects/">
-        <button class="btn outline"><span>Project Catalog</span></button>
-      </a>
+        <button class="btn primary" onclick="window.open('{{ btn_primary_url }}')"><span>Get a Kit</span></button>
+        <button class="btn outline" onclick="window.open('{{ site.baseurl }}{{ btn_outline_url }}')"><span>Project Catalog</span></button>
       </div>
       <div class="devkit">
         <input type="checkbox">
@@ -203,12 +203,8 @@ projects: "0, 3, 10"
     <h2>Ready to Get Started?</h2>
     <div class="moto">Build your own IoT application with Azure and Visual Studio Code helped today.</div>
     <div class="button-group">
-      <a href="https://aka.ms/iot-devkit-purchase">
-        <button class="btn primary"><span>Get a Kit</span></button>
-      </a>
-      <a href="{{ site.baseurl }}/docs/projects/">
-        <button class="btn outline"><span>Project Catalog</span></button>
-      </a>
+      <button class="btn primary" onclick="window.open('{{ btn_primary_url }}')"><span>Get a Kit</span></button>
+      <button class="btn outline" onclick="window.open('{{ site.baseurl }}{{ btn_outline_url }}')"><span>Project Catalog</span></button>
     </div>
     <div class="simulator">or <a href="https://aka.ms/iot-devkit-simulator">play with simulator first</a></div>
   </div>
