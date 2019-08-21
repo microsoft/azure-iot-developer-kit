@@ -119,7 +119,7 @@ comments_content:
       <input type="radio" id="feedback2" name="feedback-slider" checked>
       <input type="radio" id="feedback3" name="feedback-slider">
       <div class="slider">
-      {% for item in page.benefits_content %}
+      {% for item in page.comments_content %}
         <div class="talk-box">
           <div class="words">{{ item.words }}</div>
           <div class="author">
