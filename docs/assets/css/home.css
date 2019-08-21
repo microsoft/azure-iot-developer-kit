@@ -543,6 +543,16 @@ body {
   box-sizing: border-box;
 }
 
+.notification .inner a {
+  text-decoration: none;
+  color: #069;
+}
+
+.notification .inner a:hover {
+  text-decoration: underline;
+  color: #66a3c2;
+}
+
 .notification .badge {
   margin-right: 5px;
 }
