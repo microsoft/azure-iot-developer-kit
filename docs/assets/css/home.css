@@ -206,9 +206,9 @@ body {
 
 #nav {
   color: white;
-  height: 50px;
+  height: 90px;
   width: 100%;
-  line-height: 50px;
+  line-height: 90px;
   padding: 0 35px;
   position: fixed;
   z-index: 1000;
@@ -241,6 +241,7 @@ body {
   color: white;
   display: inline-block;
   vertical-align: top;
+  line-height: 90px;
 }
 
 #nav.show .item {
@@ -267,6 +268,7 @@ body {
 #nav .dropdown {
   padding-right: 42px;
   position: relative;
+  padding-top: 20px;
 }
 
 #nav .dropdown input[type=checkbox] {
@@ -355,17 +357,21 @@ body {
 }
 
 #nav .version {
-  height: 20px;
-  line-height: 18px;
+  height: 40px;
+  line-height: 38px;
   font-size: 15px;
   border: 1px solid white;
   color: white;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 25px;
   box-sizing: border-box;
-  padding: 0 6px;
+  padding: 0 20px;
   float: right;
-  margin-top: 15px;
+  margin-top: 25px;
+}
+
+#nav .version:hover {
+  text-decoration: underline
 }
 
 #nav.show .version {
