@@ -248,13 +248,8 @@ body {
   color: #212121;
 }
 
-#nav .item:hover::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: calc(100% - 36px);
-  border-bottom: 2px solid white;
-  bottom: 12px;
+#nav .item:hover {
+  text-decoration: underline
 }
 
 #nav.show .item:hover::after {
