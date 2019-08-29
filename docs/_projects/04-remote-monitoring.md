@@ -8,6 +8,7 @@ header:
   overlay_image: /assets/images/projects-remote-monitoring.jpg
   overlay_full: true
   teaser: /assets/images/projects-remote-monitoring-th.jpg
+  teaser_url: assets/images/projects-remote-monitoring-th.jpg
 layouts_gallery:
   - url: /assets/images/mini-solution/remote-monitoring/connect-wifi.jpg
     image_path: /assets/images/mini-solution/remote-monitoring/connect-wifi.jpg
