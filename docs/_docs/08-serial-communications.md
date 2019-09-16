@@ -14,7 +14,7 @@ last_modified_at: 2019-09-10
 
 ## Overview
 
-The MXChip IoT DevKit has two UART serial ports. One is connected to the USB port and allows you to send serial data over a USB cable, such as debugging information. The other is available from Pins 3 and 4 on the finger connector and allows you to connect the device to other modules that send data over serial.
+The MXChip IoT DevKit has two UART serial ports. One is connected to the USB port and allows you to send serial data over a USB cable, such as debugging information. The other is available from Pins 1 and 2 on the finger connector and allows you to connect the device to other modules that send data over serial.
 
 ## Sending data over the USB serial port
 
