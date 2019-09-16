@@ -31,3 +31,41 @@ Serial.write("Hello");
 You can monitor data sent over this serial connection using the VS Code Serial Monitor, available from the command palette by selecting *Arduino: Open Serial Monitor*. The board will send logging information over this port in addition to the data you send.
 
 ![The serial monitor showing logging messages and hello]({{"/assets/images/how-to/serial/serialmonitor.png" | absolute_url }})
+
+## Sending data over the finger connector serial port
+
+The second UART serial port is available via the finger connector on pins 3 and 4.
+
+| Pin | Usage          |
+| --- | -------------- |
+| 3   | TxD - Transmit |
+| 4   | RxD - Receive  |
+
+Pin 3 is the transmit (TxD) pin, and is used to send serial data to an external module. This pin should connect to the RxD pin on the external module.
+
+Pin 4 is the receive (RxD) pin, and is used to receive serial data from an external module. This pin should connect to the TxD pin on the external module.
+
+Once the device is connected, you will need to declare a new `UARTClass` variable pointing to the second serial port, `UART_1`.
+
+```c
+UARTClass Serial1(UART_1);
+```
+
+This has the same type as the `Serial` global variable, and uses the same serial API.
+
+```c
+// Open the serial port at a speed of 9600 baud
+Serial.begin(9600);
+
+// Read a byte from the second serial port
+int byte = Serial1.read();
+
+// Send the byte to the USB serial port for debugging
+Serial.write(byte);
+```
+
+## Problems and feedback
+
+If you encounter problems, you can find [FAQs]({{"/docs/faq/" | absolute_url }}) if you encounter problems or reach out to us from our [Gitter channel](https://gitter.im/Microsoft/azure-iot-developer-kit){:target="_blank"}.
+
+{% include feedback.html tutorial="serial-communications" %}
