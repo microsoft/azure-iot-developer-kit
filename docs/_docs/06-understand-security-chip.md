@@ -27,7 +27,7 @@ By default,  the data you store in STSAFE-A100 is in plain text, enable security
 
 There are two ways to enable it:
 
-1. Use `enable_secure 1` command in [Configurition Mode]({{"/docs/use-configuration-mode/" | absolute_url }}).
+1. Use `enable_secure 1` command in [Configuration Mode]({{"/docs/use-configuration-mode/" | absolute_url }}).
 2. Call `enableHostSecurityChannel()` function in Arduino. see [API reference]({{"/docs/apis/eeprom-interface/" | absolute_url }}).
 
 After enabled, the IoT DevKit will negotiate a key with secure chip. The key will be stored at both IoT DevKit and secure chip side. All data as well as the read / write operations on I2C will then be encrypted.
@@ -39,7 +39,7 @@ The status between enabling and disabling the security channel.
 
 ![STSAFE status]({{"/assets/images/how-to/stsafe/stsafe-status.png" | absolute_url }})
 
-The difference of the data commuinication between IoT DevKit and the security chip (EEPROM).
+The difference of the data communication between IoT DevKit and the security chip (EEPROM).
 
 ![STSAFE communication with IoT DevKit]({{"/assets/images/how-to/stsafe/communication.png" | absolute_url }})
 
