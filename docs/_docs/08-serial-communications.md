@@ -34,16 +34,19 @@ You can monitor data sent over this serial connection using the VS Code Serial M
 
 ## Sending data over the finger connector serial port
 
-The second UART serial port is available via the finger connector on pins 3 and 4.
+The second UART serial port is available via the finger connector on the large pins 1 and 2.
 
-| Pin | Usage          |
-| --- | -------------- |
-| 3   | TxD - Transmit |
-| 4   | RxD - Receive  |
+![The MXChip finger connector with pin 1 marked as TX and pin 2 marked as RX]({{"/assets/images/how-to/serial/board_annotated_pins.png" | absolute_url }})
 
-Pin 3 is the transmit (TxD) pin, and is used to send serial data to an external module. This pin should connect to the RxD pin on the external module.
 
-Pin 4 is the receive (RxD) pin, and is used to receive serial data from an external module. This pin should connect to the TxD pin on the external module.
+| Pin | Usage         |
+| --- | ------------- |
+| 1   | TX - Transmit |
+| 2   | RX - Receive  |
+
+Pin 1 is the transmit (TX) pin, and is used to send serial data to an external module. This pin should connect to the RX pin on the external module.
+
+Pin 2 is the receive (RX) pin, and is used to receive serial data from an external module. This pin should connect to the TX pin on the external module.
 
 Once the device is connected, you will need to declare a new `UARTClass` variable pointing to the second serial port, `UART_1`.
 
