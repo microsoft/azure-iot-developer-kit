@@ -1,9 +1,9 @@
 # Contributing
 
-# Setuo
+## Setup
 Fork this repo and use [GitHub Pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages) to deploy.
 
-# Testing it Locally
+## Testing it Locally
 Also you can run and test it locally. Here is a quick write-up of the necessary steps:
 
 1.	Download and install Ruby installer for Windows (2.4.3): https://rubyinstaller.org/downloads/
