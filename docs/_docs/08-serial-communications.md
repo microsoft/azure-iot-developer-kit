@@ -38,15 +38,16 @@ The second UART serial port is available via the finger connector on the large p
 
 ![The MXChip finger connector with pin 1 marked as TX and pin 2 marked as RX]({{"/assets/images/how-to/serial/board_annotated_pins.png" | absolute_url }})
 
-
 | Pin | Usage         |
 | --- | ------------- |
 | 1   | TX - Transmit |
 | 2   | RX - Receive  |
 
-Pin 1 is the transmit (TX) pin, and is used to send serial data to an external module. This pin should connect to the RX pin on the external module.
+Pin 1 is the transmit (TX) pin, and is used to send serial data to an external module. This pin should connect to the **RX** pin on the external module.
 
-Pin 2 is the receive (RX) pin, and is used to receive serial data from an external module. This pin should connect to the TX pin on the external module.
+Pin 2 is the receive (RX) pin, and is used to receive serial data from an external module. This pin should connect to the **TX** pin on the external module.
+
+> NOTE: The TX pin on the MXChip IoT DevKit needs to connect to the RX pin on an external module, and vice versa. The signal transmitted needs to go to a receiving pin.
 
 Once the device is connected, you will need to declare a new `UARTClass` variable pointing to the second serial port, `UART_1`.
 
