@@ -27,6 +27,8 @@ docs:
         url: /docs/understand-security-chip/
       - title: "Disable data collection"
         url: /docs/disable-data-collection/
+      - title: "Serial communications"
+        url: /docs/serial-communications/
   - title: "FAQ"
     url: /docs/faq/
   - title: API Reference
