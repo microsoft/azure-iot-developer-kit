@@ -2,7 +2,7 @@
 title: "DevKit Translator"
 permalink: /docs/projects/devkit-translator/
 redirect_to:
-  - https://docs.microsoft.com/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-translator
+  - https://docs.microsoft.com/en-us/samples/azure-samples/mxchip-iot-devkit-translator/sample/
 excerpt: "Turn IoT DevKit as a translator by using Bing Speech Translator service."
 header:
   overlay_image: /assets/images/projects-devkit-translator.jpg
