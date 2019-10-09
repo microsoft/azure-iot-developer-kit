@@ -7,6 +7,16 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.6.3 (October 9, 2019)
+
+### Release Summary
+
+Thanks everyone for using and supporting us! Please try 1.6.3 and any feedback will be appreciated.
+
+### Downloads
+
+- [Firmware 1.6.3](https://azureboard.azureedge.net/prod/devkit-firmware-1.6.3.bin).
+
 ## Version 1.6.2 (April 3, 2019)
 
 ### Release Summary
