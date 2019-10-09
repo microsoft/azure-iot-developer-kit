@@ -2,7 +2,7 @@
 title: "Firmware OTA"
 permalink: /docs/projects/devkit-ota/
 redirect_to:
-  - https://github.com/Microsoft/vscode-iot-workbench/blob/master/docs/iot-devkit/devkit-ota.md
+  - https://docs.microsoft.com/en-us/samples/azure-samples/mxchip-iot-devkit-firmware-ota/sample/
 excerpt: "Update IoT DevKit firmware OTA (Over-the-Air) through Azure IoT Hub Automatic Device Management."
 header:
   overlay_image: /assets/images/projects-ota-firmware-updateg.jpg
