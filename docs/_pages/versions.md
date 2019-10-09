@@ -7,6 +7,25 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.6.3 (October 9, 2019)
+
+### Release Summary
+
+Thanks everyone for using and supporting us! Please try 1.6.3 and any feedback will be appreciated.
+
+* Upgrade Azure IoT C SDK to the latest version.
+* Improve the build-in web server.
+* Support symmetric key setting in AP mode.
+* Improve the configuration web UI.
+* Fix bugs.
+* Fixed OTA issue by [Increase OTA storage](https://github.com/VSChina/mbed-az3166-driver/pull/1).
+
+Special thanks to [Takashi Matsuoka](https://github.com/matsujirushi), thank you for your contributions and feedbacks.
+
+### Downloads
+
+- [Firmware 1.6.3](https://azureboard.azureedge.net/prod/devkit-firmware-1.6.3.bin).
+
 ## Version 1.6.2 (April 3, 2019)
 
 ### Release Summary
