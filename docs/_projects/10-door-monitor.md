@@ -25,7 +25,7 @@ icons:
   - url: /assets/images/icon-sendgrid.svg
     target: https://sendgrid.com/partners/azure/
     title: SendGrid
-difficulty: MEDIUM
+difficulty: ARCHIVED
 variable:
   - platform: windows
     name: Windows

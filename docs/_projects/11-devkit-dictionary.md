@@ -16,6 +16,6 @@ icons:
   - url: /assets/images/icon-cognitive-services.svg
     target: https://azure.microsoft.com/services/cognitive-services/?v=17.29
     title: Cognitive Services
-difficulty: MEDIUM
+difficulty: ARCHIVED
 last_modified_at: 2019-04-26
 ---

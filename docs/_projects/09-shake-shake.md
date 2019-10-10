@@ -34,7 +34,7 @@ icons:
   - url: /assets/images/icon-azure-functions.svg
     target: https://azure.microsoft.com/en-us/services/functions/
     title: Azure Functions
-difficulty: MEDIUM
+difficulty: ARCHIVED
 variable:
   - platform: windows
     name: Windows
