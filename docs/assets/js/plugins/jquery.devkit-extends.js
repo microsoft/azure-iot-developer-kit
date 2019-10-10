@@ -297,7 +297,7 @@
                 $(this).css('background', '#f98f40');
             } else if (difficulty == 'hard') {
                 $(this).css('background', '#f05a2d');
-            } else if (difficulty == 'archived') {
+            } else {
                 $(this).css('background', '#696969');
             }
         });
