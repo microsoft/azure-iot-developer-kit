@@ -25,6 +25,7 @@ AZ3166WiFiServer.h
 | :------ |
 | [begin](#begin) - void begin() |
 | [available](#available) - WiFiClient available(byte *status) |
+| [accept](#accept) - int accept(WiFiClient *client) |
 | [write](#write) - size_t write(unsigned char b) |
 | [write](#write-1) - size_t write(const unsigned char *buffer, size_t size) |
 | [close](#close) - void close() |
@@ -86,6 +87,26 @@ WiFiClient available(byte *status)
 > | Type | Description |
 > | :--- | :---------- |
 > | WiFiClient | A Client object or -1 if no clients available. |
+
+### accept
+
+```cpp
+int accept(WiFiClient *client)
+```
+
+> Gets a client that is connected to the server and has data available for reading.
+>
+> #### Parameters
+>
+> | Type | Name | Description |
+> | :--- | :--- | :---------- |
+> | WiFiClient * | client | Pointer to the connected client. |
+>
+> #### Return value
+>
+> | Type | Description |
+> | :--- | :---------- |
+> | int | Result code, 0 in case of success, an error code otherwise. |
 
 ### write
 
