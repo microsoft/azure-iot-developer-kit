@@ -294,9 +294,9 @@
             if (difficulty == 'easy') {
                 $(this).css('background', '#8fc31f');
             } else if (difficulty == 'medium') {
-                $(this).css('background', '#f98f40');
-            } else if (difficulty == 'hard') {
                 $(this).css('background', '#696969');
+            } else if (difficulty == 'hard') {
+                $(this).css('background', '#f05a2d');
             } else {
                 $(this).css('background', '#696969');
             }
