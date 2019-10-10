@@ -296,7 +296,7 @@
             } else if (difficulty == 'medium') {
                 $(this).css('background', '#f98f40');
             } else if (difficulty == 'hard') {
-                $(this).css('background', '#f05a2d');
+                $(this).css('background', '#696969');
             } else {
                 $(this).css('background', '#696969');
             }
