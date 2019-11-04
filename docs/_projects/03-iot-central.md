@@ -1,6 +1,6 @@
 ---
 title: "Connect to Microsoft IoT Central"
-link: "https://docs.microsoft.com/microsoft-iot-central/howto-connect-devkit"
+link: "https://docs.microsoft.com/azure/iot-central/core/howto-connect-devkit"
 excerpt: "Learn as a device developer, to connect a DevKit to your Microsoft IoT Central application. All within 5 minutes."
 header:
   image: /assets/images/projects-iot-central.jpg
