@@ -7,6 +7,24 @@ last_modified_at: 2018-01-09
 
 {% include toc icon="columns" %}
 
+## Version 1.6.5 (December 3, 2019)
+
+### Release Summary
+
+2019 will end soon and Christmas is coming. This is the last increase of our IoT DevKit SDK this year, please try it!
+
+* Upgrade Azure IoT C SDK to 1.3.6.
+* Add command for serial port: set_az_iotdps
+* WiFiServer.available() can set the option to set_timeout. Issue [here](https://github.com/microsoft/devkit-sdk/issues/1023).
+* As many users asked for, HttpClient supporting HTTPS now.
+* Fix bugs.
+
+Special thanks to [Benjamin Cabé](https://github.com/kartben), thank you for your contributions and feedbacks.
+
+### Downloads
+
+- [Firmware 1.6.5](https://azureboard2.azureedge.net/prod/devkit-firmware-1.6.5.bin).
+
 ## Version 1.6.3 (October 9, 2019)
 
 ### Release Summary
