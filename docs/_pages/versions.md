@@ -23,7 +23,7 @@ Special thanks to [Benjamin Cabé](https://github.com/kartben), thank you for yo
 
 ### Downloads
 
-- [Firmware 1.6.5](https://azureboard2.azureedge.net/prod/devkit-firmware-1.6.5.bin).
+- [Firmware 1.6.5](https://github.com/microsoft/devkit-sdk/releases/download/1.6.5-release/devkit-firmware-1.6.5.bin).
 
 ## Version 1.6.3 (October 9, 2019)
 
@@ -42,7 +42,7 @@ Special thanks to [Takashi Matsuoka](https://github.com/matsujirushi), thank you
 
 ### Downloads
 
-- [Firmware 1.6.3](https://azureboard.azureedge.net/prod/devkit-firmware-1.6.3.bin).
+- [Firmware 1.6.3](https://github.com/microsoft/devkit-sdk/releases/download/1.6.3-release/devkit-firmware-1.6.3.bin).
 
 ## Version 1.6.2 (April 3, 2019)
 
@@ -68,7 +68,7 @@ Thanks  everyone for using and supporting us! Please try 1.6.2 and any feedback 
 
 ### Downloads
 
-- [Firmware 1.6.2](https://azureboard.azureedge.net/prod/devkit-firmware-1.6.2.bin).
+- [Firmware 1.6.2](https://github.com/microsoft/devkit-sdk/releases/download/1.6.2-release/devkit-firmware-1.6.2.bin).
 - Install / Upgrade the Arduino SDK package in [Arduino IDE](https://www.arduino.cc/en/main/software) and [Arduino extension for VS Code](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduin).
 
 ## Version 1.6.1 (February 1, 2019)
@@ -109,7 +109,7 @@ Special thanks to [douglas-johnston](https://github.com/douglas-johnston) for fi
 
 ### Downloads
 
-- [Firmware 1.6.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.6.1.72.bin).
+- [Firmware 1.6.1](https://github.com/microsoft/devkit-sdk/releases/download/1.6.1-release/devkit-firmware-1.6.1.bin).
 
 
 ## Version 1.6.0 (December 19, 2018)
@@ -131,7 +131,7 @@ Special thanks to [Sean Kelly](https://github.com/seank-com) for polishing the W
 
 ### Downloads
 
-- [Firmware 1.6.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.6.0.71.bin).
+- [Firmware 1.6.0](https://github.com/microsoft/devkit-sdk/releases/download/1.6.0-release/devkit-firmware-1.6.0.bin).
 
 ## Version 1.5.1 (September 1, 2018)
 
@@ -154,7 +154,7 @@ Special thanks to [Oguz Bastemur](https://github.com/obastemur) and **Paul Batsi
 
 ### Downloads
 
-- [Firmware 1.5.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.5.1.68.bin).
+- [Firmware 1.5.1](https://github.com/microsoft/devkit-sdk/releases/download/1.5.1-release/devkit-firmware-1.5.1.bin).
 
 ## Version 1.4.1 (August 6, 2018)
 
@@ -179,7 +179,7 @@ Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://g
 
 ### Downloads
 
-- [Firmware 1.4.1](https://azureboard.azureedge.net/prod/devkit-firmware-1.4.1.65.bin).
+- [Firmware 1.4.1](https://github.com/microsoft/devkit-sdk/releases/download/1.4.1-release/devkit-firmware-1.4.1.bin).
 
 
 ## Version 1.4.0 (July 19, 2018)
@@ -211,7 +211,7 @@ Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://g
 
 ### Downloads
 
-- [Firmware 1.4.0](https://azureboard.azureedge.net/prod/devkit-firmware-1.4.0.60.bin).
+- [Firmware 1.4.0](https://github.com/microsoft/devkit-sdk/releases/download/1.4.0-release/devkit-firmware-1.4.0.bin).
 
 
 ## Version 1.3.7 (Jun 8, 2018)
@@ -233,7 +233,7 @@ Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://g
 
 - *Installation Package 1.3.7 for Windows (obsoleted)*.
 - *Installation Package 1.3.7 for macOS (obsoleted)*.
-- [Firmware 1.3.7](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.7.56.bin).
+- [Firmware 1.3.7](https://github.com/microsoft/devkit-sdk/releases/download/1.3.7-release/devkit-firmware-1.3.7.bin).
 
 
 ## Version 1.3.5 (April 28, 2018)
@@ -261,7 +261,7 @@ Special thanks to [capfish](https://github.com/capfish) , [Adamantinu](https://g
 
 - *Installation Package 1.3.5 for Windows (obsoleted)*.
 - *Installation Package 1.3.5 for macOS (obsoleted)*.
-- [Firmware 1.3.5](https://azureboard.azureedge.net/prod/devkit-firmware-1.3.5.53.bin).
+- [Firmware 1.3.5](https://github.com/microsoft/devkit-sdk/releases/download/1.3.5-release/devkit-firmware-1.3.5.bin).
 
 
 ## Version 1.3.4 (March 28, 2018)
