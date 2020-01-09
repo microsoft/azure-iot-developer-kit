@@ -30,9 +30,9 @@ There are two ways to enable it:
 1. Use `enable_secure 1` command in [Configuration Mode]({{"/docs/use-configuration-mode/" | absolute_url }}).
 2. Call `enableHostSecurityChannel()` function in Arduino. see [API reference]({{"/docs/apis/eeprom-interface/" | absolute_url }}).
 
-After enabled, the IoT DevKit will negotiate a key with secure chip. The key will be stored at both IoT DevKit and secure chip side. All data as well as the read / write operations on I2C will then be encrypted.
+After the secure channel is enabled, the IoT DevKit will negotiate a key with secure chip. The key will be stored at both IoT DevKit and secure chip side. All data as well as the read / write operations on I2C will then be encrypted.
 
-**Notice:** **Enable the security chip with caution.** Using drag and drop to upgrade firmware will make data saved in EEPROM will no longer be readable immediately after enabling the security channel. This is a design with the security chip to ensure data can not be breached.
+**Notice:** **Enable the security chip with caution.** Using drag and drop to upgrade firmware will make the data saved in EEPROM no longer be readable immediately after enabling the security channel. This is a design with the security chip to ensure data can not be breached.
 {: .notice--warning}
 
 The status between enabling and disabling the security channel.
