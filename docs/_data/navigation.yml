@@ -8,7 +8,7 @@ main:
     url: /docs/projects/
   - title: "Blog"
     url: https://devblogs.microsoft.com/iotdev/
-  - title: "v1.6.2"
+  - title: "v1.6.5"
     url: /versions/
     class: "masthead-circle"
 
@@ -27,6 +27,8 @@ docs:
         url: /docs/understand-security-chip/
       - title: "Disable data collection"
         url: /docs/disable-data-collection/
+      - title: "Serial communications"
+        url: /docs/serial-communications/
   - title: "FAQ"
     url: /docs/faq/
   - title: API Reference

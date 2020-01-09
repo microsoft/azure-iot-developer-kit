@@ -2,7 +2,7 @@
 title: "DevKit State"
 permalink: /docs/projects/devkit-state/
 redirect_to:
-  - https://github.com/Microsoft/vscode-iot-workbench/blob/master/docs/iot-devkit/devkit-state.md
+  - https://docs.microsoft.com/en-us/samples/azure-samples/mxchip-iot-devkit-state/sample/
 excerpt: "Monitor DevKit states and control the user LED with Azure IoT Hub device twins."
 header:
   overlay_image: /assets/images/projects-devKit-state-th.jpg

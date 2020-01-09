@@ -27,7 +27,7 @@ icons:
     target: https://azure.microsoft.com/en-us/services/cognitive-services/
     title: Cognitive Services
 
-difficulty: HARD
+difficulty: ARCHIVED
 
 last_modified_at: 2019-4-12
 ---

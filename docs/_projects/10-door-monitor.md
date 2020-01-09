@@ -2,7 +2,7 @@
 title: "Door Monitor"
 permalink: /docs/projects/door-monitor/
 redirect_to:
-  - https://github.com/Microsoft/vscode-iot-workbench/blob/master/docs/iot-devkit/devkit_door_monitor.md
+  - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-door-monitor
 excerpt: "Use magnetic sensor to detect the change of magnetic field, and send notifications."
 header:
   overlay_image: /assets/images/projects-door-monitor.jpg
@@ -25,7 +25,7 @@ icons:
   - url: /assets/images/icon-sendgrid.svg
     target: https://sendgrid.com/partners/azure/
     title: SendGrid
-difficulty: MEDIUM
+difficulty: ARCHIVED
 variable:
   - platform: windows
     name: Windows

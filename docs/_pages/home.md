@@ -55,7 +55,7 @@ projects: "0, 3, 10"
       </ul>
     </span>
     <a href="https://devblogs.microsoft.com/iotdev/" class="item">Blog</a>
-    <a href="{{ site.baseurl }}/versions/" class="version">V1.6.2</a>
+    <a href="{{ site.baseurl }}/versions/" class="version">V1.6.5</a>
   </span>
 </div>
 
@@ -64,7 +64,7 @@ projects: "0, 3, 10"
     <div class="content">
       <h1>A<span id="typing">n all-in-one</span> IoT kit</h1>
       <h1>built for the cloud</h1>
-      <div class="description">All the seneors and parts you love, no soldering needed. Welcome to cloud IoT
+      <div class="description">All the sensors and parts you love, no soldering needed. Welcome to cloud IoT
         development.</div>
       <div class="button-group">
         <button class="btn primary" onclick="window.open('{{ btn_primary_url }}')"><span>Get a Kit</span></button>

@@ -39,7 +39,7 @@ The status between enabling and disabling the security channel.
 
 ![STSAFE status]({{"/assets/images/how-to/stsafe/stsafe-status.png" | absolute_url }})
 
-The difference of the data commuinication between IoT DevKit and the security chip (EEPROM).
+The difference of the data communication between IoT DevKit and the security chip (EEPROM).
 
 ![STSAFE communication with IoT DevKit]({{"/assets/images/how-to/stsafe/communication.png" | absolute_url }})
 

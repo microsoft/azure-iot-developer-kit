@@ -2,13 +2,30 @@
 
 **The IoT DevKit Tooling team wants to hear from you!**
 
+- [Contribute documentation](#contribute-documentation)
 - [Ask a question](#ask-a-question)
 - [File a bug](#file-a-bug)
-- [Contribute documentation](#contribute-documentation)
 - [Contribute code](#contribute-code)
 - [Code of Conduct](#Open-Source-Code-of-Conduct)
 
 Note we have a code of conduct, please follow it in all your interactions with the project.
+
+# Contribute documentation
+
+## Setup
+Fork this repo and use [GitHub Pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages) to deploy.
+
+## Testing it Locally
+Also you can run and test it locally. Here is a quick write-up of the necessary steps:
+
+1.	Download and install Ruby installer for Windows (2.4.3): https://rubyinstaller.org/downloads/
+2.	Launch command, install Jekyll and Bundler: 'gem install jekyll bundler'
+3.	Git clone the doc repo: 'git clone https://github.com/Microsoft/azure-iot-developer-kit.git'
+4.	Go into the doc repo cloned and update the submodules: 'git submodule update --init --recursive'
+5.	Go into the /docs folder within the repo, and install the necessary bundles for Jekyll: 'bundle install'
+6.	Now in the /docs folder, start the local server: 'bundle exec jekyll serve'
+7.	Open 'http://localhost:4000' in browser you should see the local docs
+8.	Update any markdown or update the image fill trigger the auto rebuild, you should reload the browser to see the changes.
 
 # Ask a question
 Our team monitors the [chat room](https://gitter.im/Microsoft/azure-iot-developer-kit). It really is the best place to ask.
@@ -25,8 +42,8 @@ That is definitely something we want to hear about. Please open an issue on gith
 
 *Our IoT DevKit SDK are open-source and we do accept pull-requests if you feel like taking a stab at fixing the bug and maybe adding your name to our commit history :) Please mention any relevant issue number in the pull request description.* Please see [Contribute code](#contribute-code) below.
 
-# Contribute code or documentation
-We require pull-requests for code and documentation to be submitted against the `master` branch in order to review and run it in our gated build system. 
+# Contribute code
+We require pull-requests for code to be submitted against the `master` branch in order to review and run it in our gated build system. 
 
 ## Build and Run From Source
 
@@ -117,4 +134,3 @@ _This code of conduct is based on the [template][template] established by the [T
 [group]: http://todogroup.org/
 [version]: http://contributor-covenant.org/version/1/4/
 [git]: https://git-scm.com/
-
