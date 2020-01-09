@@ -136,6 +136,14 @@ set_dps_uds [unique device secret]
 
 Set Unique Device Secret that is used as device unique key to be used for calcuation by [Device Identifier Composition Engine (DICE)](https://trustedcomputinggroup.org/work-groups/dice-architectures/) and be used to register on [IoT Hub Device Provisioning Service](https://docs.microsoft.com/en-us/azure/iot-dps/about-iot-dps).
 
+### set_az_iotdps
+
+```bash
+set_az_iotdps [DPS Symmetric Key]
+```
+
+Set [Symmetric Key](https://docs.microsoft.com/azure/iot-dps/concepts-device) based on the shared access signature (SAS) token that is supported by DPS. The Symmetric Key format is `"DPSEndpoint=global.azure-devices-provisioning.net;IdScope=XXX;DeviceId=XXX;SymmetricKey=XXX"`.
+
 ### enable_secure
 
 ```bash
