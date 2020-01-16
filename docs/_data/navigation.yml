@@ -8,8 +8,8 @@ main:
     url: /docs/projects/
   - title: "Blog"
     url: https://devblogs.microsoft.com/iotdev/
-  - title: "v1.6.5"
-    url: /versions/
+  - title: "V1.6.5/V1.9.11-preview"
+    url: https://github.com/microsoft/devkit-sdk/releases/
     class: "masthead-circle"
 
 

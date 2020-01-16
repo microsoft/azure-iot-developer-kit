@@ -55,7 +55,7 @@ projects: "0, 3, 10"
       </ul>
     </span>
     <a href="https://devblogs.microsoft.com/iotdev/" class="item">Blog</a>
-    <a href="{{ site.baseurl }}/versions/" class="version">V1.6.5</a>
+    <a href="https://github.com/microsoft/devkit-sdk/releases/" class="version">V1.6.5/V1.9.11-preview</a>
   </span>
 </div>
 
