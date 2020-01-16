@@ -74,7 +74,7 @@ Add the IoT DevKit board by using Board Manager in Visual Studio Code.
  ```
  ![installation-settings-json]({{"/assets/images/installation-settings-json-win.png" | absolute_url}})
 
-4. In Board Manager, search for **az3166** and install the [latest version]({{"/versions" | absolute_url }}).
+4. In Board Manager, search for **az3166** and install the [latest version](https://github.com/microsoft/devkit-sdk/releases/).
  ![installation-az3166]({{"/assets/images/installation-az3166-win.png" | absolute_url}})
 
 ### Step 7. Install ST-Link drivers
@@ -173,7 +173,7 @@ Add the IoT DevKit board by using Board Manager in Visual Studio Code.
  ```
  ![installation-settings-json]({{"/assets/images/installation-settings-json-mac.png" | absolute_url}})
 
-4. In Board Manager, search for **az3166** and install the [latest version]({{"/versions" | absolute_url }}).
+4. In Board Manager, search for **az3166** and install the [latest version](https://github.com/microsoft/devkit-sdk/releases/).
  ![installation-az3166]({{"/assets/images/installation-az3166-mac.png" | absolute_url}})
 
 You now have all the necessary tools and packages installed for macOS.

@@ -9,7 +9,7 @@ last_modified_at: 2017-10-11
 
 ## Upgrade the bootloader for IoT DevKit
 
-Follow bellowing steps to download the [latest version]({{"/versions" | absolute_url }}) of default firmware for IoT DevKit, and upgrade the bootloader.
+Follow bellowing steps to download the [latest version](https://github.com/microsoft/devkit-sdk/releases/) of default firmware for IoT DevKit, and upgrade the bootloader.
 
 ### Step 1. Connect IoT DevKit to your computer via USB
 
