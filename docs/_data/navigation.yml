@@ -8,7 +8,7 @@ main:
     url: /docs/projects/
   - title: "Blog"
     url: https://devblogs.microsoft.com/iotdev/
-  - title: "V1.6.5/V1.9.11-preview"
+  - title: "v1.6.5/v1.9.11-preview"
     url: https://github.com/microsoft/devkit-sdk/releases/
     class: "masthead-circle"
 
