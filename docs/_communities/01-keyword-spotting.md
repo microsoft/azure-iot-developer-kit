@@ -7,7 +7,7 @@ header:
   teaser: /assets/images/community-keyword-spotting.png
 contributor:
   github_id: Chris Lovett
-  github_url: "https://github.com/clovett"
+  github_url: "https://github.com/lovettchris"
   github_avatar_url: "https://avatars2.githubusercontent.com/u/3336415?s=460&v=4"
 difficulty: MEDIUM
 last_modified_at: 2019-02-02
