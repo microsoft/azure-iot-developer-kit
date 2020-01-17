@@ -1,6 +1,6 @@
 ---
 title: "Keyword Spotting on IoT DevKit"
-link: "https://github.com/IoTDevEnvExamples/DevKitKeywordSpotter/blob/master/README.md"
+link: "https://github.com/lovettchris/IoTKeywordSpotter/blob/master/README.md"
 excerpt: "Learn how to do simple voice recognition locally on your IoT DevKit without using a cloud service."
 header:
   image: /assets/images/community-keyword-spotting.png
