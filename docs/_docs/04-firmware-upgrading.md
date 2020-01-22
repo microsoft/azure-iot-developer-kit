@@ -2,7 +2,7 @@
 title: "Upgrade the bootloader for IoT DevKit"
 permalink: /docs/firmware-upgrading/
 excerpt: "Instructions for upgrading device firmware."
-last_modified_at: 2017-10-11
+last_modified_at: 2020-01-22
 ---
 
 {% include toc icon="columns" %}
@@ -10,6 +10,7 @@ last_modified_at: 2017-10-11
 ## Upgrade the bootloader for IoT DevKit
 
 Follow bellowing steps to download the [latest version](https://github.com/microsoft/devkit-sdk/releases/) of default firmware for IoT DevKit, and upgrade the bootloader.
+>"Programming" LED needed to be solid in order to show that the device had a good data connection. If this LED is blinking, replace cable.
 
 ### Step 1. Connect IoT DevKit to your computer via USB
 
