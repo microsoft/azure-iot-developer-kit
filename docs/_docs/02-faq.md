@@ -176,6 +176,7 @@ A new Arduino binary file in the folder should be created.
 
 Download [boot.bin](https://github.com/microsoft/devkit-sdk/blob/master/AZ3166/src/bootloader/boot.bin) and [az3166_patch_binary.py](https://github.com/microsoft/azure-iot-developer-kit/tree/master/docs/_docs/bash/az3166_patch_binary.py) in the same folder.
 
+Use the following command to generate the binary we need
 ```bash
 	az3166_patch_binary.py your_arduino_binary_file_name.bin mxchip_getstarted.bin
 ```
