@@ -94,7 +94,8 @@ For more details please check [I can't sign in to manage my Azure subscription](
 
 Occasionally, when you launch Visual Studio Code, you are prompted with an error message that it cannot find the Arduino IDE or related board package.
 
-To resolvethis issue, please install the latest version of Arduino IDE [here](https://www.arduino.cc/en/Main/Software). Then Open **File > Preference > Settings** and add following lines to set the configurations for Arduino.
+To resolve this issue, please install the latest version of Arduino IDE [here](https://www.arduino.cc/en/Main/Software). Then Open **File > Preference > Settings** and add following lines to set the configurations for Arduino.
+
     * Windows
 
         ```JSON
@@ -162,6 +163,25 @@ This may caused by NTP traffic blocking at the firewall in the Gateway. To solve
 | europe.pool.ntp.org | 123 |
 | asia.pool.ntp.org | 123 |
 | oceania.pool.ntp.org | 123 |
+
+### How to generate a sample binary file and upload it to the MXCHIP
+
+Frist you should install the latest version of Arduino IDE [here](https://www.arduino.cc/en/Main/Software) and open sample.ino like [this](https://github.com/Azure-Samples/mxchip-iot-devkit-get-started/blob/master/Device/GetStarted.ino) in Arduino IDE. 
+
+Go to **Tools > Board** and select the right board (for example, MXCHIP AZ3166).
+
+To generate a sample.bin file from your sketch, go to **Sketch > Export compiled Binary**.
+
+A new Arduino binary file in the folder should be created. 
+
+Download [boot.bin](https://github.com/microsoft/devkit-sdk/blob/master/AZ3166/src/bootloader/boot.bin) and [az3166_patch_binary.py](https://github.com/microsoft/azure-iot-developer-kit/tree/master/docs/_docs/bash/az3166_patch_binary.py) in the same folder.
+
+Use the following command to generate the binary we need
+```bash
+	az3166_patch_binary.py your_arduino_binary_file_name.bin mxchip_getstarted.bin
+```
+
+Connect the MXChip IoT DevKit with your machine via USB. You can find a removable USB Mass Storage disk named AZ3166. Copy the mxchip_getstarted.bin into this disk. The MXChip IoT DevKit will reboot after finished the copy and run the new application.
 
 {% include social-share.html %}
 
