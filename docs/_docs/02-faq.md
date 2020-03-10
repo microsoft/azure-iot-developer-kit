@@ -174,9 +174,11 @@ To generate a sample.bin file from your sketch, go to **Sketch > Export compiled
 
 A new Arduino binary file in the folder should be created. 
 
-Download [boot.bin](https://github.com/microsoft/devkit-sdk/blob/master/AZ3166/src/bootloader/boot.bin) and [az3166_patch_binary.py](/bash/az3166_patch_binary.py) in the same folder.
+Download [boot.bin](https://github.com/microsoft/devkit-sdk/blob/master/AZ3166/src/bootloader/boot.bin) and [az3166_patch_binary.py](https://github.com/microsoft/azure-iot-developer-kit/tree/master/docs/_docs/bash/az3166_patch_binary.py) in the same folder.
 
-az3166_patch_binary.py your_arduino_binary_file_name.bin mxchip_getstarted.bin
+```bash
+	az3166_patch_binary.py your_arduino_binary_file_name.bin mxchip_getstarted.bin
+```
 
 Connect the MXChip IoT DevKit with your machine via USB. You can find a removable USB Mass Storage disk named AZ3166. Copy the mxchip_getstarted.bin into this disk. The MXChip IoT DevKit will reboot after finished the copy and run the new application.
 
