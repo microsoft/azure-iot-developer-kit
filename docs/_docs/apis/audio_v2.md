@@ -25,7 +25,7 @@ AudioClassV2.h
 | [format](#format) - `void format(unsigned int sampleRate, unsigned short sampleBitLength)` |
 | [stop](#stop) - `void stop()` |
 | [getAudioState](#getaudiostate) - `int getAudioState()` |
-| [setVolume](#setVolume) - ` bool setVolume(uint8_t volume)` |
+| [setVolume](#setVolume) - `bool setVolume(uint8_t volume)` |
 | [readRegister](#readRegister) - `uint16_t readRegister(uint16_t registerAddress)` |
 | [writeRegister](#writeRegister) - `void writeRegister(uint16_t registerAddress, uint16_t value)` |
 | [enableLevelControl](#enableLevelControl) - `void enableLevelControl(uint8_t maxGain, uint8_t minGain)` |
