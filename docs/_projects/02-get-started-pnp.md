@@ -1,8 +1,6 @@
 ---
 title: "PnP Get Started"
-permalink: /docs/projects/get-started-pnp/
-redirect_to:
-  - https://docs.microsoft.com/en-us/samples/azure-samples/mxchip-iot-devkit-firmware-ota/sample/
+link: "https://docs.microsoft.com/azure/iot-central/core/howto-connect-devkit"
 excerpt: "This is the GetStarted tutorial for IoT DevKit, please follow the guide to run it in IoT Workbench and use the DevKit as PnP device."
 header:
   overlay_image: /assets/images/projects-devkit-get-started-th.jpg
