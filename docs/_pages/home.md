@@ -82,12 +82,12 @@ projects: "0, 3, 10"
   </div>
 </div>
 
-<div class="notification">
+<!-- <div class="notification">
   <div class="inner">
     <span class="badge orange" data-text="What's New"></span>
     8/23: Learn connect the DevKit to Azure IoT Central application within minutes via IoT Plug and Play &emsp; <a href="https://docs.microsoft.com/en-us/azure/iot-central/howto-connect-devkit-pnp">IoT Plug and Play</a>
   </div>
-</div>
+</div> -->
 
 <div class="benefits">
   <div class="inner">
