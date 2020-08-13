@@ -1,12 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.1.16)
-      i18n (~> 0.6, >= 0.6.9)
-      json (~> 1.7, >= 1.7.7)
+    activesupport (6.0.3.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
       minitest (~> 5.1)
-      thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+      zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (9.8.6.1)
@@ -198,7 +198,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    json (1.8.6)
+    json (2.3.1)
     kramdown (2.3.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -259,18 +259,20 @@ GEM
     unf_ext (0.0.7.7-x64-mingw32)
     unicode-display_width (1.7.0)
     wdm (0.1.1)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
   x64-mingw32
 
 DEPENDENCIES
-  activesupport (~> 4.1.11)
+  activesupport (~> 6.0.0)
   github-pages (= 207)
   jekyll-autoprefixer
   jekyll-paginate
   jekyll-redirect-from
   jemoji
+  json (~> 2.3.0)
   nokogiri (~> 1.10.8)
   tzinfo-data
   wdm (~> 0.1.0)
