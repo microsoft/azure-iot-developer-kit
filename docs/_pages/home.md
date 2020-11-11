@@ -59,6 +59,12 @@ projects: "0, 3, 10"
   </span>
 </div>
 
+<div class="banner">
+  <p>
+    Azure RTOS is now running on IoT DevKit, <a href="https://aka.ms/az3166-azrtos-getstarted" target="_blank">view more</a>.
+  </p>
+</div>
+
 <div class="header">
   <div class="inner">
     <div class="content">
@@ -195,6 +201,7 @@ projects: "0, 3, 10"
         </div>
       {% endfor %}
     </div>
+
   </div>
 </div>
 
