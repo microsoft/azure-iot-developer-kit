@@ -1,3 +1,6 @@
+# Archived
+This repository is no longer maintained. Please see [http://aka.ms/iot-devkit](http://aka.ms/iot-devkit) for current documentation on using the AZ3166 board with Azure RTOS.
+
 # Microsoft Azure IoT Developer Kit
 
 Visit the project overview page to get started: [https://microsoft.github.io/azure-iot-developer-kit/](https://microsoft.github.io/azure-iot-developer-kit/)
